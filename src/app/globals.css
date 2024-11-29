@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,4 +20,153 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+* {
+  font-family: "Heebo", sans-serif;
+  /* font-family: "Plus Jakarta Sans", sans-serif; */
+}
+@layer utilities {
+  .portfolio-img {
+    @apply items-center justify-center flex bg-opacity-50 rounded-full hover:bg-white hover:text-black cursor-pointer ease-in-out duration-300 h-10 w-12 bg-primary;
+  }
+}
+
+.port-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.p-s {
+  margin: 100px auto;
+  padding: 0px 15px;
+}
+.home {
+  max-width: 1320px;
+  margin: 0px auto;
+}
+
+.footer-s {
+  padding: 80px 40px !important;
+}
+.custom-ease {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.service-card .team-card,
+.service-card {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 476px) {
+  .team-card,
+  .service-card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 576px) {
+  .team-card,
+  .service-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .container {
+    max-width: 540px;
+  }
+  .port-img {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .port-img {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .service-card {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .service-card {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .port-img {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+ 
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
 }

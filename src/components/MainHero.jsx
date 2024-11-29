@@ -1,26 +1,33 @@
 "use client";
 import React from "react";
 import Spline from "@splinetool/react-spline/next";
-
+import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
 const MainHero = () => {
   return (
-    <div className="container h-[70vh] flex-col md:flex-row bg-[#000B17] mx-auto flex  pt-20">
-      <div className="flex w-[40%]    flex-col text-white justify-around">
-        <p className="text-5xl font-extrabold">
-          BESPOKE <span className="text-4xl text-blue-500">SOLUTIONS</span>{" "}
+    <div className="h-[90vh] container overflow-hidden relative pl-10 flex flex-col md:flex-row bg-[#000B17] mx-auto pt-20">
+      {/* Text Content */}
+      <div className="flex w-full md:w-[50%]  flex-col gap-5 text-white z-10 md:pr-10">
+        <p className="text-3xl md:text-4xl z-10 font-extrabold leading-snug">
+          BESPOKE{" "}
+          <span className="text-3xlmd:text-4xl text-blue-500">SOLUTIONS</span>{" "}
           <br />
           TAILORED TO YOUR BUSINESS NEEDS
         </p>
-        <p>
-          We are dynamic creative agency, specializing in the desing and
+        <p className="mt-4 text-sm">
+          We are a dynamic creative agency, specializing in the design and
           development of impactful technical solutions, iconic brands, and
-          immersive experiences.{" "}
+          immersive experiences.
         </p>
-        <p>Get Started</p>
+        <Link href="/" className="flex items-center gap-2">
+          Contact Us
+          <FiArrowUpRight className="bg-white rounded-full text-[#000B17] text-xl " />
+        </Link>
       </div>
 
-      <div className=" relative ">
-        <Spline className=" absolute right-0" scene="/code.splinecode" />
+      {/* Spline Component */}
+      <div className="flex flex-1 scale-50 md:scale-90 md:absolute  md:top-10 h-[400px]  md:w-[800px] md:-right-60 z-20 justify-end text-white items-end">
+        <Spline className="" scene="/Logo animation.spline" />
       </div>
     </div>
   );
