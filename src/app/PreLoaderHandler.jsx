@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Preloader from "../components/Preloader/Preloader";
+import Preloader from "../components/PreLoader/PreLoader";
 
 export default function PreloaderHandler({ children }) {
     const [loading, setLoading] = useState(false);
