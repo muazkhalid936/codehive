@@ -123,7 +123,7 @@ export const aboutScreenFeaturesData = {
       title: 'Innovation',
       description:
         "Code Hive believes in technology’s power to transform, fostering bold ideas and continuous growth to drive innovation and shape the industry's future.",
-      image: '/feature/success.png',
+      image: '/feature/Success.png',
     },
     {
       title: 'Partnership',
