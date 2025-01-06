@@ -110,7 +110,7 @@ const index = () => {
 
 
   return (
-    <div className='h-screen bg-[#000B17]'>
+    <div className=' py-[55px] bg-[#000B17]'>
 
       <div className='container mx-auto  text-white'>
 
@@ -122,7 +122,7 @@ const index = () => {
 
 
           <div className='flex  gap-5'>
-            <div className='w-1/3 mt-[10vh] mx-auto h-[70vh] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl'>
+            <div className='w-1/3 mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl'>
               <div className=' p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg '>
 
 
