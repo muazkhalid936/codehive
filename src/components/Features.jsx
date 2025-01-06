@@ -20,7 +20,7 @@ const Features = ({ data }) => {
             </span>
           ))}
         </h1>
-        <p className="w-full md:w-[55%] my-10 main_hero_slogan leading-6">
+        <p className="w-full md:w-[55%] my-5 main_hero_slogan leading-6">
           {data.description}
         </p>
 
@@ -79,7 +79,7 @@ const Features = ({ data }) => {
                     <h2 className="text-center text-xl  ">
                       {item.title}
                     </h2>
-                    <p className="text-center text-[#fbfbfb] mt-3 mb-5 text-[12px] xl:text-[15px] px-2">
+                    <p className="text-center text-[#fbfbfb]  text-[13px] ">
                       {item.description}
                     </p>
 
@@ -100,7 +100,7 @@ const Features = ({ data }) => {
                     {/* Add Talk an Expert button */}
                     {item.talkAnExpert && (
                       <Link
-                        className="flex items-center relative justify-center gap-4 mx-2 px-4 py-2 w-full rounded-full shadow-lg border-[#3c5d73] border-[1px] border-solid transition "
+                        className="flex items-center mt-3  relative justify-center gap-4 mx-10 px-4 py-2 w-[90%] rounded-full shadow-lg border-[#3c5d73] border-[1px] border-solid transition "
                         href={item.path}
                       >
                         <p className="text-lg text-white">Talk an Expert</p>

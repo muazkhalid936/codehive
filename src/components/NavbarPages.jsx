@@ -72,7 +72,7 @@ const NavbarPages = ({ isBlack }) => {
         <Link href="/">
           <img
             src="/Code hive Branding-02.png"
-            className="w-40 md:w-40"
+            className="w-40 md:w-60"
             alt="logo"
           />
         </Link>

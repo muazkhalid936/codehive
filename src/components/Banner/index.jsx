@@ -21,7 +21,7 @@ const Banner = ({
     >
       <div
         className={`bg-cover bg-center"
-         h-[65vh] md:h-[50vh] 2xl:h-[60vh] w-full rounded-[20px] items-center md:items-center justify-between flex flex-col md:flex-row gap:4 px-6 sm:px-0`}
+         h-[65vh] md:h-[55vh] 2xl:h-[55vh] w-full rounded-[20px] items-center md:items-center justify-between flex flex-col md:flex-row gap:4 px-6 sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundColor: backgroundColor || undefined,
@@ -32,7 +32,7 @@ const Banner = ({
             } h-full justify-center
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3`}
         >
-          <h2 className="text-3xl md:text-[45px] leading-tight gilray-font">
+          <h2 className="text-3xl md:text-[45px] leading-none gilray-font">
             {titleParts.map((word, index) => (
               <span
                 key={index}
@@ -49,9 +49,9 @@ const Banner = ({
               </span>
             ))}
           </h2>
-          <p className="main_hero_slogan  leading-snug mt-2">{description}</p>
-          <button className="flex items-center justify-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 w-fit rounded-full shadow-lg hover:bg-[#197BB6] transition mt-6 sm:mt-10">
-            <p className="text-white text-sm sm:text-lg">{buttonText}</p>
+          <p className="main_hero_slogan my-4 leading-snug">{description}</p>
+          <button className="flex items-center justify-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 w-fit rounded-full shadow-lg hover:bg-[#197BB6] transition  ">
+            <p className="text-white text-sm  sm:text-lg">{buttonText}</p>
             <div className="bg-white rounded-full p-1 sm:p-2">
               <FaArrowRight className="text-[#219DD9]" />
             </div>

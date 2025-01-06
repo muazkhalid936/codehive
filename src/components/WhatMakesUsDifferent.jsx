@@ -87,45 +87,52 @@ const WhatMakesUsDifferent = ({ data }) => {
           ))}
         </h1>
       </div>
-      <div className="flex container pt-10 flex-col lg:flex-row justify-around  relative">
+      <div className="flex container pt-10 flex-col lg:flex-row justify-around w-full  relative">
         {/* Images */}
-        <div className="w-1/2 flex flex-col gap-5 justify-between ">
+        {/* <div className="w-1/2 flex flex-col gap-5 justify-between ">
           {data.steps.map((_, index) => (
-            <img
-              key={index}
-              src={`/make/${index + 1}.png`}
-              className="w-[80%] opacity-0 mx-auto h-[230px] 2xl:h-[260px] "
-              ref={(el) => (imagesRef.current[index] = el)}
-            />
+          
           ))}
-        </div>
+        </div> */}
 
         {/* Steps */}
-        <div className="w-1/2">
-          <ol className="relative justify-between gap-5    flex flex-col   ">
+        <div className="">
+          <ol className="  flex flex-col gap-[2rem] ">
             {/* <span className="border-s border-gray-300 absolute h-full mt-10 left-8"></span> */}
             {data.steps.map((value, index) => (
-              <li
-                className="ms-6  h-[230px] 2xl:h-[260px]  "
-                key={index}
-                ref={(el) => (stepsRef.current[index] = el)}
-              >
-                {/* Circle Animation */}
-                <span className="circle absolute flex items-center justify-center mt-[4.3rem] w-[5rem] h-[5rem] -start-2 border-[#ccc] border-2 rounded-full text-[#219DD9] z-100 bg-white">
-                  <span className="font-extrabold text-xl font-gilroy">
-                    {value.id.toString().padStart(2, "0")}
-                  </span>
-                </span>
-                {/* Text Animation */}
-                <div className="ml-24 mt-[3.5rem]">
-                  <h3 className="animate-title text-lg md:text-3xl text-gray-800 font-semibold mb-2 ">
-                    {value.title}
-                  </h3>
-                  <p className="animate-description text-base 2xl:text-lg text-gray-600  font-lato">
-                    {value.description}
-                  </p>
+              <div className="flex gap-[2rem] flex-row justify-around flex-1 items-center" >
+                <div className="w-1/2 flex justify-center items-center">
+                  <img
+                    key={index}
+                    src={`/make/${index + 1}.png`}
+                    className="w-[70%] opacity-0 mx-auto "
+                    ref={(el) => (imagesRef.current[index] = el)}
+                  />
                 </div>
-              </li>
+
+                <li
+                  className="ms-6 w-1/2 flex gap-10 justify-center items-center "
+                  key={index}
+                  ref={(el) => (stepsRef.current[index] = el)}
+                >
+                  {/* Circle Animation */}
+                  <div className="w-[50px]">
+                    <span className="circle   flex items-center justify-center  p-4 px-8  -start-2 border-[#ccc] border-2 rounded-full text-[#219DD9] z-100 bg-white">
+                      <span className="font-extrabold text-xl font-gilroy">
+                        {value.id.toString().padStart(2, "0")}
+                      </span>
+                    </span></div>
+                  {/* Text Animation */}
+                  <div className="">
+                    <h3 className="animate-title text-lg md:text-3xl text-gray-800 font-semibold mb-2 ">
+                      {value.title}
+                    </h3>
+                    <p className="animate-description text-base 2xl:text-lg text-gray-600  font-lato">
+                      {value.description}
+                    </p>
+                  </div>
+                </li>
+              </div>
             ))}
           </ol>
         </div>

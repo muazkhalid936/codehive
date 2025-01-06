@@ -4,7 +4,7 @@ import React from "react";
 const FeatureSlider = ({ data, from }) => {
   return (
     <div
-      className={` text-white overflow-hidden  md:ml-24 z-50   ${from !== "contact" && "pb-[55px]"
+      className={` text-white overflow-hidden scrollbar-hidden   md:ml-24 z-50   ${from !== "contact" && "pb-[55px]"
         }`}
     >
       <h2

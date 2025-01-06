@@ -58,7 +58,7 @@ const Testimonials = ({ testimonials }) => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#000C1A] my-10 sm:mx-10 md:ml-10 md:mr-5 cursor-pointer text-white p-3 h-[45vh] xl:h-[45vh] 2xl:h-[45vh]  rounded-2xl shadow-lg relative transform transition-transform duration-300 ease-in-out hover:scale-[1.1] overflow-visible">
+              <div className="bg-[#000C1A] my-10 sm:mx-10 md:ml-10 md:mr-5 cursor-pointer text-white p-3   rounded-2xl shadow-lg relative transform transition-transform duration-300 ease-in-out hover:scale-[1.1] overflow-visible">
                 {/* Vector Images */}
                 <div>
                   <img

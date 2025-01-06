@@ -107,6 +107,20 @@
   @apply text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px];
 }
 
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none !important;
+  /* For Chrome, Safari, and Edge */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  /* For Internet Explorer */
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+
 /* ::-webkit-scrollbar {
   display: none;
 } */
