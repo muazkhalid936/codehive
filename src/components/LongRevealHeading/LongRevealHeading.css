@@ -1,0 +1,12 @@
+.animated-text-long1 {
+  -webkit-font-smoothing: antialiased;
+  background-image: linear-gradient(to right, black, white, black);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  /* background-position: 100px; */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* background-position: -200 0; */
+}

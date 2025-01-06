@@ -5,28 +5,33 @@ import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 const MainHero = () => {
   return (
-    <div className="h-[90vh] container overflow-hidden relative pl-10 flex flex-col md:flex-row bg-[#000B17] mx-auto pt-20">
+    <div className=" container  overflow-hidden relative pl-10 flex flex-row bg-[#000B17] mx-auto pt-10 xl:mt-20">
       {/* Text Content */}
-      <div className="flex w-full md:w-[50%]  flex-col gap-5 text-white z-10 md:pr-10">
-        <p className="text-3xl md:text-4xl z-10 font-extrabold leading-snug">
+      <div className="flex w-[50%]   flex-col gap-5 text-white  xl:gap-10 ">
+        <p className="text-[20px] main-heading sm:text-3xl md:text-5xl xl:text-6xl    z-10 font-extrabold !leading-snug">
           BESPOKE{" "}
-          <span className="text-3xlmd:text-4xl text-blue-500">SOLUTIONS</span>{" "}
+          <span className="text-[20px] header xl:text-6xl sm:text-3xl  md:text-5xl  main-heading  text-blueColor">
+            SOLUTIONS
+          </span>{" "}
           <br />
-          TAILORED TO YOUR BUSINESS NEEDS
+          TAILORED TO YOUR <br /> BUSINESS NEEDS
         </p>
-        <p className="mt-4 text-sm">
+        <p className=" main_hero_slogan  ">
           We are a dynamic creative agency, specializing in the design and
           development of impactful technical solutions, iconic brands, and
           immersive experiences.
         </p>
-        <Link href="/" className="flex items-center gap-2">
+        <Link
+          href="/"
+          className="flex items-center md:text-base xl:text-xl gap-2"
+        >
           Contact Us
           <FiArrowUpRight className="bg-white rounded-full text-[#000B17] text-xl " />
         </Link>
       </div>
 
       {/* Spline Component */}
-      <div className="flex flex-1 scale-50 md:scale-90 md:absolute  md:top-10 h-[400px]  md:w-[800px] md:-right-60 z-20 justify-end text-white items-end">
+      <div className="flex flex-1 spline_model absolute -top-[100px]  md:top-5 h-[400px] xl:top-10  w-[850px] -right-[21rem]  md:-right-60 xl:-right-36  justify-end text-white items-end">
         <Spline className="" scene="/Logo animation.spline" />
       </div>
     </div>

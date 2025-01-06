@@ -1,0 +1,63 @@
+import React from "react";
+import { industries } from "../../../data";
+import NavbarPages from "../../../components/NavbarPages";
+import Hero from "../../../components/Hero";
+import Banner from "../../../components/Banner";
+import SuccessMarquee from "../../../components/SuccessMarquee";
+import Features from "../../../components/Features";
+import WhatMakesUsDifferent from "../../../components/WhatMakesUsDifferent";
+import Testimonials from "../../../components/Testimonials";
+
+import IndustryDetails from "../../../components/IndustryDetails";
+import AdvantagesSection from "../../../components/AdvantagesSection";
+import Packages from "../../../components/Packages";
+import FeatureSlider from "../../../components/FeatureSlider";
+import HeroSectionServices from "../../../components/HeroSectionServices";
+
+const page = async ({ params }) => {
+  const slug = await params.slug;
+  const industry = industries?.find((industry) => industry.slug === slug);
+  // console.log(industry.panelData)
+  if (!industry) {
+    return <div>Industry not found</div>;
+  }
+
+  return (
+    <div>
+      <NavbarPages isBlack={industry?.heroData?.bgImage} />
+      <HeroSectionServices {...industry.heroData} />
+      <SuccessMarquee />
+      {industry.advanceSection && (
+        <AdvantagesSection data={industry.advanceSection} />
+      )}
+      {industry.bannerData && <Banner {...industry.bannerData} />}
+      <Features data={industry.featuresData} />
+      <div className="pt-[55px]">
+
+
+        {industry.showFeatureSlider && (
+          <FeatureSlider data={industry.featureSlider} />
+        )}
+
+      </div>
+      {/* <WhatMakesUsDifferent data={industry.makesDifferentData} /> */}
+
+      <div className="relative">
+        <Banner {...industry.bannerDataTwo} />
+        <img
+          src="/feature/vector.png"
+          className="absolute top-[60%] right-0 w-60 "
+        />
+      </div>
+      {slug === "our-booking-system" && (
+        <Packages packages={industry.packagesData} />
+      )}
+
+      <IndustryDetails panelData={industry.panelData} />
+      <Testimonials testimonials={industry.testimonialsData} />
+      {/* <ConnectContact /> */}
+    </div>
+  );
+};
+
+export default page;
