@@ -83,6 +83,7 @@
 // export default Packages;
 import React from 'react'
 import { HiArrowUpRight, HiMiniCheck } from 'react-icons/hi2';
+import './style.css'
 const index = () => {
 
   const features = [
@@ -127,7 +128,7 @@ const index = () => {
 
 
                 <p className='font-gilroy text-[45px] mx-auto text-center'>Basic</p>
-                <p className='text-center main_hero_slogan leading-none my-5'>When she reached the first hills of the italic mountains  </p>
+                <p className='text-center main_hero_slogan leading-none my-8'>When she reached the first hills of the italic mountains  </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">Get Started</span>
@@ -140,8 +141,9 @@ const index = () => {
                 </button>
 
 
+                <hr className='my-10 border-slate-500 ' />
 
-                <div className='h-[40vh] mt-5 overflow-y-scroll'>
+                <div className='h-[40vh]  ab mt-5 overflow-y-scroll'>
 
                   {features.map((features, i) => (
                     <li key={i} className="flex items-center gap-6 mb-3 main_hero_slogan">
@@ -167,7 +169,7 @@ const index = () => {
                 </p>
 
                 <p className='font-gilroy text-[45px] mx-auto text-center'>Advanced</p>
-                <p className='text-center main_hero_slogan leading-none my-5'>When she reached the first hills of the italic mountains  </p>
+                <p className='text-center main_hero_slogan leading-none my-8'>When she reached the first hills of the italic mountains  </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">Get Started</span>
@@ -178,8 +180,9 @@ const index = () => {
                     <HiArrowUpRight size={16} />
                   </span>
                 </button>
+                <hr className='my-10 border-slate-500 ' />
 
-                <div className='h-[40vh] mt-5 overflow-y-scroll'>
+                <div className='h-[40vh] ab mt-5 overflow-y-scroll'>
 
                   {features.map((features, i) => (
                     <li key={i} className="flex items-center gap-6 mb-3 main_hero_slogan">
@@ -203,7 +206,7 @@ const index = () => {
 
 
                 <p className='font-gilroy text-[45px] mx-auto text-center'>Enterprise</p>
-                <p className='text-center main_hero_slogan leading-none my-5'>When she reached the first hills of the italic mountains  </p>
+                <p className='text-center main_hero_slogan leading-none my-8'>When she reached the first hills of the italic mountains  </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">Get Started</span>
@@ -214,7 +217,8 @@ const index = () => {
                     <HiArrowUpRight size={16} />
                   </span>
                 </button>
-                <div className='h-[40vh] mt-5 overflow-y-scroll'>
+                <hr className='my-10 border-slate-500 ' />
+                <div className='h-[40vh] ab mt-5 overflow-y-scroll'>
 
                   {features.map((features, i) => (
                     <li key={i} className="flex items-center gap-6 mb-3 main_hero_slogan">

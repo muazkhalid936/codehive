@@ -113,13 +113,11 @@
   /* For Chrome, Safari, and Edge */
 }
 
-.scrollbar-hidden {
-  -ms-overflow-style: none;
-  /* For Internet Explorer */
-  scrollbar-width: none;
-  /* For Firefox */
+.as::-webkit-scrollbar {
+  width: 8px;
+  display: none;
+  /* border-radius: 10%; */
 }
-
 
 /* ::-webkit-scrollbar {
   display: none;

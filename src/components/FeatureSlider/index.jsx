@@ -24,7 +24,7 @@ const FeatureSlider = ({ data, from }) => {
         ))}
       </h2>
       {/* Snap Scroll Container */}
-      <div className="mt-[55px] overflow-x-auto scroll-smooth  snap-mandatory flex gap-6 ">
+      <div className="mt-[55px] overflow-x-scroll as scroll-smooth  snap-mandatory flex gap-6 ">
         {data.cards.map((item, index) => (
           <div
             key={index}
