@@ -49,8 +49,8 @@ const Banner = ({
               </span>
             ))}
           </h2>
-          <p className="main_hero_slogan my-4 leading-snug">{description}</p>
-          <button className="flex items-center justify-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 w-fit rounded-full shadow-lg hover:bg-[#197BB6] transition  ">
+          <p className="main_hero_slogan my-3 2xl:my-4 leading-snug">{description}</p>
+          <button className="flex items-center justify-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-2 w-fit rounded-full shadow-lg hover:bg-[#197BB6] transition  ">
             <p className="text-white text-sm  sm:text-lg">{buttonText}</p>
             <div className="bg-white rounded-full p-1 sm:p-2">
               <FaArrowRight className="text-[#219DD9]" />
