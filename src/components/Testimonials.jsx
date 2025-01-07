@@ -53,7 +53,7 @@ const Testimonials = ({ testimonials }) => {
           breakpoints={{
             640: { slidesPerView: 1 },
             1024: { slidesPerView: 2 },
-            1440: { slidesPerView: 3 },
+            1280: { slidesPerView: 3 },
           }}
         >
           {testimonials.map((testimonial, index) => (

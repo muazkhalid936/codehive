@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/NavbarPagesOurWork";
 import HeroContact from "../../components/HeroContact";
 import SupportSection from "../../components/ContactUsPage/SupportSection";
 import ContactInfo from "../../components/ContactUsPage/ContactInfo";
