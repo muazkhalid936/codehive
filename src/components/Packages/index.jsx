@@ -116,13 +116,13 @@ const index = () => {
       <div className='container mx-auto  text-white'>
 
         <div className=''>
-          <h2 className=" py-10 text-center text-5xl font-extrabold leading-[55px]">
+          <h2 className=" pb-[55px] text-center text-5xl font-extrabold leading-[55px]">
             <span className="text-white">Monthly </span>
             <span className="text-[#1E90FF]">Packages</span>
           </h2>
 
 
-          <div className='flex  gap-5'>
+          <div className='flex   gap-5'>
             <div className='w-1/3 mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl'>
               <div className=' p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg '>
 

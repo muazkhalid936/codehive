@@ -124,10 +124,10 @@ const WhatMakesUsDifferent = ({ data }) => {
                     </span></div>
                   {/* Text Animation */}
                   <div className="">
-                    <h3 className="animate-title text-lg md:text-3xl text-gray-800 font-semibold mb-2 ">
+                    <h3 className="animate-title  text-gray-800 text-[18px] font-semibold mb-2 ">
                       {value.title}
                     </h3>
-                    <p className="animate-description text-base 2xl:text-lg text-gray-600  font-lato">
+                    <p className="animate-description text-[16px] text-gray-600  ">
                       {value.description}
                     </p>
                   </div>

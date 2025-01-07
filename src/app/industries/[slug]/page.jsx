@@ -42,7 +42,7 @@ const page = async ({ params }) => {
       </div>
       {/* <WhatMakesUsDifferent data={industry.makesDifferentData} /> */}
 
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <Banner {...industry.bannerDataTwo} />
         <img
           src="/feature/vector.png"

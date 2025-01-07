@@ -1519,7 +1519,7 @@ export const industries = [
           title: 'Easy appointment scheduling',
           description:
             "Code Hive believes in technology’s power to transform, fostering bold ideas and continuous growth to drive innovation and shape the industry's future.",
-          image: '/feature/success.png',
+          image: '/feature/Success.png',
           talkAnExpert: true,
           path: '/service/software-development',
         },

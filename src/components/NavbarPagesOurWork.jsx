@@ -80,7 +80,7 @@ const NavbarPages = ({ isBlack }) => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden text-white lg:flex gap-4 text-[16px] lg:gap-3 xl:gap-8">
+        <div className="hidden text-white lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
           {/* <Link href="/">Home</Link> */}
           <Link href="/about-us">About Us</Link>
 
@@ -169,9 +169,9 @@ const NavbarPages = ({ isBlack }) => {
         </div>
 
         {/* Call-to-Action */}
-        <div className="hidden  lg:flex  lg:text-base xl:text-xl items-center gap-5">
+        <div className="hidden  lg:flex  main_hero_slogan items-center gap-5">
           <div
-            className="font-archivo text-[14px] sm:text-[16px] lg:text-[18px] font-lato 
+            className="font-archivo main_hero_slogan font-lato 
           text-white"
           >
             العربية

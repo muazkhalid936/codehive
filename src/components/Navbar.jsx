@@ -45,7 +45,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="hidden lg:flex gap-4 text-[16px] lg:gap-3 xl:gap-8">
+        <div className="hidden lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
           {/* <Link href="/">Home</Link> */}
           <Link href="/about-us">About Us</Link>
 
