@@ -31,7 +31,7 @@ const LongRevealHeading = (params) => {
         scrollTrigger: {
           trigger: textRef.current,
           start: "top center", // Start when text is in the center of the viewport
-          end: "+=1000", // Customize based on the desired scroll length
+          end: "+=1600", // Customize based on the desired scroll length
           pin: true, // Pin the text in place
           scrub: 1, // Smoothly animate based on scroll
         },
@@ -40,12 +40,12 @@ const LongRevealHeading = (params) => {
         textRef.current,
         {
           scale: 0.8,
-          backgroundPosition: "1600% 0", // Move the gradient across the text
+          backgroundPosition: "-600px 0", // Move the gradient across the text
         },
         {
           scale: 1.2,
           // duration: 1,
-          backgroundPosition: "-1700% 0", // Move the gradient across the text
+          backgroundPosition: "600px 0", // Move the gradient across the text
           ease: "none",
         }
       );
@@ -59,7 +59,7 @@ const LongRevealHeading = (params) => {
     <div className="container h-[50vh] items-center flex justify-center  mx-auto">
       <p
         ref={textRef}
-        className="animated-text-long main-heading header text-2xl md:text-4xl xl:text-6xl text-white"
+        className="animated-text-long main-heading header text-[50px] text-white"
       >
         {params.text}
       </p>

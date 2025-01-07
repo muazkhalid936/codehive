@@ -40,7 +40,7 @@ const LongRevealHeading = (params) => {
         textRef.current,
         {
           scale: 0.8,
-          backgroundPosition: "400% 0", // Move the gradient across the text
+          backgroundPosition: "500% 0", // Move the gradient across the text
         },
         {
           scale: 1.2,
@@ -59,7 +59,7 @@ const LongRevealHeading = (params) => {
     <div className="container h-[50vh] items-center flex justify-center  mx-auto">
       <p
         ref={textRef}
-        className="animated-text-long1 main-heading header text-2xl md:text-4xl xl:text-6xl text-white"
+        className="animated-text-long1 main-heading header text-[50px] text-white"
       >
         {params.text}
       </p>

@@ -10,7 +10,7 @@ const StackingImages = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    let timeline = gsap.timeline({
+    const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".new-cards",
         pin: true,
@@ -18,222 +18,109 @@ const StackingImages = () => {
         start: "top top",
         end: "+=2000",
         scrub: 1,
-        toggleActions: "play reverse play reverse",
       },
     });
 
-    timeline.addLabel("new-card1", "second-animation");
-
-    timeline.from(".first-container", {
-      opacity: 0,
-      yPercent: 100,
-    });
-    timeline.to(
-      ".first-container",
-      {
-        opacity: 1,
-        yPercent: 0,
-      },
-      "new-card1"
-    );
-
-    // Card Animations
-    timeline.from(
+    // Card 1 and Text 1 animation
+    timeline.fromTo(
       ".new-card-1",
-      {
-        xPercent: 40,
-        yPercent: 40,
-        rotate: -90,
-      },
-      "new-card1"
+      { xPercent: 40, yPercent: 40, rotate: -90 },
+      { xPercent: 0, yPercent: 0, rotate: 0 },
+      "start"
     );
-    timeline.to(".new-card-1", {
-      yPercent: 0,
-    });
-
-    timeline.from(".new-card-2", {
-      xPercent: 40,
-      yPercent: 40,
-      rotate: -90,
-    });
-    timeline.addLabel("new-card2");
-
+    // timeline.fromTo(
+    //   ".new-text-1",
+    //   { opacity: 0, y: 50 },
+    //   { opacity: 1, y: 0, duration: 0.5 },
+    //   "start"
+    // );
+    timeline.fromTo(".first-container", { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, "start");
+    timeline.to(
+      ".new-icon1",
+      {
+        backgroundColor: "grey",
+        duration: 0.3,
+      },
+      "start"
+    );    // Transition to Card 2 and Text 2
     timeline.to(
       ".new-card-1",
-      {
-        xPercent: 40,
-        rotate: 90,
-        yPercent: -40,
-        duration: 0.5,
-      },
-      ".new-card-2-=0.4"
+      { xPercent: 40, yPercent: -40, rotate: 90 },
+      "new-card2"
     );
+    timeline.to(
+      ".new-text-1",
+      { opacity: 0, y: -50, duration: 0.5 },
+      "new-card2"
+    );
+    timeline.fromTo(
+      ".new-card-2",
+      { xPercent: 40, yPercent: 40, rotate: -90 },
+      { xPercent: 0, yPercent: 0, rotate: 0 },
+      "new-card2"
+    );
+    timeline.fromTo(
+      ".new-text-2",
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 0.5 },
+      "new-card2"
+    );
+    timeline.to(".new-icon2", { backgroundColor: "grey", duration: 0.3 }, "new-card2");
+    timeline.to(".new-icon1", { backgroundColor: "black", duration: 0.3 }, "new-card2");
+    timeline.to(".new-icon3", { backgroundColor: "grey", duration: 0.3 }, "new-card3");
+    timeline.to(".new-icon2", { backgroundColor: "black", duration: 0.3 }, "new-card3");
+    timeline.to(".new-icon4", { backgroundColor: "grey", duration: 0.3 }, "new-card4");
+    timeline.to(".new-icon3", { backgroundColor: "black", duration: 0.3 }, "new-card4");
 
-    timeline.from(".new-card-3", {
-      xPercent: 40,
-      yPercent: 40,
-      rotate: -90,
-    });
-    timeline.addLabel("new-card3");
-
+    // Transition to Card 3 and Text 3
     timeline.to(
       ".new-card-2",
-      {
-        xPercent: 40,
-        yPercent: -40,
-        rotate: 90,
-      },
-      ".new-card-3-=0.4"
+      { xPercent: 40, yPercent: -40, rotate: 90 },
+      "new-card3"
+    );
+    timeline.to(
+      ".new-text-2",
+      { opacity: 0, y: -50, duration: 0.5 },
+      "new-card3"
+    );
+    timeline.fromTo(
+      ".new-card-3",
+      { xPercent: 40, yPercent: 40, rotate: -90 },
+      { xPercent: 0, yPercent: 0, rotate: 0 },
+      "new-card3"
+    );
+    timeline.fromTo(
+      ".new-text-3",
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 0.5 },
+      "new-card3"
     );
 
-    timeline.from(".new-card-4", {
-      xPercent: 40,
-      yPercent: 40,
-      rotate: -90,
-    });
-    timeline.addLabel("new-card4");
-
+    // Transition to Card 4 and Text 4
     timeline.to(
       ".new-card-3",
-      {
-        xPercent: 40,
-        yPercent: -40,
-        rotate: 90,
-      },
-      ".new-card-4-=0.5"
+      { xPercent: 40, yPercent: -40, rotate: 90 },
+      "new-card4"
     );
-
-    // Text animations with icon border effect
-    timeline.from(
-      ".new-text-1",
-      {
-        yPercent: 0,
-        opacity: 1,
-        duration: 0.5,
-      },
-      "new-card1"
-    );
-
-    timeline.to(
-      ".new-icon1",
-      {
-        backgroundColor: "grey",
-        duration: 0.3,
-      },
-      "new-card1"
-    );
-
-    timeline.to(
-      ".new-icon1",
-      { backgroundColor: "transparent", duration: 0.3 },
-      "new-card2-=0.5"
-    );
-
-    timeline.to(
-      ".new-icon2",
-      {
-        backgroundColor: "grey",
-        duration: 0.3,
-      },
-      "new-card2-=0.5"
-    );
-
-    timeline.to(
-      ".new-icon3",
-      {
-        backgroundColor: "grey",
-        duration: 0.3,
-      },
-      "new-card3-=0.5"
-    );
-
-    timeline.to(
-      ".new-icon4",
-      {
-        backgroundColor: "grey",
-        duration: 0.3,
-      },
-      "new-card4-=0.5"
-    );
-
-    timeline.to(
-      ".new-icon3",
-      {
-        backgroundColor: "transparent",
-        duration: 0.3,
-      },
-      "new-card4-=0.5"
-    );
-
-    timeline.to(
-      ".new-icon2",
-      {
-        backgroundColor: "transparent",
-        duration: 0.3,
-      },
-      "new-card3-=0.5"
-    );
-
-    timeline.to(
-      ".new-text-1",
-      {
-        yPercent: -20,
-        opacity: 0,
-        duration: 0.5,
-      },
-      "new-card2-=0.5"
-    );
-
-    timeline.from(
-      ".new-text-2",
-      {
-        yPercent: 20,
-        opacity: 0,
-        duration: 0.5,
-      },
-      "new-card2-=0.3"
-    );
-
-    timeline.to(
-      ".new-text-2",
-      {
-        yPercent: -20,
-        opacity: 0,
-        duration: 0.5,
-      },
-      "new-card3-=0.5"
-    );
-
-    timeline.from(
-      ".new-text-3",
-      {
-        yPercent: 20,
-        opacity: 0,
-        duration: 0.5,
-      },
-      "new-card3-=0.3"
-    );
-
     timeline.to(
       ".new-text-3",
-      {
-        yPercent: -20,
-        opacity: 0,
-        duration: 0.5,
-      },
-      "new-card4-=0.5"
+      { opacity: 0, y: -50, duration: 0.5 },
+      "new-card4"
     );
-
-    timeline.from(
+    timeline.fromTo(
+      ".new-card-4",
+      { xPercent: 40, yPercent: 40, rotate: -90 },
+      { xPercent: 0, yPercent: 0, rotate: 0 },
+      "new-card4"
+    );
+    timeline.fromTo(
       ".new-text-4",
-      {
-        yPercent: 20,
-        opacity: 0,
-        duration: 0.5,
-      },
-      "new-card4-=0.3"
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 0.5 },
+      "new-card4"
     );
   }, []);
+
 
   return (
     <div className="bg-[#000B17] container  mx-auto ">
@@ -246,9 +133,9 @@ const StackingImages = () => {
             <FaPython className="new-icon new-icon3" />
             <FaJava className="new-icon new-icon4" />
           </div>
-          <div className="new-text-section mt-32 text-white">
+          <div className="new-text-section mt-28 text-white">
             <div className="new-text flex main_hero_slogan flex-col gap-4 new-text-1">
-              <span className="font-bold text-[20px] main-heading sm:text-3xl md:text-5xl xl:text-6xl  bg-gradient-to-br from-white  to-blueColor bg-clip-text text-transparent">
+              <span className="font-bold text-[50px] main-heading   bg-gradient-to-br from-white leading-none to-blueColor bg-clip-text text-transparent">
                 Project <br /> Vision
               </span>
               We provide bespoke software solutions powered by cutting-edge
@@ -257,7 +144,7 @@ const StackingImages = () => {
             </div>
 
             <div className="new-text flex flex-col main_hero_slogan gap-4 new-text-2">
-              <span className="font-bold text-[20px] main-heading sm:text-3xl md:text-5xl xl:text-6xl  bg-gradient-to-br from-white  to-blueColor bg-clip-text text-transparent">
+              <span className="font-bold text-[50px] main-heading   bg-gradient-to-br from-white leading-none  to-blueColor bg-clip-text text-transparent">
                 Innovative <br /> Solutions
               </span>
               Delivering tailored solutions that harness the power of innovation
@@ -266,7 +153,7 @@ const StackingImages = () => {
             </div>
 
             <div className="new-text flex flex-col gap-4 main_hero_slogan new-text-3">
-              <span className="font-bold text-[20px] main-heading sm:text-3xl md:text-5xl xl:text-6xl  bg-gradient-to-br from-white  to-blueColor  bg-clip-text text-transparent">
+              <span className="font-bold leading-none text-[50px] main-heading     bg-gradient-to-br from-white  to-blueColor  bg-clip-text text-transparent">
                 Future <br /> Ready
               </span>
               Empowering organizations to stay ahead of the curve with scalable,
@@ -274,7 +161,7 @@ const StackingImages = () => {
             </div>
 
             <div className="new-text flex flex-col gap-4 main_hero_slogan new-text-4">
-              <span className="font-bold text-[20px] main-heading sm:text-3xl md:text-5xl xl:text-6xl  bg-gradient-to-br from-white  to-blueColor  bg-clip-text text-transparent">
+              <span className="font-bold text-[50px] leading-none main-heading   bg-gradient-to-br from-white  to-blueColor  bg-clip-text text-transparent">
                 Global <br /> Impact
               </span>
               Collaborating with industries worldwide to create meaningful and

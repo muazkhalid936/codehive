@@ -59,7 +59,7 @@ const ShortRevealHeading = (params) => {
     <div className="container h-[30vh] flex justify-center items-center mx-auto">
       <p
         ref={textRef}
-        className="animated-text-short main-heading header text-2xl md:text-4xl xl:text-6xl text-white"
+        className="animated-text-short main-heading header text-[50px] text-white"
       >
         {params.text}
       </p>

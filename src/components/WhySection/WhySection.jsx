@@ -43,10 +43,10 @@ const ImageScrollEffect = () => {
       },
     });
     timeline
-      .to(".why-section-image-1", { opacity: 0, duration: 1 }) // Fade out .image-1
-      .to(".why-section-image-2", { opacity: 1, duration: 1 }, "-=0.5") // Fade in .image-2
-      .to(".why-section-image-2", { opacity: 0, duration: 1 }) // Fade out .image-2
-      .to(".why-section-image-3", { opacity: 1, duration: 1 }, "-=0.5") // Fade in .image-3
+      .to(".why-section-image-1", { opacity: 0, duration: 1 })
+      .to(".why-section-image-2", { opacity: 1, duration: 1 }, "-=0.5")
+      .to(".why-section-image-2", { opacity: 0, duration: 1 })
+      .to(".why-section-image-3", { opacity: 1, duration: 1 }, "-=0.5")
       .to(
         ".why-section-heading-2",
         { opacity: 0, duration: 1, y: -50 },
@@ -56,15 +56,15 @@ const ImageScrollEffect = () => {
         ".why-section-heading-3",
         {
           duration: 1,
-          y: -170,
-          ...newFunc(), // Spread the returned object from newFunc
+          y: -100,
+          ...newFunc(),
         },
         "-=1.5"
       );
 
     const headingAnimations = () => {
       const applyGradient = (selector, startYPercent = -10) => {
-        gsap.to(selector, {
+        gsap.to(".why-section-heading-1", {
           opacity: 0,
           yPercent: -100,
           // color: "#209dd9",
@@ -164,8 +164,10 @@ const ImageScrollEffect = () => {
         //   }
         // },
         // color: "blue",
-        yPercent: yPercentValue - as, // Use consistent yPercent
-      });
+        yPercent: yPercentValue, // Use consistent yPercent
+      }
+
+      );
 
       gsap.to(".why-section-heading-3", {
         scrollTrigger: {
@@ -195,30 +197,30 @@ const ImageScrollEffect = () => {
           <img
             src="/Why/1.png"
             alt="First Image"
-            className="absolute  why-section-img  scale-[0.4] md:scale-[0.7] why-section-image-1 2xl:scale-100 opacity-100"
+            className="absolute  why-section-img   why-section-image-1 opacity-100"
           />
           <img
             src="/Why/2.png"
             alt="Second Image"
-            className="absolute  why-section-img  why-section-image-2   scale-[0.4] md:scale-[0.7] 2xl:scale-100 opacity-0"
+            className="absolute  why-section-img  why-section-image-2    opacity-0"
           />
           <img
             src="/Why/3.png"
             alt="Third Image"
-            className="absolute  why-section-img   scale-[0.4] why-section-image-3  opacity-0 md:scale-[0.7] 2xl:scale-100"
+            className="absolute  why-section-img   why-section-image-3  opacity-0 "
           />
         </div>
 
         {/* Headings */}
-        <div className="relative why-section-heading-section   flex flex-col gap-20">
-          <h1 className="why-section-heading-1 text-2xl md:text-5xl main-heading lg:text-6xl 3xl:text-7xl">
+        <div className="relative why-section-heading-section text-[50px]  flex flex-col ">
+          <h1 className="why-section-heading-1  main-heading ">
             Unrivaled <span className="colorText1">Expertise</span>
           </h1>
-          <h1 className="why-section-heading-2  3xl:text-7xl text-2xl md:text-5xl main-heading lg:text-6xl">
+          <h1 className="why-section-heading-2   main-heading ">
             Customer-Centric
             <span className="colorText2 ml-4">Approach</span>
           </h1>
-          <h1 className="why-section-heading-3 text-2xl 3xl:text-7xl md:text-5xl main-heading lg:text-6xl">
+          <h1 className="why-section-heading-3  main-heading ">
             End-to-End
             <span className="colorText3 ml-4">Support</span>
           </h1>

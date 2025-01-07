@@ -1,8 +1,8 @@
 import React from 'react'
-import Packa from '../../components/Packages'
+import OurProcess from '../../components/OurProcess/OurProcess'
 const page = () => {
   return (
-    <Packa />
+<OurProcess />
   )
 }
 
