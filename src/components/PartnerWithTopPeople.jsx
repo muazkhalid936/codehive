@@ -130,7 +130,7 @@ const PartnerWithTopPeople = () => {
                 onMouseEnter={() => setHoveredSlide(item.name)}
                 onMouseLeave={() => setHoveredSlide('')}
                 className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2
-                bg-gradient-to-b from-[#010B1770]  to-[#2093CA70] relative rounded-xl h-[45vh] cursor-pointer pt-8
+                bg-gradient-to-b from-[#010B1770]  to-[#2093CA70] relative rounded-xl min-h-[350px] h-[45vh] cursor-pointer pt-8
                 overflow-hidden hover:scale-105
                 `}
               >

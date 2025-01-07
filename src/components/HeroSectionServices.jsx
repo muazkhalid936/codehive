@@ -20,7 +20,7 @@ const HeroSectionServices = ({
   const highlightColor = "text-[#219DD9]";
 
   const renderTitle = () => (
-    <h2 className="font-black leading-tight text-[50px]">
+    <h2 className="font-black leading-tight text-4xl md:text-5xl ">
       {titleWords.length > 1 ? (
         <>
           <span className={colors}>{titleWords.slice(0, -1).join(" ")} </span>
@@ -50,15 +50,15 @@ const HeroSectionServices = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto flex  md:pt-28 2xl:pt-32 h-[70vh]">
+      <div className="container overflow-hidden mx-auto flex min-h-[500px]  pt-32 h-[70vh]">
         {/* First Section */}
-        <div className="left-section w-1/2 flex justify-center items-start gap-5 xl:gap-10 flex-col">
+        <div className="left-section w-1/2 flex justify-center items-start gap-10 flex-col">
           {" "}
           {renderTitle()}
           {description && <p className={`main_hero_slogan `}>{description}</p>}
           {showButton && (
             <div className="flex justify-center sm:justify-start">
-              <button className="flex items-center gap-4 bg-[#219DD9] p-2 2xl:py-3 2xl:px=4 rounded-full shadow-lg hover:bg-[#197BB6] transition">
+              <button className="flex items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition">
                 <p className="text-white text-sm sm:text-lg">{buttonText}</p>
                 <div className="bg-white rounded-full p-1 sm:p-2">
                   <FaArrowRight className="text-[#219DD9]" />

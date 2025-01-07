@@ -50,7 +50,7 @@ const HeroSection = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto   flex md:pt-20  h-[70vh]">
+      <div className="container overflow-hidden mx-auto   flex md:pt-20 min-h-[500px] h-[70vh]">
         {/* First Section */}
         <div className="left-section w-1/2 flex justify-center items-start md:gap-5 2xl:gap-10 flex-col">
           {" "}

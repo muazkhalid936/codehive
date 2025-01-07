@@ -21,7 +21,7 @@ const Banner = ({
     >
       <div
         className={`bg-cover bg-center"
-         h-[65vh] md:h-[55vh] 2xl:h-[55vh] w-full rounded-[20px] items-center md:items-center justify-between flex flex-col md:flex-row gap:4 px-6 sm:px-0`}
+         h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[400px] w-full rounded-[20px] items-center md:items-center justify-between flex flex-col md:flex-row gap:4 px-6 sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundColor: backgroundColor || undefined,

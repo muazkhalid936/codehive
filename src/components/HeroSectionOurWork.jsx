@@ -15,8 +15,8 @@ const HeroSectionOurWork = ({
     bgImage && rightImage
       ? "text-black"
       : rightImage
-      ? "text-black"
-      : "text-white";
+        ? "text-black"
+        : "text-white";
   const highlightColor = "text-[#219DD9]";
 
   const renderTitle = () => (
@@ -52,9 +52,9 @@ const HeroSectionOurWork = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto flex  pt-32 h-[70vh]">
+      <div className="container overflow-hidden mx-auto flex  pt-32 min-h-[500px] h-[70vh]">
         {/* First Section */}
-        <div className="left-section w-1/2 flex justify-center items-start gap-4 md:gap-5 flex-col">
+        <div className="left-section w-1/2 flex justify-center items-start gap-10 flex-col">
           {" "}
           {renderTitle()}
           {description && (
