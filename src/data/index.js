@@ -221,17 +221,17 @@ export const bannerDataService = {
 
 export const aboutTestimonialsData = [
   {
-    text: 'The team at Codehive demonstrated exceptional teamwork and creativity throughout our collaboration. They took the time to understand our needs and provided valuable insights, helping us achieve our project goals effectively. ',
+    text: 'The team at Codehive demonstrated exceptional teamwork and creativity throughout our collaboration. They took the time to understand our needs and provided valuable insights, helping us achieve our project goals. I am grateful for their support and highly recommend them.',
     name: 'Ayesha Khan',
     designation: 'CEO, Tech Innovations Ltd',
   },
   {
-    text: 'Working with Codehive was an absolute pleasure. Their team was not only skilled but also highly professional, ensuring that all deadlines were met and that the final product exceeded our expectations. ',
+    text: 'Working with Codehive was an absolute pleasure. Their team was not only skilled but also highly professional, ensuring that all deadlines were met and that the final product exceeded our expectations. Their attention to detail and customer-first attitude made them stand out.',
     name: 'Ahmed Raza',
     designation: 'Project Manager, Global Solutions Inc.',
   },
   {
-    text: 'From the initial consultation to the final delivery, Codehive showed outstanding communication and problem-solving skills. They were always available to discuss concerns and were quick to adapt to any changes in the project. ',
+    text: 'From the initial consultation to the final delivery, Codehive showed outstanding communication and problem-solving skills. They were always available to discuss concerns and were quick to adapt to any changes in the project. Their work ethic and results were truly impressive. ',
     name: 'Sara Ali',
     designation: 'Head of Operations, NextGen Enterprises',
   },

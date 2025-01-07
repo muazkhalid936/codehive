@@ -138,7 +138,7 @@ const PartnerWithTopPeople = () => {
                   <img
                     src={item.picture}
                     alt={item.name}
-                    className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform scale-110"
+                    className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform "
                   />
                 )}
                 {hoveredSlide === item.name && (
