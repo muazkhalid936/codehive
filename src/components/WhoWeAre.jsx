@@ -3,8 +3,8 @@ import React from "react";
 const WhoWeAre = () => {
   return (
     <div className="container py-[55px] rounded-lg">
-      <div className="bg-[url('/whoweare/bgImage.png')] bg-cover min-h-[400px]  bg-center h-[50vh] w-full rounded-[20px] items-center md:items-center justify-start sm:justify-center flex md:justify-around  sm:gap-32 gap:4 px-6 sm:px-0">
-        <div className="flex flex-col text-white w-full sm:w-1/2 pl-20">
+      <div className="bg-[url('/whoweare/bgImage.png')] bg-cover h-[200px] sm:min-h-[400px]  bg-center sm:h-[50vh] w-full rounded-[20px] items-center md:items-center justify-start sm:justify-center flex md:justify-around  sm:gap-32 gap:4 px-6 sm:px-0">
+        <div className="flex flex-col text-white w-full sm:w-1/2 sm:pl-20">
           <h2 className="md:text-[45px] font-bold flex-1 gilray-font  ">
             Who are <span className="  text-[#219DD9] "> we? </span>
           </h2>

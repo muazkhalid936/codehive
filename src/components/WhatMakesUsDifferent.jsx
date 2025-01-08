@@ -101,7 +101,7 @@ const WhatMakesUsDifferent = ({ data }) => {
             {/* <span className="border-s border-gray-300 absolute h-full mt-10 left-8"></span> */}
             {data.steps.map((value, index) => (
               <div className="flex gap-[2rem] flex-row justify-around flex-1 items-center" >
-                <div className="w-1/2 flex justify-center items-center">
+                <div className="sm:w-1/2 sm:flex hidden  justify-center items-center">
                   <img
                     key={index}
                     src={`/make/${index + 1}.png`}
@@ -111,7 +111,7 @@ const WhatMakesUsDifferent = ({ data }) => {
                 </div>
 
                 <li
-                  className="ms-6 w-1/2 flex gap-10 justify-center items-center "
+                  className="ms-6 sm:w-1/2 flex gap-10 justify-center items-center "
                   key={index}
                   ref={(el) => (stepsRef.current[index] = el)}
                 >
@@ -124,10 +124,10 @@ const WhatMakesUsDifferent = ({ data }) => {
                     </span></div>
                   {/* Text Animation */}
                   <div className="">
-                    <h3 className="animate-title  text-gray-800 text-[18px] font-semibold mb-2 ">
+                    <h3 className="animate-title  text-gray-800 text-[14px] sm:text-[18px] font-semibold mb-2 ">
                       {value.title}
                     </h3>
-                    <p className="animate-description text-[16px] text-gray-600  ">
+                    <p className="animate-description text-[12px] sm:text-[16px] text-gray-600  ">
                       {value.description}
                     </p>
                   </div>

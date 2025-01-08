@@ -20,7 +20,7 @@ const HeroSection = ({
   const highlightColor = "text-[#219DD9]";
 
   const renderTitle = () => (
-    <h2 className="font-black text-4xl md:text-[50px] leading-tight">
+    <h2 className="font-black text-[20px] md:text-[50px] leading-tight">
       {titleWords.length > 1 ? (
         <>
           <span className={colors}>{titleWords.slice(0, -1).join(" ")} </span>
@@ -50,13 +50,13 @@ const HeroSection = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto   flex md:pt-20 min-h-[500px] h-[70vh]">
+      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-end   flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
         {/* First Section */}
-        <div className="left-section w-1/2 flex justify-center items-start md:gap-5 2xl:gap-10 flex-col">
+        <div className="left-section sm:w-1/2 flex justify-center items-start md:gap-5 2xl:gap-10 flex-col">
           {" "}
           {renderTitle()}
           {description && (
-            <p className={`main_hero_slogan ${colors}`}>{description}</p>
+            <p className={`main_hero_slogan my-5 sm:my-0 ${colors}`}>{description}</p>
           )}
           {showButton && (
             <div className="flex justify-center sm:justify-start">
@@ -70,12 +70,12 @@ const HeroSection = ({
           )}
         </div>
         {/* Second Section */}
-        <div className="right-section w-1/2">
+        <div className="right-section mx-auto sm:w-1/2">
           {rightImage && (
             <img
               src={rightImage}
               alt="Hero Right Image"
-              className="w-full object-contain h-[100%] "
+              className="sm:w-full w-1/2 mx-auto object-contain h-[100%] "
             />
           )}
         </div>

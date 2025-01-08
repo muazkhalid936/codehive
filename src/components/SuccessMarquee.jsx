@@ -10,7 +10,8 @@ const SuccessMarquee = () => {
   return (
     <div className="bg-[#0d1e30] py-2 overflow-hidden w-full">
       <div className="marquee">
-        <div className="marquee-content gap-32 ">
+        <div className="marquee-content text-[10px] 
+        sm:text-[16px] gap-32 ">
           <Swiper
             spaceBetween={50}
             slidesPerView={3}
