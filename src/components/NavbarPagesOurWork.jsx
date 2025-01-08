@@ -1,13 +1,11 @@
 "use client";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
-import { SlArrowDown } from "react-icons/sl";
 import { services, industries, ourWorks } from "../data";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
 import { FaCaretDown } from "react-icons/fa";
 import { FaCaretUp } from "react-icons/fa";
+import { useEffect } from "react";
 
 const NavbarPages = ({ isBlack }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,19 +16,24 @@ const NavbarPages = ({ isBlack }) => {
     useState(false);
 
   const [isScrolling, setIsScrolling] = useState(false);
-  let lastScrollY = window.scrollY;
+  let lastScrollY;
 
-  const handleScroll = () => {
-    if (window.scrollY >= 400) {
-      setIsScrolling(true);
-    } else if (window.scrollY < lastScrollY) {
-      setIsScrolling(false);
-    }
+  useEffect(() => {
     lastScrollY = window.scrollY;
-  };
+    const handleScroll = () => {
+      if (window.scrollY >= 400) {
+        setIsScrolling(true);
+      } else if (window.scrollY < lastScrollY) {
+        setIsScrolling(false);
+      }
+      lastScrollY = window.scrollY;
+    };
 
-  window.addEventListener("scroll", handleScroll);
-
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrolling]);
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };

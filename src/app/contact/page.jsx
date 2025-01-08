@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Navbar from "../../components/NavbarPagesOurWork";
 import HeroContact from "../../components/HeroContact";
@@ -6,13 +7,12 @@ import ContactInfo from "../../components/ContactUsPage/ContactInfo";
 import ContactForm from "../../components/ContactUsPage/ContactForm";
 import SuccessStats from "../../components/ContactUsPage/SuccessStats";
 import Testimonials from "../../components/ContactUsPage/Testimonial";
-import { contactHeroData, aboutTestimonialsData } from "../../data";
+import { aboutTestimonialsData } from "../../data";
 
-const Services = () => {
+const Contact = () => {
   return (
     <div>
       <Navbar />
-      {/* <Hero {...contactHeroData} /> */}
       <HeroContact />
       <SuccessStats />
       <SupportSection />
@@ -23,4 +23,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Contact;
