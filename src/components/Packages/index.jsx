@@ -83,6 +83,8 @@
 // export default Packages;
 import React from "react";
 import { HiArrowUpRight, HiMiniCheck } from "react-icons/hi2";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
+
 import "./style.css";
 const index = () => {
   const features = [
@@ -133,7 +135,7 @@ const index = () => {
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                     style={{ width: "24px", height: "24px" }}
                   >
-                    <HiArrowUpRight size={16} />
+                    <HiMiniArrowUpRight size={16} />
                   </span>
                 </button>
 
@@ -149,7 +151,7 @@ const index = () => {
                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                         style={{ width: "24px", height: "24px" }}
                       >
-                        <HiMiniCheck size={16} />
+                        <HiMiniArrowUpRight size={16} />
                       </span>
                       {features.name}
                     </li>
@@ -177,7 +179,7 @@ const index = () => {
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                     style={{ width: "24px", height: "24px" }}
                   >
-                    <HiArrowUpRight size={16} />
+                    <HiMiniArrowUpRight size={16} />
                   </span>
                 </button>
                 <hr className="my-10 border-slate-500 " />
@@ -216,7 +218,7 @@ const index = () => {
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                     style={{ width: "24px", height: "24px" }}
                   >
-                    <HiArrowUpRight size={16} />
+                    <HiMiniArrowUpRight size={16} />
                   </span>
                 </button>
                 <hr className="my-10 border-slate-500 " />

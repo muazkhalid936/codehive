@@ -18,14 +18,14 @@ const HeroContact = () => {
         <div className="flex-1 lg:w-1/2 flex-col flex justify-center">
           <div className="flex flex-col gap-5">
             <p className=" header hero_section_heading leading-tight main-heading text-white">
-              <span className="text-[20px] mr-2 header md:text-[50px] leading-tight sm:text-3xl main-heading text-blueColor">
+              <span className=" mr-2 header  leading-tight  main-heading text-blueColor">
                 Contact us
               </span>
               and
               <br />
               Unleash your idea
             </p>
-            <p className="main_hero_slogan text-white">
+            <p className="main_hero_slogan text-[#ebeced]">
               Connecting with our valued customers is at the core of our
               business approach. Whether you have a query, feedback, or simply
               want to share your experience, our dedicated support team is just
@@ -35,7 +35,7 @@ const HeroContact = () => {
         </div>
 
         {/* Right Column */}
-        <div className="flex w-1/2">a</div>
+        <div className="flex w-1/2 "></div>
       </div>
     </div>
   );

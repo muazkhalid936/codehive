@@ -16,7 +16,7 @@ const Testimonials = ({ testimonials }) => {
         <div className="flex flex-col sm:flex-row mt-[45px] items-center justify-between ">
           {/* Title */}
           <h2
-            className=" text-left  text-2xl md:text-[45px] gilray-font"
+            className=" text-left  sub_heading gilray-font"
             style={{
               textDecorationSkipInk: "none",
               textUnderlinePosition: "from-font",

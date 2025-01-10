@@ -46,22 +46,24 @@ const OurMission = () => {
               }}
             >
               <div
-                className={`flex flex-col text-center transition-transform duration-300 gap-2 ${activeSlide === index
+                className={`flex flex-col text-center transition-transform duration-300 gap-2 ${
+                  activeSlide === index
                     ? "scale-115 opacity-100"
                     : "scale-100 opacity-70"
-                  }`}
+                }`}
               >
                 <h3
-                  className={`text-[#219DD9] text-2xl  ${activeSlide === index
+                  className={`text-[#219DD9] text-[20px]  ${
+                    activeSlide === index
                       ? "scale-105 opacity-100"
                       : "scale-100 opacity-70"
-                    }`}
+                  }`}
                 >
                   .{index > 9 ? index + 1 : `0${index + 1}`}
                 </h3>
                 {activeSlide === index && (
                   <>
-                    <h2 className="text-4xl !font-light font-gilroy">
+                    <h2 className="md:text-[24px] xl:text-[34px] !font-light font-gilroy">
                       {item.title}
                     </h2>
                     <p className="main_hero_slogan text-gray-500">

@@ -39,7 +39,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form bg-[#020b17] py-20">
-      <h3 className="text-center text-white text-2xl font-semibold mb-8">
+      <h3 className="text-center text-white text-2xl mb-8">
         Alternatively, you can fill out the form below, and we’ll get back to
         you as soon as possible.
       </h3>

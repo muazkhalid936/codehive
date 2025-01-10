@@ -1,99 +1,99 @@
-'use client';
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Autoplay, History, EffectCards } from 'swiper/modules';
-import { EffectFade } from 'swiper/modules';
-import 'swiper/css/bundle';
+"use client";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay, History, EffectCards } from "swiper/modules";
+import { EffectFade } from "swiper/modules";
+import "swiper/css/bundle";
 
 const data = [
   {
-    name: 'Omar Al-Fahad',
-    position: 'Web and App Developer',
+    name: "Omar Al-Fahad",
+    position: "Web and App Developer",
     description:
-      'As a web and app developer, Omar has worked with many clients to create beautiful and functional websites and applications. An expert in HTML, CSS, and JavaScript, he is always looking for new ways to improve his skills.',
-    linkedin: 'https://www.linkedin.com/in/omaralfahad/',
-    twitter: 'https://twitter.com/omaralfahad',
-    picture: '/partnerwithtoppeople/web-dev.png',
+      "As a web and app developer, Omar has worked with many clients to create beautiful and functional websites and applications. An expert in HTML, CSS, and JavaScript, he is always looking for new ways to improve his skills.",
+    linkedin: "https://www.linkedin.com/in/omaralfahad/",
+    twitter: "https://twitter.com/omaralfahad",
+    picture: "/partnerwithtoppeople/web-dev.png",
   },
 
   {
-    name: 'Hassan Sayed',
-    position: 'Software Developer',
+    name: "Hassan Sayed",
+    position: "Software Developer",
     description:
-      'Hassan is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.',
-    linkedin: 'https://www.linkedin.com/in/hassan-sayed/',
-    twitter: 'https://twitter.com/hassan_sayed',
-    picture: '/partnerwithtoppeople/software-dev.png',
+      "Hassan is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.",
+    linkedin: "https://www.linkedin.com/in/hassan-sayed/",
+    twitter: "https://twitter.com/hassan_sayed",
+    picture: "/partnerwithtoppeople/software-dev.png",
   },
   {
-    name: 'Youssef Al-Mansoori',
-    position: 'Software Developer',
+    name: "Youssef Al-Mansoori",
+    position: "Software Developer",
     description:
-      'Youssef is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.',
-    linkedin: 'https://www.linkedin.com/in/youssef-al-mansoori/',
-    twitter: 'https://twitter.com/youssef_almansoori',
-    picture: '/partnerwithtoppeople/software-dev.png',
+      "Youssef is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.",
+    linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
+    twitter: "https://twitter.com/youssef_almansoori",
+    picture: "/partnerwithtoppeople/software-dev.png",
   },
   {
-    name: 'Aisha Al-Hassan',
-    position: 'Marketing Specialist',
+    name: "Aisha Al-Hassan",
+    position: "Marketing Specialist",
     description:
-      'Aisha is a marketing specialist with a passion for creating innovative and user-friendly marketing strategies. She has worked with clients from a wide range of industries to develop custom marketing solutions that meet their unique needs.',
-    linkedin: 'https://www.linkedin.com/in/aisha-al-hassan/',
-    twitter: 'https://twitter.com/aisha_alhassan',
-    picture: '/partnerwithtoppeople/marketing-manager.png',
+      "Aisha is a marketing specialist with a passion for creating innovative and user-friendly marketing strategies. She has worked with clients from a wide range of industries to develop custom marketing solutions that meet their unique needs.",
+    linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
+    twitter: "https://twitter.com/aisha_alhassan",
+    picture: "/partnerwithtoppeople/marketing-manager.png",
   },
   {
-    name: 'Omar Al-Fahad',
-    position: 'Web and App Developer',
+    name: "Omar Al-Fahad",
+    position: "Web and App Developer",
     description:
-      'As a web and app developer, Omar has worked with many clients to create beautiful and functional websites and applications. An expert in HTML, CSS, and JavaScript, he is always looking for new ways to improve his skills.',
-    linkedin: 'https://www.linkedin.com/in/omaralfahad/',
-    twitter: 'https://twitter.com/omaralfahad',
-    picture: '/partnerwithtoppeople/web-dev.png',
+      "As a web and app developer, Omar has worked with many clients to create beautiful and functional websites and applications. An expert in HTML, CSS, and JavaScript, he is always looking for new ways to improve his skills.",
+    linkedin: "https://www.linkedin.com/in/omaralfahad/",
+    twitter: "https://twitter.com/omaralfahad",
+    picture: "/partnerwithtoppeople/web-dev.png",
   },
 
   {
-    name: 'Hassan Sayed',
-    position: 'Software Developer',
+    name: "Hassan Sayed",
+    position: "Software Developer",
     description:
-      'Hassan is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.',
-    linkedin: 'https://www.linkedin.com/in/hassan-sayed/',
-    twitter: 'https://twitter.com/hassan_sayed',
-    picture: '/partnerwithtoppeople/software-dev.png',
+      "Hassan is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.",
+    linkedin: "https://www.linkedin.com/in/hassan-sayed/",
+    twitter: "https://twitter.com/hassan_sayed",
+    picture: "/partnerwithtoppeople/software-dev.png",
   },
   {
-    name: 'Youssef Al-Mansoori',
-    position: 'Software Developer',
+    name: "Youssef Al-Mansoori",
+    position: "Software Developer",
     description:
-      'Youssef is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.',
-    linkedin: 'https://www.linkedin.com/in/youssef-al-mansoori/',
-    twitter: 'https://twitter.com/youssef_almansoori',
-    picture: '/partnerwithtoppeople/software-dev.png',
+      "Youssef is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.",
+    linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
+    twitter: "https://twitter.com/youssef_almansoori",
+    picture: "/partnerwithtoppeople/software-dev.png",
   },
   {
-    name: 'Aisha Al-Hassan',
-    position: 'Marketing Specialist',
+    name: "Aisha Al-Hassan",
+    position: "Marketing Specialist",
     description:
-      'Aisha is a marketing specialist with a passion for creating innovative and user-friendly marketing strategies. She has worked with clients from a wide range of industries to develop custom marketing solutions that meet their unique needs.',
-    linkedin: 'https://www.linkedin.com/in/aisha-al-hassan/',
-    twitter: 'https://twitter.com/aisha_alhassan',
-    picture: '/partnerwithtoppeople/marketing-manager.png',
+      "Aisha is a marketing specialist with a passion for creating innovative and user-friendly marketing strategies. She has worked with clients from a wide range of industries to develop custom marketing solutions that meet their unique needs.",
+    linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
+    twitter: "https://twitter.com/aisha_alhassan",
+    picture: "/partnerwithtoppeople/marketing-manager.png",
   },
 ];
 
 const PartnerWithTopPeople = () => {
-  const [hoveredSlide, setHoveredSlide] = React.useState('');
+  const [hoveredSlide, setHoveredSlide] = React.useState("");
 
   return (
     <div className="bg-[#010B17] py-20 text-white ">
-      <h2 className="text-center text-2xl md:text-[45px] gilray-font ">
-        Partnered with Most of the Top <br /> People at Each{' '}
+      <h2 className="text-center sub_heading gilray-font ">
+        Partnered with Most of the Top <br /> People at Each{" "}
         <span className="text-[#219DD9]">Industry</span>
       </h2>
 
-      <div className="container mt-12" onMouseEnter={() => setHoveredSlide('')}>
+      <div className="container mt-12" onMouseEnter={() => setHoveredSlide("")}>
         <Swiper
           spaceBetween={20}
           slidesPerView={3}
@@ -128,7 +128,7 @@ const PartnerWithTopPeople = () => {
             >
               <div
                 onMouseEnter={() => setHoveredSlide(item.name)}
-                onMouseLeave={() => setHoveredSlide('')}
+                onMouseLeave={() => setHoveredSlide("")}
                 className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2
                 bg-gradient-to-b from-[#010B1770]  to-[#2093CA70] relative rounded-xl min-h-[350px] h-[45vh] cursor-pointer pt-8
                 overflow-hidden hover:scale-105
@@ -143,9 +143,9 @@ const PartnerWithTopPeople = () => {
                 )}
                 {hoveredSlide === item.name && (
                   <img
-                    src={'/gray-vector.png'}
+                    src={"/gray-vector.png"}
                     alt={item.name}
-                    className="w-56 h-56 object-cover -z-10 absolute -right-5 top-20 "
+                    className="w-40 h-40 object-cover -z-10 absolute -right-5 top-20 "
                   />
                 )}
 
@@ -154,19 +154,20 @@ const PartnerWithTopPeople = () => {
                 >
                   <div className=" bg-gradient-to-t from-black to-transparent w-full px-6 py-6 m-auto">
                     <h3
-                      className={`text-white text-2xl font-bold text-left w-full font-gilroy`}
+                      className={`text-white text-[22px] font-semibold text-left w-full `}
                     >
                       {item.name}
                     </h3>
                     <h3
-                      className={`text-[#219DD9] text-xl font-bold text-left w-full gap-2 font-gilroy ${hoveredSlide === item.name ? 'mb-10' : 'mb-0'
-                        }`}
+                      className={`text-[#219DD9] main_hero_slogan font-semibold  text-left w-full gap-2  ${
+                        hoveredSlide === item.name ? "mb-10" : "mb-0"
+                      }`}
                     >
                       {item.position}
                     </h3>
                     {hoveredSlide === item.name && (
                       <h3
-                        className={`text-white  text-sm font-light text-left w-full opacity-90 transition-opacity duration-500`}
+                        className={`text-white  text-[15px] font-light text-left w-full opacity-90 transition-opacity duration-500`}
                       >
                         {item.description}
                       </h3>

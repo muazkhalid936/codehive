@@ -32,7 +32,7 @@ const IndustryDetails = ({ panelData }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-[20px] gilray-font sm:text-[45px] ">
+            <h1 className=" gilray-font sub_heading ">
               {activePanel.heading.split(" ").slice(0, -1).join(" ")}{" "}
               <span className="text-blueColor">
                 {activePanel.heading.split(" ").slice(-1)}

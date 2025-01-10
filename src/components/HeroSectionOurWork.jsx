@@ -20,7 +20,7 @@ const HeroSectionOurWork = ({
   const highlightColor = "text-[#219DD9]";
 
   const renderTitle = () => (
-    <h2 className="font-black hero_section_heading ">
+    <h2 className="main-heading hero_section_heading ">
       {titleWords.length > 1 ? (
         <>
           <span className="text-white">
@@ -66,7 +66,7 @@ const HeroSectionOurWork = ({
                 <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
                   {buttonText}
                 </p>
-                <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-16 sm:group-hover:translate-x-24 overflow-hidden">
+                <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 sm:group-hover:translate-x-44 group-hover:translate-x-36 lg:group-hover:translate-x-56 overflow-hidden">
                   <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />
                 </div>
               </button>

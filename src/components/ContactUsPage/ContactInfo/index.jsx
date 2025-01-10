@@ -12,6 +12,7 @@ const ContactInfo = () => {
         style={{
           transition: "all 0.3s ease-in-out",
           border: "2px solid",
+          borderRadius: "1rem",
           borderImageSource:
             "linear-gradient(133.88deg, rgba(1, 11, 23, 0.44) 1.04%, rgba(32, 147, 202, 0.44) 99.17%)",
           borderImageSlice: 1,
@@ -27,7 +28,7 @@ const ContactInfo = () => {
             {/* Phone */}
             <p className="flex items-center justify-center text-lg">
               <div className="flex items-center group">
-                <MdPhone className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-8 h-8 mr-2" />
+                <MdPhone className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
                 <a
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
@@ -39,7 +40,7 @@ const ContactInfo = () => {
             {/* Email */}
             <p className="flex items-center justify-center text-lg">
               <div className="flex items-center group">
-                <MdEmail className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-8 h-8 mr-2" />
+                <MdEmail className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
                 <a
                   href="mailto:info@codehive.ae"
                   className=" text-white group-hover:text-blueColor   hover:underline"
@@ -50,7 +51,7 @@ const ContactInfo = () => {
             </p>
             {/* Location */}
             <p className="flex items-center justify-center text-lg">
-              <HiOutlineLocationMarker className="bg-white text-black rounded-full p-1 w-8 h-8 mr-2" />
+              <HiOutlineLocationMarker className="bg-white text-black rounded-full p-1 w-6 h-6 mr-2" />
               Office M-18, 1st floor, Sajaya Plaza Al Barsha 3, Dubai, UAE
             </p>
             {/* Support Section */}
@@ -60,7 +61,7 @@ const ContactInfo = () => {
               </p>
               <div className="flex items-center justify-center mt-2">
                 <div className="flex items-center group">
-                  <FaAt className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-8 h-8 mr-2" />
+                  <FaAt className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
                   <a
                     href="mailto:support@codehive.ae"
                     className=" text-white group-hover:text-blueColor   hover:underline"

@@ -73,7 +73,7 @@ const WhatMakesUsDifferent = ({ data }) => {
   return (
     <div className="bg-white relative py-[55px]" ref={containerRef}>
       <div className="w-auto text-center mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-[45px] mb-10 gilray-font w-full">
+        <h1 className="sub_heading mb-10 gilray-font w-full">
           {data.title.split(" ").map((word, index) => (
             <span
               key={index}

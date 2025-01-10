@@ -3,7 +3,7 @@ const SupportSection = () => {
     <section className="bg-white py-16 px-6 md:px-16">
       {/* Header */}
       <div className="container mx-auto text-center">
-        <h2 className="text-[45px] font-extrabold gilray-font">
+        <h2 className="sub_heading font-extrabold gilray-font">
           We’re here to <span className="text-blueColor">help!</span>
         </h2>
         <p className="mt-4 main_hero_slogan text-gray-600">

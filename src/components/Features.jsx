@@ -10,7 +10,7 @@ const Features = ({ data }) => {
   return (
     <div className="bg-[#010b17] relative     z-50  overflow-hidden">
       <div className=" mx-8 pt-[45px] pb-[40px] text-white z-10 container">
-        <h1 className="text-2xl md:text-[45px]  gilray-font w-full  md:w-[60%]">
+        <h1 className="sub_heading  gilray-font w-full  md:w-[60%]">
           {data.title.split(" ").map((word, index) => (
             <span
               key={index}
@@ -45,8 +45,8 @@ const Features = ({ data }) => {
             return (
               <div
                 key={index}
-                className={`w-[95%] ${
-                  data.columns === 4 ? "md:w-1/4" : "md:w-1/3"
+                className={`w-[95%] sm:w-1/2 md:w-1/3 ${
+                  data.columns === 4 ? "xl:w-1/4" : "xl:w-1/3"
                 }`}
               >
                 <div

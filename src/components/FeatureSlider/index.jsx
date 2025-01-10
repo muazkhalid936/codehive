@@ -9,7 +9,7 @@ const FeatureSlider = ({ data, from }) => {
       }`}
     >
       <h2
-        className={`md:text-[45px] font-extrabold gilray-font w-full ${
+        className={`sub_heading font-extrabold gilray-font w-full ${
           from !== "contact" ? "text-black" : "text-white"
         }`}
       >
@@ -44,7 +44,7 @@ const FeatureSlider = ({ data, from }) => {
             />
             <div className="p-4 h-[200px]  absolute bg-gradient-to-t from-black to-transparent bottom-0">
               <div className="flex flex-col justify-center mt-5 h-full">
-                <h3 className="text-2xl font-bold px-2 r font-gilroy">
+                <h3 className="text-[22px] font-bold px-2  ">
                   {item.name}
                 </h3>
                 <p className="text-white main_hero_slogan px-10  ">

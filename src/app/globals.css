@@ -412,11 +412,13 @@
 .hero_section_heading {
   font-size: 50px;
 }
-.banner_heading {
+.banner_heading,
+.sub_heading {
   font-size: 45px;
 }
 @media (max-width: 1280px) {
-  .banner_heading {
+  .banner_heading,
+  .sub_heading {
     font-size: 35px;
   }
   .hero_section_heading {
@@ -427,7 +429,8 @@
   .hero_section_heading {
     font-size: 30px;
   }
-  .banner_heading {
+  .banner_heading,
+  .sub_heading {
     font-size: 25px;
   }
 }
