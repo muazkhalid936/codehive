@@ -58,7 +58,7 @@ const Testimonials = ({ testimonials }) => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#000C1A] my-10 sm:mx-10 md:ml-10 md:mr-5 h-[300px] md:h-[400px] cursor-pointer text-white px-3 py-5 rounded-2xl shadow-lg relative transform transition-transform duration-300 ease-in-out hover:scale-[1.1] overflow-visible">
+              <div className="bg-[#000C1A] my-10 mx-5 h-[300px] md:h-[400px] cursor-pointer text-white px-6 py-5 rounded-2xl shadow-lg relative transform transition-transform duration-300 ease-in-out hover:scale-[1.1] overflow-visible">
                 {/* Vector Images */}
                 <div>
                   <img
@@ -79,25 +79,26 @@ const Testimonials = ({ testimonials }) => {
                   <img
                     src="/quote.png"
                     alt="Quotation Marks"
-                    className="w-6 h-6 sm:w-10 sm:h-10 mb-4 ml-6"
+                    className="w-6 h-6 sm:w-10 sm:h-10 "
                   />
                   <blockquote className="mb-4">
-                    <p className="text-[10px] sm:text-[16px] font-lato leading-relaxed px-4 sm:px-6">
+                    <p className="text-[10px] sm:text-[15px] font-lato leading-relaxed ">
                       {testimonial.text}
                     </p>
                   </blockquote>
 
                   {/* Name and Designation */}
                   <div className="">
-                    <p className="text-lg sm:text-xl ml-6 font-lato">{testimonial.name}</p>
-                    <p className="text-xs sm:text-sm text-gray-400 ml-6 font-lato">
+                    <p className="text-lg sm:text-xl  font-lato">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-400  font-lato">
                       {testimonial.designation}
                     </p>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
-
           ))}
         </Swiper>
       </div>

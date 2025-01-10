@@ -2,12 +2,12 @@ import React from "react";
 
 const HeroContact = () => {
   return (
-    <div className="h-[70vh] overflow-hidden min-h-[600px] bg-gradient-to-t from-[#0d1724] via-[#0d1724] to-[#000b17] relative">
+    <div className="h-[70vh] overflow-hidden min-h-[500px] max-h-[650px] bg-gradient-to-t from-[#0d1724] via-[#0d1724] to-[#000b17] relative">
       {/* Background image container */}
       <div className="absolute inset-0 flex justify-center items-center">
         <img
           src="/contact.png"
-          className="h-[62vh] mt-[5rem] min-h-[600px] object-contain"
+          className="h-[62vh] mt-[5rem] min-h-[500px] max-h-[650px] object-contain"
           alt="Contact"
         />
       </div>
@@ -17,7 +17,7 @@ const HeroContact = () => {
         {/* Left Column */}
         <div className="flex-1 lg:w-1/2 flex-col flex justify-center">
           <div className="flex flex-col gap-5">
-            <p className="text-[20px] header sm:text-3xl md:text-[50px] leading-tight main-heading text-white">
+            <p className=" header hero_section_heading leading-tight main-heading text-white">
               <span className="text-[20px] mr-2 header md:text-[50px] leading-tight sm:text-3xl main-heading text-blueColor">
                 Contact us
               </span>
@@ -28,8 +28,8 @@ const HeroContact = () => {
             <p className="main_hero_slogan text-white">
               Connecting with our valued customers is at the core of our
               business approach. Whether you have a query, feedback, or simply
-              want to share your experience, our dedicated support team is
-              just a message away.
+              want to share your experience, our dedicated support team is just
+              a message away.
             </p>
           </div>
         </div>

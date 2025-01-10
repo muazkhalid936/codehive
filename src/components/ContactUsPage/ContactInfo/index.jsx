@@ -26,27 +26,31 @@ const ContactInfo = () => {
           <div className="space-y-6 mb-8">
             {/* Phone */}
             <p className="flex items-center justify-center text-lg">
-              <MdPhone className="bg-blueColor text-black rounded-full p-2 w-8 h-8 mr-2" />
-              <a
-                href="tel:+971542203330"
-                className="text-blueColor font-semibold underline"
-              >
-                +971 54 220 3330
-              </a>
+              <div className="flex items-center group">
+                <MdPhone className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-8 h-8 mr-2" />
+                <a
+                  href="tel:+971542203330"
+                  className=" text-white group-hover:text-blueColor   hover:underline"
+                >
+                  +971 54 220 3330
+                </a>
+              </div>
             </p>
             {/* Email */}
             <p className="flex items-center justify-center text-lg">
-              <MdEmail className="bg-white text-black rounded-full p-2 w-8 h-8 mr-2" />
-              <a
-                href="mailto:info@codehive.ae"
-                className="text-white font-semibold hover:underline"
-              >
-                info@codehive.ae
-              </a>
+              <div className="flex items-center group">
+                <MdEmail className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-8 h-8 mr-2" />
+                <a
+                  href="mailto:info@codehive.ae"
+                  className=" text-white group-hover:text-blueColor   hover:underline"
+                >
+                  info@codehive.ae
+                </a>
+              </div>
             </p>
             {/* Location */}
             <p className="flex items-center justify-center text-lg">
-              <HiOutlineLocationMarker className="bg-white text-black rounded-full p-2 w-8 h-8 mr-2" />
+              <HiOutlineLocationMarker className="bg-white text-black rounded-full p-1 w-8 h-8 mr-2" />
               Office M-18, 1st floor, Sajaya Plaza Al Barsha 3, Dubai, UAE
             </p>
             {/* Support Section */}
@@ -55,13 +59,15 @@ const ContactInfo = () => {
                 If you need any type of support, please visit the Help Center
               </p>
               <div className="flex items-center justify-center mt-2">
-                <FaAt className="bg-white text-black rounded-full p-2 w-8 h-8 mr-2" />
-                <a
-                  href="mailto:support@codehive.ae"
-                  className="text-white font-semibold hover:underline"
-                >
-                  support@codehive.ae
-                </a>
+                <div className="flex items-center group">
+                  <FaAt className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-8 h-8 mr-2" />
+                  <a
+                    href="mailto:support@codehive.ae"
+                    className=" text-white group-hover:text-blueColor   hover:underline"
+                  >
+                    support@codehive.ae
+                  </a>
+                </div>
               </div>
             </div>
           </div>

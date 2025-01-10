@@ -19,7 +19,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top center",
+            start: "top 65%",
             end: "+=200",
             toggleActions: "play reverse play reverse",
           },
@@ -33,7 +33,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top center",
+            start: "top 65%",
             end: "+=200",
             toggleActions: "play reverse play reverse",
           },
@@ -47,7 +47,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           borderColor: "#219DD9",
           scrollTrigger: {
             trigger: step,
-            start: "top center",
+            start: "top 65%",
             end: "+=200",
             toggleActions: "play reverse play reverse",
           },
@@ -61,7 +61,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top center",
+            start: "top 65%",
             end: "+=200",
             toggleActions: "play reverse play reverse",
           },
@@ -71,10 +71,7 @@ const WhatMakesUsDifferent = ({ data }) => {
   }, [data]);
 
   return (
-    <div
-      className="bg-white relative py-[55px]"
-      ref={containerRef}
-    >
+    <div className="bg-white relative py-[55px]" ref={containerRef}>
       <div className="w-auto text-center mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-[45px] mb-10 gilray-font w-full">
           {data.title.split(" ").map((word, index) => (
@@ -100,7 +97,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           <ol className="  flex flex-col gap-[2rem] ">
             {/* <span className="border-s border-gray-300 absolute h-full mt-10 left-8"></span> */}
             {data.steps.map((value, index) => (
-              <div className="flex gap-[2rem] flex-row justify-around flex-1 items-center" >
+              <div className="flex gap-[2rem] flex-row justify-around flex-1 items-center">
                 <div className="sm:w-1/2 sm:flex hidden  justify-center items-center">
                   <img
                     key={index}
@@ -121,10 +118,11 @@ const WhatMakesUsDifferent = ({ data }) => {
                       <span className="font-extrabold text-xl font-gilroy">
                         {value.id.toString().padStart(2, "0")}
                       </span>
-                    </span></div>
+                    </span>
+                  </div>
                   {/* Text Animation */}
                   <div className="">
-                    <h3 className="animate-title  text-gray-800 text-[14px] sm:text-[18px] font-semibold mb-2 ">
+                    <h3 className="animate-title  text-gray-800  sm:text-[19px] font-semibold mb-2 ">
                       {value.title}
                     </h3>
                     <p className="animate-description text-[12px] sm:text-[16px] text-gray-600  ">

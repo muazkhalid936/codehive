@@ -24,7 +24,7 @@ const ContactForm = () => {
             <h2 className="text-lg font-bold text-white xl:text-2xl text-center ">
               Let's Talk
             </h2>
-            <h3 className="!font-light text-3xl header md:text-3xl lg:text-5xl xl:text-6xl mb-6 text-center">
+            <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
               <span className="main-heading bg-gradient-to-r from-white via-white to-blueColor bg-clip-text text-transparent">
                 Connect
               </span>{" "}

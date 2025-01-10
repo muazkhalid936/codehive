@@ -15,12 +15,12 @@ const HeroSectionOurWork = ({
     bgImage && rightImage
       ? "text-black"
       : rightImage
-        ? "text-black"
-        : "text-white";
+      ? "text-black"
+      : "text-white";
   const highlightColor = "text-[#219DD9]";
 
   const renderTitle = () => (
-    <h2 className="font-black text-4xl md:text-5xl ">
+    <h2 className="font-black hero_section_heading ">
       {titleWords.length > 1 ? (
         <>
           <span className="text-white">
@@ -52,9 +52,9 @@ const HeroSectionOurWork = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto flex  pt-32 min-h-[500px] h-[70vh]">
+      <div className="container overflow-hidden mx-auto flex max-h-[650px] pt-32 min-h-[500px] h-[70vh]">
         {/* First Section */}
-        <div className="left-section w-1/2 flex justify-center items-start gap-10 flex-col">
+        <div className="left-section w-1/2 flex justify-center items-start gap-5 md:gap-10 flex-col">
           {" "}
           {renderTitle()}
           {description && (
@@ -62,10 +62,12 @@ const HeroSectionOurWork = ({
           )}
           {showButton && (
             <div className="flex justify-center sm:justify-start">
-              <button className="flex items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition">
-                <p className="text-white text-sm sm:text-lg">{buttonText}</p>
-                <div className="bg-white rounded-full p-1 sm:p-2">
-                  <FaArrowRight className="text-[#219DD9]" />
+              <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
+                <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
+                  {buttonText}
+                </p>
+                <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-16 sm:group-hover:translate-x-24 overflow-hidden">
+                  <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />
                 </div>
               </button>
             </div>

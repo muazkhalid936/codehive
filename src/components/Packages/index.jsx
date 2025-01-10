@@ -81,11 +81,10 @@
 // };
 
 // export default Packages;
-import React from 'react'
-import { HiArrowUpRight, HiMiniCheck } from 'react-icons/hi2';
-import './style.css'
+import React from "react";
+import { HiArrowUpRight, HiMiniCheck } from "react-icons/hi2";
+import "./style.css";
 const index = () => {
-
   const features = [
     { name: "Basic appointment scheduling", available: true },
     { name: "Online payments", available: true },
@@ -109,139 +108,141 @@ const index = () => {
     { name: "Offline functionality", available: false },
   ];
 
-
   return (
-    <div className=' py-[55px] bg-[#000B17]'>
-
-      <div className='container mx-auto  text-white'>
-
-        <div className=''>
-          <h2 className=" pb-[55px] text-center text-5xl font-extrabold leading-[55px]">
+    <div className=" py-[55px]  bg-[#000B17] ">
+      <div className="container mx-auto   text-white">
+        <div className="">
+          <h2 className=" pb-[55px] text-center text-[45px] gilray-font leading-[55px]">
             <span className="text-white">Monthly </span>
             <span className="text-[#1E90FF]">Packages</span>
           </h2>
 
-
-          <div className='flex   gap-5'>
-            <div className='w-1/3 mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl'>
-              <div className=' p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg '>
-
-
-                <p className='font-gilroy text-[45px] mx-auto text-center'>Basic</p>
-                <p className='text-center main_hero_slogan leading-none my-8'>When she reached the first hills of the italic mountains  </p>
+          <div className="flex md:flex-row flex-col gap-5">
+            <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+              <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
+                <p className="gilray-font text-[35px] mx-auto text-center">
+                  Basic
+                </p>
+                <p className="text-center main_hero_slogan leading-none my-8">
+                  When she reached the first hills of the italic mountains{" "}
+                </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">Get Started</span>
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                    style={{ width: '24px', height: '24px' }}
+                    style={{ width: "24px", height: "24px" }}
                   >
                     <HiArrowUpRight size={16} />
                   </span>
                 </button>
 
+                <hr className="my-10 border-slate-500 " />
 
-                <hr className='my-10 border-slate-500 ' />
-
-                <div className='h-[40vh]  ab mt-5 overflow-y-scroll'>
-
+                <div className="h-[40vh]  ab mt-5 overflow-y-scroll">
                   {features.map((features, i) => (
-                    <li key={i} className="flex items-center gap-6 mb-3 main_hero_slogan">
-
+                    <li
+                      key={i}
+                      className="flex items-center gap-6 mb-3 main_hero_slogan"
+                    >
                       <span
                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                        style={{ width: '24px', height: '24px' }}
+                        style={{ width: "24px", height: "24px" }}
                       >
                         <HiMiniCheck size={16} />
                       </span>
-                      {features.name}</li>
-                  ))
-                  }
+                      {features.name}
+                    </li>
+                  ))}
                 </div>
-
               </div>
             </div>
 
-            <div className='w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl'>
-              <div className=' p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg '>
+            <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+              <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
                 <p className="w-1/2 mx-auto text-center text-[#1FCB78] border border-[#1FCB78] px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
                   Most Popular
                 </p>
 
-                <p className='font-gilroy text-[45px] mx-auto text-center'>Advanced</p>
-                <p className='text-center main_hero_slogan leading-none my-8'>When she reached the first hills of the italic mountains  </p>
+                <p className="gilray-font text-[35px] mx-auto text-center">
+                  Advanced
+                </p>
+                <p className="text-center main_hero_slogan leading-none my-8">
+                  When she reached the first hills of the italic mountains{" "}
+                </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">Get Started</span>
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                    style={{ width: '24px', height: '24px' }}
+                    style={{ width: "24px", height: "24px" }}
                   >
                     <HiArrowUpRight size={16} />
                   </span>
                 </button>
-                <hr className='my-10 border-slate-500 ' />
+                <hr className="my-10 border-slate-500 " />
 
-                <div className='h-[40vh] ab mt-5 overflow-y-scroll'>
-
+                <div className="h-[40vh] ab mt-5 overflow-y-scroll">
                   {features.map((features, i) => (
-                    <li key={i} className="flex items-center gap-6 mb-3 main_hero_slogan">
-
+                    <li
+                      key={i}
+                      className="flex items-center gap-6 mb-3 main_hero_slogan"
+                    >
                       <span
                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                        style={{ width: '24px', height: '24px' }}
+                        style={{ width: "24px", height: "24px" }}
                       >
                         <HiMiniCheck size={16} />
                       </span>
-                      {features.name}</li>
-                  ))
-                  }
+                      {features.name}
+                    </li>
+                  ))}
                 </div>
-
               </div>
             </div>
 
-            <div className='w-1/3  mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl'>
-              <div className=' p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg '>
-
-
-                <p className='font-gilroy text-[45px] mx-auto text-center'>Enterprise</p>
-                <p className='text-center main_hero_slogan leading-none my-8'>When she reached the first hills of the italic mountains  </p>
+            <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+              <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
+                <p className="gilray-font text-[35px] mx-auto text-center">
+                  Enterprise
+                </p>
+                <p className="text-center main_hero_slogan leading-none my-8">
+                  When she reached the first hills of the italic mountains{" "}
+                </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">Get Started</span>
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                    style={{ width: '24px', height: '24px' }}
+                    style={{ width: "24px", height: "24px" }}
                   >
                     <HiArrowUpRight size={16} />
                   </span>
                 </button>
-                <hr className='my-10 border-slate-500 ' />
-                <div className='h-[40vh] ab mt-5 overflow-y-scroll'>
-
+                <hr className="my-10 border-slate-500 " />
+                <div className="h-[40vh] ab mt-5 overflow-y-scroll">
                   {features.map((features, i) => (
-                    <li key={i} className="flex items-center gap-6 mb-3 main_hero_slogan">
-
+                    <li
+                      key={i}
+                      className="flex items-center gap-6 mb-3 main_hero_slogan"
+                    >
                       <span
                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                        style={{ width: '24px', height: '24px' }}
+                        style={{ width: "24px", height: "24px" }}
                       >
                         <HiMiniCheck size={16} />
                       </span>
-                      {features.name}</li>
-                  ))
-                  }
+                      {features.name}
+                    </li>
+                  ))}
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;

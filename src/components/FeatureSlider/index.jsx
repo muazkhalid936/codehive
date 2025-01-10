@@ -4,20 +4,23 @@ import React from "react";
 const FeatureSlider = ({ data, from }) => {
   return (
     <div
-      className={` text-white overflow-hidden scrollbar-hidden   md:ml-24 z-50   ${from !== "contact" && "pb-[55px]"
-        }`}
+      className={` text-white overflow-hidden scrollbar-hidden   md:ml-24 z-50   ${
+        from !== "contact" && "pb-[55px]"
+      }`}
     >
       <h2
-        className={`md:text-4xl 2xl:text-5xl font-extrabold gilray-font w-full ${from !== "contact" ? "text-black" : "text-white"
-          }`}
+        className={`md:text-[45px] font-extrabold gilray-font w-full ${
+          from !== "contact" ? "text-black" : "text-white"
+        }`}
       >
         {/* Partnered with Most of the Top <br /> People at Each{' '}
         <span className="text-[#219DD9]">Industry</span> */}
         {data?.title?.split(" ").map((word, index) => (
           <span
             key={index}
-            className={` ${index === data.title.split(" ").length - 1 ? "text-[#219DD9]" : ""
-              }`}
+            className={` ${
+              index === data.title.split(" ").length - 1 ? "text-[#219DD9]" : ""
+            }`}
           >
             {word}{" "}
           </span>
@@ -28,20 +31,26 @@ const FeatureSlider = ({ data, from }) => {
         {data.cards.map((item, index) => (
           <div
             key={index}
-            className="snap-center shrink-0 flex flex-col text-center rounded-xl h-[400px] 2xl:h-[550px]  bg-black w-[90%] md:w-[26%] overflow-hidden relative"
+            className="snap-center shrink-0 flex flex-col text-center rounded-xl h-[450px]  w-[90%] md:w-[26%] bg-black overflow-hidden relative"
+            // style={{
+            //   background:
+            //     "linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0) 2000%)",
+            // }}
           >
             <img
               src={item.picture}
               alt={item.name}
               className="w-full h-full object-cover opacity-60 "
             />
-            <div className="p-4 my-5 absolute bottom-0">
-              <h3 className="text-2xl font-bold px-2 text-center font-gilroy">
-                {item.name}
-              </h3>
-              <p className="text-white main_hero_slogan px-2 text-center ">
-                {item.description}
-              </p>
+            <div className="p-4 h-[200px]  absolute bg-gradient-to-t from-black to-transparent bottom-0">
+              <div className="flex flex-col justify-center mt-5 h-full">
+                <h3 className="text-2xl font-bold px-2 r font-gilroy">
+                  {item.name}
+                </h3>
+                <p className="text-white main_hero_slogan px-10  ">
+                  {item.description}
+                </p>
+              </div>
             </div>
           </div>
         ))}

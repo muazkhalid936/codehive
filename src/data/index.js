@@ -1454,7 +1454,7 @@ export const industries = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -1494,7 +1494,7 @@ export const industries = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ]
 
@@ -1737,7 +1737,7 @@ export const industries = [
             "description": "We integrate easy navigation functionality to deliver an exceptional user experience."
           }
         ],
-        "image": "/E-commerce/iphone.png"
+        "image": "/E-commerce/iphone1.png"
       },
       {
         "id": 2,
@@ -1776,7 +1776,7 @@ export const industries = [
             "description": "Enhance product discoverability with advanced filtering options."
           }
         ],
-        "image": "/E-commerce/iphone.png"
+        "image": "/E-commerce/iphone2.png"
       },
       {
         "id": 3,
@@ -1815,7 +1815,7 @@ export const industries = [
             "description": "Easily update content directly from the dashboard for hassle-free content management."
           }
         ],
-        "image": "/E-commerce/iphone.png"
+        "image": "/E-commerce/iphone3.png"
       },
       {
         "id": 4,
@@ -1854,7 +1854,7 @@ export const industries = [
             "description": "Push Notifications and alerts help vendors to keep the user informed regarding any updates."
           }
         ],
-        "image": "/E-commerce/iphone.png"
+        "image": "/E-commerce/iphone4.png"
       }
     ]
 
@@ -2020,7 +2020,7 @@ export const industries = [
             "description": "Monetize with premium features, exclusive content, or personalized coaching plans available through in-app purchases."
           }
         ],
-        "image": "/FitnessApp/iphone.png"
+        "image": "/FitnessApp/iphone1.png"
       },
       {
         "id": 2,
@@ -2064,7 +2064,7 @@ export const industries = [
             "description": "Offer accessibility for trainers and clients worldwide with multi-language functionality."
           }
         ],
-        "image": "/FitnessApp/iphone.png"
+        "image": "/FitnessApp/iphone2.png"
       },
       {
         "id": 3,
@@ -2103,7 +2103,7 @@ export const industries = [
             "description": "Leverage integrated tools for email marketing, push notifications, and targeted promotional campaigns."
           }
         ],
-        "image": "/FitnessApp/iphone.png"
+        "image": "/FitnessApp/iphone3.png"
       },
       {
         "id": 4,
@@ -2137,7 +2137,7 @@ export const industries = [
             "description": "Share detailed information about gym amenities, facilities, and rules for a smooth member experience."
           }
         ],
-        "image": "/FitnessApp/iphone.png"
+        "image": "/FitnessApp/iphone4.png"
       }
     ]
 
@@ -2362,7 +2362,7 @@ export const industries = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -2402,7 +2402,7 @@ export const industries = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ]
     ,
@@ -2543,7 +2543,7 @@ export const industries = [
             "description": "Provide real-time tracking of placed orders for better customer experience."
           }
         ],
-        "image": "/DeliveryApp/iphone.png"
+        "image": "/DeliveryApp/i1.png"
       },
       {
         "id": 2,
@@ -2577,7 +2577,7 @@ export const industries = [
             "description": "Gain insights into service efficiency, delivery performance, and user engagement."
           }
         ],
-        "image": "/DeliveryApp/iphone.png"
+        "image": "/DeliveryApp/i2.png"
       },
       {
         "id": 3,
@@ -2611,7 +2611,7 @@ export const industries = [
             "description": "Provide optimized routes and real-time navigation to delivery locations."
           }
         ],
-        "image": "/DeliveryApp/iphone.png"
+        "image": "/DeliveryApp/i3.png"
       }
     ]
 
@@ -2749,42 +2749,42 @@ export const industries = [
         "description": "We craft user-focused mobile applications designed to engage your customers and foster long-term loyalty to your business:",
         "features": [
           {
-            "icon": "/CarWashApp/1.png",
+            "icon": "/CarwashApp/1.png",
             "title": "Customizable Packages",
             "description": "Allow customers to choose and customize car wash packages according to their preferences and vehicle needs."
           },
           {
-            "icon": "/CarWashApp/2.png",
+            "icon": "/CarwashApp/2.png",
             "title": "Service Logging",
             "description": "Provide a platform for customers to log and track completed car wash services, including details like type and date of service."
           },
           {
-            "icon": "/CarWashApp/3.png",
+            "icon": "/CarwashApp/3.png",
             "title": "Appointment Scheduling",
             "description": "Display service schedules and let users book appointments directly through the app or at the car wash location."
           },
           {
-            "icon": "/CarWashApp/4.png",
+            "icon": "/CarwashApp/4.png",
             "title": "Facility Information",
             "description": "Share detailed information about the car wash facilities, available services, pricing, and operating hours."
           },
           {
-            "icon": "/CarWashApp/5.png",
+            "icon": "/CarwashApp/5.png",
             "title": "Multi-Vehicle Management",
             "description": "Allow users to manage multiple vehicles under one account for added convenience."
           },
           {
-            "icon": "/CarWashApp/6.png",
+            "icon": "/CarwashApp/6.png",
             "title": "Service History Records",
             "description": "Provide a detailed log of past car wash services, including dates, services availed, and costs."
           },
           {
-            "icon": "/CarWashApp/7.png",
+            "icon": "/CarwashApp/7.png",
             "title": "Feedback and Reviews",
             "description": "Enable customers to leave reviews and ratings for the service to enhance quality and customer satisfaction."
           }
         ],
-        "image": "/CarWashApp/iphone.png"
+        "image": "/CarwashApp/iphone1.png"
       },
       {
         "id": 2,
@@ -2793,42 +2793,42 @@ export const industries = [
         "description": "Streamline car wash operations with a powerful app to manage bookings, track services, and deliver a seamless customer experience:",
         "features": [
           {
-            "icon": "/CarWashApp/8.png",
+            "icon": "/CarwashApp/8.png",
             "title": "Booking Management",
             "description": "View and manage assigned bookings, including customer details, service type, and schedule."
           },
           {
-            "icon": "/CarWashApp/9.png",
+            "icon": "/CarwashApp/9.png",
             "title": "Service Status Updates",
             "description": "Update the status of each service in real-time, from 'In Progress' to 'Completed.'"
           },
           {
-            "icon": "/CarWashApp/10.png",
+            "icon": "/CarwashApp/10.png",
             "title": "Task Scheduling",
             "description": "Manage daily schedules, view upcoming tasks, and get reminders for assigned services."
           },
           {
-            "icon": "/CarWashApp/11.png",
+            "icon": "/CarwashApp/11.png",
             "title": "Vehicle Details",
             "description": "Access information about the vehicle, such as make, model, and special instructions, for a personalized service."
           },
           {
-            "icon": "/CarWashApp/12.png",
+            "icon": "/CarwashApp/12.png",
             "title": "Service History",
             "description": "View a record of completed services, including customer details and earnings."
           },
           {
-            "icon": "/CarWashApp/13.png",
+            "icon": "/CarwashApp/13.png",
             "title": "Availability Settings",
             "description": "Set availability for accepting new bookings and manage working hours with ease."
           },
           {
-            "icon": "/CarWashApp/14.png",
+            "icon": "/CarwashApp/14.png",
             "title": "Notifications and Alerts",
             "description": "Receive real-time notifications for new bookings, schedule changes, or urgent tasks."
           }
         ],
-        "image": "/CarWashApp/iphone.png"
+        "image": "/CarwashApp/iphone2.png"
       },
       {
         "id": 3,
@@ -2837,37 +2837,37 @@ export const industries = [
         "description": "Simplify and enhance your car wash business operations with our robust and user-friendly admin panel:",
         "features": [
           {
-            "icon": "/CarWashApp/15.png",
+            "icon": "/CarwashApp/15.png",
             "title": "User Management",
             "description": "Manage user accounts, assign roles, and control access levels for staff and team members."
           },
           {
-            "icon": "/CarWashApp/16.png",
+            "icon": "/CarwashApp/16.png",
             "title": "Service Management",
             "description": "Easily update service offerings, manage service packages, and adjust pricing as needed."
           },
           {
-            "icon": "/CarWashApp/17.png",
+            "icon": "/CarwashApp/17.png",
             "title": "Booking Management",
             "description": "Manage and oversee customer bookings, monitor bay reservations, and address scheduling conflicts in real-time."
           },
           {
-            "icon": "/CarWashApp/18.png",
+            "icon": "/CarwashApp/18.png",
             "title": "Analytics and Insights",
             "description": "Access detailed analytics on app usage, customer bookings, and revenue trends to make informed decisions."
           },
           {
-            "icon": "/CarWashApp/19.png",
+            "icon": "/CarwashApp/19.png",
             "title": "Real-Time Notifications",
             "description": "Receive instant alerts for new bookings, payment confirmations, or issues that require attention."
           },
           {
-            "icon": "/CarWashApp/20.png",
+            "icon": "/CarwashApp/20.png",
             "title": "Staff Management",
             "description": "Assign and track tasks for service providers, manage work schedules, and monitor performance."
           }
         ],
-        "image": "/CarWashApp/iphone.png"
+        "image": "/CarwashApp/iphone3.png"
       },
       {
         "id": 4,
@@ -2876,47 +2876,47 @@ export const industries = [
         "description": "Gain full control over your car wash business with advanced features and centralized management tools:",
         "features": [
           {
-            "icon": "/CarWashApp/21.png",
+            "icon": "/CarwashApp/21.png",
             "title": "Centralized Dashboard",
             "description": "Gain a comprehensive view of all car wash locations, bookings, revenue, and overall performance metrics in one place."
           },
           {
-            "icon": "/CarWashApp/22.png",
+            "icon": "/CarwashApp/22.png",
             "title": "User and Role Management",
             "description": "Control access and permissions for admins, staff, service providers, and customers across all locations."
           },
           {
-            "icon": "/CarWashApp/23.png",
+            "icon": "/CarwashApp/23.png",
             "title": "Booking Oversight",
             "description": "Oversee and manage bookings across locations, resolve conflicts, and reassign tasks as needed."
           },
           {
-            "icon": "/CarWashApp/24.png",
+            "icon": "/CarwashApp/24.png",
             "title": "Marketing and Promotions",
             "description": "Plan and execute marketing campaigns, such as discounts, seasonal offers, and loyalty programs, across all locations."
           },
           {
-            "icon": "/CarWashApp/25.png",
+            "icon": "/CarwashApp/25.png",
             "title": "Inventory Control",
             "description": "Monitor inventory levels across all locations, approve restocking requests, and set minimum stock thresholds."
           },
           {
-            "icon": "/CarWashApp/26.png",
+            "icon": "/CarwashApp/26.png",
             "title": "Customizable Service Packages",
             "description": "Define and adjust service offerings, pricing, and add-ons for different locations to cater to diverse customer needs."
           },
           {
-            "icon": "/CarWashApp/27.png",
+            "icon": "/CarwashApp/27.png",
             "title": "Subscription and Membership Management",
             "description": "Oversee customer memberships, subscription plans, and loyalty rewards across all locations."
           },
           {
-            "icon": "/CarWashApp/28.png",
+            "icon": "/CarwashApp/28.png",
             "title": "Compliance and Reporting",
             "description": "Ensure regulatory compliance by maintaining records and generating reports for audits and inspections."
           }
         ],
-        "image": "/CarWashApp/iphone.png"
+        "image": "/CarwashApp/iphone4.png"
       }
     ]
     ,
