@@ -19,7 +19,7 @@ const WorryNoMore = ({
         }}
       >
         <div
-          className={`flex flex-col text-black w-full sm:w-1/2 pl-4 md:pl-12 pr-2 h-full justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
+          className={`flex flex-col text-black w-full md:w-1/2 pl-4 md:pl-12 pr-2 h-full justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
         >
           <h2 className="gilray-font leading-tight sub_heading">
             Worry No More With <br />
@@ -40,7 +40,7 @@ const WorryNoMore = ({
 
         {rightImage && (
           <div
-            className=" text-white w-full sm:w-1/2 h-full self-end rounded-[20px]"
+            className=" text-white w-full md:w-1/2 h-full self-end rounded-[20px]"
             style={{
               backgroundImage: `url(${rightImage})`,
               backgroundSize: "contain",
