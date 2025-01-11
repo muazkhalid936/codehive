@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const ChallengesOrSolution = ({ title, image, description }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.3,
   });
 
@@ -26,13 +26,26 @@ const ChallengesOrSolution = ({ title, image, description }) => {
         duration: 1,
         ease: "power3.out",
       });
+    } else {
+      gsap.to(imgRef.current, {
+        x: -400,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+      gsap.to(textRef.current, {
+        x: 400,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
     }
   }, [inView]);
 
   return (
     <div
       ref={ref}
-      className="flex flex-col md:flex-row items-center justify-center container gap-6 py-[50px]"
+      className="flex flex-col  overflow-hidden md:flex-row items-center justify-center container gap-6 py-[50px]"
     >
       <img
         ref={imgRef}
