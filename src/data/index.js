@@ -3140,7 +3140,7 @@ export const ourWorks = [
       description:
         "Indulge in the ultimate fast food experience with DeliciousBites, your go-to app for satisfying cravings with ease and convenience. Whether you're hankering for a juicy burger, crispy fries, or a refreshing milkshake, DeliciousBites brings the best fast food right to your fingertips. Our user-friendly app connects you to a wide selection of local favorites and national chains, offering a seamless ordering process, exclusive deals, and real-time order tracking.",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -3231,7 +3231,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -3271,7 +3271,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     challengeSection: {
@@ -3321,7 +3321,7 @@ export const ourWorks = [
       description:
         " Our AI Assistant App transforms the writing experience by offering personalized suggestions, grammar checks, and style enhancements for various writing needs.Designed for users ranging from students to content creators, it features an intuitive interface that streamlines the writing process.With real- time feedback and tailored recommendations, users can produce high quality content effortlessly.Our goal is to empower creativity and enhance writing efficiency in a user - friendly environment.",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -3412,7 +3412,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -3452,7 +3452,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     challengeSection: {
@@ -3497,7 +3497,7 @@ export const ourWorks = [
       topArrow: true,
       buttonText: "Get Your App Developed Now",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -3588,7 +3588,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -3628,7 +3628,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     projectOverview: {
@@ -3678,7 +3678,7 @@ export const ourWorks = [
       topArrow: true,
       buttonText: "Get Your App Developed Now",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -3769,7 +3769,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -3809,7 +3809,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     projectOverview: {
@@ -3859,7 +3859,7 @@ export const ourWorks = [
       topArrow: true,
       buttonText: "Get Your App Developed Now",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -3950,7 +3950,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -3990,7 +3990,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     projectOverview: {
@@ -4040,7 +4040,7 @@ export const ourWorks = [
       topArrow: true,
       buttonText: "Get Your App Developed Now",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -4131,7 +4131,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -4171,7 +4171,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     projectOverview: {
@@ -4221,7 +4221,7 @@ export const ourWorks = [
       topArrow: true,
       buttonText: "Get Your App Developed Now",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -4312,7 +4312,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -4352,7 +4352,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     projectOverview: {
@@ -4407,7 +4407,7 @@ export const ourWorks = [
       description:
         "Instant Save is a user-friendly application designed to simplify the process of downloading content from Instagram. Users can easily save photos, videos, and stories directly to their devices, allowing for offline access and sharing. With a sleek interface and quick download capabilities, Instant Save enhances the Instagram experience by making it easy to keep and revisit cherished moments. The app prioritizes user privacy and security, ensuring a seamless and safe content-saving process.",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -4498,7 +4498,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -4538,7 +4538,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     challengeSection: {
@@ -4588,7 +4588,7 @@ export const ourWorks = [
       description:
         "Eshop App is an innovative e-commerce shopping platform designed to provide users with a seamless online shopping experience. Our platform combines a user-friendly interface with advanced features that allow customers to easily browse a diverse range of products, make secure payments, and enjoy swift delivery right to their doorsteps. With personalized recommendations and a tailored shopping journey, Eshop App aims to enhance customer satisfaction and streamline the purchasing process for all users. Whether shopping for essentials or exploring new products, Eshop App brings convenience and variety together in one place.",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -4679,7 +4679,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -4719,7 +4719,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     challengeSection: {
@@ -4769,7 +4769,7 @@ export const ourWorks = [
       description:
         "The Food Inventory App streamlines the process of ordering food by providing users with a comprehensive platform to browse, select, and purchase meals from various restaurants. Designed with user convenience in mind, the app features an intuitive interface that allows users to quickly find their favorite dishes, view menus, and customize orders. With integrated payment options and real-time order tracking, the app enhances the overall dining experience while supporting local eateries. Our goal is to create a hassle-free solution that connects food lovers with their favorite restaurants effortlessly.",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -4860,7 +4860,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -4900,7 +4900,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     challengeSection: {
@@ -4945,7 +4945,7 @@ export const ourWorks = [
       topArrow: true,
       buttonText: "Get Your App Developed Now",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -5036,7 +5036,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -5076,7 +5076,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     projectOverview: {
@@ -5126,7 +5126,7 @@ export const ourWorks = [
       topArrow: true,
       buttonText: "Get Your App Developed Now",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -5217,7 +5217,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -5257,7 +5257,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     projectOverview: {
@@ -5307,7 +5307,7 @@ export const ourWorks = [
       topArrow: true,
       buttonText: "Get Your App Developed Now",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -5398,7 +5398,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -5438,7 +5438,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     projectOverview: {
@@ -5493,7 +5493,7 @@ export const ourWorks = [
       description:
         "Clixpos is a comprehensive Point of Sale (POS) platform designed to meet the diverse needs of businesses across various industries. Our solution simplifies the transaction process, enhances inventory management, and provides insightful analytics to help businesses optimize operations. With an intuitive user interface and robust features, Clixpos empowers business owners to efficiently manage sales, track performance, and improve customer experiences. Whether you run a retail store, restaurant, or service-based business, Clixpos is tailored to elevate your operational efficiency and support your growth.",
     },
-    panelsData: [
+    panelData: [
       {
         id: 1,
         title: "Patient App",
@@ -5584,7 +5584,7 @@ export const ourWorks = [
               "Receive important updates, including critical patient conditions and lab results.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/2.png",
       },
       {
         id: 3,
@@ -5624,7 +5624,7 @@ export const ourWorks = [
               "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
           },
         ],
-        image: "/new/1.png",
+        image: "/new/3.png",
       },
     ],
     challengeSection: {

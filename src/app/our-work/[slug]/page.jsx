@@ -32,7 +32,7 @@ const page = async ({ params }) => {
       <WorryNoMore {...work.noMoreWorriesSection} />
       <Technologies {...work.techSection} />
       <ChallengesOrSolution {...work.solutionSection} />
-      <IndustryDetails panelData={work.panelsData} />
+      <IndustryDetails panelData={work.panelData} />
       <div className="flex justify-center mt-5 mb-20">
         <div className="w-[90%]  overflow-hidden rounded-xl shadow-lg">
           <img
