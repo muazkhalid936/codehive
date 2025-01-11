@@ -122,7 +122,7 @@ const index = () => {
           <div className="flex md:flex-row flex-col gap-5">
             <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
-                <p className="gilray-font text-[35px] mx-auto text-center">
+                <p className="gilray-font text-[30px] mx-auto text-center">
                   Basic
                 </p>
                 <p className="text-center main_hero_slogan leading-none my-8">
@@ -166,7 +166,7 @@ const index = () => {
                   Most Popular
                 </p>
 
-                <p className="gilray-font text-[35px] mx-auto text-center">
+                <p className="gilray-font text-[30px] mx-auto text-center">
                   Advanced
                 </p>
                 <p className="text-center main_hero_slogan leading-none my-8">
@@ -205,7 +205,7 @@ const index = () => {
 
             <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
-                <p className="gilray-font text-[35px] mx-auto text-center">
+                <p className="gilray-font text-[30px] mx-auto text-center">
                   Enterprise
                 </p>
                 <p className="text-center main_hero_slogan leading-none my-8">

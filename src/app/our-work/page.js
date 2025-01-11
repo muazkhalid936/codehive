@@ -36,16 +36,16 @@ const page = () => {
       <div className="  container mb-[55px]  mx-auto ">
         <div className="w-full  ">
           <div className="flex my-[55px]  gap-5">
-            <button onClick={() => setOption("all")} className={`text-white px-10 lg:text-xl 2xl:text-2xl py-2 rounded-full ${option === "all" ? " bg-gradient-to-r from-[#053c7D] to-blueColor" : "bg-[#c3c3c3]"} `}>
+            <button onClick={() => setOption("all")} className={`text-white px-10 main_hero_slogan py-2 rounded-full ${option === "all" ? " bg-gradient-to-r from-[#053c7D] to-blueColor" : "bg-[#c3c3c3]"} `}>
               All
             </button>
-            <button onClick={() => setOption("web")} className={`text-white px-10  lg:text-xl 2xl:text-2xl  py-2 rounded-full ${option === "web" ? " bg-gradient-to-r from-[#053c7D] to-blueColor" : "bg-[#c3c3c3]"} `}>
+            <button onClick={() => setOption("web")} className={`text-white px-10  main_hero_slogan  py-2 rounded-full ${option === "web" ? " bg-gradient-to-r from-[#053c7D] to-blueColor" : "bg-[#c3c3c3]"} `}>
               Web
             </button>
-            <button onClick={() => setOption("mobile")} className={`text-white px-10  lg:text-xl 2xl:text-2xl  py-2 rounded-full ${option === "mobile" ? " bg-gradient-to-r from-[#053c7D] to-blueColor" : "bg-[#c3c3c3]"} `}>
+            <button onClick={() => setOption("mobile")} className={`text-white px-10  main_hero_slogan  py-2 rounded-full ${option === "mobile" ? " bg-gradient-to-r from-[#053c7D] to-blueColor" : "bg-[#c3c3c3]"} `}>
               Mobile Application
             </button>
-            <button onClick={() => setOption("web-app")} className={`text-white px-10  lg:text-xl 2xl:text-2xl  py-2 rounded-full ${option === "web-app" ? " bg-gradient-to-r from-[#053c7D] to-blueColor" : "bg-[#c3c3c3]"} `}>
+            <button onClick={() => setOption("web-app")} className={`text-white px-10  main_hero_slogan  py-2 rounded-full ${option === "web-app" ? " bg-gradient-to-r from-[#053c7D] to-blueColor" : "bg-[#c3c3c3]"} `}>
               Web Application
             </button>
           </div>

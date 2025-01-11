@@ -31,7 +31,7 @@ const Banner = ({
           className={`flex flex-col ${color} w-full ${
             backgroundColor && `bg-[${backgroundColor}]`
           } md:w-1/2 pl-4 md:pl-20 pr-2  ${
-            !rightImage && "bg-gradient-to-r from-black to-transparent"
+            !rightImage && "bg-gradient-to-r from-black via-black to-transparent"
           } h-full justify-center
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3`}
         >

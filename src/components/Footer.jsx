@@ -26,15 +26,29 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-white">
-            <Link href="/">Home</Link>
-            <Link href="/">About Us</Link>
-            <Link href="/">Services</Link>
-            <Link href="/">Blog</Link>
-            <Link href="/">Blog</Link>
-            <Link href="/">Contact Us</Link>
-            <Link href="/">Site Map</Link>
-            <Link href="/">Privacy Policy</Link>
+          <div className="flex flex-wrap gap-4  text-white">
+            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+              Home
+            </Link>
+            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+              About Us
+            </Link>
+            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+              Services
+            </Link>
+            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+              Blog
+            </Link>
+
+            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+              Contact Us
+            </Link>
+            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+              Site Map
+            </Link>
+            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+              Privacy Policy
+            </Link>
           </div>
           <div className="text-white">
             <p>&copy; 2024 Codehive. All rights reserved.</p>

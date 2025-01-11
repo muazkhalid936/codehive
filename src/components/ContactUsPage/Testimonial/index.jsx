@@ -1,10 +1,10 @@
-'use client';
-import React, { useRef } from 'react';
-import { HiChevronRight, HiChevronLeft } from 'react-icons/hi2';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+"use client";
+import React, { useRef } from "react";
+import { HiChevronRight, HiChevronLeft } from "react-icons/hi2";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Testimonials = ({ testimonials }) => {
   const swiperRef = useRef(null); // Ref for Swiper instance
@@ -17,8 +17,8 @@ const Testimonials = ({ testimonials }) => {
           <h1
             className="font-black text-center hover:underline underline-offset-[2px] text-[30px] md:text-[45px] leading-[50px] sm:leading-[60px] md:leading-[77px] decoration-1 decoration-blue-500 font-gilroy"
             style={{
-              textDecorationSkipInk: 'none',
-              textUnderlinePosition: 'from-font',
+              textDecorationSkipInk: "none",
+              textUnderlinePosition: "from-font",
             }}
           >
             <span className="text-[#010B17]">What They </span>
@@ -66,7 +66,9 @@ const Testimonials = ({ testimonials }) => {
                     alt="Quotation Marks"
                     className="w-6 h-6 sm:w-10 sm:h-10 mb-4 ml-6"
                   />
-                  <blockquote className="mb-2"> {/* Reduced margin-bottom here */}
+                  <blockquote className="mb-2">
+                    {" "}
+                    {/* Reduced margin-bottom here */}
                     <p className="text-base text-[20px] font-lato leading-relaxed px-4 sm:px-6">
                       {testimonial.text}
                     </p>
@@ -75,8 +77,12 @@ const Testimonials = ({ testimonials }) => {
                   {/* Name and Designation in a row */}
                   <div className="flex items-center justify-between ml-6">
                     <div>
-                      <p className="text-lg sm:text-xl font-lato">{testimonial.name}</p>
-                      <p className="text-xs sm:text-sm text-gray-400 font-lato mb-2"> {/* Added margin-bottom here */}
+                      <p className="text-lg sm:text-xl font-lato">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-xs sm:text-sm text-gray-400 font-lato mb-2">
+                        {" "}
+                        {/* Added margin-bottom here */}
                         {testimonial.designation}
                       </p>
                     </div>
@@ -84,13 +90,13 @@ const Testimonials = ({ testimonials }) => {
                     {/* Swipe Buttons */}
                     <div className="flex gap-2">
                       <button
-                        className="h-8 w-8 rounded-full bg-white flex items-center justify-center hover:bg-gray-200"
+                        className="h-8 w-8 rounded-full bg-white flex items-center justify-center hover:bg-blueColor"
                         onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
                       >
                         <HiChevronLeft className="text-black text-lg" />
                       </button>
                       <button
-                        className="h-8 w-8 rounded-full bg-white flex items-center justify-center hover:bg-gray-200"
+                        className="h-8 w-8 rounded-full bg-white flex items-center justify-center hover:bg-blueColor"
                         onClick={() => swiperRef.current?.slideNext()} // Slide to next
                       >
                         <HiChevronRight className="text-black text-lg" />

@@ -155,7 +155,7 @@ const NavbarPages = ({ isBlack }) => {
 
             {work ? <FaCaretUp /> : <FaCaretDown />}
             {work && (
-              <div className="absolute top-5 mt-2     left-0  bg-[#001A36]  w-[350px]  shadow-lg z-50">
+              <div className="absolute top-5 mt-1     left-0  bg-[#001A36]  w-[350px]  shadow-lg z-50">
                 <Link
                   // key={industry.label}
                   href={"/industries/our-booking-system"}

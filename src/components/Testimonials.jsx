@@ -28,13 +28,13 @@ const Testimonials = ({ testimonials }) => {
           {/* Carousel Buttons */}
           <div className="flex gap-2  sm:mt-0">
             <button
-              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center hover:bg-gray-400"
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
               onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
             >
               <HiChevronLeft className="text-white text-xl sm:text-2xl font-bold" />
             </button>
             <button
-              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#219DD9] flex items-center justify-center hover:bg-[#1C87B3]"
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
               onClick={() => swiperRef.current?.slideNext()} // Slide to next
             >
               <HiChevronRight className="text-white text-xl sm:text-2xl font-bold" />

@@ -61,7 +61,7 @@ const Navbar = () => {
             {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {/* <FaChevronDown className="text-blue-600 text-base" /> */}
             {isServicesDropdownOpen && (
-              <div className="absolute top-5 left-0 mt-2 bg-[#001A36]  w-[350px] rounded shadow-lg z-50">
+              <div className="absolute top-5 left-0 mt-1 bg-[#001A36]  w-[350px] rounded shadow-lg z-50">
                 {/* <Link
                   href="/services"
                   className="block py-2 px-4 text-white hover:bg-[#219DD92B]"
@@ -92,7 +92,7 @@ const Navbar = () => {
             {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {/* <FaChevronDown className="text-blue-600 text-base" /> */}
             {isIndustriesDropdownOpen && (
-              <div className="absolute top-5 mt-2 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 {industriesDropdown?.map(
                   (industry) =>
                     industry.label !== "Our Booking System" && (
@@ -117,7 +117,7 @@ const Navbar = () => {
 
             {work ? <FaCaretUp /> : <FaCaretDown />}
             {work && (
-              <div className="absolute top-5 mt-2     left-0  bg-[#001A36]  w-[350px]  shadow-lg z-50">
+              <div className="absolute top-5 mt-1     left-0  bg-[#001A36]  w-[350px]  shadow-lg z-50">
                 <Link
                   // key={industry.label}
                   href={"industries/our-booking-system"}
