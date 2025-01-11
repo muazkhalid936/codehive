@@ -56,7 +56,7 @@ const IndustryDetails = ({ panelData }) => {
                       <h3 className="text-[17px] font-semibold">
                         {feature.title}
                       </h3>
-                      <p className="text-[14px] text-[#FBFBFB]">
+                      <p className="text-[14px] text-gray-300">
                         {feature.description}
                       </p>
                     </div>
