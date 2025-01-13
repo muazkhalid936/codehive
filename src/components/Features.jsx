@@ -100,7 +100,7 @@ const Features = ({ data }) => {
                     )}
 
                     {/* Add Talk an Expert button */}
-                    {item.talkAnExpert && (
+                    {/* {item.talkAnExpert && (
                       <Link
                         className="flex items-center mt-3  relative justify-center gap-4 mx-10 px-4 py-2 w-[90%] rounded-full shadow-lg border-[#3c5d73] border-[1px] border-solid transition "
                         href={item.path}
@@ -111,7 +111,7 @@ const Features = ({ data }) => {
                           <FaArrowRight className="text-[#219DD9]" />
                         </div>
                       </Link>
-                    )}
+                    )} */}
                   </div>
                 </div>
               </div>

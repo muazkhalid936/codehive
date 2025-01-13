@@ -5,9 +5,9 @@ import { FaArrowRight } from "react-icons/fa";
 
 const CallToAction = ({ heading }) => {
   return (
-    <div className="relative bg-[#000B17] overflow-hidden py-20">
+    <div className="relative h-[40vh] min-h-[400px] bg-[#000B17] overflow-hidden flex justify-center  flex-col py-20">
       {/* Heading */}
-      <div className="mt-32 text-center">
+      <div className=" text-center">
         <p className="gilray-font sub_heading w-full md:w-1/2 mx-auto text-white">
           {heading}
         </p>
@@ -15,16 +15,13 @@ const CallToAction = ({ heading }) => {
 
       {/* Call to Action Button */}
       <div>
-        <div
-          className="justify-between flex items-center w-[300px] m-auto bg-[#0C1C2C] mt-12 rounded-[50px] py-4 px-3 cursor-pointer 
-                    transition-transform duration-300 hover:scale-105"
-        >
+        <div className="justify-between flex flex-row-reverse group items-center w-[300px] m-auto bg-[#0C1C2C] mt-12 rounded-[50px] py-4 px-3 cursor-pointer transition-transform duration-300">
           <div />
-          <div className="flex gap-2 items-center">
+          <div className="flex group-hover:-translate-x-10 gap-2 ease-in-out duration-300 items-center">
             <FiPhoneCall className="text-white" />
             <p className="text-lg text-white">Let's talk</p>
           </div>
-          <div className="p-2 rounded-full bg-white">
+          <div className="p-2 rounded-full group-hover:translate-x-[600%] ease-in-out duration-300 bg-white">
             <FaArrowRight className="text-[#219DD9]" />
           </div>
         </div>

@@ -1,7 +1,6 @@
-import './globals.css';
-import Footer from '../components/Footer';
-import NextTopLoader from 'nextjs-toploader';
-import PreLoaderHandler from './PreLoaderHandler'
+import "./globals.css";
+import Footer from "../components/Footer";
+import NextTopLoader from "nextjs-toploader";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -12,11 +11,9 @@ export default function RootLayout({ children }) {
         <title>Code Hive</title>
       </head>
       <body>
-        <PreLoaderHandler>
-          {/* <NextTopLoader showSpinner={false} /> */}
-          {children}
-          <Footer />
-        </PreLoaderHandler>
+        <NextTopLoader showSpinner={false} />
+        {children}
+        <Footer />
       </body>
     </html>
   );
