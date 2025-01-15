@@ -17,7 +17,7 @@ const ContactForm = () => {
           className="origin-center w-[200px] md:w-[300px] rotate-[-20deg]"
         />
       </div>
-      <div class="w-[75%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]  p-1 rounded-2xl">
+      <div className="w-[75%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]  p-1 rounded-2xl">
         <div className="p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg">
           <div className="my-20">
             {" "}
