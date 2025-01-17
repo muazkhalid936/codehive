@@ -24,7 +24,7 @@ const StackingImages = () => {
     // Card 1 and Text 1 animation
     timeline.fromTo(
       ".new-card-1",
-      { xPercent: 40, yPercent: 40, rotate: -90 },
+      { xPercent: 60, yPercent: 60, rotate: -90 },
       { xPercent: 0, yPercent: 0, rotate: 0 },
       "start"
     );
@@ -45,7 +45,7 @@ const StackingImages = () => {
     );    // Transition to Card 2 and Text 2
     timeline.to(
       ".new-card-1",
-      { xPercent: 40, yPercent: -40, rotate: 90 },
+      { xPercent: 60, yPercent: -60, rotate: 90 },
       "new-card2"
     );
     timeline.to(
@@ -55,7 +55,7 @@ const StackingImages = () => {
     );
     timeline.fromTo(
       ".new-card-2",
-      { xPercent: 40, yPercent: 40, rotate: -90 },
+      { xPercent: 60, yPercent: 60, rotate: -90 },
       { xPercent: 0, yPercent: 0, rotate: 0 },
       "new-card2"
     );
@@ -75,7 +75,7 @@ const StackingImages = () => {
     // Transition to Card 3 and Text 3
     timeline.to(
       ".new-card-2",
-      { xPercent: 40, yPercent: -40, rotate: 90 },
+      { xPercent: 60, yPercent: -60, rotate: 90 },
       "new-card3"
     );
     timeline.to(
@@ -85,7 +85,7 @@ const StackingImages = () => {
     );
     timeline.fromTo(
       ".new-card-3",
-      { xPercent: 40, yPercent: 40, rotate: -90 },
+      { xPercent: 60, yPercent: 60, rotate: -90 },
       { xPercent: 0, yPercent: 0, rotate: 0 },
       "new-card3"
     );
@@ -99,7 +99,7 @@ const StackingImages = () => {
     // Transition to Card 4 and Text 4
     timeline.to(
       ".new-card-3",
-      { xPercent: 40, yPercent: -40, rotate: 90 },
+      { xPercent: 60, yPercent: -60, rotate: 90 },
       "new-card4"
     );
     timeline.to(
@@ -109,7 +109,7 @@ const StackingImages = () => {
     );
     timeline.fromTo(
       ".new-card-4",
-      { xPercent: 40, yPercent: 40, rotate: -90 },
+      { xPercent: 60, yPercent: 60, rotate: -90 },
       { xPercent: 0, yPercent: 0, rotate: 0 },
       "new-card4"
     );

@@ -76,15 +76,23 @@ const ScrollAnimation = () => {
         scrub: 1,
         pin: true,
         toggleActions: "play none none none",
+        onEnter: () => console.log("Start"), // Log when animation starts
       },
     });
 
     sections.forEach((section, index) => {
       const heading = section.querySelector(".heading");
       const modelContainer = section.querySelector(".model-container");
-
+      if (index === 0) {
+        // Animate the first section's heading and image from off-screen
+        tl.fromTo(
+          heading,
+          { x: 100, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1 },
+          0 // Start at the beginning of the timeline
+        );
+      }
       if (index > 0) {
-        // Animate outgoing elements of the previous section
         tl.to(
           sections[index - 1].querySelector(".heading"),
           { x: -50, opacity: 0, duration: 0.5 },
@@ -95,7 +103,6 @@ const ScrollAnimation = () => {
           index
         );
 
-        // Animate incoming elements of the current section
         tl.fromTo(
           heading,
           { x: 50, opacity: 0 },
@@ -112,7 +119,6 @@ const ScrollAnimation = () => {
       const startRotation = Math.floor(index / 2) * Math.PI * 4; // 1 rotation every 2 sections
       const endRotation = startRotation + Math.PI * 2; // Add 1 full rotation over 2 sections
 
-      // Add rotation animation that follows scroll
       tl.to(
         {},
         {
@@ -131,17 +137,6 @@ const ScrollAnimation = () => {
         },
         index
       );
-
-      // Toggle visibility of models after every 100vh
-      ScrollTrigger.create({
-        trigger: section,
-        start: "top bottom", // When the section is at the bottom of the viewport
-        end: "bottom top", // When the section is at the top of the viewport
-        onEnter: () => setVisibleModel(1), // Make Model 1 visible when entering the section
-        onLeave: () => setVisibleModel(2), // Make Model 2 visible when leaving the section
-        onEnterBack: () => setVisibleModel(1), // Make Model 1 visible again when scrolling back
-        onLeaveBack: () => setVisibleModel(2), // Make Model 2 visible again when scrolling back
-      });
     });
 
     return () => {
@@ -204,47 +199,52 @@ const ScrollAnimation = () => {
   ];
 
   return (
-    <div
-      ref={containerRef}
-      className="flex flex-col bg-[#000b17] items-center justify-center h-screen main22 overflow-hidden"
-    >
-      {data.map((item, index) => (
-        <div
-          key={index}
-          className="section absolute flex flex-row-reverse items-center justify-between gap-8 w-full px-16"
-        >
-          <div className="w-1/2 heading">
-            <h2 className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
-              {item.title}
-            </h2>
-            <p className="mt-4 main_hero_slogan text-gray-500">{item.des1}</p>
-            <p className="mt-4 main_hero_slogan text-gray-500">{item.des2}</p>
-            <p className="mt-4 main_hero_slogan text-gray-500">{item.des3}</p>
-            <p className="mt-4 main_hero_slogan text-gray-500">{item.des4}</p>
-            <div className="flex justify-start items-center gap-3">
-              <button className="mt-2 xl:text-xl text-white">Contact Us</button>
-              <div className="bg-white text-black mt-2 rounded-full">
-                <FiArrowUpRight className="w-5 h-5" />
+    <div>
+      <div className="h-screen">a</div>
+      <div
+        ref={containerRef}
+        className="flex flex-col bg-[#000b17] items-center justify-center h-screen main22 overflow-hidden"
+      >
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className="section absolute flex flex-row-reverse items-center justify-between gap-8 w-full px-16"
+          >
+            <div className="w-1/2 heading">
+              <h2 className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
+                {item.title}
+              </h2>
+              <p className="mt-4 main_hero_slogan text-gray-500">{item.des1}</p>
+              <p className="mt-4 main_hero_slogan text-gray-500">{item.des2}</p>
+              <p className="mt-4 main_hero_slogan text-gray-500">{item.des3}</p>
+              <p className="mt-4 main_hero_slogan text-gray-500">{item.des4}</p>
+              <div className="flex justify-start items-center gap-3">
+                <button className="mt-2 xl:text-xl text-white">
+                  Contact Us
+                </button>
+                <div className="bg-white text-black mt-2 rounded-full">
+                  <FiArrowUpRight className="w-5 h-5" />
+                </div>
               </div>
             </div>
+            <div className="w-1/2 ">
+              <Canvas
+                dpr={[1, 2]}
+                camera={{ position: [25, 0, 0], fov: 50 }}
+                style={{ height: "600px" }}
+              >
+                <Stage intensity={1} environment={null}>
+                  {visibleModel === 1 ? (
+                    <Model rotationX={rotationX} isVisible={true} />
+                  ) : (
+                    <Model2 rotationX={rotationX} isVisible={true} />
+                  )}
+                </Stage>
+              </Canvas>
+            </div>
           </div>
-          <div className="w-1/2 ">
-            <Canvas
-              dpr={[1, 2]}
-              camera={{ position: [25, 0, 0], fov: 50 }}
-              style={{ height: "600px" }}
-            >
-              <Stage intensity={1} environment={null}>
-                {visibleModel === 1 ? (
-                  <Model rotationX={rotationX} isVisible={true} />
-                ) : (
-                  <Model2 rotationX={rotationX} isVisible={true} />
-                )}
-              </Stage>
-            </Canvas>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
