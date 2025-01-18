@@ -5658,3 +5658,55 @@ export const ourWorks = [
     image: "/our-work/clixpos-web/Banner.png",
   },
 ];
+
+
+export const homeData = [
+    {
+      title: "Car Wash",
+      des1: "Transform your vehicle with state-of-the-art car wash techniques that clean every corner thoroughly. Our team uses advanced equipment to ensure even the toughest grime is removed.",
+      des2: "Eco-friendly solutions protect your car’s paint while delivering a brilliant shine.",
+      des3: "Experience professional care that preserves the quality of your vehicle’s finish, ensuring longevity. Enjoy the satisfaction of driving a spotless and polished car every day.",
+      des4: "From exterior cleaning to interior detailing, we provide a comprehensive service that stands out. Let us bring your car back to life with unmatched quality and care.",
+      image: "/Industry/1.png",
+    },
+    {
+      title: "Delivery",
+      des1: "Experience reliable logistics with delivery services designed to handle your parcels with care. Whether it's urgent documents or large packages, we’ve got you covered.",
+      des2: "Our network ensures timely deliveries while maintaining high standards of security and tracking.",
+      des3: "From personal packages to business consignments, we focus on precision and punctuality.",
+      des4: "With seamless processes and excellent customer support, your delivery experience will be stress-free. Count on us for all your logistics and shipping needs.",
+      image: "/Industry/2.png",
+    },
+    {
+      title: "Health Care",
+      des1: "Discover innovative healthcare services that prioritize your well-being and long-term health.",
+      des2: "From preventive care to advanced diagnostics, our comprehensive services cater to all your needs. Tailored treatment plans ensure that every patient gets the attention they deserve.",
+      des3: "Our team is committed to helping you achieve a healthier lifestyle and manage chronic conditions effectively.",
+      des4: "Trust us to provide the tools and knowledge necessary for better health outcomes. Together, we work towards a happier, healthier you.",
+      image: "/Industry/3.png",
+    },
+    {
+      title: "Booking",
+      des1: "Simplify your reservations with our user-friendly booking platform. From hotels to events, we’ve made it easier than ever to secure your spot.",
+      des2: "Enjoy real-time availability checks and instant confirmations that save you time and effort.",
+      des3: "Our transparent pricing ensures there are no hidden surprises, giving you peace of mind.",
+      des4: "Let us handle the details while you focus on enjoying your experience. Seamless booking, tailored to your needs.",
+      image: "/Industry/4.png",
+    },
+    {
+      title: "Ecommerce",
+      des1: "Explore a world of online shopping with a wide range of products tailored to your needs.",
+      des2: "From fashion to electronics, our platform connects you to trusted sellers offering quality items.",
+      des3: "Secure payment options and efficient delivery ensure a smooth shopping experience.",
+      des4: "Discover exclusive deals and personalized recommendations that make your shopping effortless and enjoyable.",
+      image: "/Industry/5.png",
+    },
+    {
+      title: "Fitness",
+      des1: "Achieve your fitness goals with personalized programs designed for every level of experience.",
+      des2: "Our expert trainers provide guidance and motivation to help you stay on track and succeed.",
+      des3: "With state-of-the-art equipment and innovative techniques, your workouts will be both effective and enjoyable.",
+      des4: "Join a community that supports your journey to health and wellness. Let’s make fitness a lifestyle, not just a goal.",
+      image: "/Industry/6.png",
+    },
+  ];

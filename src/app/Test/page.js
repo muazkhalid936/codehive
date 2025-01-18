@@ -6,35 +6,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useGLTF, Stage } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three";
 
 gsap.registerPlugin(ScrollTrigger);
-useGLTF.preload("/iphoneModel/l2.glb");
-useGLTF.preload("/iphoneModel/latestnew1.glb");
+useGLTF.preload("/iphoneModel/3.glb");
 
-function Model({ rotationX, isVisible }) {
-  const { scene } = useGLTF("/iphoneModel/l2.glb");
+function Model({ rotationX, textureUrl }) {
+  const { scene } = useGLTF("/iphoneModel/3.glb");
+  const texture = useLoader(TextureLoader, textureUrl);
 
-  // Set initial rotation for the model
-  scene.rotation.set(0, 0, 0);
-
-  return (
-    <primitive
-      object={scene}
-      scale={0.09}
-      rotation={[0, rotationX, 0]}
-      position={[30, 0, 0]}
-      speed={1}
-      visible={isVisible} // Make the model visible or invisible based on the state
-    />
-  );
-}
-
-function Model2({ rotationX, isVisible }) {
-  const { scene } = useGLTF("/iphoneModel/latestnew1.glb");
-
-  // Set initial rotation for the model
-  scene.rotation.set(0, 0, 0);
+  useEffect(() => {
+    scene.traverse((child) => {
+      if (child.isMesh) {
+        child.material.map = texture;
+        child.material.map.flipY = false;
+        child.material.needsUpdate = true;
+      }
+    });
+  }, [scene, texture]);
 
   return (
     <primitive
@@ -42,16 +32,23 @@ function Model2({ rotationX, isVisible }) {
       scale={0.09}
       rotation={[0, rotationX, 0]}
       position={[30, 0, 0]}
-      speed={0.4}
-      visible={isVisible} // Make the model visible or invisible based on the state
     />
   );
 }
 
 const ScrollAnimation = () => {
+  const image = [
+    "/iphoneModel/Car wash.jpg",
+    "/iphoneModel/Delivery.png",
+    "/iphoneModel/Health care.jpg",
+    "/iphoneModel/Booking.jpg",
+    "/iphoneModel/Ecommerce.jpg",
+    "/iphoneModel/Fitness.png",
+  ];
+
   const containerRef = useRef();
   const [rotationX, setRotationX] = useState(0);
-  const [visibleModel, setVisibleModel] = useState(1); // 1 for Model, 2 for Model2
+  const [textureUrl, setTextureUrl] = useState(image[0]);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -76,30 +73,24 @@ const ScrollAnimation = () => {
         scrub: 1,
         pin: true,
         toggleActions: "play none none none",
-        onEnter: () => console.log("Start"), // Log when animation starts
+        onEnter: () => console.log("Start"),
       },
     });
 
     sections.forEach((section, index) => {
       const heading = section.querySelector(".heading");
-      const modelContainer = section.querySelector(".model-container");
       if (index === 0) {
-        // Animate the first section's heading and image from off-screen
         tl.fromTo(
           heading,
           { x: 100, opacity: 0 },
-          { x: 0, opacity: 1, duration: 1 },
-          0 // Start at the beginning of the timeline
+          { x: 0, opacity: 1, duration: 0.2 },
+          0
         );
       }
       if (index > 0) {
         tl.to(
           sections[index - 1].querySelector(".heading"),
           { x: -50, opacity: 0, duration: 0.5 },
-          index
-        ).to(
-          sections[index - 1].querySelector(".model-container"),
-          { y: -200, duration: 0.5 },
           index
         );
 
@@ -108,35 +99,35 @@ const ScrollAnimation = () => {
           { x: 50, opacity: 0 },
           { x: 0, opacity: 1, duration: 0.5 },
           index + 0.5
-        ).fromTo(
-          modelContainer,
-          { y: 200 },
-          { y: 0, opacity: 1, duration: 0.5 },
-          index + 0.5
+        );
+        const startRotation = Math.floor(index / 2) * Math.PI * 4;
+        const endRotation = startRotation + Math.PI * 2;
+
+        tl.to(
+          {},
+          {
+            onUpdate: () => {
+              const sectionProgress = tl.progress() * sections.length - index;
+              if (sectionProgress >= 0 && sectionProgress <= 1) {
+                const rotationValue = gsap.utils.interpolate(
+                  startRotation,
+                  endRotation,
+                  sectionProgress
+                );
+                setRotationX(rotationValue);
+
+                // Change texture slightly before halfway (e.g., 40% of the rotation)
+                const earlyPoint = startRotation + Math.PI * 0.5; // Adjust factor (e.g., 0.8 for slightly earlier)
+                if (Math.abs(rotationValue - earlyPoint) < 0.1) {
+                  setTextureUrl(image[index]);
+                }
+              }
+            },
+            ease: "none",
+          },
+          index
         );
       }
-
-      const startRotation = Math.floor(index / 2) * Math.PI * 4; // 1 rotation every 2 sections
-      const endRotation = startRotation + Math.PI * 2; // Add 1 full rotation over 2 sections
-
-      tl.to(
-        {},
-        {
-          onUpdate: () => {
-            const sectionProgress = tl.progress() * sections.length - index;
-            if (sectionProgress >= 0 && sectionProgress <= 1) {
-              const rotationValue = gsap.utils.interpolate(
-                startRotation,
-                endRotation,
-                sectionProgress
-              );
-              setRotationX(rotationValue);
-            }
-          },
-          ease: "none",
-        },
-        index
-      );
     });
 
     return () => {
@@ -200,7 +191,7 @@ const ScrollAnimation = () => {
 
   return (
     <div>
-      <div className="h-screen">a</div>
+      {/* <div className="h-screen">a</div> */}
       <div
         ref={containerRef}
         className="flex flex-col bg-[#000b17] items-center justify-center h-screen main22 overflow-hidden"
@@ -233,12 +224,8 @@ const ScrollAnimation = () => {
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{ height: "600px" }}
               >
-                <Stage intensity={1} environment={null}>
-                  {visibleModel === 1 ? (
-                    <Model rotationX={rotationX} isVisible={true} />
-                  ) : (
-                    <Model2 rotationX={rotationX} isVisible={true} />
-                  )}
+                <Stage intensity={0} environment={"city"}>
+                  <Model rotationX={rotationX} textureUrl={textureUrl} />
                 </Stage>
               </Canvas>
             </div>
