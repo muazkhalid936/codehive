@@ -69,7 +69,7 @@ const ScrollAnimation = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=6000",
+        end: "+=5000",
         scrub: 1,
         pin: true,
         toggleActions: "play none none none",
@@ -114,15 +114,15 @@ const ScrollAnimation = () => {
                   endRotation,
                   sectionProgress
                 );
-                setRotationX(rotationValue);
 
-                // Change texture slightly before halfway (e.g., 40% of the rotation)
-                const earlyPoint = startRotation + Math.PI * 0.5; // Adjust factor (e.g., 0.8 for slightly earlier)
+                setRotationX(rotationValue);
+                const earlyPoint = startRotation + Math.PI * 0.5;
                 if (Math.abs(rotationValue - earlyPoint) < 0.1) {
                   setTextureUrl(image[index]);
                 }
               }
             },
+
             ease: "none",
           },
           index
@@ -199,9 +199,9 @@ const ScrollAnimation = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="section absolute flex flex-row-reverse items-center justify-between gap-8 w-full px-16"
+            className="section  absolute flex flex-row-reverse items-center justify-between gap-8  px-16"
           >
-            <div className="w-1/2 heading">
+            <div className="w-[640px] heading">
               <h2 className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
                 {item.title}
               </h2>
@@ -222,7 +222,7 @@ const ScrollAnimation = () => {
               <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
-                style={{ height: "600px" }}
+                style={{ height: "50vh", minHeight: "500px", maxHeight: "800px" }}
               >
                 <Stage intensity={0} environment={"city"}>
                   <Model rotationX={rotationX} textureUrl={textureUrl} />
