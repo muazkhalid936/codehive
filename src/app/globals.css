@@ -389,9 +389,9 @@
   transform: translateY(-30%);
 }
 
-.why-section-heading-1 {
+/* .why-section-heading-1 {
   margin-top: 20vh !important;
-}
+} */
 
 .service-stack-card {
   @apply h-[400px];

@@ -34,15 +34,21 @@ const StackingImages = () => {
     //   { opacity: 1, y: 0, duration: 0.5 },
     //   "start"
     // );
-    timeline.fromTo(".first-container", { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, "start");
+    timeline.fromTo(
+      ".first-container",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1 },
+      "start"
+    );
     timeline.to(
       ".new-icon1",
       {
-        backgroundColor: "grey",
+        backgroundColor: "#27303b",
         duration: 0.3,
+        color: "#219bd9",
       },
       "start"
-    );    // Transition to Card 2 and Text 2
+    ); // Transition to Card 2 and Text 2
     timeline.to(
       ".new-card-1",
       { xPercent: 60, yPercent: -60, rotate: 90 },
@@ -65,12 +71,36 @@ const StackingImages = () => {
       { opacity: 1, y: 0, duration: 0.5 },
       "new-card2"
     );
-    timeline.to(".new-icon2", { backgroundColor: "grey", duration: 0.3 }, "new-card2");
-    timeline.to(".new-icon1", { backgroundColor: "black", duration: 0.3 }, "new-card2");
-    timeline.to(".new-icon3", { backgroundColor: "grey", duration: 0.3 }, "new-card3");
-    timeline.to(".new-icon2", { backgroundColor: "black", duration: 0.3 }, "new-card3");
-    timeline.to(".new-icon4", { backgroundColor: "grey", duration: 0.3 }, "new-card4");
-    timeline.to(".new-icon3", { backgroundColor: "black", duration: 0.3 }, "new-card4");
+    timeline.to(
+      ".new-icon2",
+      { backgroundColor: "#27303b", color: "orange", duration: 0.3 },
+      "new-card2"
+    );
+    timeline.to(
+      ".new-icon1",
+      { backgroundColor: "#0c1621", color: "#2a333d", duration: 0.3 },
+      "new-card2"
+    );
+    timeline.to(
+      ".new-icon3",
+      { backgroundColor: "#27303b", duration: 0.3 },
+      "new-card3"
+    );
+    timeline.to(
+      ".new-icon2",
+      { backgroundColor: "#0c1621", duration: 0.3 },
+      "new-card3"
+    );
+    timeline.to(
+      ".new-icon4",
+      { backgroundColor: "#27303b", duration: 0.3 },
+      "new-card4"
+    );
+    timeline.to(
+      ".new-icon3",
+      { backgroundColor: "#0c1621", duration: 0.3 },
+      "new-card4"
+    );
 
     // Transition to Card 3 and Text 3
     timeline.to(
@@ -120,7 +150,6 @@ const StackingImages = () => {
       "new-card4"
     );
   }, []);
-
 
   return (
     <div className="bg-[#000B17] container  mx-auto ">

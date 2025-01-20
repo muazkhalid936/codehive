@@ -157,10 +157,13 @@ const ScrollAnimation = () => {
     },
     {
       title: "Health Care",
-      des1: "Discover innovative healthcare services that prioritize your well-being and long-term health.",
-      des2: "From preventive care to advanced diagnostics, our comprehensive services cater to all your needs. Tailored treatment plans ensure that every patient gets the attention they deserve.",
-      des3: "Our team is committed to helping you achieve a healthier lifestyle and manage chronic conditions effectively.",
-      des4: "Trust us to provide the tools and knowledge necessary for better health outcomes. Together, we work towards a happier, healthier you.",
+      des1: "Revolutionize patient care with our innovative healthcare solutions tailored to meet the needs of modern medical practices. From clinics to hospitals, we ensure efficient service delivery.",
+      des2: "Seamlessly manage appointments, patient records, and billing with secure and compliant systems.",
+      des3: "Enable telemedicine services, real-time consultations, and access to health records for enhanced patient engagement.",
+      des4: "Leverage advanced analytics to monitor trends, optimize workflows, and improve operational efficiency.",
+
+      des5: "Trust us to provide scalable and user-friendly solutions to elevate your healthcare services.",
+
       image: "/Industry/3.png",
     },
     {
@@ -173,18 +176,20 @@ const ScrollAnimation = () => {
     },
     {
       title: "Ecommerce",
-      des1: "Explore a world of online shopping with a wide range of products tailored to your needs.",
-      des2: "From fashion to electronics, our platform connects you to trusted sellers offering quality items.",
-      des3: "Secure payment options and efficient delivery ensure a smooth shopping experience.",
-      des4: "Discover exclusive deals and personalized recommendations that make your shopping effortless and enjoyable.",
+      des1: "Deliver seamless shopping experiences with our tailored ecommerce solutions, designed to meet the demands of modern consumers. From small businesses to large enterprises, we’ve got you covered.",
+      des2: "Our robust platform ensures secure transactions, optimized product management, and user-friendly navigation to enhance customer satisfaction.",
+      des3: "Enable real-time inventory tracking, personalized recommendations, and streamlined checkout processes to boost sales and retention.",
+      des4: "With mobile-first designs, advanced analytics, and marketing tools, we empower you to stay ahead in the competitive ecommerce landscape.",
+      des5: "Count on us for comprehensive support and innovative solutions to grow your online business with confidence.",
       image: "/Industry/5.png",
     },
     {
       title: "Fitness",
-      des1: "Achieve your fitness goals with personalized programs designed for every level of experience.",
-      des2: "Our expert trainers provide guidance and motivation to help you stay on track and succeed.",
-      des3: "With state-of-the-art equipment and innovative techniques, your workouts will be both effective and enjoyable.",
-      des4: "Join a community that supports your journey to health and wellness. Let’s make fitness a lifestyle, not just a goal.",
+      des1: "Empower fitness enthusiasts with cutting-edge digital solutions designed to transform their wellness journey.",
+      des2: "Offer intuitive features like personalized workout plans, progress tracking, and exercise demonstrations to keep users motivated.",
+      des3: "Integrate wearable devices and nutrition tracking for a comprehensive fitness experience.",
+      des4: "Enable easy class scheduling, membership management, and seamless payment systems for gyms and fitness centers.",
+      des5: "With data-driven insights and user-friendly designs, we help you create impactful fitness platforms that inspire and retain your customers.",
       image: "/Industry/6.png",
     },
   ];
@@ -209,6 +214,9 @@ const ScrollAnimation = () => {
               <p className="mt-4 main_hero_slogan text-gray-500">{item.des2}</p>
               <p className="mt-4 main_hero_slogan text-gray-500">{item.des3}</p>
               <p className="mt-4 main_hero_slogan text-gray-500">{item.des4}</p>
+              <p className="mt-4 main_hero_slogan text-gray-500">
+                {item?.des5}
+              </p>
               <div className="flex justify-start items-center gap-3">
                 <button className="mt-2 xl:text-xl text-white">
                   Contact Us

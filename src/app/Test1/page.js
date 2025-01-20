@@ -1,92 +1,240 @@
 "use client";
-import { useEffect, useRef } from "react";
-import lottie from "lottie-web";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import "./WhySection.css";
+// import ScrolAnimation from "../Home/ScrollAnimation";
+import dynamic from "next/dynamic";
+const ScrollAnimation = dynamic(() => import("../../components/Home/ScrollAnimation"), {
+  ssr: false,
+});
+gsap.registerPlugin(ScrollTrigger);
 
-const ScrollAnimation = () => {
-  const animationContainer = useRef(null);
-  const isIntersecting = useRef(false);
-
+const ImageScrollEffect = () => {
   useEffect(() => {
-    let animationInstance;
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".why-section-container",
+        start: "top top",
+        end: "+=3000", // Total scroll length
+        scrub: true,
+        pin: true, // Pin the entire container
+      },
+    });
+    // const timeline2 = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: ".animation",
+    //     start: "top top",
+    //     end: "+=3000", // Total scroll length
+    //     scrub: true,
+    //     pin: true, // Pin the entire container
+    //   },
+    // });
 
-    if (animationContainer.current) {
-      animationInstance = lottie.loadAnimation({
-        container: animationContainer.current,
-        renderer: "svg",
-        loop: false,
-        autoplay: false,
-        path: "https://cdn.lottielab.com/l/D5rXUhuuYwzFM7.json",
-      });
-    }
-
-    const handleScroll = () => {
-      if (!animationInstance || !isIntersecting.current) return;
-
-      const scrollPosition = window.scrollY;
-      const maxScroll = document.body.scrollHeight - window.innerHeight * 2;
-      const progress = Math.min(
-        (scrollPosition - window.innerHeight) / maxScroll,
-        1
+    // timeline2.to(".animation", {
+    //   opacity: 1,
+    //   xPercent: 0,
+    // });
+    const newFunc = () => ({
+      onStart: () => {
+        gsap.to(".colorText3", {
+          // background: "linear-gradient(90deg, white, #209dd9, #209dd9)",
+          webkitBackgroundClip: "text",
+          color: "transparent",
+          duration: 1, // Duration in seconds
+          onStart: () => {
+            const heading = document.querySelector(".colorText3");
+            if (heading) {
+              heading.style.background =
+                "linear-gradient(90deg, white,#209dd9, #209dd9)";
+              heading.style.webkitBackgroundClip = "text";
+              heading.style.color = "transparent";
+            }
+          },
+        });
+      },
+      onReverseComplete: () => {
+        gsap.to(".colorText3", {
+          duration: 1,
+          color: "inherit",
+        });
+      },
+    });
+    timeline
+      .to(".why-section-image-1", { opacity: 0, duration: 1 })
+      .to(".why-section-image-2", { opacity: 1, duration: 1 }, "-=0.5")
+      .to(".why-section-image-2", { opacity: 0, duration: 1 })
+      .to(".why-section-image-3", { opacity: 1, duration: 1 }, "-=0.5")
+      .to(
+        ".why-section-heading-2",
+        { opacity: 0, duration: 1, y: -50 },
+        "-=1.5"
+      )
+      .to(
+        ".why-section-heading-3",
+        {
+          duration: 1,
+          y: -100,
+          ...newFunc(),
+        },
+        "-=1.5"
       );
 
-      const totalFrames = animationInstance.totalFrames;
-      animationInstance.goToAndStop(progress * totalFrames, true);
+    const headingAnimations = () => {
+      const applyGradient = (selector, startYPercent = -10) => {
+        gsap.to(".why-section-heading-1", {
+          opacity: 0,
+          yPercent: -400,
+          // color: "#209dd9",
+          duration: 1,
+          scrollTrigger: {
+            trigger: ".why-section-container",
+            start: "top top",
+            end: "+=600",
+            scrub: true,
+          },
+
+          // onStart: () => {
+          //   gsap.to(".colorText1", {
+          //     color: "#209dd9",
+          //     duration: 1,
+          //   });
+          // },
+          // onReverseComplete: () => {
+          //   gsap.to(".colorText1", {
+          //     duration: 1,
+          //     color: "inherit",
+          //   });
+          // },
+          // onStart: () => {
+          //   const heading = document.querySelector(".colorText1");
+          //   if (heading) {
+          //     heading.style.background =
+          //       "linear-gradient(90deg, white,#209dd9, #209dd9)";
+          //     heading.style.webkitBackgroundClip = "text";
+          //     heading.style.color = "transparent";
+          //   }
+          // },
+          // onReverseComplete: () => {
+          //   const heading = document.querySelector(selector);
+          //   if (heading) {
+          //     heading.style.background = "none";
+          //     heading.style.color = "inherit";
+          //   }
+          // },
+        });
+      };
+
+      let yPercentValue = -300;
+      let as = 60;
+      // console.log(window.innerWidth, "window.innerWidth");
+      // Default yPercent value for all headings
+      if (window.innerHeight <= 1000) {
+        yPercentValue = -150;
+        as = 40; // Set yPercent value to 200 for screen width 1440px or greater
+      }
+
+      // gsap.to(".why-section-heading-2", {
+      //   scrollTrigger: {
+      //     trigger: ".why-section-heading-2",
+      //     start: "top center",
+      //     end: "+=600",
+      //     scrub: true,
+      //   },
+      //   onStart: () => {
+      //     gsap.to(".colorText2", {
+      //       // background: "linear-gradient(90deg, white, #209dd9, #209dd9)",
+      //       webkitBackgroundClip: "text",
+      //       color: "transparent",
+      //       duration: 1, // Duration in seconds
+      //       onStart: () => {
+      //         const heading = document.querySelector(".colorText2");
+      //         if (heading) {
+      //           heading.style.background =
+      //             "linear-gradient(90deg, white,#209dd9, #209dd9)";
+      //           heading.style.webkitBackgroundClip = "text";
+      //           heading.style.color = "transparent";
+      //         }
+      //       },
+      //     });
+      //   },
+      //   onReverseComplete: () => {
+      //     gsap.to(".colorText2", {
+      //       duration: 1,
+      //       color: "inherit",
+      //     });
+      //   },
+
+      //   // onStart: () => {
+      //   //   const heading = document.querySelector(".why-section-heading-2");
+      //   //   if (heading) {
+      //   //     heading.style.background =
+      //   //       "linear-gradient(20deg, white,white, #209dd9)";
+      //   //     heading.style.webkitBackgroundClip = "text";
+      //   //     heading.style.color = "transparent";
+      //   //   }
+      //   // },
+      //   // onReverseComplete: () => {
+      //   //   const heading = document.querySelector(".why-section-heading-2");
+      //   //   if (heading) {
+      //   //     heading.style.background = "none";
+      //   //     heading.style.color = "inherit";
+      //   //   }
+      //   // },
+      //   // color: "blue",
+      //   yPercent: yPercentValue, // Use consistent yPercent
+      // });
+
+      gsap.to(".why-section-heading-3", {
+        scrollTrigger: {
+          trigger: ".why-section-heading-3",
+          start: "top center",
+          end: "+=600",
+          scrub: true,
+        },
+        yPercent: yPercentValue, // Use consistent yPercent
+      });
+
+      applyGradient(".why-section-heading-1");
     };
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        isIntersecting.current = entry.isIntersecting;
-      },
-      {
-        root: null, // Use the viewport as the root
-        threshold: 0.1, // Trigger when 10% of the section is visible
-      }
-    );
-
-    if (animationContainer.current) {
-      observer.observe(animationContainer.current);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (animationContainer.current) {
-        observer.unobserve(animationContainer.current);
-      }
-      if (animationInstance) {
-        animationInstance.destroy();
-      }
-    };
+    headingAnimations();
   }, []);
 
   return (
-    <div>
-      <div className="h-screen">a</div>
-      <div className="h-screen">a</div>
-      <div
-        style={{
-          height: "600vh",
-          padding: "50px",
-          display: "flex",
-          backgroundColor: "#000B17",
-          justifyContent: "center",
-        }}
-      >
+    <>
+      {/* Spacer for scrolling */}
+      {/* <div className="h-screen">a</div> */}
+
+      {/* Main Section */}
+      <div className="why-section-container bg-[#000B17] container flex flex-col  mx-auto text-center text-white h-[100vh] font-bold relative overflow-hidden">
+        {/* Images */}
         <div
-          style={{
-            position: "sticky",
-            top: "5vh",
-            height: "70vh",
-            width: "600px",
-          }}
-          className="lottie"
-          ref={animationContainer}
-        />
+          className="w-full animation flex  justify-center  "
+          // style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1 }}
+        >
+          <ScrollAnimation />
+        </div>
+
+        {/* Headings */}
+        <div className="  text-[45px] justify-start  flex flex-col ">
+          <h1 className="why-section-heading-1  main-heading ">
+            Unrivaled <span className="colorText1">Expertise</span>
+          </h1>
+          <h1 className="why-section-heading-2   main-heading ">
+            Customer-Centric
+            <span className="colorText2 ml-4">Approach</span>
+          </h1>
+          <h1 className="why-section-heading-3  main-heading ">
+            End-to-End
+            <span className="colorText3 ml-4">Support</span>
+          </h1>
+        </div>
       </div>
-      <div className="h-screen">a</div>
-    </div>
+
+      {/* Spacer for scrolling */}
+      {/* <div className="h-screen">a</div> */}
+    </>
   );
 };
-
-export default ScrollAnimation;
+export default ImageScrollEffect;
