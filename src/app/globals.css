@@ -434,3 +434,6 @@
     font-size: 25px;
   }
 }
+.lottie svg g g:last-child g {
+  display: none;
+}

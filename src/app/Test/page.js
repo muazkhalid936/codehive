@@ -68,7 +68,7 @@ const ScrollAnimation = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top top",
+        start: "top top+=100vh", // Start the scroll animation when the user scrolls about the height of the screen
         end: "+=5000",
         scrub: 1,
         pin: true,
@@ -222,9 +222,9 @@ const ScrollAnimation = () => {
               <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
-                style={{ height: "50vh", minHeight: "500px", maxHeight: "800px" }}
+                style={{ height: "500px" }}
               >
-                <Stage intensity={0} environment={"city"}>
+                <Stage intensity={0.05} environment={"city"}>
                   <Model rotationX={rotationX} textureUrl={textureUrl} />
                 </Stage>
               </Canvas>

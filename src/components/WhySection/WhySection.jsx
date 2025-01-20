@@ -20,7 +20,6 @@ const ImageScrollEffect = () => {
     const newFunc = () => ({
       onStart: () => {
         gsap.to(".colorText3", {
-          // background: "linear-gradient(90deg, white, #209dd9, #209dd9)",
           webkitBackgroundClip: "text",
           color: "transparent",
           duration: 1, // Duration in seconds
@@ -165,9 +164,7 @@ const ImageScrollEffect = () => {
         // },
         // color: "blue",
         yPercent: yPercentValue, // Use consistent yPercent
-      }
-
-      );
+      });
 
       gsap.to(".why-section-heading-3", {
         scrollTrigger: {
