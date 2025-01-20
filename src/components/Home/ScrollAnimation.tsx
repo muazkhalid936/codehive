@@ -62,8 +62,8 @@ const ScrollAnimation = () => {
 
   return (
     <div className="">
-      <div className="fix-div  mt-[200px] flex justify-center">
-        <div className="lottie   w-[500px] " ref={animationContainer} />
+      <div className="fix-div sm:mt-[150px]   2xl:mt-[200px] flex justify-center">
+        <div className="lottie   sm:w-[400px] 2xl:w-[500px] " ref={animationContainer} />
       </div>
       {/* <div className="h-screen">a</div> */}
     </div>
