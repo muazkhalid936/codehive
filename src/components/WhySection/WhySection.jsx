@@ -160,6 +160,7 @@ const ImageScrollEffect = () => {
               yPercent: -350, // Consistent yPercent
               // opacity: 0,
               // delay: 3, // Delay the animation
+              ...newFunc(),
 
               duration: 0.5, // Duration of the animation
             },

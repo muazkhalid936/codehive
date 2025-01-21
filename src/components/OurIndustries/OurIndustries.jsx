@@ -231,9 +231,10 @@ const ScrollAnimation = () => {
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
-                  // height: "50vh",
-                  height: "500px",
-                  // maxHeight: "800px",
+                  height: "50vh",
+                  // height: "500px",
+                  minHeight: "400px",
+                  maxHeight: "500px",
                 }}
               >
                 <Stage intensity={0} environment={"city"}>

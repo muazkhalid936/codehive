@@ -162,7 +162,7 @@ const StackingImages = () => {
 
   return (
     <div className="container  mx-auto flex flex-col gap-10">
-      <div className="cards h-[100vh] container mx-auto">
+      <div className="cards h-[100vh] min-h-[600px] container mx-auto">
         <div className="card card-1">
           <StackCard
             bg="/services/bg-consult.png"
