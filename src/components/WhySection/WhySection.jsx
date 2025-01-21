@@ -92,16 +92,18 @@ const ImageScrollEffect = () => {
           {
             opacity: 0,
             yPercent: -150,
-            duration: 40, // Duration of the animation
+            delay: 30,
+            duration: 80, // Duration of the animation
           },
-          "start+=2"
+          "start+=10"
         );
 
         tl.to(
           ".why-section-heading-2",
           {
             yPercent: -200, // Consistent yPercent
-            duration: 80, // Duration of the animation
+            duration: 80, // Duration of the animatio
+            delay: 30,
             onStart: () => {
               // Apply gradient to .colorText2
               const heading = document.querySelector(".colorText2");
@@ -121,7 +123,7 @@ const ImageScrollEffect = () => {
               }
             },
           },
-          "start+=2"
+          "start+=40"
         );
         tl.to(
           ".why-section-heading-3",
@@ -129,7 +131,7 @@ const ImageScrollEffect = () => {
             yPercent: -150, // Consistent yPercent
             duration: 40, // Duration of the animation
           },
-          "start+=2"
+          "start+=80"
         );
 
         tl.to(
@@ -144,11 +146,11 @@ const ImageScrollEffect = () => {
         tl.to(
           ".why-section-heading-3",
           {
-            duration: 80, // Match the duration of the previous animation
+            duration: 120, // Match the duration of the previous animation
             y: -150,
             ...newFunc(),
           },
-          "-=40" // Synchronize this animation with the previous one
+          "-=20" // Synchronize this animation with the previous one
         );
       };
 
