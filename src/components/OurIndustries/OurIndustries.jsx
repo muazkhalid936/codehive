@@ -199,7 +199,7 @@ const ScrollAnimation = () => {
       {/* <div className="h-screen">a</div> */}
       <div
         ref={containerRef}
-        className="flex flex-col bg-[#000b17] items-center justify-center h-screen main22 overflow-hidden"
+        className="flex flex-col items-center justify-center h-screen main22 overflow-hidden"
       >
         {data.map((item, index) => (
           <div

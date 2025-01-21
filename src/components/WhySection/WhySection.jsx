@@ -82,7 +82,7 @@ const ImageScrollEffect = () => {
           scrollTrigger: {
             trigger: ".why-section-container",
             start: "300px center", // Adjusted to add a slight delay
-            end: "+=2000",
+            end: "+=2500",
             scrub: true,
           },
         });
@@ -148,7 +148,7 @@ const ImageScrollEffect = () => {
             {
               yPercent: -350, // Consistent yPercent
               opacity: 0,
-              // delay: 1, // Delay the animation
+              // delay: 3, // Delay the animation
 
               duration: 0.5, // Duration of the animation
             },
@@ -159,7 +159,7 @@ const ImageScrollEffect = () => {
             {
               yPercent: -350, // Consistent yPercent
               // opacity: 0,
-              // delay: 1, // Delay the animation
+              // delay: 3, // Delay the animation
 
               duration: 0.5, // Duration of the animation
             },
