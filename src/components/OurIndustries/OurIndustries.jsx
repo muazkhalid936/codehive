@@ -29,7 +29,7 @@ function Model({ rotationX, textureUrl }) {
   return (
     <primitive
       object={scene}
-      scale={0.09}
+      scale={0.07}
       rotation={[0, rotationX, 0]}
       position={[30, 0, 0]}
     />
@@ -231,9 +231,9 @@ const ScrollAnimation = () => {
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
-                  height: "50vh",
-                  minHeight: "500px",
-                  maxHeight: "800px",
+                  // height: "50vh",
+                  height: "500px",
+                  // maxHeight: "800px",
                 }}
               >
                 <Stage intensity={0} environment={"city"}>
