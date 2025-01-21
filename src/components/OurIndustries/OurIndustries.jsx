@@ -45,6 +45,7 @@ const ScrollAnimation = () => {
     "/iphoneModel/Ecommerce.jpg",
     "/iphoneModel/Fitness.png",
   ];
+  let progress;
 
   const containerRef = useRef();
   const [rotationX, setRotationX] = useState(0);
@@ -73,7 +74,7 @@ const ScrollAnimation = () => {
         scrub: 1,
         pin: true,
         toggleActions: "play none none none",
-        onEnter: () => console.log("Start"),
+        // onEnter: () => console.log("Start"),
       },
     });
 
@@ -102,23 +103,49 @@ const ScrollAnimation = () => {
         );
         const startRotation = Math.floor(index / 2) * Math.PI * 4;
         const endRotation = startRotation + Math.PI * 2;
-
         tl.to(
           {},
           {
             onUpdate: () => {
               const sectionProgress = tl.progress() * sections.length - index;
-              if (sectionProgress >= 0 && sectionProgress <= 1) {
+              // console.log((tl.progress() * sections.length - index).toFixed(2), "Test");
+              console.log(sectionProgress);
+              if (
+                (tl.progress() * sections.length - index).toFixed(3) == 0.002
+              ) {
+                progress = tl.progress() * sections.length - index;
+              }
+
+              if (sectionProgress >= progress) {
+                progress = tl.progress() * sections.length - index;
+                // console.log(sectionProgress);
+                console.log("first");
+                if (sectionProgress >= 0 && sectionProgress <= 1) {
+                  const rotationValue = gsap.utils.interpolate(
+                    startRotation,
+                    endRotation,
+                    sectionProgress
+                  );
+
+                  setRotationX(rotationValue);
+                  const earlyPoint = startRotation + Math.PI * 0.5;
+                  if (Math.abs(rotationValue - earlyPoint) < 0.1) {
+                    setTextureUrl(image[index]);
+                  }
+                }
+              } else {
+                progress = tl.progress() * sections.length - index;
                 const rotationValue = gsap.utils.interpolate(
                   startRotation,
                   endRotation,
                   sectionProgress
                 );
 
+                console.log("second");
                 setRotationX(rotationValue);
                 const earlyPoint = startRotation + Math.PI * 0.5;
                 if (Math.abs(rotationValue - earlyPoint) < 0.1) {
-                  setTextureUrl(image[index]);
+                  setTextureUrl(image[index - 1]);
                 }
               }
             },
