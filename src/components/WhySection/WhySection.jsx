@@ -82,7 +82,7 @@ const ImageScrollEffect = () => {
           scrollTrigger: {
             trigger: ".why-section-container",
             start: "300px center", // Adjusted to add a slight delay
-            end: "+=1800",
+            end: "+=3000",
             scrub: true,
           },
         });
@@ -93,16 +93,16 @@ const ImageScrollEffect = () => {
             opacity: 0,
             yPercent: -150,
             delay: 30,
-            duration: 80, // Duration of the animation
+            duration: 1000, // Duration of the animation
           },
-          "start+=10"
+          "+=280"
         );
 
         tl.to(
           ".why-section-heading-2",
           {
             yPercent: -200, // Consistent yPercent
-            duration: 80, // Duration of the animatio
+            duration: 800, // Duration of the animatio
             delay: 30,
             onStart: () => {
               // Apply gradient to .colorText2
@@ -123,15 +123,15 @@ const ImageScrollEffect = () => {
               }
             },
           },
-          "start+=40"
+          "-=1000"
         );
         tl.to(
           ".why-section-heading-3",
           {
             yPercent: -150, // Consistent yPercent
-            duration: 40, // Duration of the animation
+            duration: 400, // Duration of the animation
           },
-          "start+=80"
+          "-=1000"
         );
 
         tl.to(
@@ -139,9 +139,9 @@ const ImageScrollEffect = () => {
           {
             yPercent: -300,
             opacity: 0, // Consistent yPercent
-            duration: 40, // Duration of the animation
+            duration: 80, // Duration of the animation
           },
-          "+=120"
+          "+=1000" // Adjusted to start at the same time as the last animation
         );
         tl.to(
           ".why-section-heading-3",
@@ -150,7 +150,7 @@ const ImageScrollEffect = () => {
             y: -150,
             ...newFunc(),
           },
-          "-=20" // Synchronize this animation with the previous one
+          "+=40" // Synchronized start time with the previous animation
         );
       };
 
