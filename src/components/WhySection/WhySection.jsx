@@ -82,76 +82,111 @@ const ImageScrollEffect = () => {
           scrollTrigger: {
             trigger: ".why-section-container",
             start: "300px center", // Adjusted to add a slight delay
-            end: "+=3000",
+            end: "+=2000",
             scrub: true,
           },
         });
 
-        tl.to(
+        // Add a label for the first animation
+        tl.add("firstAnimation").to(
           ".why-section-heading-1",
           {
+            delay: 0.3, // Delay the animation
             opacity: 0,
-            yPercent: -150,
-            delay: 30,
-            duration: 1000, // Duration of the animation
+            yPercent: -200,
+            duration: 2, // Duration of the animation
           },
-          "+=280"
+          "firstAnimation" // Start at this label
         );
 
-        tl.to(
-          ".why-section-heading-2",
-          {
-            yPercent: -200, // Consistent yPercent
-            duration: 800, // Duration of the animatio
-            delay: 30,
-            onStart: () => {
-              // Apply gradient to .colorText2
-              const heading = document.querySelector(".colorText2");
-              if (heading) {
-                heading.style.background =
-                  "linear-gradient(90deg, white, #209dd9, #209dd9)";
-                heading.style.webkitBackgroundClip = "text";
-                heading.style.color = "transparent";
-              }
-            },
-            onReverseComplete: () => {
-              // Revert gradient on reverse
-              const heading = document.querySelector(".colorText2");
-              if (heading) {
-                heading.style.background = "none";
-                heading.style.color = "inherit";
-              }
-            },
-          },
-          "-=1000"
-        );
-        tl.to(
-          ".why-section-heading-3",
-          {
-            yPercent: -150, // Consistent yPercent
-            duration: 400, // Duration of the animation
-          },
-          "-=1000"
-        );
+        // Add a label for the second animation
+        tl.add("secondAnimation", "+=0.5") // Start 0.5 seconds after the first
+          .to(
+            ".why-section-heading-2",
+            {
+              delay: 0.3, // Delay the animation
 
-        tl.to(
-          ".why-section-heading-2",
-          {
-            yPercent: -300,
-            opacity: 0, // Consistent yPercent
-            duration: 80, // Duration of the animation
-          },
-          "+=1000" // Adjusted to start at the same time as the last animation
-        );
-        tl.to(
-          ".why-section-heading-3",
-          {
-            duration: 120, // Match the duration of the previous animation
-            y: -150,
-            ...newFunc(),
-          },
-          "+=40" // Synchronized start time with the previous animation
-        );
+              yPercent: -200, // Consistent yPercent
+              duration: 2, // Duration of the animation
+              onStart: () => {
+                // Apply gradient to .colorText2
+                const heading = document.querySelector(".colorText2");
+                if (heading) {
+                  heading.style.background =
+                    "linear-gradient(90deg, white, #209dd9, #209dd9)";
+                  heading.style.webkitBackgroundClip = "text";
+                  heading.style.color = "transparent";
+                }
+              },
+              onReverseComplete: () => {
+                // Revert gradient on reverse
+                const heading = document.querySelector(".colorText2");
+                if (heading) {
+                  heading.style.background = "none";
+                  heading.style.color = "inherit";
+                }
+              },
+            },
+            "firstAnimation" // Start at this label
+          );
+
+        // Add a label for the third animation
+        tl.add("thirdAnimation", "+=0.5") // Start 0.5 seconds after the second
+          .to(
+            ".why-section-heading-3",
+            {
+              delay: 0.3, // Delay the animation
+
+              yPercent: -150, // Consistent yPercent
+              duration: 2, // Duration of the animation
+            },
+            "firstAnimation" // Start at this label
+          );
+        tl.add("thirdAnimation", "+=0.5") // Start 0.5 seconds after the second
+          .to(
+            ".why-section-heading-2",
+            {
+              yPercent: -350, // Consistent yPercent
+              opacity: 0,
+              // delay: 1, // Delay the animation
+
+              duration: 0.5, // Duration of the animation
+            },
+            "secondAnimation" // Start at this label
+          )
+          .to(
+            ".why-section-heading-3",
+            {
+              yPercent: -350, // Consistent yPercent
+              // opacity: 0,
+              // delay: 1, // Delay the animation
+
+              duration: 0.5, // Duration of the animation
+            },
+            "secondAnimation" // Start at this label
+          );
+
+        // Add a fourth animation label (if needed)
+
+        // tl.to(
+        //   ".why-section-heading-2",
+        //   {
+        //     yPercent: -300,
+        //     opacity: 0, // Consistent yPercent
+        //     // delay: 1000,
+        //     duration: 80, // Duration of the animation
+        //   },
+        //   "+=0" // Adjusted to start at the same time as the last animation
+        // );
+        // tl.to(
+        //   ".why-section-heading-3",
+        //   {
+        //     duration: 120, // Match the duration of the previous animation
+        //     y: -150,
+        //     ...newFunc(),
+        //   },
+        //   "<" // Synchronized start time with the previous animation
+        // );
       };
 
       applyGradient(".why-section-heading-1");
