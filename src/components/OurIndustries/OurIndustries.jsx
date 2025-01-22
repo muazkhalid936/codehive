@@ -8,7 +8,6 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useGLTF, Stage } from "@react-three/drei";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
-
 gsap.registerPlugin(ScrollTrigger);
 useGLTF.preload("/iphoneModel/Test1.glb");
 
@@ -37,7 +36,7 @@ function Model({ rotationX, textureUrl }) {
 }
 
 const ScrollAnimation = () => {
-  const image = [
+  const imagePaths = [
     "/iphoneModel/Car wash.jpg",
     "/iphoneModel/Delivery.png",
     "/iphoneModel/Health care.jpg",
@@ -49,9 +48,17 @@ const ScrollAnimation = () => {
 
   const containerRef = useRef();
   const [rotationX, setRotationX] = useState(0);
-  const [textureUrl, setTextureUrl] = useState(image[0]);
+  const [textureUrl, setTextureUrl] = useState(imagePaths[0]);
 
   useEffect(() => {
+    const imageObjects = imagePaths.map((path) => {
+      const img = new Image();
+      img.src = path;
+      return img;
+    });
+
+    console.log("Images preloaded:", imageObjects);
+
     const lenis = new Lenis({
       smooth: true,
       lerp: 0.1,
@@ -136,7 +143,7 @@ const ScrollAnimation = () => {
                   setRotationX(rotationValue);
                   const earlyPoint = startRotation + Math.PI * 0.5;
                   if (Math.abs(rotationValue - earlyPoint) < 0.1) {
-                    setTextureUrl(image[index]);
+                    setTextureUrl(imagePaths[index]);
                   }
                 }
               } else {
@@ -151,7 +158,7 @@ const ScrollAnimation = () => {
                 setRotationX(rotationValue);
                 const earlyPoint = startRotation + Math.PI * 0.5;
                 if (Math.abs(rotationValue - earlyPoint) < 0.1) {
-                  setTextureUrl(image[index - 1]);
+                  setTextureUrl(imagePaths[index - 1]);
                 }
               }
             },
