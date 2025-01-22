@@ -9,10 +9,10 @@ import { useGLTF, Stage } from "@react-three/drei";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 gsap.registerPlugin(ScrollTrigger);
-useGLTF.preload("/iphoneModel/Test1.glb");
+useGLTF.preload("/iphoneModel/3.glb");
 
 function Model({ rotationX, textureUrl }) {
-  const { scene } = useGLTF("/iphoneModel/Test1.glb");
+  const { scene } = useGLTF("/iphoneModel/3.glb");
   const texture = useLoader(TextureLoader, textureUrl);
 
   useEffect(() => {
@@ -21,6 +21,9 @@ function Model({ rotationX, textureUrl }) {
         child.material.map = texture;
         child.material.map.flipY = false;
         child.material.needsUpdate = true;
+
+        // child.material.roughness = 0.5; // Experiment with these values
+        child.material.metalness = 1; // Experiment with these values
       }
     });
   }, [scene, texture]);
@@ -239,7 +242,7 @@ const ScrollAnimation = () => {
       {/* <div className="h-screen">a</div> */}
       <div
         ref={containerRef}
-        className="flex flex-col items-center justify-center  h-[100vh] min-h-[400px] max-h-[800px] main22 overflow-hidden"
+        className="flex flex-col items-center justify-center  h-[100vh] min-h-[400px]  main22 overflow-hidden"
       >
         {data.map((item, index) => (
           <div
@@ -271,13 +274,13 @@ const ScrollAnimation = () => {
                 dpr={[0.5, 1]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
-                  height: "50vh",
+                  height: "60vh",
                   // height: "500px",
                   minHeight: "400px",
-                  maxHeight: "500px",
+                  maxHeight: "700px",
                 }}
               >
-                <Stage intensity={0} environment={"city"}>
+                <Stage intensity={0.01} environment={"city"}>
                   <Model rotationX={rotationX} textureUrl={textureUrl} />
                 </Stage>
               </Canvas>

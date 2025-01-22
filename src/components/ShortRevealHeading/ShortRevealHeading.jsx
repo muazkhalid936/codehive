@@ -10,18 +10,18 @@ const ShortRevealHeading = (params) => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    // // Initialize Lenis for smooth scrolling
-    // const lenis = new Lenis({
-    //   smooth: true,
-    //   lerp: 0.1, // Adjust for smoothness
-    // });
+    // Initialize Lenis for smooth scrolling
+    const lenis = new Lenis({
+      smooth: true,
+      lerp: 0.1, // Adjust for smoothness
+    });
 
-    // const raf = (time) => {
-    //   lenis.raf(time);
-    //   requestAnimationFrame(raf);
-    // };
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
 
-    // requestAnimationFrame(raf);
+    requestAnimationFrame(raf);
 
     // GSAP Scroll Animation
     gsap
