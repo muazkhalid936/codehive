@@ -10,9 +10,6 @@ import LongRevealHeading from "../components/LongRevealHeading/LongRevealHeading
 import OurRecentWork from "../components/OurRecentWork/OurRecentWork";
 import ShortRevealHeading from "../components/ShortRevealHeading/ShortRevealHeading";
 export default function Home() {
-
-
-
   return (
     <div className="no-scrollbar ">
       <Navbar />
@@ -26,8 +23,9 @@ export default function Home() {
         <div className=" second-component no-scrollbar">
           <ShortRevealHeading text="Our Services" />
         </div>
-        <div className=" third-component ">a</div>
-        <Stack />
+        <div className=" third-component ">
+          <Stack />
+        </div>
         <div className="a123 no-scrollbar">
           <ShortRevealHeading text="Our Process" />
         </div>

@@ -10,10 +10,10 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 
 gsap.registerPlugin(ScrollTrigger);
-useGLTF.preload("/iphoneModel/3.glb");
+useGLTF.preload("/iphoneModel/Test1.glb");
 
 function Model({ rotationX, textureUrl }) {
-  const { scene } = useGLTF("/iphoneModel/3.glb");
+  const { scene } = useGLTF("/iphoneModel/Test1.glb");
   const texture = useLoader(TextureLoader, textureUrl);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function Model({ rotationX, textureUrl }) {
 
 const ScrollAnimation = () => {
   const image = [
-    "/iphoneModel/Car wash.jpg",
+    "/iphoneModel/1.webp",
     "/iphoneModel/Delivery.png",
     "/iphoneModel/Health care.jpg",
     "/iphoneModel/Booking.jpg",
@@ -84,6 +84,12 @@ const ScrollAnimation = () => {
         tl.fromTo(
           heading,
           { x: 100, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.2 },
+          0
+        );
+        tl.fromTo(
+          "iphone",
+          { x: -100, opacity: 0 },
           { x: 0, opacity: 1, duration: 0.2 },
           0
         );
@@ -226,7 +232,7 @@ const ScrollAnimation = () => {
       {/* <div className="h-screen">a</div> */}
       <div
         ref={containerRef}
-        className="flex flex-col items-center justify-center h-screen main22 overflow-hidden"
+        className="flex flex-col items-center justify-center  h-[100vh] min-h-[400px] max-h-[800px] main22 overflow-hidden"
       >
         {data.map((item, index) => (
           <div
@@ -255,7 +261,7 @@ const ScrollAnimation = () => {
             </div>
             <div className="w-1/2 ">
               <Canvas
-                dpr={[1, 2]}
+                dpr={[0.5, 1]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
                   height: "50vh",

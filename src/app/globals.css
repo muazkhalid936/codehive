@@ -39,16 +39,13 @@
 }
 
 @layer utilities {
-  /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
   .no-scrollbar {
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
   }
 }
 
@@ -117,59 +114,22 @@
 
 .scrollbar-hidden::-webkit-scrollbar {
   display: none !important;
-  /* For Chrome, Safari, and Edge */
 }
 
 .as::-webkit-scrollbar {
   width: 8px;
   display: none;
-  /* border-radius: 10%; */
 }
 
-/* ::-webkit-scrollbar {
-  display: none;
-} */
-
-/* Spacing between the components in Main App page for the animations */
 .new-text {
   color: #525355;
 }
 
 .third-component {
-  /* height: 15vh;
-   */
-   height: 140px;
-  /* margin-top: 130px; */
+  margin-top: 200px;
 }
-@media(max-width: 1600px) {
-  .third-component {
-    /* height: 15vh;
-     */
-     height: 240px;
-    /* margin-top: 130px; */
-  }
-}
-@media(max-width: 1400px) {
-  .third-component {
-    /* height: 15vh;
-     */
-     height: 180px;
-    /* margin-top: 130px; */
-  }
-}
-
-
-/* @media(max-width: 1600px) {
-  .third-component {
-    margin-top: 250px;
-  }
-} */
 
 @media (min-width: 1920px) {
-  .forth-component {
-    margin-top: 20vh;
-  }
-
   .a123 {
     margin-top: -10vh;
   }
@@ -177,31 +137,15 @@
   .asd {
     margin-top: -25vh;
   }
-
-  .fifth-component {
-    margin-top: 40vh;
-  }
-
-  /* .service-stack-card {
-    @apply h-[55vh];
-  } */
 }
 
 @media (max-width: 1680px) {
-  .forth-component {
-    margin-top: 30vh;
-  }
-
-  .fifth-component {
-    margin-top: 80vh;
-  }
+}
+.fifth-component {
+  margin-top: 800px;
 }
 
 @media (max-width: 1600px) {
-  /* .service-stack-card {
-    width: 80% !important;
-  } */
-
   .why-section-img {
     scale: 0.8;
   }
@@ -213,14 +157,6 @@
   .first-component {
     margin-top: 130vh;
   }
-
-  .forth-component {
-    margin-top: 50vh;
-  }
-
-  .fifth-component {
-    margin-top: 60vh;
-  }
 }
 
 .why-heading-gap {
@@ -228,14 +164,8 @@
 }
 
 @media (max-width: 1440px) {
-  /* .service-stack-card {
-    height: 55vh !important;
-    width: 90% !important;
-  } */
-
   .bottom_right_vector img {
     width: 170px !important;
-    /* z-index: -200; */
   }
 
   .bottom_right_vector {
@@ -248,16 +178,10 @@
 
   .why-section-img {
     scale: 0.6 !important;
-    /* margin-top: 5vh !important; */
   }
-
-  /* .why-section-img {
-    scale: 0.8 !important;
-  } */
 
   .top_left_vector img {
     width: 180px !important;
-    /* z-index: -200; */
   }
 
   .top_left_vector {
@@ -271,95 +195,10 @@
   .a123 {
     margin-top: -5vh;
   }
-
-  .forth-component {
-    margin-top: 50vh;
-  }
-
-  .fifth-component {
-    margin-top: 60vh !important;
-  }
-}
-
-/* @media (max-width: 1400px) {
-  .why-heading-gap {
-    margin-top: -1000px;
-  }
-
-  .service-stack-card {
-    height: 55vh !important;
-    width: 90% !important;
-  }
-
-  .bottom_right_vector img {
-    width: 170px !important;
-    z-index: -200;
-  }
-
-  .bottom_right_vector {
-    right: 0;
-  }
-
-  .asd {
-    margin-top: -25vh;
-  }
-
-
-
-  .top_left_vector img {
-    width: 180px !important;
- 
-  }
-
-  .top_left_vector {
-    left: 0;
-  }
-
-  .first-component {
-    margin-top: 90vh;
-  }
-
-  .second-component {
-    margin-top: -20rem;
-  }
-
-  .a123 {
-    margin-top: -15vh;
-  }
-
-  .third-component {
-    margin-top: 50vh;
-  }
-
-  .forth-component {
-    margin-top: 35vh;
-  }
-
-  .fifth-component {
-    margin-top: 105vh;
-  }
-
-  .seven-component {
-    margin-top: 80vh;
-  }
-}  */
-
-@media (max-width: 1366px) {
-  .forth-component {
-    margin-top: 140vh;
-  }
-
-  .forth-component {
-    margin-top: 70vh;
-  }
-
-  .fifth-component {
-    margin-top: 155vh;
-  }
 }
 
 .our-process-main-pic {
-  @apply bg-gradient-to-br from-[#010B1770] via-[#2194cd] to-[#010B1770] p-[0.15rem] rounded-2xl;
+  @apply bg-gradient-to-br from-[#010B1770] via-[#2194cd] to-[#010B1770] p-[0.15rem] rounded-3xl;
 }
 
 .colorText1 {
@@ -391,13 +230,8 @@
 .why-section-img {
   top: 30%;
   scale: 0.9;
-  /* Center vertically */
   transform: translateY(-30%);
 }
-
-/* .why-section-heading-1 {
-  margin-top: 20vh !important;
-} */
 
 .service-stack-card {
   @apply h-[400px];
@@ -442,4 +276,8 @@
 }
 .lottie svg g g:last-child g {
   display: none;
+}
+
+.forth-component {
+  margin-top: 400px;
 }

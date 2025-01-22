@@ -4,7 +4,6 @@ import "./In.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
-import { FaReact, FaNodeJs, FaPython, FaJava } from "react-icons/fa";
 
 const StackingImages = () => {
   useEffect(() => {
@@ -16,226 +15,160 @@ const StackingImages = () => {
         pin: true,
         pinSpacing: true,
         start: "top top",
-        end: "+=2000",
+        end: "+=3000",
         scrub: 1,
       },
     });
 
-    // Card 1 and Text 1 animation
-    timeline.fromTo(
-      ".new-card-1",
-      { xPercent: 60, yPercent: 60, rotate: -90 },
-      { xPercent: 0, yPercent: 0, rotate: 0 },
-      "start"
-    );
-    // timeline.fromTo(
-    //   ".new-text-1",
-    //   { opacity: 0, y: 50 },
-    //   { opacity: 1, y: 0, duration: 0.5 },
-    //   "start"
-    // );
-    timeline.fromTo(
-      ".first-container",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1 },
-      "start"
-    );
-    timeline.to(
-      ".new-icon1",
-      {
-        backgroundColor: "#27303b",
-        duration: 0.3,
-        color: "#219bd9",
-      },
-      "start"
-    ); // Transition to Card 2 and Text 2
-    timeline.to(
-      ".new-card-1",
-      { xPercent: 60, yPercent: -60, rotate: 90 },
-      "new-card2"
-    );
-    timeline.to(
-      ".new-text-1",
-      { opacity: 0, y: -50, duration: 0.5 },
-      "new-card2"
-    );
-    timeline.fromTo(
-      ".new-card-2",
-      { xPercent: 60, yPercent: 60, rotate: -90 },
-      { xPercent: 0, yPercent: 0, rotate: 0 },
-      "new-card2"
-    );
-    timeline.fromTo(
-      ".new-text-2",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 0.5 },
-      "new-card2"
-    );
-    timeline.to(
-      ".new-icon2",
-      { backgroundColor: "#27303b", color: "orange", duration: 0.3 },
-      "new-card2"
-    );
-    timeline.to(
-      ".new-icon1",
-      { backgroundColor: "#0c1621", color: "#2a333d", duration: 0.3 },
-      "new-card2"
-    );
-    timeline.to(
-      ".new-icon3",
-      { backgroundColor: "#27303b", duration: 0.3 },
-      "new-card3"
-    );
-    timeline.to(
-      ".new-icon2",
-      { backgroundColor: "#0c1621", duration: 0.3 },
-      "new-card3"
-    );
-    timeline.to(
-      ".new-icon4",
-      { backgroundColor: "#27303b", duration: 0.3 },
-      "new-card4"
-    );
-    timeline.to(
-      ".new-icon3",
-      { backgroundColor: "#0c1621", duration: 0.3 },
-      "new-card4"
-    );
+    // Define animations for each card and text
+    const cards = [1, 2, 3, 4, 5, 6, 7]; // Extend with new cards
+    cards.forEach((card, index) => {
+      const nextCard = cards[index + 1];
 
-    // Transition to Card 3 and Text 3
-    timeline.to(
-      ".new-card-2",
-      { xPercent: 60, yPercent: -60, rotate: 90 },
-      "new-card3"
-    );
-    timeline.to(
-      ".new-text-2",
-      { opacity: 0, y: -50, duration: 0.5 },
-      "new-card3"
-    );
-    timeline.fromTo(
-      ".new-card-3",
-      { xPercent: 60, yPercent: 60, rotate: -90 },
-      { xPercent: 0, yPercent: 0, rotate: 0 },
-      "new-card3"
-    );
-    timeline.fromTo(
-      ".new-text-3",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 0.5 },
-      "new-card3"
-    );
+      if (index === 0) {
+        timeline.fromTo(
+          ".first-container",
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          "start"
+        );
+      }
+      if (index === 0) {
+        timeline.fromTo(
+          `.new-card-${card}`,
+          { xPercent: 60, yPercent: 60, rotate: -90 },
+          { xPercent: 0, yPercent: 0, rotate: 0 },
+          "start"
+        );
+        timeline.fromTo(
+          `.new-text-${card}`,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          "start"
+        );
+      }
 
-    // Transition to Card 4 and Text 4
-    timeline.to(
-      ".new-card-3",
-      { xPercent: 60, yPercent: -60, rotate: 90 },
-      "new-card4"
-    );
-    timeline.to(
-      ".new-text-3",
-      { opacity: 0, y: -50, duration: 0.5 },
-      "new-card4"
-    );
-    timeline.fromTo(
-      ".new-card-4",
-      { xPercent: 60, yPercent: 60, rotate: -90 },
-      { xPercent: 0, yPercent: 0, rotate: 0 },
-      "new-card4"
-    );
-    timeline.fromTo(
-      ".new-text-4",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 0.5 },
-      "new-card4"
-    );
+      // Transition animations
+      if (nextCard) {
+        timeline.to(
+          `.new-card-${card}`,
+          { xPercent: 60, yPercent: -60, rotate: 90 },
+          `card-${nextCard}`
+        );
+        timeline.to(
+          `.new-text-${card}`,
+          { opacity: 0, y: -50, duration: 0.5 },
+          `card-${nextCard}`
+        );
+        timeline.fromTo(
+          `.new-card-${nextCard}`,
+          { xPercent: 60, yPercent: 60, rotate: -90 },
+          { xPercent: 0, yPercent: 0, rotate: 0 },
+          `card-${nextCard}`
+        );
+        timeline.fromTo(
+          `.new-text-${nextCard}`,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          `card-${nextCard}`
+        );
+        timeline.to(
+          `.new-icon${card}`,
+          { backgroundColor: "#0c1621", duration: 0.3 },
+          `card-${nextCard}`
+        );
+        timeline.to(
+          `.new-icon${nextCard}`,
+          { backgroundColor: "#27303b", duration: 0.3 },
+          `card-${nextCard}`
+        );
+      }
+    });
   }, []);
 
   return (
-    <div className="bg-[#000B17] container  mx-auto ">
-      <div className="new-cards h-[50vh]  items-center md:h-[100vh] mx-auto">
-        <div className="flex w-1/2 flex-col gap-5 first-container ">
-          {" "}
-          <div className="new-icon-container gap-5">
-            <FaReact className="new-icon new-icon1 new-border-active" />
-            <FaNodeJs className="new-icon new-icon2" />
-            <FaPython className="new-icon new-icon3" />
-            <FaJava className="new-icon new-icon4" />
+    <div className="bg-[#000B17] container mx-auto">
+      <div className="new-cards  items-center  h-[100vh] min-h-[400px] max-h-[800px] mx-auto">
+        <div className="flex w-1/2 flex-col gap-5 first-container">
+          <div className="new-icon-container gap-2">
+            {Array.from({ length: 7 }).map((_, i) => (
+              <div key={i} className={`new-icon new-icon${i + 1} `}>
+                <img
+                  src={`/process/${i + 1}.png`}
+                  className={`  object-contain`}
+                />
+              </div>
+            ))}
           </div>
+
           <div className="new-text-section mt-28 text-white">
-            <div className="new-text flex main_hero_slogan flex-col gap-4 new-text-1">
-              <span className="font-bold text-[50px] main-heading   bg-gradient-to-br from-white leading-none to-blueColor bg-clip-text text-transparent">
-                Project <br /> Vision
-              </span>
-              We provide bespoke software solutions powered by cutting-edge
-              technologies like AI, blockchain, and cloud computing. Our team
-              ensures every application is scalable.
-            </div>
-
-            <div className="new-text flex flex-col main_hero_slogan gap-4 new-text-2">
-              <span className="font-bold text-[50px] main-heading   bg-gradient-to-br from-white leading-none  to-blueColor bg-clip-text text-transparent">
-                Innovative <br /> Solutions
-              </span>
-              Delivering tailored solutions that harness the power of innovation
-              and emerging technologies to meet your business needs and drive
-              growth.
-            </div>
-
-            <div className="new-text flex flex-col gap-4 main_hero_slogan new-text-3">
-              <span className="font-bold leading-none text-[50px] main-heading     bg-gradient-to-br from-white  to-blueColor  bg-clip-text text-transparent">
-                Future <br /> Ready
-              </span>
-              Empowering organizations to stay ahead of the curve with scalable,
-              secure, and sustainable technological advancements.
-            </div>
-
-            <div className="new-text flex flex-col gap-4 main_hero_slogan new-text-4">
-              <span className="font-bold text-[50px] leading-none main-heading   bg-gradient-to-br from-white  to-blueColor  bg-clip-text text-transparent">
-                Global <br /> Impact
-              </span>
-              Collaborating with industries worldwide to create meaningful and
-              impactful digital solutions that transform lives.
-            </div>
+            {[
+              {
+                title: "Our Vision",
+                description:
+                  "We strive to transform innovative ideas into world-class apps and websites, delivering exceptional user experiences that drive success.",
+              },
+              {
+                title: "Initial Sketch Design",
+                description:
+                  "We start with brainstorming and sketching to lay the foundation for your unique project, ensuring clarity and alignment with your goals.",
+              },
+              {
+                title: "Figma Design Creation",
+                description:
+                  "Our designers bring your vision to life with detailed, user-friendly designs in Figma, focusing on both aesthetics and functionality.",
+              },
+              {
+                title: "Development Phase",
+                description:
+                  "Our developers turn designs into reality by building robust, secure, and scalable websites or apps tailored to your needs.",
+              },
+              {
+                title: "Testing",
+                description:
+                  "We rigorously test your product for performance, usability, and reliability to ensure it functions seamlessly in all scenarios.",
+              },
+              {
+                title: "Application/Website Launch",
+                description:
+                  "After thorough preparation, we launch your app or website, ensuring a smooth transition to the live environment.",
+              },
+              {
+                title: "Project Handover",
+                description:
+                  "We provide you with a fully functional product, complete with all the resources and support needed to take full control.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className={`new-text flex flex-col gap-4 main_hero_slogan new-text-${
+                  i + 1
+                }`}
+              >
+                <span className="font-bold w-[70%] text-[50px] leading-slug  main-heading bg-gradient-to-br from-white to-blueColor bg-clip-text text-transparent">
+                 
+                    <span  className="">
+                      {item.title} 
+                    </span>
+                </span>
+                {item.description}
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className=" flex w-1/2">
-          <div className="new-card ss new-card-1">
-            <div className="our-process-main-pic">
-              <img
-                src="/process/1.jpg"
-                className="rounded-2xl  h-[100%] w-[100%]"
-                alt="1"
-              />
+        <div className="flex w-1/2">
+          {Array.from({ length: 7 }).map((_, i) => (
+            <div key={i} className={`new-card ss new-card-${i + 1}`}>
+              <div className="our-process-main-pic">
+                <img
+                  src={`/process/bg${i + 1}.png`}
+                  className="h-[100%] w-[100%]"
+                  alt={`Card ${i + 1}`}
+                />
+              </div>
             </div>
-          </div>
-          <div className="new-card ss new-card-2">
-            <div className="our-process-main-pic">
-              <img
-                src="/process/bg.jpg"
-                className="rounded2xl h-[100%] w-[100%]"
-                alt="1"
-              />
-            </div>
-          </div>
-          <div className="new-card ss new-card-3">
-            <div className="our-process-main-pic ">
-              <img
-                src="/process/1.jpg"
-                className="rounded-2xl h-[100%] w-[100%] "
-                alt="1"
-              />
-            </div>
-          </div>
-          <div className="new-card ss new-card-4">
-            <div className="our-process-main-pic ">
-              <img
-                src="/process/bg.jpg"
-                className="rounded-2xl h-[100%] w-[100%] "
-                alt="1"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
