@@ -38,7 +38,7 @@ function Model({ rotationX, textureUrl }) {
 
 const ScrollAnimation = () => {
   const image = [
-    "/iphoneModel/1.webp",
+    "/iphoneModel/Car wash.jpg",
     "/iphoneModel/Delivery.png",
     "/iphoneModel/Health care.jpg",
     "/iphoneModel/Booking.jpg",
