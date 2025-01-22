@@ -72,7 +72,7 @@ const StackingImages = () => {
       {
         scale: 0.98,
         yPercent: -10,
-        opacity: 0.6,
+        opacity: 0.8,
         duration: 1,
       },
       "+=1"
@@ -104,7 +104,7 @@ const StackingImages = () => {
       {
         scale: 0.98,
         yPercent: -10,
-        opacity: 0.6,
+        opacity: 0.8,
         duration: 1,
       },
       "+=1"
@@ -136,7 +136,7 @@ const StackingImages = () => {
       {
         scale: 0.98,
         yPercent: -10,
-        opacity: 0.6,
+        opacity: 0.8,
         duration: 1,
       },
       "+=1"
@@ -168,7 +168,7 @@ const StackingImages = () => {
       {
         scale: 0.98,
         yPercent: -10,
-        opacity: 0.6,
+        opacity: 0.8,
         duration: 1,
       },
       "+=1"
@@ -197,7 +197,7 @@ const StackingImages = () => {
 
   return (
     <div className="container  mx-auto flex flex-col gap-10">
-      <div className="cards h-[100vh] min-h-[400px] max-h-[800px] container mx-auto">
+      <div className="cards h-[100vh] min-h-[400px]  container mx-auto">
         <div className="card card-1">
           <StackCard
             bg="/services/bg-consult.png"

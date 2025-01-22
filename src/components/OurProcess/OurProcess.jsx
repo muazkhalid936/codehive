@@ -88,7 +88,7 @@ const StackingImages = () => {
 
   return (
     <div className="bg-[#000B17] container mx-auto">
-      <div className="new-cards  items-center  h-[100vh] min-h-[400px] max-h-[800px] mx-auto">
+      <div className="new-cards  items-center  h-[100vh] min-h-[400px] mx-auto">
         <div className="flex w-1/2 flex-col gap-5 first-container">
           <div className="new-icon-container gap-2">
             {Array.from({ length: 7 }).map((_, i) => (

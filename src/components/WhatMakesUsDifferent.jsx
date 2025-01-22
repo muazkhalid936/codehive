@@ -19,8 +19,8 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 65%",
-            end: "+=200",
+            start: "top 60%",
+            end: "+=150",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -97,7 +97,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           <ol className="  flex flex-col gap-[2rem] ">
             {/* <span className="border-s border-gray-300 absolute h-full mt-10 left-8"></span> */}
             {data.steps.map((value, index) => (
-              <div className="flex gap-[2rem] flex-row justify-around flex-1 items-center">
+              <div className="flex gap-[2rem] flex-row justify-around flex-1 items-center" key={index}>
                 <div className="sm:w-1/2 sm:flex hidden  justify-center items-center">
                   <img
                     key={index}
