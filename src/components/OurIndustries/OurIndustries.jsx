@@ -7,11 +7,13 @@ import Lenis from "@studio-freight/lenis";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Canvas } from "@react-three/fiber";
 import { Stage } from "@react-three/drei";
+import dynamic from "next/dynamic";
 
 gsap.registerPlugin(ScrollTrigger);
 
 // Lazy load the IphoneModel component
-const IphoneModel = lazy(() => import("../../components/IphoneModel"));
+// const IphoneModel = lazy(() => import("../../components/IphoneModel"));
+const IphoneModel = dynamic(() => import("../../components/IphoneModel"));
 
 const ScrollAnimation = () => {
   const imagePaths = [
@@ -27,6 +29,7 @@ const ScrollAnimation = () => {
   const containerRef = useRef();
   const [rotationX, setRotationX] = useState(0);
   const [textureUrl, setTextureUrl] = useState(imagePaths[0]);
+  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
     const imageObjects = imagePaths.map((path) => {
@@ -148,11 +151,31 @@ const ScrollAnimation = () => {
       }
     });
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+          } else {
+            setIsInView(false);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
     return () => {
       // Cleanup
       lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       gsap.globalTimeline.clear();
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
     };
   }, []);
 
@@ -245,24 +268,26 @@ const ScrollAnimation = () => {
               </div>
             </div>
             <div className="w-1/2 ">
-              <Canvas
-                dpr={[0.5, 1]}
-                camera={{ position: [25, 0, 0], fov: 50 }}
-                style={{
-                  height: "70vh",
-                  minHeight: "400px",
-                  maxHeight: "700px",
-                }}
-              >
-                <Stage intensity={0.01} environment={"city"}>
-                  <Suspense fallback={null}>
-                    <IphoneModel
-                      rotationX={rotationX}
-                      textureUrl={textureUrl}
-                    />
-                  </Suspense>
-                </Stage>
-              </Canvas>
+              {isInView && (
+                <Canvas
+                  dpr={[0.5, 1]}
+                  camera={{ position: [25, 0, 0], fov: 50 }}
+                  style={{
+                    height: "70vh",
+                    minHeight: "400px",
+                    maxHeight: "700px",
+                  }}
+                >
+                  <Stage intensity={0.2} environment={"city"}>
+                    <Suspense fallback={null}>
+                      <IphoneModel
+                        rotationX={rotationX}
+                        textureUrl={textureUrl}
+                      />
+                    </Suspense>
+                  </Stage>
+                </Canvas>
+              )}
             </div>
           </div>
         ))}
