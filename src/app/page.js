@@ -40,8 +40,9 @@ export default function Home() {
         <div className=" sixth-component no-scrollbar">
           <OurRecentWork text="Our Recent Works" />
         </div>
-        <div className=" seven-component no-scrollbar">a</div>
-        <Test />
+        <div className=" stack-cards-gap no-scrollbar">
+          <Test />
+        </div>
         <ContactForm />
       </div>
     </div>
