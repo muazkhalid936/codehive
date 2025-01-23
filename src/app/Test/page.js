@@ -1,42 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useGLTF, Stage } from "@react-three/drei";
-import { Canvas, useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
+import { Canvas } from "@react-three/fiber";
+import { Stage } from "@react-three/drei";
+
 gsap.registerPlugin(ScrollTrigger);
-useGLTF.preload("/iphoneModel/3.glb");
 
-function Model({ rotationX, textureUrl }) {
-  const { scene } = useGLTF("/iphoneModel/3.glb");
-  const texture = useLoader(TextureLoader, textureUrl);
-
-  useEffect(() => {
-    scene.traverse((child) => {
-      if (child.isMesh) {
-        child.material.map = texture;
-        child.material.map.flipY = false;
-        child.material.needsUpdate = true;
-
-        // child.material.roughness = -5; // Experiment with these values
-        child.material.metalness = 1; // Experiment with these values
-      }
-    });
-  }, [scene, texture]);
-
-  return (
-    <primitive
-      object={scene}
-      scale={0.07}
-      rotation={[0, rotationX, 0]}
-      position={[30, 0, 0]}
-    />
-  );
-}
+// Lazy load the IphoneModel component
+const IphoneModel = lazy(() => import("../../components/IphoneModel"));
 
 const ScrollAnimation = () => {
   const imagePaths = [
@@ -275,13 +250,17 @@ const ScrollAnimation = () => {
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
                   height: "70vh",
-                  // height: "500px",
                   minHeight: "400px",
-                  maxHeight: "600px",
+                  maxHeight: "700px",
                 }}
               >
                 <Stage intensity={0.01} environment={"city"}>
-                  <Model rotationX={rotationX} textureUrl={textureUrl} />
+                  <Suspense fallback={null}>
+                    <IphoneModel
+                      rotationX={rotationX}
+                      textureUrl={textureUrl}
+                    />
+                  </Suspense>
                 </Stage>
               </Canvas>
             </div>
