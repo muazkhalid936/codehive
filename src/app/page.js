@@ -23,10 +23,10 @@ export default function Home() {
         <div className=" second-component no-scrollbar">
           <ShortRevealHeading text="Our Services" />
         </div>
-        <div className=" third-component ">
+        <div className=" stack ">
           <Stack />
         </div>
-        <div className="a123 no-scrollbar">
+        <div className="our no-scrollbar">
           <ShortRevealHeading text="Our Process" />
         </div>
         <div className=" forth-component no-scrollbar">a</div>

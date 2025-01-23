@@ -136,7 +136,6 @@
   .a123 {
     margin-top: -10vh;
   }
-
 }
 
 @media (max-width: 1680px) {
@@ -171,8 +170,6 @@
   .bottom_right_vector {
     right: 0;
   }
-
- 
 
   .why-section-img {
     scale: 0.6 !important;
@@ -278,4 +275,24 @@
 
 .forth-component {
   margin-top: 100px;
+}
+
+.our {
+  margin-top: -1300px;
+}
+.stack {
+  margin-top: 500px;
+}
+
+.animated-text-long1 {
+  -webkit-font-smoothing: antialiased;
+  background-image: linear-gradient(to right, black, white, black);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  /* background-position: 100px; */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* background-position: -200 0; */
 }

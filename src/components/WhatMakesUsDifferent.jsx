@@ -20,7 +20,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           scrollTrigger: {
             trigger: step,
             start: "top 60%",
-            end: "+=150",
+            end: "+=100",
             toggleActions: "play reverse play reverse",
           },
         }

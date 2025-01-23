@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./LongRevealHeading.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const LongRevealHeading = (params) => {
@@ -11,17 +10,17 @@ const LongRevealHeading = (params) => {
 
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
-    // const lenis = new Lenis({
-    //   smooth: true,
-    //   lerp: 0.1, // Adjust for smoothness
-    // });
+    const lenis = new Lenis({
+      smooth: true,
+      lerp: 0.1, // Adjust for smoothness
+    });
 
-    // const raf = (time) => {
-    //   lenis.raf(time);
-    //   requestAnimationFrame(raf);
-    // };
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
 
-    // requestAnimationFrame(raf);
+    requestAnimationFrame(raf);
 
     // GSAP Scroll Animation
     gsap

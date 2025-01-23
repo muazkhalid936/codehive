@@ -13,7 +13,7 @@ const StackCard = ({ bg, type, heading, num, para }) => {
           </h1>
         </div>
         <div>
-          <h1 className="bg-gradient-to-r leading-none  from-white   to-blueColor font-extrabold bg-clip-text text-transparent sub_heading main_heading ">
+          <h1 className="bg-gradient-to-r   from-white   to-blueColor font-extrabold bg-clip-text text-transparent sub_heading main_heading ">
             {heading}
           </h1>
         </div>
