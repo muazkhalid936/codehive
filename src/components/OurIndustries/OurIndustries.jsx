@@ -19,7 +19,7 @@ const ScrollAnimation = () => {
   const imagePaths = [
     "/iphoneModel/Car wash.jpg",
     "/iphoneModel/Delivery.png",
-    "/iphoneModel/Health care.jpg",
+    "/iphoneModel/Health Care.jpg",
     "/iphoneModel/Booking.jpg",
     "/iphoneModel/Ecommerce.jpg",
     "/iphoneModel/Fitness.png",
