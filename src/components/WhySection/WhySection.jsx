@@ -21,20 +21,7 @@ const ImageScrollEffect = () => {
         pin: true, // Pin the entire container
       },
     });
-    // const timeline2 = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".animation",
-    //     start: "top top",
-    //     end: "+=3000", // Total scroll length
-    //     scrub: true,
-    //     pin: true, // Pin the entire container
-    //   },
-    // });
 
-    // timeline2.to(".animation", {
-    //   opacity: 1,
-    //   xPercent: 0,
-    // });
     const newFunc = () => ({
       onStart: () => {
         gsap.to(".colorText3", {
@@ -60,21 +47,7 @@ const ImageScrollEffect = () => {
         });
       },
     });
-    timeline
-      .to(".why-section-image-1", { opacity: 0, duration: 1 })
-      .to(".why-section-image-2", { opacity: 1, duration: 1 }, "-=0.5")
-      .to(".why-section-image-2", { opacity: 0, duration: 1 })
-      .to(".why-section-image-3", { opacity: 1, duration: 1 }, "-=0.5");
-    // .to(".why-section-heading-2", { opacity: 0, duration: 1, y: -100 }, "-=2")
-    // .to(
-    //   ".why-section-heading-3",
-    //   {
-    //     duration: 1,
-    //     y: -150,
-    //     ...newFunc(),
-    //   },
-    //   "-=2"
-    // );
+ 
 
     const headingAnimations = () => {
       const applyGradient = (selector, startYPercent = -10) => {
@@ -152,7 +125,7 @@ const ImageScrollEffect = () => {
 
               duration: 0.5, // Duration of the animation
             },
-            "secondAnimation" // Start at this label
+            "secondAnimation-=0.3" // Start at this label
           )
           .to(
             ".why-section-heading-3",
@@ -162,32 +135,12 @@ const ImageScrollEffect = () => {
               // delay: 3, // Delay the animation
               ...newFunc(),
 
-              duration: 0.5, // Duration of the animation
+              duration: 1, // Duration of the animation
             },
-            "secondAnimation" // Start at this label
+            "secondAnimation-=0.3" // Start at this label
           );
 
-        // Add a fourth animation label (if needed)
-
-        // tl.to(
-        //   ".why-section-heading-2",
-        //   {
-        //     yPercent: -300,
-        //     opacity: 0, // Consistent yPercent
-        //     // delay: 1000,
-        //     duration: 80, // Duration of the animation
-        //   },
-        //   "+=0" // Adjusted to start at the same time as the last animation
-        // );
-        // tl.to(
-        //   ".why-section-heading-3",
-        //   {
-        //     duration: 120, // Match the duration of the previous animation
-        //     y: -150,
-        //     ...newFunc(),
-        //   },
-        //   "<" // Synchronized start time with the previous animation
-        // );
+       
       };
 
       applyGradient(".why-section-heading-1");
@@ -198,10 +151,7 @@ const ImageScrollEffect = () => {
 
   return (
     <>
-      {/* Spacer for scrolling */}
-      {/* <div className="h-screen">a</div> */}
-
-      {/* Main Section */}
+     
       <div className="why-section-container container flex flex-col  mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
         {/* Images */}
         <div
@@ -227,8 +177,6 @@ const ImageScrollEffect = () => {
         </div>
       </div>
 
-      {/* Spacer for scrolling */}
-      {/* <div className="h-screen">a</div> */}
     </>
   );
 };
