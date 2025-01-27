@@ -24,7 +24,7 @@ const Features = ({ data }) => {
           {data.description}
         </p>
 
-        <div className="flex flex-wrap  justify-start items-center">
+        <div className="flex flex-wrap  justify-center items-center">
           {data.cards.map((item, index) => {
             // Determine if the current index is even or odd
             const isEven = index % 2 === 0;

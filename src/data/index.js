@@ -284,7 +284,7 @@ export const services = [
 
     featuresData: {
       title: "Our Offerings",
-      columns: 3,
+      columns: 4,
       description:
         "Delivering convenience-focused custom software development services in any form is what we’re inclined towards.",
       subheading: "Reach Out Now to Discover Your Custom Software Options!",
@@ -292,38 +292,38 @@ export const services = [
         {
           title: "Customized Software Development",
           description:
-            "Customized Software Development is the process of designing, creating, deploying, and maintaining software for a specific set of users, functions, or organizations.",
-          image: "/feature/partnership.png",
+            "Tailored solutions designed to meet your unique business needs, providing efficient and scalable software solutions.",
+          image: "/feature/codetv.png",
         },
         {
-          title: "Mobile App Development",
+          title: "Software Product Development",
           description:
-            "High-quality, user-friendly mobile apps for both iOS and Android platforms, helping you reach a broader audience and enhance customer engagement.",
-          image: "/feature/partnership.png",
+            "End-to-end support in creating innovative software products, from ideas and design to development and market launch.",
+          image: "/feature/settingtv.png",
         },
         {
-          title: "Web Development",
+          title: "API Development",
           description:
-            "We design and develop websites that are visually appealing, user-friendly, and optimized for search engines, helping you attract and retain customers.",
-          image: "/feature/partnership.png",
+            "Build secure and efficient APIs that enable seamless communication between your software and external systems.",
+          image: "/feature/code.png",
         },
         {
-          title: "Enterprise Software Solutions",
+          title: "Enterprise Software",
           description:
-            "Our enterprise software solutions are designed to help you manage and optimize your business processes, improve efficiency, and drive growth.",
-          image: "/feature/accessibility.png",
+            "Robust and scalable software solutions designed to enhance productivity within large organizations.",
+          image: "/feature/anatv.png",
         },
         {
-          title: "E-Commerce Solutions",
+          title: "Software Integeration",
           description:
-            "We create e-commerce solutions that are tailored to your business needs, helping you attract customers, increase sales, and grow your business online.",
-          image: "/feature/accessibility.png",
+            "Enhance data flow and streamline operations by integrating disparate software systems within your organization.",
+          image: "/feature/stack.png",
         },
         {
-          title: "SaaS (Software as a Service) Development",
+          title: "Software Consulting",
           description:
-            "We develop SaaS solutions that are scalable, secure, and easy to use, helping you deliver software to your customers over the internet.",
-          image: "/feature/accessibility.png",
+            "Expert guidance and strategic insights to help you make informed software decisions and optimize your technology investments.",
+          image: "/feature/inter.png",
         },
       ],
     },
@@ -333,30 +333,35 @@ export const services = [
       steps: [
         {
           id: 1,
+          img: "/services/soft/1.jpeg",
           title: "Requirements Gathering",
           description:
             "We collaborate with you to understand your specific needs, objectives, and challenges to define the project scope.",
         },
         {
           id: 2,
+          img: "/services/soft/2.jpeg",
           title: "System Design",
           description:
             "Our team creates a detailed design plan, including architecture, user interface, and user experience, ensuring alignment with your vision.",
         },
         {
           id: 3,
+          img: "/services/soft/3.jpeg",
           title: "Development",
           description:
             "We develop the software using agile methodologies, allowing for flexibility and regular feedback throughout the process.",
         },
         {
           id: 4,
+          img: "/services/soft/4.jpeg",
           title: "Testing and Quality Assurance",
           description:
             "Comprehensive testing is conducted to ensure functionality, performance, and security, addressing any issues before deployment.",
         },
         {
           id: 5,
+          img: "/services/soft/5.jpeg",
           title: "Deployment and Support",
           description:
             "After successful deployment, we provide ongoing support and maintenance to optimize performance and adapt to any evolving business needs.",
@@ -393,28 +398,28 @@ export const services = [
       title: `Custom Software Development Industries`,
       cards: [
         {
-          name: "Construction",
+          name: "CRM System",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/construction.png",
+            "Streamline your customer relationships with our powerful CRM system.",
+          picture: "/CustomSoftwareDevelopmentIndustries/q1.jpeg",
         },
         {
-          name: "Health",
+          name: "Inventory System",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/Health.png",
+            "Effortlessly manage and track your stock with our efficient Inventory System.",
+          picture: "/CustomSoftwareDevelopmentIndustries/q2.jpeg",
         },
         {
-          name: "Retail & eCommerce",
+          name: "ERD System",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/Retail.png",
+            "Visualize and optimize your data flow with our ERD System.",
+          picture: "/CustomSoftwareDevelopmentIndustries/q3.jpeg",
         },
         {
-          name: "FinTech",
+          name: "POS System",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/FinTech.png",
+            "Transform transactions with our intuitive and reliable POS system.",
+          picture: "/CustomSoftwareDevelopmentIndustries/q4.jpeg",
         },
       ],
     },
@@ -441,46 +446,34 @@ export const services = [
 
     featuresData: {
       title: "Our Offerings",
-      columns: 3,
+      columns: 4,
       description:
         "We align next-gen tech with your brand and audience. As a top enterprise mobile app development company, we utilize design sprints to identify growth opportunities beyond your core business.",
       subheading: "Connect with Us to Begin Your App Development!",
       cards: [
         {
-          title: "Custom iOS and Android Apps Development",
+          title: "iOS App Development",
           description:
-            "Our team of expert developers creates custom mobile apps for both iOS and Android platforms, tailored to your specific needs and objectives.",
-          image: "/feature/partnership.png",
+            "Craft intuitive iOS applications that seamlessly integrate with Apple’s ecosystem, delivering a refined and engaging user journey.",
+          image: "/feature/b1.png",
+        },
+        {
+          title: "Android App Development",
+          description:
+            "Build dynamic Android applications that serve a diverse user base, offering innovative features tailored to the Android platform.",
+          image: "/feature/b2.png",
+        },
+        {
+          title: "Cross-Platform Development",
+          description:
+            "Develop versatile apps that operate smoothly across multiple platforms, maximizing reach while maintaining consistent performance.",
+          image: "/feature/b3.png",
         },
         {
           title: "UI/UX Design",
           description:
             "Our team crafts engaging IJI/UX designs that enhance user engagement and create visually appealing, user-friendly interfaces for both mobile and web applications.",
-          image: "/feature/partnership.png",
-        },
-        {
-          title: "Proficient Mobile App Developers",
-          description:
-            "Our team of experienced mobile app developers has the skills and expertise to create high-quality, user-friendly mobile apps that meet your business needs.",
-          image: "/feature/partnership.png",
-        },
-        {
-          title: "Native and Cross-Platform Solutions",
-          description:
-            "We develop native and cross-platform mobile apps that are optimized for performance, security, and user experience, ensuring seamless functionality across all devices.",
-          image: "/feature/accessibility.png",
-        },
-        {
-          title: "Consulting and Prototyping",
-          description:
-            "We provide consulting services to help you define your mobile app strategy and create prototypes to test your ideas and gather feedback before development.",
-          image: "/feature/accessibility.png",
-        },
-        {
-          title: "Automated QA and Testing",
-          description:
-            "We use automated QA and testing tools to ensure that your mobile app is free of bugs and errors, delivering a high-quality product that meets your expectations.",
-          image: "/feature/accessibility.png",
+          image: "/feature/b4.png",
         },
       ],
     },
@@ -490,22 +483,26 @@ export const services = [
         {
           id: 1,
           title: "Discovery and Planning",
+          img: "/services/mobile-app-dev/1.jpeg",
           description:
             "We collaborate with you to understand your vision, goals, and target audience, creating a detailed project roadmap.",
         },
         {
           id: "02",
+          img: "/services/mobile-app-dev/2.jpeg",
           title: "Design and Prototyping",
           description:
             "Our team crafts intuitive user interfaces and prototypes, ensuring a seamless user experience before development begins.",
         },
         {
+          img: "/services/mobile-app-dev/3.jpeg",
           id: "03",
           title: "Development",
           description:
             "Utilizing the latest technologies, we build robust and scalable mobile applications tailored to your specifications.",
         },
         {
+          img: "/services/mobile-app-dev/4.jpeg",
           id: "04",
           title: "Testing and Quality Assurance",
           description:
@@ -513,6 +510,7 @@ export const services = [
         },
         {
           id: "05",
+          img: "/services/mobile-app-dev/5.jpeg",
           title: "Launch and Support",
           description:
             "Once your app is ready, we assist with deployment and provide ongoing support to optimize performance and user satisfaction.",
@@ -548,28 +546,52 @@ export const services = [
       title: `Mobile App Development Industries`,
       cards: [
         {
-          name: "Construction",
+          name: "Health Apps",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/construction.png",
+            "Develop secure apps for appointment booking, telemedicine, and health tracking.",
+          picture: "/CustomSoftwareDevelopmentIndustries/1.jpeg",
         },
         {
-          name: "Health",
+          name: "Ecommerce Apps",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/Health.png",
+            "Create seamless shopping apps with product catalogues, payment gateways, and order tracking.",
+          picture: "/CustomSoftwareDevelopmentIndustries/2.jpeg ",
         },
         {
-          name: "Retail & eCommerce",
+          name: "Education Apps",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/Retail.png",
+            "Build interactive apps for online learning, course management, and virtual classrooms.",
+          picture: "/CustomSoftwareDevelopmentIndustries/3.jpeg",
         },
         {
-          name: "FinTech",
+          name: "Travel & Tourism Apps ",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/FinTech.png",
+            "Create apps for itinerary planning, hotel bookings, and destination guides.",
+          picture: "/CustomSoftwareDevelopmentIndustries/4.jpeg",
+        },
+        {
+          name: "Fitness Apps ",
+          description:
+            "Design apps for workout plans, progress tracking, and wearable integrations.",
+          picture: "/CustomSoftwareDevelopmentIndustries/5.jpeg",
+        },
+        {
+          name: "Real Estate Apps",
+          description:
+            "Build apps with property listings, virtual tours, and agent communication features.",
+          picture: "/CustomSoftwareDevelopmentIndustries/6.jpeg",
+        },
+        {
+          name: "Food Delivery Apps",
+          description:
+            "Develop apps for online ordering, delivery tracking, and customer feedback.",
+          picture: "/CustomSoftwareDevelopmentIndustries/7.jpeg",
+        },
+        {
+          name: "Finance Apps",
+          description:
+            "Create secure apps for banking, budgeting, and investment management.",
+          picture: "/CustomSoftwareDevelopmentIndustries/8.jpeg",
         },
       ],
     },
@@ -596,46 +618,46 @@ export const services = [
 
     featuresData: {
       title: "Our Offerings",
-      columns: 3,
+      columns: 4,
       description:
         "Delivering convenience-focused custom software development services in any form is what we’re inclined towards.",
       subheading: "Elevate Your Business with Our Automation Solutions!",
       cards: [
         {
-          title: "Business Process Automation",
+          title: "Process Automation",
           description:
-            "Automate repetitive tasks, streamline workflows, and improve efficiency with our business process automation solutions.",
-          image: "/feature/partnership.png",
+            "Enhance productivity by automating repetitive and time-consuming tasks, allowing your team to focus on strategic initiatives. ",
+          image: "/feature/a1.png",
         },
         {
-          title: "Cloud Migration Services",
+          title: "Customer Digital Solutions",
           description:
-            "Transition your applications, data, and infrastructure to the cloud securely and seamlessly, enhancing accessibility and scalability.",
-          image: "/feature/partnership.png",
+            "Develop tailored software, applications, and platforms that align with your business objectives and drive operational efficiency.",
+          image: "/feature/a2.png",
         },
         {
-          title: "Data Analytics and Business Intelligence",
+          title: "Cloud Migration & Intergration",
           description:
-            "Leverage data analytics and business intelligence tools to gain valuable insights, make informed decisions, and drive growth.",
-          image: "/feature/partnership.png",
+            "Modernize your infrastructure by transitioning to secure and scalable cloud platforms, enabling seamless access and collaboration.",
+          image: "/feature/a3.png",
         },
         {
-          title: "Custom Software Development",
+          title: "AI & Data Analytics",
           description:
-            "Develop customized software solutions that align with your business needs, helping you streamline operations and drive innovation.",
-          image: "/feature/accessibility.png",
+            "Utilize artificial intelligence and advanced analytics to gain actionable insights, improve decision-making, and predict future trends.",
+          image: "/feature/a4.png",
         },
         {
-          title: "Integrated Software Solutions",
+          title: "Workflow Optimization",
           description:
-            "Integrate your software systems and applications to improve communication, collaboration, and data sharing across your organization.",
-          image: "/feature/accessibility.png",
+            "Reengineer and streamline business processes to eliminate inefficiencies and create scalable, future-ready operations.",
+          image: "/feature/a5.png",
         },
         {
-          title: "Digital Strategy Consulting",
+          title: "Robust Cybersecurity",
           description:
-            "Develop a comprehensive digital strategy that aligns with your business goals, helping you leverage technology to drive growth and success.",
-          image: "/feature/accessibility.png",
+            "Protect your digital assets and ensure compliance with industry standards through advanced security measures and monitoring.",
+          image: "/feature/a6.png",
         },
       ],
     },
@@ -645,23 +667,28 @@ export const services = [
         {
           id: "01",
           title: "Assessment and Strategy",
+          img: "/services/digital-transform/1.jpeg",
           description:
             "We evaluate your current processes and systems to identify opportunities for improvement and create a tailored digital transformation strategy.",
         },
         {
           id: "02",
+          img: "/services/digital-transform/2.jpeg",
+
           title: "Technology Selection",
           description:
             "Based on your goals, we recommend and select the right technologies and tools that align with your business needs for effective automation.",
         },
         {
           id: "03",
+          img: "/services/digital-transform/3.jpeg",
           title: "Implementation",
           description:
             "Our team implements the chosen solutions, integrating them seamlessly into your existing workflows to ensure minimal disruption.",
         },
         {
           id: "04",
+          img: "/services/digital-transform/4.jpeg",
           title: "Training and Support",
           description:
             "We provide comprehensive training for your staff and ongoing support to ensure they are equipped to utilize new technologies effectively.",
@@ -669,6 +696,7 @@ export const services = [
         {
           id: "05",
           title: "Monitoring and Optimization",
+          img: "/services/digital-transform/5.jpeg",
           description:
             "We continuously monitor the performance of automated processes and make adjustments as needed to enhance efficiency and achieve desired outcomes.",
         },
@@ -750,45 +778,46 @@ export const services = [
 
     featuresData: {
       title: "Our Offerings",
-      columns: 3,
+      columns: 4,
       description:
         "Delivering convenience-focused custom software development services in any form is what we’re inclined towards.",
       subheading: "Elevate Your Business with Our Automation Solutions!",
       cards: [
         {
-          title: "Digital Strategy Development",
-          description: "Technology & System Audits",
-          image: "/feature/partnership.png",
+          title: "Strategic IT Roadmaps",
+          description:
+            "Develop comprehensive digital strategies aligned with your business goals to drive growth and innovation.",
+          image: "/feature/c1.png",
         },
         {
-          title: "Cloud Migration Services",
+          title: "Technology Assessment",
           description:
-            "Our consultants perform in-depth audits of your existing technology stack, identifying inefficiencies and recommending improvements to enhance performance and scalability.",
-          image: "/feature/partnership.png",
+            "Evaluate existing systems and identify areas for improvement to optimize performance and efficiency.",
+          image: "/feature/c2.png",
         },
         {
-          title: "Process Optimization",
+          title: "Custom Solution Design",
           description:
-            "We analyze your business processes to identify bottlenecks and inefficiencies, recommending automation solutions to streamline operations and improve productivity.",
-          image: "/feature/partnership.png",
+            "Provide tailored recommendations for software, platforms, and tools to meet your unique business needs..",
+          image: "/feature/c3.png",
         },
         {
           title: "Digital Transformation Planning",
           description:
-            "Our team works with you to develop a comprehensive digital transformation strategy that aligns with your business goals, helping you leverage technology to drive growth and success.",
-          image: "/feature/accessibility.png",
+            "Craft actionable plans to modernize operations, enhance workflows, and adopt cutting-edge technologies.",
+          image: "/feature/c4.png",
         },
         {
-          title: "Cloud & IT Infrastructure Consulting",
+          title: "Process Optimization",
           description:
-            "We provide expert guidance on cloud migration, infrastructure optimization, and IT strategy, helping you leverage technology to enhance efficiency and drive innovation.",
-          image: "/feature/accessibility.png",
+            "Analyse and refine business processes to increase efficiency, scalability, and adaptability in a digital-first world.",
+          image: "/feature/c5.png",
         },
         {
-          title: "Change Management Support",
+          title: "Ongoing Support & Advisory",
           description:
-            "Our consultants provide change management support to help your team adapt to new technologies and processes, ensuring a smooth transition and successful implementation.",
-          image: "/feature/accessibility.png",
+            "Offer continuous guidance to help you stay ahead of industry trends and adapt to evolving technology.",
+          image: "/feature/c6.png",
         },
       ],
     },
@@ -798,16 +827,19 @@ export const services = [
         {
           id: "01",
           title: "Needs Assessment",
+          img: "/services/digital-consultation/1.jpeg",
           description:
             "We begin by understanding your business challenges and goals through in-depth discussions and analysis.",
         },
         {
+          img: "/services/digital-consultation/2.jpeg",
           id: "02",
           title: "Strategy Development",
           description:
             "Our consultants craft a tailored digital strategy that aligns with your objectives and addresses identified challenges.",
         },
         {
+          img: "/services/digital-consultation/3.jpeg",
           id: "03",
           title: "Implementation Planning",
           description:
@@ -815,12 +847,14 @@ export const services = [
         },
         {
           id: "04",
+          img: "/services/digital-consultation/4.jpeg",
           title: "Execution and Support",
           description:
             "Our team assists with the execution of the strategy, providing guidance and support to ensure smooth integration and operation.",
         },
         {
           id: "05",
+          img: "/services/digital-consultation/5.jpeg",
           title: "Monitoring and Optimization",
           description:
             "We continuously monitor progress, gather feedback, and optimize the strategy to maximize impact and adapt to changing business needs.",
@@ -904,46 +938,34 @@ export const services = [
 
     featuresData: {
       title: "Our Offerings",
-      columns: 3,
+      columns: 4,
       description:
         "Delivering convenience-focused web application development services in any form is what we’re inclined towards.",
       subheading: "Connect with Us to Elevate Your Online Presence!",
       cards: [
         {
+          title: "Web Portal Websites",
+          description:
+            "Design and build feature-rich web portals that centralize information, facilitate collaboration, and improve user engagement for businesses and organizations.",
+          image: "/feature/p1.png",
+        },
+        {
+          title: "Ecommerce Websites",
+          description:
+            "Create powerful and secure ecommerce platforms with advanced shopping features, payment integrations, and user-friendly designs to boost online sales.",
+          image: "/feature/p2.png",
+        },
+        {
+          title: "Corporate Websites",
+          description:
+            "Develop professional corporate websites tailored to enhance brand identity, showcase services, and establish a strong online presence.",
+          image: "/feature/p3.png",
+        },
+        {
           title: "Frontend/Backend Development",
           description:
-            "We build robust, scalable, and secure web applications with expert frontend and backend development services, ensuring seamless functionality.",
-          image: "/feature/partnership.png",
-        },
-        {
-          title: "Full-stack Development",
-          description:
-            "Maximize your digital potential with our all-inclusive approach. We deliver high-performance web solutions by merging frontend and backend expertise.",
-          image: "/feature/partnership.png",
-        },
-        {
-          title: "UI/UX Web Design",
-          description:
-            "Craft intuitive and visually appealing interfaces that enhance user experience and engagement, tailored to your audience’s needs.",
-          image: "/feature/partnership.png",
-        },
-        {
-          title: "Content Management Systems",
-          description:
-            "Streamline your content creation and management with customized CMS solutions, making your workflows efficient and effortless.",
-          image: "/feature/partnership.png",
-        },
-        {
-          title: "Custom Web Solutions",
-          description:
-            "We provide tailored web solutions designed to meet your unique business needs, ensuring optimal performance and scalability.",
-          image: "/feature/partnership.png",
-        },
-        {
-          title: "E-Commerce Solutions",
-          description:
-            "Empower your business with e-commerce platforms that deliver exceptional performance, flexibility, and a seamless shopping experience.",
-          image: "/feature/partnership.png",
+            "Deliver robust and scalable solutions with intuitive frontend designs and efficient backend systems to ensure seamless functionality and performance.",
+          image: "/feature/p4.png",
         },
       ],
     },
@@ -952,30 +974,35 @@ export const services = [
       steps: [
         {
           id: "01",
+          img: "/services/web-dev/1.jpeg",
           title: "Discovery and Planning",
           description:
-            "We begin by understanding your business goals, target audience, and project requirements to create a comprehensive plan.",
+          "We begin by understanding your business goals, target audience, and project requirements to create a comprehensive plan.",
         },
         {
           id: "02",
           title: "Design and Prototyping",
+          img: "/services/web-dev/2.jpeg",
           description:
-            "Our team designs user-friendly layouts and interactive prototypes to visualize the website's look and feel before development.",
+          "Our team designs user-friendly layouts and interactive prototypes to visualize the website's look and feel before development.",
         },
         {
+          img: "/services/web-dev/3.jpeg",
           id: "03",
           title: "Development",
           description:
-            "Using the latest technologies, we build the website, integrating frontend and backend components to ensure functionality and performance.",
+          "Using the latest technologies, we build the website, integrating frontend and backend components to ensure functionality and performance.",
         },
         {
+          img: "/services/web-dev/4.jpeg",
           id: "04",
           title: "Testing and Quality Assurance",
           description:
-            "We rigorously test the website for bugs, responsiveness, and compatibility across devices and browsers to ensure a smooth user experience.",
+          "We rigorously test the website for bugs, responsiveness, and compatibility across devices and browsers to ensure a smooth user experience.",
         },
         {
           id: "05",
+          img: "/services/web-dev/5.jpeg",
           title: "Launch and Support",
           description:
             "After successful testing, we launch your website and provide ongoing support to optimize performance and address any issues that arise.",
@@ -1010,28 +1037,52 @@ export const services = [
       title: `Website Development Industries`,
       cards: [
         {
-          name: "Construction",
+          name: "Healthcare",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/construction.png",
+            "Create websites with appointment booking, doctor profiles, and patient portals.",
+          picture: "/CustomSoftwareDevelopmentIndustries/w1.jpeg",
         },
         {
-          name: "Health",
+          name: "Ecommerce",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/Health.png",
+            "Develop user-friendly ecommerce platforms with secure payment systems.",
+          picture: "/CustomSoftwareDevelopmentIndustries/w2.jpeg",
         },
         {
-          name: "Retail & eCommerce",
+          name: "Education",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/Retail.png",
+            "Design websites with course catalogues, enrolment features, and virtual classrooms.",
+          picture: "/CustomSoftwareDevelopmentIndustries/w3.jpeg",
         },
         {
-          name: "FinTech",
+          name: "Hopitality",
           description:
-            "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/FinTech.png",
+            "Build websites for hotels and restaurants with reservations and menu displays.",
+          picture: "/CustomSoftwareDevelopmentIndustries/w4.jpeg",
+        },
+        {
+          name: "Fitness and Wellness",
+          description:
+            "Develop websites with class schedules, memberships, and booking options.",
+          picture: "/CustomSoftwareDevelopmentIndustries/w5.jpeg",
+        },
+        {
+          name: "Automotive",
+          description:
+            "Create sites for car services, rentals, and dealerships with booking systems.",
+          picture: "/CustomSoftwareDevelopmentIndustries/w6.jpeg",
+        },
+        {
+          name: "Real Estate",
+          description:
+            "Build property listing websites with virtual tours and contact forms.",
+          picture: "/CustomSoftwareDevelopmentIndustries/w7.jpeg",
+        },
+        {
+          name: "Travel and Tourism ",
+          description:
+            "Design visually appealing sites with itineraries and booking features.",
+          picture: "/CustomSoftwareDevelopmentIndustries/w8.jpeg",
         },
       ],
     },
@@ -1073,47 +1124,60 @@ export const services = [
     },
 
     featuresData: {
+      columns: 4,
       title: "Our Offerings",
       description:
         "Whether you need a domain-specific chatbot, an assistant to enhance interactions, or AI to improve operational efficiency, we have the expertise to deliver.",
       subheading: "Ready to Transform Your Data into Actionable Insights?",
       cards: [
         {
-          title: "Training / Finetuning LLM’s",
+          title: "Data Integeration",
           description:
-            "Train and fine-tune large language models (LLMs) to understand and generate human-like text, enabling natural language processing and generation.",
-          image: "/feature/partnership.png",
+            "Combine data from multiple sources to create a unified and comprehensive view of your business operations.",
+          image: "/feature/q1.png",
         },
         {
-          title: "Creating Training Data",
+          title: "Interactive Dashboards",
           description:
-            "Curate high-quality training data, focusing on diversity, relevance, and accuracy, to ensure successful LLM training that results in robust, context-aware, and effective AI models.",
+            "Design intuitive dashboards that provide real-time insights into key performance metrics.",
 
-          image: "/feature/partnership.png",
+          image: "/feature/q2.png",
         },
         {
-          title: "Experiments & Scoring",
+          title: "Predictive Analytics",
           description:
-            "Test and evaluate AI models through experiments and scoring, refining and optimizing their performance to meet your specific requirements and objectives.",
-          image: "/feature/partnership.png",
+            "Utilize advanced algorithms to forecast trends and enable proactive decision-making.",
+          image: "/feature/q3.png",
         },
         {
-          title: "AI Supported Journeys",
+          title: "Data Visualization",
           description:
-            "AI-supported journeys enhance user experiences, providing personalized, context-aware interactions that drive engagement and satisfaction.",
-          image: "/feature/partnership.png",
+            "Transform complex data into easy-to-understand visual representations for quick insights.",
+          image: "/feature/q4.png",
         },
         {
-          title: "Custom AI Implementations",
+          title: "Performance Monitoring",
           description:
-            "Leverage custom AI implementations to address your unique business needs, enhancing operational efficiency, decision-making, and customer interactions.",
-          image: "/feature/partnership.png",
+            "Track operational and financial performance to identify growth opportunities and areas for improvement.",
+          image: "/feature/q5.png",
         },
         {
-          title: "Integrate Solution to Your Product",
+          title: "Customized BI Solutions",
           description:
-            "Integrate AI solutions seamlessly into your products and services, enhancing their capabilities and value proposition to meet evolving customer demands.",
-          image: "/feature/partnership.png",
+            "Develop tailored business intelligence tools to address specific organizational needs..",
+          image: "/feature/q6.png",
+        },
+        {
+          title: "Trend Analysis",
+          description:
+            "Identify market patterns and customer behaviour to inform strategic planning.",
+          image: "/feature/q7.png",
+        },
+        {
+          title: "Self-Service Analytics",
+          description:
+            "Empower teams with tools to perform their own data analysis without technical expertise.",
+          image: "/feature/q8.png",
         },
       ],
     },
@@ -1121,30 +1185,35 @@ export const services = [
       title: "Process of Business Intelligence & Data Analysis",
       steps: [
         {
-          id: "01",
-          title: "Data Collection",
-          description:
-            "Gather relevant data from various sources, including databases, spreadsheets, and external systems.",
+         img: "/services/business-intelligence/1.jpeg",
+         id: "01",
+         title: "Data Collection",
+         description:
+         "Gather relevant data from various sources, including databases, spreadsheets, and external systems.",
         },
         {
+          img: "/services/business-intelligence/2.jpeg",
           id: "02",
           title: "Data Preparation",
           description:
-            "Clean and organize the collected data, ensuring it is accurate and formatted for analysis.",
+          "Clean and organize the collected data, ensuring it is accurate and formatted for analysis.",
         },
         {
+          img: "/services/business-intelligence/3.jpeg",
           id: "03",
           title: "Data Analysis",
           description:
-            "Utilize statistical methods and tools to analyze the data, identifying trends, patterns, and insights.",
+          "Utilize statistical methods and tools to analyze the data, identifying trends, patterns, and insights.",
         },
         {
+          img: "/services/business-intelligence/4.jpeg",
           id: "04",
           title: "Data Visualization",
           description:
-            "Create visual representations of the analyzed data through charts, graphs, and dashboards to convey findings effectively.",
+          "Create visual representations of the analyzed data through charts, graphs, and dashboards to convey findings effectively.",
         },
         {
+          img: "/services/business-intelligence/5.jpeg",
           id: "05",
           title: "Decision Making",
           description:
@@ -1587,8 +1656,7 @@ export const industries = [
         },
         {
           name: "Restaurant",
-          description:
-            "Streamline table reservations and online ordering.",
+          description: "Streamline table reservations and online ordering.",
           picture: "/IndustriesBooking/Slider2.png",
         },
         {
@@ -1611,8 +1679,7 @@ export const industries = [
         },
         {
           name: "Auto Workshop",
-          description:
-            "Simplify service bookings and manage staff schedules.",
+          description: "Simplify service bookings and manage staff schedules.",
           picture: "/IndustriesBooking/Slider6.png",
         },
         {
@@ -1623,8 +1690,7 @@ export const industries = [
         },
         {
           name: "Rent a Car",
-          description:
-            "Automate vehicle rentals and track fleet availability.",
+          description: "Automate vehicle rentals and track fleet availability.",
           picture: "/IndustriesBooking/Slider8.png",
         },
       ],
@@ -2077,58 +2143,58 @@ export const industries = [
         ],
         image: "/FitnessApp/iphone1.png",
       },
-      {
-        id: 2,
-        title: "Trainer App",
-        heading: "Trainer App",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
-          {
-            icon: "/FitnessApp/8.png",
-            title: "Client Management",
-            description:
-              "Easily manage client profiles, fitness goals, and progress tracking in one place.",
-          },
-          {
-            icon: "/FitnessApp/9.png",
-            title: "Personalized Workout Plans",
-            description:
-              "Create and assign customized workout plans tailored to each client’s fitness level and goals.",
-          },
-          {
-            icon: "/FitnessApp/10.png",
-            title: "Nutrition Guidance",
-            description:
-              "Provide personalized meal plans and dietary advice to complement clients’ fitness routines.",
-          },
-          {
-            icon: "/FitnessApp/11.png",
-            title: "Progress Tracking",
-            description:
-              "Track clients’ performance with metrics like weight, measurements, and workout history, and share progress reports.",
-          },
-          {
-            icon: "/FitnessApp/12.png",
-            title: "Session Scheduling",
-            description:
-              "Allow trainers to set availability, schedule sessions, and send automated reminders to clients.",
-          },
-          {
-            icon: "/FitnessApp/13.png",
-            title: "Notifications and Alerts",
-            description:
-              "Keep trainers updated with client reminders, session changes, or important updates through push notifications.",
-          },
-          {
-            icon: "/FitnessApp/14.png",
-            title: "Multi-Language Support",
-            description:
-              "Offer accessibility for trainers and clients worldwide with multi-language functionality.",
-          },
-        ],
-        image: "/FitnessApp/iphone2.png",
-      },
+      // {
+      //   id: 2,
+      //   title: "Trainer App",
+      //   heading: "Trainer App",
+      //   description:
+      //     "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
+      //   features: [
+      //     {
+      //       icon: "/FitnessApp/8.png",
+      //       title: "Client Management",
+      //       description:
+      //         "Easily manage client profiles, fitness goals, and progress tracking in one place.",
+      //     },
+      //     {
+      //       icon: "/FitnessApp/9.png",
+      //       title: "Personalized Workout Plans",
+      //       description:
+      //         "Create and assign customized workout plans tailored to each client’s fitness level and goals.",
+      //     },
+      //     {
+      //       icon: "/FitnessApp/10.png",
+      //       title: "Nutrition Guidance",
+      //       description:
+      //         "Provide personalized meal plans and dietary advice to complement clients’ fitness routines.",
+      //     },
+      //     {
+      //       icon: "/FitnessApp/11.png",
+      //       title: "Progress Tracking",
+      //       description:
+      //         "Track clients’ performance with metrics like weight, measurements, and workout history, and share progress reports.",
+      //     },
+      //     {
+      //       icon: "/FitnessApp/12.png",
+      //       title: "Session Scheduling",
+      //       description:
+      //         "Allow trainers to set availability, schedule sessions, and send automated reminders to clients.",
+      //     },
+      //     {
+      //       icon: "/FitnessApp/13.png",
+      //       title: "Notifications and Alerts",
+      //       description:
+      //         "Keep trainers updated with client reminders, session changes, or important updates through push notifications.",
+      //     },
+      //     {
+      //       icon: "/FitnessApp/14.png",
+      //       title: "Multi-Language Support",
+      //       description:
+      //         "Offer accessibility for trainers and clients worldwide with multi-language functionality.",
+      //     },
+      //   ],
+      //   image: "/FitnessApp/iphone2.png",
+      // },
       {
         id: 3,
         title: "Admin Panel",
@@ -2173,7 +2239,7 @@ export const industries = [
               "Leverage integrated tools for email marketing, push notifications, and targeted promotional campaigns.",
           },
         ],
-        image: "/FitnessApp/iphone3.png",
+        image: "/FitnessApp/iphone2.png",
       },
       {
         id: 4,
@@ -2213,7 +2279,7 @@ export const industries = [
               "Share detailed information about gym amenities, facilities, and rules for a smooth member experience.",
           },
         ],
-        image: "/FitnessApp/iphone4.png",
+        image: "/FitnessApp/iphone3 .png",
       },
     ],
 
@@ -2234,34 +2300,34 @@ export const industries = [
       columns: 4,
       cards: [
         {
-          title: "Easy to use",
+          title: "AI Personalized Workout Plans",
           description:
-            "Designed with simplicity in mind, our eCommerce app ensures a smooth and effortless user experience.",
-          image: "/feature/nutrition.png",
+            "We develop custom workout routines tailored to individual fitness levels and goals, leveraging AI technology to ensure effective and engaging exercise programs.",
+          image: "/feature/gymreport.png",
           talkAnExpert: true,
           path: "/service/software-development",
         },
         {
-          title: "Secure Payment Integration",
+          title: "Health and Wellness Insights",
           description:
-            "Incorporate multiple payment gateways with robust encryption to ensure smooth and secure transactions for customers.",
-          image: "/feature/partnership.png",
+            "Gain comprehensive insights into overall health and wellness by integrating AI to analyse various metrics and provide actionable recommendations.",
+          image: "/feature/protection.png",
           talkAnExpert: true,
           path: "/service/mobile-app-development",
         },
         {
-          title: "Multi-Vendor App Development",
+          title: "In-App Purchases & Subscriptions",
           description:
-            "Enable a dynamic marketplace where multiple vendors can sell their products, complete with vendor dashboards and management tools.",
-          image: "/feature/sport.png",
+            "Monetize the app with premium features, fitness plans, or exclusive content through subscriptions or one-time purchases.",
+          image: "/feature/sub.png",
           talkAnExpert: true,
           path: "/service/digital-consultation",
         },
         {
-          title: "Order Management",
+          title: "Smart Activity Tracking",
           description:
-            "Streamline the entire order lifecycle with features for tracking shipments, managing returns, and handling cancellations effortlessly.",
-          image: "/feature/yoga.png",
+            "Utilize AI to monitor and analyse user activities with precision, providing detailed feedback and insights for improved performance and goal achievement.",
+          image: "/feature/gymplan.png",
           talkAnExpert: true,
           path: "/service/website-development",
         },
@@ -2459,50 +2525,66 @@ export const industries = [
       columns: 4,
       cards: [
         {
-          title: "TeleMedicine App Development",
+          title: "Electronic Health Records",
           description:
-            "Code Hive believes in technology’s power to transform, fostering bold ideas and continuous growth to drive innovation and shape the industry's future.",
-          image: "/feature/telemedicine.png",
+            "Offer secure storage for patient medical history, prescriptions, and test results for easy access during consultations.",
+          image: "/feature/folder.png",
           talkAnExpert: true,
           path: "/service/software-development",
         },
         {
-          title: "Mental Health App Development",
+          title: "Doctor Profiles",
           description:
-            "Codehive’s mental health app developers create solutions for well-being, offering therapy sessions, mood tracking, and relaxation tools.",
-          image: "/feature/partnership.png",
+            "Our healthcare app development company builds pharma apps for easy access to medications, prescription tracking, and pharmacy information.",
+          image: "/feature/femaledoctor.png",
           talkAnExpert: true,
           path: "/service/mobile-app-development",
         },
         {
-          title: "On-Demand Doctor App Development",
+          title: "Easy Appointment Scheduling",
           description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/doctor.png",
+            "Allow users to search for doctors by specialty, location, and availability to book appointments seamlessly.",
+          image: "/feature/ctime.png",
           talkAnExpert: true,
           path: "/service/digital-consultation",
         },
         {
-          title: "Medical App Development",
+          title: "Reat-Time Availbility",
           description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/healthcare.png",
+            "Display doctors' schedules and availability in real-time to ensure hassle-free bookings.",
+          image: "/feature/avail.png",
           talkAnExpert: true,
           path: "/service/website-development",
         },
         {
-          title: "Pharma App Development",
+          title: "Content & Communication Management",
           description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/pharmacy.png",
+            "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+          image: "/feature/content.png",
           talkAnExpert: true,
           path: "/service/website-development",
         },
         {
-          title: "HIPAA Compliance Software",
+          title: "Biling & Payments",
           description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/policy.png",
+            "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
+          image: "/feature/card.png",
+          talkAnExpert: true,
+          path: "/service/website-development",
+        },
+        {
+          title: "User Management ",
+          description:
+            "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+          image: "/feature/management.png",
+          talkAnExpert: true,
+          path: "/service/website-development",
+        },
+        {
+          title: "Analytics & Reporting",
+          description:
+            "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+          image: "/feature/analytics.png",
           talkAnExpert: true,
           path: "/service/website-development",
         },
@@ -2690,50 +2772,34 @@ export const industries = [
       columns: 4,
       cards: [
         {
-          title: "Customized App Solutions",
+          title: "Seamless Ordering in Just a Few Steps",
           description:
-            "Code Hive believes in technology’s power to transform, fostering bold ideas and continuous growth to drive innovation and shape the industry's future.",
-          image: "/feature/app.png",
+            "Customers need to sign in to the delivery app, add items to the cart and make payment with the available options. ",
+          image: "/feature/orderfood.png",
           talkAnExpert: true,
           path: "/service/software-development",
         },
         {
-          title: "Customer Support",
+          title: "Analytics Dashboard",
           description:
-            "Codehive’s mental health app developers create solutions for well - being, offering therapy sessions, mood tracking, and relaxation techniques.",
-          image: "/feature/partnership.png",
+            "Track performance and make data-driven decisions with a comprehensive analytics dashboard.",
+          image: "/feature/ana.png",
           talkAnExpert: true,
           path: "/service/mobile-app-development",
         },
         {
-          title: "Pickup and Delivery Scheduling software",
+          title: "On-Demand Pickup and Delivery",
           description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/delivery-man.png",
+            "Based on availability, Once order is accepted, delivery agents will further perform the On Demand Pickup and Delivery.",
+          image: "/feature/deliver.png",
           talkAnExpert: true,
           path: "/service/digital-consultation",
         },
         {
-          title: "Delivery Tracking App",
+          title: "Third-party integrations",
           description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/Tracking.png",
-          talkAnExpert: true,
-          path: "/service/website-development",
-        },
-        {
-          title: "Analytics Dashboard",
-          description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/dashboard.png",
-          talkAnExpert: true,
-          path: "/service/website-development",
-        },
-        {
-          title: "Electronic Payment Proof",
-          description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/payment.png",
+            "We seamlessly integrate your app with external services and APIs, optimizing functionality and enhancing its reach with a focus on expanding its capabilities.",
+          image: "/feature/track.png",
           talkAnExpert: true,
           path: "/service/website-development",
         },
@@ -3037,48 +3103,33 @@ export const industries = [
         {
           title: "Custom Car Wash Software Development",
           description:
-            "Code Hive believes in technology’s power to transform, fostering bold ideas and continuous growth to drive innovation and shape the industry's future.",
-          image: "/feature/electric-car.png",
+            "Tailored software solutions to streamline and enhance the car wash experience, from booking to service management.",
+          image: "/feature/csetting.png",
           talkAnExpert: true,
           path: "/service/software-development",
         },
         {
           title: "Online Booking and Scheduling Systems",
           description:
-            "Our online booking systems streamline appointment management with user-friendly interfaces and real-time availability.",
-          image: "/feature/partnership.png",
+            "Effortlessly book and schedule your car wash appointments online with our user-friendly system.",
+          image: "/feature/tick.png",
           talkAnExpert: true,
           path: "/service/mobile-app-development",
         },
+
         {
-          title: "Point of Sale (POS)Solutions",
+          title: "Real-Time Analytics and Reporting",
           description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/pos.png",
+            "Gain valuable insights with real-time analytics and reporting to optimize your car wash business performance.",
+          image: "/feature/ana.png",
           talkAnExpert: true,
-          path: "/service/digital-consultation",
+          path: "/service/website-development",
         },
         {
           title: "Membership and Loyalty Programs",
           description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/vehicle.png",
-          talkAnExpert: true,
-          path: "/service/website-development",
-        },
-        {
-          title: "Real-Time Analytics and Reporting",
-          description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/Group.png",
-          talkAnExpert: true,
-          path: "/service/website-development",
-        },
-        {
-          title: "Customer Relationship Management (CRM)",
-          description:
-            "We believe in making our products and services accessible to everyone. We are committed to providing our clients with the best possible experience.",
-          image: "/feature/crm.png",
+            "Reward loyal customers with exclusive benefits through customizable membership and loyalty programs.",
+          image: "/feature/loyal.png",
           talkAnExpert: true,
           path: "/service/website-development",
         },
@@ -5702,7 +5753,7 @@ export const homeData = [
   },
 ];
 
-export const ourIndustriesData = [ 
+export const ourIndustriesData = [
   {
     title: "Car Wash",
     des1: "Transform your vehicle with state-of-the-art car wash techniques that clean every corner thoroughly. Our team uses advanced equipment to ensure even the toughest grime is removed.",

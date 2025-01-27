@@ -19,8 +19,8 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 50%",
-            end: "+=100",
+            start: "top 60%",
+            end: "+=150",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -33,8 +33,8 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 50%",
-            end: "+=100",
+            start: "top 60%",
+            end: "+=150",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -47,8 +47,8 @@ const WhatMakesUsDifferent = ({ data }) => {
           borderColor: "#219DD9",
           scrollTrigger: {
             trigger: step,
-            start: "top 50%",
-            end: "+=100",
+            start: "top 60%",
+            end: "+=150",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -61,8 +61,8 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 50%",
-            end: "+=100",
+            start: "top 60%",
+            end: "+=150",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -97,12 +97,15 @@ const WhatMakesUsDifferent = ({ data }) => {
           <ol className="  flex flex-col gap-[2rem] ">
             {/* <span className="border-s border-gray-300 absolute h-full mt-10 left-8"></span> */}
             {data.steps.map((value, index) => (
-              <div className="flex gap-[2rem] flex-row justify-around flex-1 items-center" key={index}>
+              <div
+                className="flex gap-[2rem] flex-row justify-around flex-1 items-center"
+                key={index}
+              >
                 <div className="sm:w-1/2 sm:flex hidden  justify-center items-center">
                   <img
                     key={index}
-                    src={`/make/${index + 1}.png`}
-                    className="w-[70%] opacity-0 mx-auto "
+                    src={value.img}
+                    className="w-[70%] opacity-0 mx-auto  object-cover h-[180px] rounded-2xl"
                     ref={(el) => (imagesRef.current[index] = el)}
                   />
                 </div>
@@ -114,7 +117,7 @@ const WhatMakesUsDifferent = ({ data }) => {
                 >
                   {/* Circle Animation */}
                   <div className="w-[50px]">
-                    <span className="circle   flex items-center justify-center  p-4 px-8  -start-2 border-[#ccc] border-2 rounded-full text-[#219DD9] z-100 bg-white">
+                    <span className="circle   flex items-center justify-center  p-4 px-8  -start-2 border-[#ccc] border-2 rounded-full text-[#219DD9] z-150 bg-white">
                       <span className="font-extrabold text-xl font-gilroy">
                         {value.id.toString().padStart(2, "0")}
                       </span>
