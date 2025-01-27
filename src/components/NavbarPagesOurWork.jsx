@@ -67,7 +67,7 @@ const NavbarPages = ({ isBlack }) => {
 
   return (
     <div
-      className={`flex justify-center transition-all duration-300 ease-in-out z-[999] items-center w-full bg-transparent 
+      className={`flex !font-lato justify-center transition-all duration-300 ease-in-out z-[999] items-center w-full bg-transparent 
   ${isScrolling ? "!bg-[#000B17] py-2 !fixed" : "py-4 absolute bg-transparent"} 
   
    top-0 z-50`}

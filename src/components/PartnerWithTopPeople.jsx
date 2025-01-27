@@ -8,78 +8,78 @@ import "swiper/css/bundle";
 
 const data = [
   {
-    name: "Omar Al-Fahad",
-    position: "Web and App Developer",
+    name: "Shohaib Ahmad",
+    position: "General Manager",
     description:
-      "As a web and app developer, Omar has worked with many clients to create beautiful and functional websites and applications. An expert in HTML, CSS, and JavaScript, he is always looking for new ways to improve his skills.",
+      "As a general manager, I oversee operations, drive strategic growth, and ensure team alignment with business objectives. My focus on leadership, efficiency, and innovation fosters success across all areas of the organization.",
     linkedin: "https://www.linkedin.com/in/omaralfahad/",
     twitter: "https://twitter.com/omaralfahad",
-    picture: "/partnerwithtoppeople/web-dev.png",
+    picture: "/partnerwithtoppeople/Sohaib.png",
   },
 
   {
-    name: "Hassan Sayed",
-    position: "Software Developer",
+    name: "Yousef Issa",
+    position: "Project Manager",
     description:
-      "Hassan is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.",
+      "As a project manager, I oversee planning and execution to deliver projects on time and within scope. My focus on leadership, organization, and collaboration ensures seamless workflows and successful outcomes. ",
     linkedin: "https://www.linkedin.com/in/hassan-sayed/",
     twitter: "https://twitter.com/hassan_sayed",
-    picture: "/partnerwithtoppeople/software-dev.png",
+    picture: "/partnerwithtoppeople/Yousef.png",
   },
   {
-    name: "Youssef Al-Mansoori",
-    position: "Software Developer",
+    name: "Balawal Hussain",
+    position: "Technical Lead",
     description:
-      "Youssef is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.",
+      "As a technical lead, I guide teams in delivering high-quality, scalable solutions while ensuring technical excellence. My focus on innovation, collaboration, and mentorship drives success in complex projects.",
     linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
     twitter: "https://twitter.com/youssef_almansoori",
-    picture: "/partnerwithtoppeople/software-dev.png",
+    picture: "/partnerwithtoppeople/Bilawal.png",
   },
   {
-    name: "Aisha Al-Hassan",
-    position: "Marketing Specialist",
+    name: "Muskaan Iqbal",
+    position: "Head of Designer",
     description:
       "Aisha is a marketing specialist with a passion for creating innovative and user-friendly marketing strategies. She has worked with clients from a wide range of industries to develop custom marketing solutions that meet their unique needs.",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
     twitter: "https://twitter.com/aisha_alhassan",
-    picture: "/partnerwithtoppeople/marketing-manager.png",
+    picture: "/partnerwithtoppeople/Muskan.png",
   },
   {
-    name: "Omar Al-Fahad",
-    position: "Web and App Developer",
+    name: "Asfand Naveed",
+    position: "DevOps Engineer",
     description:
-      "As a web and app developer, Omar has worked with many clients to create beautiful and functional websites and applications. An expert in HTML, CSS, and JavaScript, he is always looking for new ways to improve his skills.",
+      "As a DevOps Engineer, I streamline development and deployment processes, ensuring efficient workflows and reliable systems. My focus on automation, scalability, and collaboration drives seamless integration and operational excellence.",
     linkedin: "https://www.linkedin.com/in/omaralfahad/",
     twitter: "https://twitter.com/omaralfahad",
-    picture: "/partnerwithtoppeople/web-dev.png",
+    picture: "/partnerwithtoppeople/Asfand.png",
   },
 
   {
-    name: "Hassan Sayed",
-    position: "Software Developer",
+    name: "Hina Liaqat",
+    position: "Product Manager",
     description:
-      "Hassan is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.",
+      "As a product manager, I drive ideas into impactful solutions, ensuring seamless user experiences and aligning business goals with customer needs. My focus on innovation and collaboration delivers results in an ever-evolving market.",
     linkedin: "https://www.linkedin.com/in/hassan-sayed/",
     twitter: "https://twitter.com/hassan_sayed",
-    picture: "/partnerwithtoppeople/software-dev.png",
+    picture: "/partnerwithtoppeople/Hina.png",
   },
   {
-    name: "Youssef Al-Mansoori",
-    position: "Software Developer",
+    name: "Muhammad Hamwi",
+    position: "Content Creater",
     description:
-      "Youssef is a software developer with a passion for creating innovative and user-friendly applications. He has worked with clients from a wide range of industries to develop custom software solutions that meet their unique needs.",
+      "As a content creator, I craft engaging and impactful content that connects with audiences and drives brand growth. My focus on creativity, storytelling, and strategy ensures meaningful and lasting impressions.",
     linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
     twitter: "https://twitter.com/youssef_almansoori",
-    picture: "/partnerwithtoppeople/software-dev.png",
+    picture: "/partnerwithtoppeople/Hamvi.png",
   },
   {
-    name: "Aisha Al-Hassan",
-    position: "Marketing Specialist",
+    name: "Samer Alhelou",
+    position: "Senior Developer",
     description:
-      "Aisha is a marketing specialist with a passion for creating innovative and user-friendly marketing strategies. She has worked with clients from a wide range of industries to develop custom marketing solutions that meet their unique needs.",
+      "As a senior developer, I transform ideas into scalable solutions with a focus on seamless user experiences and high-quality code. My passion for innovation and learning keeps me ahead in the evolving tech landscape.",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
     twitter: "https://twitter.com/aisha_alhassan",
-    picture: "/partnerwithtoppeople/marketing-manager.png",
+    picture: "/partnerwithtoppeople/Samer.png",
   },
 ];
 

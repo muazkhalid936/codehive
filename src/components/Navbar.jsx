@@ -32,7 +32,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="bg-[#000b17] fixed w-full mx-auto z-[900]  py-4 flex justify-center items-center">
+    <div className="bg-[#000b17] !font-lato fixed w-full mx-auto z-[900]  py-4 flex justify-center items-center">
       <div className="text-white  container mx-auto flex justify-between items-center">
         <div>
           <Link href="/">

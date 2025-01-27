@@ -24,7 +24,7 @@ const StackingImages = () => {
         pin: true,
         pinSpacing: true,
         start: "top top",
-        end: "+=3000", // Adjust as needed
+        end: "+=4000", // Adjust as needed
         scrub: 2,
       },
     });

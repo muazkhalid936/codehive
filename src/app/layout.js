@@ -1,6 +1,11 @@
 import "./globals.css";
 import Footer from "../components/Footer";
-import NextTopLoader from "nextjs-toploader";
+import dynamic from "next/dynamic";
+
+const Preloader = dynamic(() => import("../components/Preloader/PreLoader"), {
+  ssr: false, // Disable server-side rendering for this component
+});
+// import NextTopLoader from "nextjs-toploader";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -11,9 +16,11 @@ export default function RootLayout({ children }) {
         <title>Code Hive</title>
       </head>
       <body>
-        <NextTopLoader showSpinner={false} />
-        {children}
-        <Footer />
+        <Preloader>
+          {/* <NextTopLoader showSpinner={false} /> */}
+          {children}
+          <Footer />
+        </Preloader>
       </body>
     </html>
   );

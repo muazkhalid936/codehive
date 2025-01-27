@@ -1,11 +1,21 @@
 "use client";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./In.css";
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import Icon1 from "../../assets/icons/Icon1";
+import Icon2 from "../../assets/icons/Icon2";
+import Icon3 from "../../assets/icons/Icon3";
+import Icon4 from "../../assets/icons/Icon4";
+import Icon5 from "../../assets/icons/Icon5";
+import Icon6 from "../../assets/icons/Icon6";
+import Icon7 from "../../assets/icons/Icon7";
+const IconsArr = [Icon1, Icon2, Icon3, Icon4, Icon5, Icon6, Icon7];
 
 const StackingImages = () => {
+  const [active, setActive] = useState(0);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -57,7 +67,7 @@ const StackingImages = () => {
         );
         timeline.to(
           `.new-text-${card}`,
-          { opacity: 0, y: -50, duration: 0.5 },
+          { opacity: 0, y: -50, duration: 0.2 },
           `card-${nextCard}`
         );
         timeline.fromTo(
@@ -68,13 +78,23 @@ const StackingImages = () => {
         );
         timeline.fromTo(
           `.new-text-${nextCard}`,
-          { opacity: 0, y: 50 },
+          { opacity: 0, y: 100 },
           { opacity: 1, y: 0, duration: 0.5 },
           `card-${nextCard}`
         );
         timeline.to(
           `.new-icon${card}`,
-          { backgroundColor: "#0c1621", duration: 0.3 },
+          {
+            backgroundColor: "#0c1621",
+            duration: 0.3,
+            onStart: function () {
+              setActive(index + 1);
+            },
+            onReverseComplete: function () {
+              setActive(index);
+            },
+          },
+
           `card-${nextCard}`
         );
         timeline.to(
@@ -86,22 +106,24 @@ const StackingImages = () => {
     });
   }, []);
 
+  console.log(active);
+
   return (
     <div className="bg-[#000B17] container mx-auto">
       <div className="new-cards  items-center  h-[100vh] min-h-[400px] mx-auto">
         <div className="flex w-1/2 flex-col gap-5 first-container">
           <div className="new-icon-container gap-2">
-            {Array.from({ length: 7 }).map((_, i) => (
-              <div key={i} className={`new-icon new-icon${i + 1} `}>
-                <img
-                  src={`/process/${i + 1}.png`}
-                  className={`  object-contain`}
-                />
-              </div>
-            ))}
+            {IconsArr.map((Icon, i) => {
+              const activeColor = active === i ? "#219bd9" : "#2a333d";
+              return (
+                <div key={i} className={`new-icon new-icon${i + 1} `}>
+                  <Icon fill={activeColor} />
+                </div>
+              );
+            })}
           </div>
 
-          <div className="new-text-section mt-28 text-white">
+          <div className="new-text-section mt-20 text-white">
             {[
               {
                 title: "Our Vision",
@@ -145,20 +167,21 @@ const StackingImages = () => {
                   i + 1
                 }`}
               >
-                <span className="font-bold w-[70%] text-[50px] leading-slug  main-heading bg-gradient-to-br from-white to-blueColor bg-clip-text text-transparent">
-                 
-                    <span  className="">
-                      {item.title} 
-                    </span>
+                <span className="font-bold !font-lato !text-white  ">
+                  <span className=" text-white main_hero_slogan">
+                    {item.title}
+                  </span>
                 </span>
-                {item.description}
+                <span className="text-white main_hero_slogan !font-lato">
+                  {item.description}
+                </span>
               </div>
             ))}
           </div>
         </div>
 
         <div className="flex w-1/2">
-          {Array.from({ length: 7 }).map((_, i) => (
+          {IconsArr.map((_, i) => (
             <div key={i} className={`new-card ss new-card-${i + 1}`}>
               <div className="our-process-main-pic">
                 <img

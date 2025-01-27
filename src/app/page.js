@@ -1,3 +1,4 @@
+"use client";
 import OurProcess from "../components/OurProcess/OurProcess";
 import MainHero from "../components/MainHero";
 import ContactForm from "../components/Contact";
@@ -9,8 +10,10 @@ import Navbar from "../components/Navbar";
 import LongRevealHeading from "../components/LongRevealHeading/LongRevealHeading";
 import OurRecentWork from "../components/OurRecentWork/OurRecentWork";
 import ShortRevealHeading from "../components/ShortRevealHeading/ShortRevealHeading";
+
 export default function Home() {
   return (
+    // <>asdss</>
     <div className="no-scrollbar ">
       <Navbar />
       <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
@@ -34,7 +37,6 @@ export default function Home() {
         <div className="asd">
           <ShortRevealHeading text="Our Industries" />
         </div>
-
         <div className=" fifth-component no-scrollbar">a</div>
         <OurIndustries />
         <div className=" sixth-component no-scrollbar">

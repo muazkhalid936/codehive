@@ -64,7 +64,7 @@ const NavbarPages = ({ isBlack }) => {
 
   return (
     <div
-      className={` flex justify-center transition-all duration-300 ease-in-out z-[999] items-center w-full 
+      className={` flex !font-lato justify-center transition-all duration-300 ease-in-out z-[999] items-center w-full 
       ${isScrolling ? "bg-white py-2 fixed" : "absolute py-4 bg-transparent"} top-0 z-50`}
     >
       <div className="container mx-auto flex justify-between items-center">

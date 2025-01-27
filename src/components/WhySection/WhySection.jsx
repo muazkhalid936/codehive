@@ -47,7 +47,6 @@ const ImageScrollEffect = () => {
         });
       },
     });
- 
 
     const headingAnimations = () => {
       const applyGradient = (selector, startYPercent = -10) => {
@@ -78,25 +77,29 @@ const ImageScrollEffect = () => {
             ".why-section-heading-2",
             {
               delay: 0.3, // Delay the animation
-
               yPercent: -200, // Consistent yPercent
               duration: 2, // Duration of the animation
-              onStart: () => {
-                // Apply gradient to .colorText2
+              onUpdate: function () {
+                // Use this.progress (GSAP binds `this` to the animation instance)
+                const progress = this.progress();
+
+                // Interpolate between colors
+                const startColor = [255, 255, 255]; // White
+                const endColor = [32, 157, 217]; // #209dd9 (light blue)
+
+                // Calculate current color based on progress
+                const currentColor = startColor.map((start, index) =>
+                  Math.round(start + (endColor[index] - start) * progress)
+                );
+
+                // Apply the gradient with the calculated color
                 const heading = document.querySelector(".colorText2");
                 if (heading) {
-                  heading.style.background =
-                    "linear-gradient(90deg, white, #209dd9, #209dd9)";
+                  heading.style.background = `linear-gradient(90deg, white, rgb(${currentColor.join(
+                    ", "
+                  )}), rgb(${currentColor.join(", ")}))`;
                   heading.style.webkitBackgroundClip = "text";
                   heading.style.color = "transparent";
-                }
-              },
-              onReverseComplete: () => {
-                // Revert gradient on reverse
-                const heading = document.querySelector(".colorText2");
-                if (heading) {
-                  heading.style.background = "none";
-                  heading.style.color = "inherit";
                 }
               },
             },
@@ -133,14 +136,34 @@ const ImageScrollEffect = () => {
               yPercent: -350, // Consistent yPercent
               // opacity: 0,
               // delay: 3, // Delay the animation
-              ...newFunc(),
+              onUpdate: function () {
+                // Use this.progress (GSAP binds `this` to the animation instance)
+                const progress = this.progress();
+
+                // Interpolate between colors
+                const startColor = [255, 255, 255]; // White
+                const endColor = [32, 157, 217]; // #209dd9 (light blue)
+
+                // Calculate current color based on progress
+                const currentColor = startColor.map((start, index) =>
+                  Math.round(start + (endColor[index] - start) * progress)
+                );
+
+                // Apply the gradient with the calculated color
+                const heading = document.querySelector(".colorText3");
+                if (heading) {
+                  heading.style.background = `linear-gradient(90deg, white, rgb(${currentColor.join(
+                    ", "
+                  )}), rgb(${currentColor.join(", ")}))`;
+                  heading.style.webkitBackgroundClip = "text";
+                  heading.style.color = "transparent";
+                }
+              },
 
               duration: 1, // Duration of the animation
             },
             "secondAnimation-=0.3" // Start at this label
           );
-
-       
       };
 
       applyGradient(".why-section-heading-1");
@@ -151,7 +174,6 @@ const ImageScrollEffect = () => {
 
   return (
     <>
-     
       <div className="why-section-container container flex flex-col  mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
         {/* Images */}
         <div
@@ -176,7 +198,6 @@ const ImageScrollEffect = () => {
           </h1>
         </div>
       </div>
-
     </>
   );
 };

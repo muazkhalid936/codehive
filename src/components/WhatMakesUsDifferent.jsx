@@ -19,7 +19,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 60%",
+            start: "top 50%",
             end: "+=100",
             toggleActions: "play reverse play reverse",
           },
@@ -33,8 +33,8 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 65%",
-            end: "+=200",
+            start: "top 50%",
+            end: "+=100",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -47,8 +47,8 @@ const WhatMakesUsDifferent = ({ data }) => {
           borderColor: "#219DD9",
           scrollTrigger: {
             trigger: step,
-            start: "top 65%",
-            end: "+=200",
+            start: "top 50%",
+            end: "+=100",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -61,8 +61,8 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 65%",
-            end: "+=200",
+            start: "top 50%",
+            end: "+=100",
             toggleActions: "play reverse play reverse",
           },
         }

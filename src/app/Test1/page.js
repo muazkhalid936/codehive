@@ -1,67 +1,22 @@
 "use client";
-
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import MainHero from "../../components/MainHero";
+import Navbar from "../../components/Navbar";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import Lenis from "@studio-freight/lenis";
-import { FiArrowUpRight } from "react-icons/fi";
-import { useGLTF, Stage } from "@react-three/drei";
-import { Canvas, useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
 
-gsap.registerPlugin(ScrollTrigger);
-useGLTF.preload("/iphoneModel/Test1.glb");
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../../components/WhySection/WhySection.css";
 
-function Model({ rotationX, texture }) {
-  const { scene } = useGLTF("/iphoneModel/Test1.glb");
-
-  useEffect(() => {
-    scene.traverse((child) => {
-      if (child.isMesh) {
-        child.material.map = texture;
-        child.material.map.flipY = false;
-        child.material.needsUpdate = true;
-      }
-    });
-  }, [scene, texture]);
-
-  return (
-    <primitive
-      object={scene}
-      scale={0.07}
-      rotation={[0, rotationX, 0]}
-      position={[30, 0, 0]}
-    />
-  );
-}
-
-const ScrollAnimation = () => {
-  const images = [
-    "/iphoneModel/Car wash.jpg",
-    "/iphoneModel/Delivery.png",
-    "/iphoneModel/Health care.jpg",
-    "/iphoneModel/Booking.jpg",
-    "/iphoneModel/Ecommerce.jpg",
-    "/iphoneModel/Fitness.png",
-  ];
-
-  const containerRef = useRef();
-  const [rotationX, setRotationX] = useState(0);
-  const [textures, setTextures] = useState([]);
-  const [currentTexture, setCurrentTexture] = useState(null);
-
-  useEffect(() => {
-    // Preload textures
-    const loader = new TextureLoader();
-    const loadedTextures = images.map((image) => loader.load(image));
-    setTextures(loadedTextures);
-    setCurrentTexture(loadedTextures[0]); // Set initial texture
-
-    return () => {
-      // Dispose of textures
-      loadedTextures.forEach((texture) => texture.dispose());
-    };
-  }, [images]);
+import dynamic from "next/dynamic";
+const ScrollAnimation = dynamic(
+  () => import("../../components/Home/ScrollAnimation"),
+  {
+    ssr: false,
+  }
+);
+const page = () => {
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -69,94 +24,175 @@ const ScrollAnimation = () => {
       lerp: 0.1,
     });
 
-    function raf(time) {
+    const raf = (time) => {
       lenis.raf(time);
-      ScrollTrigger.update();
       requestAnimationFrame(raf);
-    }
+    };
     requestAnimationFrame(raf);
 
-    const sections = containerRef.current.querySelectorAll(".section");
+    // const headingAnimations = () => {
+    //   const applyGradient = () => {
+    //     const tl = gsap.timeline({
+    //       scrollTrigger: {
+    //         trigger: ".why-section-container",
+    //         start: "300px center", // Adjusted to add a slight delay
+    //         end: "+=2500",
+    //         scrub: true,
+    //       },
+    //     });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "+=5000",
-        scrub: 1,
-        pin: true,
-      },
-    });
+    //     // Add a label for the first animation
+    //     tl.add("firstAnimation").to(
+    //       ".why-section-heading-1",
+    //       {
+    //         delay: 0.3, // Delay the animation
+    //         opacity: 0,
+    //         yPercent: -200,
+    //         duration: 2, // Duration of the animation
+    //       },
+    //       "firstAnimation" // Start at this label
+    //     );
 
-    sections.forEach((section, index) => {
-      const startRotation = Math.floor(index / 2) * Math.PI * 4;
-      const endRotation = startRotation + Math.PI * 2;
+    //     // Add a label for the second animation
+    //     tl.add("secondAnimation", "+=0.5") // Start 0.5 seconds after the first
+    //       .to(
+    //         ".why-section-heading-2",
+    //         {
+    //           delay: 0.3, // Delay the animation
+    //           yPercent: -200, // Consistent yPercent
+    //           duration: 2, // Duration of the animation
+    //           onUpdate: function () {
+    //             // Use this.progress (GSAP binds `this` to the animation instance)
+    //             const progress = this.progress();
 
-      tl.to(
-        {},
-        {
-          onUpdate: () => {
-            const sectionProgress = tl.progress() * sections.length - index;
+    //             // Interpolate between colors
+    //             const startColor = [255, 255, 255]; // White
+    //             const endColor = [32, 157, 217]; // #209dd9 (light blue)
 
-            if (sectionProgress >= 0 && sectionProgress <= 1) {
-              const rotationValue = gsap.utils.interpolate(
-                startRotation,
-                endRotation,
-                sectionProgress
-              );
-              setRotationX(rotationValue);
+    //             // Calculate current color based on progress
+    //             const currentColor = startColor.map((start, index) =>
+    //               Math.round(start + (endColor[index] - start) * progress)
+    //             );
 
-              const midPoint = startRotation + Math.PI * 0.5;
-              if (Math.abs(rotationValue - midPoint) < 0.1) {
-                setCurrentTexture(textures[index]);
-              }
-            }
-          },
-          ease: "none",
-        },
-        index
-      );
-    });
+    //             // Apply the gradient with the calculated color
+    //             const heading = document.querySelector(".colorText2");
+    //             if (heading) {
+    //               heading.style.background = `linear-gradient(90deg, white, rgb(${currentColor.join(
+    //                 ", "
+    //               )}), rgb(${currentColor.join(", ")}))`;
+    //               heading.style.webkitBackgroundClip = "text";
+    //               heading.style.color = "transparent";
+    //             }
+    //           },
+    //         },
+    //         "firstAnimation" // Start at this label
+    //       );
 
-    return () => {
-      lenis.destroy();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      gsap.globalTimeline.clear();
-    };
-  }, [textures]);
+    //     // Add a label for the third animation
+    //     tl.add("thirdAnimation", "+=0.5") // Start 0.5 seconds after the second
+    //       .to(
+    //         ".why-section-heading-3",
+    //         {
+    //           delay: 0.3, // Delay the animation
 
-  const data = [
-    { title: "Car Wash", des1: "Description for Car Wash" },
-    { title: "Delivery", des1: "Description for Delivery" },
-    { title: "Health Care", des1: "Description for Health Care" },
-    { title: "Booking", des1: "Description for Booking" },
-    { title: "Ecommerce", des1: "Description for Ecommerce" },
-    { title: "Fitness", des1: "Description for Fitness" },
-  ];
+    //           yPercent: -150, // Consistent yPercent
+    //           duration: 2, // Duration of the animation
+    //         },
+    //         "firstAnimation" // Start at this label
+    //       );
+    //     tl.add("thirdAnimation", "+=0.5") // Start 0.5 seconds after the second
+    //       .to(
+    //         ".why-section-heading-2",
+    //         {
+    //           yPercent: -350, // Consistent yPercent
+    //           opacity: 0,
+    //           // delay: 3, // Delay the animation
+
+    //           duration: 0.5, // Duration of the animation
+    //         },
+    //         "secondAnimation-=0.3" // Start at this label
+    //       )
+    //       .to(
+    //         ".why-section-heading-3",
+    //         {
+    //           yPercent: -350, // Consistent yPercent
+    //           // opacity: 0,
+    //           // delay: 3, // Delay the animation
+    //           onUpdate: function () {
+    //             // Use this.progress (GSAP binds `this` to the animation instance)
+    //             const progress = this.progress();
+
+    //             // Interpolate between colors
+    //             const startColor = [255, 255, 255]; // White
+    //             const endColor = [32, 157, 217]; // #209dd9 (light blue)
+
+    //             // Calculate current color based on progress
+    //             const currentColor = startColor.map((start, index) =>
+    //               Math.round(start + (endColor[index] - start) * progress)
+    //             );
+
+    //             // Apply the gradient with the calculated color
+    //             const heading = document.querySelector(".colorText3");
+    //             if (heading) {
+    //               heading.style.background = `linear-gradient(90deg, white, rgb(${currentColor.join(
+    //                 ", "
+    //               )}), rgb(${currentColor.join(", ")}))`;
+    //               heading.style.webkitBackgroundClip = "text";
+    //               heading.style.color = "transparent";
+    //             }
+    //           },
+
+    //           duration: 1, // Duration of the animation
+    //         },
+    //         "secondAnimation-=0.3" // Start at this label
+    //       );
+    //   };
+
+    //   applyGradient(".why-section-heading-1");
+    // };
+
+    // headingAnimations();
+  }, []);
 
   return (
-    <div ref={containerRef} className="flex flex-col items-center h-screen">
-      {data.map((item, index) => (
-        <div key={index} className="section flex items-center justify-between">
-          <div className="heading">
-            <h2>{item.title}</h2>
-            <p>{item.des1}</p>
-          </div>
-          <Canvas
-            dpr={[0.5, 1]}
-            camera={{ position: [25, 0, 0], fov: 50 }}
-            style={{ height: "50vh" }}
-          >
-            <Stage intensity={0} environment="city">
-              {currentTexture && (
-                <Model rotationX={rotationX} texture={currentTexture} />
-              )}
-            </Stage>
-          </Canvas>
+    <>
+      <Navbar />
+      <div className="bg-[#000B17]">
+        <MainHero />
+
+        <div className="container why-animate bg-white h-[50vh] items-center flex justify-center  mx-auto">
+          <p className="animated-text-long1 bg-orange-500 main-heading header text-[50px] text-white">
+            WHy You Choose Us
+          </p>
         </div>
-      ))}
-    </div>
+
+        <div className="why-section-container  container flex flex-col  mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
+          {/* Images */}
+          <div
+            className="w-full animation flex  justify-center  "
+            // style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1 }}
+          >
+            <ScrollAnimation />
+          </div>
+
+          {/* Headings */}
+          <div className="  text-[45px] justify-start  flex flex-col ">
+            <h1 className="why-section-heading-1  main-heading ">
+              Unrivaled <span className="colorText1">Expertise</span>
+            </h1>
+            <h1 className="why-section-heading-2   main-heading ">
+              Customer-Centric
+              <span className="colorText2 ml-4">Approach</span>
+            </h1>
+            <h1 className="why-section-heading-3  main-heading ">
+              End-to-End
+              <span className="colorText3 ml-4">Support</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
-export default ScrollAnimation;
+export default page;
