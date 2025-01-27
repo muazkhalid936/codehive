@@ -124,18 +124,18 @@ const ImageScrollEffect = () => {
             {
               yPercent: -350, // Consistent yPercent
               opacity: 0,
-              // delay: 3, // Delay the animation
+              // delay: 2, // Delay the animation
 
               duration: 0.5, // Duration of the animation
             },
-            "secondAnimation-=0.3" // Start at this label
+            "secondAnimation+=1" // Start at this label
           )
           .to(
             ".why-section-heading-3",
             {
               yPercent: -350, // Consistent yPercent
               // opacity: 0,
-              // delay: 3, // Delay the animation
+              // delay: 2, // Delay the animation
               onUpdate: function () {
                 // Use this.progress (GSAP binds `this` to the animation instance)
                 const progress = this.progress();
@@ -162,7 +162,7 @@ const ImageScrollEffect = () => {
 
               duration: 1, // Duration of the animation
             },
-            "secondAnimation-=0.3" // Start at this label
+            "secondAnimation+=1" // Start at this label
           );
       };
 

@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar";
 import LongRevealHeading from "../components/LongRevealHeading/LongRevealHeading";
 import OurRecentWork from "../components/OurRecentWork/OurRecentWork";
 import ShortRevealHeading from "../components/ShortRevealHeading/ShortRevealHeading";
-
+// import RotatingModel from "../components/RotatingModel";
 export default function Home() {
   return (
     // <>asdss</>
@@ -46,6 +46,7 @@ export default function Home() {
           <Test />
         </div>
         <ContactForm />
+        {/* <RotatingModel /> */}
       </div>
     </div>
   );

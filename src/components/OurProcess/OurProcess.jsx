@@ -106,13 +106,11 @@ const StackingImages = () => {
     });
   }, []);
 
-  console.log(active);
-
   return (
     <div className="bg-[#000B17] container mx-auto">
       <div className="new-cards  items-center  h-[100vh] min-h-[400px] mx-auto">
         <div className="flex w-1/2 flex-col gap-5 first-container">
-          <div className="new-icon-container gap-2">
+          <div className="new-icon-container gap-1">
             {IconsArr.map((Icon, i) => {
               const activeColor = active === i ? "#219bd9" : "#2a333d";
               return (

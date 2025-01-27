@@ -16,11 +16,11 @@ export default function RootLayout({ children }) {
         <title>Code Hive</title>
       </head>
       <body>
-        <Preloader>
+        {/* <Preloader> */}
           {/* <NextTopLoader showSpinner={false} /> */}
           {children}
           <Footer />
-        </Preloader>
+        {/* </Preloader> */}
       </body>
     </html>
   );

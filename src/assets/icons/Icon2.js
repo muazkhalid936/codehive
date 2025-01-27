@@ -5,8 +5,8 @@ const Icon2 = ({fill}) => {
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-     width="50"
-      height="50"
+     width="40"
+      height="40"
       viewBox="0 0 512 512"
     >
       <path

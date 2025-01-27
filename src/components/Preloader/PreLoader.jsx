@@ -27,7 +27,7 @@ const Preloader = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="flex lottie justify-center items-center">
+      <div className="flex lottie overflow-hidden justify-center items-center">
         <div ref={lottieContainerRef} />
       </div>
     );
