@@ -757,7 +757,7 @@ export const services = [
           name: "FinTech",
           description:
             "When she reached the first hills the Italic mountains she had last view back skyline.",
-          picture: "/CustomSoftwareDevelopmentIndustries/FinTech.png",
+          picture: "/CustomSoftwareDevelopmentIndustries/Fintech.png",
         },
       ],
     },

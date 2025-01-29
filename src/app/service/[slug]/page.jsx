@@ -33,7 +33,7 @@ const page = async ({ params }) => {
         <div className="relative">
           <Banner {...service.bannerData} />
           <img
-            src="/feature/vector.png"
+            src="/feature/Vector.png"
             className="absolute top-[60%] right-0 w-60 "
           />
         </div>

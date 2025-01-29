@@ -86,13 +86,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/2.png)",
+                  backgroundImage: "url(/our-work/main-page/Solwave@2x.png)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/solwave-website" className="font-poppin">
@@ -105,13 +105,13 @@ const page = () => {
               <div
                 className="flex  overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/3.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Mr take@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
@@ -129,13 +129,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/5.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Salon APP@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/saloon-app">
@@ -148,13 +148,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/4.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Doctor Booking APP@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
@@ -172,13 +172,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/6.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Laam@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/laam-web">
@@ -191,13 +191,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/7.png)",
+                  backgroundImage: "url(/our-work/main-page/Eshop@2x)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/eshop-app">
@@ -212,20 +212,20 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/8.png)",
+                  backgroundImage: "url(/our-work/main-page/Instant save@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/instant-save-app"
                     >
-                      Insta Save
+                      Instant Save
                     </a>
                     <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
@@ -234,13 +234,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/14.png)",
+                  backgroundImage: "url(/our-work/main-page/Legal Wise@3x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/legal-wise-web">
@@ -255,13 +255,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/12.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Faoolun@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/faoolun-website">
@@ -274,13 +274,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/13.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Caption Gen@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/caption-gen">
@@ -295,13 +295,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/10.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Clixpos@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/clixpos-website">
@@ -314,13 +314,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/a1.png)",
+                  backgroundImage: "url(/our-work/main-page/Alabour@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/al-abour-app">AI Labour</a>
@@ -333,13 +333,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/11.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Wordsmith@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/word-smith-ai">
@@ -352,13 +352,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/1.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Food Inventory App@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
@@ -382,20 +382,20 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/8.png)",
+                  backgroundImage: "url(/our-work/main-page/Instant save@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/instant-save-app"
                     >
-                      Insta Save
+                      Instant Save
                     </a>
                     <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
@@ -404,13 +404,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/14.png)",
+                  backgroundImage: "url(/our-work/main-page/Legal Wise@3x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/legal-wise-web">
@@ -425,13 +425,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/2.png)",
+                  backgroundImage: "url(/our-work/main-page/Solwave@2x.png)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/solwave-website" className="font-poppin">
@@ -444,13 +444,13 @@ const page = () => {
               <div
                 className="flex  overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/3.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Mr take@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
@@ -468,13 +468,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/5.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Salon APP@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/saloon-app">
@@ -487,13 +487,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/4.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Doctor Booking APP@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
@@ -511,13 +511,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/6.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Laam@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/laam-web">
@@ -530,13 +530,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/7.png)",
+                  backgroundImage: "url(/our-work/main-page/Eshop@2x)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/eshop-app">
@@ -552,13 +552,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/11.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Wordsmith@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/word-smith-ai">
@@ -571,13 +571,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/1.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Food Inventory App@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
@@ -601,13 +601,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/5.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Salon APP@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/saloon-app">
@@ -620,13 +620,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/4.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Doctor Booking APP@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
@@ -644,13 +644,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/2.png)",
+                  backgroundImage: "url(/our-work/main-page/Solwave@2x.png)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/solwave-website" className="font-poppin">
@@ -663,13 +663,13 @@ const page = () => {
               <div
                 className="flex  overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/3.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Mr take@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
@@ -687,20 +687,20 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/8.png)",
+                  backgroundImage: "url(/our-work/main-page/Instant save@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/instant-save-app"
                     >
-                      Insta Save
+                      Instant Save
                     </a>
                     <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
@@ -709,13 +709,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/14.png)",
+                  backgroundImage: "url(/our-work/main-page/Legal Wise@3x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/legal-wise-web">
@@ -731,13 +731,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/11.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Wordsmith@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/word-smith-ai">
@@ -750,13 +750,13 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/1.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Food Inventory App@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/2.png" className="w-full cover" /> */}
+                {/* <img src="/our-work/main-page/Solwave@2x.png" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
