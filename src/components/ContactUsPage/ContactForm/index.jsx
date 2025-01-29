@@ -39,10 +39,6 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form bg-[#020b17] py-20">
-      <h3 className="text-center text-white text-2xl mb-8">
-        Alternatively, you can fill out the form below, and we’ll get back to
-        you as soon as possible.
-      </h3>
       <form
         className="max-w-5xl mx-auto p-8 mt-8 bg-[#041c30] text-white rounded-3xl overflow-hidden shadow-lg"
         style={{
@@ -53,6 +49,18 @@ const ContactForm = () => {
           borderImageSlice: 1,
         }}
       >
+        <div className="my-20">
+          {" "}
+          <h2 className="text-lg font-bold text-white xl:text-2xl text-center ">
+            Let's Talk
+          </h2>
+          <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
+            <span className="main-heading bg-gradient-to-r from-white via-white to-blueColor bg-clip-text text-transparent">
+              Connect
+            </span>{" "}
+            <span className="text-blueColor main-heading">with us</span>
+          </h3>
+        </div>
         <div className="form-grid grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 mt-8">
           {[
             // Map over the fields and create input fields

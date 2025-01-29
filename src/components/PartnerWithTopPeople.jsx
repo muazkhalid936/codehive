@@ -8,7 +8,7 @@ import "swiper/css/bundle";
 
 const data = [
   {
-    name: "Shohaib Ahmad",
+    name: "Shoaib Ahmad",
     position: "General Manager",
     description:
       "As a general manager, I oversee operations, drive strategic growth, and ensure team alignment with business objectives. My focus on leadership, efficiency, and innovation fosters success across all areas of the organization.",
@@ -39,7 +39,7 @@ const data = [
     name: "Muskaan Iqbal",
     position: "Head of Designer",
     description:
-      "Aisha is a marketing specialist with a passion for creating innovative and user-friendly marketing strategies. She has worked with clients from a wide range of industries to develop custom marketing solutions that meet their unique needs.",
+      "As a designer, I create visually compelling and user-focused designs that blend creativity with functionality. My passion for innovation and attention to detail ensures impactful and memorable experiences.",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
     twitter: "https://twitter.com/aisha_alhassan",
     picture: "/partnerwithtoppeople/Muskan.png",
@@ -87,10 +87,11 @@ const PartnerWithTopPeople = () => {
   const [hoveredSlide, setHoveredSlide] = React.useState("");
 
   return (
-    <div className="bg-[#010B17] py-20 text-white ">
-      <h2 className="text-center sub_heading gilray-font ">
-        Partnered with Most of the Top <br /> People at Each{" "}
-        <span className="text-[#219DD9]">Industry</span>
+    <div className="bg-[#010B17] py-10 sm:py-20 text-white ">
+      <h2 className="text-start container sub_heading gilray-font ">
+      Meet the  Behind
+        <span className="text-[#219DD9] mx-2">Creative Minds</span>
+      Our Most Successful Projects
       </h2>
 
       <div className="container mt-12" onMouseEnter={() => setHoveredSlide("")}>
@@ -105,10 +106,8 @@ const PartnerWithTopPeople = () => {
           // rewind={true}
           loop={true}
           breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            640: {
+          
+            240: {
               slidesPerView: 2,
             },
             1024: {
@@ -128,9 +127,11 @@ const PartnerWithTopPeople = () => {
             >
               <div
                 onMouseEnter={() => setHoveredSlide(item.name)}
+                onClick={() => setHoveredSlide(item.name)}
                 onMouseLeave={() => setHoveredSlide("")}
+                
                 className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2
-                bg-gradient-to-b from-[#010B1770]  to-[#2093CA70] relative rounded-xl min-h-[350px] h-[45vh] cursor-pointer pt-8
+                bg-gradient-to-b from-[#010B1770]  to-[#2093CA70] relative h-[250px] rounded-xl sm:min-h-[350px] sm:h-[45vh] cursor-pointer pt-8
                 overflow-hidden hover:scale-105
                 `}
               >
@@ -152,22 +153,22 @@ const PartnerWithTopPeople = () => {
                 <div
                   className={`absolute bottom-0 w-full flex flex-col items-center justify-center`}
                 >
-                  <div className=" bg-gradient-to-t from-black to-transparent w-full px-6 py-6 m-auto">
+                  <div className=" bg-gradient-to-t from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto">
                     <h3
-                      className={`text-white text-[22px] font-semibold text-left w-full `}
+                      className={`text-white text-[15px] sm:text-[22px] font-semibold text-left w-full `}
                     >
                       {item.name}
                     </h3>
                     <h3
                       className={`text-[#219DD9] main_hero_slogan font-semibold  text-left w-full gap-2  ${
-                        hoveredSlide === item.name ? "mb-10" : "mb-0"
+                        hoveredSlide === item.name ? " sm:mb-10" : "mb-0"
                       }`}
                     >
                       {item.position}
                     </h3>
                     {hoveredSlide === item.name && (
                       <h3
-                        className={`text-white  text-[15px] font-light text-left w-full opacity-90 transition-opacity duration-500`}
+                        className={`text-white text-[10px]  sm:text-[15px] font-light text-left w-full opacity-90 transition-opacity duration-500`}
                       >
                         {item.description}
                       </h3>

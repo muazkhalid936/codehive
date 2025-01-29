@@ -14,7 +14,7 @@ const WhatMakesUsDifferent = ({ data }) => {
     stepsRef.current.forEach((step, index) => {
       gsap.fromTo(
         step.querySelector(".animate-title"),
-        { opacity: 0.2 },
+        { opacity: 0 },
         {
           opacity: 1,
           scrollTrigger: {
@@ -28,7 +28,7 @@ const WhatMakesUsDifferent = ({ data }) => {
 
       gsap.fromTo(
         step.querySelector(".animate-description"),
-        { opacity: 0.2 },
+        { opacity: 0 },
         {
           opacity: 1,
           scrollTrigger: {
@@ -41,7 +41,7 @@ const WhatMakesUsDifferent = ({ data }) => {
       );
       gsap.fromTo(
         step.querySelector(".circle"),
-        { opacity: 0.2 },
+        { opacity: 0 },
         {
           opacity: 1,
           borderColor: "#219DD9",
@@ -71,7 +71,7 @@ const WhatMakesUsDifferent = ({ data }) => {
   }, [data]);
 
   return (
-    <div className="bg-white relative py-[55px]" ref={containerRef}>
+    <div className="bg-white relative py-[25px] sm:py-[55px]" ref={containerRef}>
       <div className="w-auto text-center mx-auto">
         <h1 className="sub_heading mb-10 gilray-font w-full">
           {data.title.split(" ").map((word, index) => (

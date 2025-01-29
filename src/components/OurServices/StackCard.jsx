@@ -1,6 +1,9 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-const StackCard = ({ bg, type, heading, num, para }) => {
+import { useRouter } from "next/navigation";
+const StackCard = ({ bg, type, heading, num, para, link }) => {
+  const router = useRouter();
+  console.log(link)
   return (
     <div className="service-stack-card flex  text-white flex-col md:flex-row gap-10 my-auto w-[90%] rounded-3xl overflow-hidden p-5 relative ">
       <div className="absolute top-0 left-0 w-full h-full ">
@@ -21,7 +24,9 @@ const StackCard = ({ bg, type, heading, num, para }) => {
         <div className="main_hero_slogan text-[#525355]">{para}</div>
 
         <div className=" flex justify-start items-start flex-1 gap-2">
-          <button className="xl:text-xl ">Contact Us</button>
+          <button className="xl:text-xl " onClick={() => router.push(link)}>
+            Read More
+          </button>
           <div className=" bg-white mt-1 text-black rounded-full ">
             <FiArrowUpRight className="w-5 h-5" />
           </div>

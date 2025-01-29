@@ -4,7 +4,7 @@ import React from "react";
 const FeatureSlider = ({ data, from }) => {
   return (
     <div
-      className={` text-white overflow-hidden scrollbar-hidden   md:ml-24 z-50   ${
+      className={` text-white overflow-hidden container scrollbar-hidden   md:ml-24 z-50   ${
         from !== "contact" && "pb-[55px]"
       }`}
     >
@@ -31,11 +31,8 @@ const FeatureSlider = ({ data, from }) => {
         {data.cards.map((item, index) => (
           <div
             key={index}
-            className="snap-center shrink-0 flex flex-col text-center rounded-xl h-[450px]  w-[90%] md:w-[26%] bg-black overflow-hidden relative"
-            // style={{
-            //   background:
-            //     "linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0) 2000%)",
-            // }}
+            className="snap-center shrink-0 flex flex-col text-center rounded-xl h-[300px] sm:h-[450px]  w-[60%] sm:w-[90%] md:w-[26%] bg-black 
+            overflow-hidden relative"
           >
             <img
               src={item.picture}

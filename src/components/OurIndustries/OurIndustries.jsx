@@ -55,28 +55,107 @@ export const ourIndustriesData = [
     image: "/Industry/6.png",
   },
 ];
-
+import * as THREE from "three";
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Canvas } from "@react-three/fiber";
-import { Stage } from "@react-three/drei";
-import dynamic from "next/dynamic";
-
+import { useGLTF, Environment, OrbitControls } from "@react-three/drei";
 gsap.registerPlugin(ScrollTrigger);
 
-// Lazy load the IphoneModel component
-const IphoneModel = dynamic(() =>
-  import("../../components/IphoneModel", {
-    loading: () => null,
-    ssr: false,
-  })
-);
+const RotatingModel = ({ modelPath, texturePaths, scrollY }) => {
+  const modelRef = useRef();
+  const [currentTextureIndex, setCurrentTextureIndex] = useState(0);
+  const lastThresholdRef = useRef(0); // Track the last scroll threshold
+  const { scene } = useGLTF(modelPath);
+
+  // Rotate the model based on scroll
+  useEffect(() => {
+    if (modelRef.current) {
+      const rotationY = scrollY / 100; // Adjust rotation sensitivity
+      modelRef.current.rotation.y = rotationY;
+
+      // Calculate the current 50vh threshold
+      const threshold = Math.floor(scrollY / window.innerHeight); // 50vh
+      if (threshold !== lastThresholdRef.current) {
+        lastThresholdRef.current = threshold; // Update the last threshold
+        setCurrentTextureIndex((prevIndex) =>
+          texturePaths.length > 0 ? (prevIndex + 1) % texturePaths.length : 0
+        );
+      }
+    }
+  }, [scrollY, texturePaths]);
+
+  // Apply textures to front and back screens
+  useEffect(() => {
+    if (scene && texturePaths[currentTextureIndex]) {
+      const textureLoader = new THREE.TextureLoader();
+
+      // Load the texture
+      textureLoader.load(texturePaths[currentTextureIndex], (texture) => {
+        // Fix texture wrapping and orientation
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.flipY = false; // Correct Y-axis flipping
+        texture.needsUpdate = true;
+        scene.traverse((child) => {
+          if (child.isMesh && child.material) {
+            child.material.map = texture;
+            child.material.needsUpdate = true;
+          }
+        });
+        //   // Apply texture to the front screen
+        //   const frontScreen = scene.getObjectByName("Cube014_screen001_0002_1");
+        //   if (frontScreen) {
+        //     if (frontScreen.material) {
+        //       console.log("Existing map (front):", frontScreen.material.map);
+
+        //       // Clear existing texture
+        //       frontScreen.material.map = null;
+
+        //       // Apply the new texture
+        //       frontScreen.material.map = texture;
+        //       // frontScreen.material.metalness = 0.9; // Metallic look
+        //       // frontScreen.material.roughness = 0.2; // Smooth finish
+        //       frontScreen.material.needsUpdate = true;
+        //       console.log("Texture applied to front screen:", frontScreen.name);
+        //     }
+        //   } else {
+        //     console.warn("Front screen not found: Cube014_screen001_0002_1");
+        //   }
+
+        //   // Apply texture to the back screen
+        //   const backScreen = scene.getObjectByName("Cube014_screen001_0002_2");
+        //   if (backScreen) {
+        //     if (backScreen.material) {
+        //       console.log("Existing map (back):", backScreen.material.map);
+
+        //       // Clear existing texture
+        //       backScreen.material.map = null;
+
+        //       // Apply the new texture
+        //       backScreen.material.map = texture;
+        //       // backScreen.material.metalness = 0.9; // Metallic look
+        //       // backScreen.material.roughness = 0.2; // Smooth finish
+        //       backScreen.material.needsUpdate = true;
+        //       console.log("Texture applied to back screen:", backScreen.name);
+        //     }
+        //   } else {
+        //     console.warn("Back screen not found: Cube014_screen001_0002_2");
+        //   }
+      });
+    }
+  }, [currentTextureIndex, scene, texturePaths]);
+
+  return <primitive ref={modelRef} object={scene} scale={0.5} />;
+};
 
 const ScrollAnimation = () => {
-  const imagePaths = [
+  const [scrollY, setScrollY] = useState(0);
+
+  const texturePaths = [
     "/iphoneModel/Car wash.jpg",
     "/iphoneModel/Delivery.png",
     "/iphoneModel/Health Care.jpg",
@@ -84,19 +163,14 @@ const ScrollAnimation = () => {
     "/iphoneModel/Ecommerce.jpg",
     "/iphoneModel/Fitness.png",
   ];
-  let progress;
 
   const containerRef = useRef();
-  const isInViewRef = useRef(false); // Ref instead of state for performance
-  const textureUrlRef = useRef(imagePaths[0]);
-  const [textureUrl, setTextureUrl] = useState(imagePaths[0]);
-  const meshRef = useRef();
 
   const imageObjectsRef = useRef([]);
 
   useEffect(() => {
     // Preload images and store them in a ref
-    imageObjectsRef.current = imagePaths.map((path) => {
+    imageObjectsRef.current = texturePaths.map((path) => {
       const img = new Image();
       img.src = path;
       return img;
@@ -106,6 +180,12 @@ const ScrollAnimation = () => {
       smooth: true,
       lerp: 0.1,
     });
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     function raf(time) {
       lenis.raf(time);
@@ -136,12 +216,6 @@ const ScrollAnimation = () => {
           { x: 0, opacity: 1, duration: 0.2 },
           0
         );
-        tl.fromTo(
-          "iphone",
-          { x: -100, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.2 },
-          0
-        );
       }
       if (index > 0) {
         tl.to(
@@ -156,79 +230,14 @@ const ScrollAnimation = () => {
           { x: 0, opacity: 1, duration: 0.5 },
           index + 0.5
         );
-        const startRotation = Math.floor(index / 2) * Math.PI * 4;
-        const endRotation = startRotation + Math.PI * 2;
-        tl.to(
-          {},
-          {
-            onUpdate: () => {
-              const sectionProgress = tl.progress() * sections.length - index;
-              if (
-                (tl.progress() * sections.length - index).toFixed(3) == 0.002
-              ) {
-                progress = tl.progress() * sections.length - index;
-              }
-
-              if (sectionProgress >= progress) {
-                progress = tl.progress() * sections.length - index;
-
-                const rotationValue = gsap.utils.interpolate(
-                  startRotation,
-                  endRotation,
-                  sectionProgress
-                );
-
-                meshRef.current.rotation.y = rotationValue;
-                const earlyPoint = startRotation + Math.PI * 0.5;
-                if (Math.abs(rotationValue - earlyPoint) < 0.1) {
-                  setTextureUrl(imagePaths[index]);
-                }
-              } else {
-                progress = tl.progress() * sections.length - index;
-                const rotationValue = gsap.utils.interpolate(
-                  startRotation,
-                  endRotation,
-                  sectionProgress
-                );
-                meshRef.current.rotation.y = rotationValue;
-                const earlyPoint = startRotation + Math.PI * 0.5;
-                if (Math.abs(rotationValue - earlyPoint) < 0.1) {
-                  setTextureUrl(imagePaths[index - 1]);
-                }
-              }
-            },
-
-            ease: "none",
-          },
-          index
-        );
       }
     });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            isInViewRef.current = true; // Ref update
-          } else {
-            isInViewRef.current = false; // Ref update
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
 
     return () => {
       lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       gsap.globalTimeline.clear();
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -263,21 +272,17 @@ const ScrollAnimation = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2 ">
-              <Canvas
-                dpr={[0.5, 1]}
-                camera={{ position: [25, 0, 0], fov: 50 }}
-                style={{
-                  height: "70vh",
-                  minHeight: "400px",
-                  maxHeight: "700px",
-                }}
-              >
-                <Stage intensity={0.2} environment={"city"}>
-                  <Suspense fallback={null}>
-                    <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
-                  </Suspense>
-                </Stage>
+            <div className="w-1/2 h-[80vh] flex justify-normal items-center ">
+              <Canvas camera={{ position: [1, 0, 0] }}>
+                <ambientLight intensity={1} />
+                <pointLight position={[10, 10, 10]} />
+                <RotatingModel
+                  modelPath="/iphoneModel/3.glb"
+                  texturePaths={texturePaths}
+                  scrollY={scrollY}
+                />
+                <OrbitControls enableZoom={false} />
+                <Environment preset="city" />
               </Canvas>
             </div>
           </div>

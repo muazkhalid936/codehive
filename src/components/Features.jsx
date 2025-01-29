@@ -9,7 +9,7 @@ const Features = ({ data }) => {
 
   return (
     <div className="bg-[#010b17] relative     z-50  overflow-hidden">
-      <div className=" mx-8 pt-[45px] pb-[40px] text-white z-10 container">
+      <div className=" mx-8 py-[25px] sm:py-[45px]  text-white z-10 container">
         <h1 className="sub_heading  gilray-font w-full  md:w-[60%]">
           {data.title.split(" ").map((word, index) => (
             <span
@@ -20,7 +20,7 @@ const Features = ({ data }) => {
             </span>
           ))}
         </h1>
-        <p className="w-full md:w-[55%] my-5 main_hero_slogan leading-6">
+        <p className="w-full md:w-[55%] sm:my-5 my-2 main_hero_slogan sm:leading-6">
           {data.description}
         </p>
 
@@ -32,7 +32,7 @@ const Features = ({ data }) => {
             // Define classes based on even/odd
             const cardClasses = `
               border border-blueColor 
-              mx-5 my-5 p-6 h-[280px] flex cursor-pointer flex-col justify-center items-center   
+              sm:mx-5 mx-2 my-2 sm:my-5 p-6 h-[150px] sm:h-[280px] flex cursor-pointer flex-col justify-center items-center   
               rounded-[20px] gap-4 relative overflow-hidden 
               transition-transform duration-300 transform hover:scale-[1.1]
               ${
@@ -45,7 +45,7 @@ const Features = ({ data }) => {
             return (
               <div
                 key={index}
-                className={`w-[95%] sm:w-1/2 md:w-1/3 ${
+                className={` w-1/2 md:w-1/3 ${
                   data.columns === 4 ? "xl:w-1/4" : "xl:w-1/3"
                 }`}
               >
@@ -63,9 +63,9 @@ const Features = ({ data }) => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-16 h-16 mx-auto"
+                      className="sm:w-16 sm:h-16 h-9 w-9 mx-auto"
                     />
-                    <h2 className="text-center text-[17px] mb-2">
+                    <h2 className="text-center text-[13px] sm:text-[17px] mb-2">
                       {item.title}
                     </h2>
                   </div>
@@ -83,7 +83,7 @@ const Features = ({ data }) => {
                                `}
                   >
                     <h2 className="text-center text-[17px]  ">{item.title}</h2>
-                    <p className="text-center text-[#fbfbfb]  text-[13px] ">
+                    <p className="text-center text-[#fbfbfb] text-[8px] sm:text-[13px] ">
                       {item.description}
                     </p>
 

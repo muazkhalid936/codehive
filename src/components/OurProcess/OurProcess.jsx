@@ -18,7 +18,7 @@ const StackingImages = () => {
   const [active, setActive] = useState(0);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
+  
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".new-cards",
@@ -29,21 +29,14 @@ const StackingImages = () => {
         scrub: 1,
       },
     });
-
-    // Define animations for each card and text
+  
     const cards = [1, 2, 3, 4, 5, 6, 7]; // Extend with new cards
+  
     cards.forEach((card, index) => {
       const nextCard = cards[index + 1];
-
+  
       if (index === 0) {
-        timeline.fromTo(
-          ".first-container",
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.5 },
-          "start"
-        );
-      }
-      if (index === 0) {
+        // Intro animation for the first card and text
         timeline.fromTo(
           `.new-card-${card}`,
           { xPercent: 60, yPercent: 60, rotate: -90 },
@@ -56,18 +49,38 @@ const StackingImages = () => {
           { opacity: 1, y: 0, duration: 0.5 },
           "start"
         );
+        timeline.fromTo(
+          `.new-icon-container`,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          "start"
+        );
+        timeline.to(
+          `.new-icon1`,
+          { backgroundColor: "#27303b", },
+          `start`
+        );
       }
-
-      // Transition animations
+  
       if (nextCard) {
+        timeline.to(
+          `.new-text-${card}`,
+          { opacity: 0, y: -20, duration: 0.3 },
+          `card-${nextCard}`
+        );
+  
+        timeline.addPause();
+  
+        timeline.fromTo(
+          `.new-text-${nextCard}`,
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          `card-${nextCard}+=0.3`
+        );
+  
         timeline.to(
           `.new-card-${card}`,
           { xPercent: 60, yPercent: -60, rotate: 90 },
-          `card-${nextCard}`
-        );
-        timeline.to(
-          `.new-text-${card}`,
-          { opacity: 0, y: -50, duration: 0.2 },
           `card-${nextCard}`
         );
         timeline.fromTo(
@@ -76,12 +89,7 @@ const StackingImages = () => {
           { xPercent: 0, yPercent: 0, rotate: 0 },
           `card-${nextCard}`
         );
-        timeline.fromTo(
-          `.new-text-${nextCard}`,
-          { opacity: 0, y: 100 },
-          { opacity: 1, y: 0, duration: 0.5 },
-          `card-${nextCard}`
-        );
+  
         timeline.to(
           `.new-icon${card}`,
           {
@@ -94,7 +102,6 @@ const StackingImages = () => {
               setActive(index);
             },
           },
-
           `card-${nextCard}`
         );
         timeline.to(
@@ -105,6 +112,7 @@ const StackingImages = () => {
       }
     });
   }, []);
+  
 
   return (
     <div className="bg-[#000B17] container mx-auto">
@@ -112,7 +120,7 @@ const StackingImages = () => {
         <div className="flex w-1/2 flex-col gap-5 first-container">
           <div className="new-icon-container gap-1">
             {IconsArr.map((Icon, i) => {
-              const activeColor = active === i ? "#219bd9" : "#2a333d";
+              const activeColor = active === i ? "#219bd9" : "#FFFFFF";
               return (
                 <div key={i} className={`new-icon new-icon${i + 1} `}>
                   <Icon fill={activeColor} />
@@ -166,7 +174,7 @@ const StackingImages = () => {
                 }`}
               >
                 <span className="font-bold !font-lato !text-white  ">
-                  <span className=" text-white main_hero_slogan">
+                <span className="font-bold w-[70%] text-[50px] leading-slug  main-heading bg-gradient-to-br from-white to-blueColor bg-clip-text text-transparent">
                     {item.title}
                   </span>
                 </span>

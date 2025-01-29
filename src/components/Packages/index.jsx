@@ -84,10 +84,11 @@
 import React from "react";
 import { HiArrowUpRight, HiMiniCheck } from "react-icons/hi2";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
+import { RxCross2 } from "react-icons/rx";
 
 import "./style.css";
 const index = () => {
-  const features = [
+  const features1 = [
     { name: "Basic appointment scheduling", available: true },
     { name: "Online payments", available: true },
     { name: "Customer management", available: true },
@@ -101,6 +102,36 @@ const index = () => {
     { name: "Custom branding", available: false },
     { name: "SMS and Email Reminders", available: false },
     { name: "Inventory management", available: false },
+  ];
+  const features2 = [
+    { name: "Basic appointment scheduling", available: true },
+    { name: "Online payments", available: true },
+    { name: "Customer management", available: true },
+    { name: "Map Location", available: true },
+    { name: "Appointment Notifications", available: true },
+    { name: "Profile management", available: true },
+    { name: "iOS and Android apps", available: true },
+    { name: "Loyalty program integration", available: true },
+    { name: "Chat Support", available: true },
+    { name: "Cust omized notification", available: false },
+    { name: "Custom branding", available: false },
+    { name: "SMS and Email Reminders", available: false },
+    { name: "Inventory management", available: false },
+  ];
+  const features3 = [
+    { name: "Basic appointment scheduling", available: true },
+    { name: "Online payments", available: true },
+    { name: "Customer management", available: true },
+    { name: "Map Location", available: true },
+    { name: "Appointment Notifications", available: true },
+    { name: "Profile management", available: true },
+    { name: "iOS and Android apps", available: true },
+    { name: "Loyalty program integration", available: true },
+    { name: "Chat Support", available: true },
+    { name: "Customized notification", available: true },
+    { name: "Custom branding", available: true },
+    { name: "SMS and Email Reminders", available: true },
+    { name: "Inventory management", available: true },
   ];
 
   return (
@@ -135,18 +166,35 @@ const index = () => {
                 <hr className="my-10 border-slate-500 " />
 
                 <div className="h-[40vh]  ab mt-5 overflow-y-scroll">
-                  {features.map((features, i) => (
+                  {features1.map((features, i) => (
                     <li
                       key={i}
                       className="flex items-center gap-6 mb-3 main_hero_slogan"
                     >
                       <span
-                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        className={`flex items-center justify-center rounded-full ${
+                          features.available === true
+                            ? "bg-blueColor"
+                            : "bg-[#404142]"
+                        } text-gray-800 p-1`}
                         style={{ width: "24px", height: "24px" }}
                       >
-                        <HiMiniArrowUpRight size={16} />
+                        {features.available === true ? (
+                          <HiMiniCheck size={16} />
+                        ) : (
+                          <RxCross2 size={16} />
+                        )}
                       </span>
-                      {features.name}
+                      <span
+                        className={`${
+                          features.available === true
+                            ? "text-white"
+                            : "text-[#404142]"
+                        }`}
+                      >
+                        {" "}
+                        {features.name}
+                      </span>
                     </li>
                   ))}
                 </div>
@@ -178,19 +226,36 @@ const index = () => {
                 <hr className="my-10 border-slate-500 " />
 
                 <div className="h-[40vh] ab mt-5 overflow-y-scroll">
-                  {features.map((features, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-6 mb-3 main_hero_slogan"
-                    >
-                      <span
-                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                        style={{ width: "24px", height: "24px" }}
-                      >
-                        <HiMiniCheck size={16} />
-                      </span>
-                      {features.name}
-                    </li>
+                  {features2.map((features, i) => (
+                   <li
+                   key={i}
+                   className="flex items-center gap-6 mb-3 main_hero_slogan"
+                 >
+                   <span
+                     className={`flex items-center justify-center rounded-full ${
+                       features.available === true
+                         ? "bg-blueColor"
+                         : "bg-[#404142]"
+                     } text-gray-800 p-1`}
+                     style={{ width: "24px", height: "24px" }}
+                   >
+                     {features.available === true ? (
+                       <HiMiniCheck size={16} />
+                     ) : (
+                       <RxCross2 size={16} />
+                     )}
+                   </span>
+                   <span
+                     className={`${
+                       features.available === true
+                         ? "text-white"
+                         : "text-[#404142]"
+                     }`}
+                   >
+                     {" "}
+                     {features.name}
+                   </span>
+                 </li>
                   ))}
                 </div>
               </div>
@@ -216,19 +281,36 @@ const index = () => {
                 </button>
                 <hr className="my-10 border-slate-500 " />
                 <div className="h-[40vh] ab mt-5 overflow-y-scroll">
-                  {features.map((features, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-6 mb-3 main_hero_slogan"
-                    >
-                      <span
-                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                        style={{ width: "24px", height: "24px" }}
-                      >
-                        <HiMiniCheck size={16} />
-                      </span>
-                      {features.name}
-                    </li>
+                  {features3.map((features, i) => (
+                   <li
+                   key={i}
+                   className="flex items-center gap-6 mb-3 main_hero_slogan"
+                 >
+                   <span
+                     className={`flex items-center justify-center rounded-full ${
+                       features.available === true
+                         ? "bg-blueColor"
+                         : "bg-[#404142]"
+                     } text-gray-800 p-1`}
+                     style={{ width: "24px", height: "24px" }}
+                   >
+                     {features.available === true ? (
+                       <HiMiniCheck size={16} />
+                     ) : (
+                       <RxCross2 size={16} />
+                     )}
+                   </span>
+                   <span
+                     className={`${
+                       features.available === true
+                         ? "text-white"
+                         : "text-[#404142]"
+                     }`}
+                   >
+                     {" "}
+                     {features.name}
+                   </span>
+                 </li>
                   ))}
                 </div>
               </div>

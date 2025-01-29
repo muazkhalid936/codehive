@@ -12,7 +12,7 @@ const OurMission = () => {
 
   return (
     <>
-      <div className=" h-[270px] px-10 sm:px-5 ">
+      <div className=" h-[180px] sm:h-[270px] px-10 sm:px-5 ">
         <Swiper
           // spaceBetween={50}
           slidesPerView={3}
@@ -76,7 +76,7 @@ const OurMission = () => {
           ))}
         </Swiper>
       </div>
-      <div className="w-full h-1 container bg-[#219DD9] mb-32" />
+      <div className="w-full h-1 container bg-[#219DD9] mb-14 sm:mb-32" />
     </>
   );
 };

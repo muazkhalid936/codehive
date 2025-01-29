@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4  text-white">
+          <div className="flex flex-wrap gap-4 main_hero_slogan text-white">
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
               Home
             </Link>
@@ -50,19 +50,19 @@ const Footer = () => {
               Privacy Policy
             </Link>
           </div>
-          <div className="text-white">
+          <div className="text-white main_hero_slogan">
             <p>&copy; 2024 Codehive. All rights reserved.</p>
           </div>
         </div>
-        <div className="flex flex-col  gap-3 md:w-[30%] justify-start  items-end">
+        <div className="flex flex-col  gap-3 md:w-[30%] justify-start  sm:items-end">
           <div>
-            <p className="text-[20px] header xl:text-[50px]  main-heading  text-[#F6Be3C] ">
+            <p className="text-[30px] header xl:text-[50px]  main-heading  text-[#F6Be3C] ">
               Let's Talk?
             </p>
           </div>
-          <p className="text-white jutify-end flex  ">Contact us</p>
-          <p className="text-white ">Phone: +971 54 220 3330</p>
-          <p className="text-white ">Email: info@codehive.com</p>
+          <p className="text-white main_hero_slogan jutify-end flex  ">Contact us</p>
+          <p className="text-white main_hero_slogan ">Phone: +971 54 220 3330</p>
+          <p className="text-white main_hero_slogan ">Email: info@codehive.com</p>
         </div>
       </div>
     </div>

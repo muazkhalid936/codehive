@@ -20,10 +20,15 @@ const ContactInfo = () => {
       >
         {/* Inner content div to apply border-radius */}
         <div className="rounded-xl overflow-hidden">
-          <h2 className="text-2xl font-bold text-center mb-8 leading-relaxed">
-            Constant innovation has won us recognition from our peers, clients,
-            and leading research firms!
-          </h2>
+          <div className="my-5">
+            {" "}
+            <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
+              <span className="main-heading bg-gradient-to-r from-white via-white to-blueColor bg-clip-text text-transparent">
+                Reach
+              </span>{" "}
+              <span className="text-blueColor main-heading"> us</span>
+            </h3>
+          </div>
           <div className="space-y-6 mb-8">
             {/* Phone */}
             <p className="flex items-center justify-center text-lg">

@@ -15,10 +15,10 @@ const Contact = () => {
       <Navbar />
       <HeroContact />
       <SuccessStats />
-      <SupportSection />
-      <ContactInfo />
+      {/* <SupportSection /> */}
       <ContactForm />
-      <Testimonials testimonials={aboutTestimonialsData} />
+      <ContactInfo />
+      {/* <Testimonials testimonials={aboutTestimonialsData} /> */}
     </div>
   );
 };

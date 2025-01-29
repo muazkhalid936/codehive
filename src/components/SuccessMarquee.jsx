@@ -10,8 +10,10 @@ const SuccessMarquee = () => {
   return (
     <div className="bg-[#0d1e30] py-2 overflow-hidden w-full">
       <div className="marquee">
-        <div className="marquee-content text-[10px] 
-        sm:text-[16px] gap-32 ">
+        <div
+          className="marquee-content   text-[10px] 
+        sm:text-[16px] gap-32 "
+        >
           <Swiper
             spaceBetween={50}
             slidesPerView={3}
@@ -36,40 +38,50 @@ const SuccessMarquee = () => {
             }}
           >
             <SwiperSlide>
-              <div className="flex justify-center items-center text-white">
-                <img src="/talent.png" alt="client-logo" className="w-10 h-10" />
+              <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
+                <img
+                  src="/talent.png"
+                  alt="client-logo"
+                  className="w-10 h-10"
+                />
                 <p className="px-2 font-bold font-lato">
                   20000+ Successful Clients
                 </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex justify-center items-center text-white">
+              <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img src="/star.png" alt="client-logo" className="w-10 h-10" />
-                <p className="px-2 font-bold font-lato">
-                  650+ Talent Globally
-                </p>
+                <p className="px-2 font-bold font-lato">650+ Talent Globally</p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex justify-center items-center text-white">
-                <img src="/talent.png" alt="client-logo" className="w-10 h-10" />
+                <img
+                  src="/talent.png"
+                  alt="client-logo"
+                  className="w-10 h-10"
+                />
                 <p className="px-2 font-bold font-lato">
                   4+ Million revenue enabled
                 </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex justify-center items-center text-white">
+              <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img src="/star.png" alt="client-logo" className="w-10 h-10" />
                 <p className="px-2 font-bold font-lato">
                   20000+ Successful Clients
-                </p> 
+                </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex justify-center items-center text-white">
-                <img src="/client.png" alt="client-logo" className="w-10 h-10" />
+              <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
+                <img
+                  src="/client.png"
+                  alt="client-logo"
+                  className="w-10 h-10"
+                />
                 <p className="px-2 font-bold font-lato">
                   20000+ Successful Clients
                 </p>

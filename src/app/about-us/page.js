@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useEffect, useState } from "react";
-import Hero from "../../components/Hero";
 import Testimonials from "../../components/Testimonials";
 import WhoWeAre from "../../components/WhoWeAre";
 import OurMission from "../../components/OurMission";
@@ -9,8 +8,8 @@ import Features from "../../components/Features";
 import PartnerWithTopPeople from "../../components/PartnerWithTopPeople";
 import WhatMakesUsDifferent from "../../components/WhatMakesUsDifferent";
 import SuccessMarquee from "../../components/SuccessMarquee";
-import ConnectContact from "../../components/ConnectContact";
 import HeroSection from "../../components/HeroSection";
+import Footer from "../../components/Footer";
 import {
   aboutHeroData,
   aboutScreenFeaturesData,
@@ -20,7 +19,6 @@ import {
 import NavbarPages from "../../components/NavbarPages";
 
 const AboutUs = () => {
-
   const [zoomLevel, setZoomLevel] = useState(1);
   function getZoomLevel() {
     return window.devicePixelRatio || 1;
@@ -44,9 +42,6 @@ const AboutUs = () => {
     };
   }, []);
 
-
-
-
   return (
     <div className="hide-scrollbar">
       <NavbarPages />
@@ -61,6 +56,7 @@ const AboutUs = () => {
       <PartnerWithTopPeople />
       <Testimonials testimonials={aboutTestimonialsData} />
       {/* <ConnectContact /> */}
+      <Footer />
     </div>
   );
 };

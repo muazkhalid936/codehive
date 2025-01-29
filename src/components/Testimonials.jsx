@@ -13,10 +13,10 @@ const Testimonials = ({ testimonials }) => {
     <section className="bg-white  ">
       <div className="container mx-auto ">
         {/* Title and Carousel Controls */}
-        <div className="flex flex-col sm:flex-row mt-[45px] items-center justify-between ">
+        <div className="flex flex-row mt-[25px] sm:mt-[45px] items-center justify-between ">
           {/* Title */}
           <h2
-            className=" text-left  sub_heading gilray-font"
+            className=" text-left w-[70%] sm:w-auto   sub_heading gilray-font"
             style={{
               textDecorationSkipInk: "none",
               textUnderlinePosition: "from-font",
@@ -28,13 +28,13 @@ const Testimonials = ({ testimonials }) => {
           {/* Carousel Buttons */}
           <div className="flex gap-2  sm:mt-0">
             <button
-              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
+              className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
               onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
             >
               <HiChevronLeft className="text-white text-xl sm:text-2xl font-bold" />
             </button>
             <button
-              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
+              className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
               onClick={() => swiperRef.current?.slideNext()} // Slide to next
             >
               <HiChevronRight className="text-white text-xl sm:text-2xl font-bold" />
@@ -58,7 +58,7 @@ const Testimonials = ({ testimonials }) => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#000C1A] my-10 mx-5 h-[300px] md:h-[400px] cursor-pointer text-white px-6 py-5 rounded-2xl shadow-lg relative transform transition-transform duration-300 ease-in-out hover:scale-[1.1] overflow-visible">
+              <div className="bg-[#000C1A] my-5 sm:my-10 mx-5 h-[300px] md:h-[400px] cursor-pointer text-white px-6 py-5 rounded-2xl shadow-lg relative transform transition-transform duration-300 ease-in-out hover:scale-[1.1] overflow-visible">
                 {/* Vector Images */}
                 <div>
                   <img

@@ -22,31 +22,6 @@ const ImageScrollEffect = () => {
       },
     });
 
-    const newFunc = () => ({
-      onStart: () => {
-        gsap.to(".colorText3", {
-          // background: "linear-gradient(90deg, white, #209dd9, #209dd9)",
-          webkitBackgroundClip: "text",
-          color: "transparent",
-          duration: 1, // Duration in seconds
-          onStart: () => {
-            const heading = document.querySelector(".colorText3");
-            if (heading) {
-              heading.style.background =
-                "linear-gradient(90deg, white,#209dd9, #209dd9)";
-              heading.style.webkitBackgroundClip = "text";
-              heading.style.color = "transparent";
-            }
-          },
-        });
-      },
-      onReverseComplete: () => {
-        gsap.to(".colorText3", {
-          duration: 1,
-          color: "inherit",
-        });
-      },
-    });
 
     const headingAnimations = () => {
       const applyGradient = (selector, startYPercent = -10) => {
@@ -65,7 +40,7 @@ const ImageScrollEffect = () => {
           {
             delay: 0.3, // Delay the animation
             opacity: 0,
-            yPercent: -200,
+            yPercent: -100,
             duration: 2, // Duration of the animation
           },
           "firstAnimation" // Start at this label
@@ -77,7 +52,7 @@ const ImageScrollEffect = () => {
             ".why-section-heading-2",
             {
               delay: 0.3, // Delay the animation
-              yPercent: -200, // Consistent yPercent
+              yPercent: -100, // Consistent yPercent
               duration: 2, // Duration of the animation
               onUpdate: function () {
                 // Use this.progress (GSAP binds `this` to the animation instance)
@@ -113,7 +88,7 @@ const ImageScrollEffect = () => {
             {
               delay: 0.3, // Delay the animation
 
-              yPercent: -150, // Consistent yPercent
+              yPercent: -100, // Consistent yPercent
               duration: 2, // Duration of the animation
             },
             "firstAnimation" // Start at this label
@@ -122,7 +97,7 @@ const ImageScrollEffect = () => {
           .to(
             ".why-section-heading-2",
             {
-              yPercent: -350, // Consistent yPercent
+              yPercent: -200, // Consistent yPercent
               opacity: 0,
               // delay: 2, // Delay the animation
 
@@ -133,7 +108,7 @@ const ImageScrollEffect = () => {
           .to(
             ".why-section-heading-3",
             {
-              yPercent: -350, // Consistent yPercent
+              yPercent: -300, // Consistent yPercent
               // opacity: 0,
               // delay: 2, // Delay the animation
               onUpdate: function () {
@@ -184,7 +159,7 @@ const ImageScrollEffect = () => {
         </div>
 
         {/* Headings */}
-        <div className="  text-[45px] justify-start  flex flex-col ">
+        <div className="  text-[60px] justify-start  flex flex-col ">
           <h1 className="why-section-heading-1  main-heading ">
             Unrivaled <span className="colorText1">Expertise</span>
           </h1>

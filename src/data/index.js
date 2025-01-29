@@ -146,29 +146,34 @@ export const WhatMakesUsDifferentData = {
     {
       id: 1,
       title: "We Set High Standards",
+      img:'/make/1.png',
       description:
-        "The one thing we have in common is passion to do what we do. We push ourselves creatively every day because this is what we strive for, and not just because we have to.",
+      "The one thing we have in common is passion to do what we do. We push ourselves creatively every day because this is what we strive for, and not just because we have to.",
     },
     {
       id: 2,
+      img:'/make/2.png',
       title: "We Are Your Partners",
       description:
-        "Together, we stand as your dedicated partners, united by our unwavering passion for what we do and committed to pushing creative boundaries every step of the way.",
+      "Together, we stand as your dedicated partners, united by our unwavering passion for what we do and committed to pushing creative boundaries every step of the way.",
     },
     {
       id: 3,
+      img:'/make/3.png',
       title: "Integrity and Transparency",
       description:
-        "We value integrity above all. At Codehive, we operate with complete transparency, ensuring open communication and trust at every step of the process.",
+      "We value integrity above all. At Codehive, we operate with complete transparency, ensuring open communication and trust at every step of the process.",
     },
     {
       id: 4,
+      img:'/make/4.png',
       title: "Agile and Adaptable",
       description:
-        "In a fast-paced digital world, adaptability is key. Our agile approach allows us to respond quickly to changes and deliver solutions that are both flexible and scalable.",
+      "In a fast-paced digital world, adaptability is key. Our agile approach allows us to respond quickly to changes and deliver solutions that are both flexible and scalable.",
     },
     {
       id: 5,
+      img:'/make/5.png',
       title: "Global Reach, Local Touch",
       description:
         "While we operate on a global scale, we maintain a personal touch with every client. Whether you're a small business or a large enterprise.",

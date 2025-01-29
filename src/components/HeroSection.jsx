@@ -50,13 +50,13 @@ const HeroSection = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-end max-h-[650px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
+      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-center sm:justify-end max-h-[650px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
         {/* First Section */}
         <div className="left-section sm:w-1/2 flex justify-center items-start gap-5 md:gap-10 flex-col">
           {" "}
           {renderTitle()}
           {description && (
-            <p className={`main_hero_slogan my-5 sm:my-0 ${colors}`}>
+            <p className={`main_hero_slogan  sm:my-0 ${colors}`}>
               {description}
             </p>
           )}
@@ -87,7 +87,7 @@ const HeroSection = ({
             <img
               src={rightImage}
               alt="Hero Right Image"
-              className="sm:w-full w-1/2 mx-auto object-contain min-h-[200px]  xl:h-[60vh] xl:min-h-[400px] sm:max-h-[400px] xl:max-h-[500px]"
+              className="sm:w-full w-1/2 mx-auto object-contain sm:min-h-[200px] mt-5 sm:mt-0  xl:h-[60vh] xl:min-h-[400px] sm:max-h-[400px] xl:max-h-[500px]"
             />
           )}
         </div>

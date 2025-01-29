@@ -1,131 +1,91 @@
-'use client';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRouter } from "next/navigation";
 
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { IoLogoXbox } from "react-icons/io";
-import { IoLogoVue } from "react-icons/io5";
-import { IoLogoVk } from "react-icons/io";
-
-import Lenis from '@studio-freight/lenis'; // Import Lenis
-import { IoLogoApple } from 'react-icons/io5'; // Import the icon
-import Card from './Card';
+import Lenis from "@studio-freight/lenis"; // Import Lenis
+import Card from "./Card";
 gsap.registerPlugin(ScrollTrigger);
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const HorizontalScroll = () => {
+  const router = useRouter();
   const containerRef = useRef(null);
 
   const cardsData = [
     {
-      head: 'Al Abour',
-      para: 'Your description for Al Abour.',
-      bgImg: '/Homapage/carosuel/al.jpg',
-      icon: IoLogoApple, // Pass the icon
+      head: "Al Abour",
+      para: "Efficient camel transport with tracking.",
+      bgImg: "/Homapage/carosuel/1.jpeg",
+      Img: "/Homapage/carosuel/a1.png",
+      link: "/our-work/al-abour-app",
     },
     {
-      head: 'Caption Gen',
-      para: 'Your description for Caption Gen.',
-      bgImg: '/Homapage/carosuel/caption.png',
-      icon: IoLogoXbox, // Pass the icon
+      head: "Faoolun",
+      para: "Master Arabic poetry with ease.",
+      bgImg: "/Homapage/carosuel/2.jpeg",
+      Img: "/Homapage/carosuel/a2.png",
+      link: "/our-work/faoolun-website",
     },
     {
-      head: 'Clixpox',
-      para: 'Your description for Clixpox.',
-      bgImg: '/Homapage/carosuel/clixpox.png',
-      icon: IoLogoVue, // Pass the icon
+      head: "Doctor Booking",
+      para: "Book doctor appointments with ease.",
+      bgImg: "/Homapage/carosuel/3.jpeg",
+      link: "/our-work/doctor-booking-app",
+      Img: "/Homapage/carosuel/a3.png",
     },
     {
-      head: 'Doctor Booking App',
-      para: 'Your description for Doctor Booking App.',
-      bgImg: '/Homapage/carosuel/doctor.jpg',
-      icon: IoLogoVk, // Pass the icon
+      head: "Solwave",
+      para: "Unlock your potential, boost success.",
+      bgImg: "/Homapage/carosuel/4.jpeg",
+      Img: "/Homapage/carosuel/a4.png",
+      link: "/our-work/solwave-website",
     },
     {
-      head: 'Email App',
-      para: 'Your description for Email App.',
-      bgImg: '/Homapage/carosuel/Email.jpg',
-      icon: IoLogoApple, // Pass the icon
+      head: "Mr Take",
+      para: "Unlock your potential, boost success.",
+      bgImg: "/Homapage/carosuel/5.jpeg",
+      Img: "/Homapage/carosuel/a5.png",
+      link: "/",
     },
-    // {
-    //   head: "Faaolun",
-    //   para: "Your description for Faaolun.",
-    //   bgImg: "/Homapage/carosuel/faaolun.jpg",
-    // },
-    // {
-    //   head: "Fitverse",
-    //   para: "Your description for Fitverse.",
-    //   bgImg: "/Homapage/carosuel/fitverse.png",
-    // },
-    // {
-    //   head: "Food Inventory",
-    //   para: "Your description for Food Inventory.",
-    //   bgImg: "/Homapage/carosuel/food.jpg",
-    // },
-    // {
-    //   head: "Instant Save",
-    //   para: "Your description for Instant Save.",
-    //   bgImg: "/Homapage/carosuel/instantsave.png",
-    // },
-    // {
-    //   head: "Laam",
-    //   para: "Your description for Laam.",
-    //   bgImg: "/Homapage/carosuel/laam.jpg",
-    // },
-    // {
-    //   head: "Legal Wise",
-    //   para: "Your description for Legal Wise.",
-    //   bgImg: "/Homapage/carosuel/legal.jpg",
-    // },
-    // {
-    //   head: "Saloon Booking",
-    //   para: "Your description for Saloon Booking.",
-    //   bgImg: "/Homapage/carosuel/saloon.jpg",
-    // },
-    // {
-    //   head: "Wordsmith AI",
-    //   para: "Your description for Wordsmith AI.",
-    //   bgImg: "/Homapage/carosuel/wordsmith.png",
-    // },
   ];
 
   useEffect(() => {
     const lenis = new Lenis({
       smooth: true,
-      smoothTouch: true, // Ensures smooth scrolling on touch devices
-      direction: 'vertical', // Lenis scroll direction
+      smoothTouch: true,
+      direction: "vertical",
     });
 
-    // Update Lenis and ScrollTrigger on each animation frame
     const update = (time) => {
       lenis.raf(time);
       ScrollTrigger.update();
     };
 
-    // Start the Lenis animation
     requestAnimationFrame(function raf(time) {
       update(time);
       requestAnimationFrame(raf);
     });
 
     const container = containerRef.current;
-    const cards = container.querySelector('.card-row');
+    const cards = container.querySelector(".card-row");
     const totalScrollWidth = cards.scrollWidth - container.clientWidth;
 
     gsap.to(cards, {
-      x: -totalScrollWidth, // Horizontal scroll effect
-      ease: 'none',
+      x: -totalScrollWidth,
+      ease: "none",
       scrollTrigger: {
         trigger: container,
-        start: 'top top',
-        end: `+=${cards.scrollWidth}`, // Total scroll amount
+        start: "top top",
+        end: `+=${cards.scrollWidth}`,
         scrub: true,
         pin: true,
-        invalidateOnRefresh: true, // Recalculates on viewport resize
+        invalidateOnRefresh: true,
       },
     });
 
     return () => {
-      lenis.destroy(); // Clean up Lenis on unmount
+      lenis.destroy();
     };
   }, []);
 
@@ -135,26 +95,53 @@ const HorizontalScroll = () => {
         ref={containerRef}
         className=""
         style={{
-          height: '100vh',
-          overflow: 'hidden',
-          position: 'relative',
+          height: "100vh",
+          overflow: "hidden",
+          position: "relative",
         }}
       >
         <div
           className="card-row"
           style={{
-            display: 'flex',
-            gap: '20px',
-            position: 'absolute',
-            top: '50%',
-            left: '0',
-            transform: 'translateY(-50%)',
-            willChange: 'transform', // GPU acceleration
+            display: "flex",
+            gap: "20px",
+            position: "absolute",
+            top: "50%",
+            left: "0",
+            transform: "translateY(-50%)",
+            willChange: "transform",
           }}
         >
-          {cardsData.map(({ head, para, bgImg, icon }, index) => (
-            <Card key={index} head={head} para={para} bgImg={`url(${bgImg})`} icon={icon} />
+          {cardsData.map(({ head, para, bgImg, Img, link }, index) => (
+            <Card
+              key={index}
+              head={head}
+              para={para}
+              bgImg={`url(${bgImg})`}
+              Img={Img}
+              link={link}
+            />
           ))}
+
+          {/* View More Button */}
+          <div
+            className="view-more-btn flex justify-center items-center"
+            style={{
+              minWidth: "200px",
+              // height: '300px',
+              // backgroundColor: '#f3f4f6',
+              borderRadius: "8px",
+              textAlign: "center",
+            }}
+          >
+            <button
+              onClick={() => router.push("/our-work")}
+              className="text-white bg-blueColor px-3 rounded-full flex gap-5 justify-center items-center font-lato py-2"
+            >
+              View More{" "}
+              <FaArrowRightLong className="bg-white text-black w-8 h-8 p-2 rounded-full text-4xl " />
+            </button>
+          </div>
         </div>
       </div>
     </div>

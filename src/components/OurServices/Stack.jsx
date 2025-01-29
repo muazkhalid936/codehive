@@ -50,6 +50,7 @@ const StackingImages = () => {
             heading="Business Intelligence & Data Analysis"
             para="Our BI and data analysis solutions turn raw data into actionable insights, streamlining collection and visualization to drive growth and optimize performance."
             num="06"
+            link="/service/business-intelligence"
           />
         </div>
 
@@ -60,6 +61,7 @@ const StackingImages = () => {
             heading="Digital Consultation"
             para="At Code Hive, we deliver expert digital consultation to help businesses navigate challenges and drive growth."
             num="05"
+            link="/service/digital-consultation"
           />
         </div>
 
@@ -70,6 +72,7 @@ const StackingImages = () => {
             heading="Digital Transformation & Automation"
             para="Digital transformation and automation improve efficiency, cut costs, and enable innovation through real-time insights for smarter decision-making."
             num="04"
+            link="/service/digital-transformation"
           />
         </div>
 
@@ -80,6 +83,7 @@ const StackingImages = () => {
             type="Digital"
             num="03"
             heading="Customized Software Development"
+            link="/service/software-development"
           />
         </div>
 
@@ -89,6 +93,7 @@ const StackingImages = () => {
             type="Consulting"
             num="02"
             heading="Website Development"
+            link="/service/website-development"
             para="At Code Hive, we deliver cutting-edge web app development services, creating customized applications to help businesses succeed in the digital landscape."
           />
         </div>
@@ -98,6 +103,7 @@ const StackingImages = () => {
             type="AI"
             num="01"
             heading="Mobile App Development"
+            link="/service/mobile-app-development"
             para="Custom built mobile apps for Android and iOS, tailored to your needs."
           />
         </div>
