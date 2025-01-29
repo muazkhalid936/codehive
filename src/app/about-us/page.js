@@ -19,29 +19,6 @@ import {
 import NavbarPages from "../../components/NavbarPages";
 
 const AboutUs = () => {
-  const [zoomLevel, setZoomLevel] = useState(1);
-  function getZoomLevel() {
-    return window.devicePixelRatio || 1;
-  }
-
-  useEffect(() => {
-    const handleZoom = () => {
-      const level = getZoomLevel();
-      console.log(level);
-      setZoomLevel(level);
-    };
-
-    // Set zoom level on mount
-    handleZoom();
-
-    // Optional: Update zoom level on resize or zoom change
-    window.addEventListener("resize", handleZoom);
-
-    return () => {
-      window.removeEventListener("resize", handleZoom);
-    };
-  }, []);
-
   return (
     <div className="hide-scrollbar">
       <NavbarPages />

@@ -9,7 +9,7 @@ function IphoneModel({ textureUrl, meshRef }) {
   const { scene } = useGLTF('/iphoneModel/3.glb');
   const texture = useLoader(TextureLoader, textureUrl);
 
-  console.log(textureUrl);
+  // console.log(textureUrl);
 
   // Update texture when it changes
   useEffect(() => {

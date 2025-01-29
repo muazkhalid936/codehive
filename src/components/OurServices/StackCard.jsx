@@ -3,7 +3,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 const StackCard = ({ bg, type, heading, num, para, link }) => {
   const router = useRouter();
-  console.log(link)
+  // console.log(link)
   return (
     <div className="service-stack-card flex  text-white flex-col md:flex-row gap-10 my-auto w-[90%] rounded-3xl overflow-hidden p-5 relative ">
       <div className="absolute top-0 left-0 w-full h-full ">

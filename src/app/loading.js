@@ -1,6 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+
+// Dynamically import lottie-react with SSR disabled.
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false,
+});
 
 export default function Loading() {
   const [animationData, setAnimationData] = useState(null);
@@ -12,9 +17,9 @@ export default function Loading() {
   }, []);
 
   return (
-    <div className="flex overflow-hidden justify-center lottie items-center h-screen bg-gray-100">
+    <div className="flex overflow-hidden lottie justify-center items-center h-screen bg-gray-100">
       {animationData ? (
-        <Lottie animationData={animationData} loop={true} classID="h-[40vh]" />
+        <Lottie animationData={animationData} loop className="h-[40vh]" />
       ) : (
         <p></p>
       )}
