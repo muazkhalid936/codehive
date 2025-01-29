@@ -9,6 +9,7 @@ import Technologies from "../../../components/Our-Work/Technologies";
 import CallToAction from "../../../components/Our-Work/CallToAction";
 import HeroSectionOurWork from "../../../components/HeroSectionOurWork";
 import IndustryDetails from "../../../components/IndustryDetails";
+import Footer from "../../../components/Footer";
 
 const page = async ({ params }) => {
   const slug = await params.slug;
@@ -44,6 +45,7 @@ const page = async ({ params }) => {
       {/* <ConnectContact> */}
       {/* <CaseStudies /> */}
       {/* </ConnectContact> */}
+      <Footer />
     </>
   );
 };

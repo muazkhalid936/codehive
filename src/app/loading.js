@@ -12,13 +12,9 @@ export default function Loading() {
   }, []);
 
   return (
-    <div className="flex justify-center lottie items-center h-screen bg-gray-100">
+    <div className="flex overflow-hidden justify-center lottie items-center h-screen bg-gray-100">
       {animationData ? (
-        <Lottie
-          animationData={animationData}
-          loop={true}
-          style={{ width: 400, height: 400 }}
-        />
+        <Lottie animationData={animationData} loop={true} classID="h-[40vh]" />
       ) : (
         <p></p>
       )}

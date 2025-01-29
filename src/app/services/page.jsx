@@ -17,6 +17,7 @@ import {
 import NavbarPages from "../../components/NavbarPages";
 import AdvantagesSection from "../../components/AdvantagesSection";
 import Banner from "../../components/Banner";
+import Footer from "../../components/Footer";
 
 const Services = () => {
   return (
@@ -31,6 +32,7 @@ const Services = () => {
       <Banner {...bannerDataService} />
       <Testimonials testimonials={aboutTestimonialsData} />
       {/* <ConnectContact /> */}
+      <Footer />
     </div>
   );
 };

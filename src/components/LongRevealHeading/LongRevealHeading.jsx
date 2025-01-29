@@ -55,7 +55,7 @@ const LongRevealHeading = (params) => {
   }, []);
 
   return (
-    <div className="container h-[50vh] items-center flex justify-center  mx-auto">
+    <div className="container h-[50vh] mb-[1000px] mt-[-300px] items-center flex justify-center  mx-auto">
       <p
         ref={textRef}
         className="animated-text-long1 main-heading header text-[60px] text-white"

@@ -3,6 +3,7 @@ import React from "react";
 import NavbarPages from "../../components/NavbarPages";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useState } from "react";
+import Footer from "../../components/Footer";
 const page = () => {
   const [option, setOption] = useState("all");
   return (
@@ -725,7 +726,6 @@ const page = () => {
                 </div>
               </div>
             </div>
-          
 
             <div className="flex gap-10  mt-10 lg:h-[400px] 2xl:h-[450px] ">
               <div
@@ -775,6 +775,7 @@ const page = () => {
           <></>
         )}
       </div>
+      <Footer />
     </div>
   );
 };

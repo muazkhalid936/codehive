@@ -22,7 +22,7 @@ const ScrollAnimation = () => {
     const handleScroll = () => {
       if (!animationInstance || !isIntersecting.current) return;
 
-      const scrollPosition = window.scrollY;
+      const scrollPosition = window.scrollY+300;
       const maxScroll = document.body.scrollHeight - window.innerHeight;
       const progress = Math.min(
         (scrollPosition / maxScroll) * 5, // Adjusted to start animation immediately

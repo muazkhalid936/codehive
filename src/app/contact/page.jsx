@@ -2,12 +2,10 @@
 import React from "react";
 import Navbar from "../../components/NavbarPagesOurWork";
 import HeroContact from "../../components/HeroContact";
-import SupportSection from "../../components/ContactUsPage/SupportSection";
 import ContactInfo from "../../components/ContactUsPage/ContactInfo";
 import ContactForm from "../../components/ContactUsPage/ContactForm";
 import SuccessStats from "../../components/ContactUsPage/SuccessStats";
-import Testimonials from "../../components/ContactUsPage/Testimonial";
-import { aboutTestimonialsData } from "../../data";
+import Footer from "../../components/Footer";
 
 const Contact = () => {
   return (
@@ -19,6 +17,7 @@ const Contact = () => {
       <ContactForm />
       <ContactInfo />
       {/* <Testimonials testimonials={aboutTestimonialsData} /> */}
+      <Footer />
     </div>
   );
 };

@@ -10,6 +10,7 @@ import Testimonials from "../../../components/Testimonials";
 import ConnectContact from "../../../components/ConnectContact";
 import AdvantagesSection from "../../../components/AdvantagesSection";
 import HeroSection from "../../../components/HeroSection";
+import Footer from "../../../components/Footer";
 const page = async ({ params }) => {
   const slug = await params.slug;
   const service = services?.find((service) => service.slug === slug);
@@ -42,6 +43,7 @@ const page = async ({ params }) => {
       <Banner {...service.bannerDataTwo} />
       <Testimonials testimonials={service.testimonialsData} />
       <ConnectContact sliderData={service.featureSlider} />
+      <Footer />
     </div>
   );
 };

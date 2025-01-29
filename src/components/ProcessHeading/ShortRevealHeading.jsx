@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ShortRevealHeading.css";
 gsap.registerPlugin(ScrollTrigger);
 
-const ShortRevealHeading = (params) => {
+const ShortRevealHeading = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const ShortRevealHeading = (params) => {
         scrollTrigger: {
           trigger: textRef.current,
           start: "top 50%", // Start when text is in the center of the viewport
-          end: "+=1600", // Customize based on the desired scroll length
+          end: "+=1800", // Customize based on the desired scroll length
           pin: true, // Pin the text in place
           scrub: 1, // Smoothly animate based on scroll
         },
@@ -56,12 +56,12 @@ const ShortRevealHeading = (params) => {
   }, []);
 
   return (
-    <div className="container h-[400px] mb-[1200px] mt-[-300px] flex justify-center items-center mx-auto">
+    <div className="container h-[400px] mb-[800px] 2xl:mb-[700px] mt-[-1300px] 2xl:mt-[-1700px] flex justify-center items-center mx-auto">
       <p
         ref={textRef}
         className="animated-text-short main-heading header text-[60px] text-white"
       >
-        {params.text}
+        Our Process
       </p>
     </div>
   );

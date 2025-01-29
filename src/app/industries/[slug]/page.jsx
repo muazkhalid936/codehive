@@ -13,6 +13,7 @@ import AdvantagesSection from "../../../components/AdvantagesSection";
 import Packages from "../../../components/Packages";
 import FeatureSlider from "../../../components/FeatureSlider";
 import HeroSectionServices from "../../../components/HeroSectionServices";
+import Footer from "../../../components/Footer";
 
 const page = async ({ params }) => {
   const slug = await params.slug;
@@ -33,12 +34,9 @@ const page = async ({ params }) => {
       {industry.bannerData && <Banner {...industry.bannerData} />}
       <Features data={industry.featuresData} />
       <div className="pt-[55px]">
-
-
         {industry.showFeatureSlider && (
           <FeatureSlider data={industry.featureSlider} />
         )}
-
       </div>
       {/* <WhatMakesUsDifferent data={industry.makesDifferentData} /> */}
 
@@ -56,6 +54,7 @@ const page = async ({ params }) => {
       <IndustryDetails panelData={industry.panelData} />
       <Testimonials testimonials={industry.testimonialsData} />
       {/* <ConnectContact /> */}
+      <Footer />
     </div>
   );
 };

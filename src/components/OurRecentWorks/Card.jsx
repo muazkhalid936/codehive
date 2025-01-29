@@ -22,7 +22,7 @@ const router = useRouter();
       </div>
 
       {/* Main card content with transition */}
-      <div className="absolute backdrop-blur-md h-[170px] transition-all group ease-in-out duration-300 hover:h-[240px] bottom-0 inset-0 bg-opacity-50 hover:md:top-[59%] md:top-[74%] top-[62%] rounded-lg flex flex-col justify-center p-4 gap-2">
+      <div className="absolute backdrop-blur-sm h-[170px] bg-white bg-opacity-20 transition-all group ease-in-out duration-300 hover:h-[240px] bottom-0 inset-0  hover:md:top-[59%] md:top-[74%] top-[62%] rounded-lg flex flex-col justify-center p-4 gap-2">
         <div className="flex justify-start items-center">
           {/* {Icon && <Icon className="text-4xl pointer-events-none" />} Prevent hover effects
            */}
