@@ -18,7 +18,7 @@ const StackingImages = () => {
   const [active, setActive] = useState(0);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  
+
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".new-cards",
@@ -29,12 +29,12 @@ const StackingImages = () => {
         scrub: 1,
       },
     });
-  
+
     const cards = [1, 2, 3, 4, 5, 6, 7]; // Extend with new cards
-  
+
     cards.forEach((card, index) => {
       const nextCard = cards[index + 1];
-  
+
       if (index === 0) {
         // Intro animation for the first card and text
         timeline.fromTo(
@@ -55,29 +55,25 @@ const StackingImages = () => {
           { opacity: 1, y: 0, duration: 0.5 },
           "start"
         );
-        timeline.to(
-          `.new-icon1`,
-          { backgroundColor: "#27303b", },
-          `start`
-        );
+        timeline.to(`.new-icon1`, { backgroundColor: "#27303b" }, `start`);
       }
-  
+
       if (nextCard) {
         timeline.to(
           `.new-text-${card}`,
-          { opacity: 0, y: -20, duration: 0.3 },
+          { opacity: 0, y: -10, duration: 0.3 },
           `card-${nextCard}`
         );
-  
+
         timeline.addPause();
-  
+
         timeline.fromTo(
           `.new-text-${nextCard}`,
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.5 },
+          { opacity: 1, y: 10, duration: 0.5 },
           `card-${nextCard}+=0.3`
         );
-  
+
         timeline.to(
           `.new-card-${card}`,
           { xPercent: 60, yPercent: -60, rotate: 90 },
@@ -89,7 +85,7 @@ const StackingImages = () => {
           { xPercent: 0, yPercent: 0, rotate: 0 },
           `card-${nextCard}`
         );
-  
+
         timeline.to(
           `.new-icon${card}`,
           {
@@ -112,7 +108,6 @@ const StackingImages = () => {
       }
     });
   }, []);
-  
 
   return (
     <div className="bg-[#000B17] container mx-auto">
@@ -132,39 +127,39 @@ const StackingImages = () => {
           <div className="new-text-section mt-20 text-white">
             {[
               {
-                title: "Our Vision",
+                title: "Requirement Gathering & Planning",
                 description:
-                  "We strive to transform innovative ideas into world-class apps and websites, delivering exceptional user experiences that drive success.",
+                  "We begin by understanding your vision, objectives, and technical requirements to ensure a clear roadmap for development.",
               },
               {
-                title: "Initial Sketch Design",
+                title: "Wireframing & Initial Sketches",
                 description:
-                  "We start with brainstorming and sketching to lay the foundation for your unique project, ensuring clarity and alignment with your goals.",
+                  "Our team creates rough sketches and wireframes to establish the project’s structure, ensuring alignment with your goals.",
               },
               {
-                title: "Figma Design Creation",
+                title: "UI/UX Design (Figma Prototyping)",
                 description:
-                  "Our designers bring your vision to life with detailed, user-friendly designs in Figma, focusing on both aesthetics and functionality.",
+                  "Our designers craft intuitive and visually appealing interfaces in Figma, focusing on user experience and seamless functionality.",
               },
               {
-                title: "Development Phase",
+                title: "Development & Implementation",
                 description:
-                  "Our developers turn designs into reality by building robust, secure, and scalable websites or apps tailored to your needs.",
+                  "Our developers bring the designs to life, building secure, scalable, and high-performance applications tailored to your needs.",
               },
               {
-                title: "Testing",
+                title: "Quality Assurance & Testing",
                 description:
-                  "We rigorously test your product for performance, usability, and reliability to ensure it functions seamlessly in all scenarios.",
+                  "We conduct rigorous testing for functionality, performance, and security, ensuring a flawless user experience across all devices.",
               },
               {
-                title: "Application/Website Launch",
+                title: "Deployment & Launch",
                 description:
-                  "After thorough preparation, we launch your app or website, ensuring a smooth transition to the live environment.",
+                  "After thorough testing, we launch your application or website, ensuring a seamless transition to the live environment.",
               },
               {
-                title: "Project Handover",
+                title: "Project Handover & Support",
                 description:
-                  "We provide you with a fully functional product, complete with all the resources and support needed to take full control.",
+                  "We deliver the final product with complete documentation, training, and ongoing support to ensure smooth operations.",
               },
             ].map((item, i) => (
               <div
@@ -174,7 +169,7 @@ const StackingImages = () => {
                 }`}
               >
                 <span className="font-bold !font-lato !text-white  ">
-                <span className="font-bold w-[70%] text-[50px] leading-slug  main-heading bg-gradient-to-br from-white to-blueColor bg-clip-text text-transparent">
+                  <span className="font-bold w-[90%] text-[50px] leading-none mt-5  main-heading bg-gradient-to-br from-white to-blueColor bg-clip-text text-transparent">
                     {item.title}
                   </span>
                 </span>

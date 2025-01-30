@@ -33,7 +33,7 @@
     "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^7.0.1",
     "split-type": "^0.3.4",
-    "swiper": "^11.1.15",
+    "swiper": "^11.2.1",
     "three": "^0.163.0"
   },
   "devDependencies": {

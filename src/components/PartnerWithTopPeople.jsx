@@ -11,7 +11,7 @@ const data = [
     name: "Shoaib Ahmad",
     position: "General Manager",
     description:
-      "As a general manager, I oversee operations, drive strategic growth, and ensure team alignment with business objectives. My focus on leadership, efficiency, and innovation fosters success across all areas of the organization.",
+      "A strategic leader focused on operational excellence, efficiency, and innovation. With strong business management expertise, he ensures seamless execution, fosters collaboration, and strengthens client relationships to drive success.",
     linkedin: "https://www.linkedin.com/in/omaralfahad/",
     twitter: "https://twitter.com/omaralfahad",
     picture: "/partnerwithtoppeople/Sohaib.png",
@@ -21,7 +21,7 @@ const data = [
     name: "Yousef Issa",
     position: "Project Manager",
     description:
-      "As a project manager, I oversee planning and execution to deliver projects on time and within scope. My focus on leadership, organization, and collaboration ensures seamless workflows and successful outcomes. ",
+      "An expert in strategic planning and team coordination, our Project Manager ensures smooth project execution. Focused on innovation and client satisfaction, they drive success while maintaining quality and timely delivery.",
     linkedin: "https://www.linkedin.com/in/hassan-sayed/",
     twitter: "https://twitter.com/hassan_sayed",
     picture: "/partnerwithtoppeople/Yousef.png",
@@ -30,7 +30,7 @@ const data = [
     name: "Balawal Hussain",
     position: "Technical Lead",
     description:
-      "As a technical lead, I guide teams in delivering high-quality, scalable solutions while ensuring technical excellence. My focus on innovation, collaboration, and mentorship drives success in complex projects.",
+      "A leader in innovation and technical excellence, our Technical Lead provides expert guidance, solves problems efficiently, and ensures seamless project execution. With a focus on quality and performance, they lead teams to deliver cutting-edge solutions. ",
     linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
     twitter: "https://twitter.com/youssef_almansoori",
     picture: "/partnerwithtoppeople/Bilawal.png",
@@ -39,7 +39,7 @@ const data = [
     name: "Muskaan Iqbal",
     position: "Head of Designer",
     description:
-      "As a designer, I create visually compelling and user-focused designs that blend creativity with functionality. My passion for innovation and attention to detail ensures impactful and memorable experiences.",
+      "A creative visionary, our Head of Design ensures innovative, user-centered designs that elevate brand identity and enhance user experience. With a balance of aesthetics and functionality, they drive design excellence across all projects.",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
     twitter: "https://twitter.com/aisha_alhassan",
     picture: "/partnerwithtoppeople/Muskan.png",
@@ -48,7 +48,7 @@ const data = [
     name: "Asfand Naveed",
     position: "DevOps Engineer",
     description:
-      "As a DevOps Engineer, I streamline development and deployment processes, ensuring efficient workflows and reliable systems. My focus on automation, scalability, and collaboration drives seamless integration and operational excellence.",
+      "Our DevOps Engineer streamlines integration, automation, and deployment, optimizing infrastructure for efficiency and scalability. Focused on reliability and performance, they bridge development and operations, driving continuous improvement and innovation.",
     linkedin: "https://www.linkedin.com/in/omaralfahad/",
     twitter: "https://twitter.com/omaralfahad",
     picture: "/partnerwithtoppeople/Asfand.png",
@@ -58,7 +58,7 @@ const data = [
     name: "Hina Liaqat",
     position: "Product Manager",
     description:
-      "As a product manager, I drive ideas into impactful solutions, ensuring seamless user experiences and aligning business goals with customer needs. My focus on innovation and collaboration delivers results in an ever-evolving market.",
+      "Our Dotnet Developer specializes in building robust, scalable applications using the latest .NET technologies. With a focus on performance, security, and seamless integration, they deliver high-quality solutions tailored to meet business needs.",
     linkedin: "https://www.linkedin.com/in/hassan-sayed/",
     twitter: "https://twitter.com/hassan_sayed",
     picture: "/partnerwithtoppeople/Hina.png",
@@ -67,7 +67,7 @@ const data = [
     name: "Muhammad Hamwi",
     position: "Content Creater",
     description:
-      "As a content creator, I craft engaging and impactful content that connects with audiences and drives brand growth. My focus on creativity, storytelling, and strategy ensures meaningful and lasting impressions.",
+      "Our Content Creator produces engaging, high-quality content that strengthens brand storytelling and boosts audience engagement. With a blend of creativity and strategy, they craft compelling visuals and copy to drive brand awareness and impact.",
     linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
     twitter: "https://twitter.com/youssef_almansoori",
     picture: "/partnerwithtoppeople/Hamvi.png",
@@ -76,10 +76,19 @@ const data = [
     name: "Samer Alhelou",
     position: "Senior Developer",
     description:
-      "As a senior developer, I transform ideas into scalable solutions with a focus on seamless user experiences and high-quality code. My passion for innovation and learning keeps me ahead in the evolving tech landscape.",
+      "Bringing advanced technical expertise and problem-solving skills, the Senior Developer delivers high-quality, scalable solutions. With a focus on efficiency and innovation, they mentor teams, ensure code quality, and drive complex projects to successful completion. ",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
     twitter: "https://twitter.com/aisha_alhassan",
     picture: "/partnerwithtoppeople/Samer.png",
+  },
+  {
+    name: "Saif AL Alwar",
+    position: "CEO",
+    description:
+      "As the CEO of Code Hive, Saif Alawar leads with a focus on digital transformation, data analytics, and customized software solutions. His expertise drives innovation, efficiency, and strategic decision-making, establishing Code Hive as a trusted leader in the tech industry. ",
+    linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
+    twitter: "https://twitter.com/aisha_alhassan",
+    picture: "/partnerwithtoppeople/boss.png",
   },
 ];
 
@@ -89,7 +98,7 @@ const PartnerWithTopPeople = () => {
   return (
     <div className="bg-[#000B17]">
       <div className="bg-[#010B17] container  py-10 sm:py-20 text-white ">
-        <h2 className="text-start  mx-2 w-[70%] sub_heading gilray-font ">
+        <h2 className="text-start  mx-2 w-[70%] sub_heading leading-tight gilray-font ">
           Meet the Behind
           <span className="text-[#219DD9] mx-2">Creative Minds</span>
           Our Most Successful Projects

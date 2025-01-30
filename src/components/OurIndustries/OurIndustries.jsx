@@ -3,33 +3,27 @@
 export const ourIndustriesData = [
   {
     title: "Car Wash",
-    des1: "Transform your vehicle with state-of-the-art car wash techniques that clean every corner thoroughly. Our team uses advanced equipment to ensure even the toughest grime is removed.",
-    des2: "Eco-friendly solutions protect your car’s paint while delivering a brilliant shine.",
-    des3: "Experience professional care that preserves the quality of your vehicle’s finish, ensuring longevity. Enjoy the satisfaction of driving a spotless and polished car every day.",
-    des4: "From exterior cleaning to interior detailing, we provide a comprehensive service that stands out. Let us bring your car back to life with unmatched quality and care.",
-    image: "/Industry/1.png",
+    des1: "Say goodbye to long waits and inconvenient trips to the car wash! Our car wash app makes it easy to book professional cleaning services anytime, anywhere. With just a few taps, you can schedule a wash, track your service, and enjoy a spotless car without leaving your home.",
+    des2: "Whether you need a quick exterior clean or a full interior detail, our trusted professionals ensure top-quality care using eco-friendly products. Experience hassle-free car care with a seamless booking process, secure payments, and real-time updates—all in one easy-to-use app!",
+    link: "/industries/car-wash",
   },
   {
     title: "Delivery",
-    des1: "Experience reliable logistics with delivery services designed to handle your parcels with care. Whether it's urgent documents or large packages, we’ve got you covered.",
-    des2: "Our network ensures timely deliveries while maintaining high standards of security and tracking.",
-    des3: "From personal packages to business consignments, we focus on precision and punctuality.",
-    des4: "With seamless processes and excellent customer support, your delivery experience will be stress-free. Count on us for all your logistics and shipping needs.",
-    image: "/Industry/2.png",
+    link: "/industry/delivery",
+    des1: " This delivery app streamlines the entire shipping process with a focus on speed, reliability, and convenience.",
+    des2: "Easily schedule pickups, track your deliveries in real-time, and get instant updates on your shipments. Our app offers services like same-day delivery, scheduled deliveries, and secure handling of all types of items, ensuring a seamless experience.",
+    des3: "With user-friendly interface, you can manage deliveries on the go, choose the best service for your needs, and enjoy fast, efficient shipping without the hassle. We’re committed to making your delivery experience smooth, reliable, and stress-free",
   },
   {
     title: "Health Care",
-    des1: "Revolutionize patient care with our innovative healthcare solutions tailored to meet the needs of modern medical practices. From clinics to hospitals, we ensure efficient service delivery.",
-    des2: "Seamlessly manage appointments, patient records, and billing with secure and compliant systems.",
-    des3: "Enable telemedicine services, real-time consultations, and access to health records for enhanced patient engagement.",
-    des4: "Leverage advanced analytics to monitor trends, optimize workflows, and improve operational efficiency.",
-
-    des5: "Trust us to provide scalable and user-friendly solutions to elevate your healthcare services.",
-
-    image: "/Industry/3.png",
+    link: "/industry/health-care",
+    des1: "Our healthcare solutions are built to enhance efficiency and improve patient care for clinics, hospitals, and medical centres.",
+    des2: "Manage appointments, patient records, and billing seamlessly with secure, fully compliant systems. Enable telemedicine, real-time consultations, and instant access to health records for a better patient experience.",
+    des3: "Use advanced analytics to track trends, optimize workflows, and streamline operations. With our scalable and easy-to-use solutions, you can elevate your healthcare services and deliver exceptional care.",
   },
   {
     title: "Booking",
+    link: "/industries/our-booking-system",
     des1: "Simplify your reservations with our user-friendly booking platform. From hotels to events, we’ve made it easier than ever to secure your spot.",
     des2: "Enjoy real-time availability checks and instant confirmations that save you time and effort.",
     des3: "Our transparent pricing ensures there are no hidden surprises, giving you peace of mind.",
@@ -38,23 +32,20 @@ export const ourIndustriesData = [
   },
   {
     title: "Ecommerce",
-    des1: "Deliver seamless shopping experiences with our tailored ecommerce solutions, designed to meet the demands of modern consumers. From small businesses to large enterprises, we’ve got you covered.",
-    des2: "Our robust platform ensures secure transactions, optimized product management, and user-friendly navigation to enhance customer satisfaction.",
-    des3: "Enable real-time inventory tracking, personalized recommendations, and streamlined checkout processes to boost sales and retention.",
-    des4: "With mobile-first designs, advanced analytics, and marketing tools, we empower you to stay ahead in the competitive ecommerce landscape.",
-    des5: "Count on us for comprehensive support and innovative solutions to grow your online business with confidence.",
-    image: "/Industry/5.png",
+    link: "/industries/ecommerce",
+    des1: "Our ecommerce platform is built to help businesses grow, offering a seamless and efficient online shopping experience.",
+    des2: "Easily manage products, track inventory in real-time, and optimize sales with personalized recommendations. Our secure payment processing and streamlined checkout ensure smooth transactions for your customers.",
+    des3: "With a mobile-first design, advanced analytics, and built-in marketing tools, you can enhance engagement, boost conversions, and stay ahead of the competition. Whether you're a small business or a large enterprise, we provide the solutions you need to scale with confidence.",
   },
   {
     title: "Fitness",
-    des1: "Empower fitness enthusiasts with cutting-edge digital solutions designed to transform their wellness journey.",
-    des2: "Offer intuitive features like personalized workout plans, progress tracking, and exercise demonstrations to keep users motivated.",
-    des3: "Integrate wearable devices and nutrition tracking for a comprehensive fitness experience.",
-    des4: "Enable easy class scheduling, membership management, and seamless payment systems for gyms and fitness centers.",
-    des5: "With data-driven insights and user-friendly designs, we help you create impactful fitness platforms that inspire and retain your customers.",
-    image: "/Industry/6.png",
+    link: "/industries/fitness",
+    des1: "Enhance the fitness experience with smart digital solutions tailored for gyms, trainers, and wellness platforms.",
+    des2: "Provide users with personalized workout plans, progress tracking, and guided exercise demonstrations to keep them engaged. Integrate wearable devices and nutrition tracking for a holistic approach to fitness.",
+    des3: "Simplify class scheduling, membership management, and payments with seamless automation. With data-driven insights and an intuitive interface, our solutions help you build a strong, loyal fitness community.",
   },
 ];
+
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -73,93 +64,6 @@ const IphoneModel = dynamic(() =>
     ssr: false,
   })
 );
-
-// const RotatingModel = ({ modelPath, texturePaths, scrollY, startRotaion }) => {
-//   const modelRef = useRef();
-//   const [currentTextureIndex, setCurrentTextureIndex] = useState(0);
-//   const lastThresholdRef = useRef(0); // Track the last scroll threshold
-//   const { scene } = useGLTF(modelPath);
-
-//   // Rotate the model based on scroll
-//   useEffect(() => {
-//     if (modelRef.current && startRotaion) {
-//       const rotationY = (scrollY / 100) * 0.3; // Adjust rotation sensitivity
-//       modelRef.current.rotation.y = rotationY;
-
-//       // Calculate the current 800px threshold
-//       const threshold = Math.floor(scrollY / 833); // 800px
-//       if (threshold !== lastThresholdRef.current) {
-//         lastThresholdRef.current = threshold; // Update the last threshold
-//         setCurrentTextureIndex((prevIndex) =>
-//           texturePaths.length > 0 ? (prevIndex + 1) % texturePaths.length : 0
-//         );
-//       }
-//     }
-//   }, [scrollY, texturePaths, startRotaion]);
-
-//   // Apply textures to front and back screens
-//   useEffect(() => {
-//     if (scene && texturePaths[currentTextureIndex]) {
-//       const textureLoader = new THREE.TextureLoader();
-
-//       // Load the texture
-//       textureLoader.load(texturePaths[currentTextureIndex], (texture) => {
-//         // Fix texture wrapping and orientation
-//         texture.wrapS = THREE.RepeatWrapping;
-//         texture.wrapT = THREE.RepeatWrapping;
-//         texture.flipY = false; // Correct Y-axis flipping
-//         texture.needsUpdate = true;
-//         scene.traverse((child) => {
-//           if (child.isMesh && child.material) {
-//             child.material.map = texture;
-//             child.material.needsUpdate = true;
-//           }
-//         });
-//         //   // Apply texture to the front screen
-//         //   const frontScreen = scene.getObjectByName("Cube014_screen001_0002_1");
-//         //   if (frontScreen) {
-//         //     if (frontScreen.material) {
-//         //       console.log("Existing map (front):", frontScreen.material.map);
-
-//         //       // Clear existing texture
-//         //       frontScreen.material.map = null;
-
-//         //       // Apply the new texture
-//         //       frontScreen.material.map = texture;
-//         //       // frontScreen.material.metalness = 0.9; // Metallic look
-//         //       // frontScreen.material.roughness = 0.2; // Smooth finish
-//         //       frontScreen.material.needsUpdate = true;
-//         //       console.log("Texture applied to front screen:", frontScreen.name);
-//         //     }
-//         //   } else {
-//         //     console.warn("Front screen not found: Cube014_screen001_0002_1");
-//         //   }
-
-//         //   // Apply texture to the back screen
-//         //   const backScreen = scene.getObjectByName("Cube014_screen001_0002_2");
-//         //   if (backScreen) {
-//         //     if (backScreen.material) {
-//         //       console.log("Existing map (back):", backScreen.material.map);
-
-//         //       // Clear existing texture
-//         //       backScreen.material.map = null;
-
-//         //       // Apply the new texture
-//         //       backScreen.material.map = texture;
-//         //       // backScreen.material.metalness = 0.9; // Metallic look
-//         //       // backScreen.material.roughness = 0.2; // Smooth finish
-//         //       backScreen.material.needsUpdate = true;
-//         //       console.log("Texture applied to back screen:", backScreen.name);
-//         //     }
-//         //   } else {
-//         //     console.warn("Back screen not found: Cube014_screen001_0002_2");
-//         //   }
-//       });
-//     }
-//   }, [currentTextureIndex, scene, texturePaths]);
-
-//   return <primitive ref={modelRef} object={scene} scale={0.5} />;
-// };
 
 const ScrollAnimation = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -192,12 +96,6 @@ const ScrollAnimation = () => {
       smooth: true,
       lerp: 0.1,
     });
-
-    // const handleScroll = () => {
-    //   setScrollY(window.scrollY);
-    // };
-
-    // window.addEventListener("scroll", handleScroll);
 
     function raf(time) {
       lenis.raf(time);
@@ -342,15 +240,26 @@ const ScrollAnimation = () => {
               <h2 className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
                 {item.title}
               </h2>
-              <p className="mt-4 main_hero_slogan text-gray-500">{item.des1}</p>
-              <p className="mt-4 main_hero_slogan text-gray-500">{item.des2}</p>
-              <p className="mt-4 main_hero_slogan text-gray-500">{item.des3}</p>
-              <p className="mt-4 main_hero_slogan text-gray-500">{item.des4}</p>
+              <p className="mt-4 main_hero_slogan text-gray-500">
+                {item?.des1}
+              </p>
+              <p className="mt-4 main_hero_slogan text-gray-500">
+                {item?.des2}
+              </p>
+              <p className="mt-4 main_hero_slogan text-gray-500">
+                {item?.des3}
+              </p>
+              <p className="mt-4 main_hero_slogan text-gray-500">
+                {item?.des4}
+              </p>
               <p className="mt-4 main_hero_slogan text-gray-500">
                 {item?.des5}
               </p>
               <div className="flex justify-start items-center gap-3">
-                <button className="mt-2 xl:text-xl text-white">
+                <button
+                  onClick={() => router.push(item.link)}
+                  className="mt-2 xl:text-xl text-white"
+                >
                   Contact Us
                 </button>
                 <div className="bg-white text-black mt-2 rounded-full">
@@ -358,9 +267,10 @@ const ScrollAnimation = () => {
                 </div>
               </div>
             </div>
+
             <div className="w-1/2 ">
               <Canvas
-                dpr={[0.5, 1]}
+                dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
                   height: "70vh",

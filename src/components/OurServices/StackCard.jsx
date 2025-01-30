@@ -24,12 +24,12 @@ const StackCard = ({ bg, type, heading, num, para, link }) => {
         <div className="main_hero_slogan text-[#525355]">{para}</div>
 
         <div className=" flex justify-start items-start flex-1 gap-2">
-          <button className="xl:text-xl " onClick={() => router.push(link)}>
+          <button className="xl:text-xl flex gap-2 items-center " onClick={() => router.push(link)}>
             Read More
+            <div className=" bg-white mt-1 text-black rounded-full ">
+              <FiArrowUpRight className="w-4 h-4" />
+            </div>
           </button>
-          <div className=" bg-white mt-1 text-black rounded-full ">
-            <FiArrowUpRight className="w-5 h-5" />
-          </div>
         </div>
       </div>
 

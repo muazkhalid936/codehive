@@ -59,7 +59,7 @@ const StackingImages = () => {
             bg="/services/bg-consult.png"
             type="Cloud"
             heading="Digital Consultation"
-            para="At Code Hive, we deliver expert digital consultation to help businesses navigate challenges and drive growth."
+            para="Strategic guidance to align technology with your business goals and maximize efficiency."
             num="05"
             link="/service/digital-consultation"
           />
@@ -78,7 +78,7 @@ const StackingImages = () => {
 
         <div className="card card-3">
           <StackCard
-            para="At Code Hive, we deliver tailored software solutions that align with your business needs, helping you streamline operations, improve efficiency, and drive innovation."
+            para="Developing software that optimizes business and ensures a smooth user experience."
             bg="/services/bg-consult.png"
             type="Digital"
             num="03"
@@ -94,7 +94,7 @@ const StackingImages = () => {
             num="02"
             heading="Website Development"
             link="/service/website-development"
-            para="At Code Hive, we deliver cutting-edge web app development services, creating customized applications to help businesses succeed in the digital landscape."
+            para="Dynamic, Responsive web applications that captivate your audience and serves business needs."
           />
         </div>
         <div className="card card-1">

@@ -20,7 +20,7 @@ export default function Home() {
       <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
         <MainHero />
         {/* <div className="why-heading-gap no-scrollbar"> */}
-        <LongRevealHeading text="Why You Choose Us?" />
+        <LongRevealHeading text="Why Choose Us?" />
         {/* </div> */}
         {/* <div className=" first-component no-scrollbar">a</div> */}
         <WhySection />
