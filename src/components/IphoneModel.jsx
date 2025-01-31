@@ -1,12 +1,15 @@
-import { useEffect, useRef } from 'react';
-import { useGLTF } from '@react-three/drei';
-import { useLoader } from '@react-three/fiber';
-import { TextureLoader } from 'three';
+import { useEffect, useRef } from "react";
+import { useLoader } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { TextureLoader } from "three";
+import { Stage } from "@react-three/drei";
 
-useGLTF.preload('/iphoneModel/3.glb');
+// useGLTF.preload('/iphoneModel/3.glb');
 
 function IphoneModel({ textureUrl, meshRef }) {
-  const { scene } = useGLTF('/iphoneModel/3.glb');
+  // const { scene } = useGLTF('/iphoneModel/3.glb');
+  const { scene } = useLoader(GLTFLoader, "/iphoneModel/3.glb");
+
   const texture = useLoader(TextureLoader, textureUrl);
 
   // console.log(textureUrl);
@@ -26,12 +29,14 @@ function IphoneModel({ textureUrl, meshRef }) {
   }, [texture]);
 
   return (
-    <primitive
-      ref={meshRef}
-      object={scene}
-      scale={0.07}
-      position={[30, 0, 0]}
-    />
+    <Stage intensity={0.2} environment={"city"}>
+      <primitive
+        ref={meshRef}
+        object={scene}
+        scale={10} // Try a larger scale
+        position={[30, 0, 0]}
+      />
+    </Stage>
   );
 }
 

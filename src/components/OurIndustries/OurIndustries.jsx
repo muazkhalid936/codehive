@@ -60,7 +60,6 @@ gsap.registerPlugin(ScrollTrigger);
 // Lazy load the IphoneModel component
 const IphoneModel = dynamic(() =>
   import("../../components/IphoneModel", {
-    loading: () => null,
     ssr: false,
   })
 );
@@ -171,8 +170,10 @@ const ScrollAnimation = () => {
                   sectionProgress
                 );
 
-                meshRef.current.rotation.y = rotationValue;
-                const earlyPoint = startRotation + Math.PI * 0.5;
+                if( meshRef.current){
+
+                  meshRef.current.rotation.y = rotationValue;
+                }                const earlyPoint = startRotation + Math.PI * 0.5;
                 if (Math.abs(rotationValue - earlyPoint) < 0.1) {
                   setTextureUrl(texturePaths[index]);
                 }
@@ -183,7 +184,10 @@ const ScrollAnimation = () => {
                   endRotation,
                   sectionProgress
                 );
-                meshRef.current.rotation.y = rotationValue;
+                if( meshRef.current){
+
+                  meshRef.current.rotation.y = rotationValue;
+                }
                 const earlyPoint = startRotation + Math.PI * 0.5;
                 if (Math.abs(rotationValue - earlyPoint) < 0.1) {
                   setTextureUrl(texturePaths[index - 1]);
@@ -269,7 +273,7 @@ const ScrollAnimation = () => {
             </div>
 
             <div className="w-1/2 ">
-              <Canvas
+             <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
@@ -278,11 +282,7 @@ const ScrollAnimation = () => {
                   maxHeight: "700px",
                 }}
               >
-                <Stage intensity={0.2} environment={"city"}>
-                  <Suspense fallback={null}>
                     <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
-                  </Suspense>
-                </Stage>
               </Canvas>
             </div>
           </div>

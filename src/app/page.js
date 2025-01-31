@@ -19,34 +19,17 @@ export default function Home() {
       <Navbar />
       <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
         <MainHero />
-        {/* <div className="why-heading-gap no-scrollbar"> */}
         <LongRevealHeading text="Why Choose Us?" />
-        {/* </div> */}
-        {/* <div className=" first-component no-scrollbar">a</div> */}
         <WhySection />
-        {/* <div className=" second-component no-scrollbar"> */}
         <ShortRevealHeading text="Our Services" />
-        {/* </div> */}
-        {/* <div className=" stack "> */}
         <Stack />
-        {/* </div> */}
-        {/* <div className="our no-scrollbar"> */}
-        {/* <ShortRevealHeading text="Our Process" /> */}
+        <ShortRevealHeading text="Our Process" />
         <ProcessHeading />
-        {/* </div> */}
-        {/* <div className=" forth-component no-scrollbar">a</div> */}
         <OurProcess />
-        {/* <div className="asd"> */}
         <ShortRevealHeading text="Our Industries" />
-        {/* </div> */}
-        {/* <div className=" fifth-component no-scrollbar">a</div> */}
         <OurIndustries />
-        {/* <div className=" sixth-component no-scrollbar"> */}
         <OurRecentWork text="Our Recent Works" />
-        {/* </div> */}
-        {/* <div className=" stack-cards-gap no-scrollbar"> */}
         <Test />
-        {/* </div> */}
         <ContactForm />
         <Footer />
       </div>
