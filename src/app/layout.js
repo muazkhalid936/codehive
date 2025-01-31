@@ -1,5 +1,7 @@
 import "./globals.css";
 import Footer from "../components/Footer";
+import { Suspense } from "react";
+import Loader from "../components/Loader";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -10,8 +12,10 @@ export default function RootLayout({ children }) {
         <title>Code Hive</title>
       </head>
       <body>
-        {/* <NextTopLoader showSpinner={false} /> */}
-        {children}
+        <Suspense fallback={<Loader />}>
+          {/* <NextTopLoader showSpinner={false} /> */}
+          {children}
+        </Suspense>
       </body>
     </html>
   );
