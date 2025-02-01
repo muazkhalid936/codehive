@@ -12,27 +12,31 @@ import OurRecentWork from "../components/OurRecentWork/OurRecentWork";
 import ShortRevealHeading from "../components/ShortRevealHeading/ShortRevealHeading";
 import ProcessHeading from "../components/ProcessHeading/ShortRevealHeading";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
+import { Suspense } from "react";
 export default function Home() {
   return (
     // <>asdss</>
     <div className="no-scrollbar ">
-      <Navbar />
-      <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
-        <MainHero />
-        <LongRevealHeading text="Why Choose Us?" />
-        <WhySection />
-        <ShortRevealHeading text="Our Services" />
-        <Stack />
-        <ShortRevealHeading text="Our Process" />
-        <ProcessHeading />
-        <OurProcess />
-        <ShortRevealHeading text="Our Industries" />
-        <OurIndustries />
-        <OurRecentWork text="Our Recent Works" />
-        <Test />
-        <ContactForm />
-        <Footer />
-      </div>
+      <Suspense fallback={<Loader />}>
+        <Navbar />
+        <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
+          <MainHero />
+          <LongRevealHeading text="Why Choose Us?" />
+          <WhySection />
+          <ShortRevealHeading text="Our Services" />
+          <Stack />
+          <ShortRevealHeading text="Our Process" />
+          <ProcessHeading />
+          <OurProcess />
+          <ShortRevealHeading text="Our Industries" />
+          <OurIndustries />
+          <OurRecentWork text="Our Recent Works" />
+          <Test />
+          <ContactForm />
+          <Footer />
+        </div>
+      </Suspense>
     </div>
   );
 }

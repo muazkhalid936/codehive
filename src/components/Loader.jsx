@@ -9,7 +9,7 @@ export default function Loader() {
         height: "100vh",
       }}
     >
-      <video autoPlay loop muted style={{ width: "300px", height: "auto" }}>
+      <video autoPlay loop muted style={{ height: "50vh" }}>
         <source src="/1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

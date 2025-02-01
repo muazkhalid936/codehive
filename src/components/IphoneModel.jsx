@@ -1,43 +1,51 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { TextureLoader } from "three";
 import { Stage } from "@react-three/drei";
 
-// useGLTF.preload('/iphoneModel/3.glb');
+const texturePaths = [
+  "/iphoneModel/Car wash.jpg",
+  "/iphoneModel/Delivery.png",
+  "/iphoneModel/Health Care.jpg",
+  "/iphoneModel/Booking.jpg",
+  "/iphoneModel/Ecommerce.jpg",
+  "/iphoneModel/Fitness.png",
+];
 
-function IphoneModel({ textureUrl, meshRef }) {
-  // const { scene } = useGLTF('/iphoneModel/3.glb');
+const IphoneModel = React.memo(({ textureUrl, meshRef }) => {
   const { scene } = useLoader(GLTFLoader, "/iphoneModel/3.glb");
+  const textures = useMemo(() => {
+    const textureLoader = new TextureLoader();
+    return texturePaths.reduce((acc, path) => {
+      acc[path] = textureLoader.load(path);
+      return acc;
+    }, {});
+  }, []);
 
-  const texture = useLoader(TextureLoader, textureUrl);
-
-  // console.log(textureUrl);
-
-  // Update texture when it changes
   useEffect(() => {
-    if (meshRef.current && texture) {
+    if (meshRef.current && textures[textureUrl]) {
       meshRef.current.traverse((child) => {
         if (child.isMesh) {
-          child.material.map = texture;
+          child.material.map = textures[textureUrl];
           child.material.map.flipY = false;
           child.material.needsUpdate = true;
           child.material.metalness = 1;
         }
       });
     }
-  }, [texture]);
+  }, [textureUrl, textures]);
 
   return (
-    <Stage intensity={0.2} environment={"city"}>
+    <Stage intensity={0.5} environment={"city"} shadows={false}>
       <primitive
         ref={meshRef}
         object={scene}
-        scale={10} // Try a larger scale
+        scale={10}
         position={[30, 0, 0]}
       />
     </Stage>
   );
-}
+});
 
 export default IphoneModel;
