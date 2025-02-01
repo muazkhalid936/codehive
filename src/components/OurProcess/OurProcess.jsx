@@ -90,7 +90,6 @@ const StackingImages = () => {
           `.new-icon${card}`,
           {
             backgroundColor: "#0c1621",
-            duration: 0.3,
             onStart: function () {
               setActive(index + 1);
             },
@@ -102,7 +101,7 @@ const StackingImages = () => {
         );
         timeline.to(
           `.new-icon${nextCard}`,
-          { backgroundColor: "#27303b", duration: 0.3 },
+          { backgroundColor: "#27303b" },
           `card-${nextCard}`
         );
       }

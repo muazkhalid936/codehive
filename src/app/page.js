@@ -26,7 +26,7 @@ export default function Home() {
           <WhySection />
           <ShortRevealHeading text="Our Services" />
           <Stack />
-          <ShortRevealHeading text="Our Process" />
+          {/* <ShortRevealHeading text="Our Process" /> */}
           <ProcessHeading />
           <OurProcess />
           <ShortRevealHeading text="Our Industries" />
