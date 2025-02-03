@@ -4,7 +4,7 @@ import MainHero from "../components/MainHero";
 import ContactForm from "../components/Contact";
 import Stack from "../components/OurServices/Stack";
 import Test from "../components/OurRecentWorks/Test";
-import WhySection from "../components/WhySection/WhySection";
+import WhySection from "../components/WhySection1/WhySection";
 import OurIndustries from "../components/OurIndustries/OurIndustries";
 import Navbar from "../components/Navbar";
 import LongRevealHeading from "../components/LongRevealHeading/LongRevealHeading";

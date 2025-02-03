@@ -94,7 +94,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/solwave-website" className="font-poppin">
                       Solwave
                     </a>
@@ -113,7 +113,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/delicious-bites-app"
@@ -137,7 +137,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/saloon-app">
                       Salon App
                     </a>
@@ -157,7 +157,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/doctor-booking-app"
@@ -181,7 +181,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/laam-web">
                       Laam{" "}
                     </a>
@@ -200,7 +200,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/eshop-app">
                       Eshop{" "}
                     </a>
@@ -222,7 +222,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/instant-save-app"
@@ -244,7 +244,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/legal-wise-web">
                       Legal Wise Web
                     </a>
@@ -265,7 +265,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/faoolun-website">
                       Faoolun{" "}
                     </a>
@@ -285,7 +285,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/caption-gen">
                       Caption Gen App{" "}
                     </a>
@@ -306,7 +306,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/clixpos-website">
                       ClixPOS
                     </a>
@@ -325,7 +325,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/al-abour-app">AI Labour</a>
                     <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
@@ -344,7 +344,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/word-smith-ai">
                       Wordsmith{" "}
                     </a>
@@ -364,7 +364,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/food-inventory-app"
@@ -395,7 +395,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/instant-save-app"
@@ -417,7 +417,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/legal-wise-web">
                       Legal Wise Web
                     </a>
@@ -438,7 +438,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/solwave-website" className="font-poppin">
                       Solwave
                     </a>
@@ -457,7 +457,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/delicious-bites-app"
@@ -481,7 +481,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/saloon-app">
                       Salon App
                     </a>
@@ -501,7 +501,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/doctor-booking-app"
@@ -525,7 +525,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/laam-web">
                       Laam{" "}
                     </a>
@@ -544,7 +544,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/eshop-app">
                       Eshop{" "}
                     </a>
@@ -566,7 +566,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/word-smith-ai">
                       Wordsmith{" "}
                     </a>
@@ -586,7 +586,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/food-inventory-app"
@@ -616,7 +616,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/saloon-app">
                       Salon App
                     </a>
@@ -636,7 +636,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/doctor-booking-app"
@@ -660,7 +660,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/solwave-website" className="font-poppin">
                       Solwave
                     </a>
@@ -679,7 +679,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/delicious-bites-app"
@@ -704,7 +704,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/instant-save-app"
@@ -726,7 +726,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/legal-wise-web">
                       Legal Wise Web
                     </a>
@@ -748,7 +748,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/word-smith-ai">
                       Wordsmith{" "}
                     </a>
@@ -768,7 +768,7 @@ const page = () => {
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-4xl w-full text-center flex justify-center items-center gap-5">
+                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a
                       className="font-poppin"
                       href="/our-work/food-inventory-app"

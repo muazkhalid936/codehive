@@ -22,6 +22,25 @@ const ImageScrollEffect = () => {
       },
     });
 
+    const applyGradient = (headingSelector, progress) => {
+      // Interpolate between white => #209dd9
+      const startColor = [255, 255, 255];
+      const endColor = [32, 157, 217];
+      const currentColor = startColor.map((start, i) =>
+        Math.round(start + (endColor[i] - start) * progress)
+      );
+
+      const heading = document.querySelector(headingSelector);
+      if (heading) {
+        heading.style.background = `linear-gradient(
+          90deg,
+          rgb(${startColor.join(", ")}),
+          rgb(${currentColor.join(", ")})
+        )`;
+        heading.style.webkitBackgroundClip = "text";
+        heading.style.color = "transparent";
+      }
+    };
 
     const headingAnimations = () => {
       const applyGradient = (selector, startYPercent = -10) => {
