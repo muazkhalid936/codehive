@@ -18,25 +18,25 @@ export default function Home() {
   return (
     // <>asdss</>
     <div className="no-scrollbar ">
-      <Suspense fallback={<Loader />}>
-        <Navbar />
-        <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
-          <MainHero />
-          <LongRevealHeading text="Why Choose Us?" />
-          <WhySection />
-          <ShortRevealHeading text="Our Services" />
-          <Stack />
-          {/* <ShortRevealHeading text="Our Process" /> */}
-          <ProcessHeading />
-          <OurProcess />
-          <ShortRevealHeading text="Our Industries" />
-          <OurIndustries />
-          <OurRecentWork text="Our Recent Works" />
-          <Test />
+      <Navbar />
+      <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
+        <MainHero />
+        <LongRevealHeading text="Why Choose Us?" />
+        <WhySection />
+        <ShortRevealHeading text="Our Services" />
+        <Stack />
+        {/* <ShortRevealHeading text="Our Process" /> */}
+        <ProcessHeading />
+        <OurProcess />
+        <ShortRevealHeading text="Our Industries" />
+        <OurIndustries />
+        <OurRecentWork text="Our Recent Works" />
+        <Test />
+        <div className="mb-[50px]">
           <ContactForm />
-          <Footer />
         </div>
-      </Suspense>
+        <Footer />
+      </div>
     </div>
   );
 }

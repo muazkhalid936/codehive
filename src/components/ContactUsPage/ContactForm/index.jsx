@@ -40,7 +40,7 @@ const ContactForm = () => {
   return (
     <div className="w-[75%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
       <form
-        className="max-w-5xl mx-auto sm:p-8 p-4  bg-[#041c30] text-white rounded-2xl overflow-hidden shadow-lg"
+        className=" mx-auto py-20   bg-[#041c30] text-white rounded-2xl overflow-hidden shadow-lg"
         // style={{
         //   transition: "all 0.3s ease-in-out",
         //   border: "2px solid",

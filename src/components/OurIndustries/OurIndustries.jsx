@@ -124,13 +124,13 @@ const ScrollAnimation = () => {
       if (index === 0) {
         tl.fromTo(
           heading,
-          { x: 100, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.2 },
+          { x: 150, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.5 },
           0
         );
         tl.fromTo(
-          "iphone",
-          { x: -100, opacity: 0 },
+          ".iphone",
+          { x: -150, opacity: 0 },
           { x: 0, opacity: 1, duration: 0.2 },
           0
         );
@@ -233,7 +233,7 @@ const ScrollAnimation = () => {
     <div>
       <div
         ref={containerRef}
-        className="flex flex-col items-center justify-center  h-[100vh] min-h-[400px]  main22 overflow-hidden"
+        className="flex flex-col items-center justify-center mt-[-300px]  h-[100vh] min-h-[400px]  main22 overflow-hidden"
       >
         {ourIndustriesData.map((item, index) => (
           <div
@@ -272,7 +272,7 @@ const ScrollAnimation = () => {
               </div>
             </div>
 
-            <div className="w-1/2 ">
+            <div className="w-1/2 iphone">
              <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}

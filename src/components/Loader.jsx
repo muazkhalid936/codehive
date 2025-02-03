@@ -1,14 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 
-// components/VideoLoader.js
 export default function Loader({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);

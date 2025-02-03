@@ -8,7 +8,7 @@ const ContactInfo = () => {
   return (
     <div className="w-[75%] mx-auto mb-[55px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
       <div
-        className="max-w-5xl mx-auto p-8   bg-[#041c30] text-white rounded-xl shadow-lg"
+        className=" mx-auto p-8   bg-[#041c30] text-white rounded-xl shadow-lg"
       
       >
         {/* Inner content div to apply border-radius */}
