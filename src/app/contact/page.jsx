@@ -9,12 +9,14 @@ import Footer from "../../components/Footer";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="bg-[#000B17]">
       <Navbar />
       <HeroContact />
       <SuccessStats />
       {/* <SupportSection /> */}
-      <ContactForm />
+      <div className="my-[50px]">
+        <ContactForm />
+      </div>
       <ContactInfo />
       {/* <Testimonials testimonials={aboutTestimonialsData} /> */}
       <Footer />

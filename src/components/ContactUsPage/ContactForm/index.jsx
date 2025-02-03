@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { HiArrowUpRight } from "react-icons/hi2";
+import { HiArrowUpRight, HiChevronDown } from "react-icons/hi2"; // Import the chevron icon
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css"; // Import styles for the PhoneInput
 
@@ -38,18 +38,18 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form bg-[#020b17] py-20">
+    <div className="w-[75%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
       <form
-        className="max-w-5xl mx-auto p-8 mt-8 bg-[#041c30] text-white rounded-3xl overflow-hidden shadow-lg"
-        style={{
-          transition: "all 0.3s ease-in-out",
-          border: "2px solid",
-          borderImageSource:
-            "linear-gradient(133.88deg, rgba(1, 11, 23, 0.44) 1.04%, rgba(32, 147, 202, 0.44) 99.17%)",
-          borderImageSlice: 1,
-        }}
+        className="max-w-5xl mx-auto sm:p-8 p-4  bg-[#041c30] text-white rounded-2xl overflow-hidden shadow-lg"
+        // style={{
+        //   transition: "all 0.3s ease-in-out",
+        //   border: "2px solid",
+        //   borderImageSource:
+        //     "linear-gradient(133.88deg, rgba(1, 11, 23, 0.44) 1.04%, rgba(32, 147, 202, 0.44) 99.17%)",
+        //   borderImageSlice: 1,
+        // }}
       >
-        <div className="my-20">
+        <div className="">
           {" "}
           <h2 className="text-lg font-bold text-white xl:text-2xl text-center ">
             Let's Talk
@@ -64,35 +64,42 @@ const ContactForm = () => {
         <div className="form-grid grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 mt-8">
           {[
             // Map over the fields and create input fields
-            { id: "name", placeholder: "Name*", type: "text" },
-            { id: "email", placeholder: "Email*", type: "email" },
+            { id: "name", placeholder: "Full Name*", type: "text" },
+            { id: "email", placeholder: "Email", type: "email" },
             { id: "phone", placeholder: "Phone*", type: "tel" }, // Phone field moved to third position
-            { id: "businessName", placeholder: "Business Name*", type: "text" },
+            { id: "businessName", placeholder: "Business Name", type: "text" },
             {
               id: "yearsInBusiness",
-              placeholder: "Years in Business*",
+              placeholder: "Years in Business",
               type: "text",
             },
             {
               id: "businessCategory",
-              placeholder: "Business Category*",
+              placeholder: "Business Category",
               type: "text",
             },
             {
               id: "currentWebsite",
-              placeholder: "Current Website*",
+              placeholder: "Current Insstagram/Website",
               type: "url",
             },
             {
               id: "interestedIn",
-              placeholder: "I’m interested in (e.g., Website Design)*",
-              type: "text",
+              placeholder: "I’m interested in ",
+              type: "select",
+              options: [
+                "Web Development",
+                "Mobile App Development",
+                "SEO",
+                "Digital Marketing",
+                "Other",
+              ],
             },
-            { id: "businessSize", placeholder: "Business Size*", type: "text" },
-            { id: "budget", placeholder: "Budget*", type: "text" },
+            { id: "businessSize", placeholder: "Business Size", type: "text" },
+            { id: "budget", placeholder: "Budget", type: "text" },
           ].map((field, index) =>
             field.id === "phone" ? (
-              <div key={field.id} className="relative w-[70%] mx-auto">
+              <div key={field.id} className="relative w-[90%] sm:w-[70%] mx-auto">
                 <PhoneInput
                   country={"us"} // Default country code
                   value={phone}
@@ -130,44 +137,61 @@ const ContactForm = () => {
                   placeholder="Phone*" // Placeholder updated to Phone
                 />
               </div>
-            ) : (
+            ) : field.type === "select" ? (
               <div key={field.id} className="relative w-[70%] mx-auto">
-                <input
+                <select
                   id={field.id}
-                  type={field.type}
-                  placeholder=" "
                   required
                   value={inputData[field.id]}
                   onChange={handleInputChange}
-                  onBlur={handleBlur} // Check if the field has a value when it loses focus
+                  onBlur={handleBlur}
+                  className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full border-b-2 border-gray-500 appearance-none pr-8 invalid:text-gray-400" // Added invalid:text-gray-400
+                >
+                  <option value="" disabled selected>
+                    {field.placeholder}
+                  </option>
+                  {field.options.map((option, index) => (
+                    <option key={index} value={option} className="text-white">
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <HiChevronDown className="text-gray-500" />{" "}
+                </div>
+              </div>
+            ) : (
+              <div key={field.id} className="relative  w-[90%] sm:w-[70%] mx-auto">
+                <input
+                  id={field.id}
+                  type={field.type}
+                  required
+                  value={inputData[field.id]}
+                  onChange={handleInputChange}
+                  placeholder={field.placeholder}
+                  onBlur={handleBlur} 
                   className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full  border-b-2 border-gray-500"
                 />
-                <label
-                  htmlFor={field.id}
-                  className="absolute left-1 top-3 text-gray-500  transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-white peer-focus:font-bold peer-valid:top-0 peer-valid:text-white peer-valid:font-bold"
-                >
-                  {field.placeholder}
-                </label>
               </div>
             )
           )}
         </div>
 
         {/* Message Field */}
-        <div className="relative w-[86%] mx-auto mb-28">
+        <div className="relative w-[90%] sm:w-[86%] mx-auto mb-28">
           <textarea
             id="message"
             rows="4"
-            placeholder=" "
+            placeholder="Message*"
             required
-            className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full  border-b-2 border-gray-500"
+            className="peer p-3 min-h-[100px] max-h-[300px] bg-[#041c30] text-white rounded-none focus:outline-none w-full  border-b-2 border-gray-500"
           ></textarea>
-          <label
+          {/* <label
             htmlFor="message"
             className="absolute left-1 top-3 text-gray-500  transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-white peer-focus:font-bold"
           >
             Message*
-          </label>
+          </label> */}
         </div>
 
         {/* Submit Button */}

@@ -6,17 +6,10 @@ import { FaAt } from "react-icons/fa";
 
 const ContactInfo = () => {
   return (
-    <div className="bg-[#020b17] py-12 font-lato">
+    <div className="w-[75%] mx-auto mb-[55px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
       <div
-        className="max-w-5xl mx-auto p-8 mt-8 bg-[#041c30] text-white rounded-xl shadow-lg"
-        style={{
-          transition: "all 0.3s ease-in-out",
-          border: "2px solid",
-          borderRadius: "1rem",
-          borderImageSource:
-            "linear-gradient(133.88deg, rgba(1, 11, 23, 0.44) 1.04%, rgba(32, 147, 202, 0.44) 99.17%)",
-          borderImageSlice: 1,
-        }}
+        className="max-w-5xl mx-auto p-8   bg-[#041c30] text-white rounded-xl shadow-lg"
+      
       >
         {/* Inner content div to apply border-radius */}
         <div className="rounded-xl overflow-hidden">

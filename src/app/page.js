@@ -1,7 +1,7 @@
 "use client";
 import OurProcess from "../components/OurProcess/OurProcess";
 import MainHero from "../components/MainHero";
-import ContactForm from "../components/Contact";
+import ContactForm from "../components/ContactUsPage/ContactForm/index";
 import Stack from "../components/OurServices/Stack";
 import Test from "../components/OurRecentWorks/Test";
 import WhySection from "../components/WhySection1/WhySection";
