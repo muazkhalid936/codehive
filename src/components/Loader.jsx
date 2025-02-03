@@ -1,18 +1,35 @@
+"use client";
+import { useEffect, useState } from "react";
+
 // components/VideoLoader.js
-export default function Loader() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <video autoPlay loop muted style={{ height: "50vh" }}>
-        <source src="/1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  );
+export default function Loader({ children }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <video autoPlay loop muted style={{ height: "50vh" }}>
+          <source src="/1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    );
+  }
+
+  return <div>{children}</div>;
 }
