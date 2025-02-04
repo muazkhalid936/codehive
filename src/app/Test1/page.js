@@ -1,198 +1,272 @@
-"use client";
-import MainHero from "../../components/MainHero";
-import Navbar from "../../components/Navbar";
+"use client"; // If you’re using Next.js 13 App Router, enable client‐side code
+
 import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
 
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../../components/WhySection/WhySection.css";
+export default function Home() {
+  const card1Ref = useRef(null);
+  const card2Ref = useRef(null);
+  const card3Ref = useRef(null);
 
-import dynamic from "next/dynamic";
-const ScrollAnimation = dynamic(
-  () => import("../../components/Home/ScrollAnimation"),
-  {
-    ssr: false,
-  }
-);
-const page = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
+  // -- 2) Setup GSAP animations/positions --
   useEffect(() => {
-    const lenis = new Lenis({
-      smooth: true,
-      lerp: 0.1,
+    // Set initial positions:
+    // card1: left, card2: center, card3: right
+    gsap.set(card1Ref.current, {
+      xPercent: -70,
+      scale: 0.6,
+      filter: "blur(2px)",
+      zIndex: 1,
+    });
+    gsap.set(card2Ref.current, {
+      xPercent: 0,
+      scale: 1,
+      filter: "none",
+      zIndex: 2,
+    });
+    gsap.set(card3Ref.current, {
+      xPercent: 70,
+      scale: 0.6,
+      filter: "blur(2px)",
+      zIndex: 1,
     });
 
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+    // Hover handler: Adjust positions depending on which card is hovered
+    const onEnter = (el) => {
+      if (el === card1Ref.current) {
+        // Hovering card1: card1 moves to center; card2 swaps to left; card3 remains on the right.
+        gsap.to(card1Ref.current, {
+          xPercent: 0,
+          scale: 1,
+          filter: "none",
+          zIndex: 3,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+        gsap.to(card2Ref.current, {
+          xPercent: -70,
+          scale: 0.6,
+          filter: "blur(2px)",
+          zIndex: 1,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+        gsap.to(card3Ref.current, {
+          xPercent: 70,
+          scale: 0.6,
+          filter: "blur(2px)",
+          zIndex: 1,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+      } else if (el === card3Ref.current) {
+        // Hovering card3: card3 moves to center; card2 swaps to right; card1 remains on the left.
+        gsap.to(card3Ref.current, {
+          xPercent: 0,
+          scale: 1,
+          filter: "none",
+          zIndex: 3,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+        gsap.to(card2Ref.current, {
+          xPercent: 70,
+          scale: 0.6,
+          filter: "blur(2px)",
+          zIndex: 1,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+        gsap.to(card1Ref.current, {
+          xPercent: -70,
+          scale: 0.6,
+          filter: "blur(2px)",
+          zIndex: 1,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+      } else if (el === card2Ref.current) {
+        // Hovering card2 (center) leaves everything unchanged.
+        gsap.to(card2Ref.current, {
+          xPercent: 0,
+          scale: 1,
+          filter: "none",
+          zIndex: 3,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+        gsap.to(card1Ref.current, {
+          xPercent: -70,
+          scale: 0.6,
+          filter: "blur(2px)",
+          zIndex: 1,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+        gsap.to(card3Ref.current, {
+          xPercent: 70,
+          scale: 0.6,
+          filter: "blur(2px)",
+          zIndex: 1,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+      }
     };
-    requestAnimationFrame(raf);
 
-    // const headingAnimations = () => {
-    //   const applyGradient = () => {
-    //     const tl = gsap.timeline({
-    //       scrollTrigger: {
-    //         trigger: ".why-section-container",
-    //         start: "300px center", // Adjusted to add a slight delay
-    //         end: "+=2500",
-    //         scrub: true,
-    //       },
-    //     });
+    // Hover out handler: Reset all cards to their original positions.
+    const onLeave = () => {
+      gsap.to(card1Ref.current, {
+        xPercent: -70,
+        scale: 0.6,
+        filter: "blur(2px)",
+        zIndex: 1,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+      gsap.to(card2Ref.current, {
+        xPercent: 0,
+        scale: 1,
+        filter: "none",
+        zIndex: 2,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+      gsap.to(card3Ref.current, {
+        xPercent: 70,
+        scale: 0.6,
+        filter: "blur(2px)",
+        zIndex: 1,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+    };
 
-    //     // Add a label for the first animation
-    //     tl.add("firstAnimation").to(
-    //       ".why-section-heading-1",
-    //       {
-    //         delay: 0.3, // Delay the animation
-    //         opacity: 0,
-    //         yPercent: -200,
-    //         duration: 2, // Duration of the animation
-    //       },
-    //       "firstAnimation" // Start at this label
-    //     );
+    // Store handler functions in variables for cleanup
+    const handleCard1Enter = () => onEnter(card1Ref.current);
+    const handleCard2Enter = () => onEnter(card2Ref.current);
+    const handleCard3Enter = () => onEnter(card3Ref.current);
 
-    //     // Add a label for the second animation
-    //     tl.add("secondAnimation", "+=0.5") // Start 0.5 seconds after the first
-    //       .to(
-    //         ".why-section-heading-2",
-    //         {
-    //           delay: 0.3, // Delay the animation
-    //           yPercent: -200, // Consistent yPercent
-    //           duration: 2, // Duration of the animation
-    //           onUpdate: function () {
-    //             // Use this.progress (GSAP binds `this` to the animation instance)
-    //             const progress = this.progress();
+    // Attach event listeners for hover in and out.
+    card1Ref.current.addEventListener("mouseenter", handleCard1Enter);
+    card2Ref.current.addEventListener("mouseenter", handleCard2Enter);
+    card3Ref.current.addEventListener("mouseenter", handleCard3Enter);
 
-    //             // Interpolate between colors
-    //             const startColor = [255, 255, 255]; // White
-    //             const endColor = [32, 157, 217]; // #209dd9 (light blue)
+    card1Ref.current.addEventListener("mouseleave", onLeave);
+    card2Ref.current.addEventListener("mouseleave", onLeave);
+    card3Ref.current.addEventListener("mouseleave", onLeave);
 
-    //             // Calculate current color based on progress
-    //             const currentColor = startColor.map((start, index) =>
-    //               Math.round(start + (endColor[index] - start) * progress)
-    //             );
+    // Cleanup event listeners when the component unmounts.
+    return () => {
+      card1Ref.current.removeEventListener("mouseenter", handleCard1Enter);
+      card2Ref.current.removeEventListener("mouseenter", handleCard2Enter);
+      card3Ref.current.removeEventListener("mouseenter", handleCard3Enter);
 
-    //             // Apply the gradient with the calculated color
-    //             const heading = document.querySelector(".colorText2");
-    //             if (heading) {
-    //               heading.style.background = `linear-gradient(90deg, white, rgb(${currentColor.join(
-    //                 ", "
-    //               )}), rgb(${currentColor.join(", ")}))`;
-    //               heading.style.webkitBackgroundClip = "text";
-    //               heading.style.color = "transparent";
-    //             }
-    //           },
-    //         },
-    //         "firstAnimation" // Start at this label
-    //       );
-
-    //     // Add a label for the third animation
-    //     tl.add("thirdAnimation", "+=0.5") // Start 0.5 seconds after the second
-    //       .to(
-    //         ".why-section-heading-3",
-    //         {
-    //           delay: 0.3, // Delay the animation
-
-    //           yPercent: -150, // Consistent yPercent
-    //           duration: 2, // Duration of the animation
-    //         },
-    //         "firstAnimation" // Start at this label
-    //       );
-    //     tl.add("thirdAnimation", "+=0.5") // Start 0.5 seconds after the second
-    //       .to(
-    //         ".why-section-heading-2",
-    //         {
-    //           yPercent: -350, // Consistent yPercent
-    //           opacity: 0,
-    //           // delay: 3, // Delay the animation
-
-    //           duration: 0.5, // Duration of the animation
-    //         },
-    //         "secondAnimation-=0.3" // Start at this label
-    //       )
-    //       .to(
-    //         ".why-section-heading-3",
-    //         {
-    //           yPercent: -350, // Consistent yPercent
-    //           // opacity: 0,
-    //           // delay: 3, // Delay the animation
-    //           onUpdate: function () {
-    //             // Use this.progress (GSAP binds `this` to the animation instance)
-    //             const progress = this.progress();
-
-    //             // Interpolate between colors
-    //             const startColor = [255, 255, 255]; // White
-    //             const endColor = [32, 157, 217]; // #209dd9 (light blue)
-
-    //             // Calculate current color based on progress
-    //             const currentColor = startColor.map((start, index) =>
-    //               Math.round(start + (endColor[index] - start) * progress)
-    //             );
-
-    //             // Apply the gradient with the calculated color
-    //             const heading = document.querySelector(".colorText3");
-    //             if (heading) {
-    //               heading.style.background = `linear-gradient(90deg, white, rgb(${currentColor.join(
-    //                 ", "
-    //               )}), rgb(${currentColor.join(", ")}))`;
-    //               heading.style.webkitBackgroundClip = "text";
-    //               heading.style.color = "transparent";
-    //             }
-    //           },
-
-    //           duration: 1, // Duration of the animation
-    //         },
-    //         "secondAnimation-=0.3" // Start at this label
-    //       );
-    //   };
-
-    //   applyGradient(".why-section-heading-1");
-    // };
-
-    // headingAnimations();
+      card1Ref.current.removeEventListener("mouseleave", onLeave);
+      card2Ref.current.removeEventListener("mouseleave", onLeave);
+      card3Ref.current.removeEventListener("mouseleave", onLeave);
+    };
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <div className="bg-[#000B17]">
-        <MainHero />
-
-        <div className="container why-animate bg-white h-[50vh] items-center flex justify-center  mx-auto">
-          <p className="animated-text-long1 bg-orange-500 main-heading header text-[50px] text-white">
-            WHy You Choose Us
+    <main style={styles.main}>
+      <div style={styles.wrapper}>
+        <div
+          ref={card1Ref}
+          style={{
+            ...styles.card,
+            backgroundImage: "url('/back.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="flex flex-col items-center gap-5 justify-center"
+        >
+          <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent ">
+            Our Vision
+          </h2>
+          <p className="main_hero_slogan">
+            Our vision is to become leaders in the app development industry,
+            breaking down barriers to market entry for businesses of all sizes.
+            We aspire to create a world where every business, regardless of its
+            budget or resources, has access to high-quality, custom-built
+            digital solutions that enhance their competitiveness and success.",
           </p>
         </div>
-
-        <div className="why-section-container  container flex flex-col  mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
-          {/* Images */}
-          <div
-            className="w-full animation flex  justify-center  "
-            // style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1 }}
-          >
-            <ScrollAnimation />
-          </div>
-
-          {/* Headings */}
-          <div className="  text-[45px] justify-start  flex flex-col ">
-            <h1 className="why-section-heading-1  main-heading ">
-              Unrivaled <span className="colorText1">Expertise</span>
-            </h1>
-            <h1 className="why-section-heading-2   main-heading ">
-              Customer-Centric
-              <span className="colorText2 ml-4">Approach</span>
-            </h1>
-            <h1 className="why-section-heading-3  main-heading ">
-              End-to-End
-              <span className="colorText3 ml-4">Support</span>
-            </h1>
-          </div>
+        <div
+          ref={card2Ref}
+          style={{
+            ...styles.card,
+            backgroundImage: "url('/back.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="flex flex-col items-center gap-5 justify-center"
+        >
+          <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent ">
+            Our Mission
+          </h2>
+          <p className="main_hero_slogan">
+            Our mission is to transform innovative visions into dynamic
+            applications for emerging businesses. We strive to deliver top-tier,
+            cost-effective app development services, equipping every business
+            with the digital tools they need to thrive in today’s fast-paced
+            market.
+          </p>
+        </div>
+        <div
+          className="flex flex-col items-center gap-5 justify-center"
+          ref={card3Ref}
+          style={{
+            ...styles.card,
+            backgroundImage: "url('/back.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent ">
+            Our Values
+          </h2>
+          <p className="main_hero_slogan">
+            Our values drive every decision, strategy, and service we provide.
+            We prioritize transparent relationships built on shared goals and
+            mutual respect, recognizing that our success is tied to our clients'
+            achievements. Committed to supporting them at every step, we harness
+            the transformative power of technology and ideas to deliver tailored
+            digital solutions accessible to businesses of all sizes.
+          </p>
         </div>
       </div>
-    </>
+    </main>
   );
-};
+}
 
-export default page;
+const styles = {
+  main: {
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "2rem",
+  },
+  wrapper: {
+    position: "relative",
+    // width: "80vw",
+    width: "100%",
+    height: "600px",
+    overflow: "visible",
+  },
+  card: {
+    position: "absolute",
+    top: "50%",
+    left: "40%",
+    width: "40%",
+    height: "280px",
+    margin: "-100px 0 0 -150px",
+    borderRadius: "25px",
+    boxShadow: "0 0 20px rgba(0,0,0,0.2)",
+    padding: "1rem",
+    textAlign: "center",
+    transition: "transform 0.3s, filter 0.3s",
+  },
+};

@@ -15,14 +15,14 @@ const ScrollAnimation = () => {
         renderer: "svg",
         loop: false,
         autoplay: false,
-        path: "https://cdn.lottielab.com/l/D5rXUhuuYwzFM7.json",
+        path: "https://cdn.lottielab.com/l/CRLqHNj6eWP9c9.json",
       });
     }
 
     const handleScroll = () => {
       if (!animationInstance || !isIntersecting.current) return;
 
-      const scrollPosition = window.scrollY+300;
+      const scrollPosition = window.scrollY;
       const maxScroll = document.body.scrollHeight - window.innerHeight;
       const progress = Math.min(
         (scrollPosition / maxScroll) * 5, // Adjusted to start animation immediately
@@ -62,7 +62,7 @@ const ScrollAnimation = () => {
 
   return (
     <div className=" ">
-      <div className="fix-div sm:mt-[150px]   2xl:mt-[200px] flex justify-center">
+      <div className="fix-div sm:mt-[150px]    flex justify-center">
         <div
           className="lottie   sm:w-[450px] 2xl:w-[500px] "
           ref={animationContainer}

@@ -53,8 +53,7 @@ import Lenis from "@studio-freight/lenis";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
-import { Stage } from "@react-three/drei";
-
+import { useRouter } from "next/navigation";
 gsap.registerPlugin(ScrollTrigger);
 
 // Lazy load the IphoneModel component
@@ -65,6 +64,7 @@ const IphoneModel = dynamic(() =>
 );
 
 const ScrollAnimation = () => {
+  const router = useRouter();
   const [scrollY, setScrollY] = useState(0);
   const [startRotation, setStartRotation] = useState(false);
   const texturePaths = [
@@ -148,8 +148,10 @@ const ScrollAnimation = () => {
           { x: 0, opacity: 1, duration: 0.5 },
           index + 0.5
         );
-        const startRotation = Math.floor(index / 2) * Math.PI * 4;
-        const endRotation = startRotation + Math.PI * 2;
+        const startRotation = 5;
+        const endRotation = 11.3;
+        const midRotation = (startRotation + endRotation) / 2;
+
         tl.to(
           {},
           {
@@ -170,11 +172,15 @@ const ScrollAnimation = () => {
                   sectionProgress
                 );
 
-                if( meshRef.current){
+                console.log(
+                  "rotationValue",
+                  Math.abs(rotationValue - midRotation)
+                );
 
+                if (meshRef.current) {
                   meshRef.current.rotation.y = rotationValue;
-                }                const earlyPoint = startRotation + Math.PI * 0.5;
-                if (Math.abs(rotationValue - earlyPoint) < 0.1) {
+                }
+                if (Math.abs(rotationValue - midRotation) < 0.4) {
                   setTextureUrl(texturePaths[index]);
                 }
               } else {
@@ -184,12 +190,10 @@ const ScrollAnimation = () => {
                   endRotation,
                   sectionProgress
                 );
-                if( meshRef.current){
-
+                if (meshRef.current) {
                   meshRef.current.rotation.y = rotationValue;
                 }
-                const earlyPoint = startRotation + Math.PI * 0.5;
-                if (Math.abs(rotationValue - earlyPoint) < 0.1) {
+                if (Math.abs(rotationValue - midRotation) < 0.4) {
                   setTextureUrl(texturePaths[index - 1]);
                 }
               }
@@ -197,7 +201,7 @@ const ScrollAnimation = () => {
 
             ease: "none",
           },
-          index
+          index + 0.2
         );
       }
     });
@@ -264,7 +268,7 @@ const ScrollAnimation = () => {
                   onClick={() => router.push(item.link)}
                   className="mt-2 xl:text-xl text-white"
                 >
-                  Contact Us
+                  Read More{" "}
                 </button>
                 <div className="bg-white text-black mt-2 rounded-full">
                   <FiArrowUpRight className="w-5 h-5" />
@@ -273,7 +277,7 @@ const ScrollAnimation = () => {
             </div>
 
             <div className="w-1/2 iphone">
-             <Canvas
+              <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
@@ -282,7 +286,7 @@ const ScrollAnimation = () => {
                   maxHeight: "700px",
                 }}
               >
-                    <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
+                <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
               </Canvas>
             </div>
           </div>

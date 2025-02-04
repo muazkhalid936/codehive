@@ -29,7 +29,7 @@ const LongRevealHeading = (params) => {
         scale: 0.5,
         scrollTrigger: {
           trigger: textRef.current,
-          start: "top center", // Start when text is in the center of the viewport
+          start: "top 40%", // Start when text is in the center of the viewport
           end: "+=2600", // Customize based on the desired scroll length
           pin: true, // Pin the text in place
           scrub: 1, // Smoothly animate based on scroll
@@ -55,10 +55,10 @@ const LongRevealHeading = (params) => {
   }, []);
 
   return (
-    <div className="container h-[50vh] mb-[1500px] mt-[-800px] items-center flex justify-center  mx-auto">
+    <div className="container h-[50vh]  mb-[1500px] mt-[-800px] items-center flex justify-center  mx-auto">
       <p
         ref={textRef}
-        className="animated-text-long1 main-heading header text-[60px] text-white"
+        className="animated-text-long1  main-heading header text-4xl sm:text-[60px] text-white"
       >
         {params.text}
       </p>

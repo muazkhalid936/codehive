@@ -21,11 +21,7 @@ const WhoWeAre = () => {
             Who are <span className="  text-[#219DD9] "> we? </span>
           </h2>
           <p className=" w-[90%]  sm:mt-5 main_hero_slogan ">
-            Code Hive is driven by dynamism, client focus, and technological
-            strength. Since inception, it has been dedicated to building
-            cutting-edge iOS and Android applications, helping emerging
-            businesses bring products to market efficiently, even with tight
-            time and budget constraints.
+          We are a passionate team of experts who combine creativity, strategy, and technical proficiency to deliver impactful results for projects of every scale.
           </p>
         </div>
 

@@ -30,7 +30,7 @@ const ShortRevealHeading = (params) => {
         scale: 0.5,
         scrollTrigger: {
           trigger: textRef.current,
-          start: "top 50%", // Start when text is in the center of the viewport
+          start: "top 40%", // Start when text is in the center of the viewport
           end: "+=1600", // Customize based on the desired scroll length
           pin: true, // Pin the text in place
           scrub: 1, // Smoothly animate based on scroll

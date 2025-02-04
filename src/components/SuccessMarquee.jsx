@@ -19,7 +19,7 @@ const SuccessMarquee = () => {
             slidesPerView={3}
             // centeredSlides={true}
             modules={[Autoplay, EffectFade, History, EffectCards]}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
             loopAddBlankSlides={false}
             loopPreventsSliding={false}
             rtl={true}
@@ -40,19 +40,21 @@ const SuccessMarquee = () => {
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img
-                  src="/talent.png"
+                  src="/mar1.png"
                   alt="client-logo"
                   className="w-10 h-10"
                 />
                 <p className="px-2 font-bold font-lato">
-                  20000+ Successful Clients
+                  5+ Years of Experience
                 </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
-                <img src="/star.png" alt="client-logo" className="w-10 h-10" />
-                <p className="px-2 font-bold font-lato">650+ Talent Globally</p>
+                <img src="/client.png" alt="client-logo" className="w-10 h-10" />
+                <p className="px-2 font-bold font-lato">
+                  500+ Successful Clients
+                </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -62,28 +64,26 @@ const SuccessMarquee = () => {
                   alt="client-logo"
                   className="w-10 h-10"
                 />
-                <p className="px-2 font-bold font-lato">
-                  4+ Million revenue enabled
-                </p>
+                <p className="px-2 font-bold font-lato">50+ Talent Globally</p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
-                <img src="/star.png" alt="client-logo" className="w-10 h-10" />
+                <img src="/mar3.png" alt="client-logo" className="w-10 h-10" />
                 <p className="px-2 font-bold font-lato">
-                  20000+ Successful Clients
+                  20+ Partners Globally 
                 </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img
-                  src="/client.png"
+                  src="/mar2 .png"
                   alt="client-logo"
                   className="w-10 h-10"
                 />
                 <p className="px-2 font-bold font-lato">
-                  20000+ Successful Clients
+                  500+ Projects Completion{" "}
                 </p>
               </div>
             </SwiperSlide>

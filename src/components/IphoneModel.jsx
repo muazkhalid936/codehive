@@ -6,6 +6,7 @@ import { Stage } from "@react-three/drei";
 
 const texturePaths = [
   "/iphoneModel/Car wash.jpg",
+  "/iphoneModel/Car wash.jpg",
   "/iphoneModel/Delivery.png",
   "/iphoneModel/Health Care.jpg",
   "/iphoneModel/Booking.jpg",

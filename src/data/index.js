@@ -4,21 +4,22 @@ import Technologies from "../components/Our-Work/Technologies";
 export const ourMissionData = [
   {
     id: 1,
-    title: "Our Mission",
+    title: "Our Vision",
+
     description:
-      "Our vision at Code Hive is to become leaders in the app development industry, breaking down barriers to market entry for businesses of all sizes. We aspire to create a world where every business, regardless of its budget or resources, has access to high-quality, custom-built digital solutions that enhance their competitiveness and success.",
+      "Our vision is to become leaders in the app development industry, breaking down barriers to market entry for businesses of all sizes. We aspire to create a world where every business, regardless of its budget or resources, has access to high-quality, custom-built digital solutions that enhance their competitiveness and success.",
   },
   {
     id: 2,
-    title: "Our Vision",
+    title: "Our Mission",
     description:
-      "At Code Hive, our values drive every decision, strategy, and service we provide. We prioritize transparent relationships built on shared goals and mutual respect, recognizing that our success is tied to our clients' achievements. Committed to supporting them at every step, we harness the transformative power of technology and ideas to deliver tailored digital solutions accessible to businesses of all sizes.",
+      "Our mission is to transform innovative visions into dynamic applications for emerging businesses. We strive to deliver top-tier, cost-effective app development services, equipping every business with the digital tools they need to thrive in today’s fast-paced market.",
   },
   {
     id: 3,
     title: "Our Values",
     description:
-      "At Code Hive, our mission is to transform innovative visions into dynamic applications for emerging businesses. We strive to deliver top-tier, cost-effective app development services, equipping every business with the digital tools they need to thrive in today’s fast-paced market.",
+      "Our values drive every decision, strategy, and service we provide. We prioritize transparent relationships built on shared goals and mutual respect, recognizing that our success is tied to our clients' achievements. Committed to supporting them at every step, we harness the transformative power of technology and ideas to deliver tailored digital solutions accessible to businesses of all sizes.",
   },
 ];
 
@@ -146,34 +147,34 @@ export const WhatMakesUsDifferentData = {
     {
       id: 1,
       title: "We Set High Standards",
-      img:'/make/1.png',
+      img: "/make/1.png",
       description:
-      "The one thing we have in common is passion to do what we do. We push ourselves creatively every day because this is what we strive for, and not just because we have to.",
+        "The one thing we have in common is passion to do what we do. We push ourselves creatively every day because this is what we strive for, and not just because we have to.",
     },
     {
       id: 2,
-      img:'/make/2.png',
+      img: "/make/2.png",
       title: "We Are Your Partners",
       description:
-      "Together, we stand as your dedicated partners, united by our unwavering passion for what we do and committed to pushing creative boundaries every step of the way.",
+        "Together, we stand as your dedicated partners, united by our unwavering passion for what we do and committed to pushing creative boundaries every step of the way.",
     },
     {
       id: 3,
-      img:'/make/3.png',
+      img: "/make/3.png",
       title: "Integrity and Transparency",
       description:
-      "We value integrity above all. At Codehive, we operate with complete transparency, ensuring open communication and trust at every step of the process.",
+        "We value integrity above all. At Codehive, we operate with complete transparency, ensuring open communication and trust at every step of the process.",
     },
     {
       id: 4,
-      img:'/make/4.png',
+      img: "/make/4.png",
       title: "Agile and Adaptable",
       description:
-      "In a fast-paced digital world, adaptability is key. Our agile approach allows us to respond quickly to changes and deliver solutions that are both flexible and scalable.",
+        "In a fast-paced digital world, adaptability is key. Our agile approach allows us to respond quickly to changes and deliver solutions that are both flexible and scalable.",
     },
     {
       id: 5,
-      img:'/make/5.png',
+      img: "/make/5.png",
       title: "Global Reach, Local Touch",
       description:
         "While we operate on a global scale, we maintain a personal touch with every client. Whether you're a small business or a large enterprise.",
@@ -246,7 +247,7 @@ export const aboutHeroData = {
   bgImage: "/Hero/BGImage.png",
   title: "About Codehive",
   description:
-    "Codehive has more than two decades of expertise in the world of experience design, software engineering and cloud technologies. We help enterprises develop digital products and accelerate business transformation through cloud solutions.",
+    "Code Hive is founded on the principles of dynamism, client focus, and technological power. Our journey has been deeply intertwined with the process of creating state-of-the-art applications for both iOS and Android platforms. Since our inception, our vision has been to streamline the pathway to market for emerging businesses, no matter how challenging their time and budget constraints.",
   rightImage: "/Hero/HeroAboutus.png",
 };
 export const contactHeroData = {
@@ -982,28 +983,28 @@ export const services = [
           img: "/services/web-dev/1.jpeg",
           title: "Discovery and Planning",
           description:
-          "We begin by understanding your business goals, target audience, and project requirements to create a comprehensive plan.",
+            "We begin by understanding your business goals, target audience, and project requirements to create a comprehensive plan.",
         },
         {
           id: "02",
           title: "Design and Prototyping",
           img: "/services/web-dev/2.jpeg",
           description:
-          "Our team designs user-friendly layouts and interactive prototypes to visualize the website's look and feel before development.",
+            "Our team designs user-friendly layouts and interactive prototypes to visualize the website's look and feel before development.",
         },
         {
           img: "/services/web-dev/3.jpeg",
           id: "03",
           title: "Development",
           description:
-          "Using the latest technologies, we build the website, integrating frontend and backend components to ensure functionality and performance.",
+            "Using the latest technologies, we build the website, integrating frontend and backend components to ensure functionality and performance.",
         },
         {
           img: "/services/web-dev/4.jpeg",
           id: "04",
           title: "Testing and Quality Assurance",
           description:
-          "We rigorously test the website for bugs, responsiveness, and compatibility across devices and browsers to ensure a smooth user experience.",
+            "We rigorously test the website for bugs, responsiveness, and compatibility across devices and browsers to ensure a smooth user experience.",
         },
         {
           id: "05",
@@ -1190,32 +1191,32 @@ export const services = [
       title: "Process of Business Intelligence & Data Analysis",
       steps: [
         {
-         img: "/services/business-intelligence/1.jpeg",
-         id: "01",
-         title: "Data Collection",
-         description:
-         "Gather relevant data from various sources, including databases, spreadsheets, and external systems.",
+          img: "/services/business-intelligence/1.jpeg",
+          id: "01",
+          title: "Data Collection",
+          description:
+            "Gather relevant data from various sources, including databases, spreadsheets, and external systems.",
         },
         {
           img: "/services/business-intelligence/2.jpeg",
           id: "02",
           title: "Data Preparation",
           description:
-          "Clean and organize the collected data, ensuring it is accurate and formatted for analysis.",
+            "Clean and organize the collected data, ensuring it is accurate and formatted for analysis.",
         },
         {
           img: "/services/business-intelligence/3.jpeg",
           id: "03",
           title: "Data Analysis",
           description:
-          "Utilize statistical methods and tools to analyze the data, identifying trends, patterns, and insights.",
+            "Utilize statistical methods and tools to analyze the data, identifying trends, patterns, and insights.",
         },
         {
           img: "/services/business-intelligence/4.jpeg",
           id: "04",
           title: "Data Visualization",
           description:
-          "Create visual representations of the analyzed data through charts, graphs, and dashboards to convey findings effectively.",
+            "Create visual representations of the analyzed data through charts, graphs, and dashboards to convey findings effectively.",
         },
         {
           img: "/services/business-intelligence/5.jpeg",
@@ -1281,8 +1282,6 @@ export const services = [
     },
   },
 ];
-
-
 
 export const industries = [
   {

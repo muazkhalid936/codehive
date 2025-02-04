@@ -88,10 +88,11 @@ const ContactForm = () => {
               placeholder: "I’m interested in ",
               type: "select",
               options: [
-                "Web Development",
-                "Mobile App Development",
-                "SEO",
-                "Digital Marketing",
+                "UI/UX Design",
+                "App Development",
+                "Website Development",
+                "Software Development",
+                "Consultation",
                 "Other",
               ],
             },
@@ -99,7 +100,10 @@ const ContactForm = () => {
             { id: "budget", placeholder: "Budget", type: "text" },
           ].map((field, index) =>
             field.id === "phone" ? (
-              <div key={field.id} className="relative w-[90%] sm:w-[70%] mx-auto">
+              <div
+                key={field.id}
+                className="relative w-[90%] sm:w-[70%] mx-auto"
+              >
                 <PhoneInput
                   country={"us"} // Default country code
                   value={phone}
@@ -161,7 +165,10 @@ const ContactForm = () => {
                 </div>
               </div>
             ) : (
-              <div key={field.id} className="relative  w-[90%] sm:w-[70%] mx-auto">
+              <div
+                key={field.id}
+                className="relative  w-[90%] sm:w-[70%] mx-auto"
+              >
                 <input
                   id={field.id}
                   type={field.type}
@@ -169,7 +176,7 @@ const ContactForm = () => {
                   value={inputData[field.id]}
                   onChange={handleInputChange}
                   placeholder={field.placeholder}
-                  onBlur={handleBlur} 
+                  onBlur={handleBlur}
                   className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full  border-b-2 border-gray-500"
                 />
               </div>

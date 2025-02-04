@@ -15,7 +15,7 @@ const ImageScrollEffect = () => {
       scrollTrigger: {
         trigger: ".why-section-container",
         start: "top top",
-        end: "+=2500", // Total scroll length
+        end: "+=4000", // Total scroll length
         scrub: true,
         pin: true, // Pin the entire container
       },
@@ -60,30 +60,27 @@ const ImageScrollEffect = () => {
               applyGradient(".colorText2", progress);
             },
           },
-          "-=1.5" 
+          "-=1.5"
         )
 
         .to(
           ".why-section-heading-3",
           {
-            yPercent: -150, 
+            yPercent: -150,
             duration: 2,
           },
-          "-=1.5" 
+          "-=1.5"
         )
 
-        .to(
-          ".why-section-heading-2",
-          {
-            yPercent: -250,
-            opacity: 0,
-            duration: 0.5,
-          },
-        )
+        .to(".why-section-heading-2", {
+          yPercent: -250,
+          opacity: 0,
+          duration: 0.5,
+        })
         .to(
           ".why-section-heading-3",
           {
-            yPercent: -230,
+            yPercent: -300,
             // opacity: 0,
             onUpdate: function () {
               const progress = this.progress();
@@ -100,14 +97,14 @@ const ImageScrollEffect = () => {
 
   return (
     <>
-      <div className="why-section-container container flex flex-col mb-[100px]  mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
+      <div className="why-section-container container flex flex-col   mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
         {/* Images */}
         <div className="w-full animation flex  justify-center  ">
           <ScrollAnimation />
         </div>
 
         {/* Headings */}
-        <div className="  text-[60px] justify-start  flex flex-col ">
+        <div className=" text-4xl  sm:text-[60px] justify-start  flex flex-col ">
           <h1 className="why-section-heading-1  main-heading ">
             Unrivaled <span className="colorText1">Expertise</span>
           </h1>

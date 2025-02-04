@@ -15,13 +15,13 @@ const MainHero = () => {
           <br />
           TAILORED TO YOUR <br /> BUSINESS NEEDS
         </p>
-        <p className=" main_hero_slogan  ">
+        <p className=" main_hero_slogan z-40  ">
           Your journey to digital transformation starts here. Specializing in
           innovative software development, we craft scalable, user-centric
           solutions that elevate brands, empower businesses, and exceed
           expectations in the digital age.
         </p>
-        <div className=" flex justify-start items-start flex-1 gap-2">
+        {/* <div className=" flex justify-start items-start flex-1 gap-2">
           <button
             className="xl:text-xl font-lato flex gap-2 items-center "
             onClick={() => router.push(link)}
@@ -31,12 +31,12 @@ const MainHero = () => {
               <FiArrowUpRight className="w-5 h-5" />
             </div>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Spline Component */}
       <div
-        className="flex flex-1 spline_model absolute -top-[100px]  md:top-5 h-[400px] xl:-top-14 md:scale-75 xl:scale-[0.8] 
+        className="flex flex-1 spline_model absolute -top-[100px] scale-50   md:top-5 h-[400px] xl:-top-14 md:scale-75 xl:scale-[0.8] 
        w-[850px] -right-[21rem]  md:-right-60 xl:-right-44  justify-end text-white items-end"
       >
         <Suspense>
