@@ -78,7 +78,7 @@ const SuccessMarquee = () => {
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img
-                  src="/mar2 .png"
+                  src="/mar2.png"
                   alt="client-logo"
                   className="w-10 h-10"
                 />
