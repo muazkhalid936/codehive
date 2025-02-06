@@ -17,7 +17,7 @@ const ImageScrollEffect = () => {
       scrollTrigger: {
         trigger: ".why-section-container",
         start: "top top",
-        end: "+=4000", // Total scroll length
+        end: "+=8000", // Total scroll length
         scrub: true,
         pin: true, // Pin the entire container
       },

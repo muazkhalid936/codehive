@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./WhySection.css";
-// import ScrolAnimation from "../Home/ScrollAnimation";
 import dynamic from "next/dynamic";
+
 const ScrollAnimation = dynamic(() => import("../Home/ScrollAnimation"), {
   ssr: false,
 });
@@ -12,11 +12,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ImageScrollEffect = () => {
   useEffect(() => {
+    // Desktop GSAP timeline animations
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".why-section-container",
         start: "top top",
-        end: "+=2500", // Total scroll length
+        end: "+=5000", // Total scroll length
         scrub: true,
         pin: true, // Pin the entire container
       },
@@ -43,156 +44,127 @@ const ImageScrollEffect = () => {
     };
 
     const headingAnimations = () => {
-      const applyGradient = (selector, startYPercent = -10) => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".why-section-container",
-            start: "300px center", // Adjusted to add a slight delay
-            end: "+=2500",
-            scrub: true,
-          },
-        });
-
-        // Add a label for the first animation
-        tl.add("firstAnimation").to(
-          ".why-section-heading-1",
+      timeline
+        // Animate heading 1 out
+        .to(".why-section-heading-1", {
+          opacity: 0,
+          yPercent: -100,
+          duration: 0.5,
+        })
+        // Animate heading 2 in and apply gradient
+        .to(
+          ".why-section-heading-2",
           {
-            delay: 0.3, // Delay the animation
-            opacity: 0,
-            yPercent: -100,
-            duration: 2, // Duration of the animation
+            yPercent: -200, // Move to the center
+            duration: 1,
+            onUpdate: function () {
+              const progress = this.progress();
+              applyGradient(".colorText2", progress);
+            },
           },
-          "firstAnimation" // Start at this label
+          "<"
+        )
+        .to(
+          ".why-section-heading-3",
+          {
+            yPercent: -200,
+            duration: 1,
+          },
+          "<"
+        )
+        .to(
+          ".why-section-heading-2",
+          {
+            yPercent: -250,
+            opacity: 0,
+            // duration: 1,
+          } // Delay before animating the next heading
+        )
+        .to(
+          ".why-section-heading-3",
+          {
+            yPercent: -300,
+            onUpdate: function () {
+              const progress = this.progress();
+              applyGradient(".colorText3", progress);
+            },
+            // duration: 1,
+          },
+          "<"
         );
-
-        // Add a label for the second animation
-        tl.add("secondAnimation", "+=0.5") // Start 0.5 seconds after the first
-          .to(
-            ".why-section-heading-2",
-            {
-              delay: 0.3, // Delay the animation
-              yPercent: -100, // Consistent yPercent
-              duration: 2, // Duration of the animation
-              onUpdate: function () {
-                // Use this.progress (GSAP binds `this` to the animation instance)
-                const progress = this.progress();
-
-                // Interpolate between colors
-                const startColor = [255, 255, 255]; // White
-                const endColor = [32, 157, 217]; // #209dd9 (light blue)
-
-                // Calculate current color based on progress
-                const currentColor = startColor.map((start, index) =>
-                  Math.round(start + (endColor[index] - start) * progress)
-                );
-
-                // Apply the gradient with the calculated color
-                const heading = document.querySelector(".colorText2");
-                if (heading) {
-                  heading.style.background = `linear-gradient(90deg, white, rgb(${currentColor.join(
-                    ", "
-                  )}), rgb(${currentColor.join(", ")}))`;
-                  heading.style.webkitBackgroundClip = "text";
-                  heading.style.color = "transparent";
-                }
-              },
-            },
-            "firstAnimation" // Start at this label
-          );
-
-        // Add a label for the third animation
-        tl.add("thirdAnimation", "+=0.5") // Start 0.5 seconds after the second
-          .to(
-            ".why-section-heading-3",
-            {
-              delay: 0.3, // Delay the animation
-
-              yPercent: -100, // Consistent yPercent
-              duration: 2, // Duration of the animation
-            },
-            "firstAnimation" // Start at this label
-          );
-        tl.add("thirdAnimation", "+=0.5") // Start 0.5 seconds after the second
-          .to(
-            ".why-section-heading-2",
-            {
-              yPercent: -200, // Consistent yPercent
-              opacity: 0,
-              // delay: 2, // Delay the animation
-
-              duration: 0.5, // Duration of the animation
-            },
-            "secondAnimation+=1" // Start at this label
-          )
-          .to(
-            ".why-section-heading-3",
-            {
-              yPercent: -300, // Consistent yPercent
-              // opacity: 0,
-              // delay: 2, // Delay the animation
-              onUpdate: function () {
-                // Use this.progress (GSAP binds `this` to the animation instance)
-                const progress = this.progress();
-
-                // Interpolate between colors
-                const startColor = [255, 255, 255]; // White
-                const endColor = [32, 157, 217]; // #209dd9 (light blue)
-
-                // Calculate current color based on progress
-                const currentColor = startColor.map((start, index) =>
-                  Math.round(start + (endColor[index] - start) * progress)
-                );
-
-                // Apply the gradient with the calculated color
-                const heading = document.querySelector(".colorText3");
-                if (heading) {
-                  heading.style.background = `linear-gradient(90deg, white, rgb(${currentColor.join(
-                    ", "
-                  )}), rgb(${currentColor.join(", ")}))`;
-                  heading.style.webkitBackgroundClip = "text";
-                  heading.style.color = "transparent";
-                }
-              },
-
-              duration: 1, // Duration of the animation
-            },
-            "secondAnimation+=1" // Start at this label
-          );
-      };
-
-      applyGradient(".why-section-heading-1");
     };
 
     headingAnimations();
+
+    // Mobile animations
+    // Select all mobile items (each containing an image and a heading)
+    const mobileItems = document.querySelectorAll(".mobile-item");
+    mobileItems.forEach((item) => {
+      gsap.fromTo(
+        item,
+        { scale: 0, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1,
+          // ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
   }, []);
 
   return (
     <>
-      <div className="why-section-container container flex flex-col  mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
+      {/* Desktop Div */}
+      <div className="why-section-container  hidden container sm:flex flex-col mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
         {/* Images */}
-        <div
-          className="w-full animation flex  justify-center  "
-          // style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1 }}
-        >
+        <div className="w-full animation flex justify-center">
           <ScrollAnimation />
         </div>
 
         {/* Headings */}
-        <div className="  text-[60px] justify-start  flex flex-col ">
-          <h1 className="why-section-heading-1  main-heading ">
+        <div className="text-4xl sm:text-[60px] justify-start flex flex-col">
+          <h1 className="why-section-heading-1 main-heading">
             Unrivaled <span className="colorText1">Expertise</span>
           </h1>
-          <h1 className="why-section-heading-2   main-heading ">
-            Customer-Centric
-            <span className="colorText2 ml-4">Approach</span>
+          <h1 className="why-section-heading-2 main-heading">
+            Customer-Centric <span className="colorText2 ml-4">Approach</span>
           </h1>
-          <h1 className="why-section-heading-3  main-heading ">
-            End-to-End
-            <span className="colorText3 ml-4">Support</span>
+          <h1 className="why-section-heading-3 main-heading">
+            End-to-End <span className="colorText3 ml-4">Support</span>
+          </h1>
+        </div>
+      </div>
+
+      {/* Mobile Div */}
+      <div className="h-screen sm:hidden flex flex-col justify-center text-white items-center gap-5">
+        {/* Each mobile item gets the "mobile-item" class */}
+        <div className="mobile-item flex flex-col text-3xl justify-between items-center gap-5">
+          <img src="/Why/1.png" alt="" className="h-[150px] object-cover" />
+          <h1 className="why-section-heading-1 text-center main-heading">
+            Unrivaled <span className="colorText1">Expertise</span>
+          </h1>
+        </div>
+        <div className="mobile-item flex flex-col justify-between text-3xl items-center gap-5">
+          <img src="/Why/2.png" alt="" className="h-[150px] object-cover" />
+          <h1 className="why-section-heading-2 text-center main-heading">
+            Customer-Centric <span className="colorText1 ml-2">Approach</span>
+          </h1>
+        </div>
+        <div className="mobile-item flex flex-col justify-between items-center gap-5">
+          <img src="/Why/3.png" alt="" className="h-[150px] object-cover" />
+          <h1 className="why-section-heading-3 text-center text-3xl main-heading">
+            End-to-End <span className="colorText1 ml-2">Support</span>
           </h1>
         </div>
       </div>
     </>
   );
 };
+
 export default ImageScrollEffect;

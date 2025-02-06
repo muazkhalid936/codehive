@@ -15,7 +15,7 @@ const ScrollAnimation = () => {
         renderer: "svg",
         loop: false,
         autoplay: false,
-        path: "https://cdn.lottielab.com/l/CRLqHNj6eWP9c9.json",
+        path: "https://cdn.lottielab.com/l/82quCXEWWxqamc.json",
       });
     }
 
