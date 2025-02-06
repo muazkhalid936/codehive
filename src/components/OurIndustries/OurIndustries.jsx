@@ -263,7 +263,7 @@ const ScrollAnimation = () => {
             </div>
 
             <div className="w-1/2 iphone">
-              {/* <Canvas
+              <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
@@ -273,7 +273,7 @@ const ScrollAnimation = () => {
                 }}
               >
                 <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
-              </Canvas> */}
+              </Canvas>
             </div>
           </div>
         ))}
