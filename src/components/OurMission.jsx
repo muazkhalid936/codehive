@@ -1,4 +1,4 @@
-"use client"; // If you’re using Next.js 13 App Router, enable client‐side code
+"use client"; // Next.js 13 App Router
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -7,11 +7,10 @@ export default function Home() {
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
   const card3Ref = useRef(null);
+  const wrapperRef = useRef(null); // New ref for the container
 
-  // -- 2) Setup GSAP animations/positions --
   useEffect(() => {
     // Set initial positions:
-    // card1: left, card2: center, card3: right
     gsap.set(card1Ref.current, {
       xPercent: -70,
       scale: 0.6,
@@ -34,13 +33,12 @@ export default function Home() {
     // Hover handler: Adjust positions depending on which card is hovered
     const onEnter = (el) => {
       if (el === card1Ref.current) {
-        // Hovering card1: card1 moves to center; card2 swaps to left; card3 remains on the right.
+        // Hovering card1: card1 to center, card2 to left, card3 remains right.
         gsap.to(card1Ref.current, {
           xPercent: 0,
           scale: 1,
           filter: "none",
           zIndex: 3,
-          duration: 0.3,
           ease: "power3.out",
         });
         gsap.to(card2Ref.current, {
@@ -48,7 +46,6 @@ export default function Home() {
           scale: 0.6,
           filter: "blur(2px)",
           zIndex: 1,
-          duration: 0.3,
           ease: "power3.out",
         });
         gsap.to(card3Ref.current, {
@@ -56,72 +53,67 @@ export default function Home() {
           scale: 0.6,
           filter: "blur(2px)",
           zIndex: 1,
-          duration: 0.3,
-          ease: "power3.out",
-        });
-      } else if (el === card3Ref.current) {
-        // Hovering card3: card3 moves to center; card2 swaps to right; card1 remains on the left.
-        gsap.to(card3Ref.current, {
-          xPercent: 0,
-          scale: 1,
-          filter: "none",
-          zIndex: 3,
-          duration: 0.3,
-          ease: "power3.out",
-        });
-        gsap.to(card2Ref.current, {
-          xPercent: 70,
-          scale: 0.6,
-          filter: "blur(2px)",
-          zIndex: 1,
-          duration: 0.3,
-          ease: "power3.out",
-        });
-        gsap.to(card1Ref.current, {
-          xPercent: -70,
-          scale: 0.6,
-          filter: "blur(2px)",
-          zIndex: 1,
-          duration: 0.3,
-          ease: "power3.out",
-        });
-      } else if (el === card2Ref.current) {
-        // Hovering card2 (center) leaves everything unchanged.
-        gsap.to(card2Ref.current, {
-          xPercent: 0,
-          scale: 1,
-          filter: "none",
-          zIndex: 3,
-          duration: 0.3,
-          ease: "power3.out",
-        });
-        gsap.to(card1Ref.current, {
-          xPercent: -70,
-          scale: 0.6,
-          filter: "blur(2px)",
-          zIndex: 1,
-          duration: 0.3,
-          ease: "power3.out",
-        });
-        gsap.to(card3Ref.current, {
-          xPercent: 70,
-          scale: 0.6,
-          filter: "blur(2px)",
-          zIndex: 1,
-          duration: 0.3,
           ease: "power3.out",
         });
       }
+
+      if (el === card3Ref.current) {
+        // Hovering card3: card3 to center, card2 to right, card1 remains left.
+        gsap.to(card3Ref.current, {
+          xPercent: 0,
+          scale: 1,
+          filter: "none",
+          zIndex: 3,
+          ease: "power3.out",
+        });
+        gsap.to(card2Ref.current, {
+          xPercent: 70,
+          scale: 0.6,
+          filter: "blur(2px)",
+          zIndex: 1,
+          ease: "power3.out",
+        });
+        gsap.to(card1Ref.current, {
+          xPercent: -70,
+          scale: 0.6,
+          filter: "blur(2px)",
+          zIndex: 1,
+          ease: "power3.out",
+        });
+      }
+      // if (el === card2Ref.current) {
+      //   // Hovering card2 (center) - keep as is.
+      //   gsap.to(card2Ref.current, {
+      //     xPercent: 0,
+      //     scale: 1,
+      //     filter: "none",
+      //     zIndex: 3,
+      //     ease: "power3.out",
+      //   });
+      //   gsap.to(card1Ref.current, {
+      //     xPercent: -70,
+      //     scale: 0.6,
+      //     filter: "blur(2px)",
+      //     zIndex: 1,
+      //     ease: "power3.out",
+      //   });
+      //   gsap.to(card3Ref.current, {
+      //     xPercent: 70,
+      //     scale: 0.6,
+      //     filter: "blur(2px)",
+      //     zIndex: 1,
+      //     ease: "power3.out",
+      //   });
+      // }
     };
 
-    // Hover out handler: Reset all cards to their original positions.
-    const onLeave = () => {
+    // Hover out handler: Reset all cards to their original positions
+    const onLeaveWrapper = () => {
       gsap.to(card1Ref.current, {
         xPercent: -70,
         scale: 0.6,
         filter: "blur(2px)",
         zIndex: 1,
-        duration: 0.3,
         ease: "power3.out",
       });
       gsap.to(card2Ref.current, {
@@ -129,7 +121,6 @@ export default function Home() {
         scale: 1,
         filter: "none",
         zIndex: 2,
-        duration: 0.3,
         ease: "power3.out",
       });
       gsap.to(card3Ref.current, {
@@ -137,65 +128,65 @@ export default function Home() {
         scale: 0.6,
         filter: "blur(2px)",
         zIndex: 1,
-        duration: 0.3,
         ease: "power3.out",
       });
     };
 
-    // Store handler functions in variables for cleanup
+    // Store mouseenter handler functions for cleanup
     const handleCard1Enter = () => onEnter(card1Ref.current);
     const handleCard2Enter = () => onEnter(card2Ref.current);
     const handleCard3Enter = () => onEnter(card3Ref.current);
 
-    // Attach event listeners for hover in and out.
+    // Attach mouseenter events to each card.
     card1Ref.current.addEventListener("mouseenter", handleCard1Enter);
-    card2Ref.current.addEventListener("mouseenter", handleCard2Enter);
+    // card2Ref.current.addEventListener("mouseenter", handleCard2Enter);
     card3Ref.current.addEventListener("mouseenter", handleCard3Enter);
 
-    card1Ref.current.addEventListener("mouseleave", onLeave);
-    card2Ref.current.addEventListener("mouseleave", onLeave);
-    card3Ref.current.addEventListener("mouseleave", onLeave);
+    // Attach a single mouseleave event to the wrapper.
+    wrapperRef.current.addEventListener("mouseleave", onLeaveWrapper);
 
     // Cleanup event listeners when the component unmounts.
     return () => {
-      card1Ref.current.removeEventListener("mouseenter", handleCard1Enter);
-      card2Ref.current.removeEventListener("mouseenter", handleCard2Enter);
-      card3Ref.current.removeEventListener("mouseenter", handleCard3Enter);
-
-      card1Ref.current.removeEventListener("mouseleave", onLeave);
-      card2Ref.current.removeEventListener("mouseleave", onLeave);
-      card3Ref.current.removeEventListener("mouseleave", onLeave);
+      if (card1Ref.current) {
+        card1Ref.current.removeEventListener("mouseenter", handleCard1Enter);
+      }
+      if (card2Ref.current) {
+        card2Ref.current.removeEventListener("mouseenter", handleCard2Enter);
+      }
+      if (card3Ref.current) {
+        card3Ref.current.removeEventListener("mouseenter", handleCard3Enter);
+      }
+      if (wrapperRef.current) {
+        wrapperRef.current.removeEventListener("mouseleave", onLeaveWrapper);
+      }
     };
   }, []);
 
   return (
-    <main style={styles.main}>
-      <div style={styles.wrapper}>
+    <main style={styles.main} className="overflow-hidden">
+      {/* Attach the ref to the wrapper container */}
+      <div
+        ref={wrapperRef}
+        style={styles.wrapper}
+        className="flex justify-center items-center"
+      >
         <div
           ref={card1Ref}
           style={{
             ...styles.card,
             backgroundImage:
-            "linear-gradient( 135deg, transparent, #219DD9), url('/back.png')",
-            // backgroundSize: " cover", // Make the gradient cover the full element, image covers normally
-            // backgroundPosition: "center, center",
-
+              "linear-gradient(135deg, transparent, #219DD9), url('/back.png')",
             borderRadius: "25px",
-            // border: "5px solid transparent", // Increase border width if needed to show the gradient properly
-
-            // Use background-clip to apply the gradient to the border and the image to the padding
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px] "
+          className="p-[2px]"
         >
           <div
-            className="w-full h-full flex flex-col gap-5 justify-center px-5  rounded-3xl"
-            style={{
-              backgroundImage: "url('/back.png')",
-            }}
+            className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
+            style={{ backgroundImage: "url('/back.png')" }}
           >
-            <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent ">
+            <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent">
               Our Vision
             </h2>
             <p className="main_hero_slogan">
@@ -204,35 +195,28 @@ export default function Home() {
               sizes. We aspire to create a world where every business,
               regardless of its budget or resources, has access to high-quality,
               custom-built digital solutions that enhance their competitiveness
-              and success.",
+              and success.
             </p>
           </div>
         </div>
+
         <div
           ref={card2Ref}
           style={{
             ...styles.card,
             backgroundImage:
-              "linear-gradient( 135deg, transparent, #219DD9), url('/back.png')",
-            // backgroundSize: " cover", // Make the gradient cover the full element, image covers normally
-            // backgroundPosition: "center, center",
-
+              "linear-gradient(135deg, transparent, #219DD9), url('/back.png')",
             borderRadius: "25px",
-            // border: "5px solid transparent", // Increase border width if needed to show the gradient properly
-
-            // Use background-clip to apply the gradient to the border and the image to the padding
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px] "
+          className="p-[2px]"
         >
           <div
-            className="w-full h-full flex flex-col gap-5 justify-center px-5  rounded-3xl"
-            style={{
-              backgroundImage: "url('/back.png')",
-            }}
+            className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
+            style={{ backgroundImage: "url('/back.png')" }}
           >
-            <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent ">
+            <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent">
               Our Mission
             </h2>
             <p className="main_hero_slogan text-center">
@@ -244,31 +228,24 @@ export default function Home() {
             </p>
           </div>
         </div>
+
         <div
           ref={card3Ref}
           style={{
             ...styles.card,
             backgroundImage:
-            "linear-gradient( 135deg, transparent, #219DD9), url('/back.png')",
-            // backgroundSize: " cover", // Make the gradient cover the full element, image covers normally
-            // backgroundPosition: "center, center",
-
+              "linear-gradient(135deg, transparent, #219DD9), url('/back.png')",
             borderRadius: "25px",
-            // border: "5px solid transparent", // Increase border width if needed to show the gradient properly
-
-            // Use background-clip to apply the gradient to the border and the image to the padding
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px] "
+          className="p-[2px]"
         >
           <div
-            className="w-full h-full flex flex-col gap-5 justify-center px-5  rounded-3xl"
-            style={{
-              backgroundImage: "url('/back.png')",
-            }}
+            className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
+            style={{ backgroundImage: "url('/back.png')" }}
           >
-            <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent ">
+            <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent">
               Our Values
             </h2>
             <p className="main_hero_slogan">
@@ -297,22 +274,19 @@ const styles = {
   },
   wrapper: {
     position: "relative",
-    // width: "80vw",
     width: "100%",
     height: "600px",
     overflow: "visible",
   },
   card: {
     position: "absolute",
-    top: "40%",
-    left: "40%",
+    top: "50%",
+    left: "30%",
+    transform: "translate(-50%, -50%)",
     cursor: "pointer",
     width: "40%",
     height: "280px",
-    margin: "-100px 0 0 -150px",
-    // borderRadius: "25px",
     boxShadow: "0 0 20px rgba(0,0,0,0.2)",
-    // padding: "1rem",
     textAlign: "center",
     transition: "transform 0.3s, filter 0.3s",
   },

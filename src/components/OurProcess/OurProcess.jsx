@@ -18,112 +18,207 @@ const StackingImages = () => {
   const [active, setActive] = useState(0);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    if (window.innerWidth > 700) {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".new-cards",
+          pin: true,
+          pinSpacing: true,
+          start: "top top",
+          end: "+=5000",
+          scrub: 1,
+        },
+      });
+      console.log("Desktop");
 
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".new-cards",
-        pin: true,
-        pinSpacing: true,
-        start: "top top",
-        end: "+=5000",
-        scrub: 1,
-      },
-    });
+      const cards = [1, 2, 3, 4, 5, 6, 7]; // Extend with new cards
 
-    const cards = [1, 2, 3, 4, 5, 6, 7]; // Extend with new cards
+      cards.forEach((card, index) => {
+        const nextCard = cards[index + 1];
 
-    cards.forEach((card, index) => {
-      const nextCard = cards[index + 1];
+        if (index === 0) {
+          // Intro animation for the first card and text
+          timeline.fromTo(
+            `.new-card-${card}`,
+            { xPercent: 60, yPercent: 60, rotate: -90 },
+            { xPercent: 0, yPercent: 0, rotate: 0 },
+            "start"
+          );
+          timeline.fromTo(
+            `.new-text-${card}`,
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.5 },
+            "start"
+          );
+          timeline.fromTo(
+            `.new-icon-container`,
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.5 },
+            "start"
+          );
+          timeline.to(`.new-icon1`, { backgroundColor: "#27303b" }, `start`);
+        }
 
-      if (index === 0) {
-        // Intro animation for the first card and text
-        timeline.fromTo(
-          `.new-card-${card}`,
-          { xPercent: 60, yPercent: 60, rotate: -90 },
-          { xPercent: 0, yPercent: 0, rotate: 0 },
-          "start"
-        );
-        timeline.fromTo(
-          `.new-text-${card}`,
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.5 },
-          "start"
-        );
-        timeline.fromTo(
-          `.new-icon-container`,
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.5 },
-          "start"
-        );
-        timeline.to(`.new-icon1`, { backgroundColor: "#27303b" }, `start`);
-      }
+        if (nextCard) {
+          timeline.to(
+            `.new-text-${card}`,
+            { opacity: 0, y: -10, duration: 0.3 },
+            `card-${nextCard}`
+          );
 
-      if (nextCard) {
-        timeline.to(
-          `.new-text-${card}`,
-          { opacity: 0, y: -10, duration: 0.3 },
-          `card-${nextCard}`
-        );
+          timeline.addPause();
 
-        timeline.addPause();
+          timeline.fromTo(
+            `.new-text-${nextCard}`,
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 10, duration: 0.5 },
+            `card-${nextCard}+=0.3`
+          );
 
-        timeline.fromTo(
-          `.new-text-${nextCard}`,
-          { opacity: 0, y: 50 },
-          { opacity: 1, y: 10, duration: 0.5 },
-          `card-${nextCard}+=0.3`
-        );
+          timeline.to(
+            `.new-card-${card}`,
+            { xPercent: 60, yPercent: -60, rotate: 90 },
+            `card-${nextCard}`
+          );
+          timeline.fromTo(
+            `.new-card-${nextCard}`,
+            { xPercent: 60, yPercent: 60, rotate: -90 },
+            { xPercent: 0, yPercent: 0, rotate: 0 },
+            `card-${nextCard}`
+          );
 
-        timeline.to(
-          `.new-card-${card}`,
-          { xPercent: 60, yPercent: -60, rotate: 90 },
-          `card-${nextCard}`
-        );
-        timeline.fromTo(
-          `.new-card-${nextCard}`,
-          { xPercent: 60, yPercent: 60, rotate: -90 },
-          { xPercent: 0, yPercent: 0, rotate: 0 },
-          `card-${nextCard}`
-        );
-
-        timeline.to(
-          `.new-icon${card}`,
-          {
-            backgroundColor: "#0c1621",
-            onStart: function () {
-              setActive(index + 1);
+          timeline.to(
+            `.new-icon${card}`,
+            {
+              backgroundColor: "#0c1621",
+              onStart: function () {
+                setActive(index + 1);
+              },
+              onReverseComplete: function () {
+                setActive(index);
+              },
             },
-            onReverseComplete: function () {
-              setActive(index);
+            `card-${nextCard}`
+          );
+          timeline.to(
+            `.new-icon${nextCard}`,
+            { backgroundColor: "#27303b" },
+            `card-${nextCard}`
+          );
+        }
+      });
+    } else {
+      console.log("Mobile");
+
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".new-cards",
+          pin: true,
+          pinSpacing: true,
+          start: "top top",
+          end: "+=5000",
+          scrub: 1,
+        },
+      });
+
+      const cards = [1, 2, 3, 4, 5, 6, 7]; // Extend with new cards
+
+      cards.forEach((card, index) => {
+        const nextCard = cards[index + 1];
+
+        if (index === 0) {
+          // Intro animation for the first card and text
+          timeline.fromTo(
+            `.new-card-${card}`,
+            { opacity: 0 },
+            { opacity: 1 },
+            "start"
+          );
+          timeline.fromTo(
+            `.new-text-${card}`,
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.5 },
+            "start"
+          );
+          timeline.fromTo(
+            `.new-icon-container`,
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.5 },
+            "start"
+          );
+          timeline.to(`.new-icon1`, { backgroundColor: "#27303b" }, `start`);
+        }
+
+        if (nextCard) {
+          timeline.to(
+            `.new-text-${card}`,
+            { opacity: 0, y: -30, duration: 0.3 },
+            `card-${nextCard}`
+          );
+
+          timeline.addPause();
+
+          timeline.fromTo(
+            `.new-text-${nextCard}`,
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: -10, duration: 0.5 },
+            `card-${nextCard}+=0.3`
+          );
+
+          timeline.to(
+            `.new-card-${card}`,
+            { scale: 0.8, yPercent: -20 },
+            `card-${nextCard}`
+          );
+          timeline.fromTo(
+            `.new-card-${nextCard}`,
+            { opacity: 0, yPercent: 30, xPercent: 0 },
+            { opacity: 1, yPercent: 0, xPercent: 0 },
+            `card-${nextCard}`
+          );
+
+          timeline.to(
+            `.new-icon${card}`,
+            {
+              backgroundColor: "#0c1621",
+              onStart: function () {
+                setActive(index + 1);
+              },
+              onReverseComplete: function () {
+                setActive(index);
+              },
             },
-          },
-          `card-${nextCard}`
-        );
-        timeline.to(
-          `.new-icon${nextCard}`,
-          { backgroundColor: "#27303b" },
-          `card-${nextCard}`
-        );
-      }
-    });
+            `card-${nextCard}`
+          );
+          timeline.to(
+            `.new-icon${nextCard}`,
+            { backgroundColor: "#27303b" },
+            `card-${nextCard}`
+          );
+        }
+      });
+    }
   }, []);
 
   return (
-    <div className="bg-[#000B17] container mx-auto">
-      <div className="new-cards  items-center  h-[100vh] min-h-[400px] mx-auto">
-        <div className="flex w-1/2 flex-col gap-5 first-container">
-          <div className="new-icon-container gap-1">
+    <div className="bg-[#000B17] container mx-auto ">
+      <div className="new-cards flex sm:flex-row flex-col-reverse  items-center gap-20  justify-center sm:justify-between  h-[100vh] min-h-[400px] mx-auto">
+        <div className="flex sm:w-1/2  mt-[100px] sm:mt-0 sm:h-auto  flex-col gap-20 sm:gap-5 first-container">
+          <div className="new-icon-container sm:mb-[80px] gap-1">
             {IconsArr.map((Icon, i) => {
               const activeColor = active === i ? "#219bd9" : "#FFFFFF";
               return (
-                <div key={i} className={`new-icon new-icon${i + 1} `}>
+                <div
+                  key={i}
+                  className={`new-icon sm:p-[15px] p-[10px]  new-icon${i + 1} `}
+                >
                   <Icon fill={activeColor} />
                 </div>
               );
             })}
           </div>
 
-          <div className="new-text-section mt-20 text-white">
+          <div className="new-text-section  text-white">
             {[
               {
                 title: "Requirement Gathering & Planning",
@@ -168,7 +263,7 @@ const StackingImages = () => {
                 }`}
               >
                 <span className="font-bold !font-lato !text-white  ">
-                  <span className="font-bold w-[90%] text-[50px] leading-none mt-5  main-heading bg-gradient-to-br from-white to-blueColor bg-clip-text text-transparent">
+                  <span className="font-bold w-[90%] text-3xl sm:text-[50px] leading-none mt-5  main-heading bg-gradient-to-br from-white to-blueColor bg-clip-text text-transparent">
                     {item.title}
                   </span>
                 </span>
@@ -180,10 +275,13 @@ const StackingImages = () => {
           </div>
         </div>
 
-        <div className="flex w-1/2">
+        <div className="flex sm:w-1/2">
           {IconsArr.map((_, i) => (
-            <div key={i} className={`new-card ss new-card-${i + 1}`}>
-              <div className="our-process-main-pic">
+            <div
+              key={i}
+              className={`new-card ss sm:h-screen absolute new-card-${i + 1}`}
+            >
+              <div className="our-process-main-pic ">
                 <img
                   src={`/process/bg${i + 1}.png`}
                   className="h-[100%] w-[100%]"

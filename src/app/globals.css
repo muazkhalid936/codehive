@@ -1,3 +1,4 @@
+@import "intl-tel-input/build/css/intlTelInput.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -229,7 +230,7 @@
 }
 
 .service-stack-card {
-  @apply h-[400px];
+  @apply sm:h-[400px] h-[450px];
 }
 
 .second-component {
@@ -297,6 +298,28 @@
   /* background-position: -200 0; */
 }
 
-.stack-cards-gap{
+.stack-cards-gap {
   margin-top: 150vh;
+}
+
+.iti__country-container {
+  left: 300px !important;
+  /* left: auto; */
+}
+
+.iti {
+  padding: 0 !important;
+}
+.iti--inline-dropdown .iti__dropdown-content {
+  background-color: #041c30;
+  color: white !important;
+}
+
+.iti__search-input {
+  background-color: #041c30;
+  border: 1px solid #041c30;
+}
+
+.iti--inline-dropdown .iti__country-list::-webkit-scrollbar {
+  display: none;
 }

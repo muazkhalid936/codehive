@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ShortRevealHeading.css";
@@ -11,17 +10,6 @@ const ShortRevealHeading = () => {
 
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      smooth: true,
-      lerp: 0.1, // Adjust for smoothness
-    });
-
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
 
     // GSAP Scroll Animation
     gsap
@@ -49,17 +37,13 @@ const ShortRevealHeading = () => {
           ease: "none",
         }
       );
-
-    return () => {
-      // lenis.destroy(); // Cleanup Lenis
-    };
   }, []);
 
   return (
     <div className="container h-[400px] mb-[800px] 2xl:mb-[700px] mt-[-1300px] 2xl:mt-[-1700px] flex justify-center items-center mx-auto">
       <p
         ref={textRef}
-        className="animated-text-short main-heading header text-[60px] text-white"
+        className="animated-text-short main-heading header text-4xl sm:text-[60px] text-white"
       >
         Our Process
       </p>

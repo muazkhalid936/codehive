@@ -49,7 +49,6 @@ export const ourIndustriesData = [
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
@@ -90,18 +89,6 @@ const ScrollAnimation = () => {
       img.src = path;
       return img;
     });
-
-    const lenis = new Lenis({
-      smooth: true,
-      lerp: 0.1,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      ScrollTrigger.update();
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
 
     const sections = containerRef.current.querySelectorAll(".section");
 
@@ -224,7 +211,6 @@ const ScrollAnimation = () => {
     }
 
     return () => {
-      lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       gsap.globalTimeline.clear();
       if (containerRef.current) {
@@ -244,7 +230,7 @@ const ScrollAnimation = () => {
             key={index}
             className="section  absolute flex flex-row-reverse items-center justify-between gap-8  px-16"
           >
-            <div className="w-[640px] heading">
+            <div className="sm:w-[640px] heading">
               <h2 className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
                 {item.title}
               </h2>
@@ -277,7 +263,7 @@ const ScrollAnimation = () => {
             </div>
 
             <div className="w-1/2 iphone">
-              <Canvas
+              {/* <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
@@ -287,7 +273,7 @@ const ScrollAnimation = () => {
                 }}
               >
                 <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
-              </Canvas>
+              </Canvas> */}
             </div>
           </div>
         ))}

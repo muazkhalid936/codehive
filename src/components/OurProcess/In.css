@@ -4,14 +4,14 @@
   margin: auto;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
 .new-card {
-  position: absolute;
+  /* position: absolute; */
   width: 80%;
-  height: 100vh;
+  /* height: 100vh; */
   /* background: #f1f1f1; */
   display: flex;
   left: 60%;
@@ -28,37 +28,30 @@
   /* object-fit: cover; */
 }
 
-.new-card-1 {
+/* .new-card-1 {
   top: 50px;
-  /* left: ; */
   left: translate(-50%, -50%);
-  /* top: 50%; */
 }
 
 .new-card-2 {
-  /* left: 35px; */
   left: translate(-50%, -50%);
-  /* left: 0px !important; */
   top: 60px;
 }
 
 .new-card-3 {
-  /* left: 70px; */
   left: translate(-50%, -50%);
   top: 70px;
 }
 
 .new-card-4 {
-  /* left: 105px; */
   left: translate(-50%, -50%);
   top: 80px;
 }
 
 .new-card-5 {
-  /* left: 140px; */
   left: translate(-50%, -50%);
   top: 90px;
-}
+} */
 /* Stack.css */
 .new-text-section {
   display: flex;
@@ -80,7 +73,8 @@
 .new-icon-container {
   /* position: absolute; */
   display: flex;
-  justify-content: start;
+  flex-wrap: wrap;
+  /* justify-content: start; */
   /* gap: 20px; */
   /* top: 35%; */
   /* left: -10px; */
@@ -91,7 +85,7 @@
 .new-icon {
   /* font-size: 6.5rem; */
   /* background-color: #f1f1f1; */
-  padding: 15px;
+  /* padding: 15px; */
 
   background-color: #0c1621;
 
@@ -107,9 +101,6 @@
 .ss {
   left: 60% !important;
   top: 30px !important;
-}
-.our-process-main-pic {
-  @apply 2xl:h-[400px] 2xl:w-[60%] lg:h-[300px] xl:h-[300px] xl:w-[60%] md:h-[300px] md:w-[60%] sm:h-[300px] sm:w-[60%] h-[300px] w-[60%];
 }
 
 @media (max-width: 1300px) {
@@ -127,7 +118,7 @@
   .our-process-main-pic {
     @apply !w-[55%] !h-[360px];
   }
-  .ss{
+  .ss {
     left: 55% !important;
   }
 }
@@ -187,6 +178,16 @@
     top: 30px !important;
   }
   .our-process-main-pic {
-    @apply !w-[65%] !h-[280px];
+    @apply !w-[75%] !h-[280px] left-1/2;
+  }
+}
+@media (max-width: 704px) {
+  .ss {
+    left: 10% !important;
+    transform: translateX(-50%,-50%);
+    top: 100px !important;
+  }
+  .our-process-main-pic {
+    @apply !w-[105%] !h-[250px] left-1/2;
   }
 }

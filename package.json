@@ -19,6 +19,7 @@
     "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^11.12.0",
     "gsap": "^3.12.5",
+    "intl-tel-input": "^25.3.0",
     "jquery": "^3.7.1",
     "lenis": "^1.1.17",
     "lodash": "^4.17.21",

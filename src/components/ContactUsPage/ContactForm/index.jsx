@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { HiArrowUpRight, HiChevronDown } from "react-icons/hi2"; // Import the chevron icon
-import PhoneInput from "react-phone-input-2";
+import PhoneInput from "../../PhoneInput";
 import "react-phone-input-2/lib/style.css"; // Import styles for the PhoneInput
 
 const ContactForm = () => {
@@ -102,47 +102,15 @@ const ContactForm = () => {
             field.id === "phone" ? (
               <div
                 key={field.id}
-                className="relative w-[90%] sm:w-[70%] mx-auto"
+                className="relative w-[90%] sm:w-[70%] mx-auto
+                
+                peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none  border-b-2 border-gray-500 appearance-none pr-8 invalid:text-gray-400
+                "
               >
-                <PhoneInput
-                  country={"us"} // Default country code
-                  value={phone}
-                  onChange={(phone) => setPhone(phone)}
-                  inputStyle={{
-                    width: "100%",
-                    backgroundColor: "#041c30",
-                    color: "white",
-                    border: "none",
-                    borderBottom: "2px solid gray",
-                    borderRadius: 0,
-                    padding: "12px",
-                    fontSize: "14px",
-                    paddingRight: "0px",
-                    // marginLeft: "-10px", // Align the input text to make room for the flag
-                  }}
-                  buttonStyle={{
-                    position: "absolute",
-                    right: "10px", // Flag on the right side
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    backgroundColor: "transparent",
-                    border: "none",
-                    marginLeft: "0",
-                  }}
-                  dropdownStyle={{
-                    backgroundColor: "#041c30",
-                    color: "white",
-                  }}
-                  containerClass="phone-input-container"
-                  inputClass="phone-input-field"
-                  enableSearch={true} // Allows searching for countries
-                  disableCountryCode={true} // Hides the country code in the input field
-                  disableDropdown={false} // Keeps the dropdown for flags
-                  placeholder="Phone*" // Placeholder updated to Phone
-                />
+                <PhoneInput />
               </div>
             ) : field.type === "select" ? (
-              <div key={field.id} className="relative w-[70%] mx-auto">
+              <div key={field.id} className="relative w-[90%] sm:w-[70%] mx-auto">
                 <select
                   id={field.id}
                   required
@@ -177,7 +145,7 @@ const ContactForm = () => {
                   onChange={handleInputChange}
                   placeholder={field.placeholder}
                   onBlur={handleBlur}
-                  className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full  border-b-2 border-gray-500"
+                  className="peer bg-[#041c30] p-3 text-white rounded-none focus:outline-none w-full  border-b-2 border-gray-500"
                 />
               </div>
             )

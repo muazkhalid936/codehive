@@ -19,32 +19,32 @@
 }
 
 .card-1 {
-  top: 50px;
+  top: 0px;
   left: translate(-50%, -50%);
 }
 
 .card-2 {
   left: translate(-50%, -50%);
-  top: 70px;
+  top: 10px;
 }
 
 .card-3 {
   left: translate(-50%, -50%);
-  top: 90px;
+  top: 20px;
 }
 
 .card-4 {
   left: translate(-50%, -50%);
-  top: 110px;
+  top: 30px;
 }
 
 .card-5 {
   left: translate(-50%, -50%);
-  top: 130px;
+  top: 40px;
 }
 .card-6 {
   left: translate(-50%, -50%);
-  top: 150px;
+  top: 50px;
 }
 
 @media (max-width: 768px) {
@@ -52,12 +52,21 @@
     top: 100px;
   }
   .card-2 {
-    top: 350px;
+    top: 110px;
   }
   .card-3 {
-    top: 400px;
+    top: 120px;
   }
   .card-4 {
-    top: 550px;
+    top: 130px;
+  }
+  
+  .card-5 {
+    /* left: translate(-50%, -50%); */
+    top: 140px;
+  }
+  .card-6 {
+    /* left: translate(-50%, -50%); */
+    top: 150px;
   }
 }

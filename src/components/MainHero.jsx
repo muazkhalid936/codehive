@@ -8,7 +8,7 @@ const MainHero = () => {
   return (
     <div className=" container  overflow-hidden relative pl-10 flex flex-row bg-[#000B17] mx-auto  mt-10">
       {/* Text Content */}
-      <div className="flex w-[50%]   flex-col gap-5 text-white  xl:gap-8 ">
+      <div className="flex sm:w-[50%]   flex-col gap-5 text-white  xl:gap-8 ">
         <p className="text-[20px] main-heading sm:text-3xl md:text-[50px]    z-10 font-extrabold  leading-tight">
           BESPOKE{" "}
           <span className="  main-heading  text-blueColor">SOLUTIONS</span>{" "}
@@ -36,7 +36,7 @@ const MainHero = () => {
 
       {/* Spline Component */}
       <div
-        className="flex flex-1 spline_model absolute -top-[100px] scale-50   md:top-5 h-[400px] xl:-top-14 md:scale-75 xl:scale-[0.8] 
+        className=" hidden sm:flex flex-1 spline_model absolute -top-[100px] scale-50   md:top-5 h-[400px] xl:-top-14 md:scale-75 xl:scale-[0.8] 
        w-[850px] -right-[21rem]  md:-right-60 xl:-right-44  justify-end text-white items-end"
       >
         <Suspense>
