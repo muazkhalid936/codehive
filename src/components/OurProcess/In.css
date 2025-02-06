@@ -188,6 +188,6 @@
     top: 100px !important;
   }
   .our-process-main-pic {
-    @apply !w-[105%] !h-[250px] left-1/2;
+    @apply !w-[105%] !h-[200px] left-1/2;
   }
 }

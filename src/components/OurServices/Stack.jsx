@@ -45,7 +45,7 @@ const StackingImages = () => {
       <div className="cards h-[100vh] min-h-[400px]  container mx-auto">
         <div className="card card-6">
           <StackCard
-            imgLink="/services/1.jpg"
+            imgLink="/services/6.jpg"
             bg="/services/bg-ai.png"
             type="Security"
             heading="Business Intelligence & Data Analysis"
@@ -57,7 +57,7 @@ const StackingImages = () => {
 
         <div className="card card-5">
           <StackCard
-            imgLink="/services/2.jpg"
+            imgLink="/services/5.jpg"
             bg="/services/bg-digital.png"
             type="Cloud"
             heading="Digital Consultation"
@@ -70,7 +70,7 @@ const StackingImages = () => {
         <div className="card card-4">
           <StackCard
             bg="/services/bg-ai.png"
-            imgLink="/services/3.jpg"
+            imgLink="/services/4.jpg"
             type="Web"
             heading="Digital Transformation & Automation"
             para="Digital transformation and automation improve efficiency, cut costs, and enable innovation through real-time insights for smarter decision-making."
@@ -82,7 +82,7 @@ const StackingImages = () => {
         <div className="card card-3">
           <StackCard
             para="Developing software that optimizes business and ensures a smooth user experience."
-            imgLink="/services/4.jpg"
+            imgLink="/services/3.jpg"
             bg="/services/bg-digital.png"
             type="Digital"
             num="03"
@@ -94,7 +94,7 @@ const StackingImages = () => {
         <div className="card card-2">
           <StackCard
             bg="/services/bg-ai.png"
-            imgLink="/services/5.jpg"
+            imgLink="/services/2.jpg"
             type="Consulting"
             num="02"
             heading="Website Development"
@@ -106,7 +106,7 @@ const StackingImages = () => {
           <StackCard
             bg="/services/bg-digital.png"
             type="AI"
-            imgLink="/services/6.jpg"
+            imgLink="/services/1.jpg"
             num="01"
             heading="Mobile App Development"
             link="/service/mobile-app-development"

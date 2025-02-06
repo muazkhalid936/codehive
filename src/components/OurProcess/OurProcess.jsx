@@ -255,23 +255,31 @@ const StackingImages = () => {
                 description:
                   "We deliver the final product with complete documentation, training, and ongoing support to ensure smooth operations.",
               },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`new-text flex flex-col gap-4 main_hero_slogan new-text-${
-                  i + 1
-                }`}
-              >
-                <span className="font-bold !font-lato !text-white  ">
-                  <span className="font-bold w-[90%] text-3xl sm:text-[50px] leading-none mt-5  main-heading bg-gradient-to-br from-white to-blueColor bg-clip-text text-transparent">
-                    {item.title}
+            ].map((item, i) => {
+              const titleWords = item.title.split(" ");
+              const lastTwoWords = titleWords.slice(-2).join(" ");
+              const firstWords = titleWords.slice(0, -2).join(" ");
+              return (
+                <div
+                  key={i}
+                  className={`new-text flex flex-col gap-4 main_hero_slogan new-text-${
+                    i + 1
+                  }`}
+                >
+                  <span className="font-bold !font-lato !text-white  ">
+                    <span className="font-bold w-[90%] text-3xl sm:text-[50px] leading-none mt-5  main-heading text-white">
+                      {firstWords}{" "}
+                      <span className="bg-gradient-to-r from-white  to-blueColor bg-clip-text text-transparent">
+                        {lastTwoWords}
+                      </span>
+                    </span>
                   </span>
-                </span>
-                <span className="text-white main_hero_slogan !font-lato">
-                  {item.description}
-                </span>
-              </div>
-            ))}
+                  <span className="text-white main_hero_slogan !font-lato">
+                    {item.description}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
 

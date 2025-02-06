@@ -102,7 +102,7 @@ const ContactForm = () => {
             field.id === "phone" ? (
               <div
                 key={field.id}
-                className="relative w-[90%] sm:w-[70%] mx-auto
+                className="relative w-[90%] lg:w-[70%] mx-auto
                 
                 peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none  border-b-2 border-gray-500 appearance-none pr-8 invalid:text-gray-400
                 "
@@ -173,7 +173,7 @@ const ContactForm = () => {
         <div className="flex justify-center mb-20">
           <button
             type="submit"
-            className="flex items-center justify-center w-[500px] py-3 bg-slate-800 text-white font-semibold rounded-xl transition-colors"
+            className="flex items-center justify-center w-[50%] py-3 bg-slate-800 text-white font-semibold rounded-xl transition-colors"
           >
             Get Started
             <span className="ml-2 flex items-center justify-center w-5 h-5 bg-white text-black rounded-full">

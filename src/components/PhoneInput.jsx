@@ -37,8 +37,8 @@ const PhoneInput = () => {
       type="tel"
       ref={phoneInputRef}
       placeholder="Enter your phone number"
-      className="!px-0   !bg-[#041c30] focus:outline-none focus:ring-0 focus:border-0 focus:ring-transparent focus:ring-0 focus:border-0 focus:ring w-[200%]"
-      //   style={{ padding: "8px", fontSize: "16px", width: "" }}
+      className="!px-0   !bg-[#041c30] focus:outline-none w-[55vw] lg:w-[21vw] focus:ring-0 focus:border-0 focus:ring-transparent focus:ring-0 focus:border-0 focus:ring "
+        style={{ padding: "8px", fontSize: "16px" }}
     />
   );
 };
