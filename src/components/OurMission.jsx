@@ -163,7 +163,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main style={styles.main} className="overflow-hidden">
+    <main style={styles.main} className="overflow-hidden ">
       {/* Attach the ref to the wrapper container */}
       <div
         ref={wrapperRef}
@@ -180,7 +180,7 @@ export default function Home() {
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px]"
+          className="p-[2px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
@@ -210,7 +210,7 @@ export default function Home() {
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px]"
+          className="p-[2px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
@@ -239,7 +239,7 @@ export default function Home() {
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px]"
+          className="p-[2px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
@@ -280,12 +280,12 @@ const styles = {
   },
   card: {
     position: "absolute",
-    top: "50%",
-    left: "30%",
-    transform: "translate(-50%, -50%)",
+    // top: "25%",
+    // left: "30%",
+    // transform: "translate(-50%, -50%)",
     cursor: "pointer",
-    width: "40%",
-    height: "280px",
+    // width: "40%",
+    // height: "280px",
     boxShadow: "0 0 20px rgba(0,0,0,0.2)",
     textAlign: "center",
     transition: "transform 0.3s, filter 0.3s",

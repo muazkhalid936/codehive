@@ -61,7 +61,7 @@ const ContactForm = () => {
             <span className="text-blueColor main-heading">with us</span>
           </h3>
         </div>
-        <div className="form-grid grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 mt-8">
+        <div className="form-grid grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 mt-8">
           {[
             // Map over the fields and create input fields
             { id: "name", placeholder: "Full Name*", type: "text" },
@@ -110,7 +110,7 @@ const ContactForm = () => {
                 <PhoneInput />
               </div>
             ) : field.type === "select" ? (
-              <div key={field.id} className="relative w-[90%] sm:w-[70%] mx-auto">
+              <div key={field.id} className="relative w-[90%] lg:w-[70%] mx-auto">
                 <select
                   id={field.id}
                   required
@@ -135,7 +135,7 @@ const ContactForm = () => {
             ) : (
               <div
                 key={field.id}
-                className="relative  w-[90%] sm:w-[70%] mx-auto"
+                className="relative  w-[90%] lg:w-[70%] mx-auto"
               >
                 <input
                   id={field.id}
@@ -153,7 +153,7 @@ const ContactForm = () => {
         </div>
 
         {/* Message Field */}
-        <div className="relative w-[90%] sm:w-[86%] mx-auto mb-28">
+        <div className="relative w-[90%] lg:w-[86%] mx-auto mb-28">
           <textarea
             id="message"
             rows="4"

@@ -303,7 +303,7 @@
 }
 
 .iti__country-container {
-  left: 300px !important;
+  left: 100% !important;
   /* left: auto; */
 }
 
@@ -313,6 +313,7 @@
 .iti--inline-dropdown .iti__dropdown-content {
   background-color: #041c30;
   color: white !important;
+  width: 200px !important;
 }
 
 .iti__search-input {
