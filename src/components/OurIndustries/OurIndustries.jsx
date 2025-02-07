@@ -256,8 +256,8 @@ const ScrollAnimation = () => {
                 >
                   Read More{" "}
                 </button>
-                <div className="bg-white text-black mt-2 rounded-full">
-                  <FiArrowUpRight className="w-5 h-5" />
+                <div className="bg-white text-black mt-3 rounded-full">
+                  <FiArrowUpRight className="text-lg" />
                 </div>
               </div>
             </div>

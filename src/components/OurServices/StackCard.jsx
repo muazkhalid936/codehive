@@ -37,7 +37,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
           >
             Read More
             <div className=" bg-white mt-1 text-black rounded-full ">
-              <FiArrowUpRight className="w-4 h-4" />
+              <FiArrowUpRight className="text-lg" />
             </div>
           </button>
         </div>

@@ -64,7 +64,7 @@ const ScrollAnimation = () => {
     <div className=" ">
       <div className="fix-div sm:mt-[150px]    flex justify-center">
         <div
-          className="lottie   sm:w-[450px] 2xl:w-[500px] "
+          className="lottie   sm:w-[450px] h-[300px]  2xl:w-[500px] "
           ref={animationContainer}
         />
       </div>

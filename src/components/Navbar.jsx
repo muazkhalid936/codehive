@@ -1,11 +1,9 @@
 "use client";
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
-
 import Link from "next/link";
-import { services, industries, ourWorks } from "../data"; // Make sure to import services and industries
-import { FaCaretDown } from "react-icons/fa";
-import { FaCaretUp } from "react-icons/fa";
+import { FaCaretDown, FaCaretUp, FaTimes } from "react-icons/fa";
+import { services, industries } from "../data";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -13,6 +11,7 @@ const Navbar = () => {
   const [isIndustriesDropdownOpen, setIsIndustriesDropdownOpen] =
     useState(false);
   const [work, setWork] = useState(false);
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -32,74 +31,201 @@ const Navbar = () => {
   });
 
   return (
-    <div className="bg-[#000b17] !font-lato  w-full mx-auto z-[900]  py-4 flex justify-center items-center">
-      <div className="text-white  container mx-auto flex justify-between items-center">
-        <div>
+    <>
+      {/* NAVBAR (Desktop & Tablet) */}
+      <div className="bg-[#000b17] !font-lato w-full mx-auto z-[900] py-4 flex justify-center items-center">
+        <div className="text-white container mx-auto flex justify-between items-center">
+          {/* Logo */}
+          <div>
+            <Link href="/">
+              <img
+                src="/Code hive Branding-01.png"
+                className="w-40 md:w-60"
+                alt="logo"
+              />
+            </Link>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
+            <Link href="/about-us">About Us</Link>
+
+            {/* Services Dropdown */}
+            <div
+              className="relative flex justify-center gap-3 items-center cursor-pointer"
+              onMouseEnter={() => setIsServicesDropdownOpen(true)}
+              onMouseLeave={() => setIsServicesDropdownOpen(false)}
+            >
+              <Link href="/services">Services</Link>
+              {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+              {isServicesDropdownOpen && (
+                <div className="absolute top-5 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
+                  {servicesDropdown?.map((service) => (
+                    <Link
+                      key={service.label}
+                      href={service.href}
+                      className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                    >
+                      {service.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Industries Dropdown */}
+            <div
+              className="relative flex justify-center gap-3 items-center cursor-pointer"
+              onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
+              onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
+            >
+              <Link href="/industries">Industries</Link>
+              {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+              {isIndustriesDropdownOpen && (
+                <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+                  {industriesDropdown?.map(
+                    (industry) =>
+                      industry.label !== "Our Booking System" && (
+                        <Link
+                          key={industry.label}
+                          href={industry.href}
+                          className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                        >
+                          {industry.label}
+                        </Link>
+                      )
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Products Dropdown */}
+            <div
+              className="relative flex justify-center gap-3 items-center cursor-pointer"
+              onMouseEnter={() => setWork(true)}
+              onMouseLeave={() => setWork(false)}
+            >
+              <Link href="/industries">Products</Link>
+              {work ? <FaCaretUp /> : <FaCaretDown />}
+              {work && (
+                <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+                  <Link
+                    href="industries/our-booking-system"
+                    className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                  >
+                    Our Booking System
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link href="/our-work">Our Work</Link>
+          </div>
+
+          {/* Contact + Language (Desktop) */}
+          <div className="hidden lg:flex text-sm lg:text-base xl:text-xl items-center gap-5">
+            <div className="font-archivo text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white">
+              العربية
+            </div>
+            <Link href="/contact">
+              <button className="mx-auto text-[16px] h-10 w-40 rounded-full bg-blueColor">
+                Contact Us
+              </button>
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden" onClick={toggleSidebar}>
+            <FiMenu
+              className={`w-6 h-6 cursor-pointer duration-300 ease-in-out ${
+                isSidebarOpen ? "rotate-90" : ""
+              }`}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* SIDEBAR (Mobile) */}
+      <div
+        className={`fixed top-0 right-0 h-screen w-[80%] max-w-[300px] 
+          !font-lato main_hero_slogan bg-[#000b17] text-white transform ${
+            isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 z-[999]`}
+      >
+        <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
           <Link href="/">
-            {" "}
             <img
               src="/Code hive Branding-01.png"
-              className="w-40 md:w-60"
+              className="w-32"
               alt="logo"
+              onClick={() => setIsSidebarOpen(false)}
             />
           </Link>
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="text-2xl focus:outline-none"
+          >
+            <FaTimes />
+          </button>
         </div>
 
-        <div className="hidden lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
-          {/* <Link href="/">Home</Link> */}
-          <Link href="/about-us">About Us</Link>
-
-          {/* Services Dropdown */}
-          <div
-            className="relative flex justify-center gap-3 items-center cursor-pointer"
-            onMouseEnter={() => setIsServicesDropdownOpen(true)}
-            onMouseLeave={() => setIsServicesDropdownOpen(false)}
+        {/* Sidebar Links */}
+        <div className="flex flex-col gap-4 p-4">
+          {/* About Us */}
+          <Link
+            href="/about-us"
+            onClick={() => setIsSidebarOpen(false)}
+            className="hover:text-blueColor transition-colors"
           >
-            <Link href="/services">Services</Link>
-            {/* Services  */}
+            About Us
+          </Link>
 
-            {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-            {/* <FaChevronDown className="text-blue-600 text-base" /> */}
+          {/* Services (Collapsible) */}
+          <div>
+            <div
+              className="flex items-center justify-between hover:text-blueColor cursor-pointer"
+              onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+            >
+              <span>Services</span>
+              {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+            </div>
             {isServicesDropdownOpen && (
-              <div className="absolute top-5 left-0 mt-1 bg-[#001A36]  w-[350px] rounded shadow-lg z-50">
-                {/* <Link
-                  href="/services"
-                  className="block py-2 px-4 text-white hover:bg-[#219DD92B]"
-                >
-                  All Services
-                </Link> */}
+              <div className="mt-2  flex flex-col space-y-2">
                 {servicesDropdown?.map((service) => (
                   <Link
                     key={service.label}
                     href={service.href}
-                    className="block py-2 px-4  text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                    className="hover:bg-[#219DD92B] hover:border-l-2 hover:bg- hover:border-blueColor"
+                    onClick={() => setIsSidebarOpen(false)}
                   >
-                    {service.label}
+                    <span className="ml-2">{service.label}</span>
                   </Link>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Industries Dropdown */}
-          <div
-            className="relative flex justify-center gap-3 items-center cursor-pointer"
-            onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
-            onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
-          >
-            <Link href={"/industries"}>Industries</Link>
-
-            {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-            {/* <FaChevronDown className="text-blue-600 text-base" /> */}
+          {/* Industries (Collapsible) */}
+          <div>
+            <div
+              className="flex items-center justify-between hover:text-blueColor cursor-pointer"
+              onClick={() =>
+                setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen)
+              }
+            >
+              <span>Industries</span>
+              {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+            </div>
             {isIndustriesDropdownOpen && (
-              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+              <div className="mt-2 ml-4 flex flex-col space-y-2">
                 {industriesDropdown?.map(
                   (industry) =>
                     industry.label !== "Our Booking System" && (
                       <Link
                         key={industry.label}
                         href={industry.href}
-                        className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                        className="hover:text-blueColor"
+                        onClick={() => setIsSidebarOpen(false)}
                       >
                         {industry.label}
                       </Link>
@@ -108,20 +234,22 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div
-            className="relative flex justify-center gap-3 items-center cursor-pointer"
-            onMouseEnter={() => setWork(true)}
-            onMouseLeave={() => setWork(false)}
-          >
-            <Link href={"/industries"}>Products</Link>
 
-            {work ? <FaCaretUp /> : <FaCaretDown />}
+          {/* Products (Collapsible) */}
+          <div>
+            <div
+              className="flex items-center justify-between hover:text-blueColor cursor-pointer"
+              onClick={() => setWork(!work)}
+            >
+              <span>Products</span>
+              {work ? <FaCaretUp /> : <FaCaretDown />}
+            </div>
             {work && (
-              <div className="absolute top-5 mt-1     left-0  bg-[#001A36]  w-[350px]  shadow-lg z-50">
+              <div className="mt-2 ml-4 flex flex-col space-y-2">
                 <Link
-                  // key={industry.label}
-                  href={"industries/our-booking-system"}
-                  className="block py-2 px-4  text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                  href="industries/our-booking-system"
+                  className="hover:text-blueColor"
+                  onClick={() => setIsSidebarOpen(false)}
                 >
                   Our Booking System
                 </Link>
@@ -129,73 +257,31 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="/our-work">Our Work</Link>
-          {/* <Link href="/contact-us">Contact</Link> */}
-        </div>
-        <div className="hidden  lg:flex text-sm lg:text-base xl:text-xl items-center gap-5">
-          <div
-            className="font-archivo text-[14px] sm:text-[16px] lg:text-[18px] font-lato 
-          text-white"
+          {/* Our Work */}
+          <Link
+            href="/our-work"
+            className="hover:text-blueColor transition-colors"
+            onClick={() => setIsSidebarOpen(false)}
           >
-            العربية
-          </div>
-
-          <Link href={"/contact"}>
-            <button className="mx-auto text-[16px]  h-10 w-40 rounded-full  bg-blueColor">
-              Contact Us
-            </button>
+            Our Work
           </Link>
-          {/* <div className="bg-white text-black rounded-full">
-            <FiArrowUpRight className="w-5 h-5" />
-          </div> */}
-        </div>
 
-        <div className="lg:hidden" onClick={toggleSidebar}>
-          <FiMenu
-            className={`w-6 h-6 cursor-pointer duration-300 ease-in-out ${
-              isSidebarOpen ? "rotate-90" : ""
-            }`}
-          />
+          {/* Language & Contact */}
+          <div className="flex flex-col gap-2 pt-2 border-t border-gray-600 mt-4">
+            <div className="font-lato">العربية</div>
+            <Link
+              href="/contact"
+              className="hover:text-white transition-colors"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              <button className="mx-auto text-[16px] h-10 w-40 rounded-full bg-blueColor">
+                Contact Us
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
-
-      {/* Sidebar */}
-      {isSidebarOpen && (
-        <>
-          <div
-            className="fixed inset-0 bg-black opacity-50 z-40"
-            onClick={toggleSidebar}
-          />
-          <div
-            className={`fixed top-0 left-0 w-64 h-full bg-[#00011b] text-white p-4 z-50 transition-transform transform ${
-              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
-          >
-            <Link href="/" className="block py-2">
-              Home
-            </Link>
-            <Link href="/about-us" className="block py-2">
-              About Us
-            </Link>
-            <Link href="/services" className="block py-2">
-              Services
-            </Link>
-            <Link href="/" className="block py-2">
-              Products
-            </Link>
-            <Link href="/" className="block py-2">
-              Industries
-            </Link>
-            <Link href="/" className="block py-2">
-              Portfolio
-            </Link>
-            <button onClick={toggleSidebar} className="mt-4">
-              Close
-            </button>
-          </div>
-        </>
-      )}
-    </div>
+    </>
   );
 };
 

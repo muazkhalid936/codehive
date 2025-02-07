@@ -17,7 +17,7 @@ const ImageScrollEffect = () => {
       scrollTrigger: {
         trigger: ".why-section-container",
         start: "top top",
-        end: "+=5000", // Total scroll length
+        end: "+=4500", // Total scroll length
         scrub: true,
         pin: true, // Pin the entire container
       },
@@ -55,8 +55,8 @@ const ImageScrollEffect = () => {
         .to(
           ".why-section-heading-2",
           {
-            yPercent: -200, // Move to the center
-            duration: 1,
+            yPercent: -150, // Move to the center
+            duration: 0.5,
             onUpdate: function () {
               const progress = this.progress();
               applyGradient(".colorText2", progress);
@@ -67,15 +67,15 @@ const ImageScrollEffect = () => {
         .to(
           ".why-section-heading-3",
           {
-            yPercent: -200,
-            duration: 1,
+            yPercent: -150,
+            duration: 0.5,
           },
           "<"
         )
         .to(
           ".why-section-heading-2",
           {
-            yPercent: -250,
+            yPercent: -200,
             opacity: 0,
             // duration: 1,
           } // Delay before animating the next heading
@@ -88,7 +88,7 @@ const ImageScrollEffect = () => {
               const progress = this.progress();
               applyGradient(".colorText3", progress);
             },
-            // duration: 1,
+            duration: 1,
           },
           "<"
         );

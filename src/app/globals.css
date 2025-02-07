@@ -110,7 +110,7 @@
 }
 
 .main_hero_slogan {
-  @apply text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px];
+  @apply text-[12px] md:text-[14px] lg:text-[16px];
 }
 
 .scrollbar-hidden::-webkit-scrollbar {

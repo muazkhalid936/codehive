@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { HiArrowUpRight, HiChevronDown } from "react-icons/hi2"; // Import the chevron icon
 import PhoneInput from "../../PhoneInput";
 import "react-phone-input-2/lib/style.css"; // Import styles for the PhoneInput
+import { FiArrowUpRight } from "react-icons/fi";
 
 const ContactForm = () => {
   const [phone, setPhone] = useState("");
@@ -177,7 +178,7 @@ const ContactForm = () => {
           >
             Get Started
             <span className="ml-2 flex items-center justify-center w-5 h-5 bg-white text-black rounded-full">
-              <HiArrowUpRight />
+              <FiArrowUpRight />
             </span>
           </button>
         </div>
