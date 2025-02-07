@@ -25,26 +25,26 @@
 
 .card-2 {
   left: translate(-50%, -50%);
-  top: 10px;
+  top: 20px;
 }
 
 .card-3 {
   left: translate(-50%, -50%);
-  top: 20px;
+  top: 40px;
 }
 
 .card-4 {
   left: translate(-50%, -50%);
-  top: 30px;
+  top: 60px;
 }
 
 .card-5 {
   left: translate(-50%, -50%);
-  top: 40px;
+  top: 80px;
 }
 .card-6 {
   left: translate(-50%, -50%);
-  top: 50px;
+  top: 100px;
 }
 
 @media (max-width: 768px) {

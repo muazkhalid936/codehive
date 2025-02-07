@@ -27,19 +27,17 @@ const Features = ({ data }) => {
         <div className="flex flex-wrap  justify-center items-center">
           {data.cards.map((item, index) => {
             // Determine if the current index is even or odd
-            const isEven = index % 2 === 0;
+            const isFirst = index % 4 === 0;
+            const isSec = index % 4 === 1;
+            const isThird = index % 4 === 2;
+            const isForth = index % 4 === 3;
 
             // Define classes based on even/odd
             const cardClasses = `
-              border border-blueColor 
               sm:mx-5 mx-2 my-2 sm:my-5 p-6 h-[150px] sm:h-[280px] flex cursor-pointer flex-col justify-center items-center   
               rounded-[20px] gap-4 relative overflow-hidden 
               transition-transform duration-300 transform hover:scale-[1.1]
-              ${
-                isEven
-                  ? "bg-gradient-to-r from-[#062035] to-transparent"
-                  : "bg-gradient-to-tl from-[#062035] to-transparent"
-              }
+             
             `;
 
             return (
@@ -51,6 +49,23 @@ const Features = ({ data }) => {
               >
                 <div
                   className={cardClasses}
+                  style={{
+                    border: "1px solid transparent",
+                    borderRadius: " 26px",
+                    background: `linear-gradient(to ${
+                      isFirst
+                        ? "bottom right"
+                        : isSec
+                        ? "top left"
+                        : isThird
+                        ? "bottom left"
+                        : isForth
+                        ? "top right"
+                        : ""
+                    }, #052036, #02101f),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
+                    backgroundClip: "padding-box, border-box",
+                    backgroundOrigin: "padding-box, border-box",
+                  }}
                   onMouseEnter={() => setItemHovered(item.title)}
                   onMouseLeave={() => setItemHovered("")}
                 >
@@ -73,7 +88,7 @@ const Features = ({ data }) => {
                   {/* Description Container */}
                   <div
                     className={`absolute inset-0 flex flex-col justify-center items-center 
-                                bg-gradient-to-t  from-[#062035] to-transparent gap-2 bg-opacity-90 p-4 
+                                 gap-2 bg-opacity-90 p-4 
                                 transition-opacity duration-500 
                                 ${
                                   itemHovered === item.title
@@ -81,6 +96,23 @@ const Features = ({ data }) => {
                                     : "opacity-0"
                                 }
                                `}
+                    style={{
+                      border: "1px solid transparent",
+                      borderRadius: " 26px",
+                      background: `linear-gradient(to ${
+                        isFirst
+                          ? "top left"
+                          : isSec
+                          ? "bottom right"
+                          : isThird
+                          ? "top right"
+                          : isForth
+                          ? "bottom left"
+                          : ""
+                      }, #052036, #02101f),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
+                      backgroundClip: "padding-box, border-box",
+                      backgroundOrigin: "padding-box, border-box",
+                    }}
                   >
                     <h2 className="text-center text-[17px]  ">{item.title}</h2>
                     <p className="text-center text-[#fbfbfb] text-[8px] sm:text-[13px] ">

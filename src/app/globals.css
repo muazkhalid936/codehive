@@ -194,8 +194,9 @@
 }
 
 .our-process-main-pic {
-  @apply bg-gradient-to-br from-[#010B1770] via-[#2194cd] to-[#010B1770] p-[0.15rem] rounded-3xl;
+  @apply bg-gradient-to-br from-[#010B1770] via-[#2194cd] to-[#010B1770] p-[0.07rem] rounded-[20px];
 }
+
 
 .colorText1 {
   @apply bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent;

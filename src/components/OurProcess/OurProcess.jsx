@@ -221,37 +221,39 @@ const StackingImages = () => {
           <div className="new-text-section  text-white">
             {[
               {
-                title: "Requirement Gathering & Planning",
+                title: "Requirement Gathering ",
                 description:
                   "We begin by understanding your vision, objectives, and technical requirements to ensure a clear roadmap for development.",
               },
               {
-                title: "Wireframing & Initial Sketches",
+                title: "Wireframing ",
                 description:
                   "Our team creates rough sketches and wireframes to establish the project’s structure, ensuring alignment with your goals.",
               },
               {
-                title: "UI/UX Design (Figma Prototyping)",
+                title: "UI/UX Design",
                 description:
                   "Our designers craft intuitive and visually appealing interfaces in Figma, focusing on user experience and seamless functionality.",
               },
               {
-                title: "Development & Implementation",
+                title: "Development ",
                 description:
                   "Our developers bring the designs to life, building secure, scalable, and high-performance applications tailored to your needs.",
               },
               {
-                title: "Quality Assurance & Testing",
+                // title: "QA & ",
+                // title: "QA & ",
+                title: "QA & esting",
                 description:
                   "We conduct rigorous testing for functionality, performance, and security, ensuring a flawless user experience across all devices.",
               },
               {
-                title: "Deployment & Launch",
+                title: "Deployment ",
                 description:
                   "After thorough testing, we launch your application or website, ensuring a seamless transition to the live environment.",
               },
               {
-                title: "Project Handover & Support",
+                title: "Handover & Support",
                 description:
                   "We deliver the final product with complete documentation, training, and ongoing support to ensure smooth operations.",
               },

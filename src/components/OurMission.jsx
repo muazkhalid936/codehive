@@ -180,7 +180,7 @@ export default function Home() {
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
+          className="p-[1px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
@@ -210,7 +210,7 @@ export default function Home() {
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
+          className="p-[1px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
@@ -236,10 +236,11 @@ export default function Home() {
             backgroundImage:
               "linear-gradient(135deg, transparent, #219DD9), url('/back.png')",
             borderRadius: "25px",
+            backgroundSize: "cover",
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[2px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
+          className="p-[1px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
