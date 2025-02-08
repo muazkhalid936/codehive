@@ -119,7 +119,7 @@ const Features = ({ data }) => {
                       {item.description}
                     </p>
 
-                    {item.getStarted && (
+                    {/* {item.getStarted && (
                       <Link
                         className="flex items-center justify-center gap-4 px-4 py-2 sm:px-6 sm:py-3 w-fit rounded-full shadow-lg border-white border-[1px] border-solid transition mt-6 sm:mt-10"
                         href={item.path}
@@ -129,7 +129,7 @@ const Features = ({ data }) => {
                           <FaArrowRight className="text-white" />
                         </div>
                       </Link>
-                    )}
+                    )} */}
 
                     {/* Add Talk an Expert button */}
                     {/* {item.talkAnExpert && (

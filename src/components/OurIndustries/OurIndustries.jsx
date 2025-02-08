@@ -262,7 +262,7 @@ const ScrollAnimation = () => {
               </p>
               <div className="flex justify-start items-center gap-3">
                 <Link href={item.link} className="mt-2 xl:text-xl text-white">
-                  Read More{" "}
+                  Read More
                 </Link>
                 <div className="bg-white text-black mt-3 rounded-full">
                   <FiArrowUpRight className="text-lg" />
