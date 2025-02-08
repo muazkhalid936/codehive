@@ -9,14 +9,14 @@ export const ourIndustriesData = [
   },
   {
     title: "Delivery",
-    link: "/industry/delivery",
+    link: "/industries/delivery",
     des1: " This delivery app streamlines the entire shipping process with a focus on speed, reliability, and convenience.",
     des2: "Easily schedule pickups, track your deliveries in real-time, and get instant updates on your shipments. Our app offers services like same-day delivery, scheduled deliveries, and secure handling of all types of items, ensuring a seamless experience.",
     des3: "With user-friendly interface, you can manage deliveries on the go, choose the best service for your needs, and enjoy fast, efficient shipping without the hassle. We’re committed to making your delivery experience smooth, reliable, and stress-free",
   },
   {
     title: "Health Care",
-    link: "/industry/health-care",
+    link: "/industries/health-care",
     des1: "Our healthcare solutions are built to enhance efficiency and improve patient care for clinics, hospitals, and medical centres.",
     des2: "Manage appointments, patient records, and billing seamlessly with secure, fully compliant systems. Enable telemedicine, real-time consultations, and instant access to health records for a better patient experience.",
     des3: "Use advanced analytics to track trends, optimize workflows, and streamline operations. With our scalable and easy-to-use solutions, you can elevate your healthcare services and deliver exceptional care.",
@@ -53,6 +53,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 // Lazy load the IphoneModel component
@@ -64,8 +65,9 @@ const IphoneModel = dynamic(() =>
 
 const ScrollAnimation = () => {
   const router = useRouter();
-  const [scrollY, setScrollY] = useState(0);
-  const [startRotation, setStartRotation] = useState(false);
+
+  const [activeSection, setActiveSection] = useState(0);
+
   const texturePaths = [
     "/iphoneModel/Car wash.jpg",
     "/iphoneModel/Delivery.png",
@@ -77,7 +79,6 @@ const ScrollAnimation = () => {
   let progress;
   const containerRef = useRef();
   const isInViewRef = useRef(false); // Ref instead of state for performance
-  const textureUrlRef = useRef(texturePaths[0]);
   const [textureUrl, setTextureUrl] = useState(texturePaths[0]);
   const meshRef = useRef();
   const imageObjectsRef = useRef([]);
@@ -100,8 +101,13 @@ const ScrollAnimation = () => {
         scrub: 1,
         pin: true,
         toggleActions: "play none none none",
-        onEnter: () => setStartRotation(true), // Set startRotation to true when animation starts
-        onLeaveBack: () => setStartRotation(false), // Set startRotation to false when animation is reversed
+
+        onUpdate: (self) => {
+          const currentSectionIndex = Math.floor(
+            self.progress * sections.length
+          );
+          setActiveSection(currentSectionIndex);
+        }, // Set startRotation to false when animation is reversed
       },
     });
 
@@ -229,6 +235,11 @@ const ScrollAnimation = () => {
           <div
             key={index}
             className="section  absolute flex flex-row-reverse items-center justify-between gap-8  px-16"
+            style={{
+              pointerEvents: activeSection === index ? "auto" : "none",
+              // Optionally, adjust z-index so the active section sits on top.
+              zIndex: activeSection === index ? 1 : 0,
+            }}
           >
             <div className="sm:w-[640px]  flex-1 heading">
               <h2 className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
@@ -250,12 +261,9 @@ const ScrollAnimation = () => {
                 {item?.des5}
               </p>
               <div className="flex justify-start items-center gap-3">
-                <button
-                  onClick={() => router.push(item.link)}
-                  className="mt-2 xl:text-xl text-white"
-                >
+                <Link href={item.link} className="mt-2 xl:text-xl text-white">
                   Read More{" "}
-                </button>
+                </Link>
                 <div className="bg-white text-black mt-3 rounded-full">
                   <FiArrowUpRight className="text-lg" />
                 </div>

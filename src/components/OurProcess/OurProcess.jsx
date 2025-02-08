@@ -29,7 +29,7 @@ const StackingImages = () => {
           scrub: 1,
         },
       });
-      console.log("Desktop");
+//      console.log("Desktop");
 
       const cards = [1, 2, 3, 4, 5, 6, 7]; // Extend with new cards
 
@@ -108,7 +108,7 @@ const StackingImages = () => {
         }
       });
     } else {
-      console.log("Mobile");
+    //  console.log("Mobile");
 
       const timeline = gsap.timeline({
         scrollTrigger: {
