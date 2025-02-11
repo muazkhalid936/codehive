@@ -16,7 +16,7 @@ const Testimonials = ({ testimonials }) => {
         <div className="flex flex-row mt-[25px] sm:mt-[45px] items-center justify-between ">
           {/* Title */}
           <h2
-            className=" text-left w-[70%] sm:w-auto   sub_heading gilray-font"
+            className=" text-left    sub_heading gilray-font"
             style={{
               textDecorationSkipInk: "none",
               textUnderlinePosition: "from-font",
@@ -26,7 +26,7 @@ const Testimonials = ({ testimonials }) => {
           </h2>
 
           {/* Carousel Buttons */}
-          <div className="flex gap-2  sm:mt-0">
+          <div className=" gap-2 hidden sm:flex sm:mt-0">
             <button
               className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
               onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
@@ -101,6 +101,21 @@ const Testimonials = ({ testimonials }) => {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        <div className=" gap-2 flex justify-center mb-5 sm:hidden sm:mt-0">
+          <button
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
+            onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
+          >
+            <HiChevronLeft className="text-white text-xl sm:text-2xl font-bold" />
+          </button>
+          <button
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
+            onClick={() => swiperRef.current?.slideNext()} // Slide to next
+          >
+            <HiChevronRight className="text-white text-xl sm:text-2xl font-bold" />
+          </button>
+        </div>
       </div>
     </section>
   );

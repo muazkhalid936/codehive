@@ -16,7 +16,13 @@ const IconsArr = [Icon1, Icon2, Icon3, Icon4, Icon5, Icon6, Icon7];
 
 const StackingImages = () => {
   const [active, setActive] = useState(0);
+  const [iconSize, setIconSize] = useState("40");
   useEffect(() => {
+    if (window.innerWidth > 700) {
+    } else {
+      setIconSize("25");
+    }
+
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     if (window.innerWidth > 700) {
       const timeline = gsap.timeline({
@@ -29,7 +35,7 @@ const StackingImages = () => {
           scrub: 1,
         },
       });
-//      console.log("Desktop");
+      //      console.log("Desktop");
 
       const cards = [1, 2, 3, 4, 5, 6, 7]; // Extend with new cards
 
@@ -108,7 +114,7 @@ const StackingImages = () => {
         }
       });
     } else {
-    //  console.log("Mobile");
+      //  console.log("Mobile");
 
       const timeline = gsap.timeline({
         scrollTrigger: {
@@ -130,8 +136,8 @@ const StackingImages = () => {
           // Intro animation for the first card and text
           timeline.fromTo(
             `.new-card-${card}`,
-            { opacity: 0 },
-            { opacity: 1 },
+            { opacity: 0, yPercent: 30 },
+            { opacity: 1, yPercent: 0 },
             "start"
           );
           timeline.fromTo(
@@ -160,8 +166,8 @@ const StackingImages = () => {
 
           timeline.fromTo(
             `.new-text-${nextCard}`,
-            { opacity: 0, y: 30 },
-            { opacity: 1, y: -10, duration: 0.5 },
+            { opacity: 0, y: 10 },
+            { opacity: 1, y: 0, duration: 0.5 },
             `card-${nextCard}+=0.3`
           );
 
@@ -170,9 +176,14 @@ const StackingImages = () => {
             { scale: 0.8, yPercent: -20 },
             `card-${nextCard}`
           );
+          timeline.to(
+            `.new-card-${card - 1}`,
+            { scale: 0.7, yPercent: -30 },
+            `card-${nextCard}`
+          );
           timeline.fromTo(
             `.new-card-${nextCard}`,
-            { opacity: 0, yPercent: 30, xPercent: 0 },
+            { opacity: 0, yPercent: 10, xPercent: 0 },
             { opacity: 1, yPercent: 0, xPercent: 0 },
             `card-${nextCard}`
           );
@@ -212,7 +223,7 @@ const StackingImages = () => {
                   key={i}
                   className={`new-icon sm:p-[15px] p-[10px]  new-icon${i + 1} `}
                 >
-                  <Icon fill={activeColor} />
+                  <Icon fill={activeColor} iconSize={iconSize} />
                 </div>
               );
             })}
@@ -241,8 +252,6 @@ const StackingImages = () => {
                   "Our developers bring the designs to life, building secure, scalable, and high-performance applications tailored to your needs.",
               },
               {
-                // title: "QA & ",
-                // title: "QA & ",
                 title: "QA & esting",
                 description:
                   "We conduct rigorous testing for functionality, performance, and security, ensuring a flawless user experience across all devices.",
@@ -268,15 +277,15 @@ const StackingImages = () => {
                     i + 1
                   }`}
                 >
-                  <span className="font-bold !font-lato !text-white  ">
-                    <span className="font-bold w-[90%] text-3xl sm:text-[50px] leading-none mt-5  main-heading text-white">
+                  <span className="font-bold text-center sm:text-start !font-lato !text-white  ">
+                    <span className="font-bold  w-[90%] text-3xl sm:text-[50px] leading-none mt-5  main-heading text-white">
                       {firstWords}{" "}
                       <span className="bg-gradient-to-r from-white  to-blueColor bg-clip-text text-transparent">
                         {lastTwoWords}
                       </span>
                     </span>
                   </span>
-                  <span className="text-white main_hero_slogan !font-lato">
+                  <span className="text-white text-center sm:text-start main_hero_slogan !font-lato">
                     {item.description}
                   </span>
                 </div>

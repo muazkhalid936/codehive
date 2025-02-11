@@ -39,7 +39,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-[75%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
+    <div className="sm:w-[75%] w-[90%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
       <form
         className=" mx-auto py-20   bg-[#041c30] text-white rounded-2xl overflow-hidden shadow-lg"
         // style={{
@@ -62,28 +62,23 @@ const ContactForm = () => {
             <span className="text-blueColor main-heading">with us</span>
           </h3>
         </div>
-        <div className="form-grid grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 mt-8">
+        <div className="form-grid grid grid-cols-1 lg:grid-cols-2 gap-6  mt-8">
           {[
             // Map over the fields and create input fields
             { id: "name", placeholder: "Full Name*", type: "text" },
-            { id: "email", placeholder: "Email", type: "email" },
-            { id: "phone", placeholder: "Phone*", type: "tel" }, // Phone field moved to third position
-            { id: "businessName", placeholder: "Business Name", type: "text" },
-            {
-              id: "yearsInBusiness",
-              placeholder: "Years in Business",
-              type: "text",
-            },
-            {
-              id: "businessCategory",
-              placeholder: "Business Category",
-              type: "text",
-            },
-            {
-              id: "currentWebsite",
-              placeholder: "Current Insstagram/Website",
-              type: "url",
-            },
+            { id: "email", placeholder: "Email/Phone*", type: "text" },
+            // { id: "phone", placeholder: "Phone*", type: "tel" }, // Phone field moved to third position
+            // { id: "businessName", placeholder: "Business Name", type: "text" },
+            // {
+            //   id: "yearsInBusiness",
+            //   placeholder: "Years in Business",
+            //   type: "text",
+            // },
+            // {
+            //   id: "businessCategory",
+            //   placeholder: "Business Category",
+            //   type: "text",
+            // },
             {
               id: "interestedIn",
               placeholder: "I’m interested in ",
@@ -97,8 +92,14 @@ const ContactForm = () => {
                 "Other",
               ],
             },
-            { id: "businessSize", placeholder: "Business Size", type: "text" },
-            { id: "budget", placeholder: "Budget", type: "text" },
+            {
+              id: "currentWebsite",
+              placeholder: "Current Instagram/Website",
+              type: "url",
+              width: "full",
+            },
+            // { id: "businessSize", placeholder: "Business Size", type: "text" },
+            // { id: "budget", placeholder: "Budget", type: "text" },
           ].map((field, index) =>
             field.id === "phone" ? (
               <div
@@ -111,7 +112,10 @@ const ContactForm = () => {
                 <PhoneInput />
               </div>
             ) : field.type === "select" ? (
-              <div key={field.id} className="relative w-[90%] lg:w-[70%] mx-auto">
+              <div
+                key={field.id}
+                className="relative w-[90%] lg:w-[70%] mx-auto"
+              >
                 <select
                   id={field.id}
                   required
@@ -152,7 +156,17 @@ const ContactForm = () => {
             )
           )}
         </div>
-
+        <div className="relative w-[90%] lg:w-[86%] mx-auto my-4">
+          <input
+            id="budget"
+            type="text"
+            required
+            // onChange={handleInputChange}
+            placeholder="Budget"
+            // onBlur={handleBlur}
+            className="peer bg-[#041c30] p-3 text-white rounded-none focus:outline-none w-full  border-b-2 border-gray-500"
+          />
+        </div>
         {/* Message Field */}
         <div className="relative w-[90%] lg:w-[86%] mx-auto mb-28">
           <textarea

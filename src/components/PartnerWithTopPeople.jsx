@@ -8,6 +8,15 @@ import "swiper/css/bundle";
 
 const data = [
   {
+    name: "Saif AL Alwar",
+    position: "CEO",
+    description:
+      "As the CEO of Code Hive, Saif Alawar leads with a focus on digital transformation, data analytics, and customized software solutions. His expertise drives innovation, efficiency, and strategic decision-making, establishing Code Hive as a trusted leader in the tech industry. ",
+    linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
+    twitter: "https://twitter.com/aisha_alhassan",
+    picture: "/partnerwithtoppeople/boss.png",
+  },
+  {
     name: "Shoaib Ahmad",
     position: "General Manager",
     description:
@@ -81,15 +90,6 @@ const data = [
     twitter: "https://twitter.com/aisha_alhassan",
     picture: "/partnerwithtoppeople/Samer.png",
   },
-  {
-    name: "Saif AL Alwar",
-    position: "CEO",
-    description:
-      "As the CEO of Code Hive, Saif Alawar leads with a focus on digital transformation, data analytics, and customized software solutions. His expertise drives innovation, efficiency, and strategic decision-making, establishing Code Hive as a trusted leader in the tech industry. ",
-    linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
-    twitter: "https://twitter.com/aisha_alhassan",
-    picture: "/partnerwithtoppeople/boss.png",
-  },
 ];
 
 const PartnerWithTopPeople = () => {
@@ -98,7 +98,7 @@ const PartnerWithTopPeople = () => {
   return (
     <div className="bg-[#000B17]">
       <div className="bg-[#010B17] container  py-10 sm:py-20 text-white ">
-        <h2 className="text-start  mx-2 w-[70%] sub_heading leading-tight gilray-font ">
+        <h2 className="text-start  mx-2 sm:w-[70%] sub_heading leading-tight gilray-font ">
           Meet the Behind
           <span className="text-[#219DD9] mx-2">Creative Minds</span>
           Our Most Successful Projects
@@ -110,14 +110,14 @@ const PartnerWithTopPeople = () => {
             slidesPerView={3}
             // centeredSlides={true}
             modules={[EffectFade, History, EffectCards, Autoplay]}
-            autoplay={{ delay: 3000 }}
+            // autoplay={{ delay: 3000 }}
             // loopAddBlankSlides={false}
             // loopPreventsSliding={false}
             // rewind={true}
-            loop={true}
+            // loop={true}
             breakpoints={{
               240: {
-                slidesPerView: 2,
+                slidesPerView: 1.3,
               },
               1024: {
                 slidesPerView: 3,
@@ -139,7 +139,7 @@ const PartnerWithTopPeople = () => {
                   onClick={() => setHoveredSlide(item.name)}
                   onMouseLeave={() => setHoveredSlide("")}
                   className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2
-                bg-gradient-to-b from-[#010B1770]  to-[#2093CA70] relative h-[250px] rounded-xl sm:min-h-[350px] sm:h-[45vh] cursor-pointer pt-8
+                bg-gradient-to-b from-[#010B1770]  to-[#2093CA70] relative  rounded-xl sm:min-h-[350px] h-[45vh] cursor-pointer pt-8
                 overflow-hidden hover:scale-105
                 `}
                 >

@@ -3038,12 +3038,12 @@ export const industries = [
 
 export const ourWorks = [
   {
-    title: "Delicious Bites App",
-    slug: "delicious-bites-app",
+    title: "Mr Take App",
+    slug: "Mr-app",
     heroData: {
-      title: "Delicious Bites App",
+      title: "Mr Take App",
       description:
-        "Indulge in your favorite fast food cravings with DeliciousBites, the ultimate app for quick and convenient access to the best fast food around you. Whether you're in the mood for a juicy burger, crispy fries, or a refreshing milkshake, DeliciousBites has you covered.",
+        "Satisfy your fast food cravings with Mr. Take – the go-to app for quick and easy access to the best food near you!",
       bgImage: "/our-work/delicious-bite-app/hero-bg.png",
       rightImage: "/our-work/delicious-bite-app/hero-right.png",
       topArrow: true,
@@ -3052,160 +3052,195 @@ export const ourWorks = [
     projectOverview: {
       title: "Project Overview",
       description:
-        "Indulge in the ultimate fast food experience with DeliciousBites, your go-to app for satisfying cravings with ease and convenience. Whether you're hankering for a juicy burger, crispy fries, or a refreshing milkshake, DeliciousBites brings the best fast food right to your fingertips. Our user-friendly app connects you to a wide selection of local favorites and national chains, offering a seamless ordering process, exclusive deals, and real-time order tracking.",
+        "Satisfy your fast food cravings effortlessly with Mr Take! Whether you're in the mood for a juicy burger, crispy fries, or a refreshing milkshake, our app connects you to the best local restaurants and popular chains. With a simple ordering process, exclusive deals, and real-time order tracking, getting your favorite meals has never been easier. Enjoy a seamless experience from order to delivery—all at your fingertips.",
     },
     panelData: [
       {
         id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
+        title: "User App",
+        heading: "User App",
         description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
+          "User-centric features to offer customers a hassle-free experience that makes you come back for more.",
         features: [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
+            icon: "/our-work/Mr/1.png", // Replace with the actual icon path or class
+            title: "Effortless Ordering",
             description:
-              "Securely manage personal health data and medical history.",
+              "Seamlessly browse and order from a variety of vendors with just a few taps.",
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
+            icon: "/our-work/Mr/2.png", // Replace with the actual icon path or class
+            // icon: "/new/user-profile 2.png",
+            title: "Multi-Vendor Marketplace",
             description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+              "Access a wide range of sellers offering diverse products, ensuring competitive pricing and quality options.",
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
+            icon: "/our-work/Mr/3.png", // Replace with the actual icon path or class
+            // icon: "/new/user-profile 1 (1).png",
+            title: "Secure & Convenient Payments",
             description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+              "Enjoy hassle-free transactions with multiple secure payment options, ensuring a smooth purchasing experience.",
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
+            icon: "/our-work/Mr/4.png", // Replace with the actual icon path or class
+            // icon: "/new/user-profile 2 (1).png",
+            title: "Real-Time Order Tracking",
             description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+              "Stay updated on your order status with live tracking and instant notifications.",
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
+            // icon: "/new/user-profile 1 (2).png",
+            icon: "/our-work/Mr/5.png", // Replace with the actual icon path or class
+            title: "Exclusive Deals & Discounts",
             description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
+              "Get access to special offers, promotions, and bulk purchase discounts from top vendors.",
           },
           {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
+            icon: "/our-work/Mr/6.png", // Replace with the actual icon path or class
+            // icon: "/new/user-profile 2 (2).png",
+            title: "Vendor Ratings & Reviews",
             description:
-              "View test results and access personal medical history securely.",
+              "Make informed decisions with transparent vendor ratings, reviews, and product feedback from other buyers.",
           },
         ],
-        image: "/new/1.png",
+        // image: "/new/1.png",
+        image: "/our-work/Mr/main1.png", // Replace with the actual icon path or class
       },
       {
         id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
+        title: "Super Admin",
+        heading: "Super Admin Panel",
         description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
+          "Complete control over the platform, vendors, and operations.",
         features: [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
+            icon: "/our-work/Mr/7.png", // Replace with the actual icon path or class
+            // icon: "/new/user-profile 1 (3).png",
+            title: "Dashboard Overview",
             description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+              "View real-time data on sales, orders, users, and vendor activity.",
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            // icon: "/new/user-profile 2 (3).png",
+            icon: "/our-work/Mr/8.png", // Replace with the actual icon path or class
+            title: "User & Vendor Management",
+            description: "Approve, suspend, or remove vendors and users.",
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            // icon: "/new/user-profile 1 (4).png",
+            icon: "/our-work/Mr/9.png", // Replace with the actual icon path or class
+            title: "Category & Product Control",
+            description: "Manage product categories and subcategories.",
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            icon: "/our-work/Mr/10.png", // Replace with the actual icon path or class
+            // icon: "/new/user-profile 2 (4).png",
+            title: "Commission & Revenue Management",
+            description: "View revenue reports and payout details.",
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
+            icon: "/our-work/Mr/11.png", // Replace with the actual icon path or class
+            // icon: "/new/user-profile 1 (5).png",
+            title: "Order & Transaction Monitoring",
+            description: "Track all transactions and dispute resolutions.",
           },
           {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
+            // icon: "/new/user-profile 2 (5).png",
+            icon: "/our-work/Mr/12.png", // Replace with the actual icon path or class
+            title: "Marketing & Promotions",
+            description: "Create global offers, banners, and ad placements.",
+          },
+          {
+            // icon: "/new/user-profile 2 (5).png",
+            icon: "/our-work/Mr/13.png", // Replace with the actual icon path or class
+            title: "Reports & Analytics",
             description:
-              "Receive important updates, including critical patient conditions and lab results.",
+              "Generate sales, vendor performance, and user activity reports.",
+          },
+          {
+            // icon: "/new/user-profile 2 (5).png",
+            icon: "/our-work/Mr/14.png", // Replace with the actual icon path or class
+            title: "Multi-Level Access Control",
+            description:
+              "Assign roles and permissions for admins and support teams.",
           },
         ],
-        image: "/new/2.png",
+        image: "/our-work/Mr/main2.png",
       },
       {
         id: 3,
         title: "Admin Panel",
         heading: "Admin Panel",
         description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
+          "Dedicated control for managing vendors and marketplace operations.",
         features: [
           {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+            icon: "/our-work/Mr/15.png",
+            title: "Vendor Onboarding & Management",
+            description: "Monitor and assist vendors with store setup.",
           },
           {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
+            icon: "/our-work/Mr/16.png",
+            title: "Order & Delivery Oversight",
             description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
+              "Ensure proper delivery fulfillment and dispute handling.",
           },
           {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+            icon: "/our-work/Mr/17.png",
+            title: "Product & Inventory Control",
+            description: "Approve vendor product listings and updates.",
           },
           {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+            icon: "/our-work/Mr/18.png",
+            title: "Payments & Settlements",
+            description: "Oversee vendor payments and commission deductions.",
           },
           {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
+            icon: "/our-work/Mr/19.png",
+            title: "Marketing & Vendor Promotions",
+            description: "Enable special vendor promotions and discounts.",
+          },
+          {
+            icon: "/our-work/Mr/20.png",
+            title: "Analytics & Reports",
             description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
+              "View vendor sales performance, order trends, and app engagement metrics.",
+          },
+          {
+            icon: "/our-work/Mr/21.png",
+            title: "Multi-Admin Role Management",
+            description:
+              "Assign different access levels for staff and managers.",
+          },
+          {
+            icon: "/our-work/Mr/22.png",
+            title: "Customer & Vendor Support",
+            description:
+              "Resolve issues related to orders, refunds, and disputes.",
           },
         ],
-        image: "/new/3.png",
+        image: "/our-work/Mr/main3.png",
       },
     ],
     challengeSection: {
       title: "Challenges",
       description:
-        "Delicious Bites is your ultimate app for quick and delicious fast food options. Easily browse local restaurants, check detailed menus, and read customer reviews to find exactly what you want, whether it's a juicy burger or a refreshing milkshake. Ordering is simple and customizable, with exclusive deals available through the app. Enjoy real-time order tracking and secure payment options, plus the ability to save your favorite meals for easy reordering, ensuring a personalized experience every time.",
+        "Mr. Take makes ordering fast food simple and enjoyable. The app gives customers a clear menu with detailed descriptions, portion sizes, and customization options, so they can easily find and order their favorite meals. It also offers multiple payment methods, quick checkouts with pre-filled details, and personalized food suggestions based on past orders. With these features, Mr. Take makes it faster and more convenient to satisfy your cravings—bringing your favorite meals just a few taps away.",
       image: "/our-work/delicious-bite-app/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Delicious Bites App",
+      title: "Effortless Food Delivery experience with Mr Take",
       description:
-        "The application houses some industry-leading features like:",
+        "Discover a smarter way to enjoy food with features designed for convenience:",
       points: [
-        "Live Location Tracking",
-        "Profile Generation & Database",
-        "Vehicle Listing",
-        "Maps Integeration",
+        "Personalized recommendations & adaptive learning",
+        "Multiple order & payment options",
+        "Real-time order tracking",
+        "Seamless restaurant & delivery integration",
       ],
       backgroundColor: "#219DD942",
-      rightImage: "/our-work/delicious-bite-app/worryNoMore.png",
+      rightImage: "/our-work/delicious-bite-app/Frame.png",
     },
     techSection: {
       rightImage: "/our-work/delicious-bite-app/technologyRightImage.png",
@@ -3213,7 +3248,7 @@ export const ourWorks = [
     solutionSection: {
       title: "Solutions",
       description:
-        "To enhance the Delicious Bites app, key solutions include a user-friendly interface, personalized recommendations, and advanced search filters for easy meal discovery. Real-time menu updates, a loyalty program, and order tracking will improve user experience, while a feedback system will gather insights on service quality. Secure payment options and in-app customer support will build trust, and a marketing dashboard for restaurant partners will facilitate effective promotion management. These enhancements aim to significantly boost user engagement and satisfaction.",
+        "Mr. Take is designed to make fast food ordering easy and hassle-free. The app offers a detailed menu with clear descriptions and portion sizes, so you can quickly find what you’re craving. Pre-filled details make checkout faster, and multiple payment options give you flexibility. Plus, personalized recommendations based on your past orders help you discover new favorites. With a simple and user-friendly design, Mr. Take ensures ordering your favorite meals is quick, convenient, and enjoyable.",
       image: "/our-work/delicious-bite-app/Solution.png",
     },
     image: "/our-work/delicious-bite-app/Banner.png",
@@ -3224,7 +3259,7 @@ export const ourWorks = [
     heroData: {
       title: "Wordsmith — Al",
       description:
-        "Unlock creativity and enhance your writing with our intuitive AI assistant, offering personalized suggestions and effortless content transformation.",
+        "Write emails craft essays, and chat with your AI assistant in any language easily with Wordsmith AI – your smart tool for smooth and quick communication.",
       bgImage: "/our-work/wordsmith-ai/herobg.png",
       rightImage: "/our-work/wordsmith-ai/hero-right.png",
       topArrow: true,
@@ -3233,140 +3268,100 @@ export const ourWorks = [
     projectOverview: {
       title: "Project Overview",
       description:
-        " Our AI Assistant App transforms the writing experience by offering personalized suggestions, grammar checks, and style enhancements for various writing needs.Designed for users ranging from students to content creators, it features an intuitive interface that streamlines the writing process.With real- time feedback and tailored recommendations, users can produce high quality content effortlessly.Our goal is to empower creativity and enhance writing efficiency in a user - friendly environment.",
+        "  AI Assistant App to transform your writing experience by offering personalized suggestions, grammar checks, and style enhancements for various writing needs. Designed for users ranging from students to content creators, it features an intuitive interface that streamlines the writing process. With real-time feedback and tailored recommendations, users can produce high-quality content effortlessly. Our goal is to empower creativity and enhance writing efficiency in a user-friendly environment.",
     },
     panelData: [
       {
         id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
+        title: "User App",
+        heading: "User App",
         description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
+          "Enhance your writing with AI-powered assistance that offers real-time grammar checks, style enhancements, and personalized suggestions.",
         features: [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
+            icon: "/our-work/wordsmith-ai/1.png",
+            title: "Smart AI Writing Assistance",
             description:
-              "Securely manage personal health data and medical history.",
+              "Get instant grammar, spelling, and style suggestions to improve the clarity and professionalism of your writing.",
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
+            icon: "/our-work/wordsmith-ai/2.png",
+            title: "Personalized Writing Suggestions",
             description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+              "Receive tailored recommendations based on your writing goals, whether it's making your content more engaging, formal, concise, or persuasive.",
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
+            icon: "/our-work/wordsmith-ai/3.png",
+            title: "Multiple Writing Modes",
             description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+              "Choose from various writing styles and formats, including academic essays, professional emails, blog posts, creative stories, reports, and more.",
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
+            icon: "/our-work/wordsmith-ai/4.png",
+            title: "AI-Powered Summarization",
             description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+              "Convert long articles, reports, or notes into concise, easy-to-read summaries while preserving key information and context.",
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
+            icon: "/our-work/wordsmith-ai/5.png",
+            title: "Multilingual Support",
             description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
+              "Write, translate, and refine content in multiple languages, making it easier to communicate across different audiences and cultures.",
           },
           {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
+            icon: "/our-work/wordsmith-ai/6.png",
+            title: "Plagiarism & Citation Check",
             description:
-              "View test results and access personal medical history securely.",
+              "Verify the originality of your content with built-in plagiarism detection and receive citation suggestions for proper referencing in research papers and articles.",
           },
         ],
-        image: "/new/1.png",
+        image: "/our-work/wordsmith-ai/main1.png",
       },
       {
         id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
-          },
-          {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
-          },
-          {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
-          },
-          {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
-          },
-          {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
-        ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
         title: "Admin Panel",
         heading: "Admin Panel",
         description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
+          "Easily manage users, subscriptions, and AI performance with a powerful admin panel.",
         features: [
           {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
+            icon: "/our-work/wordsmith-ai/7.png",
+            title: "User Management & Access Control",
             description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+              "Monitor and manage user accounts, including subscription plans, access levels, and activity logs, to ensure a smooth user experience.",
           },
           {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
+            icon: "/our-work/wordsmith-ai/8.png",
+            title: "AI Model Training & Customization",
             description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
+              "Continuously refine and update the AI’s capabilities based on user feedback, writing patterns, and emerging language trends.",
           },
           {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
+            icon: "/our-work/wordsmith-ai/9.png",
+            title: "Subscription & Billing Management",
             description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+              "Oversee user subscriptions, handle renewals, process payments, and manage refunds or plan upgrades.",
           },
           {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
+            icon: "/our-work/wordsmith-ai/10.png",
+            title: "Usage Analytics & Performance Reports",
             description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+              "Gain detailed insights into user behavior, most-used features, and writing trends to improve the app’s offerings.",
           },
           {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
+            icon: "/our-work/wordsmith-ai/11.png",
+            title: "Feedback & Support System",
             description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
+              "Provide an easy way for users to report issues, request new features, and receive customer support for a better overall experience.",
+          },
+          {
+            icon: "/our-work/wordsmith-ai/12.png",
+            title: "Push Notifications",
+            description:
+              "Notify users about new AI enhancements, productivity tips, and important updates to keep them engaged and informed.",
           },
         ],
-        image: "/new/3.png",
+        image: "/our-work/wordsmith-ai/main2.png",
       },
     ],
     challengeSection: {
@@ -3376,9 +3371,9 @@ export const ourWorks = [
       image: "/our-work/wordsmith-ai/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Wordsmith — Al",
+      title: "Enhance Productivity with Wordsmith — Al",
       description:
-        "The application houses some industry-leading features like:",
+        "Your intelligent AI assistant, designed to streamline your workflow with:",
       points: [
         "Contextual Understanding and Adaptive Learning",
         "Multi-Format Output Support",
@@ -3414,141 +3409,107 @@ export const ourWorks = [
     panelData: [
       {
         id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
+        title: "User App",
+        heading: "User App",
         description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
+          "Whether for social media, marketing campaigns, or personal projects, the app generates creative, context-aware captions tailored to the user’s style and purpose.",
         features: [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
+            icon: "/our-work/caption-gen/1.png",
+            title: "AI-Powered Caption Generation",
             description:
-              "Securely manage personal health data and medical history.",
+              "Generate high-quality captions instantly, tailored to different content types and audience preferences.",
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
+            icon: "/our-work/caption-gen/2.png",
+            title: "Customization Options",
             description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+              "Edit, refine, and personalize captions to match brand voice, tone, and messaging.",
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
+            icon: "/our-work/caption-gen/3.png",
+            title: "Hashtag & Keyword Suggestions",
             description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+              "Receive relevant hashtag recommendations to increase engagement and reach.",
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
+            icon: "/our-work/caption-gen/4.png",
+            title: "Multiple Caption Variations",
             description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+              "Choose from different styles and tones for each generated caption to find the perfect fit.",
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
+            icon: "/our-work/caption-gen/5.png",
+            title: "User-Friendly Interface",
             description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
+              "Enjoy a simple, intuitive app design that makes caption creation quick and hassle-free.",
           },
           {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
+            icon: "/our-work/caption-gen/6.png",
+            title: "Multi-Platform Integration",
             description:
-              "View test results and access personal medical history securely.",
+              "Copy and share captions across various social media platforms.",
+          },
+          {
+            icon: "/our-work/caption-gen/7.png",
+            title: "Language Support",
+            description:
+              "Generate captions in multiple languages to reach a broader audience.",
           },
         ],
-        image: "/new/1.png",
+        image: "/our-work/caption-gen/main1.png",
       },
       {
         id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
-          },
-          {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
-          },
-          {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
-          },
-          {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
-          },
-          {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
-        ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
         title: "Admin Panel",
         heading: "Admin Panel",
         description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
+          "The admin panel provides a centralized dashboard to manage users, monitor AI-generated captions, and optimize system performance.",
         features: [
           {
-            icon: "/new/user-profile 1 (6).png",
+            icon: "/our-work/caption-gen/8.png",
             title: "User Management",
             description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+              "Track and manage user accounts, subscriptions, and activity logs.",
           },
           {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
+            icon: "/our-work/caption-gen/9.png",
+            title: "AI Optimization",
             description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
+              "Monitor AI-generated outputs and refine the algorithm based on user interactions and feedback.",
           },
           {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
+            icon: "/our-work/caption-gen/10.png",
+            title: "Content Moderation",
             description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+              "Review and filter captions to maintain platform quality and prevent inappropriate content.",
           },
           {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
+            icon: "/our-work/caption-gen/11.png",
+            title: "Analytics & Insights",
             description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+              "Access reports on user engagement, caption trends, and AI performance to improve functionality.",
           },
           {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
+            icon: "/our-work/caption-gen/12.png",
+            title: "Performance Monitoring",
             description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
+              "Ensure smooth operation with real-time system diagnostics and updates.",
+          },
+          {
+            icon: "/our-work/caption-gen/13.png",
+            title: "Feature Customization",
+            description:
+              "Add or update features, manage settings, and introduce enhancements to improve user experience.",
           },
         ],
-        image: "/new/3.png",
+        image: "/our-work/caption-gen/main2.png",
       },
     ],
     projectOverview: {
       title: "Project Overview",
       description:
-        " Our project focuses on developing an intuitive AI-powered caption generation platform tailored to users’ needs. Designed for social media, marketing, and personal projects, the tool simplifies the creative process by generating impactful captions aligned with the user’s unique style and purpose. With an easy-to-use interface and customization options, this platform empowers users to engage audiences effectively and consistently.",
+        " Caption Gen focuses on developing an intuitive AI-powered caption generation platform tailored to users’ needs. Designed for social media, marketing, and personal projects, the tool simplifies the creative process by generating impactful captions aligned with the user’s unique style and purpose. With an easy-to-use interface and customization options, this platform empowers users to engage audiences effectively and consistently.",
     },
     challengeSection: {
       title: "Challenges",
@@ -3557,14 +3518,14 @@ export const ourWorks = [
       image: "/our-work/caption-gen/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Caption Gen",
+      title: "Create Perfect Captions Instantly Caption Gen",
       description:
-        "The application houses some industry-leading features like:",
+        "Let Caption Gen do the work for you with AI-powered captions, including:",
       points: [
-        "AI-Powered Tone and Style Customization",
-        "Real-Time Preview and Adjustment Tools",
-        "Context-Aware Language Support for Multilingual Captions",
-        "Automated Hashtag and SEO Optimization",
+        "Instant caption generation from your images",
+        "Contextually relevant and engaging captions",
+        "Customizable text for different social media platforms",
+        "Effortless sharing and posting options",
       ],
       backgroundColor: "#99BBFF61",
       rightImage: "/our-work/caption-gen/worryNoMore.png",
@@ -3584,7 +3545,7 @@ export const ourWorks = [
     title: "Doctor Booking App",
     slug: "doctor-booking-app",
     heroData: {
-      title: "Doctor Booking App",
+      title: "MedEase",
       description:
         "Easily book appointments with trusted doctors and manage your health records all in one app.",
       bgImage: "/our-work/doctor-booking-app/hero-bg.png",
@@ -3594,158 +3555,146 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User App",
+        "heading": "User App",
+        "description": "MedEase is a smart doctor booking app designed to make healthcare access seamless and stress-free.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/doctor-booking-app/1.png",
+            "title": "Doctor Search & Booking",
+            "description": "Easily find doctors based on specialty, location, and availability, then book appointments instantly."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/doctor-booking-app/2.png",
+            "title": "Reviews & Ratings",
+            "description": "View patient reviews and ratings to make informed decisions about healthcare providers."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/doctor-booking-app/3.png",
+            "title": "Appointment Reminders",
+            "description": "Receive automated notifications for upcoming appointments to avoid missed visits."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/doctor-booking-app/4.png",
+            "title": "Health Records Management",
+            "description": "Store and access medical history, prescriptions, and previous appointments in one place."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
+            "icon": "/our-work/doctor-booking-app/5.png",
+            "title": "Secure In-App Communication",
+            "description": "Chat with doctors for follow-ups or preliminary consultations before visits."
           },
           {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/doctor-booking-app/6.png",
+            "title": "Telemedicine Support",
+            "description": "Access virtual consultations for minor health concerns without visiting a clinic."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/doctor-booking-app/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "The MedEase admin panel provides a comprehensive dashboard to manage doctors, appointments, and user interactions efficiently.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/doctor-booking-app/7.png",
+            "title": "Doctor Profile Management",
+            "description": "Approve, verify, and update doctor profiles and specialties."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/doctor-booking-app/8.png",
+            "title": "Appointment Monitoring",
+            "description": "Track and manage user bookings, cancellations, and reschedules efficiently."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/doctor-booking-app/9.png",
+            "title": "User Management",
+            "description": "Oversee patient registrations, update records, and resolve user concerns."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/doctor-booking-app/10.png",
+            "title": "Analytics & Reports",
+            "description": "Gain insights into appointment trends, user activity, and doctor availability."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
+            "icon": "/our-work/doctor-booking-app/11.png",
+            "title": "Feedback & Complaint Resolution",
+            "description": "Monitor user feedback and address concerns to enhance service quality."
           },
           {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/doctor-booking-app/12.png",
+            "title": "System Performance Monitoring",
+            "description": "Ensure platform stability with real-time diagnostics and updates."
+          }
         ],
-        image: "/new/2.png",
-      },
+        "image": "/our-work/doctor-booking-app/main2.png"
+      }
+      ,
       {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
+        "id": 3,
+        "title": "Super Admin",
+        "heading": "Super Admin",
+        "description": "With advanced monitoring tools and centralized management, the Super Admin ensures that MedEase runs efficiently and delivers the best healthcare experience.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+            "icon": "/our-work/doctor-booking-app/13.png",
+            "title": "Full Platform Control",
+            "description": "Manage all users, doctors, admins, and overall system functionality."
           },
           {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
+            "icon": "/our-work/doctor-booking-app/14.png",
+            "title": "Multi-Admin Management",
+            "description": "Assign roles, grant permissions, and oversee admin activities."
           },
           {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+            "icon": "/our-work/doctor-booking-app/15.png",
+            "title": "Doctor & Hospital Verification",
+            "description": "Approve and monitor doctor and clinic registrations for authenticity."
           },
           {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+            "icon": "/our-work/doctor-booking-app/16.png",
+            "title": "Advanced Analytics & Reports",
+            "description": "Generate detailed insights on user engagement, revenue, and appointment trends."
           },
           {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
+            "icon": "/our-work/doctor-booking-app/17.png",
+            "title": "System Monitoring & Maintenance",
+            "description": "Track performance, troubleshoot issues, and schedule updates."
           },
+          {
+            "icon": "/our-work/doctor-booking-app/18.png",
+            "title": "Dispute & Conflict Resolution",
+            "description": "Address escalated complaints and disputes between users and service providers."
+          }
         ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/doctor-booking-app/main3.png"
+      }
+      
     ],
     projectOverview: {
       title: "Project Overview",
       description:
-        " Our Doctor Booking App simplifies the healthcare experience by providing users with a convenient platform to find and book appointments with trusted medical professionals nearby. The app features a user-friendly interface that allows patients to search for doctors based on specialty, location, and availability. With integrated reviews and ratings, users can make informed decisions about their healthcare providers. Additionally, the app enables users to manage their health records and appointment histories, ensuring that all essential information is readily accessible. By streamlining the booking process, our app enhances patient satisfaction and encourages proactive health management.",
+        " MedEase App simplifies the healthcare experience by providing users with a convenient platform to find and book appointments with trusted medical professionals nearby. The app features a user-friendly interface that allows patients to search for doctors based on specialty, location, and availability. With integrated reviews and ratings, users can make informed decisions about their healthcare providers. Additionally, the app enables users to manage their health records and appointment histories, ensuring that all essential information is readily accessible. ",
     },
     challengeSection: {
       title: "Challenges",
       description:
-        "The Doctor Booking App faces challenges in maintaining accurate provider information, ensuring compliance with healthcare regulations and data privacy laws, and fostering user engagement and trust. Transitioning patients from traditional appointment methods to a digital platform can be difficult, and integrating with existing healthcare systems requires continuous updates for a seamless experience.",
+        "MedEase App faces challenges in maintaining accurate provider information, ensuring compliance with healthcare regulations and data privacy laws, and fostering user engagement and trust. Transitioning patients from traditional appointment methods to a digital platform can be difficult, and integrating with existing healthcare systems requires continuous updates for a seamless experience.",
       image: "/our-work/doctor-booking-app/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Doctor Booking App",
+      title: "Book Your Doctor Appointment with Ease",
       description:
-        "The application houses some industry-leading features like:",
+        "Simplify healthcare with our doctor booking app, featuring:",
       points: [
-        "Intelligent Appointment Matching and Recommendations",
-        "Integrated Telehealth Capabilities",
-        "Secure Patient Records and Health History Access",
-        "Real-Time Availability and Instant Notifications",
+        "Quick appointment scheduling",
+        "Doctor search by specialty, location, and availability",
+        "Real-time appointment confirmations",
+        "Secure and seamless consultation booking",
       ],
       backgroundColor: "#99BBFF61",
       rightImage: "/our-work/doctor-booking-app/worryNoMore.png",
@@ -3756,7 +3705,7 @@ export const ourWorks = [
     solutionSection: {
       title: "Solutions",
       description:
-        "The Doctor Booking App tackles challenges by implementing strict verification for healthcare providers, ensuring compliance with regulations through regular audits. User engagement is boosted with personalized features like reminders, while educational resources help patients adapt to digital booking. Seamless integration with existing healthcare systems is achieved through strategic partnerships and API development for an enhanced user experience.",
+        "MedEase App tackles challenges by implementing strict verification for healthcare providers, ensuring compliance with regulations through regular audits. User engagement is boosted with personalized features like reminders, while educational resources help patients adapt to digital booking. Seamless integration with existing healthcare systems is achieved through strategic partnerships and API development for an enhanced user experience.",
       image: "/our-work/doctor-booking-app/solutions.png",
     },
     image: "/our-work/doctor-booking-app/Banner.png",
@@ -3765,7 +3714,7 @@ export const ourWorks = [
     title: "Saloon App",
     slug: "saloon-app",
     heroData: {
-      title: "Saloon Booking",
+      title: "Glamour Salon",
       description:
         "Easily book appointments at top salons and connect with skilled stylists for a seamless beauty experience anytime, anywhere!",
       bgImage: "/our-work/saloon-app/hero-bg.png",
@@ -3775,158 +3724,161 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User App",
+        "heading": "User App",
+        "description": "Users can explore top-rated salons, view detailed service menus, and schedule appointments with their preferred stylists in just a few taps.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/saloon-app/1.png",
+            "title": "Browse & Discover",
+            "description": "Explore a wide range of salons, services, and skilled beauty professionals. Users can filter salons based on ratings, location, and available services to find the best match."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/saloon-app/2.png",
+            "title": "Easy Booking",
+            "description": "Schedule salon appointments with a few simple taps. The app provides a smooth booking experience, allowing users to select a preferred stylist, date, and time."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/saloon-app/3.png",
+            "title": "Real-Time Availability",
+            "description": "Check salon schedules and instantly book available slots. Users can view live updates on appointment availability, reducing waiting time."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/saloon-app/4.png",
+            "title": "In-App Payments",
+            "description": "Pay for services securely using multiple payment methods, including credit/debit cards, digital wallets, and in-app credits, making transactions seamless and hassle-free."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
+            "icon": "/our-work/saloon-app/5.png",
+            "title": "Appointment Reminders",
+            "description": "Receive automatic notifications and reminders about upcoming bookings to prevent last-minute cancellations or missed appointments."
           },
           {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
+            "icon": "/our-work/saloon-app/6.png",
+            "title": "Loyalty & Discounts",
+            "description": "Unlock exclusive promotions, loyalty rewards, and membership benefits for frequent bookings, providing added value to users."
           },
+          {
+            "icon": "/our-work/saloon-app/7.png",
+            "title": "Booking History",
+            "description": "Access past and upcoming appointments in one place, allowing users to track their visits, rebook their favorite services, and manage their beauty care routine."
+          },
+          {
+            "icon": "/our-work/saloon-app/8.png",
+            "title": "Review & Ratings",
+            "description": "Share experiences and read detailed feedback from other customers to make informed decisions about salons and stylists."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/saloon-app/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "The admin panel provides salon owners and managers with a centralized dashboard to manage appointments, staff schedules, and customer interactions.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/saloon-app/9.png",
+            "title": "Manage Appointments",
+            "description": "Accept, decline, or reschedule bookings directly from the panel. Salon owners can manage their daily schedule and keep track of client appointments."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/saloon-app/10.png",
+            "title": "Service Management",
+            "description": "Add, edit, or remove services and update pricing in real time. Owners can also categorize services based on different beauty treatments like haircuts, facials, and manicures."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/saloon-app/11.png",
+            "title": "Staff Scheduling",
+            "description": "Assign appointments to specific stylists and adjust staff availability, ensuring smooth salon operations."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/saloon-app/12.png",
+            "title": "Customer Engagement",
+            "description": "Send targeted promotions, personalized discounts, and appointment reminders via push notifications, emails, or SMS to enhance customer retention."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
+            "icon": "/our-work/saloon-app/13.png",
+            "title": "Earnings & Reports",
+            "description": "Track daily earnings, monthly revenue, and transaction history with detailed financial reports, helping salon owners analyze business performance."
           },
           {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/saloon-app/14.png",
+            "title": "Customer Feedback",
+            "description": "View and respond to client reviews, allowing salon owners to maintain a positive reputation and improve service quality."
+          }
         ],
-        image: "/new/2.png",
-      },
+        "image": "/our-work/saloon-app/main2.png"
+      }
+      ,
       {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
+        "id": 3,
+        "title": "Super Admin",
+        "heading": "Super Admin",
+        "description": "The Super Admin approves and verifies salon registrations, monitors app performance, and manages financial transactions with full oversight.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+            "icon": "/our-work/saloon-app/15.png",
+            "title": "Salon Verification",
+            "description": "Authenticate and approve new salon registrations, ensuring only reputable and licensed businesses are listed on the platform."
           },
           {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
+            "icon": "/our-work/saloon-app/16.png",
+            "title": "User & Salon Management",
+            "description": "Monitor user and salon activities, handle customer support queries, and resolve any service-related disputes."
           },
           {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+            "icon": "/our-work/saloon-app/17.png",
+            "title": "Analytics & Insights",
+            "description": "Gain a complete overview of platform performance, including customer behavior, booking trends, and revenue analytics, to make data-driven decisions."
           },
           {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+            "icon": "/our-work/saloon-app/18.png",
+            "title": "Security & Compliance",
+            "description": "Enforce data privacy measures, ensure adherence to policies, and protect customer and salon data from unauthorized access."
           },
           {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
+            "icon": "/our-work/saloon-app/19.png",
+            "title": "Dispute Resolution",
+            "description": "Handle complaints, refund requests, and conflicts between customers and salons by providing a fair and transparent resolution process."
           },
+          {
+            "icon": "/our-work/saloon-app/20.png",
+            "title": "Financial Monitoring",
+            "description": "Oversee platform-wide transactions, including commission-based earnings, payout processing, and overall financial performance of the app."
+          },
+          {
+            "icon": "/our-work/saloon-app/21.png",
+            "title": "System Updates",
+            "description": "Manage new feature rollouts, system maintenance, and app enhancements to improve functionality and user experience."
+          }
         ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/saloon-app/main3.png"
+      }
+      ,
     ],
     projectOverview: {
       title: "Project Overview",
       description:
-        " The Saloon Booking app is designed to simplify the salon appointment process for users while providing a platform for salon professionals to manage their services efficiently. This app allows users to browse top salons, view available services, and book appointments with just a few taps. By connecting clients with skilled stylists and beauticians, the app enhances the overall salon experience, making it easy for users to transform their look at their convenience. The platform aims to streamline salon management, ensuring both clients and salon professionals benefit from seamless interactions and improved accessibility.",
+        "Glamour Salon app is designed to simplify the salon appointment process for users while providing a platform for salon professionals to manage their services efficiently. This app allows users to browse top salons, view available services, and book appointments with just a few taps. By connecting clients with skilled stylists and beauticians, the app enhances the overall salon experience, making it easy for users to transform their look at their convenience. The platform aims to streamline salon management, ensuring both clients and salon professionals benefit from seamless interactions and improved accessibility.",
     },
     challengeSection: {
       title: "Challenges",
       description:
-        "The Saloon Booking app encounters challenges like maintaining real-time service availability, ensuring a smooth user experience to avoid navigation issues, and facilitating effective communication between clients and salon staff. Additionally, building trust around secure payment processing is crucial for encouraging users to confidently book appointments through the app.",
+        "Glamour Salon app encounters challenges like maintaining real-time service availability, ensuring a smooth user experience to avoid navigation issues, and facilitating effective communication between clients and salon staff. Additionally, building trust around secure payment processing is crucial for encouraging users to confidently book appointments through the app.",
       image: "/our-work/saloon-app/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Saloon Booking",
+      title: "Book Your Salon Appointment in Seconds",
       description:
-        "The application houses some industry-leading features like:",
+        "Experience hassle-free beauty bookings with our salon app, offering:",
       points: [
-        "Dynamic Service and Stylist Matching",
-        "Virtual Consultation and Style Preview",
-        "Loyalty Rewards and Referral Programs",
-        "In-App Payment and Secure Checkout",
+        "Easy appointment scheduling",
+        "Search salons by services, location, and availability",
+        "Real-time booking confirmations",
+        "Seamless integration for a smooth user experience",
       ],
       backgroundColor: "#7F4A3736",
       rightImage: "/our-work/saloon-app/worryNoMore.png",
@@ -3937,7 +3889,7 @@ export const ourWorks = [
     solutionSection: {
       title: "Solutions",
       description:
-        "The Saloon Booking app addresses challenges with a real-time scheduling system for easy service availability, an intuitive interface for seamless bookings, and in-app messaging for direct client-stylist communication. Secure payment options and user reviews enhance trust and confidence in the booking process.",
+        "Glamour Salon app addresses challenges with a real-time scheduling system for easy service availability, an intuitive interface for seamless bookings, and in-app messaging for direct client-stylist communication. Secure payment options and user reviews enhance trust and confidence in the booking process.",
       image: "/our-work/saloon-app/solutions.png",
     },
     image: "/our-work/saloon-app/Banner.png",
@@ -3956,142 +3908,91 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User Web",
+        "heading": "User Web",
+        "description": "Access engaging Arabic poetry courses, connect with expert instructors, and refine your skills—all from your browser.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/arabic-poetry-app/1.png",
+            "title": "Explore Courses",
+            "description": "Browse a variety of Arabic poetry courses tailored to different skill levels, from beginners to advanced poets, ensuring a structured and engaging learning experience."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/arabic-poetry-app/2.png",
+            "title": "Expert Guidance",
+            "description": "Learn from experienced poets and instructors who provide in-depth lessons, writing techniques, and personalized feedback to refine your poetry skills."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/arabic-poetry-app/3.png",
+            "title": "Interactive Learning",
+            "description": "Engage with multimedia-rich content, including video lectures, exercises, and live workshops, making the learning process immersive and effective."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/arabic-poetry-app/4.png",
+            "title": "Community & Collaboration",
+            "description": "Connect with fellow poetry enthusiasts, share your work, receive constructive feedback, and participate in discussions to grow within a creative community."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
+            "icon": "/our-work/arabic-poetry-app/5.png",
+            "title": "Flexible Learning",
+            "description": "Study at your own pace with on-demand courses and downloadable resources, allowing users to integrate learning into their daily lives conveniently."
           },
           {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
+            "icon": "/our-work/arabic-poetry-app/6.png",
+            "title": "Certification & Recognition",
+            "description": "Earn certificates upon course completion, showcasing achievements and progress in Arabic poetry mastery."
           },
+          {
+            "icon": "/our-work/arabic-poetry-app/7.png",
+            "title": "Personalized Experience",
+            "description": "Receive tailored course recommendations based on interests, past learning experiences, and poetry styles, ensuring a customized journey."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/arabic-poetry-app/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "Effortlessly manage courses, monitor student progress, and enhance the learning experience with powerful instructor tools.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/arabic-poetry-app/8.png",
+            "title": "Course Management",
+            "description": "Create, edit, and update poetry courses with new lessons, materials, and assignments to keep content fresh and relevant."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/arabic-poetry-app/9.png",
+            "title": "Student Progress Tracking",
+            "description": "Monitor learners’ progress, track performance, and provide personalized feedback to help students improve their poetry skills."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/arabic-poetry-app/10.png",
+            "title": "Engagement & Interaction",
+            "description": "Respond to student queries, facilitate discussions, and encourage participation in community forums, fostering an interactive learning environment."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/arabic-poetry-app/11.png",
+            "title": "Content Moderation",
+            "description": "Manage user submissions, review poetry pieces, and ensure a respectful and constructive environment for learning and sharing."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/arabic-poetry-app/12.png",
+            "title": "Analytics & Reports",
+            "description": "Access detailed insights on course enrollments, user engagement, and performance metrics to enhance teaching effectiveness and course success."
+          }
         ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
-          },
-          {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
-          },
-          {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
-          },
-          {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
-          },
-          {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
-        ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/arabic-poetry-app/main2.png"
+      }
+      ,
+      
     ],
     projectOverview: {
       title: "Project Overview",
       description:
-        "Faoolun is an innovative online platform dedicated to offering poetry and various artistic courses. It aims to create a supportive environment for learners of all levels, from beginners to seasoned writers, by providing access to expert instructors and diverse course offerings. The platform focuses on nurturing creativity, enhancing writing skills, and fostering a community where individuals can share their work, gain feedback, and inspire one another. With a user-friendly interface and engaging content, Faoolun is committed to helping users unlock their full potential and achieve mastery in their artistic pursuits.",
+        "Faoolun is an innovative online platform dedicated to offering Arabic poetry  courses. It aims to create a supportive environment for learners of all levels, from beginners to seasoned writers, by providing access to expert instructors and diverse course offerings. The platform focuses on nurturing creativity, enhancing writing skills, and fostering a community where individuals can share their work, gain feedback, and inspire one another. With a user-friendly interface and engaging content, Faoolun is committed to helping users reach their full potential and achieve mastery in their Arabic poetry journey.",
     },
     challengeSection: {
       title: "Challenges",
@@ -4100,14 +4001,14 @@ export const ourWorks = [
       image: "/our-work/faoolun/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Faoolun",
+      title: "Master Arabic Poetry with Faoolun",
       description:
-        "The application houses some industry-leading features like:",
+        "Unlock the beauty of Arabic poetry with Faoolun, offering:",
       points: [
-        "Interactive Workshops and Live Sessions",
-        "Personalized Learning Paths and Progress Tracking",
-        "Community Engagement and Peer Feedback Systems",
-        "Resource Library with Exclusive Content and Tools",
+        "Interactive lessons on classical and modern poetry",
+        "In-depth analysis of poetic styles and techniques",
+        "Personalized learning paths for every level",
+        "Access to a community of passionate learners and poets",
       ],
       backgroundColor: "#D7985A5E",
       rightImage: "/our-work/faoolun/worryNoMore.png",
@@ -4129,7 +4030,7 @@ export const ourWorks = [
     heroData: {
       title: "Solwave",
       description:
-        "Unlock your self-confidence with Solwave—personalized resources and expert guidance to empower your journey!",
+        "Grow personally and professionally with Solwave’s expert-led sessions, helping you build skills, gain confidence, and shape your future.",
       bgImage: "/our-work/solwave/hero-bg.png",
       rightImage: "/our-work/solwave/hero-right.png",
       topArrow: true,
@@ -4137,137 +4038,75 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User Web",
+        "heading": "User Web",
+        "description": "Solwave’s web platform offers curated resources, interactive tools, and a supportive community to help users build confidence and embrace personal growth.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/solwave/1.png",
+            "title": "Personalized Resources",
+            "description": "Access tailored articles, exercises, and tools designed to help build self-confidence and personal growth."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/solwave/2.png",
+            "title": "Interactive Tools",
+            "description": "Engage with activities that encourage self-reflection, goal setting, and progress tracking."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/solwave/3.png",
+            "title": "Community Support",
+            "description": "Connect with like-minded individuals, share experiences, and learn from a supportive network."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/solwave/4.png",
+            "title": "Expert Guidance",
+            "description": "Benefit from insights and advice from professionals specializing in self-confidence and personal development."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
-          },
-          {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/solwave/5.png",
+            "title": "User-Friendly Experience",
+            "description": "Navigate effortlessly through a well-structured platform designed for ease of use and engagement."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/solwave/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "The Solwave admin panel allows seamless content management, user moderation, and analytics tracking to enhance platform engagement and support users effectively.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/solwave/6.png",
+            "title": "Content Management",
+            "description": "Add, update, or remove articles, exercises, and interactive tools to keep resources fresh and relevant."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/solwave/7.png",
+            "title": "User Management",
+            "description": "Oversee user accounts, monitor engagement, and provide support where needed."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/solwave/8.png",
+            "title": "Community Moderation",
+            "description": "Ensure a safe and positive space by managing discussions, filtering content, and addressing concerns."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/solwave/9.png",
+            "title": "Data & Analytics",
+            "description": "Track user progress, engagement levels, and platform performance to optimize content and experiences."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/solwave/10.png",
+            "title": "Customization & Updates",
+            "description": "Continuously improve the platform by introducing new features and refining existing ones."
+          }
         ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
-          },
-          {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
-          },
-          {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
-          },
-          {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
-          },
-          {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
-        ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/solwave/main2.png"
+      }
+      
     ],
     projectOverview: {
       title: "Project Overview",
@@ -4300,7 +4139,7 @@ export const ourWorks = [
       title: "Solutions",
       description:
         "Solwave tackles challenges by offering tailored content for diverse users and promoting community engagement through forums and support groups. We collaborate with self-development experts to ensure accurate resources and regularly update the platform based on user feedback.",
-      image: "/our-work/faoolun/solutions.png",
+      image: "/our-work/solwave/solutions.png",
     },
     image: "/our-work/solwave/Banner.png",
   },
@@ -4310,7 +4149,7 @@ export const ourWorks = [
     heroData: {
       title: "Instant Save App  ",
       description:
-        "Download your favorite Instagram content effortlessly with Instant Save—your go-to app for saving photos, videos, and stories in just a few taps!",
+        "Save your favourite Instagram photos, videos, and stories instantly with Instant Save – fast, easy, and hassle-free!",
       bgImage: "/our-work/instant-save/hero-bg.png",
       rightImage: "/our-work/instant-save/hero-right.png",
       topArrow: true,
@@ -4323,137 +4162,75 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User App",
+        "heading": "User App",
+        "description": "Instant Save makes downloading Instagram content quick and effortless, allowing users to save photos, videos, and stories for offline access.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/instant-save/1.png",
+            "title": "Easy Content Saving",
+            "description": "Download Instagram photos, videos, and stories directly to your device with just a tap."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/instant-save/2.png",
+            "title": "High-Quality Downloads",
+            "description": "Save media in its original quality without compression."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/instant-save/3.png",
+            "title": "User-Friendly Interface",
+            "description": "Simple and intuitive design for seamless navigation and fast downloads."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/instant-save/4.png",
+            "title": "Secure & Private",
+            "description": "Ensures a safe downloading experience while respecting user privacy."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
-          },
-          {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/instant-save/5.png",
+            "title": "Offline Access & Sharing",
+            "description": "View and share saved content anytime without an internet connection."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/instant-save/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "The admin panel provides complete control over the Instant Save app, managing user activity, monitoring downloads, and ensuring a smooth platform experience.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/instant-save/6.png",
+            "title": "User Management",
+            "description": "Monitor and manage app users for a secure and streamlined experience."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/instant-save/7.png",
+            "title": "Content Moderation",
+            "description": "Oversee downloads and ensure compliance with platform policies."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/instant-save/8.png",
+            "title": "Performance Analytics",
+            "description": "Track app performance, downloads, and user engagement."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/instant-save/9.png",
+            "title": "Security Controls",
+            "description": "Implement safety measures to protect user data and app integrity."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/instant-save/10.png",
+            "title": "App Customization",
+            "description": "Manage settings, updates, and notifications to enhance user experience."
+          }
         ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
-          },
-          {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
-          },
-          {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
-          },
-          {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
-          },
-          {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
-        ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/instant-save/main2.png"
+      }
+      
     ],
     challengeSection: {
       title: "Challenges",
@@ -4462,14 +4239,14 @@ export const ourWorks = [
       image: "/our-work/instant-save/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Instant Save App",
+      title: "Instant Save Download Your Favourite Content in HD",
       description:
-        "The application houses some industry-leading features like:",
+        "Easily save videos and images from Instagram with Instant Save, featuring:",
       points: [
-        "One-Click Content Download Across Formats",
-        "In-App Content Management and Organization",
-        "Batch Downloading for Multiple Posts or Stories",
-        "User-Friendly Interface with Search and Filter Options",
+        "One-click HD video and image downloads",
+        "High-quality resolution for all content",
+        "Simple and fast download process",
+        "No sign-in required for instant access",
       ],
       backgroundColor: "#BC735D33",
       rightImage: "/our-work/instant-save/worryNoMore.png",
@@ -4489,7 +4266,7 @@ export const ourWorks = [
     title: "Eshop App",
     slug: "eshop-app",
     heroData: {
-      title: "Eshop App ",
+      title: "Trendora",
       description:
         "Experience effortless shopping with Eshop App secure payments, fast delivery, and endless variety at your fingertips!",
       bgImage: "/our-work/eshop-app/hero-bg.png",
@@ -4500,157 +4277,130 @@ export const ourWorks = [
     projectOverview: {
       title: "Project Overview",
       description:
-        "Eshop App is an innovative e-commerce shopping platform designed to provide users with a seamless online shopping experience. Our platform combines a user-friendly interface with advanced features that allow customers to easily browse a diverse range of products, make secure payments, and enjoy swift delivery right to their doorsteps. With personalized recommendations and a tailored shopping journey, Eshop App aims to enhance customer satisfaction and streamline the purchasing process for all users. Whether shopping for essentials or exploring new products, Eshop App brings convenience and variety together in one place.",
+        "Trendora App is an innovative e-commerce shopping platform designed to provide users with a seamless online shopping experience. Our platform combines a user-friendly interface with advanced features that allow customers to easily browse a diverse range of products, make secure payments, and enjoy swift delivery right to their doorsteps. With personalized recommendations and a tailored shopping journey, Trendora App aims to enhance customer satisfaction and streamline the purchasing process for all users. Whether shopping for essentials or exploring new products, Trendora App brings convenience and variety together in one place.",
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User App",
+        "heading": "User App",
+        "description": "Trendora offers a seamless online shopping experience with a vast selection of products, secure payments, and fast delivery.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/eshop-app/1.png",
+            "title": "Wide Product Range",
+            "description": "Explore a diverse collection of items from multiple vendors in one place."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/eshop-app/2.png",
+            "title": "Easy & Secure Payments",
+            "description": "Multiple payment options, including cards, wallets, and cash on delivery."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/eshop-app/3.png",
+            "title": "Personalized Recommendations",
+            "description": "Integrating a standard payment gateway that allows users to pay at their convenience."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/eshop-app/4.png",
+            "title": "Order Tracking & Notifications",
+            "description": "Stay updated on order status with real-time tracking."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
-          },
-          {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/eshop-app/5.png",
+            "title": "User-Friendly Interface",
+            "description": "Simple navigation for effortless shopping and checkout."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/eshop-app/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Vendor App",
+        "heading": "Vendor App",
+        "description": "Empowering sellers to manage their online stores efficiently, track sales, and grow their business.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/eshop-app/6.png",
+            "title": "Product Management",
+            "description": "Easily add, edit, and organize products with descriptions and pricing."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/eshop-app/7.png",
+            "title": "Order & Inventory Tracking",
+            "description": "Monitor stock levels and manage incoming orders effortlessly."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/eshop-app/8.png",
+            "title": "Sales Analytics",
+            "description": "Gain insights into sales performance, trends, and customer behavior."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/eshop-app/9.png",
+            "title": "Promotions & Discounts",
+            "description": "Set up special offers and discount codes to attract more buyers."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/eshop-app/10.png",
+            "title": "Customer Communication",
+            "description": "Respond to inquiries and provide updates for better customer service."
+          }
         ],
-        image: "/new/2.png",
-      },
+        "image": "/our-work/eshop-app/main2.png"
+      }
+      ,
       {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
+        "id": 3,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "A comprehensive dashboard for overseeing platform operations, managing vendors, and ensuring smooth transactions.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+            "icon": "/our-work/eshop-app/11.png",
+            "title": "User & Vendor Management",
+            "description": "Approve, monitor, and support users and vendors."
           },
           {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
+            "icon": "/our-work/eshop-app/12.png",
+            "title": "Order & Payment Processing",
+            "description": "Ensure secure and efficient payment transactions."
           },
           {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+            "icon": "/our-work/eshop-app/13.png",
+            "title": "Analytics & Reports",
+            "description": "Track platform performance, sales trends, and customer activity."
           },
           {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+            "icon": "/our-work/eshop-app/14.png",
+            "title": "Content Moderation",
+            "description": "Monitor product listings and reviews to maintain quality standards."
           },
           {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
+            "icon": "/our-work/eshop-app/15.png",
+            "title": "Platform Customization",
+            "description": "Manage platform settings, categories, and promotional campaigns."
+          }
         ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/eshop-app/main3.png"
+      }
+      
     ],
     challengeSection: {
       title: "Challenges",
       description:
-        "The Eshop App encounters challenges in providing a seamless user experience with diverse products and sellers. Managing inventory accurately is crucial to avoid customer dissatisfaction, while building trust around secure payments and reliable delivery is essential. Additionally, effectively marketing the platform to stand out in a competitive landscape presents a significant hurdle. Addressing these issues is key to ensuring a successful shopping experience.",
+        "The Trendora App encounters challenges in providing a seamless user experience with diverse products and sellers. Managing inventory accurately is crucial to avoid customer dissatisfaction, while building trust around secure payments and reliable delivery is essential. Additionally, effectively marketing the platform to stand out in a competitive landscape presents a significant hurdle. Addressing these issues is key to ensuring a successful shopping experience.",
       image: "/our-work/eshop-app/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Eshop App",
+      title: "Shop Smarter with Trendora",
       description:
-        "The application houses some industry-leading features like:",
+        "Discover a seamless shopping experience with Eshop, featuring:",
       points: [
-        "AI-Powered Personalized Product Recommendations",
-        "Seamless Multi-Channel Shopping Experience",
-        "Augmented Reality (AR) Product Visualization",
-        "Real-Time Order Tracking and Notifications",
+        "Easy browsing and secure online purchases",
+        "Wide selection of products across various categories",
+        "Fast checkout and multiple payment options",
+        "Personalized recommendations and offers tailored to you ",
       ],
       backgroundColor: "#EE9E014F",
       rightImage: "/our-work/eshop-app/worryNoMore.png",
@@ -4670,9 +4420,9 @@ export const ourWorks = [
     title: "Food Inventory App",
     slug: "food-inventory-app",
     heroData: {
-      title: "Food Inventory App ",
+      title: "Foodventory App ",
       description:
-        "Easily order your favorite meals with our Food Inventory App for a seamless dining experience!",
+        "Smart Management for Fresh Meals and Less Waste!",
       bgImage: "/our-work/food-app/hero-bg.png",
       rightImage: "/our-work/food-app/hero-right.png",
       topArrow: true,
@@ -4681,157 +4431,95 @@ export const ourWorks = [
     projectOverview: {
       title: "Project Overview",
       description:
-        "The Food Inventory App streamlines the process of ordering food by providing users with a comprehensive platform to browse, select, and purchase meals from various restaurants. Designed with user convenience in mind, the app features an intuitive interface that allows users to quickly find their favorite dishes, view menus, and customize orders. With integrated payment options and real-time order tracking, the app enhances the overall dining experience while supporting local eateries. Our goal is to create a hassle-free solution that connects food lovers with their favorite restaurants effortlessly.",
+        "The Foodventory App is designed to help users efficiently manage their groceries by keeping track of expiry dates and providing recipe suggestions based on available ingredients. With this app, users can add the expiry time for each grocery item they purchase, and the app will notify them when items are nearing their expiration. Additionally, it offers recipe recommendations based on the fruits, vegetables, and other ingredients users have in their pantry, helping reduce food waste and optimize meal planning.",
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User App",
+        "heading": "User App",
+        "description": "A smart grocery management app that tracks expiry dates and suggests recipes based on available ingredients.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/food-app/1.png",
+            "title": "Expiry Date Tracker",
+            "description": "Log grocery items with their expiration dates and receive timely reminders."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/food-app/2.png",
+            "title": "Recipe Suggestions",
+            "description": "Get meal ideas based on ingredients in your pantry."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/food-app/3.png",
+            "title": "Smart Notifications",
+            "description": "Alerts for expiring items to reduce food waste."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/food-app/4.png",
+            "title": "Easy Inventory Management",
+            "description": "Add, update, and organize groceries effortlessly."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
-          },
-          {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/food-app/5.png",
+            "title": "User-Friendly Interface",
+            "description": "Simple and intuitive design for seamless navigation."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/food-app/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "A centralized system for managing users, app content, and ensuring a smooth experience.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/food-app/6.png",
+            "title": "User Management",
+            "description": "Monitor user activity and provide support when needed."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/food-app/7.png",
+            "title": "Recipe Database Control",
+            "description": "Update and manage recipe recommendations."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/food-app/8.png",
+            "title": "Notification Management",
+            "description": "Customize and send alerts to enhance user engagement."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/food-app/9.png",
+            "title": "Analytics & Reports",
+            "description": "Track app usage trends and user behaviour."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/food-app/10.png",
+            "title": "Content Moderation",
+            "description": "Ensure accurate grocery tracking and relevant suggestions."
+          }
         ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
-          },
-          {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
-          },
-          {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
-          },
-          {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
-          },
-          {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
-        ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/food-app/main2.png"
+      }
+      
     ],
     challengeSection: {
       title: "Challenges",
       description:
-        "The Food Inventory App faces challenges in creating an intuitive user experience, integrating real-time inventory management with restaurant systems, and ensuring secure payment processing. Additionally, it must be scalable to handle growing user traffic and must stand out in a competitive market with innovative features and effective marketing strategies.",
+        "The Foodventory App faces challenges in creating an intuitive user experience, integrating real-time inventory management with restaurant systems, and ensuring secure payment processing. Additionally, it must be scalable to handle growing user traffic and must stand out in a competitive market with innovative features and effective marketing strategies.",
       image: "/our-work/food-app/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Food Inventory App",
+      title: "Stay Organized with Foodventory App",
       description:
-        "The application houses some industry-leading features like:",
+        "Manage your kitchen effortlessly with features like:",
       points: [
-        "Smart Inventory Management with Stock Alerts",
-        "User-Friendly Menu Customization and Dietary Preferences",
-        "Integrated Delivery Tracking and Estimated Arrival Times",
-        "Loyalty Programs and Personalized Discounts for Frequent Users",
+        "Expiry date tracking to reduce waste",
+        "Recipe suggestions based on available ingredients",
+        "Barcode scanning for quick inventory updates",
+        "Smart notifications to keep you informed",
       ],
       backgroundColor: "#2BBA7F4F",
       rightImage: "/our-work/food-app/worryNoMore.png",
@@ -4842,18 +4530,18 @@ export const ourWorks = [
     solutionSection: {
       title: "Solutions",
       description:
-        "To overcome challenges, the Food Inventory App will feature a user-friendly interface for easy navigation and ordering. Real-time inventory management will ensure accurate stock levels, while secure payment gateways enhance transaction safety. Unique features like personalized recommendations and loyalty programs will help attract and retain customers.",
+        "The Foodventory App solves these problems by offering an easy way to track expiration dates, helping users avoid wasting food and reducing the risk of eating expired items. The app also enhances meal planning by suggesting recipes based on the ingredients you already have, allowing you to use what’s on hand and avoid unnecessary purchases. With timely reminders and a comprehensive list of recipes, this app makes food management simpler, smarter, and more sustainable.",
       image: "/our-work/food-app/solutions.png",
     },
     image: "/our-work/food-app/Banner.png",
   },
-  {
+  { 
     title: "Al Abour App",
     slug: "al-abour-app",
     heroData: {
       title: "Al Abour App ",
       description:
-        "Book your desert adventures effortlessly with Al Abour App and create unforgettable memories today!",
+        "Hassle-Free Transport and Seamless Logistics for Your Champion Camels!",
       bgImage: "/our-work/al-abour-app/hero-bg.png",
       rightImage: "/our-work/al-abour-app/hero-right.png",
       topArrow: true,
@@ -4861,142 +4549,80 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User App",
+        "heading": "User App",
+        "description": "A specialized platform for camel owners to efficiently book transport and manage event participation.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/al-abour-app/1.png",
+            "title": "Event Browsing",
+            "description": "Explore upcoming camel racing events by city and country."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/al-abour-app/2.png",
+            "title": "Detailed Event Information",
+            "description": "Access key details, including dates, locations, and requirements."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/al-abour-app/3.png",
+            "title": "Seamless Booking",
+            "description": "Easily reserve transport for camels with just a few taps."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/al-abour-app/4.png",
+            "title": "Tracking & Notifications",
+            "description": "Stay updated with event reminders and transport status."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
-          },
-          {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/al-abour-app/5.png",
+            "title": "User-Friendly Interface",
+            "description": "Intuitive design for a smooth and hassle-free experience."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/al-abour-app/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "A powerful backend system for managing events, bookings, and user interactions.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/al-abour-app/6.png",
+            "title": "Event Management",
+            "description": "Add, update, and oversee racing events and their details."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/al-abour-app/7.png",
+            "title": "Booking Oversight",
+            "description": "Monitor and manage transport reservations for users."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/al-abour-app/8.png",
+            "title": "User Management",
+            "description": "Track and assist users with inquiries and bookings."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/al-abour-app/9.png",
+            "title": "Notifications & Alerts",
+            "description": "Send event updates and booking confirmations."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/al-abour-app/10.png",
+            "title": "Analytics & Reports",
+            "description": "Gain insights into user engagement and booking trends."
+          }
         ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
-          },
-          {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
-          },
-          {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
-          },
-          {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
-          },
-          {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
-        ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/al-abour-app/main2.png"
+      }
+      
     ],
     projectOverview: {
       title: "Project Overview",
       description:
-        "Al Abour App is designed to revolutionize the way adventurers book their desert experiences. The platform provides users with a comprehensive selection of desert activities, from thrilling dune bashing to serene camel rides, all easily accessible through an intuitive interface. Users can explore various packages, view detailed itineraries, and receive real-time availability updates. With a focus on user experience, Al Abour App aims to make desert adventure booking seamless and enjoyable, ensuring users can fully immerse themselves in the beauty of the desert landscape.",
+        "Al Abour is a specialized camel booking application created to simplify and streamline event logistics for camel owners. The app provides a user-friendly platform where owners can easily browse upcoming camel racing events based on city and country, view essential event details such as dates, locations, and requirements, and conveniently book transportation for their camels. By offering a centralized booking system, Al Abour eliminates the challenges of coordinating travel arrangements, ensuring a smooth, organized, and stress-free experience. With reliable transport options and a structured process, camel owners can focus on preparing for the event while the app handles the complexities of logistics.",
     },
     challengeSection: {
       title: "Challenges",
@@ -5005,14 +4631,14 @@ export const ourWorks = [
       image: "/our-work/al-abour-app/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Al Abour App",
+      title: "Seamless Camel Transport with Al Abour",
       description:
-        "The application houses some industry-leading features like:",
+        "Effortlessly book and manage camel transportation with features like:",
       points: [
-        "Personalized Adventure Recommendations",
-        "Real-Time Availability and Booking",
-        "Safety Tips with Weather Updates",
-        "Integrated Guide and Equipment Rentals",
+        "Event-based booking for hassle-free travel",
+        "Real-time tracking for peace of mind",
+        "Secure and reliable transport services",
+        "Easy scheduling and management",
       ],
       backgroundColor: "#3E24134F",
       rightImage: "/our-work/al-abour-app/worryNoMore.png",
@@ -5042,137 +4668,75 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User Web",
+        "heading": "User Web",
+        "description": "A comprehensive platform offering legal resources and expert guidance for individuals facing legal challenges.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/legal-wise-web/1.png",
+            "title": "Legal Resource Library",
+            "description": "Access easy-to-understand legal information on various topics."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/legal-wise-web/2.png",
+            "title": "Interactive Tools",
+            "description": "Utilize document templates, legal checklists, and self-assessment tools."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/legal-wise-web/3.png",
+            "title": "Expert Consultation",
+            "description": "Connect with legal professionals for guidance and advice."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/legal-wise-web/4.png",
+            "title": "Case Tracking",
+            "description": "Organize and monitor personal legal matters efficiently."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
-          },
-          {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/legal-wise-web/5.png",
+            "title": "Secure & Confidential",
+            "description": "Ensure privacy while managing sensitive legal concerns."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/legal-wise-web/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "A robust backend system for managing legal content, user interactions, and expert consultations.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/legal-wise-web/6.png",
+            "title": "Content Management",
+            "description": "Add, edit, and update legal resources and articles."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/legal-wise-web/7.png",
+            "title": "User Management",
+            "description": "Track user activity, inquiries, and interactions."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/legal-wise-web/8.png",
+            "title": "Expert Coordination",
+            "description": "Manage and assign legal professionals for consultations."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/legal-wise-web/9.png",
+            "title": "Case Assistance",
+            "description": "Oversee user cases and provide guidance where needed."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/legal-wise-web/10.png",
+            "title": "Analytics & Reporting",
+            "description": "Gain insights into platform usage and user engagement trends."
+          }
         ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
-          },
-          {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
-          },
-          {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
-          },
-          {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
-          },
-          {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
-        ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/legal-wise-web/main2.png"
+      }
+      
     ],
     projectOverview: {
       title: "Project Overview",
@@ -5186,9 +4750,9 @@ export const ourWorks = [
       image: "/our-work/legal-wise-web/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Legal Wise Web",
+      title: "Your Trusted Platform for Legal Consultation",
       description:
-        "The application houses some industry-leading features like:",
+        "Easily find and book expert lawyers for consultations, legal advice, and case assistance.",
       points: [
         "Personalized Legal Guidance and Resources",
         "Access to Verified Legal Professionals",
@@ -5223,137 +4787,85 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User Web",
+        "heading": "User Web",
+        "description": "A premium online jewellery platform offering a seamless shopping experience with a curated selection of unique, high-quality pieces.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/laam-web/1.png",
+            "title": "Elegant & Intuitive Interface",
+            "description": "A beautifully designed platform that makes browsing effortless."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/laam-web/2.png",
+            "title": "Curated Collections",
+            "description": "A diverse range of jewellery, from everyday essentials to statement pieces."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/laam-web/3.png",
+            "title": "Detailed Product Insights",
+            "description": "High-quality images, specifications, and craftsmanship details for informed purchases."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/laam-web/4.png",
+            "title": "Personalized Shopping",
+            "description": "Tailored recommendations based on user preferences and style."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
+            "icon": "/our-work/laam-web/5.png",
+            "title": "Secure & Convenient Checkout",
+            "description": "Multiple payment options and a smooth purchasing process."
           },
           {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/laam-web/6.png",
+            "title": "Order Tracking & Support",
+            "description": "Real-time updates and dedicated customer assistance for a hassle-free experience."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/laam-web/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "A powerful backend system designed to streamline product management, customer interactions, and business operations.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/laam-web/7.png",
+            "title": "Product Management",
+            "description": "Effortlessly add, update, or remove jewellery listings with detailed descriptions."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/laam-web/8.png",
+            "title": "Inventory Tracking",
+            "description": "Keep real-time stock updates to prevent overselling and manage availability."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/laam-web/9.png",
+            "title": "Order & Payment Processing",
+            "description": "Monitor transactions, track orders, and handle refunds seamlessly."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/laam-web/10.png",
+            "title": "Customer Management",
+            "description": "View user activity, respond to inquiries, and provide support."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
+            "icon": "/our-work/laam-web/11.png",
+            "title": "Marketing & Promotions",
+            "description": "Create and manage discounts, special offers, and promotional campaigns."
           },
           {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/laam-web/12.png",
+            "title": "Analytics & Sales Reports",
+            "description": "Gain insights into customer behavior, top-selling items, and overall performance."
+          }
         ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
-          },
-          {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
-          },
-          {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
-          },
-          {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
-          },
-          {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
-        ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/laam-web/main2.png"
+      }
+      
     ],
     projectOverview: {
       title: "Project Overview",
@@ -5391,10 +4903,10 @@ export const ourWorks = [
     image: "/our-work/laam-web/Banner.png",
   },
   {
-    title: "Clixpos Website",
+    title: "ClixPOS Website",
     slug: "clixpos-website",
     heroData: {
-      title: "Clixpos Website ",
+      title: "ClixPOS Website ",
       description:
         "Clixpos is your all-in-one Point of Sale (POS) platform, streamlining transactions and inventory management for businesses of all types.",
       bgImage: "/our-work/clixpos-web/hero-bg.png",
@@ -5409,137 +4921,125 @@ export const ourWorks = [
     },
     panelData: [
       {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
+        "id": 1,
+        "title": "User Web",
+        "heading": "User Web",
+        "description": "A smart and intuitive POS platform designed to streamline business operations, enhance sales tracking, and improve customer interactions.",
+        "features": [
           {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
+            "icon": "/our-work/clixpos-web/1.png",
+            "title": "Seamless Transaction Processing",
+            "description": "Fast and secure payment processing for a smooth checkout experience."
           },
           {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+            "icon": "/our-work/clixpos-web/2.png",
+            "title": "User-Friendly Interface",
+            "description": "Intuitive design that makes managing sales and inventory effortless."
           },
           {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+            "icon": "/our-work/clixpos-web/3.png",
+            "title": "Multi-Industry Support",
+            "description": "Suitable for retail stores, restaurants, and service-based businesses."
           },
           {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+            "icon": "/our-work/clixpos-web/4.png",
+            "title": "Real-Time Inventory Tracking",
+            "description": "Keep stock levels updated and prevent shortages."
           },
           {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
+            "icon": "/our-work/clixpos-web/5.png",
+            "title": "Insightful Sales Analytics",
+            "description": "Access detailed reports to monitor performance and optimize strategies."
           },
           {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
+            "icon": "/our-work/clixpos-web/6.png",
+            "title": "Customer Profiles & Loyalty Features",
+            "description": "Track purchase history and offer personalized promotions."
+          }
         ],
-        image: "/new/1.png",
-      },
+        "image": "/our-work/clixpos-web/main1.png"
+      }
+      ,
       {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
+        "id": 2,
+        "title": "CRM",
+        "heading": "Customer Relationship Management (CRM)",
+        "description": "A dedicated system to help businesses build stronger relationships, increase customer retention, and enhance personalized engagement.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+            "icon": "/our-work/clixpos-web/7.png",
+            "title": "Centralized Customer Data",
+            "description": "Store and manage customer details, preferences, and transaction history."
           },
           {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+            "icon": "/our-work/clixpos-web/8.png",
+            "title": "Personalized Marketing",
+            "description": "Send targeted promotions, discounts, and loyalty rewards based on customer behavior."
           },
           {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+            "icon": "/our-work/clixpos-web/9.png",
+            "title": "Automated Communication",
+            "description": "Schedule follow-ups, reminders, and promotional messages via email or SMS."
           },
           {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
+            "icon": "/our-work/clixpos-web/10.png",
+            "title": "Customer Feedback & Support",
+            "description": "Gather insights from reviews and provide quick resolutions to inquiries."
           },
           {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
+            "icon": "/our-work/clixpos-web/11.png",
+            "title": "Loyalty Programs & Discounts",
+            "description": "Reward returning customers with exclusive deals and perks."
           },
           {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
+            "icon": "/our-work/clixpos-web/12.png",
+            "title": "Analytics & Performance Tracking",
+            "description": "Gain insights into customer engagement and retention trends."
+          }
         ],
-        image: "/new/2.png",
-      },
+        "image": "/our-work/clixpos-web/main2.png"
+      }
+      ,
       {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
+        "id": 3,
+        "title": "Sales Management",
+        "heading": "Sales Management",
+        "description": "A powerful tool to streamline the sales process, improve efficiency, and drive business growth.",
+        "features": [
           {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+            "icon": "/our-work/clixpos-web/13.png",
+            "title": "Comprehensive Sales Dashboard",
+            "description": "Monitor daily, weekly, and monthly sales performance in real-time."
           },
           {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
+            "icon": "/our-work/clixpos-web/14.png",
+            "title": "Order & Invoice Management",
+            "description": "Track orders, generate invoices, and manage payments effortlessly."
           },
           {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+            "icon": "/our-work/clixpos-web/15.png",
+            "title": "Multi-Location & Multi-User Support",
+            "description": "Manage multiple store locations and team members from a single platform."
           },
           {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+            "icon": "/our-work/clixpos-web/16.png",
+            "title": "Sales Forecasting & Trends",
+            "description": "Analyze patterns to predict demand and optimize stock levels."
           },
           {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
+            "icon": "/our-work/clixpos-web/17.png",
+            "title": "Integrated Payment Options",
+            "description": "Accept various payment methods, including cash, card, and digital wallets."
           },
+          {
+            "icon": "/our-work/clixpos-web/18.png",
+            "title": "Commission & Performance Tracking",
+            "description": "Monitor sales team performance and calculate commissions efficiently."
+          }
         ],
-        image: "/new/3.png",
-      },
+        "image": "/our-work/clixpos-web/main3.png"
+      }
+      ,
     ],
     challengeSection: {
       title: "Challenges",
@@ -5548,14 +5048,14 @@ export const ourWorks = [
       image: "/our-work/clixpos-web/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Clixpos Website",
+      title: "Smart & Seamless Point of Sale",
       description:
-        "The application houses some industry-leading features like:",
+        "Optimize sales, streamline operations, and enhance customer experience with ClixPOS.",
       points: [
-        "Omni-Channel Integration for Seamless Transactions",
-        "Real-Time Sales Analytics and Reporting",
-        "Customizable User Interface and Payment Options",
-        "Inventory Management with Automated Stock Alerts",
+        "Fast & Secure Transactions",
+        "Inventory & Sales Management",
+        "Multi-Store & Staff Control",
+        "Real-Time Reports & Analytics",
       ],
       backgroundColor: "#003DEA33",
       rightImage: "/our-work/clixpos-web/worryNoMore.png",

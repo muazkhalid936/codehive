@@ -183,11 +183,14 @@
 }
 @media (max-width: 704px) {
   .ss {
-    left: 10% !important;
-    transform: translateX(-50%,-50%);
+    left: 6% !important;
+    transform: translateX(-50%, -50%);
     top: 100px !important;
   }
   .our-process-main-pic {
-    @apply !w-[105%] !h-[200px] left-1/2;
+    @apply !w-[135%] !h-[300px] left-1/2;
+  }
+  .new-card {
+    width: 90%;
   }
 }

@@ -1,12 +1,13 @@
 import React from "react";
 
-const Icon4 = ({fill}) => {
+const Icon4 = ({ fill, iconSize }) => {
+  // console.log(iconSize,fill);
   return (
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-   width="40"
-      height="40"
+      width={iconSize}
+      height={iconSize}
       viewBox="0 0 512 512"
     >
       <path

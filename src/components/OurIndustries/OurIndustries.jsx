@@ -234,17 +234,19 @@ const ScrollAnimation = () => {
         {ourIndustriesData.map((item, index) => (
           <div
             key={index}
-            className="section  absolute flex flex-row-reverse items-center justify-between gap-8  px-16"
+            className="section  absolute flex  flex-col sm:flex-row-reverse justify-end items-end sm:items-center sm:justify-between sm:gap-8  px-16"
             style={{
               pointerEvents: activeSection === index ? "auto" : "none",
               // Optionally, adjust z-index so the active section sits on top.
               zIndex: activeSection === index ? 1 : 0,
             }}
           >
-            <div className="sm:w-[640px]  flex-1 heading">
-              <h2 className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
-                {item.title}
-              </h2>
+            <div className="sm:w-[640px] text-center sm:text-start   flex-1 heading">
+              <div className="flex justify-center sm:justify-start">
+                <p className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
+                  {item.title}
+                </p>
+              </div>
               <p className="mt-4 main_hero_slogan text-gray-500">
                 {item?.des1}
               </p>
@@ -260,24 +262,24 @@ const ScrollAnimation = () => {
               <p className="mt-4 main_hero_slogan text-gray-500">
                 {item?.des5}
               </p>
-              <div className="flex justify-start items-center gap-3">
+              <div className="flex justify-center sm:justify-start items-center gap-3">
                 <Link href={item.link} className="mt-2 xl:text-xl text-white">
                   Read More
                 </Link>
-                <div className="bg-white text-black mt-3 rounded-full">
-                  <FiArrowUpRight className="text-lg" />
+                <div className="bg-white text-black mt-2 sm:mt-3 rounded-full">
+                  <FiArrowUpRight className=" text-sm sm:text-lg" />
                 </div>
               </div>
             </div>
 
-            <div className="w-1/2 hidden sm:flex iphone">
+            <div className="sm:w-1/2 w-full  iphone">
               <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 style={{
-                  height: "70vh",
-                  minHeight: "400px",
-                  maxHeight: "700px",
+                  height: "50vh",
+                  // minHeight: "400px",
+                  // maxHeight: "700px",
                 }}
               >
                 <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />

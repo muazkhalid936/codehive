@@ -19,8 +19,7 @@ const Banner = ({
   return (
     <div className={`container  rounded-lg my-[55px] relative overflow-hidden`}>
       <div
-        className={`bg-cover bg-center"
-         h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[300px] max-h-[450px] w-full rounded-[20px]  justify-between flex flex-col md:flex-row gap:4  sm:px-0`}
+        className={`bg-cover bg-center h-[200px] sm:h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[300px] max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundColor: backgroundColor || undefined,
@@ -31,7 +30,8 @@ const Banner = ({
           className={`flex flex-col ${color} w-full ${
             backgroundColor && `bg-[${backgroundColor}]`
           } md:w-1/2 pl-4 md:pl-20 pr-2  ${
-            !rightImage && "bg-gradient-to-r from-black via-black to-transparent"
+            !rightImage &&
+            "bg-gradient-to-r from-black via-black to-transparent"
           } h-full justify-center
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3`}
         >
@@ -52,10 +52,10 @@ const Banner = ({
               </span>
             ))}
           </h2>
-          <p className="main_hero_slogan my-3 2xl:my-4 leading-snug">
+          <p className="main_hero_slogan hidden sm:flex my-3 2xl:my-4 leading-snug">
             {description}
           </p>
-          <div className="flex justify-center sm:justify-start">
+          <div className="flex justify-start items-start">
             <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
               <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
                 {buttonText}
@@ -68,16 +68,17 @@ const Banner = ({
         </div>
 
         {rightImage && (
-          <div
-            className="flex flex-col text-white w-full md:w-1/2 h-full"
-            style={{
-              backgroundImage: `url(${rightImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              borderRadius: "20px",
-            }}
-          />
+          <div className="flex justify-center items-center w-[70%] sm:w-1/2 h-full">
+            <img
+              src={rightImage}
+              alt="Right Image"
+              className="flex flex-col text-white "
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
         )}
       </div>
       {showBottomArrow && (

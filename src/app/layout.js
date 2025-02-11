@@ -12,10 +12,10 @@ export default function RootLayout({ children }) {
         <title>Code Hive</title>
       </head>
       <body>
-        <Loader>
+        {/* <Loader> */}
           {/* <NextTopLoader showSpinner={false} /> */}
           {children}
-        </Loader>
+        {/* </Loader> */}
       </body>
     </html>
   );

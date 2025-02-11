@@ -197,7 +197,6 @@
   @apply bg-gradient-to-br from-[#010B1770] via-[#2194cd] to-[#010B1770] p-[0.07rem] rounded-[20px];
 }
 
-
 .colorText1 {
   @apply bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent;
 }
@@ -259,13 +258,12 @@
     font-size: 35px;
   }
   .hero_section_heading {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 @media (max-width: 640px) {
-  .hero_section_heading {
-    font-size: 30px;
-  }
+
+
   .banner_heading,
   .sub_heading {
     font-size: 25px;
@@ -324,4 +322,10 @@
 
 .iti--inline-dropdown .iti__country-list::-webkit-scrollbar {
   display: none;
+}
+
+@media (min-width: 600px) {
+  .iti--inline-dropdown .iti__dropdown-content {
+    width: 150px !important;
+  }
 }

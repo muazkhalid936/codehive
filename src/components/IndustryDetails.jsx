@@ -26,7 +26,7 @@ const IndustryDetails = ({ panelData }) => {
 
         <div className="flex gap-10 mt-10">
           <motion.div
-            className="flex flex-col w-[60%]"
+            className="flex flex-col sm:w-[60%]"
             key={activePanel.id}
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -66,7 +66,7 @@ const IndustryDetails = ({ panelData }) => {
             </div>
           </motion.div>
           <motion.div
-            className="flex w-[40%]"
+            className="sm:flex hidden sm:w-[40%]"
             key={activePanel.image}
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -75,7 +75,7 @@ const IndustryDetails = ({ panelData }) => {
             <img
               src={activePanel.image}
               alt={activePanel.title}
-              className="object-cover h-[70vh] max-h-[500px]"
+              className="object-contain h-[70vh] max-h-[500px]"
             />
           </motion.div>
         </div>
