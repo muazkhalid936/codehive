@@ -13,7 +13,7 @@ const HeroSectionOurWork = ({
   const titleWords = title.split(" ");
   const colors =
     bgImage && rightImage
-      ? "text-black"
+      ? "text-white"
       : rightImage
       ? "text-black"
       : "text-white";
@@ -52,13 +52,13 @@ const HeroSectionOurWork = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto flex max-h-[650px] pt-32 min-h-[500px] h-[70vh]">
+      <div className="container overflow-hidden mx-auto flex-col sm:flex-row flex max-h-[650px] pt-32 min-h-[500px] h-[70vh]">
         {/* First Section */}
-        <div className="left-section w-1/2 flex justify-center items-start gap-5 md:gap-10 flex-col">
+        <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
           {" "}
           {renderTitle()}
           {description && (
-            <p className={`main_hero_slogan text-white`}>{description}</p>
+            <p className={`main_hero_slogan text-center sm:text-start text-white`}>{description}</p>
           )}
           {showButton && (
             <div className="flex justify-center sm:justify-start">
@@ -74,7 +74,7 @@ const HeroSectionOurWork = ({
           )}
         </div>
         {/* Second Section */}
-        <div className="right-section w-1/2">
+        <div className="right-section sm:w-1/2">
           {rightImage && (
             <img
               src={rightImage}

@@ -59,8 +59,8 @@ const ChallengesOrSolution = ({ title, image, description }) => {
         className="flex-col flex gap-4 w-full md:w-1/2"
         style={{ transform: "translateX(200px)", opacity: 0 }}
       >
-        <h1 className="gilray-font sub_heading">{title}</h1>
-        <p className="font-lato text-[#535D66] main_hero_slogan ">
+        <h1 className="gilray-font text-center sm:text-start sub_heading">{title}</h1>
+        <p className="font-lato text-center sm:text-start text-[#535D66] main_hero_slogan ">
           {description}
         </p>
       </div>

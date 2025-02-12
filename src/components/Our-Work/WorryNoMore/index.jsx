@@ -13,7 +13,7 @@ const WorryNoMore = ({
     <div className={`container pb-[50px] rounded-lg   relative overflow-hidden`}>
       <div
         className={`bg-cover bg-center"
-         h-[800px] md:h-[340px] xl:h-[400px] w-full rounded-[20px] items-center md:items-center justify-between flex flex-col md:flex-row gap:4 sm:px-0 `}
+         h-[500px] md:h-[340px] xl:h-[400px] w-full rounded-[20px] items-center md:items-center justify-between flex flex-col md:flex-row gap:4 sm:px-0 `}
         style={{
           backgroundColor: backgroundColor || undefined,
         }}
@@ -40,10 +40,10 @@ const WorryNoMore = ({
 
         {rightImage && (
           <div
-            className=" text-white w-full md:w-1/2  overflow-hidden justify-end items-end flex  self-end rounded-[20px]"
+            className=" text-white w-full md:w-1/2 absolute sm:block  overflow-hidden justify-end items-end flex  self-end rounded-[20px]"
            
           >
-<img src={rightImage} className="object-contain  h-[800px] md:h-[340px] xl:h-[400px]" />
+<img src={rightImage} className="object-contain  h-[400px] md:h-[340px] xl:h-[400px]" />
 
           </div>
         )}
