@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const IndustryDetails = ({ panelData }) => {
+  if (!panelData || panelData.length === 0) {
+    return null;
+  }
+
   const [activePanel, setActivePanel] = useState(panelData[0]);
 
   return (

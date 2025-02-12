@@ -1575,53 +1575,50 @@ export const industries = [
       buttonText: "Get a Quote",
       showBottomArrow: true,
     },
-    packagesData: [
-      {
-        title: "Basic",
-        description: "When she reached the first hills of the Italic mountains",
-        features: [
-          "Basic appointment scheduling",
-          "Online payments",
-          "Customer management",
-          "Map Location",
-          "Profile management",
-          "iOS and Android apps",
-          "Loyalty program integration",
-          "Chat Support",
-          "Customer satisfaction",
-        ],
-      },
-      {
-        title: "Advanced",
-        description: "When she reached the first hills of the Italic mountains",
-        mostPopular: true,
-        features: [
-          "Basic appointment scheduling",
-          "Online payments",
-          "Customer management",
-          "Map Location",
-          "Profile management",
-          "iOS and Android apps",
-          "Loyalty program integration",
-          "Chat Support",
-          "Customer satisfaction",
-        ],
-      },
-      {
-        title: "Enterprise",
-        description: "When she reached the first hills of the Italic mountains",
-        features: [
-          "Basic appointment scheduling",
-          "Online payments",
-          "Customer management",
-          "Map Location",
-          "Profile management",
-          "iOS and Android apps",
-          "Loyalty program integration",
-          "Chat Support",
-          "Customer satisfaction",
-        ],
-      },
+    features1: [
+      { name: "Basic appointment scheduling", available: true },
+      { name: "Online payments", available: true },
+      { name: "Customer management", available: true },
+      { name: "Map Location", available: true },
+      { name: "Appointment Notifications", available: true },
+      { name: "Profile management", available: true },
+      { name: "iOS and Android apps", available: true },
+      { name: "Loyalty program integration", available: false },
+      { name: "Chat Support", available: false },
+      { name: "Customized notification", available: false },
+      { name: "Custom branding", available: false },
+      { name: "SMS and Email Reminders", available: false },
+      { name: "Inventory management", available: false },
+    ],
+    features2: [
+      { name: "Basic appointment scheduling", available: true },
+      { name: "Online payments", available: true },
+      { name: "Customer management", available: true },
+      { name: "Map Location", available: true },
+      { name: "Appointment Notifications", available: true },
+      { name: "Profile management", available: true },
+      { name: "iOS and Android apps", available: true },
+      { name: "Loyalty program integration", available: true },
+      { name: "Chat Support", available: true },
+      { name: "Cust omized notification", available: false },
+      { name: "Custom branding", available: false },
+      { name: "SMS and Email Reminders", available: false },
+      { name: "Inventory management", available: false },
+    ],
+    features3: [
+      { name: "Basic appointment scheduling", available: true },
+      { name: "Online payments", available: true },
+      { name: "Customer management", available: true },
+      { name: "Map Location", available: true },
+      { name: "Appointment Notifications", available: true },
+      { name: "Profile management", available: true },
+      { name: "iOS and Android apps", available: true },
+      { name: "Loyalty program integration", available: true },
+      { name: "Chat Support", available: true },
+      { name: "Customized notification", available: true },
+      { name: "Custom branding", available: true },
+      { name: "SMS and Email Reminders", available: true },
+      { name: "Inventory management", available: true },
     ],
     testimonialsData: [
       {
@@ -1646,7 +1643,7 @@ export const industries = [
     title: "Ecommerce",
     heroData: {
       // bgImage: '/Hero/BGImage.png',
-      title: "eCommerce App Development Services",
+      title: "E-Commerce App Development Services",
       description:
         "Codehive is the best ecommerce app development company that helps you build your ecommerce app and platform. Hire our ecommerce app developers now!",
       rightImage: "/IndustriesBooking/HeroEcommerce.png",
@@ -1842,8 +1839,8 @@ export const industries = [
     ],
 
     bannerData: {
-      title: "We’ve partnered with funded eCommerce startups",
-      blueWords: ["startups"],
+      title: "Online Store with Custom E-Commerce App Solutions!",
+      blueWords: ["E-Commerce","App"],
       description:
         "We partner with multi-million dollar funded eCommerce startups, fueling growth and success in a competitive market.",
       rightImage: "/IndustriesBooking/ecommerce/Banner.png",
@@ -1924,8 +1921,9 @@ export const industries = [
     },
     bannerDataTwo: {
       bgImage: "/banners/ECbanner2.png",
-      title: "Our eCommerce app development cuts cart abandonment by 75%",
-      blueWords: ["75%"],
+      title: "Experience the Advantages of Our Tailored E-Commerce App Development Services!",
+      blueWords: ["E-Commerce","App","Development"],
+
       description:
         "Our eCommerce app development streamlines the shopping experience, reducing cart abandonment by up to 75%.",
       buttonText: "Get a Quote",
@@ -2156,8 +2154,8 @@ export const industries = [
 
     bannerData: {
       bgImage: "/IndustriesBooking/industriesFitness/fitnessBanner1.png",
-      title: "Join the Global Fitness App Industry – Seize the Opportunity!",
-      blueWords: ["Opportunity!"],
+      title: "Achieve Your Fitness Goals with Smart Tracking & Personalized Workouts!",
+      blueWords: ["Fitness","Goals"],
       description:
         "With nearly 21 million downloads and a projected US$19.33 billion revenue in2023, the fitness app industry is booming.",
       rightImage: "/IndustriesBooking/industriesFitness/fitnessRightImage.png",
@@ -2247,8 +2245,8 @@ export const industries = [
     },
     bannerData: {
       backgroundColor: "#D0DDE7",
-      title: "94% of Gen Z wants health apps. Ready to make an impact",
-      blueWords: ["impact"],
+      title: "Smart Health Tracking & Personalized Care –  Wellness Made Easy!",
+      blueWords: ["Wellness","Made","Easy!"],
       description:
         "With 94% of Gen Z seeking health apps, there is a huge opportunity to empower their well-being. Ready to lead?",
       rightImage: "/IndustriesBooking/Healthcare/banner1.png",
@@ -2464,7 +2462,7 @@ export const industries = [
     bannerDataTwo: {
       bgImage: "/IndustriesBooking/Healthcare/banner2.png",
       title: "Discover the Benefits of Our Healthcare App Development!",
-      blueWords: ["Development"],
+      blueWords: ["Development!"],
       description:
         "Share your inquiries with us, and our healthcare app developers will provide you with tailored solutions.",
       buttonText: "Get a Quote",
@@ -2503,8 +2501,8 @@ export const industries = [
     },
     bannerData: {
       title:
-        "Seamless Operations with our Delivery Tracking and On-demand Services!",
-      blueWords: ["Services!"],
+        "Easy Pickup & Delivery App Solutions for Faster, Smarter Logistics!",
+      blueWords: ["Pickup","&","Delivery","App","Solutions"],
       description:
         "Our on-demand services offer seamless operations with real-time tracking and efficient logistics.",
       rightImage: "/IndustriesBooking/Delivery/banner1.png",
@@ -2708,7 +2706,7 @@ export const industries = [
     },
     bannerDataTwo: {
       bgImage: "/IndustriesBooking/Delivery/banner2.png",
-      title: "How Does Our On-Demand Pickup and Delivery App Work?",
+      title: "How Does Our Delivery App Work?",
       blueWords: ["Work?"],
       description:
         "Our on-demand app simplifies logistics with a user-friendly interface, real-time tracking, and secure payments.",
@@ -2956,11 +2954,13 @@ export const industries = [
       },
     ],
     bannerData: {
-      title: "Join the Car Wash Development Industry Seize the Opportunity!",
-      blueWords: ["Opportunity!"],
-      description:
-        "Enhance your operations and customer experience with our tailored software solutions!",
       bgImage: "/IndustriesBooking/Carwash/banner1.png",
+      title: "Step into the Car Wash Industry – Unlock Growth & Opportunities!",
+      // title: "Achieve Your Fitness Goals with Smart Tracking & Personalized Workouts!",
+      blueWords: ["Growth","&","Opportunities!"],
+      description:
+        "With nearly 21 million downloads and a projected US$19.33 billion revenue in2023, the fitness app industry is booming.",
+      rightImage: "/bg.png",
       buttonText: "Book a Call",
     },
     featuresData: {
@@ -3031,6 +3031,214 @@ export const industries = [
         text: "Codehive provided us with a top-notch car wash software solution that truly meets our needs. Their expertise in the industry and commitment to understanding our unique challenges made the development process seamless. Our customers love the ease of booking and payment!",
         name: "Mark D",
         designation: "Automotive Entrepreneur",
+      },
+    ],
+  },
+  {
+    slug: "reward-hive",
+    title: "Reward Hive",
+    heroData: {
+      // bgImage: '/Hero/BGImage.png',
+      title: "Reward Hive",
+      description:
+        "Reward Hive is a loyalty program designed to enhance customer engagement and retention. With a seamless points and rewards system, customers can earn stamps or points for their purchases and redeem them for exclusive discounts, products, and special offers. Keep your customers coming back with a rewarding experience that adds value to every interaction.",
+      rightImage: "/IndustriesBooking/reward/hero.png",
+      topArrow: true,
+      buttonText: "Book a Session",
+    },
+    features1: [
+      { name: "100 Digital Cards", available: true },
+      { name: "1 Geo Location", available: true },
+      { name: "1 Sales Seat", available: true },
+      { name: "1 Manager Seat", available: true },
+      { name: "Free on boadring", available: true },
+      { name: "Product & Size management", available: true },
+      // { name: "iOS and Android apps", available: true },
+      // { name: "Loyalty program integration", available: false },
+      // { name: "Chat Support", available: false },
+      // { name: "Customized notification", available: false },
+      // { name: "Custom branding", available: false },
+      // { name: "SMS and Email Reminders", available: false },
+      // { name: "Inventory management", available: false },
+    ],
+    features2: [
+      { name: "500 Digital Cards", available: true },
+      { name: "5 Geo Location", available: true },
+      { name: "5 Sales Seat", available: true },
+      { name: "5 Manager Seat", available: true },
+      { name: "Free on Boadring", available: true },
+      { name: "Producr & Size management", available: true },
+      { name: "Product-Based Rewards", available: true },
+      // { name: "Loyalty program integration", available: true },
+      // { name: "Chat Support", available: true },
+      // { name: "Cust omized notification", available: false },
+      // { name: "Custom branding", available: false },
+      // { name: "SMS and Email Reminders", available: false },
+      // { name: "Inventory management", available: false },
+    ],
+    features3: [
+      { name: "Unlimited Digital Cards", available: true },
+      { name: "10 Geo Location", available: true },
+      { name: "Unlimited Sales Seat", available: true },
+      { name: "10 Manager Seat", available: true },
+      { name: "24/7 Support", available: true },
+      { name: "Producr & Size management", available: true },
+      { name: "Product-Based Rewards", available: true },
+      // { name: "", available: true },
+      // { name: "iOS and Android apps", available: true },
+      // { name: "Loyalty program integration", available: true },
+      // { name: "Chat Support", available: true },
+      // { name: "Customized notification", available: true },
+      // { name: "Custom branding", available: true },
+      // { name: "SMS and Email Reminders", available: true },
+      // { name: "Inventory management", available: true },
+    ],
+    panelData: [],
+    bannerData: {
+      title: "Boost Sales & Loyalty with Reward Hive",
+      blueWords: ["Reward", "Hive"],
+      description:
+        "Drive repeat purchases, increase engagement, and grow your business with a rewards program that keeps customers coming back.",
+      rightImage: "/IndustriesBooking/reward/banner1.png",
+      buttonText: "Book a Call",
+      backgroundColor: "#EAECEF",
+    },
+    featuresData: {
+      title: "Key Features",
+      description:
+        "Reward Hive – Simple, Effective, and Rewarding Designed for seamless loyalty management, making customer retention effortless.",
+      subheading:
+        "Transform Your Loyalty Program Today! Contact Us for Expert Solutions!",
+      columns: 4,
+      cards: [
+        {
+          title: "Product-Based Loyalty",
+          description:
+            "Reward customers with specific products based on their loyalty points.",
+          image: "/IndustriesBooking/reward/feature/1.png",
+          talkAnExpert: true,
+          path: "/service/loyalty-program",
+        },
+        {
+          title: "Point-Based Loyalty",
+          description:
+            "Customers earn points for their spending, which can be redeemed later.",
+          image: "/IndustriesBooking/reward/feature/2.png",
+          talkAnExpert: true,
+          path: "/service/loyalty-program",
+        },
+        {
+          title: "Salesperson Portal",
+          description:
+            "Sales portal to track customer spending and update loyalty stamps for each transaction.",
+          image: "/IndustriesBooking/reward/feature/3.png",
+          talkAnExpert: true,
+          path: "/service/loyalty-management",
+        },
+        {
+          title: "Manager Portal",
+          description:
+            "Gives managers full control to edit stamps, track customer spending, manage salesperson accounts, and oversee overall loyalty data for better business insights.",
+          image: "/IndustriesBooking/reward/feature/4.png",
+          talkAnExpert: true,
+          path: "/service/loyalty-management",
+        },
+        {
+          title: "Apple Wallet",
+          description:
+            "Automatic loyalty card generation in Apple Wallet for iOS users.",
+          image: "/IndustriesBooking/reward/feature/5.png",
+          talkAnExpert: true,
+          path: "/service/digital-wallet-integration",
+        },
+        {
+          title: "Google Wallet",
+          description:
+            "Automatic loyalty card generation in Google Wallet for Android users.",
+          image: "/IndustriesBooking/reward/feature/6.png",
+          talkAnExpert: true,
+          path: "/service/digital-wallet-integration",
+        },
+        {
+          title: "Automated Loyalty Voucher Generation",
+          description:
+            "Automatically generate vouchers for customers, which can be scanned in-store to redeem loyalty rewards.",
+          image: "/IndustriesBooking/reward/feature/7.png",
+          talkAnExpert: true,
+          path: "/service/loyalty-voucher",
+        },
+        {
+          title: "Customizable Vouchers",
+          description:
+            "Shops can configure and customize loyalty vouchers to suit their branding or promotional needs.",
+          image: "/IndustriesBooking/reward/feature/8.png",
+          talkAnExpert: true,
+          path: "/service/loyalty-voucher",
+        },
+      ],
+    },
+
+    featureSlider: {
+      title: "Pickup & Delivery App Industries",
+      cards: [
+        {
+          name: "Cafe",
+          description:
+            "Reward loyal customers on every purchase and simplify ordering.",
+          picture: "/IndustriesBooking/reward/slider1.png",
+        },
+        {
+          name: "Resturant",
+          description:
+            "Increase retention with rewards for repeat visits, reservations, and online orders.",
+          picture: "/IndustriesBooking/reward/slider2.png",
+        },
+        {
+          name: "Salon",
+          description:
+            "Reward loyal clients with discounts on haircuts, styling, and beauty treatments while simplifying bookings.",
+          picture: "/IndustriesBooking/reward/slider3.png",
+        },
+        {
+          name: "Spa",
+          description:
+            "Boost loyalty with rewards for spa treatments and simplified service scheduling.",
+          picture: "/IndustriesBooking/reward/slider4.png",
+        },
+        {
+          name: "Retail Shop",
+          description:
+            "Engagement customers with exclusive discounts, points-based rewards, and personalized offers.",
+          picture: "/IndustriesBooking/reward/slider5.png",
+        },
+      ],
+    },
+
+    bannerDataTwo: {
+      bgImage: "/IndustriesBooking/reward/banner2.png",
+      title: "Automate Customer Engagement with Reward Hive",
+      blueWords: ["Reward", "Hive"],
+      description:
+        "Creating intuitive mobile solutions that help businesses in the café and restaurant industry drive growth and increase customer retention through our powerful loyalty programs like Reward Hive.",
+      buttonText: "Get a Quote",
+      showBottomArrow: true,
+    },
+    showFeatureSlider: true,
+    testimonialsData: [
+      {
+        text: "The Booking System has completely transformed our scheduling process. It’s user-friendly and intuitive, making it easy for both staff and clients. Automated reminders have significantly reduced no-shows. Our customers appreciate the seamless experience. Highly recommend it for any business!",
+        name: "Sarah J",
+        designation: "Spa Owner",
+      },
+      {
+        text: "Since implementing this Booking System, our efficiency has improved dramatically. Real-time availability has eliminated double bookings, which was a constant issue before. Our customers are happier with the streamlined process. It has truly made our operations smoother. I can’t imagine going back to our old system!",
+        name: "Mikw T",
+        designation: "Resturant manager",
+      },
+      {
+        text: "Managing bookings from anywhere has been a game-changer for my business. The system is reliable, and our client satisfaction has soared since we switched. The easy access to schedules helps me stay organized. I love the automated notifications that keep everyone informed. This is an essential tool for any event planner!",
+        name: "Emily R",
+        designation: "Event Planner",
       },
     ],
   },
@@ -3555,125 +3763,143 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User App",
-        "heading": "User App",
-        "description": "MedEase is a smart doctor booking app designed to make healthcare access seamless and stress-free.",
-        "features": [
+        id: 1,
+        title: "User App",
+        heading: "User App",
+        description:
+          "MedEase is a smart doctor booking app designed to make healthcare access seamless and stress-free.",
+        features: [
           {
-            "icon": "/our-work/doctor-booking-app/1.png",
-            "title": "Doctor Search & Booking",
-            "description": "Easily find doctors based on specialty, location, and availability, then book appointments instantly."
+            icon: "/our-work/doctor-booking-app/1.png",
+            title: "Doctor Search & Booking",
+            description:
+              "Easily find doctors based on specialty, location, and availability, then book appointments instantly.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/2.png",
-            "title": "Reviews & Ratings",
-            "description": "View patient reviews and ratings to make informed decisions about healthcare providers."
+            icon: "/our-work/doctor-booking-app/2.png",
+            title: "Reviews & Ratings",
+            description:
+              "View patient reviews and ratings to make informed decisions about healthcare providers.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/3.png",
-            "title": "Appointment Reminders",
-            "description": "Receive automated notifications for upcoming appointments to avoid missed visits."
+            icon: "/our-work/doctor-booking-app/3.png",
+            title: "Appointment Reminders",
+            description:
+              "Receive automated notifications for upcoming appointments to avoid missed visits.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/4.png",
-            "title": "Health Records Management",
-            "description": "Store and access medical history, prescriptions, and previous appointments in one place."
+            icon: "/our-work/doctor-booking-app/4.png",
+            title: "Health Records Management",
+            description:
+              "Store and access medical history, prescriptions, and previous appointments in one place.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/5.png",
-            "title": "Secure In-App Communication",
-            "description": "Chat with doctors for follow-ups or preliminary consultations before visits."
+            icon: "/our-work/doctor-booking-app/5.png",
+            title: "Secure In-App Communication",
+            description:
+              "Chat with doctors for follow-ups or preliminary consultations before visits.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/6.png",
-            "title": "Telemedicine Support",
-            "description": "Access virtual consultations for minor health concerns without visiting a clinic."
-          }
+            icon: "/our-work/doctor-booking-app/6.png",
+            title: "Telemedicine Support",
+            description:
+              "Access virtual consultations for minor health concerns without visiting a clinic.",
+          },
         ],
-        "image": "/our-work/doctor-booking-app/main1.png"
-      }
-      ,
+        image: "/our-work/doctor-booking-app/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "The MedEase admin panel provides a comprehensive dashboard to manage doctors, appointments, and user interactions efficiently.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "The MedEase admin panel provides a comprehensive dashboard to manage doctors, appointments, and user interactions efficiently.",
+        features: [
           {
-            "icon": "/our-work/doctor-booking-app/7.png",
-            "title": "Doctor Profile Management",
-            "description": "Approve, verify, and update doctor profiles and specialties."
+            icon: "/our-work/doctor-booking-app/7.png",
+            title: "Doctor Profile Management",
+            description:
+              "Approve, verify, and update doctor profiles and specialties.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/8.png",
-            "title": "Appointment Monitoring",
-            "description": "Track and manage user bookings, cancellations, and reschedules efficiently."
+            icon: "/our-work/doctor-booking-app/8.png",
+            title: "Appointment Monitoring",
+            description:
+              "Track and manage user bookings, cancellations, and reschedules efficiently.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/9.png",
-            "title": "User Management",
-            "description": "Oversee patient registrations, update records, and resolve user concerns."
+            icon: "/our-work/doctor-booking-app/9.png",
+            title: "User Management",
+            description:
+              "Oversee patient registrations, update records, and resolve user concerns.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/10.png",
-            "title": "Analytics & Reports",
-            "description": "Gain insights into appointment trends, user activity, and doctor availability."
+            icon: "/our-work/doctor-booking-app/10.png",
+            title: "Analytics & Reports",
+            description:
+              "Gain insights into appointment trends, user activity, and doctor availability.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/11.png",
-            "title": "Feedback & Complaint Resolution",
-            "description": "Monitor user feedback and address concerns to enhance service quality."
+            icon: "/our-work/doctor-booking-app/11.png",
+            title: "Feedback & Complaint Resolution",
+            description:
+              "Monitor user feedback and address concerns to enhance service quality.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/12.png",
-            "title": "System Performance Monitoring",
-            "description": "Ensure platform stability with real-time diagnostics and updates."
-          }
+            icon: "/our-work/doctor-booking-app/12.png",
+            title: "System Performance Monitoring",
+            description:
+              "Ensure platform stability with real-time diagnostics and updates.",
+          },
         ],
-        "image": "/our-work/doctor-booking-app/main2.png"
-      }
-      ,
+        image: "/our-work/doctor-booking-app/main2.png",
+      },
       {
-        "id": 3,
-        "title": "Super Admin",
-        "heading": "Super Admin",
-        "description": "With advanced monitoring tools and centralized management, the Super Admin ensures that MedEase runs efficiently and delivers the best healthcare experience.",
-        "features": [
+        id: 3,
+        title: "Super Admin",
+        heading: "Super Admin",
+        description:
+          "With advanced monitoring tools and centralized management, the Super Admin ensures that MedEase runs efficiently and delivers the best healthcare experience.",
+        features: [
           {
-            "icon": "/our-work/doctor-booking-app/13.png",
-            "title": "Full Platform Control",
-            "description": "Manage all users, doctors, admins, and overall system functionality."
+            icon: "/our-work/doctor-booking-app/13.png",
+            title: "Full Platform Control",
+            description:
+              "Manage all users, doctors, admins, and overall system functionality.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/14.png",
-            "title": "Multi-Admin Management",
-            "description": "Assign roles, grant permissions, and oversee admin activities."
+            icon: "/our-work/doctor-booking-app/14.png",
+            title: "Multi-Admin Management",
+            description:
+              "Assign roles, grant permissions, and oversee admin activities.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/15.png",
-            "title": "Doctor & Hospital Verification",
-            "description": "Approve and monitor doctor and clinic registrations for authenticity."
+            icon: "/our-work/doctor-booking-app/15.png",
+            title: "Doctor & Hospital Verification",
+            description:
+              "Approve and monitor doctor and clinic registrations for authenticity.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/16.png",
-            "title": "Advanced Analytics & Reports",
-            "description": "Generate detailed insights on user engagement, revenue, and appointment trends."
+            icon: "/our-work/doctor-booking-app/16.png",
+            title: "Advanced Analytics & Reports",
+            description:
+              "Generate detailed insights on user engagement, revenue, and appointment trends.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/17.png",
-            "title": "System Monitoring & Maintenance",
-            "description": "Track performance, troubleshoot issues, and schedule updates."
+            icon: "/our-work/doctor-booking-app/17.png",
+            title: "System Monitoring & Maintenance",
+            description:
+              "Track performance, troubleshoot issues, and schedule updates.",
           },
           {
-            "icon": "/our-work/doctor-booking-app/18.png",
-            "title": "Dispute & Conflict Resolution",
-            "description": "Address escalated complaints and disputes between users and service providers."
-          }
+            icon: "/our-work/doctor-booking-app/18.png",
+            title: "Dispute & Conflict Resolution",
+            description:
+              "Address escalated complaints and disputes between users and service providers.",
+          },
         ],
-        "image": "/our-work/doctor-booking-app/main3.png"
-      }
-      
+        image: "/our-work/doctor-booking-app/main3.png",
+      },
     ],
     projectOverview: {
       title: "Project Overview",
@@ -3724,140 +3950,161 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User App",
-        "heading": "User App",
-        "description": "Users can explore top-rated salons, view detailed service menus, and schedule appointments with their preferred stylists in just a few taps.",
-        "features": [
+        id: 1,
+        title: "User App",
+        heading: "User App",
+        description:
+          "Users can explore top-rated salons, view detailed service menus, and schedule appointments with their preferred stylists in just a few taps.",
+        features: [
           {
-            "icon": "/our-work/saloon-app/1.png",
-            "title": "Browse & Discover",
-            "description": "Explore a wide range of salons, services, and skilled beauty professionals. Users can filter salons based on ratings, location, and available services to find the best match."
+            icon: "/our-work/saloon-app/1.png",
+            title: "Browse & Discover",
+            description:
+              "Explore a wide range of salons, services, and skilled beauty professionals. Users can filter salons based on ratings, location, and available services to find the best match.",
           },
           {
-            "icon": "/our-work/saloon-app/2.png",
-            "title": "Easy Booking",
-            "description": "Schedule salon appointments with a few simple taps. The app provides a smooth booking experience, allowing users to select a preferred stylist, date, and time."
+            icon: "/our-work/saloon-app/2.png",
+            title: "Easy Booking",
+            description:
+              "Schedule salon appointments with a few simple taps. The app provides a smooth booking experience, allowing users to select a preferred stylist, date, and time.",
           },
           {
-            "icon": "/our-work/saloon-app/3.png",
-            "title": "Real-Time Availability",
-            "description": "Check salon schedules and instantly book available slots. Users can view live updates on appointment availability, reducing waiting time."
+            icon: "/our-work/saloon-app/3.png",
+            title: "Real-Time Availability",
+            description:
+              "Check salon schedules and instantly book available slots. Users can view live updates on appointment availability, reducing waiting time.",
           },
           {
-            "icon": "/our-work/saloon-app/4.png",
-            "title": "In-App Payments",
-            "description": "Pay for services securely using multiple payment methods, including credit/debit cards, digital wallets, and in-app credits, making transactions seamless and hassle-free."
+            icon: "/our-work/saloon-app/4.png",
+            title: "In-App Payments",
+            description:
+              "Pay for services securely using multiple payment methods, including credit/debit cards, digital wallets, and in-app credits, making transactions seamless and hassle-free.",
           },
           {
-            "icon": "/our-work/saloon-app/5.png",
-            "title": "Appointment Reminders",
-            "description": "Receive automatic notifications and reminders about upcoming bookings to prevent last-minute cancellations or missed appointments."
+            icon: "/our-work/saloon-app/5.png",
+            title: "Appointment Reminders",
+            description:
+              "Receive automatic notifications and reminders about upcoming bookings to prevent last-minute cancellations or missed appointments.",
           },
           {
-            "icon": "/our-work/saloon-app/6.png",
-            "title": "Loyalty & Discounts",
-            "description": "Unlock exclusive promotions, loyalty rewards, and membership benefits for frequent bookings, providing added value to users."
+            icon: "/our-work/saloon-app/6.png",
+            title: "Loyalty & Discounts",
+            description:
+              "Unlock exclusive promotions, loyalty rewards, and membership benefits for frequent bookings, providing added value to users.",
           },
           {
-            "icon": "/our-work/saloon-app/7.png",
-            "title": "Booking History",
-            "description": "Access past and upcoming appointments in one place, allowing users to track their visits, rebook their favorite services, and manage their beauty care routine."
+            icon: "/our-work/saloon-app/7.png",
+            title: "Booking History",
+            description:
+              "Access past and upcoming appointments in one place, allowing users to track their visits, rebook their favorite services, and manage their beauty care routine.",
           },
           {
-            "icon": "/our-work/saloon-app/8.png",
-            "title": "Review & Ratings",
-            "description": "Share experiences and read detailed feedback from other customers to make informed decisions about salons and stylists."
-          }
+            icon: "/our-work/saloon-app/8.png",
+            title: "Review & Ratings",
+            description:
+              "Share experiences and read detailed feedback from other customers to make informed decisions about salons and stylists.",
+          },
         ],
-        "image": "/our-work/saloon-app/main1.png"
-      }
-      ,
+        image: "/our-work/saloon-app/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "The admin panel provides salon owners and managers with a centralized dashboard to manage appointments, staff schedules, and customer interactions.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "The admin panel provides salon owners and managers with a centralized dashboard to manage appointments, staff schedules, and customer interactions.",
+        features: [
           {
-            "icon": "/our-work/saloon-app/9.png",
-            "title": "Manage Appointments",
-            "description": "Accept, decline, or reschedule bookings directly from the panel. Salon owners can manage their daily schedule and keep track of client appointments."
+            icon: "/our-work/saloon-app/9.png",
+            title: "Manage Appointments",
+            description:
+              "Accept, decline, or reschedule bookings directly from the panel. Salon owners can manage their daily schedule and keep track of client appointments.",
           },
           {
-            "icon": "/our-work/saloon-app/10.png",
-            "title": "Service Management",
-            "description": "Add, edit, or remove services and update pricing in real time. Owners can also categorize services based on different beauty treatments like haircuts, facials, and manicures."
+            icon: "/our-work/saloon-app/10.png",
+            title: "Service Management",
+            description:
+              "Add, edit, or remove services and update pricing in real time. Owners can also categorize services based on different beauty treatments like haircuts, facials, and manicures.",
           },
           {
-            "icon": "/our-work/saloon-app/11.png",
-            "title": "Staff Scheduling",
-            "description": "Assign appointments to specific stylists and adjust staff availability, ensuring smooth salon operations."
+            icon: "/our-work/saloon-app/11.png",
+            title: "Staff Scheduling",
+            description:
+              "Assign appointments to specific stylists and adjust staff availability, ensuring smooth salon operations.",
           },
           {
-            "icon": "/our-work/saloon-app/12.png",
-            "title": "Customer Engagement",
-            "description": "Send targeted promotions, personalized discounts, and appointment reminders via push notifications, emails, or SMS to enhance customer retention."
+            icon: "/our-work/saloon-app/12.png",
+            title: "Customer Engagement",
+            description:
+              "Send targeted promotions, personalized discounts, and appointment reminders via push notifications, emails, or SMS to enhance customer retention.",
           },
           {
-            "icon": "/our-work/saloon-app/13.png",
-            "title": "Earnings & Reports",
-            "description": "Track daily earnings, monthly revenue, and transaction history with detailed financial reports, helping salon owners analyze business performance."
+            icon: "/our-work/saloon-app/13.png",
+            title: "Earnings & Reports",
+            description:
+              "Track daily earnings, monthly revenue, and transaction history with detailed financial reports, helping salon owners analyze business performance.",
           },
           {
-            "icon": "/our-work/saloon-app/14.png",
-            "title": "Customer Feedback",
-            "description": "View and respond to client reviews, allowing salon owners to maintain a positive reputation and improve service quality."
-          }
+            icon: "/our-work/saloon-app/14.png",
+            title: "Customer Feedback",
+            description:
+              "View and respond to client reviews, allowing salon owners to maintain a positive reputation and improve service quality.",
+          },
         ],
-        "image": "/our-work/saloon-app/main2.png"
-      }
-      ,
+        image: "/our-work/saloon-app/main2.png",
+      },
       {
-        "id": 3,
-        "title": "Super Admin",
-        "heading": "Super Admin",
-        "description": "The Super Admin approves and verifies salon registrations, monitors app performance, and manages financial transactions with full oversight.",
-        "features": [
+        id: 3,
+        title: "Super Admin",
+        heading: "Super Admin",
+        description:
+          "The Super Admin approves and verifies salon registrations, monitors app performance, and manages financial transactions with full oversight.",
+        features: [
           {
-            "icon": "/our-work/saloon-app/15.png",
-            "title": "Salon Verification",
-            "description": "Authenticate and approve new salon registrations, ensuring only reputable and licensed businesses are listed on the platform."
+            icon: "/our-work/saloon-app/15.png",
+            title: "Salon Verification",
+            description:
+              "Authenticate and approve new salon registrations, ensuring only reputable and licensed businesses are listed on the platform.",
           },
           {
-            "icon": "/our-work/saloon-app/16.png",
-            "title": "User & Salon Management",
-            "description": "Monitor user and salon activities, handle customer support queries, and resolve any service-related disputes."
+            icon: "/our-work/saloon-app/16.png",
+            title: "User & Salon Management",
+            description:
+              "Monitor user and salon activities, handle customer support queries, and resolve any service-related disputes.",
           },
           {
-            "icon": "/our-work/saloon-app/17.png",
-            "title": "Analytics & Insights",
-            "description": "Gain a complete overview of platform performance, including customer behavior, booking trends, and revenue analytics, to make data-driven decisions."
+            icon: "/our-work/saloon-app/17.png",
+            title: "Analytics & Insights",
+            description:
+              "Gain a complete overview of platform performance, including customer behavior, booking trends, and revenue analytics, to make data-driven decisions.",
           },
           {
-            "icon": "/our-work/saloon-app/18.png",
-            "title": "Security & Compliance",
-            "description": "Enforce data privacy measures, ensure adherence to policies, and protect customer and salon data from unauthorized access."
+            icon: "/our-work/saloon-app/18.png",
+            title: "Security & Compliance",
+            description:
+              "Enforce data privacy measures, ensure adherence to policies, and protect customer and salon data from unauthorized access.",
           },
           {
-            "icon": "/our-work/saloon-app/19.png",
-            "title": "Dispute Resolution",
-            "description": "Handle complaints, refund requests, and conflicts between customers and salons by providing a fair and transparent resolution process."
+            icon: "/our-work/saloon-app/19.png",
+            title: "Dispute Resolution",
+            description:
+              "Handle complaints, refund requests, and conflicts between customers and salons by providing a fair and transparent resolution process.",
           },
           {
-            "icon": "/our-work/saloon-app/20.png",
-            "title": "Financial Monitoring",
-            "description": "Oversee platform-wide transactions, including commission-based earnings, payout processing, and overall financial performance of the app."
+            icon: "/our-work/saloon-app/20.png",
+            title: "Financial Monitoring",
+            description:
+              "Oversee platform-wide transactions, including commission-based earnings, payout processing, and overall financial performance of the app.",
           },
           {
-            "icon": "/our-work/saloon-app/21.png",
-            "title": "System Updates",
-            "description": "Manage new feature rollouts, system maintenance, and app enhancements to improve functionality and user experience."
-          }
+            icon: "/our-work/saloon-app/21.png",
+            title: "System Updates",
+            description:
+              "Manage new feature rollouts, system maintenance, and app enhancements to improve functionality and user experience.",
+          },
         ],
-        "image": "/our-work/saloon-app/main3.png"
-      }
-      ,
+        image: "/our-work/saloon-app/main3.png",
+      },
     ],
     projectOverview: {
       title: "Project Overview",
@@ -3908,86 +4155,97 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User Web",
-        "heading": "User Web",
-        "description": "Access engaging Arabic poetry courses, connect with expert instructors, and refine your skills—all from your browser.",
-        "features": [
+        id: 1,
+        title: "User Web",
+        heading: "User Web",
+        description:
+          "Access engaging Arabic poetry courses, connect with expert instructors, and refine your skills—all from your browser.",
+        features: [
           {
-            "icon": "/our-work/arabic-poetry-app/1.png",
-            "title": "Explore Courses",
-            "description": "Browse a variety of Arabic poetry courses tailored to different skill levels, from beginners to advanced poets, ensuring a structured and engaging learning experience."
+            icon: "/our-work/arabic-poetry-app/1.png",
+            title: "Explore Courses",
+            description:
+              "Browse a variety of Arabic poetry courses tailored to different skill levels, from beginners to advanced poets, ensuring a structured and engaging learning experience.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/2.png",
-            "title": "Expert Guidance",
-            "description": "Learn from experienced poets and instructors who provide in-depth lessons, writing techniques, and personalized feedback to refine your poetry skills."
+            icon: "/our-work/arabic-poetry-app/2.png",
+            title: "Expert Guidance",
+            description:
+              "Learn from experienced poets and instructors who provide in-depth lessons, writing techniques, and personalized feedback to refine your poetry skills.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/3.png",
-            "title": "Interactive Learning",
-            "description": "Engage with multimedia-rich content, including video lectures, exercises, and live workshops, making the learning process immersive and effective."
+            icon: "/our-work/arabic-poetry-app/3.png",
+            title: "Interactive Learning",
+            description:
+              "Engage with multimedia-rich content, including video lectures, exercises, and live workshops, making the learning process immersive and effective.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/4.png",
-            "title": "Community & Collaboration",
-            "description": "Connect with fellow poetry enthusiasts, share your work, receive constructive feedback, and participate in discussions to grow within a creative community."
+            icon: "/our-work/arabic-poetry-app/4.png",
+            title: "Community & Collaboration",
+            description:
+              "Connect with fellow poetry enthusiasts, share your work, receive constructive feedback, and participate in discussions to grow within a creative community.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/5.png",
-            "title": "Flexible Learning",
-            "description": "Study at your own pace with on-demand courses and downloadable resources, allowing users to integrate learning into their daily lives conveniently."
+            icon: "/our-work/arabic-poetry-app/5.png",
+            title: "Flexible Learning",
+            description:
+              "Study at your own pace with on-demand courses and downloadable resources, allowing users to integrate learning into their daily lives conveniently.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/6.png",
-            "title": "Certification & Recognition",
-            "description": "Earn certificates upon course completion, showcasing achievements and progress in Arabic poetry mastery."
+            icon: "/our-work/arabic-poetry-app/6.png",
+            title: "Certification & Recognition",
+            description:
+              "Earn certificates upon course completion, showcasing achievements and progress in Arabic poetry mastery.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/7.png",
-            "title": "Personalized Experience",
-            "description": "Receive tailored course recommendations based on interests, past learning experiences, and poetry styles, ensuring a customized journey."
-          }
+            icon: "/our-work/arabic-poetry-app/7.png",
+            title: "Personalized Experience",
+            description:
+              "Receive tailored course recommendations based on interests, past learning experiences, and poetry styles, ensuring a customized journey.",
+          },
         ],
-        "image": "/our-work/arabic-poetry-app/main1.png"
-      }
-      ,
+        image: "/our-work/arabic-poetry-app/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "Effortlessly manage courses, monitor student progress, and enhance the learning experience with powerful instructor tools.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "Effortlessly manage courses, monitor student progress, and enhance the learning experience with powerful instructor tools.",
+        features: [
           {
-            "icon": "/our-work/arabic-poetry-app/8.png",
-            "title": "Course Management",
-            "description": "Create, edit, and update poetry courses with new lessons, materials, and assignments to keep content fresh and relevant."
+            icon: "/our-work/arabic-poetry-app/8.png",
+            title: "Course Management",
+            description:
+              "Create, edit, and update poetry courses with new lessons, materials, and assignments to keep content fresh and relevant.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/9.png",
-            "title": "Student Progress Tracking",
-            "description": "Monitor learners’ progress, track performance, and provide personalized feedback to help students improve their poetry skills."
+            icon: "/our-work/arabic-poetry-app/9.png",
+            title: "Student Progress Tracking",
+            description:
+              "Monitor learners’ progress, track performance, and provide personalized feedback to help students improve their poetry skills.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/10.png",
-            "title": "Engagement & Interaction",
-            "description": "Respond to student queries, facilitate discussions, and encourage participation in community forums, fostering an interactive learning environment."
+            icon: "/our-work/arabic-poetry-app/10.png",
+            title: "Engagement & Interaction",
+            description:
+              "Respond to student queries, facilitate discussions, and encourage participation in community forums, fostering an interactive learning environment.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/11.png",
-            "title": "Content Moderation",
-            "description": "Manage user submissions, review poetry pieces, and ensure a respectful and constructive environment for learning and sharing."
+            icon: "/our-work/arabic-poetry-app/11.png",
+            title: "Content Moderation",
+            description:
+              "Manage user submissions, review poetry pieces, and ensure a respectful and constructive environment for learning and sharing.",
           },
           {
-            "icon": "/our-work/arabic-poetry-app/12.png",
-            "title": "Analytics & Reports",
-            "description": "Access detailed insights on course enrollments, user engagement, and performance metrics to enhance teaching effectiveness and course success."
-          }
+            icon: "/our-work/arabic-poetry-app/12.png",
+            title: "Analytics & Reports",
+            description:
+              "Access detailed insights on course enrollments, user engagement, and performance metrics to enhance teaching effectiveness and course success.",
+          },
         ],
-        "image": "/our-work/arabic-poetry-app/main2.png"
-      }
-      ,
-      
+        image: "/our-work/arabic-poetry-app/main2.png",
+      },
     ],
     projectOverview: {
       title: "Project Overview",
@@ -4002,8 +4260,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Master Arabic Poetry with Faoolun",
-      description:
-        "Unlock the beauty of Arabic poetry with Faoolun, offering:",
+      description: "Unlock the beauty of Arabic poetry with Faoolun, offering:",
       points: [
         "Interactive lessons on classical and modern poetry",
         "In-depth analysis of poetic styles and techniques",
@@ -4038,75 +4295,85 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User Web",
-        "heading": "User Web",
-        "description": "Solwave’s web platform offers curated resources, interactive tools, and a supportive community to help users build confidence and embrace personal growth.",
-        "features": [
+        id: 1,
+        title: "User Web",
+        heading: "User Web",
+        description:
+          "Solwave’s web platform offers curated resources, interactive tools, and a supportive community to help users build confidence and embrace personal growth.",
+        features: [
           {
-            "icon": "/our-work/solwave/1.png",
-            "title": "Personalized Resources",
-            "description": "Access tailored articles, exercises, and tools designed to help build self-confidence and personal growth."
+            icon: "/our-work/solwave/1.png",
+            title: "Personalized Resources",
+            description:
+              "Access tailored articles, exercises, and tools designed to help build self-confidence and personal growth.",
           },
           {
-            "icon": "/our-work/solwave/2.png",
-            "title": "Interactive Tools",
-            "description": "Engage with activities that encourage self-reflection, goal setting, and progress tracking."
+            icon: "/our-work/solwave/2.png",
+            title: "Interactive Tools",
+            description:
+              "Engage with activities that encourage self-reflection, goal setting, and progress tracking.",
           },
           {
-            "icon": "/our-work/solwave/3.png",
-            "title": "Community Support",
-            "description": "Connect with like-minded individuals, share experiences, and learn from a supportive network."
+            icon: "/our-work/solwave/3.png",
+            title: "Community Support",
+            description:
+              "Connect with like-minded individuals, share experiences, and learn from a supportive network.",
           },
           {
-            "icon": "/our-work/solwave/4.png",
-            "title": "Expert Guidance",
-            "description": "Benefit from insights and advice from professionals specializing in self-confidence and personal development."
+            icon: "/our-work/solwave/4.png",
+            title: "Expert Guidance",
+            description:
+              "Benefit from insights and advice from professionals specializing in self-confidence and personal development.",
           },
           {
-            "icon": "/our-work/solwave/5.png",
-            "title": "User-Friendly Experience",
-            "description": "Navigate effortlessly through a well-structured platform designed for ease of use and engagement."
-          }
+            icon: "/our-work/solwave/5.png",
+            title: "User-Friendly Experience",
+            description:
+              "Navigate effortlessly through a well-structured platform designed for ease of use and engagement.",
+          },
         ],
-        "image": "/our-work/solwave/main1.png"
-      }
-      ,
+        image: "/our-work/solwave/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "The Solwave admin panel allows seamless content management, user moderation, and analytics tracking to enhance platform engagement and support users effectively.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "The Solwave admin panel allows seamless content management, user moderation, and analytics tracking to enhance platform engagement and support users effectively.",
+        features: [
           {
-            "icon": "/our-work/solwave/6.png",
-            "title": "Content Management",
-            "description": "Add, update, or remove articles, exercises, and interactive tools to keep resources fresh and relevant."
+            icon: "/our-work/solwave/6.png",
+            title: "Content Management",
+            description:
+              "Add, update, or remove articles, exercises, and interactive tools to keep resources fresh and relevant.",
           },
           {
-            "icon": "/our-work/solwave/7.png",
-            "title": "User Management",
-            "description": "Oversee user accounts, monitor engagement, and provide support where needed."
+            icon: "/our-work/solwave/7.png",
+            title: "User Management",
+            description:
+              "Oversee user accounts, monitor engagement, and provide support where needed.",
           },
           {
-            "icon": "/our-work/solwave/8.png",
-            "title": "Community Moderation",
-            "description": "Ensure a safe and positive space by managing discussions, filtering content, and addressing concerns."
+            icon: "/our-work/solwave/8.png",
+            title: "Community Moderation",
+            description:
+              "Ensure a safe and positive space by managing discussions, filtering content, and addressing concerns.",
           },
           {
-            "icon": "/our-work/solwave/9.png",
-            "title": "Data & Analytics",
-            "description": "Track user progress, engagement levels, and platform performance to optimize content and experiences."
+            icon: "/our-work/solwave/9.png",
+            title: "Data & Analytics",
+            description:
+              "Track user progress, engagement levels, and platform performance to optimize content and experiences.",
           },
           {
-            "icon": "/our-work/solwave/10.png",
-            "title": "Customization & Updates",
-            "description": "Continuously improve the platform by introducing new features and refining existing ones."
-          }
+            icon: "/our-work/solwave/10.png",
+            title: "Customization & Updates",
+            description:
+              "Continuously improve the platform by introducing new features and refining existing ones.",
+          },
         ],
-        "image": "/our-work/solwave/main2.png"
-      }
-      
+        image: "/our-work/solwave/main2.png",
+      },
     ],
     projectOverview: {
       title: "Project Overview",
@@ -4162,75 +4429,85 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User App",
-        "heading": "User App",
-        "description": "Instant Save makes downloading Instagram content quick and effortless, allowing users to save photos, videos, and stories for offline access.",
-        "features": [
+        id: 1,
+        title: "User App",
+        heading: "User App",
+        description:
+          "Instant Save makes downloading Instagram content quick and effortless, allowing users to save photos, videos, and stories for offline access.",
+        features: [
           {
-            "icon": "/our-work/instant-save/1.png",
-            "title": "Easy Content Saving",
-            "description": "Download Instagram photos, videos, and stories directly to your device with just a tap."
+            icon: "/our-work/instant-save/1.png",
+            title: "Easy Content Saving",
+            description:
+              "Download Instagram photos, videos, and stories directly to your device with just a tap.",
           },
           {
-            "icon": "/our-work/instant-save/2.png",
-            "title": "High-Quality Downloads",
-            "description": "Save media in its original quality without compression."
+            icon: "/our-work/instant-save/2.png",
+            title: "High-Quality Downloads",
+            description:
+              "Save media in its original quality without compression.",
           },
           {
-            "icon": "/our-work/instant-save/3.png",
-            "title": "User-Friendly Interface",
-            "description": "Simple and intuitive design for seamless navigation and fast downloads."
+            icon: "/our-work/instant-save/3.png",
+            title: "User-Friendly Interface",
+            description:
+              "Simple and intuitive design for seamless navigation and fast downloads.",
           },
           {
-            "icon": "/our-work/instant-save/4.png",
-            "title": "Secure & Private",
-            "description": "Ensures a safe downloading experience while respecting user privacy."
+            icon: "/our-work/instant-save/4.png",
+            title: "Secure & Private",
+            description:
+              "Ensures a safe downloading experience while respecting user privacy.",
           },
           {
-            "icon": "/our-work/instant-save/5.png",
-            "title": "Offline Access & Sharing",
-            "description": "View and share saved content anytime without an internet connection."
-          }
+            icon: "/our-work/instant-save/5.png",
+            title: "Offline Access & Sharing",
+            description:
+              "View and share saved content anytime without an internet connection.",
+          },
         ],
-        "image": "/our-work/instant-save/main1.png"
-      }
-      ,
+        image: "/our-work/instant-save/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "The admin panel provides complete control over the Instant Save app, managing user activity, monitoring downloads, and ensuring a smooth platform experience.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "The admin panel provides complete control over the Instant Save app, managing user activity, monitoring downloads, and ensuring a smooth platform experience.",
+        features: [
           {
-            "icon": "/our-work/instant-save/6.png",
-            "title": "User Management",
-            "description": "Monitor and manage app users for a secure and streamlined experience."
+            icon: "/our-work/instant-save/6.png",
+            title: "User Management",
+            description:
+              "Monitor and manage app users for a secure and streamlined experience.",
           },
           {
-            "icon": "/our-work/instant-save/7.png",
-            "title": "Content Moderation",
-            "description": "Oversee downloads and ensure compliance with platform policies."
+            icon: "/our-work/instant-save/7.png",
+            title: "Content Moderation",
+            description:
+              "Oversee downloads and ensure compliance with platform policies.",
           },
           {
-            "icon": "/our-work/instant-save/8.png",
-            "title": "Performance Analytics",
-            "description": "Track app performance, downloads, and user engagement."
+            icon: "/our-work/instant-save/8.png",
+            title: "Performance Analytics",
+            description:
+              "Track app performance, downloads, and user engagement.",
           },
           {
-            "icon": "/our-work/instant-save/9.png",
-            "title": "Security Controls",
-            "description": "Implement safety measures to protect user data and app integrity."
+            icon: "/our-work/instant-save/9.png",
+            title: "Security Controls",
+            description:
+              "Implement safety measures to protect user data and app integrity.",
           },
           {
-            "icon": "/our-work/instant-save/10.png",
-            "title": "App Customization",
-            "description": "Manage settings, updates, and notifications to enhance user experience."
-          }
+            icon: "/our-work/instant-save/10.png",
+            title: "App Customization",
+            description:
+              "Manage settings, updates, and notifications to enhance user experience.",
+          },
         ],
-        "image": "/our-work/instant-save/main2.png"
-      }
-      
+        image: "/our-work/instant-save/main2.png",
+      },
     ],
     challengeSection: {
       title: "Challenges",
@@ -4281,110 +4558,123 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User App",
-        "heading": "User App",
-        "description": "Trendora offers a seamless online shopping experience with a vast selection of products, secure payments, and fast delivery.",
-        "features": [
+        id: 1,
+        title: "User App",
+        heading: "User App",
+        description:
+          "Trendora offers a seamless online shopping experience with a vast selection of products, secure payments, and fast delivery.",
+        features: [
           {
-            "icon": "/our-work/eshop-app/1.png",
-            "title": "Wide Product Range",
-            "description": "Explore a diverse collection of items from multiple vendors in one place."
+            icon: "/our-work/eshop-app/1.png",
+            title: "Wide Product Range",
+            description:
+              "Explore a diverse collection of items from multiple vendors in one place.",
           },
           {
-            "icon": "/our-work/eshop-app/2.png",
-            "title": "Easy & Secure Payments",
-            "description": "Multiple payment options, including cards, wallets, and cash on delivery."
+            icon: "/our-work/eshop-app/2.png",
+            title: "Easy & Secure Payments",
+            description:
+              "Multiple payment options, including cards, wallets, and cash on delivery.",
           },
           {
-            "icon": "/our-work/eshop-app/3.png",
-            "title": "Personalized Recommendations",
-            "description": "Integrating a standard payment gateway that allows users to pay at their convenience."
+            icon: "/our-work/eshop-app/3.png",
+            title: "Personalized Recommendations",
+            description:
+              "Integrating a standard payment gateway that allows users to pay at their convenience.",
           },
           {
-            "icon": "/our-work/eshop-app/4.png",
-            "title": "Order Tracking & Notifications",
-            "description": "Stay updated on order status with real-time tracking."
+            icon: "/our-work/eshop-app/4.png",
+            title: "Order Tracking & Notifications",
+            description:
+              "Stay updated on order status with real-time tracking.",
           },
           {
-            "icon": "/our-work/eshop-app/5.png",
-            "title": "User-Friendly Interface",
-            "description": "Simple navigation for effortless shopping and checkout."
-          }
+            icon: "/our-work/eshop-app/5.png",
+            title: "User-Friendly Interface",
+            description:
+              "Simple navigation for effortless shopping and checkout.",
+          },
         ],
-        "image": "/our-work/eshop-app/main1.png"
-      }
-      ,
+        image: "/our-work/eshop-app/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Vendor App",
-        "heading": "Vendor App",
-        "description": "Empowering sellers to manage their online stores efficiently, track sales, and grow their business.",
-        "features": [
+        id: 2,
+        title: "Vendor App",
+        heading: "Vendor App",
+        description:
+          "Empowering sellers to manage their online stores efficiently, track sales, and grow their business.",
+        features: [
           {
-            "icon": "/our-work/eshop-app/6.png",
-            "title": "Product Management",
-            "description": "Easily add, edit, and organize products with descriptions and pricing."
+            icon: "/our-work/eshop-app/6.png",
+            title: "Product Management",
+            description:
+              "Easily add, edit, and organize products with descriptions and pricing.",
           },
           {
-            "icon": "/our-work/eshop-app/7.png",
-            "title": "Order & Inventory Tracking",
-            "description": "Monitor stock levels and manage incoming orders effortlessly."
+            icon: "/our-work/eshop-app/7.png",
+            title: "Order & Inventory Tracking",
+            description:
+              "Monitor stock levels and manage incoming orders effortlessly.",
           },
           {
-            "icon": "/our-work/eshop-app/8.png",
-            "title": "Sales Analytics",
-            "description": "Gain insights into sales performance, trends, and customer behavior."
+            icon: "/our-work/eshop-app/8.png",
+            title: "Sales Analytics",
+            description:
+              "Gain insights into sales performance, trends, and customer behavior.",
           },
           {
-            "icon": "/our-work/eshop-app/9.png",
-            "title": "Promotions & Discounts",
-            "description": "Set up special offers and discount codes to attract more buyers."
+            icon: "/our-work/eshop-app/9.png",
+            title: "Promotions & Discounts",
+            description:
+              "Set up special offers and discount codes to attract more buyers.",
           },
           {
-            "icon": "/our-work/eshop-app/10.png",
-            "title": "Customer Communication",
-            "description": "Respond to inquiries and provide updates for better customer service."
-          }
+            icon: "/our-work/eshop-app/10.png",
+            title: "Customer Communication",
+            description:
+              "Respond to inquiries and provide updates for better customer service.",
+          },
         ],
-        "image": "/our-work/eshop-app/main2.png"
-      }
-      ,
+        image: "/our-work/eshop-app/main2.png",
+      },
       {
-        "id": 3,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "A comprehensive dashboard for overseeing platform operations, managing vendors, and ensuring smooth transactions.",
-        "features": [
+        id: 3,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "A comprehensive dashboard for overseeing platform operations, managing vendors, and ensuring smooth transactions.",
+        features: [
           {
-            "icon": "/our-work/eshop-app/11.png",
-            "title": "User & Vendor Management",
-            "description": "Approve, monitor, and support users and vendors."
+            icon: "/our-work/eshop-app/11.png",
+            title: "User & Vendor Management",
+            description: "Approve, monitor, and support users and vendors.",
           },
           {
-            "icon": "/our-work/eshop-app/12.png",
-            "title": "Order & Payment Processing",
-            "description": "Ensure secure and efficient payment transactions."
+            icon: "/our-work/eshop-app/12.png",
+            title: "Order & Payment Processing",
+            description: "Ensure secure and efficient payment transactions.",
           },
           {
-            "icon": "/our-work/eshop-app/13.png",
-            "title": "Analytics & Reports",
-            "description": "Track platform performance, sales trends, and customer activity."
+            icon: "/our-work/eshop-app/13.png",
+            title: "Analytics & Reports",
+            description:
+              "Track platform performance, sales trends, and customer activity.",
           },
           {
-            "icon": "/our-work/eshop-app/14.png",
-            "title": "Content Moderation",
-            "description": "Monitor product listings and reviews to maintain quality standards."
+            icon: "/our-work/eshop-app/14.png",
+            title: "Content Moderation",
+            description:
+              "Monitor product listings and reviews to maintain quality standards.",
           },
           {
-            "icon": "/our-work/eshop-app/15.png",
-            "title": "Platform Customization",
-            "description": "Manage platform settings, categories, and promotional campaigns."
-          }
+            icon: "/our-work/eshop-app/15.png",
+            title: "Platform Customization",
+            description:
+              "Manage platform settings, categories, and promotional campaigns.",
+          },
         ],
-        "image": "/our-work/eshop-app/main3.png"
-      }
-      
+        image: "/our-work/eshop-app/main3.png",
+      },
     ],
     challengeSection: {
       title: "Challenges",
@@ -4421,8 +4711,7 @@ export const ourWorks = [
     slug: "food-inventory-app",
     heroData: {
       title: "Foodventory App ",
-      description:
-        "Smart Management for Fresh Meals and Less Waste!",
+      description: "Smart Management for Fresh Meals and Less Waste!",
       bgImage: "/our-work/food-app/hero-bg.png",
       rightImage: "/our-work/food-app/hero-right.png",
       topArrow: true,
@@ -4435,75 +4724,79 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User App",
-        "heading": "User App",
-        "description": "A smart grocery management app that tracks expiry dates and suggests recipes based on available ingredients.",
-        "features": [
+        id: 1,
+        title: "User App",
+        heading: "User App",
+        description:
+          "A smart grocery management app that tracks expiry dates and suggests recipes based on available ingredients.",
+        features: [
           {
-            "icon": "/our-work/food-app/1.png",
-            "title": "Expiry Date Tracker",
-            "description": "Log grocery items with their expiration dates and receive timely reminders."
+            icon: "/our-work/food-app/1.png",
+            title: "Expiry Date Tracker",
+            description:
+              "Log grocery items with their expiration dates and receive timely reminders.",
           },
           {
-            "icon": "/our-work/food-app/2.png",
-            "title": "Recipe Suggestions",
-            "description": "Get meal ideas based on ingredients in your pantry."
+            icon: "/our-work/food-app/2.png",
+            title: "Recipe Suggestions",
+            description: "Get meal ideas based on ingredients in your pantry.",
           },
           {
-            "icon": "/our-work/food-app/3.png",
-            "title": "Smart Notifications",
-            "description": "Alerts for expiring items to reduce food waste."
+            icon: "/our-work/food-app/3.png",
+            title: "Smart Notifications",
+            description: "Alerts for expiring items to reduce food waste.",
           },
           {
-            "icon": "/our-work/food-app/4.png",
-            "title": "Easy Inventory Management",
-            "description": "Add, update, and organize groceries effortlessly."
+            icon: "/our-work/food-app/4.png",
+            title: "Easy Inventory Management",
+            description: "Add, update, and organize groceries effortlessly.",
           },
           {
-            "icon": "/our-work/food-app/5.png",
-            "title": "User-Friendly Interface",
-            "description": "Simple and intuitive design for seamless navigation."
-          }
+            icon: "/our-work/food-app/5.png",
+            title: "User-Friendly Interface",
+            description: "Simple and intuitive design for seamless navigation.",
+          },
         ],
-        "image": "/our-work/food-app/main1.png"
-      }
-      ,
+        image: "/our-work/food-app/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "A centralized system for managing users, app content, and ensuring a smooth experience.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "A centralized system for managing users, app content, and ensuring a smooth experience.",
+        features: [
           {
-            "icon": "/our-work/food-app/6.png",
-            "title": "User Management",
-            "description": "Monitor user activity and provide support when needed."
+            icon: "/our-work/food-app/6.png",
+            title: "User Management",
+            description:
+              "Monitor user activity and provide support when needed.",
           },
           {
-            "icon": "/our-work/food-app/7.png",
-            "title": "Recipe Database Control",
-            "description": "Update and manage recipe recommendations."
+            icon: "/our-work/food-app/7.png",
+            title: "Recipe Database Control",
+            description: "Update and manage recipe recommendations.",
           },
           {
-            "icon": "/our-work/food-app/8.png",
-            "title": "Notification Management",
-            "description": "Customize and send alerts to enhance user engagement."
+            icon: "/our-work/food-app/8.png",
+            title: "Notification Management",
+            description:
+              "Customize and send alerts to enhance user engagement.",
           },
           {
-            "icon": "/our-work/food-app/9.png",
-            "title": "Analytics & Reports",
-            "description": "Track app usage trends and user behaviour."
+            icon: "/our-work/food-app/9.png",
+            title: "Analytics & Reports",
+            description: "Track app usage trends and user behaviour.",
           },
           {
-            "icon": "/our-work/food-app/10.png",
-            "title": "Content Moderation",
-            "description": "Ensure accurate grocery tracking and relevant suggestions."
-          }
+            icon: "/our-work/food-app/10.png",
+            title: "Content Moderation",
+            description:
+              "Ensure accurate grocery tracking and relevant suggestions.",
+          },
         ],
-        "image": "/our-work/food-app/main2.png"
-      }
-      
+        image: "/our-work/food-app/main2.png",
+      },
     ],
     challengeSection: {
       title: "Challenges",
@@ -4513,8 +4806,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Stay Organized with Foodventory App",
-      description:
-        "Manage your kitchen effortlessly with features like:",
+      description: "Manage your kitchen effortlessly with features like:",
       points: [
         "Expiry date tracking to reduce waste",
         "Recipe suggestions based on available ingredients",
@@ -4535,7 +4827,7 @@ export const ourWorks = [
     },
     image: "/our-work/food-app/Banner.png",
   },
-  { 
+  {
     title: "Al Abour App",
     slug: "al-abour-app",
     heroData: {
@@ -4549,75 +4841,82 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User App",
-        "heading": "User App",
-        "description": "A specialized platform for camel owners to efficiently book transport and manage event participation.",
-        "features": [
+        id: 1,
+        title: "User App",
+        heading: "User App",
+        description:
+          "A specialized platform for camel owners to efficiently book transport and manage event participation.",
+        features: [
           {
-            "icon": "/our-work/al-abour-app/1.png",
-            "title": "Event Browsing",
-            "description": "Explore upcoming camel racing events by city and country."
+            icon: "/our-work/al-abour-app/1.png",
+            title: "Event Browsing",
+            description:
+              "Explore upcoming camel racing events by city and country.",
           },
           {
-            "icon": "/our-work/al-abour-app/2.png",
-            "title": "Detailed Event Information",
-            "description": "Access key details, including dates, locations, and requirements."
+            icon: "/our-work/al-abour-app/2.png",
+            title: "Detailed Event Information",
+            description:
+              "Access key details, including dates, locations, and requirements.",
           },
           {
-            "icon": "/our-work/al-abour-app/3.png",
-            "title": "Seamless Booking",
-            "description": "Easily reserve transport for camels with just a few taps."
+            icon: "/our-work/al-abour-app/3.png",
+            title: "Seamless Booking",
+            description:
+              "Easily reserve transport for camels with just a few taps.",
           },
           {
-            "icon": "/our-work/al-abour-app/4.png",
-            "title": "Tracking & Notifications",
-            "description": "Stay updated with event reminders and transport status."
+            icon: "/our-work/al-abour-app/4.png",
+            title: "Tracking & Notifications",
+            description:
+              "Stay updated with event reminders and transport status.",
           },
           {
-            "icon": "/our-work/al-abour-app/5.png",
-            "title": "User-Friendly Interface",
-            "description": "Intuitive design for a smooth and hassle-free experience."
-          }
+            icon: "/our-work/al-abour-app/5.png",
+            title: "User-Friendly Interface",
+            description:
+              "Intuitive design for a smooth and hassle-free experience.",
+          },
         ],
-        "image": "/our-work/al-abour-app/main1.png"
-      }
-      ,
+        image: "/our-work/al-abour-app/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "A powerful backend system for managing events, bookings, and user interactions.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "A powerful backend system for managing events, bookings, and user interactions.",
+        features: [
           {
-            "icon": "/our-work/al-abour-app/6.png",
-            "title": "Event Management",
-            "description": "Add, update, and oversee racing events and their details."
+            icon: "/our-work/al-abour-app/6.png",
+            title: "Event Management",
+            description:
+              "Add, update, and oversee racing events and their details.",
           },
           {
-            "icon": "/our-work/al-abour-app/7.png",
-            "title": "Booking Oversight",
-            "description": "Monitor and manage transport reservations for users."
+            icon: "/our-work/al-abour-app/7.png",
+            title: "Booking Oversight",
+            description: "Monitor and manage transport reservations for users.",
           },
           {
-            "icon": "/our-work/al-abour-app/8.png",
-            "title": "User Management",
-            "description": "Track and assist users with inquiries and bookings."
+            icon: "/our-work/al-abour-app/8.png",
+            title: "User Management",
+            description: "Track and assist users with inquiries and bookings.",
           },
           {
-            "icon": "/our-work/al-abour-app/9.png",
-            "title": "Notifications & Alerts",
-            "description": "Send event updates and booking confirmations."
+            icon: "/our-work/al-abour-app/9.png",
+            title: "Notifications & Alerts",
+            description: "Send event updates and booking confirmations.",
           },
           {
-            "icon": "/our-work/al-abour-app/10.png",
-            "title": "Analytics & Reports",
-            "description": "Gain insights into user engagement and booking trends."
-          }
+            icon: "/our-work/al-abour-app/10.png",
+            title: "Analytics & Reports",
+            description:
+              "Gain insights into user engagement and booking trends.",
+          },
         ],
-        "image": "/our-work/al-abour-app/main2.png"
-      }
-      
+        image: "/our-work/al-abour-app/main2.png",
+      },
     ],
     projectOverview: {
       title: "Project Overview",
@@ -4668,75 +4967,83 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User Web",
-        "heading": "User Web",
-        "description": "A comprehensive platform offering legal resources and expert guidance for individuals facing legal challenges.",
-        "features": [
+        id: 1,
+        title: "User Web",
+        heading: "User Web",
+        description:
+          "A comprehensive platform offering legal resources and expert guidance for individuals facing legal challenges.",
+        features: [
           {
-            "icon": "/our-work/legal-wise-web/1.png",
-            "title": "Legal Resource Library",
-            "description": "Access easy-to-understand legal information on various topics."
+            icon: "/our-work/legal-wise-web/1.png",
+            title: "Legal Resource Library",
+            description:
+              "Access easy-to-understand legal information on various topics.",
           },
           {
-            "icon": "/our-work/legal-wise-web/2.png",
-            "title": "Interactive Tools",
-            "description": "Utilize document templates, legal checklists, and self-assessment tools."
+            icon: "/our-work/legal-wise-web/2.png",
+            title: "Interactive Tools",
+            description:
+              "Utilize document templates, legal checklists, and self-assessment tools.",
           },
           {
-            "icon": "/our-work/legal-wise-web/3.png",
-            "title": "Expert Consultation",
-            "description": "Connect with legal professionals for guidance and advice."
+            icon: "/our-work/legal-wise-web/3.png",
+            title: "Expert Consultation",
+            description:
+              "Connect with legal professionals for guidance and advice.",
           },
           {
-            "icon": "/our-work/legal-wise-web/4.png",
-            "title": "Case Tracking",
-            "description": "Organize and monitor personal legal matters efficiently."
+            icon: "/our-work/legal-wise-web/4.png",
+            title: "Case Tracking",
+            description:
+              "Organize and monitor personal legal matters efficiently.",
           },
           {
-            "icon": "/our-work/legal-wise-web/5.png",
-            "title": "Secure & Confidential",
-            "description": "Ensure privacy while managing sensitive legal concerns."
-          }
+            icon: "/our-work/legal-wise-web/5.png",
+            title: "Secure & Confidential",
+            description:
+              "Ensure privacy while managing sensitive legal concerns.",
+          },
         ],
-        "image": "/our-work/legal-wise-web/main1.png"
-      }
-      ,
+        image: "/our-work/legal-wise-web/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "A robust backend system for managing legal content, user interactions, and expert consultations.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "A robust backend system for managing legal content, user interactions, and expert consultations.",
+        features: [
           {
-            "icon": "/our-work/legal-wise-web/6.png",
-            "title": "Content Management",
-            "description": "Add, edit, and update legal resources and articles."
+            icon: "/our-work/legal-wise-web/6.png",
+            title: "Content Management",
+            description: "Add, edit, and update legal resources and articles.",
           },
           {
-            "icon": "/our-work/legal-wise-web/7.png",
-            "title": "User Management",
-            "description": "Track user activity, inquiries, and interactions."
+            icon: "/our-work/legal-wise-web/7.png",
+            title: "User Management",
+            description: "Track user activity, inquiries, and interactions.",
           },
           {
-            "icon": "/our-work/legal-wise-web/8.png",
-            "title": "Expert Coordination",
-            "description": "Manage and assign legal professionals for consultations."
+            icon: "/our-work/legal-wise-web/8.png",
+            title: "Expert Coordination",
+            description:
+              "Manage and assign legal professionals for consultations.",
           },
           {
-            "icon": "/our-work/legal-wise-web/9.png",
-            "title": "Case Assistance",
-            "description": "Oversee user cases and provide guidance where needed."
+            icon: "/our-work/legal-wise-web/9.png",
+            title: "Case Assistance",
+            description:
+              "Oversee user cases and provide guidance where needed.",
           },
           {
-            "icon": "/our-work/legal-wise-web/10.png",
-            "title": "Analytics & Reporting",
-            "description": "Gain insights into platform usage and user engagement trends."
-          }
+            icon: "/our-work/legal-wise-web/10.png",
+            title: "Analytics & Reporting",
+            description:
+              "Gain insights into platform usage and user engagement trends.",
+          },
         ],
-        "image": "/our-work/legal-wise-web/main2.png"
-      }
-      
+        image: "/our-work/legal-wise-web/main2.png",
+      },
     ],
     projectOverview: {
       title: "Project Overview",
@@ -4787,85 +5094,97 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User Web",
-        "heading": "User Web",
-        "description": "A premium online jewellery platform offering a seamless shopping experience with a curated selection of unique, high-quality pieces.",
-        "features": [
+        id: 1,
+        title: "User Web",
+        heading: "User Web",
+        description:
+          "A premium online jewellery platform offering a seamless shopping experience with a curated selection of unique, high-quality pieces.",
+        features: [
           {
-            "icon": "/our-work/laam-web/1.png",
-            "title": "Elegant & Intuitive Interface",
-            "description": "A beautifully designed platform that makes browsing effortless."
+            icon: "/our-work/laam-web/1.png",
+            title: "Elegant & Intuitive Interface",
+            description:
+              "A beautifully designed platform that makes browsing effortless.",
           },
           {
-            "icon": "/our-work/laam-web/2.png",
-            "title": "Curated Collections",
-            "description": "A diverse range of jewellery, from everyday essentials to statement pieces."
+            icon: "/our-work/laam-web/2.png",
+            title: "Curated Collections",
+            description:
+              "A diverse range of jewellery, from everyday essentials to statement pieces.",
           },
           {
-            "icon": "/our-work/laam-web/3.png",
-            "title": "Detailed Product Insights",
-            "description": "High-quality images, specifications, and craftsmanship details for informed purchases."
+            icon: "/our-work/laam-web/3.png",
+            title: "Detailed Product Insights",
+            description:
+              "High-quality images, specifications, and craftsmanship details for informed purchases.",
           },
           {
-            "icon": "/our-work/laam-web/4.png",
-            "title": "Personalized Shopping",
-            "description": "Tailored recommendations based on user preferences and style."
+            icon: "/our-work/laam-web/4.png",
+            title: "Personalized Shopping",
+            description:
+              "Tailored recommendations based on user preferences and style.",
           },
           {
-            "icon": "/our-work/laam-web/5.png",
-            "title": "Secure & Convenient Checkout",
-            "description": "Multiple payment options and a smooth purchasing process."
+            icon: "/our-work/laam-web/5.png",
+            title: "Secure & Convenient Checkout",
+            description:
+              "Multiple payment options and a smooth purchasing process.",
           },
           {
-            "icon": "/our-work/laam-web/6.png",
-            "title": "Order Tracking & Support",
-            "description": "Real-time updates and dedicated customer assistance for a hassle-free experience."
-          }
+            icon: "/our-work/laam-web/6.png",
+            title: "Order Tracking & Support",
+            description:
+              "Real-time updates and dedicated customer assistance for a hassle-free experience.",
+          },
         ],
-        "image": "/our-work/laam-web/main1.png"
-      }
-      ,
+        image: "/our-work/laam-web/main1.png",
+      },
       {
-        "id": 2,
-        "title": "Admin Panel",
-        "heading": "Admin Panel",
-        "description": "A powerful backend system designed to streamline product management, customer interactions, and business operations.",
-        "features": [
+        id: 2,
+        title: "Admin Panel",
+        heading: "Admin Panel",
+        description:
+          "A powerful backend system designed to streamline product management, customer interactions, and business operations.",
+        features: [
           {
-            "icon": "/our-work/laam-web/7.png",
-            "title": "Product Management",
-            "description": "Effortlessly add, update, or remove jewellery listings with detailed descriptions."
+            icon: "/our-work/laam-web/7.png",
+            title: "Product Management",
+            description:
+              "Effortlessly add, update, or remove jewellery listings with detailed descriptions.",
           },
           {
-            "icon": "/our-work/laam-web/8.png",
-            "title": "Inventory Tracking",
-            "description": "Keep real-time stock updates to prevent overselling and manage availability."
+            icon: "/our-work/laam-web/8.png",
+            title: "Inventory Tracking",
+            description:
+              "Keep real-time stock updates to prevent overselling and manage availability.",
           },
           {
-            "icon": "/our-work/laam-web/9.png",
-            "title": "Order & Payment Processing",
-            "description": "Monitor transactions, track orders, and handle refunds seamlessly."
+            icon: "/our-work/laam-web/9.png",
+            title: "Order & Payment Processing",
+            description:
+              "Monitor transactions, track orders, and handle refunds seamlessly.",
           },
           {
-            "icon": "/our-work/laam-web/10.png",
-            "title": "Customer Management",
-            "description": "View user activity, respond to inquiries, and provide support."
+            icon: "/our-work/laam-web/10.png",
+            title: "Customer Management",
+            description:
+              "View user activity, respond to inquiries, and provide support.",
           },
           {
-            "icon": "/our-work/laam-web/11.png",
-            "title": "Marketing & Promotions",
-            "description": "Create and manage discounts, special offers, and promotional campaigns."
+            icon: "/our-work/laam-web/11.png",
+            title: "Marketing & Promotions",
+            description:
+              "Create and manage discounts, special offers, and promotional campaigns.",
           },
           {
-            "icon": "/our-work/laam-web/12.png",
-            "title": "Analytics & Sales Reports",
-            "description": "Gain insights into customer behavior, top-selling items, and overall performance."
-          }
+            icon: "/our-work/laam-web/12.png",
+            title: "Analytics & Sales Reports",
+            description:
+              "Gain insights into customer behavior, top-selling items, and overall performance.",
+          },
         ],
-        "image": "/our-work/laam-web/main2.png"
-      }
-      
+        image: "/our-work/laam-web/main2.png",
+      },
     ],
     projectOverview: {
       title: "Project Overview",
@@ -4921,125 +5240,142 @@ export const ourWorks = [
     },
     panelData: [
       {
-        "id": 1,
-        "title": "User Web",
-        "heading": "User Web",
-        "description": "A smart and intuitive POS platform designed to streamline business operations, enhance sales tracking, and improve customer interactions.",
-        "features": [
+        id: 1,
+        title: "User Web",
+        heading: "User Web",
+        description:
+          "A smart and intuitive POS platform designed to streamline business operations, enhance sales tracking, and improve customer interactions.",
+        features: [
           {
-            "icon": "/our-work/clixpos-web/1.png",
-            "title": "Seamless Transaction Processing",
-            "description": "Fast and secure payment processing for a smooth checkout experience."
+            icon: "/our-work/clixpos-web/1.png",
+            title: "Seamless Transaction Processing",
+            description:
+              "Fast and secure payment processing for a smooth checkout experience.",
           },
           {
-            "icon": "/our-work/clixpos-web/2.png",
-            "title": "User-Friendly Interface",
-            "description": "Intuitive design that makes managing sales and inventory effortless."
+            icon: "/our-work/clixpos-web/2.png",
+            title: "User-Friendly Interface",
+            description:
+              "Intuitive design that makes managing sales and inventory effortless.",
           },
           {
-            "icon": "/our-work/clixpos-web/3.png",
-            "title": "Multi-Industry Support",
-            "description": "Suitable for retail stores, restaurants, and service-based businesses."
+            icon: "/our-work/clixpos-web/3.png",
+            title: "Multi-Industry Support",
+            description:
+              "Suitable for retail stores, restaurants, and service-based businesses.",
           },
           {
-            "icon": "/our-work/clixpos-web/4.png",
-            "title": "Real-Time Inventory Tracking",
-            "description": "Keep stock levels updated and prevent shortages."
+            icon: "/our-work/clixpos-web/4.png",
+            title: "Real-Time Inventory Tracking",
+            description: "Keep stock levels updated and prevent shortages.",
           },
           {
-            "icon": "/our-work/clixpos-web/5.png",
-            "title": "Insightful Sales Analytics",
-            "description": "Access detailed reports to monitor performance and optimize strategies."
+            icon: "/our-work/clixpos-web/5.png",
+            title: "Insightful Sales Analytics",
+            description:
+              "Access detailed reports to monitor performance and optimize strategies.",
           },
           {
-            "icon": "/our-work/clixpos-web/6.png",
-            "title": "Customer Profiles & Loyalty Features",
-            "description": "Track purchase history and offer personalized promotions."
-          }
+            icon: "/our-work/clixpos-web/6.png",
+            title: "Customer Profiles & Loyalty Features",
+            description:
+              "Track purchase history and offer personalized promotions.",
+          },
         ],
-        "image": "/our-work/clixpos-web/main1.png"
-      }
-      ,
+        image: "/our-work/clixpos-web/main1.png",
+      },
       {
-        "id": 2,
-        "title": "CRM",
-        "heading": "Customer Relationship Management (CRM)",
-        "description": "A dedicated system to help businesses build stronger relationships, increase customer retention, and enhance personalized engagement.",
-        "features": [
+        id: 2,
+        title: "CRM",
+        heading: "Customer Relationship Management (CRM)",
+        description:
+          "A dedicated system to help businesses build stronger relationships, increase customer retention, and enhance personalized engagement.",
+        features: [
           {
-            "icon": "/our-work/clixpos-web/7.png",
-            "title": "Centralized Customer Data",
-            "description": "Store and manage customer details, preferences, and transaction history."
+            icon: "/our-work/clixpos-web/7.png",
+            title: "Centralized Customer Data",
+            description:
+              "Store and manage customer details, preferences, and transaction history.",
           },
           {
-            "icon": "/our-work/clixpos-web/8.png",
-            "title": "Personalized Marketing",
-            "description": "Send targeted promotions, discounts, and loyalty rewards based on customer behavior."
+            icon: "/our-work/clixpos-web/8.png",
+            title: "Personalized Marketing",
+            description:
+              "Send targeted promotions, discounts, and loyalty rewards based on customer behavior.",
           },
           {
-            "icon": "/our-work/clixpos-web/9.png",
-            "title": "Automated Communication",
-            "description": "Schedule follow-ups, reminders, and promotional messages via email or SMS."
+            icon: "/our-work/clixpos-web/9.png",
+            title: "Automated Communication",
+            description:
+              "Schedule follow-ups, reminders, and promotional messages via email or SMS.",
           },
           {
-            "icon": "/our-work/clixpos-web/10.png",
-            "title": "Customer Feedback & Support",
-            "description": "Gather insights from reviews and provide quick resolutions to inquiries."
+            icon: "/our-work/clixpos-web/10.png",
+            title: "Customer Feedback & Support",
+            description:
+              "Gather insights from reviews and provide quick resolutions to inquiries.",
           },
           {
-            "icon": "/our-work/clixpos-web/11.png",
-            "title": "Loyalty Programs & Discounts",
-            "description": "Reward returning customers with exclusive deals and perks."
+            icon: "/our-work/clixpos-web/11.png",
+            title: "Loyalty Programs & Discounts",
+            description:
+              "Reward returning customers with exclusive deals and perks.",
           },
           {
-            "icon": "/our-work/clixpos-web/12.png",
-            "title": "Analytics & Performance Tracking",
-            "description": "Gain insights into customer engagement and retention trends."
-          }
+            icon: "/our-work/clixpos-web/12.png",
+            title: "Analytics & Performance Tracking",
+            description:
+              "Gain insights into customer engagement and retention trends.",
+          },
         ],
-        "image": "/our-work/clixpos-web/main2.png"
-      }
-      ,
+        image: "/our-work/clixpos-web/main2.png",
+      },
       {
-        "id": 3,
-        "title": "Sales Management",
-        "heading": "Sales Management",
-        "description": "A powerful tool to streamline the sales process, improve efficiency, and drive business growth.",
-        "features": [
+        id: 3,
+        title: "Sales Management",
+        heading: "Sales Management",
+        description:
+          "A powerful tool to streamline the sales process, improve efficiency, and drive business growth.",
+        features: [
           {
-            "icon": "/our-work/clixpos-web/13.png",
-            "title": "Comprehensive Sales Dashboard",
-            "description": "Monitor daily, weekly, and monthly sales performance in real-time."
+            icon: "/our-work/clixpos-web/13.png",
+            title: "Comprehensive Sales Dashboard",
+            description:
+              "Monitor daily, weekly, and monthly sales performance in real-time.",
           },
           {
-            "icon": "/our-work/clixpos-web/14.png",
-            "title": "Order & Invoice Management",
-            "description": "Track orders, generate invoices, and manage payments effortlessly."
+            icon: "/our-work/clixpos-web/14.png",
+            title: "Order & Invoice Management",
+            description:
+              "Track orders, generate invoices, and manage payments effortlessly.",
           },
           {
-            "icon": "/our-work/clixpos-web/15.png",
-            "title": "Multi-Location & Multi-User Support",
-            "description": "Manage multiple store locations and team members from a single platform."
+            icon: "/our-work/clixpos-web/15.png",
+            title: "Multi-Location & Multi-User Support",
+            description:
+              "Manage multiple store locations and team members from a single platform.",
           },
           {
-            "icon": "/our-work/clixpos-web/16.png",
-            "title": "Sales Forecasting & Trends",
-            "description": "Analyze patterns to predict demand and optimize stock levels."
+            icon: "/our-work/clixpos-web/16.png",
+            title: "Sales Forecasting & Trends",
+            description:
+              "Analyze patterns to predict demand and optimize stock levels.",
           },
           {
-            "icon": "/our-work/clixpos-web/17.png",
-            "title": "Integrated Payment Options",
-            "description": "Accept various payment methods, including cash, card, and digital wallets."
+            icon: "/our-work/clixpos-web/17.png",
+            title: "Integrated Payment Options",
+            description:
+              "Accept various payment methods, including cash, card, and digital wallets.",
           },
           {
-            "icon": "/our-work/clixpos-web/18.png",
-            "title": "Commission & Performance Tracking",
-            "description": "Monitor sales team performance and calculate commissions efficiently."
-          }
+            icon: "/our-work/clixpos-web/18.png",
+            title: "Commission & Performance Tracking",
+            description:
+              "Monitor sales team performance and calculate commissions efficiently.",
+          },
         ],
-        "image": "/our-work/clixpos-web/main3.png"
-      }
-      ,
+        image: "/our-work/clixpos-web/main3.png",
+      },
     ],
     challengeSection: {
       title: "Challenges",

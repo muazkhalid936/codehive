@@ -11,6 +11,7 @@ import Testimonials from "../../../components/Testimonials";
 import IndustryDetails from "../../../components/IndustryDetails";
 import AdvantagesSection from "../../../components/AdvantagesSection";
 import Packages from "../../../components/Packages";
+import Packages2 from "../../../components/Packages2";
 import FeatureSlider from "../../../components/FeatureSlider";
 import HeroSectionServices from "../../../components/HeroSectionServices";
 import Footer from "../../../components/Footer";
@@ -18,7 +19,7 @@ import Footer from "../../../components/Footer";
 const page = async ({ params }) => {
   const slug = await params.slug;
   const industry = industries?.find((industry) => industry.slug === slug);
-  // console.log(industry.panelData)
+  // console.log(industry)
   if (!industry) {
     return <div>Industry not found</div>;
   }
@@ -47,9 +48,8 @@ const page = async ({ params }) => {
           className="absolute top-[60%] right-0 w-60 "
         />
       </div>
-      {slug === "our-booking-system" && (
-        <Packages packages={industry.packagesData} />
-      )}
+      {slug === "our-booking-system" && <Packages />}
+      {slug === "reward-hive" && <Packages2 />}
 
       <IndustryDetails panelData={industry.panelData} />
       <Testimonials testimonials={industry.testimonialsData} />

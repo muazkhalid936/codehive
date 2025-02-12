@@ -27,9 +27,10 @@ const page = () => {
         <div className="">
           <p className="text-[20px] header sm:text-3xl w-[60%] text-center mx-auto leading-tight  md:text-[50px]  main-heading  text-white">
             {" "}
-            We Craft Digital Futures By{" "}
-            <span className="text-blueColor">Inspiring Innovation</span> In
-            Brands
+            Turning Your Vision into Reality with
+            <span className="text-blueColor ml-2">Stunning Designs</span> In and
+            <span className="text-blueColor ml-2">High-Quality</span> In Apps &
+            Websites Brands
           </p>
         </div>
       </div>
@@ -98,7 +99,6 @@ const page = () => {
                     <a href="/our-work/solwave-website" className="font-poppin">
                       Solwave
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -114,13 +114,9 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/delicious-bites-app"
-                    >
-                      Delicious Bite App
+                    <a className="font-poppin" href="/our-work/Mr-app">
+                      Mr Take
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -139,17 +135,15 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/saloon-app">
-                      Salon App
+                      Glamour Salon
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Doctor.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Caption.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -158,13 +152,9 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/doctor-booking-app"
-                    >
-                      Doctor Booking App
+                    <a className="font-poppin" href="/our-work/caption-gen">
+                      Caption Gen App{" "}
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -185,7 +175,6 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/laam-web">
                       Laam{" "}
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -202,9 +191,8 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/eshop-app">
-                      Eshop{" "}
+                      Trendora
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -213,8 +201,7 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Instant.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Instant.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
@@ -229,7 +216,6 @@ const page = () => {
                     >
                       Instant Save
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -248,7 +234,6 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/legal-wise-web">
                       Legal Wise Web
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -269,15 +254,13 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/faoolun-website">
                       Faoolun{" "}
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Caption.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Doctor.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -286,10 +269,12 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/caption-gen">
-                      Caption Gen App{" "}
+                    <a
+                      className="font-poppin"
+                      href="/our-work/doctor-booking-app"
+                    >
+                      MedWase
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -310,7 +295,6 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/clixpos-website">
                       ClixPOS
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -327,7 +311,6 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a href="/our-work/al-abour-app">AI Labour</a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -348,15 +331,13 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/word-smith-ai">
                       Wordsmith{" "}
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Food.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Food.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -371,7 +352,6 @@ const page = () => {
                     >
                       Food Inventory App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -386,8 +366,7 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Instant.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Instant.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
@@ -402,7 +381,6 @@ const page = () => {
                     >
                       Instant Save
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -421,7 +399,6 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/legal-wise-web">
                       Legal Wise Web
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -442,7 +419,6 @@ const page = () => {
                     <a href="/our-work/solwave-website" className="font-poppin">
                       Solwave
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -464,7 +440,6 @@ const page = () => {
                     >
                       Delicious Bite App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -485,15 +460,13 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/saloon-app">
                       Salon App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Doctor.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Doctor.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -508,7 +481,6 @@ const page = () => {
                     >
                       Doctor Booking App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -529,7 +501,6 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/laam-web">
                       Laam{" "}
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -548,7 +519,6 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/eshop-app">
                       Eshop{" "}
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -570,15 +540,13 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/word-smith-ai">
                       Wordsmith{" "}
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Food.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Food.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -593,7 +561,6 @@ const page = () => {
                     >
                       Food Inventory App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -620,15 +587,13 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/saloon-app">
                       Salon App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Doctor.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Doctor.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -643,7 +608,6 @@ const page = () => {
                     >
                       Doctor Booking App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -664,7 +628,6 @@ const page = () => {
                     <a href="/our-work/solwave-website" className="font-poppin">
                       Solwave
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -686,7 +649,6 @@ const page = () => {
                     >
                       Delicious Bite App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -695,8 +657,7 @@ const page = () => {
               <div
                 className="flex overflow-hidden relative group w-[65%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Instant.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Instant.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
@@ -711,7 +672,6 @@ const page = () => {
                     >
                       Instant Save
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -730,7 +690,6 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/legal-wise-web">
                       Legal Wise Web
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
@@ -752,15 +711,13 @@ const page = () => {
                     <a className="font-poppin" href="/our-work/word-smith-ai">
                       Wordsmith{" "}
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
               <div
                 className="flex overflow-hidden relative group w-[35%] cursor-pointer "
                 style={{
-                  backgroundImage:
-                    "url(/our-work/main-page/Food.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Food.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -775,7 +732,6 @@ const page = () => {
                     >
                       Food Inventory App
                     </a>
-                    <FiArrowUpRight className="bg-white text-black p-2 text-4xl rounded-full" />
                   </div>
                 </div>
               </div>
