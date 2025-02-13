@@ -152,15 +152,15 @@ const Navbar = () => {
             isSidebarOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 z-[999]`}
       >
-        <div className="flex justify-between items-center px-4 py-4 border-b border-gray-600">
-          <Link href="/">
+        <div className="flex justify-end items-center px-4 py-4 border-b border-gray-600">
+          {/* <Link href="/">
             <img
               src="/Code hive Branding-01.png"
               className="w-32"
               alt="logo"
               onClick={() => setIsSidebarOpen(false)}
             />
-          </Link>
+          </Link> */}
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="text-2xl focus:outline-none"

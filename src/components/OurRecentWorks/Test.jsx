@@ -20,8 +20,12 @@ const HorizontalScroll = () => {
       bgImg: "/Homapage/carosuel/1.jpeg",
       Img: "/Homapage/carosuel/a1.png",
       link: "/our-work/al-abour-app",
+      tech1: "Mobile App",
+      tech2: "Flutter",
     },
     {
+      tech1: "Website",
+      tech2: ".Net",
       head: "Faoolun",
       para: "Master Arabic poetry with ease.",
       bgImg: "/Homapage/carosuel/2.jpeg",
@@ -29,6 +33,8 @@ const HorizontalScroll = () => {
       link: "/our-work/faoolun-website",
     },
     {
+      tech1: "Mobile App",
+      tech2: "Flutter",
       head: "Doctor Booking",
       para: "Book doctor appointments with ease.",
       bgImg: "/Homapage/carosuel/3.jpeg",
@@ -37,6 +43,8 @@ const HorizontalScroll = () => {
     },
     {
       head: "Solwave",
+      tech1: "Website",
+      tech2: ".Net",
       para: "Unlock your potential, boost success.",
       bgImg: "/Homapage/carosuel/4.jpeg",
       Img: "/Homapage/carosuel/a4.png",
@@ -48,6 +56,8 @@ const HorizontalScroll = () => {
       bgImg: "/Homapage/carosuel/5.jpeg",
       Img: "/Homapage/carosuel/a5.png",
       link: "/",
+      tech1: "Mobile App",
+      tech2: "Flutter",
     },
   ];
 
@@ -113,16 +123,20 @@ const HorizontalScroll = () => {
             willChange: "transform",
           }}
         >
-          {cardsData.map(({ head, para, bgImg, Img, link }, index) => (
-            <Card
-              key={index}
-              head={head}
-              para={para}
-              bgImg={`url(${bgImg})`}
-              Img={Img}
-              link={link}
-            />
-          ))}
+          {cardsData.map(
+            ({ head, para, bgImg, Img, link, tech1, tech2 }, index) => (
+              <Card
+                key={index}
+                head={head}
+                tech1={tech1}
+                tech2={tech2}
+                para={para}
+                bgImg={`url(${bgImg})`}
+                Img={Img}
+                link={link}
+              />
+            )
+          )}
 
           {/* View More Button */}
           <div

@@ -3447,6 +3447,7 @@ export const ourWorks = [
         "Real-time order tracking",
         "Seamless restaurant & delivery integration",
       ],
+      blueWords: ["Mr", "Take"],
       backgroundColor: "#219DD942",
       rightImage: "/our-work/delicious-bite-app/Frame.png",
     },
@@ -3580,6 +3581,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Enhance Productivity with Wordsmith — Al",
+      blueWords: ["Wordsmith","—", "AI"],
       description:
         "Your intelligent AI assistant, designed to streamline your workflow with:",
       points: [
@@ -3727,6 +3729,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Create Perfect Captions Instantly Caption Gen",
+      blueWords: ["Caption", "Gen"],
       description:
         "Let Caption Gen do the work for you with AI-powered captions, including:",
       points: [
@@ -3914,6 +3917,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Book Your Doctor Appointment with Ease",
+      blueWords: ["Doctor","Appointment"],
       description:
         "Simplify healthcare with our doctor booking app, featuring:",
       points: [
@@ -4119,6 +4123,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Book Your Salon Appointment in Seconds",
+      blueWords: ["Salon", "Appointment"],
       description:
         "Experience hassle-free beauty bookings with our salon app, offering:",
       points: [
@@ -4260,6 +4265,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Master Arabic Poetry with Faoolun",
+      blueWords: ["Faoolun"],
       description: "Unlock the beauty of Arabic poetry with Faoolun, offering:",
       points: [
         "Interactive lessons on classical and modern poetry",
@@ -4387,14 +4393,15 @@ export const ourWorks = [
       image: "/our-work/solwave/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Faoolun",
+      title: "Unlock Growth with Solwave",
+ blueWords: ["Solwave"],
       description:
-        "The application houses some industry-leading features like:",
+        "Empower your business and personal development with Solwave, offering:",
       points: [
-        "Personalized Confidence Assessment Tools",
-        "Interactive Self-Help Programs and Courses",
-        "Community Support and Peer Connection Forums",
-        "Daily Affirmations and Progress Tracking Features",
+        "Tailored sessions for business and self-improvement",
+        "Expert-led workshops and coaching",
+        "Personalized growth plans and progress tracking",
+        "Flexible learning at your own pace, anytime, anywhere",
       ],
       backgroundColor: "#BC735D33",
       rightImage: "/our-work/solwave/worryNoMore.png",
@@ -4517,6 +4524,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Instant Save Download Your Favourite Content in HD",
+      blueWords: ["Instant", "Save"],
       description:
         "Easily save videos and images from Instagram with Instant Save, featuring:",
       points: [
@@ -4684,6 +4692,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Shop Smarter with Trendora",
+      blueWords: ["Trendora "],
       description:
         "Discover a seamless shopping experience with Eshop, featuring:",
       points: [
@@ -4806,6 +4815,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Stay Organized with Foodventory App",
+      blueWords: ["Foodventory"],
       description: "Manage your kitchen effortlessly with features like:",
       points: [
         "Expiry date tracking to reduce waste",

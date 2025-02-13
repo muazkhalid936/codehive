@@ -10,37 +10,37 @@ const page = () => {
     <div>
       <NavbarPages />
 
-      <div className="h-[60vh] flex justify-center relative items-center bg-[#000B17] mt-20">
+      <div className="sm:h-[60vh] h-[400px]  flex justify-center relative items-center bg-[#000B17] mt-20">
         <div className="absolute -left-10 -bottom-8">
           <img
             src="/12.png"
-            className="lg:w-[200px] 2xl:w-[250px] rotate-[130deg] cover"
+            className=" w-[150px] lg:w-[200px] 2xl:w-[250px] rotate-[130deg] cover"
           />
         </div>
-        <div className="absolute right-5 -top-5">
+        <div className="absolute right-0 sm:right-5 -top-5">
           <img
             src="/outline.png"
-            className="lg:w-[300px] 2xl:w-[400px] rotate-[90deg] cover"
+            className=" w-[150px] lg:w-[300px] 2xl:w-[400px] rotate-[90deg] cover"
           />
         </div>
 
-        <div className="">
-          <p className="text-[20px] header sm:text-3xl w-[60%] text-center mx-auto leading-tight  md:text-[50px]  main-heading  text-white">
+        <div className="sm:w-[60%]">
+          <p className=" font-black leading-tight text-center hero_section_heading text-white">
             {" "}
             Turning Your Vision into Reality with
-            <span className="text-blueColor ml-2">Stunning Designs</span> In and
-            <span className="text-blueColor ml-2">High-Quality</span> In Apps &
-            Websites Brands
+            <span className="text-blueColor ml-2">Stunning Designs</span> and
+            <span className="text-blueColor ml-2">High-Quality</span> Apps &
+            Websites
           </p>
         </div>
       </div>
 
       <div className="  container mb-[55px]  mx-auto ">
         <div className="w-full  ">
-          <div className="flex my-[55px]  gap-5">
+          <div className="flex my-[55px] main_hero_slogan gap-2 sm:gap-5">
             <button
               onClick={() => setOption("all")}
-              className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+              className={`text-white px-5 sm:px-10 main_hero_slogan py-2 rounded-full ${
                 option === "all"
                   ? " bg-gradient-to-r from-[#053c7D] to-blueColor"
                   : "bg-[#c3c3c3]"
@@ -50,7 +50,7 @@ const page = () => {
             </button>
             <button
               onClick={() => setOption("web")}
-              className={`text-white px-10  main_hero_slogan  py-2 rounded-full ${
+              className={`text-white px-5 sm:px-10  main_hero_slogan  py-2 rounded-full ${
                 option === "web"
                   ? " bg-gradient-to-r from-[#053c7D] to-blueColor"
                   : "bg-[#c3c3c3]"
@@ -60,7 +60,7 @@ const page = () => {
             </button>
             <button
               onClick={() => setOption("mobile")}
-              className={`text-white px-10  main_hero_slogan  py-2 rounded-full ${
+              className={`text-white px-5 sm:px-10  main_hero_slogan  py-2 rounded-full ${
                 option === "mobile"
                   ? " bg-gradient-to-r from-[#053c7D] to-blueColor"
                   : "bg-[#c3c3c3]"
@@ -70,7 +70,7 @@ const page = () => {
             </button>
             <button
               onClick={() => setOption("web-app")}
-              className={`text-white px-10  main_hero_slogan  py-2 rounded-full ${
+              className={`text-white px-5 sm:px-10  main_hero_slogan  py-2 rounded-full ${
                 option === "web-app"
                   ? " bg-gradient-to-r from-[#053c7D] to-blueColor"
                   : "bg-[#c3c3c3]"
@@ -81,11 +81,125 @@ const page = () => {
           </div>
         </div>
 
+        {option === "web" ? (
+          <>
+            {/* Row 1: Solwave, Laam */}
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row lg:h-[370px] 2xl:h-[400px]">
+              {/* Solwave */}
+              <div
+                onClick={() =>
+                  (window.location.href = "/our-work/solwave-website")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
+                style={{
+                  backgroundImage: "url(/our-work/main-page/Solwave@2x.jpg)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/solwave-website">Solwave</a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Laam */}
+              <div
+                onClick={() => (window.location.href = "/our-work/laam-web")}
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
+                style={{
+                  backgroundImage: "url(/our-work/main-page/Laam@2x.jpg)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/laam-web">Laam</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 2: ClixPOS, Faoolun */}
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row-reverse mt-5 sm:mt-10 lg:h-[370px] 2xl:h-[400px]">
+              {/* ClixPOS */}
+              <div
+                onClick={() =>
+                  (window.location.href = "/our-work/clixpos-website")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
+                style={{
+                  backgroundImage: "url(/our-work/main-page/Clixpos@2x.jpg)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/clixpos-website">ClixPOS</a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Faoolun */}
+              <div
+                onClick={() =>
+                  (window.location.href = "/our-work/faoolun-website")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
+                style={{
+                  backgroundImage: "url(/our-work/main-page/Faoolun@2x.jpg)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/faoolun-website">Faoolun</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 3: Legal Wise Web (single card) */}
+            <div className="flex gap-5 sm:gap-10 flex-col mt-5 sm:mt-10 lg:h-[370px] 2xl:h-[400px]">
+              {/* Legal Wise Web */}
+              <div
+                onClick={() =>
+                  (window.location.href = "/our-work/legal-wise-web")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
+                style={{
+                  backgroundImage: "url(/our-work/main-page/Legal.jpg)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/legal-wise-web">Legal Wise Web</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : null}
+
         {option === "all" ? (
           <>
-            <div className="flex gap-10  lg:h-[370px] 2xl:h-[400px]">
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row  lg:h-[370px] 2xl:h-[400px]">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/solwave-website")
+                }
+                className="flex overflow-hidden relative cursor-pointer group  w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Solwave@2x.jpg)",
                   backgroundSize: "cover",
@@ -103,7 +217,8 @@ const page = () => {
                 </div>
               </div>
               <div
-                className="flex  overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/mr-app")}
+                className="flex  overflow-hidden relative group cursor-pointer w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Mr.jpg)",
                   backgroundSize: "cover",
@@ -121,9 +236,10 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row-reverse gap-10 mt-10 lg:h-[400px] 2xl:h-[450px]">
+            <div className="flex  mt-5 sm:mt-10 flex-col sm:flex-row-reverse  gap-5 sm:gap-10  lg:h-[400px] 2xl:h-[450px]">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/saloon-app")}
+                className="flex overflow-hidden cursor-pointer relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Salon.jpg)",
                   backgroundSize: "cover",
@@ -141,7 +257,8 @@ const page = () => {
                 </div>
               </div>
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/caption-gen")}
+                className="flex overflow-hidden cursor-pointer relative group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Caption.jpg)",
                   backgroundSize: "cover",
@@ -159,27 +276,29 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-10 mt-10 lg:h-[400px] 2xl:h-[450px]">
+            <div className="flex mt-5 sm:mt-0 gap-5 overflow-hidden sm:gap-10 flex-col sm:flex-row  lg:h-[400px] 2xl:h-[450px]">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/laam-web")}
+                className="flex cursor-pointer overflow-hidden relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Laam@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center", // Adjust background position
+                  backgroundPosition: "center",
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/laam-web">
-                      Laam{" "}
+                      Laam
                     </a>
                   </div>
                 </div>
               </div>
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/eshop-app")}
+                className="flex cursor-pointer overflow-hidden relative group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Eshop@2x.jpg)",
                   backgroundSize: "cover",
@@ -197,9 +316,12 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-10 flex-row-reverse mt-10 lg:h-[400px] 2xl:h-[450px]">
+            <div className="flex gap-5 mt-5 sm:mt-0 sm:gap-10 flex-col sm:flex-row-reverse  lg:h-[400px] 2xl:h-[450px]">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/instant-save-app")
+                }
+                className="flex overflow-hidden relative group w-[100%] cursor-pointer sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Instant.jpg)",
                   backgroundSize: "cover",
@@ -220,7 +342,8 @@ const page = () => {
                 </div>
               </div>
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/food-app")}
+                className="flex overflow-hidden relative group w-[100%] cursor-pointer sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Legal.jpg)",
                   backgroundSize: "cover",
@@ -238,9 +361,12 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-10  mt-10 lg:h-[400px] 2xl:h-[450px]">
+            <div className="flex gap-5 mt-5 sm:mt-0 sm:gap-10 flex-col sm:flex-row   lg:h-[400px] 2xl:h-[450px]">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/faoolun-website")
+                }
+                className="flex overflow-hidden relative group w-[100%] sm:w-[65%] cursor-pointer lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Faoolun@2x.jpg)",
                   backgroundSize: "cover",
@@ -258,7 +384,10 @@ const page = () => {
                 </div>
               </div>
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/doctor-booking-app")
+                }
+                className="flex overflow-hidden relative group w-[100%] sm:w-[35%] cursor-pointer lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Doctor.jpg)",
                   backgroundSize: "cover",
@@ -279,9 +408,12 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-10  mt-10 lg:h-[400px] 2xl:h-[450px] flex-row-reverse">
+            <div className="flex gap-5 mt-5 sm:mt-0 sm:gap-10   lg:h-[400px] 2xl:h-[450px] flex-col sm:flex-row-reverse ">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/clixpos-website")
+                }
+                className=" cursor-pointer flex overflow-hidden relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Clixpos@2x.jpg)",
                   backgroundSize: "cover",
@@ -299,7 +431,10 @@ const page = () => {
                 </div>
               </div>
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/al-abour-app")
+                }
+                className=" cursor-pointer flex overflow-hidden relative group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Alabour@2x.jpg)",
                   backgroundSize: "cover",
@@ -315,9 +450,12 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-10  mt-10 lg:h-[400px] 2xl:h-[450px] ">
+            <div className="flex gap-5 mt-5 sm:mt-0 sm:gap-10 flex-col sm:flex-row  lg:h-[400px] 2xl:h-[450px] ">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/word-smith-ai")
+                }
+                className="cursor-pointer flex overflow-hidden relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Wordsmith@2x.jpg)",
                   backgroundSize: "cover",
@@ -335,7 +473,10 @@ const page = () => {
                 </div>
               </div>
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/food-inventory-app")
+                }
+                className=" cursor-pointer flex overflow-hidden relative group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Food.jpg)",
                   backgroundSize: "cover",
@@ -360,152 +501,97 @@ const page = () => {
         ) : (
           <></>
         )}
+
         {option === "mobile" ? (
           <>
-            <div className="flex gap-10 flex-row-reverse my-10 lg:h-[400px] 2xl:h-[450px]">
+            {/* Row 1: Glamour Salon, Wordsmith */}
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row  lg:h-[370px] 2xl:h-[400px]">
+              {/* Glamour Salon */}
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
-                style={{
-                  backgroundImage: "url(/our-work/main-page/Instant.jpg)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center", // Adjust background position
-                }}
-              >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/instant-save-app"
-                    >
-                      Instant Save
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
-                style={{
-                  backgroundImage: "url(/our-work/main-page/Legal.jpg)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/legal-wise-web">
-                      Legal Wise Web
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-10  lg:h-[370px] 2xl:h-[400px]">
-              <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
-                style={{
-                  backgroundImage: "url(/our-work/main-page/Solwave@2x.jpg)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a href="/our-work/solwave-website" className="font-poppin">
-                      Solwave
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="flex  overflow-hidden relative group w-[35%] cursor-pointer "
-                style={{
-                  backgroundImage: "url(/our-work/main-page/Mr.jpg)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/delicious-bites-app"
-                    >
-                      Delicious Bite App
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row-reverse gap-10 mt-10 lg:h-[400px] 2xl:h-[450px]">
-              <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/saloon-app")}
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
                   backgroundImage: "url(/our-work/main-page/Salon.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center", // Adjust background position
+                  backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/saloon-app">
-                      Salon App
-                    </a>
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/saloon-app">Glamour Salon</a>
                   </div>
                 </div>
               </div>
+
+              {/* Wordsmith */}
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/word-smith-ai")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
-                  backgroundImage: "url(/our-work/main-page/Doctor.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Wordsmith@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/doctor-booking-app"
-                    >
-                      Doctor Booking App
-                    </a>
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/word-smith-ai">Wordsmith</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex gap-10 mt-10 lg:h-[400px] 2xl:h-[450px]">
+
+            {/* Row 2: Caption Gen, Instant Save */}
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row-reverse mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
+              {/* Caption Gen */}
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/caption-gen")}
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
-                  backgroundImage: "url(/our-work/main-page/Laam@2x.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Caption.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center", // Adjust background position
+                  backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/laam-web">
-                      Laam{" "}
-                    </a>
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/caption-gen">Caption Gen</a>
                   </div>
                 </div>
               </div>
+
+              {/* Instant Save */}
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/instant-save-app")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
+                style={{
+                  backgroundImage: "url(/our-work/main-page/Instant.jpg)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/instant-save-app">Instant Save</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 3: Eshop (Trendora), FitVerse */}
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
+              {/* Trendora (Eshop) */}
+              <div
+                onClick={() => (window.location.href = "/our-work/eshop-app")}
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
                   backgroundImage: "url(/our-work/main-page/Eshop@2x.jpg)",
                   backgroundSize: "cover",
@@ -513,38 +599,20 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/eshop-app">
-                      Eshop{" "}
-                    </a>
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/eshop-app">Trendora</a>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="flex gap-10  mt-10 lg:h-[400px] 2xl:h-[450px] ">
+              {/* FitVerse (example) */}
+
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
-                style={{
-                  backgroundImage: "url(/our-work/main-page/Wordsmith@2x.jpg)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center", // Adjust background position
-                }}
-              >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/word-smith-ai">
-                      Wordsmith{" "}
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/food-inventory-app")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-full sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
                   backgroundImage: "url(/our-work/main-page/Food.jpg)",
                   backgroundSize: "cover",
@@ -552,46 +620,22 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/food-inventory-app"
-                    >
-                      Food Inventory App
-                    </a>
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/food-inventory-app">Foodventory</a>
                   </div>
                 </div>
               </div>
             </div>
-          </>
-        ) : (
-          <></>
-        )}
-        {option === "web" || option === "web-app" ? (
-          <>
-            <div className="flex flex-row-reverse gap-10 my-10 lg:h-[400px] 2xl:h-[450px]">
+
+            {/* Row 4: MedEase, Al Abour */}
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row-reverse mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
+              {/* MedEase */}
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
-                style={{
-                  backgroundImage: "url(/our-work/main-page/Salon.jpg)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center", // Adjust background position
-                }}
-              >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/saloon-app">
-                      Salon App
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/doctor-booking-app")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
                   backgroundImage: "url(/our-work/main-page/Doctor.jpg)",
                   backgroundSize: "cover",
@@ -599,24 +643,44 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/doctor-booking-app"
-                    >
-                      Doctor Booking App
-                    </a>
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/doctor-booking-app">MedEase</a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Al Abour */}
+              <div
+                onClick={() =>
+                  (window.location.href = "/our-work/al-abour-app")
+                }
+                className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
+                style={{
+                  backgroundImage: "url(/our-work/main-page/Alabour@2x.jpg)",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                  <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
+                    <a href="/our-work/al-abour-app">Al Abour</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex gap-10 mt-10  lg:h-[370px] 2xl:h-[400px]">
+          </>
+        ) : null}
+
+        {option === "web-app" ? (
+          <>
+            <div className="flex flex-col sm:flex-row-reverse  gap-5 sm:gap-10 mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/caption-gen")}
+                className="flex overflow-hidden cursor-pointer relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/Solwave@2x.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Caption.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -625,58 +689,16 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a href="/our-work/solwave-website" className="font-poppin">
-                      Solwave
+                    <a className="font-poppin" href="/our-work/caption-gen">
+                      Caption Gen App{" "}
                     </a>
                   </div>
                 </div>
               </div>
+
               <div
-                className="flex  overflow-hidden relative group w-[35%] cursor-pointer "
-                style={{
-                  backgroundImage: "url(/our-work/main-page/Mr.jpg)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/delicious-bites-app"
-                    >
-                      Delicious Bite App
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-10 flex-row-reverse mt-10 lg:h-[400px] 2xl:h-[450px]">
-              <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
-                style={{
-                  backgroundImage: "url(/our-work/main-page/Instant.jpg)",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center", // Adjust background position
-                }}
-              >
-                {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
-                  <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/instant-save-app"
-                    >
-                      Instant Save
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() => (window.location.href = "/our-work/food-app")}
+                className="flex overflow-hidden relative group w-[100%] cursor-pointer sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Legal.jpg)",
                   backgroundSize: "cover",
@@ -695,11 +717,14 @@ const page = () => {
               </div>
             </div>
 
-            <div className="flex gap-10  mt-10 lg:h-[400px] 2xl:h-[450px] ">
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row  mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
               <div
-                className="flex overflow-hidden relative group w-[65%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/faoolun-website")
+                }
+                className="flex overflow-hidden relative group w-[100%] sm:w-[65%] cursor-pointer lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/Wordsmith@2x.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Faoolun@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center", // Adjust background position
@@ -708,16 +733,20 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/word-smith-ai">
-                      Wordsmith{" "}
+                    <a className="font-poppin" href="/our-work/faoolun-website">
+                      Faoolun{" "}
                     </a>
                   </div>
                 </div>
               </div>
+
               <div
-                className="flex overflow-hidden relative group w-[35%] cursor-pointer "
+                onClick={() =>
+                  (window.location.href = "/our-work/solwave-website")
+                }
+                className="flex overflow-hidden relative cursor-pointer group  w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
-                  backgroundImage: "url(/our-work/main-page/Food.jpg)",
+                  backgroundImage: "url(/our-work/main-page/Solwave@2x.jpg)",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -726,11 +755,8 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
-                      className="font-poppin"
-                      href="/our-work/food-inventory-app"
-                    >
-                      Food Inventory App
+                    <a href="/our-work/solwave-website" className="font-poppin">
+                      Solwave
                     </a>
                   </div>
                 </div>

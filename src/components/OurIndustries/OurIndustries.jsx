@@ -165,11 +165,6 @@ const ScrollAnimation = () => {
                   sectionProgress
                 );
 
-                console.log(
-                  "rotationValue",
-                  Math.abs(rotationValue - midRotation)
-                );
-
                 if (meshRef.current) {
                   meshRef.current.rotation.y = rotationValue;
                 }
@@ -186,7 +181,9 @@ const ScrollAnimation = () => {
                 if (meshRef.current) {
                   meshRef.current.rotation.y = rotationValue;
                 }
-                if (Math.abs(rotationValue - midRotation) < 0.4) {
+                console.log("ok", Math.abs(rotationValue));
+
+                if (Math.abs(rotationValue ) <7.8) {
                   setTextureUrl(texturePaths[index - 1]);
                 }
               }

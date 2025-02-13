@@ -17,9 +17,9 @@ const Banner = ({
   const color = rightImage ? "text-black" : "text-white";
 
   return (
-    <div className={`container  rounded-lg my-[55px] relative overflow-hidden`}>
+    <div className={`container  rounded-lg my-[55px]  overflow-hidden`}>
       <div
-        className={`bg-cover bg-center h-[200px] sm:h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[300px] max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
+        className={`bg-cover relative bg-center  ${rightImage?"h-[400px]":"h-[100px]"} sm:h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[300px] max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundColor: backgroundColor || undefined,
@@ -31,8 +31,8 @@ const Banner = ({
             backgroundColor && `bg-[${backgroundColor}]`
           } md:w-1/2 pl-4 md:pl-20 pr-2  ${
             !rightImage &&
-            "bg-gradient-to-r from-black via-black to-transparent"
-          } h-full justify-center
+            "bg-gradient-to-r from-black sm:via-black to-transparent"
+          } h-full p-5  sm:mt-0 sm:justify-center
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3`}
         >
           <h2 className="banner_heading leading-none gilray-font">
@@ -66,28 +66,15 @@ const Banner = ({
             </button>
           </div>
         </div>
-
         {rightImage && (
-          <div className="flex justify-center items-center w-[70%] sm:w-1/2 h-full">
+          <div className=" text-white w-[300px] md:w-1/2 right-0 absolute sm:relative bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-[20px]">
             <img
               src={rightImage}
-              alt="Right Image"
-              className="flex flex-col text-white "
-              style={{
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
+              className="object-contain  h-auto md:h-[340px] xl:h-[400px]"
             />
           </div>
         )}
       </div>
-      {showBottomArrow && (
-        <img
-          src="/feature/Vector.png"
-          alt="bgImage"
-          className=" absolute z-20"
-        />
-      )}
     </div>
   );
 };

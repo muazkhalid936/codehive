@@ -20,7 +20,7 @@ const HeroSectionServices = ({
   const highlightColor = "text-[#219DD9]";
 
   const renderTitle = () => (
-    <h2 className="font-black leading-tight hero_section_heading ">
+    <h2 className="font-black leading-tight text-center sm:text-start hero_section_heading ">
       {titleWords.length > 1 ? (
         <>
           <span className={colors}>{titleWords.slice(0, -1).join(" ")} </span>
@@ -50,12 +50,12 @@ const HeroSectionServices = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto flex min-h-[500px] max-h-[650px] pt-32 h-[70vh]">
-        {/* First Section */}
-        <div className="left-section w-1/2 flex justify-center items-start gap-5 md:gap-10 flex-col">
+<div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-center sm:justify-end max-h-[650px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
+{/* First Section */}
+        <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
           {" "}
           {renderTitle()}
-          {description && <p className={`main_hero_slogan `}>{description}</p>}
+          {description && <p className={`main_hero_slogan text-center sm:text-start `}>{description}</p>}
           {showButton && (
             <div className="flex justify-center sm:justify-start">
               <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
@@ -70,7 +70,7 @@ const HeroSectionServices = ({
           )}
         </div>
         {/* Second Section */}
-        <div className="right-section w-1/2">
+        <div className="right-section hidden sm:flex sm:w-1/2">
           {rightImage && (
             <img
               src={rightImage}

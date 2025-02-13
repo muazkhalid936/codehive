@@ -6,6 +6,25 @@ import Link from "next/link";
 
 const Features = ({ data }) => {
   const [itemHovered, setItemHovered] = useState("");
+  const [clickedItem, setClickedItem] = useState("");
+
+  const handleCardClick = (title) => {
+    if (window.innerWidth < 768) {
+      setClickedItem(clickedItem === title ? "" : title);
+    }
+  };
+
+  const handleMouseEnter = (title) => {
+    if (window.innerWidth >= 768) {
+      setItemHovered(title);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (window.innerWidth >= 768) {
+      setItemHovered("");
+    }
+  };
 
   return (
     <div className="bg-[#010b17] relative     z-50  overflow-hidden">
@@ -36,7 +55,7 @@ const Features = ({ data }) => {
             const cardClasses = `
               sm:mx-5 mx-2 my-2 sm:my-5 p-6 h-[150px] sm:h-[280px] flex cursor-pointer flex-col justify-center items-center   
               rounded-[20px] gap-4 relative overflow-hidden 
-              transition-transform duration-300 transform hover:scale-[1.1]
+              transition-transform duration-300 transform sm:hover:scale-[1.1]
              
             `;
 
@@ -66,13 +85,16 @@ const Features = ({ data }) => {
                     backgroundClip: "padding-box, border-box",
                     backgroundOrigin: "padding-box, border-box",
                   }}
-                  onMouseEnter={() => setItemHovered(item.title)}
-                  onMouseLeave={() => setItemHovered("")}
+                  onMouseEnter={() => handleMouseEnter(item.title)}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={() => handleCardClick(item.title)}
                 >
                   {/* Image Container */}
                   <div
                     className={`transition-opacity duration-500 ${
-                      itemHovered === item.title ? "opacity-0" : "opacity-100"
+                      itemHovered === item.title || clickedItem === item.title
+                        ? "opacity-0"
+                        : "opacity-100"
                     }`}
                   >
                     <img
@@ -91,7 +113,8 @@ const Features = ({ data }) => {
                                  gap-2 bg-opacity-90 p-4 
                                 transition-opacity duration-500 
                                 ${
-                                  itemHovered === item.title
+                                  itemHovered === item.title ||
+                                  clickedItem === item.title
                                     ? "opacity-100"
                                     : "opacity-0"
                                 }

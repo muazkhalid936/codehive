@@ -30,21 +30,21 @@ const Footer = () => {
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
               Home
             </Link>
-            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+            <Link href="/about-us" className="hover:text-blueColor dura ease-in-out">
               About Us
             </Link>
-            <Link href="/" className="hover:text-blueColor dura ease-in-out">
+            <Link href="/services" className="hover:text-blueColor dura ease-in-out">
               Services
             </Link>
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
-              Blog
+              Industries
             </Link>
 
-            <Link href="/" className="hover:text-blueColor dura ease-in-out">
-              Contact Us
+            <Link href="/our-work" className="hover:text-blueColor dura ease-in-out">
+Our Works
             </Link>
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
-              Site Map
+              Contact Us
             </Link>
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
               Privacy Policy
@@ -64,7 +64,7 @@ const Footer = () => {
             Contact us
           </p>
           <p className="text-white main_hero_slogan ">
-            Phone: +971 4 234 2168{" "}
+            Phone: +971 4 234 2168
           </p>
           <p className="text-white main_hero_slogan ">
             Whatsapp: +971 54 220 3330

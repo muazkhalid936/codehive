@@ -52,7 +52,7 @@ const HeroSectionOurWork = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto flex-col sm:flex-row flex max-h-[650px] pt-32 min-h-[500px] h-[70vh]">
+      <div className="container justify-between overflow-hidden mx-auto flex-col sm:flex-row flex max-h-[650px] pt-32 min-h-[500px] h-[70vh]">
         {/* First Section */}
         <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
           {" "}
@@ -74,12 +74,12 @@ const HeroSectionOurWork = ({
           )}
         </div>
         {/* Second Section */}
-        <div className="right-section sm:w-1/2">
+        <div className="right-section flex justify-end items-end sm:w-1/2">
           {rightImage && (
             <img
               src={rightImage}
               alt="Hero Right Image"
-              className="w-full object-contain h-[100%] "
+              className="w-full object-contain h-[300px] sm:h-[100%] "
             />
           )}
         </div>

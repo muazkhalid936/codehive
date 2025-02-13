@@ -28,18 +28,18 @@ const CallToAction = ({ heading }) => {
       </div>
 
       {/* Background Shapes */}
-      <div className="absolute  bottom_right_vector top-0 left-4">
+      <div className="absolute top-0 left-4">
         <img
           src="/feature/arrow1.png"
           alt="shapes"
-          className="w-[200px]md:w-[300px]"
+          className="w-[100px] md:w-[300px]"
         />
       </div>
-      <div className="absolute bottom_right_vector bottom-0 right-2">
+      <div className="absolute  bottom-0 right-2">
         <img
           src="/feature/arrow.png"
           alt="shapes"
-          className="w-[200px] md:w-[300px] rotate-[250deg]"
+          className="w-[100px] md:w-[300px] sm:rotate-[250deg]"
         />
       </div>
     </div>

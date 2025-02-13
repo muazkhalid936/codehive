@@ -180,7 +180,7 @@ export default function Home() {
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[1px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
+          className="p-[1px] md:w-[40%] w-[70%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
@@ -210,7 +210,7 @@ export default function Home() {
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[1px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
+          className="p-[1px] md:w-[40%] w-[70%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"
@@ -240,7 +240,7 @@ export default function Home() {
             backgroundOrigin: "border-box",
             backgroundClip: "padding-box, border-box",
           }}
-          className="p-[1px] md:w-[40%] w-[50%] md:h-[280px] h-[350px]"
+          className="p-[1px] md:w-[40%] w-[70%] md:h-[280px] h-[350px]"
         >
           <div
             className="w-full h-full flex flex-col gap-5 justify-center px-5 rounded-3xl"

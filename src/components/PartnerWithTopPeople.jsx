@@ -107,7 +107,7 @@ const PartnerWithTopPeople = () => {
         </h2>
 
         {/* Main layout: big card on the left, details & swiper on the right */}
-        <div className="flex mt-10 h-[350px] sm:h-[500px] flex-col lg:flex-row gap-8 items-start">
+        <div className="sm:flex hidden mt-10 h-[350px] sm:h-[500px] flex-col lg:flex-row gap-8 items-start">
           {/* Left side: Big "card" with the same style as the small ones */}
           <div className="w-full  lg:w-[30%]">
             <div
@@ -179,15 +179,13 @@ const PartnerWithTopPeople = () => {
                  bg-gradient-to-b from-[#010B1770]   to-[#2093CA70] relative  rounded-xl sm:min-h-[350px] h-[45vh] cursor-pointer pt-4 
                  overflow-hidden hover:scale-100 
                  `}
-
-                 style={{
-                  border: "1px solid transparent",
-                  borderRadius: " 26px",
-                  background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
-                  backgroundClip: "padding-box, border-box",
-                  backgroundOrigin: "padding-box, border-box",
-                }}
-              
+                      style={{
+                        border: "1px solid transparent",
+                        borderRadius: " 26px",
+                        background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
+                        backgroundClip: "padding-box, border-box",
+                        backgroundOrigin: "padding-box, border-box",
+                      }}
                     >
                       {hoveredSlide !== item.name && (
                         <img
@@ -235,6 +233,94 @@ const PartnerWithTopPeople = () => {
               </Swiper>
             </div>
           </div>
+        </div>
+
+        <div className="sm:hidden mt-10">
+          <Swiper
+            // spaceBetween={20}
+            slidesPerView={3}
+            modules={[EffectFade, History, EffectCards, Autoplay]}
+            breakpoints={{
+              240: {
+                slidesPerView: 1.3,
+              },
+              768: {
+                slidesPerView: 3.3,
+              },
+            }}
+          >
+            {data.map((item, index) => (
+              <SwiperSlide
+                key={index}
+                style={{
+                  marginRight: 0,
+                }}
+              >
+                <div
+                  onClick={() => {
+                    setHoveredSlide(item.name);
+                    setSelectedIndex(index);
+                  }}
+                  onMouseEnter={() => setHoveredSlide(item.name)}
+                  //  onClick={() => }
+                  onMouseLeave={() => setHoveredSlide("")}
+                  className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2
+                        scale-90 
+                 bg-gradient-to-b from-[#010B1770]   to-[#2093CA70] relative  rounded-xl sm:min-h-[350px] h-[45vh] cursor-pointer pt-4 
+                 overflow-hidden hover:scale-100 
+                 `}
+                  style={{
+                    border: "1px solid transparent",
+                    borderRadius: " 26px",
+                    background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
+                    backgroundClip: "padding-box, border-box",
+                    backgroundOrigin: "padding-box, border-box",
+                  }}
+                >
+                  {hoveredSlide !== item.name && (
+                    <img
+                      src={item.picture}
+                      alt={item.name}
+                      className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform "
+                    />
+                  )}
+                  {hoveredSlide === item.name && (
+                    <img
+                      src={"/gray-vector.png"}
+                      alt={item.name}
+                      className="w-40 h-40 object-cover -z-10 absolute -right-5 top-20 "
+                    />
+                  )}
+
+                  <div
+                    className={`absolute bottom-0 w-full flex flex-col items-center justify-center`}
+                  >
+                    <div className=" bg-gradient-to-t from-black  to-transparent w-full px-2 sm:px-6 py-6 m-auto">
+                      <h3
+                        className={`text-white text-[15px] sm:text-[22px] font-semibold text-left w-full`}
+                      >
+                        {item.name}
+                      </h3>
+                      <h3
+                        className={`text-[#219DD9] main_hero_slogan font-semibold  text-left w-full gap-2  ${
+                          hoveredSlide === item.name ? " sm:mb-10" : "mb-0"
+                        }`}
+                      >
+                        {item.position}
+                      </h3>
+                      {hoveredSlide === item.name && (
+                        <h3
+                          className={`text-white mt-10 sm:mt-0 text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500`}
+                        >
+                          {item.description}
+                        </h3>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>

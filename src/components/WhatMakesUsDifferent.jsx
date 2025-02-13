@@ -111,7 +111,7 @@ const WhatMakesUsDifferent = ({ data }) => {
                 </div>
 
                 <li
-                  className="ms-6 sm:w-1/2 flex gap-10 justify-center items-center "
+                  className="sm:ms-6 sm:w-1/2 flex flex-col sm:flex-row gap-3 sm:gap-10 justify-center items-center "
                   key={index}
                   ref={(el) => (stepsRef.current[index] = el)}
                 >
@@ -125,10 +125,10 @@ const WhatMakesUsDifferent = ({ data }) => {
                   </div>
                   {/* Text Animation */}
                   <div className="">
-                    <h3 className="animate-title  text-gray-800  sm:text-[19px] font-semibold mb-2 ">
+                    <h3 className="animate-title text-center sm:text-start  text-[#162E4A] text-[19px] font-semibold mb-2 ">
                       {value.title}
                     </h3>
-                    <p className="animate-description text-[12px] sm:text-[16px] text-gray-600  ">
+                    <p className="animate-description text-[14px] sm:text-[16px] text-center sm:text-start text-gray-600  ">
                       {value.description}
                     </p>
                   </div>

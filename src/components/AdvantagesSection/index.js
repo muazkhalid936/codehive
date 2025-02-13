@@ -4,7 +4,7 @@ import React from "react";
 
 const AdvantagesSection = ({ data }) => {
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-10 sm:py-32">
       <div className="container mx-auto px-4">
         <h2 className="sub_heading  text-center text-gray-900 mb-12 gilray-font">
           {data.title.split(" ").map((word, index) => (
