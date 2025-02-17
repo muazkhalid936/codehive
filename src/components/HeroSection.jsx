@@ -5,6 +5,7 @@ const HeroSection = ({
   title,
   description,
   rightImage,
+  blueWords = [],
   transparent = false,
   topArrow = false,
   buttonText = "Get Started",
@@ -23,8 +24,21 @@ const HeroSection = ({
     <h2 className="font-black hero_section_heading  sm:w-full text-center sm:text-start  leading-tight">
       {titleWords.length > 1 ? (
         <>
-          <span className={colors}>{titleWords.slice(0, -1).join(" ")} </span>
-          <span className={highlightColor}>{titleWords.slice(-1)}</span>
+          {title.split(" ").map((word, index) => (
+            <span
+              key={index}
+              className={`${
+                // Apply blue color to specific words passed in blueWords
+                blueWords.some(
+                  (blueWord) => blueWord.toLowerCase() === word.toLowerCase()
+                )
+                  ? "text-[#219DD9]"
+                  : "text-white"
+              }`}
+            >
+              {word}{" "}
+            </span>
+          ))}
         </>
       ) : (
         <span className={colors}>{title}</span>

@@ -217,7 +217,7 @@ const page = () => {
                 </div>
               </div>
               <div
-                onClick={() => (window.location.href = "/our-work/mr-app")}
+                onClick={() => (window.location.href = "/our-work/Mr-app")}
                 className="flex  overflow-hidden relative group cursor-pointer w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Mr.jpg)",
@@ -270,7 +270,7 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/caption-gen">
-                      Caption Gen App{" "}
+                      Caption Gen{" "}
                     </a>
                   </div>
                 </div>
@@ -342,7 +342,7 @@ const page = () => {
                 </div>
               </div>
               <div
-                onClick={() => (window.location.href = "/our-work/food-app")}
+                onClick={() => (window.location.href = "/our-work/legal-wise-web")}
                 className="flex overflow-hidden relative group w-[100%] cursor-pointer sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: "url(/our-work/main-page/Legal.jpg)",
@@ -402,7 +402,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/doctor-booking-app"
                     >
-                      MedWase
+                      MedEase
                     </a>
                   </div>
                 </div>
@@ -445,7 +445,7 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a href="/our-work/al-abour-app">AI Labour</a>
+                    <a href="/our-work/al-abour-app">Al Abour</a>
                   </div>
                 </div>
               </div>
@@ -491,7 +491,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/food-inventory-app"
                     >
-                      Food Inventory App
+                      FoodVentory App
                     </a>
                   </div>
                 </div>
@@ -587,7 +587,7 @@ const page = () => {
             </div>
 
             {/* Row 3: Eshop (Trendora), FitVerse */}
-            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row mt-5 sm:mt-0 lg:h-[400px] 2xl:h-[450px]">
               {/* Trendora (Eshop) */}
               <div
                 onClick={() => (window.location.href = "/our-work/eshop-app")}
@@ -629,7 +629,7 @@ const page = () => {
             </div>
 
             {/* Row 4: MedEase, Al Abour */}
-            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row-reverse mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row-reverse mt-5 sm:mt-0 lg:h-[400px] 2xl:h-[450px]">
               {/* MedEase */}
               <div
                 onClick={() =>
@@ -690,7 +690,7 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
                     <a className="font-poppin" href="/our-work/caption-gen">
-                      Caption Gen App{" "}
+                      Caption Gen{" "}
                     </a>
                   </div>
                 </div>
@@ -717,7 +717,7 @@ const page = () => {
               </div>
             </div>
 
-            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row  mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
+            <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row  mt-5 sm:mt-0 lg:h-[400px] 2xl:h-[450px]">
               <div
                 onClick={() =>
                   (window.location.href = "/our-work/faoolun-website")

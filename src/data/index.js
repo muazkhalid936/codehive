@@ -1,6 +1,3 @@
-import { features } from "process";
-import Technologies from "../components/Our-Work/Technologies";
-
 export const ourMissionData = [
   {
     id: 1,
@@ -118,13 +115,13 @@ export const aboutScreenFeaturesData = {
       title: "Success",
       description:
         "We understand that our triumph is intrinsically linked to the success of our clients. As such, we are committed to supporting them at every step of their journey.",
-      image: "/feature/bulb.png",
+      image: "/feature/Success.png",
     },
     {
       title: "Innovation",
       description:
         "Code Hive believes in technology’s power to transform, fostering bold ideas and continuous growth to drive innovation and shape the industry's future.",
-      image: "/feature/Success.png",
+      image: "/feature/bulb.png",
     },
     {
       title: "Partnership",
@@ -143,41 +140,42 @@ export const aboutScreenFeaturesData = {
 
 export const WhatMakesUsDifferentData = {
   title: "What Makes Us Different",
+  blueWords: ["Different"],
   steps: [
     {
       id: 1,
       title: "We Set High Standards",
       img: "/make/1.png",
       description:
-        "The one thing we have in common is passion to do what we do. We push ourselves creatively every day because this is what we strive for, and not just because we have to.",
+        "Passion drives everything we do. Every day, we push ourselves creatively to achieve excellence, not because we have to, but because it's what we strive for.",
     },
     {
       id: 2,
       img: "/make/2.png",
       title: "We Are Your Partners",
       description:
-        "Together, we stand as your dedicated partners, united by our unwavering passion for what we do and committed to pushing creative boundaries every step of the way.",
+        "We don’t just work for you—we work with you. As your dedicated partners, we're committed to pushing creative boundaries and achieving your goals together.",
     },
     {
       id: 3,
       img: "/make/3.png",
       title: "Integrity and Transparency",
       description:
-        "We value integrity above all. At Codehive, we operate with complete transparency, ensuring open communication and trust at every step of the process.",
+        "Integrity is at our core. We operate with complete transparency, ensuring open communication and building trust at every stage of the process.",
     },
     {
       id: 4,
       img: "/make/4.png",
       title: "Agile and Adaptable",
       description:
-        "In a fast-paced digital world, adaptability is key. Our agile approach allows us to respond quickly to changes and deliver solutions that are both flexible and scalable.",
+        "In today’s fast-paced digital world, flexibility is crucial. Our agile approach allows us to quickly adapt and deliver solutions that are scalable and future-proof.",
     },
     {
       id: 5,
       img: "/make/5.png",
       title: "Global Reach, Local Touch",
       description:
-        "While we operate on a global scale, we maintain a personal touch with every client. Whether you're a small business or a large enterprise.",
+        "We have a global presence but prioritize a personal connection with every client. No matter your size, we offer customized solutions with a local touch that truly understands your needs.",
     },
   ],
 };
@@ -245,7 +243,7 @@ export const aboutTestimonialsData = [
 
 export const aboutHeroData = {
   bgImage: "/Hero/BGImage.png",
-  title: "About Codehive",
+  title: "About CodeHive",
   description:
     "Code Hive is founded on the principles of dynamism, client focus, and technological power. Our journey has been deeply intertwined with the process of creating state-of-the-art applications for both iOS and Android platforms. Since our inception, our vision has been to streamline the pathway to market for emerging businesses, no matter how challenging their time and budget constraints.",
   rightImage: "/Hero/HeroAboutus.png",
@@ -271,7 +269,8 @@ export const services = [
     slug: "software-development",
     title: "Customized Software Development",
     heroData: {
-      title: "Customized Software Development Company",
+      title: " Software Development ",
+      blueWords: ["Software"],
       description:
         "At Code Hive, we deliver tailored software solutions that align with your business needs, helping you streamline operations, improve efficiency, and drive innovation.",
       bgImage: "/services/software-development-hero-bg.png",
@@ -335,7 +334,9 @@ export const services = [
     },
 
     makesDifferentData: {
-      title: "Our Customized Software Dev Process",
+      title: "Software Development Process",
+      blueWords: ["Software"],
+
       steps: [
         {
           id: 1,
@@ -434,7 +435,8 @@ export const services = [
     slug: "mobile-app-development",
     title: "Mobile App Development",
     heroData: {
-      title: "Mobile App Development Company",
+      title: "Mobile App Development ",
+      blueWords: ["Development"],
       description:
         "We are globally recognized as a leading provider of custom mobile app development for Android, iOS, AI, Blockchain, and AR/VR.",
       bgImage: "/services/mobile-app-dev/hero-bg.png",
@@ -484,7 +486,8 @@ export const services = [
       ],
     },
     makesDifferentData: {
-      title: "Our Mobile App Process",
+      title: "Mobile App Development Process",
+      blueWords: ["Mobile", "App"],
       steps: [
         {
           id: 1,
@@ -607,6 +610,7 @@ export const services = [
     title: "Digital Transformation & Automation",
     heroData: {
       title: "Digital Transformation & Automation",
+      blueWords: ["Automation"],
       description:
         "Digital transformation and automation improve efficiency, cut costs, and enable innovation through real-time insights for smarter decision-making.",
       bgImage: "/services/digital-transform/hero-bg.png",
@@ -668,7 +672,8 @@ export const services = [
       ],
     },
     makesDifferentData: {
-      title: "Our Proven Process",
+      title: "Digital  Transformation & Automation Process",
+      blueWords: ["Process", "Automation"],
       steps: [
         {
           id: "01",
@@ -768,6 +773,7 @@ export const services = [
     title: "Digital Consultation",
     heroData: {
       title: "Digital Consultation Solutions",
+      blueWords: ["Solutions"],
       description:
         "At Code Hive, we deliver expert digital consultation to help businesses navigate challenges and drive growth.",
       bgImage: "/services/digital-consultation/hero-bg.png",
@@ -828,7 +834,8 @@ export const services = [
       ],
     },
     makesDifferentData: {
-      title: "Our Digital Consultation Solutions Process",
+      title: " Digital Consultation  Process",
+      blueWords: ["Consultation"],
       steps: [
         {
           id: "01",
@@ -926,7 +933,8 @@ export const services = [
     slug: "website-development",
     title: "Website Development",
     heroData: {
-      title: "Website Development Company",
+      title: "Website Development ",
+      blueWords: ["Website"],
       description:
         "At Code Hive, we deliver cutting-edge web app development services, creating customized applications to help businesses succeed in the digital landscape.",
       bgImage: "/services/web-dev/hero-bg.png",
@@ -976,7 +984,8 @@ export const services = [
       ],
     },
     makesDifferentData: {
-      title: "Our Website Dev Process",
+      title: "Website Development Process",
+      blueWords: ["Website"],
       steps: [
         {
           id: "01",
@@ -1097,7 +1106,8 @@ export const services = [
     slug: "business-intelligence",
     title: "Business Intelligence & Data Analysis",
     heroData: {
-      title: "Unlock Insights with Business Intelligence & Data Analysis",
+      title: "Business Intelligence & Data Analysis",
+      blueWords: ["Analysis", "Business"],
       description:
         "At Code Hive, we deliver cutting-edge web app development services, creating customized applications to help businesses succeed in the digital landscape.",
       bgImage: "/services/business-intelligence/hero-bg.png",
@@ -1188,7 +1198,8 @@ export const services = [
       ],
     },
     makesDifferentData: {
-      title: "Process of Business Intelligence & Data Analysis",
+      title: "Business Intelligence & Data Analysis Process",
+      blueWords: ["Data", "Analysis"],
       steps: [
         {
           img: "/services/business-intelligence/1.jpeg",
@@ -1296,140 +1307,140 @@ export const industries = [
       topArrow: true,
       buttonText: "Book a Session",
     },
-    panelData: [
-      {
-        id: 1,
-        title: "Patient App",
-        heading: "Healthcare App Development",
-        description:
-          "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
-        features: [
-          {
-            icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
-            title: "User Profile Management",
-            description:
-              "Securely manage personal health data and medical history.",
-          },
-          {
-            icon: "/new/user-profile 2.png",
-            title: "Appointment Booking",
-            description:
-              "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
-          },
-          {
-            icon: "/new/user-profile 1 (1).png",
-            title: "Telemedicine & Video Consultations",
-            description:
-              "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
-          },
-          {
-            icon: "/new/user-profile 2 (1).png",
-            title: "Prescription Management",
-            description:
-              "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
-          },
-          {
-            icon: "/new/user-profile 1 (2).png",
-            title: "Health Data Tracking",
-            description:
-              "Integrate with wearable technologies for real-time health monitoring and tracking.",
-          },
-          {
-            icon: "/new/user-profile 2 (2).png",
-            title: "Lab Results & Medical Records",
-            description:
-              "View test results and access personal medical history securely.",
-          },
-        ],
-        image: "/new/1.png",
-      },
-      {
-        id: 2,
-        title: "Healthcare Panel",
-        heading: "Healthcare Panel",
-        description:
-          "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (3).png",
-            title: "Patient Management",
-            description:
-              "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
-          },
-          {
-            icon: "/new/user-profile 2 (3).png",
-            title: "Appointment Scheduling",
-            description:
-              "Manage patient appointments, including reminders, cancellations, and rescheduling.",
-          },
-          {
-            icon: "/new/user-profile 1 (4).png",
-            title: "Prescription Writing & Management",
-            description:
-              "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
-          },
-          {
-            icon: "/new/user-profile 2 (4).png",
-            title: "Health Data Insights",
-            description:
-              "View real-time health data from IoMT devices and wearables to offer personalized care.",
-          },
-          {
-            icon: "/new/user-profile 1 (5).png",
-            title: "Clinical Collaboration",
-            description:
-              "Collaborate with other professionals through secure messaging and shared medical records.",
-          },
-          {
-            icon: "/new/user-profile 2 (5).png",
-            title: "Medical Alerts & Notifications",
-            description:
-              "Receive important updates, including critical patient conditions and lab results.",
-          },
-        ],
-        image: "/new/2.png",
-      },
-      {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
-        features: [
-          {
-            icon: "/new/user-profile 1 (6).png",
-            title: "User Management",
-            description:
-              "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
-          },
-          {
-            icon: "/new/user-profile 2 (6).png",
-            title: "Appointment & Schedule Management",
-            description:
-              "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
-          },
-          {
-            icon: "/new/user-profile 1 (7).png",
-            title: "Analytics & Reporting",
-            description:
-              "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
-          },
-          {
-            icon: "/new/user-profile 2 (7).png",
-            title: "Content & Communication Management",
-            description:
-              "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
-          },
-          {
-            icon: "/new/user-profile 1 (8).png",
-            title: "Billing & Payments",
-            description:
-              "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
-          },
-        ],
-        image: "/new/3.png",
-      },
-    ],
+    // panelData: [
+    //   {
+    //     id: 1,
+    //     title: "Patient App",
+    //     heading: "Healthcare App Development",
+    //     description:
+    //       "Empower patients with a user-friendly, intuitive interface to manage their health seamlessly:",
+    //     features: [
+    //       {
+    //         icon: "/new/user-profile 1.png", // Replace with the actual icon path or class
+    //         title: "User Profile Management",
+    //         description:
+    //           "Securely manage personal health data and medical history.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 2.png",
+    //         title: "Appointment Booking",
+    //         description:
+    //           "Schedule appointments with healthcare professionals, including doctors, specialists, and therapists.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 1 (1).png",
+    //         title: "Telemedicine & Video Consultations",
+    //         description:
+    //           "Access virtual consultations from healthcare professionals via our healthcare mobile app development.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 2 (1).png",
+    //         title: "Prescription Management",
+    //         description:
+    //           "View, refill, and track prescriptions, ensuring seamless communication between patients and healthcare providers.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 1 (2).png",
+    //         title: "Health Data Tracking",
+    //         description:
+    //           "Integrate with wearable technologies for real-time health monitoring and tracking.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 2 (2).png",
+    //         title: "Lab Results & Medical Records",
+    //         description:
+    //           "View test results and access personal medical history securely.",
+    //       },
+    //     ],
+    //     image: "/new/1.png",
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "Healthcare Panel",
+    //     heading: "Healthcare Panel",
+    //     description:
+    //       "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
+    //     features: [
+    //       {
+    //         icon: "/new/user-profile 1 (3).png",
+    //         title: "Patient Management",
+    //         description:
+    //           "Access comprehensive patient profiles, including medical history, appointments, and ongoing treatments.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 2 (3).png",
+    //         title: "Appointment Scheduling",
+    //         description:
+    //           "Manage patient appointments, including reminders, cancellations, and rescheduling.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 1 (4).png",
+    //         title: "Prescription Writing & Management",
+    //         description:
+    //           "Write, update, and send prescriptions electronically, ensuring seamless pharmacy integration.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 2 (4).png",
+    //         title: "Health Data Insights",
+    //         description:
+    //           "View real-time health data from IoMT devices and wearables to offer personalized care.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 1 (5).png",
+    //         title: "Clinical Collaboration",
+    //         description:
+    //           "Collaborate with other professionals through secure messaging and shared medical records.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 2 (5).png",
+    //         title: "Medical Alerts & Notifications",
+    //         description:
+    //           "Receive important updates, including critical patient conditions and lab results.",
+    //       },
+    //     ],
+    //     image: "/new/2.png",
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "Admin Panel",
+    //     heading: "Admin Panel",
+    //     description:
+    //       "Provide administrators with the tools to manage the overall app system, monitor performance, and ensure smooth operations:",
+    //     features: [
+    //       {
+    //         icon: "/new/user-profile 1 (6).png",
+    //         title: "User Management",
+    //         description:
+    //           "Manage patient and healthcare professional accounts, permissions, and roles within the app.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 2 (6).png",
+    //         title: "Appointment & Schedule Management",
+    //         description:
+    //           "Oversee appointment bookings, cancellations, and schedule conflicts across the platform.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 1 (7).png",
+    //         title: "Analytics & Reporting",
+    //         description:
+    //           "Access real-time analytics on app usage, patient engagement, and healthcare professional performance.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 2 (7).png",
+    //         title: "Content & Communication Management",
+    //         description:
+    //           "Control and distribute notifications, health tips, and updates to patients and healthcare professionals.",
+    //       },
+    //       {
+    //         icon: "/new/user-profile 1 (8).png",
+    //         title: "Billing & Payments",
+    //         description:
+    //           "Manage payment processing for consultations, prescriptions, and other healthcare services within the app.",
+    //       },
+    //     ],
+    //     image: "/new/3.png",
+    //   },
+    // ],
 
     bannerData: {
       // bgImage: '/banners/IndustriesBooking.png',
@@ -1840,7 +1851,7 @@ export const industries = [
 
     bannerData: {
       title: "Online Store with Custom E-Commerce App Solutions!",
-      blueWords: ["E-Commerce","App"],
+      blueWords: ["E-Commerce", "App"],
       description:
         "We partner with multi-million dollar funded eCommerce startups, fueling growth and success in a competitive market.",
       rightImage: "/IndustriesBooking/ecommerce/Banner.png",
@@ -1921,8 +1932,9 @@ export const industries = [
     },
     bannerDataTwo: {
       bgImage: "/banners/ECbanner2.png",
-      title: "Experience the Advantages of Our Tailored E-Commerce App Development Services!",
-      blueWords: ["E-Commerce","App","Development"],
+      title:
+        "Experience the Advantages of Our Tailored E-Commerce App Development Services!",
+      blueWords: ["E-Commerce", "App", "Development"],
 
       description:
         "Our eCommerce app development streamlines the shopping experience, reducing cart abandonment by up to 75%.",
@@ -2012,150 +2024,113 @@ export const industries = [
         ],
         image: "/FitnessApp/iphone1.png",
       },
-      // {
-      //   id: 2,
-      //   title: "Trainer App",
-      //   heading: "Trainer App",
-      //   description:
-      //     "Empower fitness trainers with a feature-rich app to manage their clients, track progress, and deliver personalized services seamlessly:",
-      //   features: [
-      //     {
-      //       icon: "/FitnessApp/8.png",
-      //       title: "Client Management",
-      //       description:
-      //         "Easily manage client profiles, fitness goals, and progress tracking in one place.",
-      //     },
-      //     {
-      //       icon: "/FitnessApp/9.png",
-      //       title: "Personalized Workout Plans",
-      //       description:
-      //         "Create and assign customized workout plans tailored to each client’s fitness level and goals.",
-      //     },
-      //     {
-      //       icon: "/FitnessApp/10.png",
-      //       title: "Nutrition Guidance",
-      //       description:
-      //         "Provide personalized meal plans and dietary advice to complement clients’ fitness routines.",
-      //     },
-      //     {
-      //       icon: "/FitnessApp/11.png",
-      //       title: "Progress Tracking",
-      //       description:
-      //         "Track clients’ performance with metrics like weight, measurements, and workout history, and share progress reports.",
-      //     },
-      //     {
-      //       icon: "/FitnessApp/12.png",
-      //       title: "Session Scheduling",
-      //       description:
-      //         "Allow trainers to set availability, schedule sessions, and send automated reminders to clients.",
-      //     },
-      //     {
-      //       icon: "/FitnessApp/13.png",
-      //       title: "Notifications and Alerts",
-      //       description:
-      //         "Keep trainers updated with client reminders, session changes, or important updates through push notifications.",
-      //     },
-      //     {
-      //       icon: "/FitnessApp/14.png",
-      //       title: "Multi-Language Support",
-      //       description:
-      //         "Offer accessibility for trainers and clients worldwide with multi-language functionality.",
-      //     },
-      //   ],
-      //   image: "/FitnessApp/iphone2.png",
-      // },
       {
-        id: 3,
-        title: "Admin Panel",
-        heading: "Admin Panel",
-        description:
-          "Effortlessly oversee and optimize your fitness business operations with our comprehensive and powerful admin panel:",
-        features: [
+        "id": 2,
+        "title": "Gym App",
+        "heading": "Gym App",
+        "description": "Effortlessly manage and optimize your gym operations with our powerful admin panel.",
+        "features": [
           {
-            icon: "/FitnessApp/15.png",
-            title: "User Management",
-            description:
-              "Manage user accounts, assign roles, and control access levels for staff and team members.",
+            "icon": "/FitnessApp/8.png",
+            "title": "Check-In and Access Control",
+            "description": "Allow members to check in seamlessly through the app for gym access and track their attendance."
           },
           {
-            icon: "/FitnessApp/16.png",
-            title: "Content Management",
-            description:
-              "Easily update app content, manage exercise libraries, and create or edit workout plans and nutrition resources.",
+            "icon": "/FitnessApp/9.png",
+            "title": "Workout Logging",
+            "description": "Provide users with a dedicated platform to log their workouts and track progress effectively."
           },
           {
-            icon: "/FitnessApp/17.png",
-            title: "Financial Management",
-            description:
-              "Track transactions, manage memberships, monitor revenue, and generate detailed financial reports.",
+            "icon": "/FitnessApp/10.png",
+            "title": "Session Schedules",
+            "description": "Showcase gym class schedules and let users sign up for classes directly at the gym without needing their phones."
           },
           {
-            icon: "/FitnessApp/18.png",
-            title: "Customer Support",
-            description:
-              "Address customer inquiries, resolve complaints, and manage support tickets efficiently.",
-          },
-          {
-            icon: "/FitnessApp/19.png",
-            title: "Analytics and Insights",
-            description:
-              "Gain valuable insights into app performance, user engagement, and revenue trends with in-depth analytics.",
-          },
-          {
-            icon: "/FitnessApp/20.png",
-            title: "Marketing Tools",
-            description:
-              "Leverage integrated tools for email marketing, push notifications, and targeted promotional campaigns.",
-          },
+            "icon": "/FitnessApp/11.png",
+            "title": "Facility Information",
+            "description": "Share detailed information about gym amenities, facilities, and rules for a smooth member experience."
+          }
         ],
-        image: "/FitnessApp/iphone2.png",
-      },
+        "image": "/FitnessApp/iphone2.png"
+      }
+      ,
       {
-        id: 4,
-        title: "Gym App",
-        heading: "Gym App",
-        description:
-          "Equip gyms with a powerful app to streamline operations, manage resources, and improve member experience:",
-        features: [
+        "id": 3,
+        "title": "Trainer App",
+        "heading": "Trainer App",
+        "description": "Empower your trainers and gym with our personal trainer app development solutions, streamlining appointment scheduling and client management.",
+        "features": [
           {
-            icon: "/FitnessApp/21.png",
-            title: "Check-In and Access Control",
-            description:
-              "Allow members to check in seamlessly through the app for gym access and track their attendance.",
+            "icon": "/FitnessApp/12.png",
+            "title": "Profile Management",
+            "description": "Get a comprehensive profile management solution for trainers. Let them easily create and manage profiles, showcasing their expertise and services."
           },
           {
-            icon: "/FitnessApp/22.png",
-            title: "Equipment Booking",
-            description:
-              "Enable users to reserve gym equipment in advance and monitor equipment availability in real time.",
+            "icon": "/FitnessApp/13.png",
+            "title": "Appointment Scheduling",
+            "description": "Streamline appointment scheduling for trainers. Let them have an overview of their scheduled training sessions and manage their schedules."
           },
           {
-            icon: "/FitnessApp/23.png",
-            title: "Workout Logging",
-            description:
-              "Provide users with a dedicated platform to log their workouts and track progress effectively.",
+            "icon": "/FitnessApp/14.png",
+            "title": "Client Management",
+            "description": "Manage clients efficiently with our client management tools. Keep track of client information, progress, and communication history to provide a personalized training experience."
           },
           {
-            icon: "/FitnessApp/24.png",
-            title: "Class Schedules",
-            description:
-              "Showcase gym class schedules and let users sign up for classes directly at the gym without needing their phones.",
-          },
-          {
-            icon: "/FitnessApp/25.png",
-            title: "Facility Information",
-            description:
-              "Share detailed information about gym amenities, facilities, and rules for a smooth member experience.",
-          },
+            "icon": "/FitnessApp/15.png",
+            "title": "Payment Tracking",
+            "description": "Simplify payment tracking, providing trainers and gym owners with insights into their earnings, and staying on top of financials effortlessly."
+          }
         ],
-        image: "/FitnessApp/iphone3 .png",
-      },
+        "image": "/FitnessApp/iphone3.png"
+      }
+      ,
+      {
+        "id": 4,
+        "title": "Admin Panel",
+        "heading": "Admin Panel",
+        "description": "Oversee and optimize your fitness business operations with our comprehensive and powerful admin panel.",
+        "features": [
+          {
+            "icon": "/FitnessApp/16.png",
+            "title": "User Management",
+            "description": "Manage user accounts, assign roles, and control access levels for staff and team members."
+          },
+          {
+            "icon": "/FitnessApp/17.png",
+            "title": "Content Management",
+            "description": "Easily update app content, manage exercise libraries, and create or edit workout plans and nutrition resources."
+          },
+          {
+            "icon": "/FitnessApp/18.png",
+            "title": "Financial Management",
+            "description": "Track transactions, manage memberships, monitor revenue, and generate detailed financial reports."
+          },
+          {
+            "icon": "/FitnessApp/19.png",
+            "title": "Customer Support",
+            "description": "Address customer inquiries, resolve complaints, and manage support tickets efficiently."
+          },
+          {
+            "icon": "/FitnessApp/20.png",
+            "title": "Analytics and Insights",
+            "description": "Gain valuable insights into app performance, user engagement, and revenue trends with in-depth analytics."
+          },
+          {
+            "icon": "/FitnessApp/21.png",
+            "title": "Marketing Tools",
+            "description": "Leverage integrated tools for email marketing, push notifications, and targeted promotional campaigns."
+          }
+        ],
+        "image": "/FitnessApp/iphone4.png"
+      }
+      ,
     ],
 
     bannerData: {
       bgImage: "/IndustriesBooking/industriesFitness/fitnessBanner1.png",
-      title: "Achieve Your Fitness Goals with Smart Tracking & Personalized Workouts!",
-      blueWords: ["Fitness","Goals"],
+      title:
+        "Achieve Your Fitness Goals with Smart Tracking & Personalized Workouts!",
+      blueWords: ["Fitness", "Goals"],
       description:
         "With nearly 21 million downloads and a projected US$19.33 billion revenue in2023, the fitness app industry is booming.",
       rightImage: "/IndustriesBooking/industriesFitness/fitnessRightImage.png",
@@ -2246,7 +2221,7 @@ export const industries = [
     bannerData: {
       backgroundColor: "#D0DDE7",
       title: "Smart Health Tracking & Personalized Care –  Wellness Made Easy!",
-      blueWords: ["Wellness","Made","Easy!"],
+      blueWords: ["Wellness", "Made", "Easy!"],
       description:
         "With 94% of Gen Z seeking health apps, there is a huge opportunity to empower their well-being. Ready to lead?",
       rightImage: "/IndustriesBooking/Healthcare/banner1.png",
@@ -2502,7 +2477,7 @@ export const industries = [
     bannerData: {
       title:
         "Easy Pickup & Delivery App Solutions for Faster, Smarter Logistics!",
-      blueWords: ["Pickup","&","Delivery","App","Solutions"],
+      blueWords: ["Pickup", "&", "Delivery", "App", "Solutions"],
       description:
         "Our on-demand services offer seamless operations with real-time tracking and efficient logistics.",
       rightImage: "/IndustriesBooking/Delivery/banner1.png",
@@ -2957,7 +2932,7 @@ export const industries = [
       bgImage: "/IndustriesBooking/Carwash/banner1.png",
       title: "Step into the Car Wash Industry – Unlock Growth & Opportunities!",
       // title: "Achieve Your Fitness Goals with Smart Tracking & Personalized Workouts!",
-      blueWords: ["Growth","&","Opportunities!"],
+      blueWords: ["Growth", "&", "Opportunities!"],
       description:
         "With nearly 21 million downloads and a projected US$19.33 billion revenue in2023, the fitness app industry is booming.",
       rightImage: "/bg.png",
@@ -3581,7 +3556,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Enhance Productivity with Wordsmith — Al",
-      blueWords: ["Wordsmith","—", "AI"],
+      blueWords: ["Wordsmith", "—", "AI"],
       description:
         "Your intelligent AI assistant, designed to streamline your workflow with:",
       points: [
@@ -3917,7 +3892,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Book Your Doctor Appointment with Ease",
-      blueWords: ["Doctor","Appointment"],
+      blueWords: ["Doctor", "Appointment"],
       description:
         "Simplify healthcare with our doctor booking app, featuring:",
       points: [
@@ -4394,7 +4369,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Unlock Growth with Solwave",
- blueWords: ["Solwave"],
+      blueWords: ["Solwave"],
       description:
         "Empower your business and personal development with Solwave, offering:",
       points: [
@@ -4688,11 +4663,11 @@ export const ourWorks = [
       title: "Challenges",
       description:
         "The Trendora App encounters challenges in providing a seamless user experience with diverse products and sellers. Managing inventory accurately is crucial to avoid customer dissatisfaction, while building trust around secure payments and reliable delivery is essential. Additionally, effectively marketing the platform to stand out in a competitive landscape presents a significant hurdle. Addressing these issues is key to ensuring a successful shopping experience.",
-      image: "/our-work/eshop-app/challenges.png",
+      image: "/our-work/eshop-app/Challenges.png",
     },
     noMoreWorriesSection: {
       title: "Shop Smarter with Trendora",
-      blueWords: ["Trendora "],
+      blueWords: ["Trendora"],
       description:
         "Discover a seamless shopping experience with Eshop, featuring:",
       points: [
@@ -4941,6 +4916,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Seamless Camel Transport with Al Abour",
+      blueWords: ["Al", "Abour"],
       description:
         "Effortlessly book and manage camel transportation with features like:",
       points: [
@@ -5068,6 +5044,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Your Trusted Platform for Legal Consultation",
+      blueWords: ["Legal", "Consultation", "Web"],
       description:
         "Easily find and book expert lawyers for consultations, legal advice, and case assistance.",
       points: [
@@ -5208,14 +5185,15 @@ export const ourWorks = [
       image: "/our-work/laam-web/challenges.png",
     },
     noMoreWorriesSection: {
-      title: "Laam Web",
+      title: "Timeless Elegance, Designed for You",
+      blueWords: ["Designed", "for", "You"],
       description:
-        "The application houses some industry-leading features like:",
+        "Discover exquisite jewelry that defines luxury and sophistication.",
       points: [
-        "Virtual Try-On and Augmented Reality Features",
-        "Customizable Jewelry Design Options",
-        "Ethical Sourcing Transparency and Certification",
-        "Personalized Recommendations and Style Guides",
+        "Handcrafted Designs & Premium Quality",
+        "Exclusive Collections for Every Occasion",
+        "Secure Shopping & Easy Checkout",
+        "Worldwide Shipping & Personalized Service",
       ],
       backgroundColor: "#B59F8354",
       rightImage: "/our-work/laam-web/worryNoMore.png",
@@ -5395,6 +5373,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "Smart & Seamless Point of Sale",
+      blueWords: ["Point", "of", "Sale"],
       description:
         "Optimize sales, streamline operations, and enhance customer experience with ClixPOS.",
       points: [

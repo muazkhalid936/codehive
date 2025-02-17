@@ -44,7 +44,7 @@ const page = async ({ params }) => {
       <div className="relative overflow-hidden">
         <Banner {...industry.bannerDataTwo} />
         <img
-          src="/feature/vector.png"
+          src="/feature/Vector.png"
           className="absolute top-[60%] right-0 w-60 "
         />
       </div>

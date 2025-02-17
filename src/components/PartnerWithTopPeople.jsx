@@ -64,7 +64,7 @@ const data = [
 
   {
     name: "Hina Liaqat",
-    position: "Product Manager",
+    position: "Dotnet Developer",
     description:
       "Our Dotnet Developer specializes in building robust, scalable applications using the latest .NET technologies. With a focus on performance, security, and seamless integration, they deliver high-quality solutions tailored to meet business needs.",
     linkedin: "https://www.linkedin.com/in/hassan-sayed/",
@@ -111,7 +111,7 @@ const PartnerWithTopPeople = () => {
           {/* Left side: Big "card" with the same style as the small ones */}
           <div className="w-full  lg:w-[30%]">
             <div
-              className="relative overflow-hidden h-[350px] sm:h-[500px]  rounded-md "
+              className="relative overflow-hidden justify-end items-end flex h-[350px] sm:h-[500px]  rounded-md "
               style={{
                 border: "1px solid transparent",
                 borderRadius: " 26px",
@@ -126,7 +126,7 @@ const PartnerWithTopPeople = () => {
               <img
                 src={selectedMember.picture}
                 alt={selectedMember.name}
-                className="w-full h-full object-cover rounded-md"
+                className="w-full  object-contain px-2 rounded-md"
               />
             </div>
           </div>

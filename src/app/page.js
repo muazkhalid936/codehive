@@ -12,13 +12,18 @@ import OurRecentWork from "../components/OurRecentWork/OurRecentWork";
 import ShortRevealHeading from "../components/ShortRevealHeading/ShortRevealHeading";
 import ProcessHeading from "../components/ProcessHeading/ShortRevealHeading";
 import Footer from "../components/Footer";
+import useStore from "../store/useUserStore";
 export default function Home() {
+  const { language } = useStore();
+
   return (
-    <div className="no-scrollbar ">
+    <div className={`no-scrollbar`}>
       <Navbar />
       <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
         <MainHero />
-        <LongRevealHeading text="Why Choose Us?" />
+        <LongRevealHeading
+          text={language === "English" ? "Why Choose Us?" : "لماذا تختارنا؟"}
+        />
         <WhySection />
         <ShortRevealHeading text="Our Services" />
         <Stack />
@@ -26,7 +31,7 @@ export default function Home() {
         <OurProcess />
         <ShortRevealHeading text="Our Industries" />
         <OurIndustries />
-        <OurRecentWork text="Our Recent Works" />
+        <OurRecentWork text="Our Recent Work" />
         <Test />
         <div className="mb-[50px]">
           <ContactForm />

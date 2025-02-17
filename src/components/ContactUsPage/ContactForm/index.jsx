@@ -52,14 +52,13 @@ const ContactForm = () => {
       >
         <div className="">
           {" "}
-          <h2 className="text-lg font-bold text-white xl:text-2xl text-center ">
+          {/* <h2 className="text-lg font-bold text-white xl:text-2xl text-center ">
             Let's Talk
-          </h2>
+          </h2> */}
           <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
-            <span className="main-heading bg-gradient-to-r from-white via-white to-blueColor bg-clip-text text-transparent">
-              Connect
-            </span>{" "}
-            <span className="text-blueColor main-heading">with us</span>
+            <span className="main-heading bg-gradient-to-r from-white to-blueColor bg-clip-text text-transparent">
+              Contact Us
+            </span>
           </h3>
         </div>
         <div className="form-grid grid grid-cols-1 lg:grid-cols-2 gap-6  mt-8">
@@ -190,10 +189,7 @@ const ContactForm = () => {
             type="submit"
             className="flex items-center justify-center w-[50%] py-3 bg-slate-800 text-white font-semibold rounded-xl transition-colors"
           >
-            Get Started
-            <span className="ml-2 flex items-center justify-center w-5 h-5 bg-white text-black rounded-full">
-              <FiArrowUpRight />
-            </span>
+            Submit
           </button>
         </div>
       </form>

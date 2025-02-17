@@ -100,7 +100,7 @@ const Features = ({ data }) => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="sm:w-16 sm:h-16 h-9 w-9 mx-auto"
+                      className="sm:w-16 sm:h-16 h-9 mb-3 w-9 mx-auto"
                     />
                     <h2 className="text-center text-[13px] sm:text-[17px] mb-2">
                       {item.title}
@@ -137,7 +137,7 @@ const Features = ({ data }) => {
                       backgroundOrigin: "padding-box, border-box",
                     }}
                   >
-                    <h2 className="text-center text-[17px]  ">{item.title}</h2>
+                    <h2 className="text-center font-bold text-[17px]  ">{item.title}</h2>
                     <p className="text-center text-[#fbfbfb] text-[8px] sm:text-[13px] ">
                       {item.description}
                     </p>

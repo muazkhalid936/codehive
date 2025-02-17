@@ -16,7 +16,7 @@ const WorryNoMore = ({
     <div className={`container pb-[50px] rounded-lg    overflow-hidden`}>
       <div
         className={`bg-cover bg-center"
-         h-[500px] md:h-[340px] xl:h-[400px] w-full relative rounded-[20px] items-center md:items-center justify-between flex flex-col md:flex-row gap:4 sm:px-0 `}
+         h-[600px] md:h-[340px] xl:h-[400px] w-full relative rounded-[20px] items-center md:items-center justify-between flex flex-col md:flex-row gap:4 sm:px-0 `}
         style={{
           backgroundColor: backgroundColor || undefined,
         }}

@@ -2,13 +2,13 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useStore from "../../store/useUserStore";
 gsap.registerPlugin(ScrollTrigger);
 
 const LongRevealHeading = (params) => {
   const textRef = useRef(null);
-
+  const { language } = useStore();
   useEffect(() => {
-    
     // GSAP Scroll Animation
     gsap
       .timeline({
@@ -35,15 +35,17 @@ const LongRevealHeading = (params) => {
           ease: "none",
         }
       );
-
-   
   }, []);
 
   return (
-    <div className="container h-[50vh]  mb-[1500px] mt-[-900px] sm:mt-[-800px] items-center flex justify-center  mx-auto">
+    <div
+    dir={language === "English" ? "ltr" : "rtl"}
+
+      className="container h-[50vh]  mb-[1500px] mt-[-900px] sm:mt-[-800px] items-center flex justify-center  mx-auto"
+    >
       <p
         ref={textRef}
-        className="animated-text-long1  main-heading header text-4xl sm:text-[60px] text-white"
+        className={`animated-text-long1 ${language!="English"?"!pr-[7vw]":""}  main-heading header text-4xl sm:text-[60px] text-white`}
       >
         {params.text}
       </p>

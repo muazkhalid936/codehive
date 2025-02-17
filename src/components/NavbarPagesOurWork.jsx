@@ -6,8 +6,9 @@ import Link from "next/link";
 import { FaCaretDown } from "react-icons/fa";
 import { FaCaretUp,FaTimes } from "react-icons/fa";
 import { useEffect } from "react";
-
+import useStore from "../store/useUserStore";
 const NavbarPages = ({ isBlack }) => {
+  const {language} = useStore();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [work, setWork] = useState(false);
 
@@ -85,16 +86,16 @@ const NavbarPages = ({ isBlack }) => {
         {/* Desktop Navigation */}
         <div className="hidden text-white lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
           {/* <Link href="/">Home</Link> */}
-          <Link href="/about-us">About Us</Link>
+          <Link href="/about-us">  {language === "English" ? "About Us" : "عنا"}</Link>
 
-          {/* Services Dropdown */}
+          {/* {language==="English"?"Services" :"الخدمات"} Dropdown */}
           <div
             className="relative flex justify-center gap-3 items-center cursor-pointer"
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
             onMouseLeave={() => setIsServicesDropdownOpen(false)}
           >
-            <Link href="/services">Services</Link>
-            {/* Services  */}
+            <Link href="/services">{language==="English"?"Services" :"الخدمات"}</Link>
+            {/* {language==="English"?"Services" :"الخدمات"}  */}
 
             {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {/* <FaChevronDown className="text-blue-600 text-base" /> */}
@@ -104,7 +105,7 @@ const NavbarPages = ({ isBlack }) => {
                   href="/services"
                   className="block py-2 px-4 text-white hover:bg-[#219DD92B]"
                 >
-                  All Services
+                  All {language==="English"?"Services" :"الخدمات"}
                 </Link> */}
                 {servicesDropdown?.map((service) => (
                   <Link
@@ -119,13 +120,13 @@ const NavbarPages = ({ isBlack }) => {
             )}
           </div>
 
-          {/* Industries Dropdown */}
+          {/* {language==="English"?"Industries": "المجالات"}  Dropdown */}
           <div
             className="relative flex justify-center gap-3 items-center cursor-pointer"
             onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
             onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
           >
-            Industries
+            {language==="English"?"Industries": "المجالات"} 
 
             {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {/* <FaChevronDown className="text-blue-600 text-base" /> */}
@@ -151,7 +152,7 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setWork(true)}
             onMouseLeave={() => setWork(false)}
           >
-            <Link href={"/industries"}>Products</Link>
+            <Link href={"/industries"}>{language==="English"?"Products": "المنتجات"}</Link>
 
             {work ? <FaCaretUp /> : <FaCaretDown />}
             {work && (
@@ -167,7 +168,7 @@ const NavbarPages = ({ isBlack }) => {
             )}
           </div>
 
-          <Link href="/our-work">Our Work</Link>
+          <Link href="/our-work">{language==="English"?"Our Work":"   أعمالنا"}</Link>
           {/* <Link href="/contact-us">Contact</Link> */}
         </div>
 
@@ -220,22 +221,22 @@ const NavbarPages = ({ isBlack }) => {
 
         {/* Sidebar Links */}
         <div className="flex flex-col gap-4 p-4">
-          {/* About Us */}
+          {/*   {language === "English" ? "About Us" : "عنا"} */}
           <Link
             href="/about-us"
             onClick={() => setIsSidebarOpen(false)}
             className="hover:text-blueColor transition-colors"
           >
-            About Us
+              {language === "English" ? "About Us" : "عنا"}
           </Link>
 
-          {/* Services (Collapsible) */}
+          {/* {language==="English"?"Services" :"الخدمات"} (Collapsible) */}
           <div>
             <div
               className="flex items-center justify-between hover:text-blueColor cursor-pointer"
               onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
             >
-              <span>Services</span>
+              <span>{language==="English"?"Services" :"الخدمات"}</span>
               {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {isServicesDropdownOpen && (
@@ -254,7 +255,7 @@ const NavbarPages = ({ isBlack }) => {
             )}
           </div>
 
-          {/* Industries (Collapsible) */}
+          {/* {language==="English"?"Industries": "المجالات"}  (Collapsible) */}
           <div>
             <div
               className="flex items-center justify-between hover:text-blueColor cursor-pointer"
@@ -262,7 +263,7 @@ const NavbarPages = ({ isBlack }) => {
                 setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen)
               }
             >
-              <span>Industries</span>
+              <span>{language==="English"?"Industries": "المجالات"} </span>
               {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {isIndustriesDropdownOpen && (
@@ -284,13 +285,13 @@ const NavbarPages = ({ isBlack }) => {
             )}
           </div>
 
-          {/* Products (Collapsible) */}
+          {/* {language==="English"?"Products": "المنتجات"} (Collapsible) */}
           <div>
             <div
               className="flex items-center justify-between hover:text-blueColor cursor-pointer"
               onClick={() => setWork(!work)}
             >
-              <span>Products</span>
+              <span>{language==="English"?"Products": "المنتجات"}</span>
               {work ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {work && (
@@ -306,13 +307,13 @@ const NavbarPages = ({ isBlack }) => {
             )}
           </div>
 
-          {/* Our Work */}
+          {/* {language==="English"?"Our Work":"   أعمالنا"} */}
           <Link
             href="/our-work"
             className="hover:text-blueColor transition-colors"
             onClick={() => setIsSidebarOpen(false)}
           >
-            Our Work
+            {language==="English"?"Our Work":"   أعمالنا"}
           </Link>
 
           {/* Language & Contact */}

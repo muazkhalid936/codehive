@@ -19,9 +19,12 @@ const Banner = ({
   return (
     <div className={`container  rounded-lg my-[55px]  overflow-hidden`}>
       <div
-        className={`bg-cover relative bg-center  ${rightImage?"h-[400px]":"h-[100px]"} sm:h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[300px] max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
+        className={`bg-cover relative bg-center  ${
+          rightImage ? "h-[400px]" : "h-[100px]"
+        } sm:h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[300px] max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
+          backgroundPosition: "top",
           backgroundColor: backgroundColor || undefined,
           // background: "linear-gradient(90deg, #000B17 0%, rgba(0, 0, 0, 0) 100%)",
         }}
@@ -29,11 +32,11 @@ const Banner = ({
         <div
           className={`flex flex-col ${color} w-full ${
             backgroundColor && `bg-[${backgroundColor}]`
-          } md:w-1/2 pl-4 md:pl-20 pr-2  ${
+          } ${rightImage ? "md:w-1/2" : "md:w-[55%]"} pl-4 md:pl-[45px] pr-2  ${
             !rightImage &&
-            "bg-gradient-to-r from-black sm:via-black to-transparent"
+            "bg-gradient-to-r from-black  bg-opacity-50  to-transparent"
           } h-full p-5  sm:mt-0 sm:justify-center
-        border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3`}
+        border-tl-[20px] border-bl-[20px] rounded-[20px] gap-10`}
         >
           <h2 className="banner_heading leading-none gilray-font">
             {titleParts.map((word, index) => (
@@ -52,9 +55,9 @@ const Banner = ({
               </span>
             ))}
           </h2>
-          <p className="main_hero_slogan hidden sm:flex my-3 2xl:my-4 leading-snug">
+          {/* <p className="main_hero_slogan hidden sm:flex my-3 2xl:my-4 leading-snug">
             {description}
-          </p>
+          </p> */}
           <div className="flex justify-start items-start">
             <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
               <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">

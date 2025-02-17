@@ -1,7 +1,10 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useRouter } from "next/navigation";
+import useStore from "../../store/useUserStore";
+
 const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
+  const { language } = useStore();
   const router = useRouter();
   const splitHeading = heading.split(" ");
   const lastTwoWords = splitHeading.slice(-2).join(" ");
@@ -28,24 +31,20 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
           </h1>
         </div>
         <div>
-          <h1 className="text-start font-extrabold leading-tight sub_heading">
-            {restOfHeading}{" "}
-            <span className="bg-gradient-to-r from-white to-blueColor bg-clip-text text-transparent">
-              {lastTwoWords}
-            </span>
+          <h1 className="text-start bg-gradient-to-r  from-white via-blueColor to-blueColor bg-clip-text text-transparent font-extrabold leading-tight sub_heading">
+            {heading}
+            
           </h1>
         </div>
 
-        <div className="main_hero_slogan text-start text-[#525355]">
-          {para}
-        </div>
+        <div className="main_hero_slogan text-start text-[#525355]">{para}</div>
 
         <div className=" flex justify-start items-start flex-1 gap-2">
           <button
             className="xl:text-xl flex gap-2 items-center "
             onClick={() => router.push(link)}
           >
-            Read More
+            {language === "English" ? "Read More" : "اقرأ أكثر"}
             <div className=" bg-white sm:mt-1 text-black rounded-full ">
               <FiArrowUpRight className="sm:text-lg text-sm" />
             </div>

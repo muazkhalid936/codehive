@@ -4,7 +4,7 @@ import Navbar from "../../components/NavbarPagesOurWork";
 import HeroContact from "../../components/HeroContact";
 import ContactInfo from "../../components/ContactUsPage/ContactInfo";
 import ContactForm from "../../components/ContactUsPage/ContactForm";
-import SuccessStats from "../../components/ContactUsPage/SuccessStats";
+import SuccessStats from "../../components/SuccessMarquee";
 import Footer from "../../components/Footer";
 
 const Contact = () => {

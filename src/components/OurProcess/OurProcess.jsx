@@ -12,9 +12,11 @@ import Icon4 from "../../assets/icons/Icon4";
 import Icon5 from "../../assets/icons/Icon5";
 import Icon6 from "../../assets/icons/Icon6";
 import Icon7 from "../../assets/icons/Icon7";
+import useStore from "../../store/useUserStore";
 const IconsArr = [Icon1, Icon2, Icon3, Icon4, Icon5, Icon6, Icon7];
 
 const StackingImages = () => {
+  const { language } = useStore();
   const [active, setActive] = useState(0);
   const [iconSize, setIconSize] = useState("40");
   useEffect(() => {
@@ -214,8 +216,8 @@ const StackingImages = () => {
   return (
     <div className="bg-[#000B17] container mx-auto ">
       <div className="new-cards flex sm:flex-row flex-col-reverse  items-center gap-20  justify-center sm:justify-between  h-[100vh] min-h-[400px] mx-auto">
-        <div className="flex sm:w-1/2  mt-[100px] sm:mt-0 sm:h-auto  flex-col gap-20 sm:gap-5 first-container">
-          <div className="new-icon-container sm:mb-[80px] gap-1">
+        <div className="flex sm:w-1/2  mt-[100px] sm:mt-0 sm:h-auto justify-between  flex-col gap-20 sm:gap-5 first-container">
+          <div className="new-icon-container absolute -mt-[10vh]  gap-1">
             {IconsArr.map((Icon, i) => {
               const activeColor = active === i ? "#219bd9" : "#FFFFFF";
               return (
@@ -233,47 +235,72 @@ const StackingImages = () => {
             {[
               {
                 title: "Requirement Gathering ",
+                atitle: "جمع المتطلبات",
                 description:
                   "We begin by understanding your vision, objectives, and technical requirements to ensure a clear roadmap for development.",
+                adescription:
+                  "نبدأ بفھم رؤتك وأھدافك والمتطلبات التقنة لضمان .خارطة طرق واضحة للتطور",
               },
               {
+                adescription:
+                  "يقوم فريقنا بإنشاء رسومات تخطيطية ونماذج أولية لتحديد هيكلة المشروع، مما يضمن توافقه مع أهدافك.",
+                atitle: "التخطيط المبدئي (Wireframing)",
                 title: "Wireframing ",
                 description:
                   "Our team creates rough sketches and wireframes to establish the project’s structure, ensuring alignment with your goals.",
               },
               {
+                adescription:
+                  "،Figma صمم فريقنا واجھات مبتكرة وجذابة باستخدام .مع التركز على تجربة المستخدم و التفاعل",
+                atitle: "(UI/UX) تصميم واجھة وتجربة المستخدم",
                 title: "UI/UX Design",
                 description:
                   "Our designers craft intuitive and visually appealing interfaces in Figma, focusing on user experience and seamless functionality.",
               },
               {
+                adescription:
+                  "يقوم مطورونا بتحويل التصاميم إلى واقع من خلال بناء تطبيقات آمنة، قابلة للتوسع، وعالية الأداء، مصممة خصيصًا لتلبية احتياجاتك.",
+                atitle: "التطوير",
                 title: "Development ",
                 description:
                   "Our developers bring the designs to life, building secure, scalable, and high-performance applications tailored to your needs.",
               },
               {
-                title: "QA & esting",
+                adescription:
+                  "ُنجري اختبارات دققة لضمان اداء امثل وامان .وتجربة المستخدم السلسة عبر جمع اجھزة",
+                atitle: "ضمان الجودة واختبار",
+                title: "QA & Testing",
                 description:
                   "We conduct rigorous testing for functionality, performance, and security, ensuring a flawless user experience across all devices.",
               },
               {
+                adescription:
+                  "بعد إجراء اختبارات دقيقة، نقوم بإطلاق تطبيقك أو موقعك الإلكتروني، مما يضمن انتقالًا سلسًا إلى البيئة الفعلية.",
+                atitle: "النشر",
                 title: "Deployment ",
                 description:
                   "After thorough testing, we launch your application or website, ensuring a seamless transition to the live environment.",
               },
               {
+                adescription:
+                  "نوفر المنتج النھائي مع وثائق شاملة وتدرب ودعم مستمر .لضمان تشغيل سلس",
+                atitle: "التسليم والدعم",
                 title: "Handover & Support",
                 description:
                   "We deliver the final product with complete documentation, training, and ongoing support to ensure smooth operations.",
               },
             ].map((item, i) => {
-              const titleWords = item.title.split(" ");
+              const titleWords =
+                language === "English"
+                  ? item.title.split(" ")
+                  : item.atitle.split(" ");
               const lastTwoWords = titleWords.slice(-2).join(" ");
               const firstWords = titleWords.slice(0, -2).join(" ");
               return (
                 <div
                   key={i}
-                  className={`new-text flex flex-col gap-4 main_hero_slogan new-text-${
+                  dir={language === "English" ? "ltr" : "rtl"}
+                  className={`new-text mt-[15vh] flex flex-col gap-4 main_hero_slogan new-text-${
                     i + 1
                   }`}
                 >
@@ -285,8 +312,10 @@ const StackingImages = () => {
                       </span>
                     </span>
                   </span>
-                  <span className="text-white text-center sm:text-start main_hero_slogan !font-lato">
-                    {item.description}
+                  <span className=" text-[#525355] text-center sm:text-start main_hero_slogan !font-lato">
+                    {language === "English"
+                      ? item.description
+                      : item.adescription}
                   </span>
                 </div>
               );

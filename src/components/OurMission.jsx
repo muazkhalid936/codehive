@@ -2,8 +2,9 @@
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
+import useStore from "../store/useUserStore";
 export default function Home() {
+  const { language } = useStore();
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
   const card3Ref = useRef(null);
@@ -187,15 +188,12 @@ export default function Home() {
             style={{ backgroundImage: "url('/back.png')" }}
           >
             <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent">
-              Our Vision
+              {language === "English" ? "  Our Vision" : "رؤيتنا"}
             </h2>
             <p className="main_hero_slogan">
-              Our vision is to become leaders in the app development industry,
-              breaking down barriers to market entry for businesses of all
-              sizes. We aspire to create a world where every business,
-              regardless of its budget or resources, has access to high-quality,
-              custom-built digital solutions that enhance their competitiveness
-              and success.
+              {language === "English"
+                ? " Our vision is to become leaders in the app development industry, breaking down barriers to market entry for businesses of all sizes. We aspire to create a world where every business, regardless of its budget or resources, has access to high-quality, custom-built digital solutions that enhance their competitiveness and success."
+                : "نطمح لأن نكون روادًا في صناعة تطوير التطبيقات، مما يزيل العقبات أمام دخول الشركات إلى السوق. رؤيتنا هي عالم يتمكن فيه كل نشاط تجاري، بغض النظر عن موارده أو ميزانيته، من الوصول إلى حلول رقمية مخصصة عالية الجودة تعزز من تنافسيته ونجاحه."}
             </p>
           </div>
         </div>
@@ -217,14 +215,12 @@ export default function Home() {
             style={{ backgroundImage: "url('/back.png')" }}
           >
             <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent">
-              Our Mission
+              {language === "English" ? "Our Mission" : "مهمتنا"}
             </h2>
             <p className="main_hero_slogan text-center">
-              Our mission is to transform innovative visions into dynamic
-              applications for emerging businesses. We strive to deliver
-              top-tier, cost-effective app development services, equipping every
-              business with the digital tools they need to thrive in today’s
-              fast-paced market.
+              {language === "English"
+                ? "Our mission is to transform innovative visions into dynamic applications for emerging businesses. We strive to deliver top-tier, cost-effective app development services, equipping every business with the digital tools they need to thrive in today’s fast-paced market."
+                : "مهمتنا هي تحويل الرؤى المبتكرة إلى تطبيقات ديناميكية تدعم نمو الشركات الناشئة. نسعى لتقديم خدمات تطوير تطبيقات ذات جودة عالية وتكلفة مناسبة، مما يمنح كل نشاط تجاري الأدوات الرقمية اللازمة للنجاح في سوق سريع التطور."}
             </p>
           </div>
         </div>
@@ -247,16 +243,12 @@ export default function Home() {
             style={{ backgroundImage: "url('/back.png')" }}
           >
             <h2 className="font-extrabold text-[25px] bg-gradient-to-r from-[#173857] to-blueColor bg-clip-text text-transparent">
-              Our Values
+              {language === "English" ? "   Our Values" : "قيمنا"}
             </h2>
             <p className="main_hero_slogan">
-              Our values drive every decision, strategy, and service we provide.
-              We prioritize transparent relationships built on shared goals and
-              mutual respect, recognizing that our success is tied to our
-              clients' achievements. Committed to supporting them at every step,
-              we harness the transformative power of technology and ideas to
-              deliver tailored digital solutions accessible to businesses of all
-              sizes.
+              {language === "English"
+                ? "Our values drive every decision, strategy, and service we provide. We prioritize transparent relationships built on shared goals and mutual respect, recognizing that our success is tied to our clients' achievements. Committed to supporting them at every step, we harness the transformative power of technology and ideas to deliver tailored digital solutions accessible to businesses of all sizes."
+                : "قيمنا توجه كل قرار واستراتيجية وخدمة نقدمها. نحن نؤمن ببناء علاقات شفافة قائمة على الأهداف المشتركة والاحترام المتبادل، وندرك أن نجاحنا مرتبط ارتباطًا وثيقًا بنجاح عملائنا. ملتزمون بدعمهم في كل خطوة، مستفيدين من قوة التكنولوجيا والأفكار التحويلية لتقديم حلول رقمية مخصصة يمكن لجميع الشركات الوصول إليها."}
             </p>
           </div>
         </div>

@@ -1,15 +1,23 @@
+"use client"
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import useStore from "../store/useUserStore";
 const HeroSectionOurWork = ({
   bgImage,
   title,
+  atitle,
   description,
+  adescription,
   rightImage,
   transparent = false,
   topArrow = false,
   buttonText = "Get Started",
+  abuttonText = "Get Started",
   showButton = true,
 }) => {
+
+  const { language } = useStore();
+  
   const titleWords = title.split(" ");
   const colors =
     bgImage && rightImage
@@ -29,12 +37,13 @@ const HeroSectionOurWork = ({
           <span className="text-white">{titleWords.slice(-1)}</span>
         </>
       ) : (
-        <span className={colors}>{title}</span>
+        <span className={colors}>{atitle}</span>
       )}
     </h2>
   );
 
   return (
+    
     <div
       className="overflow-hidden "
       style={{
@@ -52,7 +61,7 @@ const HeroSectionOurWork = ({
         />
       )}
 
-      <div className="container justify-between overflow-hidden mx-auto flex-col sm:flex-row flex max-h-[650px] pt-32 min-h-[500px] h-[70vh]">
+      <div className="container justify-between overflow-hidden mx-auto flex-col sm:flex-row flex max-h-[650px] pt-32 min-h-[600px] sm:min-h-[500px] h-[70vh]">
         {/* First Section */}
         <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
           {" "}

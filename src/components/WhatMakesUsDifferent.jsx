@@ -69,15 +69,25 @@ const WhatMakesUsDifferent = ({ data }) => {
       );
     });
   }, [data]);
-
+  console.log(data);
   return (
-    <div className="bg-white relative py-[25px] sm:py-[55px]" ref={containerRef}>
+    <div
+      className="bg-white relative py-[25px] sm:py-[55px]"
+      ref={containerRef}
+    >
       <div className="w-auto text-center mx-auto">
         <h1 className="sub_heading mb-10 gilray-font w-full">
           {data.title.split(" ").map((word, index) => (
             <span
               key={index}
-              className={`${index === 1 ? "text-[#219DD9]" : ""}`}
+              className={`${
+                // Apply blue color to specific words passed in blueWords
+                data.blueWords.some(
+                  (blueWord) => blueWord.toLowerCase() === word.toLowerCase()
+                )
+                  ? "text-[#219DD9]"
+                  : "text-black"
+              }`}
             >
               {word}{" "}
             </span>
@@ -116,8 +126,8 @@ const WhatMakesUsDifferent = ({ data }) => {
                   ref={(el) => (stepsRef.current[index] = el)}
                 >
                   {/* Circle Animation */}
-                  <div className="w-[50px]">
-                    <span className="circle   flex items-center justify-center  p-4 px-8  -start-2 border-[#ccc] border-2 rounded-full text-[#219DD9] z-150 bg-white">
+                  <div className="w-[50px] mr-5 ">
+                    <span className="circle   flex items-center justify-center  p-8 px-12   border-[#ccc] border-2 rounded-full text-[#219DD9] z-150 bg-white">
                       <span className="font-extrabold text-xl font-gilroy">
                         {value.id.toString().padStart(2, "0")}
                       </span>

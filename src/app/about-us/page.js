@@ -8,7 +8,7 @@ import Features from "../../components/Features";
 import PartnerWithTopPeople from "../../components/PartnerWithTopPeople";
 import WhatMakesUsDifferent from "../../components/WhatMakesUsDifferent";
 import SuccessMarquee from "../../components/SuccessMarquee";
-import HeroSection from "../../components/HeroSection";
+import HeroSection from "../../components/HeroSectionServices";
 import Footer from "../../components/Footer";
 import {
   aboutHeroData,

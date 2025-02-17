@@ -19,17 +19,13 @@ const HeroContact = () => {
           <div className="flex flex-col gap-5">
             <p className=" header hero_section_heading leading-tight main-heading text-white">
               <span className=" mr-2 header  leading-tight  main-heading text-blueColor">
-                Contact us
+                Get in Touch
               </span>
-              and
-              <br />
-              Unleash your idea
+              <br/>
+              with Us
             </p>
             <p className="main_hero_slogan text-[#ebeced]">
-              Connecting with our valued customers is at the core of our
-              business approach. Whether you have a query, feedback, or simply
-              want to share your experience, our dedicated support team is just
-              a message away.
+            Have questions or need assistance? We're here to help! Reach out to us for inquiries, collaborations, or support, and let’s grow together.
             </p>
           </div>
         </div>

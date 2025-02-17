@@ -17,21 +17,17 @@ const FeatureSlider = ({ data, from }) => {
           from !== "contact" ? "text-black" : "text-white"
         }`}
       >
-        {data?.title
-          ?.split(" ")
-          .map((word, index) => (
-            <span
-              key={index}
-              className={`${
-                // Last word in the title gets a special color
-                index === data.title.split(" ").length - 1
-                  ? "text-[#219DD9]"
-                  : ""
-              }`}
-            >
-              {word}{" "}
-            </span>
-          ))}
+        {data?.title?.split(" ").map((word, index) => (
+          <span
+            key={index}
+            className={`${
+              // Last word in the title gets a special color
+              index === data.title.split(" ").length - 1 ? "text-[#219DD9]" : ""
+            }`}
+          >
+            {word}{" "}
+          </span>
+        ))}
       </h2>
 
       {/* Swiper Slider */}
@@ -41,15 +37,15 @@ const FeatureSlider = ({ data, from }) => {
           cssMode={false}
           mousewheel={{
             forceToAxis: true, // Force horizontal scrolling
-            invert: false,     // Normal scroll direction
+            invert: false, // Normal scroll direction
           }}
           keyboard={true}
           spaceBetween={20}
           slidesPerView={1.2}
           breakpoints={{
             640: { slidesPerView: 1.5 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
+            768: { slidesPerView: 2.2 },
+            1024: { slidesPerView: 4.2 },
           }}
           pagination={{ clickable: true }}
           loop={false} // optional infinite loop
@@ -57,18 +53,31 @@ const FeatureSlider = ({ data, from }) => {
         >
           {data.cards.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="rounded-xl h-[300px] sm:h-[450px] w-full bg-black overflow-hidden relative">
-                <img
-                  src={item.picture}
-                  alt={item.name}
-                  className="w-full h-full object-cover opacity-60"
-                />
-                <div className="p-4 h-[200px] absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent">
-                  <div className="flex flex-col justify-center mt-5 h-full text-center text-white">
-                    <h3 className="text-[22px] font-bold px-2">{item.name}</h3>
-                    <p className="main_hero_slogan px-4 sm:px-10">
-                      {item.description}
-                    </p>
+              <div
+               className="  p-[1px]"
+                style={{
+                  border: "1px solid transparent",
+                  borderRadius: " 20px",
+                  background: `linear-gradient(30deg, #052036, #02101f),linear-gradient(30deg, transparent, #219DD9 ,transparent)`,
+                  backgroundClip: "padding-box, border-box",
+                  backgroundOrigin: "padding-box, border-box",
+                }}
+              >
+                <div className="rounded-2xl h-[350px] w-full bg-black overflow-hidden relative">
+                  <img
+                    src={item.picture}
+                    alt={item.name}
+                    className="w-full h-full object-cover opacity-60"
+                  />
+                  <div className="p-4 h-[200px] absolute bottom-0 w-full bg-gradient-to-t from-black  to-transparent">
+                    <div className="flex flex-col justify-center mt-5 h-full text-center text-white">
+                      <h3 className="text-[22px] font-bold px-2">
+                        {item.name}
+                      </h3>
+                      <p className="text-[14px] px-4 sm:px-0">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

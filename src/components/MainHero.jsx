@@ -3,26 +3,42 @@ import React, { Suspense } from "react";
 import Spline from "@splinetool/react-spline/next";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useRouter } from "next/navigation";
+import useStore from "../store/useUserStore";
 const MainHero = () => {
+  const { language } = useStore();
   const router = useRouter();
   const headingText = "BESPOKE SOLUTIONS TAILORED TO YOUR BUSINESS NEEDS";
+  const headingText1 = "نقدم حلول مصممة خصيصا لتناسب متطلبات عملك";
   const words = headingText.split(" ");
+  const words1 = headingText1.split(" ");
   return (
-    <div className=" container flex-col-reverse    relative sm:pl-10 flex sm:flex-row bg-[#000B17] mx-auto  sm:mt-10">
+    <div className=" container flex-col-reverse h-[292px]    relative sm:pl-10 flex sm:flex-row bg-[#000B17] mx-auto  sm:mt-10">
       {/* Text Content */}
-      <div className="flex sm:w-[50%] mt-[40vh] sm:mt-0   flex-col gap-5 text-white  xl:gap-8 ">
-        <p className="text-[30px] main-heading text-center sm:text-start sm:text-3xl md:text-[50px]    z-10 font-extrabold  leading-tight">
-          {words.map((word, index) => (
+      <div
+       dir={language === "English" ? "ltr" : "rtl"}
+      className="flex sm:w-[50%] mt-[40vh] sm:mt-0   flex-col gap-5 text-white  xl:gap-8 ">
+        <p className={`
+          
+          ${language==="English"?"":"hidden"}
+          text-[30px] main-heading text-center sm:text-start sm:text-3xl md:text-[50px]    z-10 font-extrabold  leading-tight`}>
+        {words.map((word, index) => (
+            <span key={index} className={index === 1 ? "text-blueColor" : ""}>
+              {word}{" "}
+            </span>
+          ))}
+        </p>
+        <p className={`
+          
+          ${language!="English"?"":"hidden"}
+          text-[30px] main-heading text-center sm:text-start sm:text-3xl md:text-[50px]    z-10 font-extrabold  leading-tight`}>
+        {words1.map((word, index) => (
             <span key={index} className={index === 1 ? "text-blueColor" : ""}>
               {word}{" "}
             </span>
           ))}
         </p>
         <p className=" main_hero_slogan z-40 text-center sm:text-start  ">
-          Your journey to digital transformation starts here. Specializing in
-          innovative software development, we craft scalable, user-centric
-          solutions that elevate brands, empower businesses, and exceed
-          expectations in the digital age.
+       {language==="English"?"   Your journey to digital transformation starts here. Specializing in innovative software development, we craft scalable, user-centric solutions that elevate brands, empower businesses, and exceed expectations in the digital age." :"رحلتك نحو التحول الرقمي تبدأ ھنا. نحن متخصصون في تطور البرمجات المبتكرة، ونصمم حلولا ً قابلة للتوسع ومتمحورة حول المستخدم، مما عزز العمات التجارة،  وتجاوز التوقعات في العصر الرقمي."}
         </p>
       </div>
 

@@ -40,7 +40,7 @@ const SuccessMarquee = () => {
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img
-                  src="/mar1.png"
+                  src="/c1.png"
                   alt="client-logo"
                   className="w-10 h-10"
                 />
@@ -51,7 +51,7 @@ const SuccessMarquee = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
-                <img src="/client.png" alt="client-logo" className="w-10 h-10" />
+                <img src="/c2.png" alt="client-logo" className="w-10 h-10" />
                 <p className="px-2 font-bold font-lato">
                   500+ Successful Clients
                 </p>
@@ -60,7 +60,7 @@ const SuccessMarquee = () => {
             <SwiperSlide>
               <div className="flex justify-center items-center text-white">
                 <img
-                  src="/talent.png"
+                  src="/c3.png"
                   alt="client-logo"
                   className="w-10 h-10"
                 />
@@ -69,7 +69,7 @@ const SuccessMarquee = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
-                <img src="/mar3.png" alt="client-logo" className="w-10 h-10" />
+                <img src="/c4.png" alt="client-logo" className="w-10 h-10" />
                 <p className="px-2 font-bold font-lato">
                   20+ Partners Globally 
                 </p>
@@ -78,7 +78,7 @@ const SuccessMarquee = () => {
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img
-                  src="/mar2.png"
+                  src="/c5.png"
                   alt="client-logo"
                   className="w-10 h-10"
                 />
