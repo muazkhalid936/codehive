@@ -1,9 +1,9 @@
 // store.js
-import create from 'zustand';
+import { create } from 'zustand';
 
-const useStore = create(set => ({
+const useStore = create((set) => ({
   language: 'English', // Default language is English
-  setLanguage: (lang) => set({ language: lang })
+  setLanguage: (lang) => set({ language: lang }),
 }));
 
 export default useStore;

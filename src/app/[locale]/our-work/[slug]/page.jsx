@@ -1,15 +1,15 @@
-import React from "react";
-import NavbarPagesOurWork from "../../../components/NavbarPagesOurWork";
-import { ourWorks } from "../../../data";
-import { notFound } from "next/navigation";
-import ProjectOverview from "../../../components/Our-Work/ProjectOverview";
-import ChallengesOrSolution from "../../../components/Our-Work/ChallengesOrSolution";
-import WorryNoMore from "../../../components/Our-Work/WorryNoMore";
-import Technologies from "../../../components/Our-Work/Technologies";
-import CallToAction from "../../../components/Our-Work/CallToAction";
-import HeroSectionOurWork from "../../../components/HeroSectionOurWork";
-import IndustryDetails from "../../../components/IndustryDetails";
-import Footer from "../../../components/Footer";
+import React from 'react';
+import NavbarPagesOurWork from '../../../../components/NavbarPagesOurWork';
+import { ourWorks } from '../../../../data';
+import { notFound } from 'next/navigation';
+import ProjectOverview from '../../../../components/Our-Work/ProjectOverview';
+import ChallengesOrSolution from '../../../../components/Our-Work/ChallengesOrSolution';
+import WorryNoMore from '../../../../components/Our-Work/WorryNoMore';
+import Technologies from '../../../../components/Our-Work/Technologies';
+import CallToAction from '../../../../components/Our-Work/CallToAction';
+import HeroSectionOurWork from '../../../../components/HeroSectionOurWork';
+import IndustryDetails from '../../../../components/IndustryDetails';
+import Footer from '../../../../components/Footer';
 
 const page = async ({ params }) => {
   const slug = await params.slug;
@@ -37,10 +37,10 @@ const page = async ({ params }) => {
           alt={`${slug} featured image`}
           className="w-[90%] h-full object-center rounded-xl"
           style={{
-            objectFit: "cover",
+            objectFit: 'cover',
             // width: "100px",
             // height: "100px",
-            objectPosition: "center",
+            objectPosition: 'center',
           }}
         />
       </div>

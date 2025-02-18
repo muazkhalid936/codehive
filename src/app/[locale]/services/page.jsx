@@ -1,11 +1,11 @@
-import React from "react";
-import Hero from "../../components/Hero";
-import Testimonials from "../../components/Testimonials";
-import Features from "../../components/Features";
-import WhatMakesUsDifferent from "../../components/WhatMakesUsDifferent";
-import SuccessMarquee from "../../components/SuccessMarquee";
-import ConnectContact from "../../components/ConnectContact";
-import HeroSection from "../../components/HeroSection";
+import React from 'react';
+import Hero from '../../../components/Hero';
+import Testimonials from '../../../components/Testimonials';
+import Features from '../../../components/Features';
+import WhatMakesUsDifferent from '../../../components/WhatMakesUsDifferent';
+import SuccessMarquee from '../../../components/SuccessMarquee';
+import ConnectContact from '../../../components/ConnectContact';
+import HeroSection from '../../../components/HeroSection';
 import {
   aboutTestimonialsData,
   bannerDataService,
@@ -13,11 +13,11 @@ import {
   servicesAdvanceSolutionData,
   serviceScreenFeaturesData,
   WhatMakesUsDifferentData,
-} from "../../data";
-import NavbarPages from "../../components/NavbarPages";
-import AdvantagesSection from "../../components/AdvantagesSection";
-import Banner from "../../components/Banner";
-import Footer from "../../components/Footer";
+} from '../../../data';
+import NavbarPages from '../../../components/NavbarPages';
+import AdvantagesSection from '../../../components/AdvantagesSection';
+import Banner from '../../../components/Banner';
+import Footer from '../../../components/Footer';
 
 const Services = () => {
   return (

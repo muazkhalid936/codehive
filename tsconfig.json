@@ -24,8 +24,9 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/app/services/page.jsx",
-    "src/components/Hero/index.jsx"
-, "src/app/Industries/[slug]/page.jsx"  ],
+    "src/app/[locale]/services/page.jsx",
+    "src/components/Hero/index.jsx",
+    "src/app/[locale]/industries/[slug]/page.jsx"
+  ],
   "exclude": ["node_modules"]
 }
