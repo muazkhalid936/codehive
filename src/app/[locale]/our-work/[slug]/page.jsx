@@ -31,17 +31,17 @@ const page = async ({ params }) => {
       <Technologies {...work.techSection} />
       <ChallengesOrSolution {...work.solutionSection} />
       <IndustryDetails panelData={work.panelData} />
-      <div className="flex justify-center h-[60vh] max-h-[500px] min-h-[300px] mt-5 mb-20">
+      <div className="flex justify-center h-[60vh] max-h-[600px] min-h-[300px] mt-5 mb-20">
         <img
           src={work.image}
           alt={`${slug} featured image`}
-          className="w-[90%] h-full object-center rounded-xl"
-          style={{
-            objectFit: 'cover',
-            // width: "100px",
-            // height: "100px",
-            objectPosition: 'center',
-          }}
+          className=" w-full object-contain rounded-xl"
+          // style={{
+          //   objectFit: "cover",
+          //   // width: "100px",
+          //   // height: "100px",
+          //   objectPosition: "center",
+          // }}
         />
       </div>
 

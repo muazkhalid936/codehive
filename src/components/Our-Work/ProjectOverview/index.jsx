@@ -9,7 +9,7 @@ const ProjectOverview = ({ title, description }) => {
             {title.split(" ")[0]}
             <span className="text-[#229dd9]"> {title.split(" ")[1]}</span>
           </h1>
-          <p className="w-full md:w-[70%] main_hero_slogan font-lato text-[#535D66] ">
+          <p className="w-full md:w-[80%] main_hero_slogan font-lato text-[#535D66] ">
             {description}
           </p>
         </div>

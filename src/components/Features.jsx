@@ -70,7 +70,7 @@ const Features = ({ data }) => {
                   className={cardClasses}
                   style={{
                     border: "1px solid transparent",
-                    borderRadius: " 26px",
+                    borderRadius: " 29px",
                     background: `linear-gradient(to ${
                       isFirst
                         ? "bottom right"
