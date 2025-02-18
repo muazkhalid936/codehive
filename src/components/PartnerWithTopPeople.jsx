@@ -100,7 +100,7 @@ const PartnerWithTopPeople = () => {
   return (
     <div className="bg-[#000B17] py-10 font-lato  sm:py-20 text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-center mb-8 sm:w-[70%] mx-auto sub_heading leading-tight gilray-font">
+        <h2 className="text-center mb-14 sm:w-[70%] mx-auto sub_heading leading-tight gilray-font">
           Meet the
           <span className="text-[#219DD9] mx-2">Creative Minds</span>
           Behind Our Most Successful Projects

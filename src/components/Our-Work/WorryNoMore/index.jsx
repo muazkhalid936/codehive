@@ -41,11 +41,11 @@ const WorryNoMore = ({
               </span>
             ))}
           </h2>
-          <p className="mb-5 main_hero_slogan">{description}</p>
+          <p className="mb-5 text-slate-600 main_hero_slogan">{description}</p>
           <ul className="list-disc xl:gap-2 flex flex-col">
             {points.map((point, index) => (
               <li key={index} className="flex main_hero_slogan gap-2 list-disc items-center">
-                <GoDotFill className="text-gray-700" />
+                <GoDotFill className="text-black" />
                 <span className="text-slate-600">{point}</span>
               </li>
             ))}

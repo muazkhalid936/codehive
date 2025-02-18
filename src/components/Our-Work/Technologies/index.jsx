@@ -145,13 +145,13 @@ const Technologies = ({ rightImage }) => {
                 <div
                   key={index}
                   className={`flex flex-col border border-[#343c45] py-5 items-center gap-4 ${
-                    index === 0 ? "rounded-tl-xl" : ""
+                    index === 0 ? "rounded-tl-[40px]" : ""
                   }${
-                    index === 2 ? "rounded-tr-xl" : ""
+                    index === 2 ? "rounded-tr-[40px]" : ""
                   }${
-                    index === 3 ? "rounded-bl-xl" : ""
+                    index === 3 ? "rounded-bl-[40px]" : ""
                   }${
-                    index === 5 ? "rounded-br-xl" : ""
+                    index === 5 ? "rounded-br-[40px]" : ""
                   }`}
                 >
                   <img
