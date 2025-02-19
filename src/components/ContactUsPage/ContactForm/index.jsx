@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { HiArrowUpRight, HiChevronDown } from "react-icons/hi2"; // Import the chevron icon
+import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import PhoneInput from "../../PhoneInput";
 import "react-phone-input-2/lib/style.css"; // Import styles for the PhoneInput
 import { FiArrowUpRight } from "react-icons/fi";
 
 const ContactForm = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const [phone, setPhone] = useState("");
   const [inputData, setInputData] = useState({
     name: "",
@@ -41,7 +43,7 @@ const ContactForm = () => {
   return (
     <div className="sm:w-[75%] w-[90%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
       <form
-        className=" mx-auto py-20   bg-[#041c30] text-white rounded-2xl overflow-hidden shadow-lg"
+        className=" mx-auto pt-20   bg-[#041c30] text-white rounded-2xl overflow-hidden shadow-lg"
         // style={{
         //   transition: "all 0.3s ease-in-out",
         //   border: "2px solid",
@@ -111,31 +113,38 @@ const ContactForm = () => {
                 <PhoneInput />
               </div>
             ) : field.type === "select" ? (
-              <div
-                key={field.id}
-                className="relative w-[90%] lg:w-[70%] mx-auto"
-              >
-                <select
-                  id={field.id}
-                  required
-                  value={inputData[field.id]}
-                  onChange={handleInputChange}
-                  onBlur={handleBlur}
-                  className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full border-b-2 border-gray-500 appearance-none pr-8 invalid:text-gray-400" // Added invalid:text-gray-400
-                >
-                  <option value="" disabled selected>
-                    {field.placeholder}
-                  </option>
-                  {field.options.map((option, index) => (
-                    <option key={index} value={option} className="text-white">
-                      {option}
-                    </option>
-                  ))}
-                </select>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                  <HiChevronDown className="text-gray-500" />{" "}
-                </div>
-              </div>
+              <div key={field.id} className="relative w-[90%] lg:w-[70%] mx-auto">
+  <select
+    id={field.id}
+    required
+    value={inputData[field.id]}
+    onChange={handleInputChange}
+    onBlur={(e) => {
+      handleBlur(e);
+      setIsOpen(false); // Close dropdown when focus is lost
+    }}
+    onClick={() => setIsOpen((prev) => !prev)} // Toggle dropdown open/close state
+    className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full border-b-2 border-gray-500 appearance-none pr-8 invalid:text-gray-400"
+  >
+    <option value="" disabled selected hidden>
+      {field.placeholder}
+    </option>
+    {field.options.map((option, index) => (
+      <option key={index} value={option} className="text-white">
+        {option}
+      </option>
+    ))}
+  </select>
+
+  {/* Icon toggles based on dropdown state */}
+  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+    {isOpen ? (
+      <HiChevronUp className="text-gray-500" />
+    ) : (
+      <HiChevronDown className="text-gray-500" />
+    )}
+  </div>
+</div>
             ) : (
               <div
                 key={field.id}
@@ -167,13 +176,13 @@ const ContactForm = () => {
           />
         </div>
         {/* Message Field */}
-        <div className="relative w-[90%] lg:w-[86%] mx-auto mb-28">
+        <div className="relative w-[90%] lg:w-[86%] mx-auto ">
           <textarea
             id="message"
             rows="4"
             placeholder="Message*"
             required
-            className="peer p-3 min-h-[100px] max-h-[300px] bg-[#041c30] text-white rounded-none focus:outline-none w-full  border-b-2 border-gray-500"
+            className="peer p-3 min-h-[100px] max-h-[300px] bg-[#041c30] text-white  focus:outline-none w-full  border-2 rounded-lg mt-10 border-gray-500"
           ></textarea>
           {/* <label
             htmlFor="message"
@@ -184,10 +193,10 @@ const ContactForm = () => {
         </div>
 
         {/* Submit Button */}
-        <div className="flex justify-center mb-20">
+        <div className="flex justify-center my-20 ">
           <button
             type="submit"
-            className="flex items-center justify-center w-[50%] py-3 bg-slate-800 text-white font-semibold rounded-xl transition-colors"
+            className="flex items-center justify-center w-[30%] py-3 bg-slate-800 text-white font-semibold rounded-xl transition-colors"
           >
             Submit
           </button>

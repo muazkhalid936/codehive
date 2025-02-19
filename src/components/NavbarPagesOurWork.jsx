@@ -2,20 +2,23 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { services, industries, ourWorks } from "../data";
-import Link from "next/link";
+import { usePathname, useRouter, Link } from "../i18n/routing";
 import { FaCaretDown } from "react-icons/fa";
-import { FaCaretUp,FaTimes } from "react-icons/fa";
+import { FaCaretUp, FaTimes } from "react-icons/fa";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import useStore from "../store/useUserStore";
 const NavbarPages = ({ isBlack }) => {
-  const {language} = useStore();
+  const { language } = useStore();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [work, setWork] = useState(false);
 
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isIndustriesDropdownOpen, setIsIndustriesDropdownOpen] =
     useState(false);
-
+  const params = useParams();
+  const t = useTranslations("translation");
   const [isScrolling, setIsScrolling] = useState(false);
   let lastScrollY;
 
@@ -76,17 +79,16 @@ const NavbarPages = ({ isBlack }) => {
       <div className="  container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <img
-            src="/Code hive Branding-01.png"
-            className="w-40 md:w-60"
-            alt="logo"
-          />
+          <img src="/Code hive Branding-01.png" className="w-48" alt="logo" />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden text-white lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
           {/* <Link href="/">Home</Link> */}
-          <Link href="/about-us">  {language === "English" ? "About Us" : "عنا"}</Link>
+          <Link href="/about-us">
+            {" "}
+            {language === "English" ? "About Us" : "عنا"}
+          </Link>
 
           {/* {language==="English"?"Services" :"الخدمات"} Dropdown */}
           <div
@@ -94,7 +96,9 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
             onMouseLeave={() => setIsServicesDropdownOpen(false)}
           >
-            <Link href="/services">{language==="English"?"Services" :"الخدمات"}</Link>
+            <Link href="/services">
+              {language === "English" ? "Services" : "الخدمات"}
+            </Link>
             {/* {language==="English"?"Services" :"الخدمات"}  */}
 
             {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
@@ -126,21 +130,22 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
             onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
           >
-            {language==="English"?"Industries": "المجالات"} 
+            {language === "English" ? "Industries" : "المجالات"}
 
             {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {/* <FaChevronDown className="text-blue-600 text-base" /> */}
             {isIndustriesDropdownOpen && (
-              <div className="absolute top-4 mt-2 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 {industriesDropdown?.map(
                   (industry) =>
-                    industry.label !== "Our Booking System" && (
+                    industry.label !== "Our Booking System" &&
+                    industry.label !== "Reward Hive" && (
                       <Link
                         key={industry.label}
                         href={industry.href}
                         className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                       >
-                        {industry.label}
+                        {t(industry.label)}
                       </Link>
                     )
                 )}
@@ -152,23 +157,32 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setWork(true)}
             onMouseLeave={() => setWork(false)}
           >
-            <Link href={"/industries"}>{language==="English"?"Products": "المنتجات"}</Link>
+            <Link href={"/industries"}>
+              {language === "English" ? "Products" : "المنتجات"}
+            </Link>
 
             {work ? <FaCaretUp /> : <FaCaretDown />}
             {work && (
-              <div className="absolute top-5 mt-1     left-0  bg-[#001A36]  w-[350px]  shadow-lg z-50">
+              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 <Link
-                  // key={industry.label}
-                  href={"/industries/our-booking-system"}
-                  className="block py-2 px-4  text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                  href="/industries/our-booking-system"
+                  className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                 >
-                  Our Booking System
+                  {t("ourBooking")}
+                </Link>
+                <Link
+                  href="/industries/reward-hive"
+                  className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                >
+                  {t("rewardHive")}
                 </Link>
               </div>
             )}
           </div>
 
-          <Link href="/our-work">{language==="English"?"Our Work":"   أعمالنا"}</Link>
+          <Link href="/our-work">
+            {language === "English" ? "Our Work" : "   أعمالنا"}
+          </Link>
           {/* <Link href="/contact-us">Contact</Link> */}
         </div>
 
@@ -227,7 +241,7 @@ const NavbarPages = ({ isBlack }) => {
             onClick={() => setIsSidebarOpen(false)}
             className="hover:text-blueColor transition-colors"
           >
-              {language === "English" ? "About Us" : "عنا"}
+            {language === "English" ? "About Us" : "عنا"}
           </Link>
 
           {/* {language==="English"?"Services" :"الخدمات"} (Collapsible) */}
@@ -236,7 +250,7 @@ const NavbarPages = ({ isBlack }) => {
               className="flex items-center justify-between hover:text-blueColor cursor-pointer"
               onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
             >
-              <span>{language==="English"?"Services" :"الخدمات"}</span>
+              <span>{language === "English" ? "Services" : "الخدمات"}</span>
               {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {isServicesDropdownOpen && (
@@ -263,7 +277,7 @@ const NavbarPages = ({ isBlack }) => {
                 setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen)
               }
             >
-              <span>{language==="English"?"Industries": "المجالات"} </span>
+              <span>{language === "English" ? "Industries" : "المجالات"} </span>
               {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {isIndustriesDropdownOpen && (
@@ -291,7 +305,7 @@ const NavbarPages = ({ isBlack }) => {
               className="flex items-center justify-between hover:text-blueColor cursor-pointer"
               onClick={() => setWork(!work)}
             >
-              <span>{language==="English"?"Products": "المنتجات"}</span>
+              <span>{language === "English" ? "Products" : "المنتجات"}</span>
               {work ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {work && (
@@ -313,7 +327,7 @@ const NavbarPages = ({ isBlack }) => {
             className="hover:text-blueColor transition-colors"
             onClick={() => setIsSidebarOpen(false)}
           >
-            {language==="English"?"Our Work":"   أعمالنا"}
+            {language === "English" ? "Our Work" : "   أعمالنا"}
           </Link>
 
           {/* Language & Contact */}

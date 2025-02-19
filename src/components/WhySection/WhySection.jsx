@@ -130,13 +130,13 @@ const ImageScrollEffect = () => {
         {/* Headings */}
         <div className="text-4xl sm:text-[60px] justify-start flex flex-col">
           <h1 className="why-section-heading-1 main-heading">
-            Unrivaled <span className="colorText1">Expertise</span>
+            Customer-Centric <span className="colorText1 ml-4">Approach</span>
           </h1>
           <h1 className="why-section-heading-2 main-heading">
-            Customer-Centric <span className="colorText2 ml-4">Approach</span>
+            End-to-End <span className="colorText2 ml-4">Support</span>
           </h1>
           <h1 className="why-section-heading-3 main-heading">
-            End-to-End <span className="colorText3 ml-4">Support</span>
+            Unrivaled <span className="colorText3">Expertise</span>
           </h1>
         </div>
       </div>

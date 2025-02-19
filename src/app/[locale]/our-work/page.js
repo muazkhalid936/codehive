@@ -3,8 +3,11 @@ import React from 'react';
 import NavbarPages from '../../../components/NavbarPages';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { useState } from 'react';
+import { usePathname, useRouter, Link } from '../../../i18n/routing';
+
 import Footer from '../../../components/Footer';
 const page = () => {
+  const router =useRouter();
   const [option, setOption] = useState('all');
   return (
     <div>
@@ -88,7 +91,7 @@ const page = () => {
               {/* Solwave */}
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/solwave-website')
+                  router.push( '/our-work/solwave-website')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
                 style={{
@@ -100,14 +103,14 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/solwave-website">Solwave</a>
+                    <Link href="/our-work/solwave-website">Solwave</Link >
                   </div>
                 </div>
               </div>
 
               {/* Laam */}
               <div
-                onClick={() => (window.location.href = '/our-work/laam-web')}
+                onClick={() => router.push( '/our-work/laam-web')}
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Laam@2x.jpg)',
@@ -118,7 +121,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/laam-web">Laam</a>
+                    <Link href="/our-work/laam-web">Laam</Link >
                   </div>
                 </div>
               </div>
@@ -129,7 +132,7 @@ const page = () => {
               {/* ClixPOS */}
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/clixpos-website')
+                  router.push( '/our-work/clixpos-website')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
                 style={{
@@ -141,7 +144,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/clixpos-website">ClixPOS</a>
+                    <Link href="/our-work/clixpos-website">ClixPOS</Link >
                   </div>
                 </div>
               </div>
@@ -149,7 +152,7 @@ const page = () => {
               {/* Faoolun */}
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/faoolun-website')
+                  router.push( '/our-work/faoolun-website')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
                 style={{
@@ -161,7 +164,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/faoolun-website">Faoolun</a>
+                    <Link href="/our-work/faoolun-website">Faoolun</Link >
                   </div>
                 </div>
               </div>
@@ -172,7 +175,7 @@ const page = () => {
               {/* Legal Wise Web */}
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/legal-wise-web')
+                  router.push( '/our-work/legal-wise-web')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] h-[300px] lg:h-[370px] 2xl:h-[400px]"
                 style={{
@@ -184,7 +187,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/legal-wise-web">Legal Wise Web</a>
+                    <Link href="/our-work/legal-wise-web">Legal Wise Web</Link >
                   </div>
                 </div>
               </div>
@@ -197,7 +200,7 @@ const page = () => {
             <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row  lg:h-[370px] 2xl:h-[400px]">
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/solwave-website')
+                  router.push( '/our-work/solwave-website')
                 }
                 className="flex overflow-hidden relative cursor-pointer group  w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -210,14 +213,14 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a href="/our-work/solwave-website" className="font-poppin">
+                    <Link href="/our-work/solwave-website" className="font-poppin">
                       Solwave
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
               <div
-                onClick={() => (window.location.href = '/our-work/Mr-app')}
+                onClick={() => router.push( '/our-work/Mr-app')}
                 className="flex  overflow-hidden relative group cursor-pointer w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Mr.jpg)',
@@ -229,16 +232,16 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/Mr-app">
+                    <Link className="font-poppin" href="/our-work/Mr-app">
                       Mr Take
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
             </div>
             <div className="flex  mt-5 sm:mt-10 flex-col sm:flex-row-reverse  gap-5 sm:gap-10  lg:h-[400px] 2xl:h-[450px]">
               <div
-                onClick={() => (window.location.href = '/our-work/saloon-app')}
+                onClick={() => router.push( '/our-work/saloon-app')}
                 className="flex overflow-hidden cursor-pointer relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Salon.jpg)',
@@ -250,14 +253,14 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/saloon-app">
+                    <Link className="font-poppin" href="/our-work/saloon-app">
                       Glamour Salon
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
               <div
-                onClick={() => (window.location.href = '/our-work/caption-gen')}
+                onClick={() => router.push( '/our-work/caption-gen')}
                 className="flex overflow-hidden cursor-pointer relative group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Caption.jpg)',
@@ -269,16 +272,16 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/caption-gen">
+                    <Link className="font-poppin" href="/our-work/caption-gen">
                       Caption Gen{' '}
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
             </div>
             <div className="flex mt-5 sm:mt-0 gap-5 overflow-hidden sm:gap-10 flex-col sm:flex-row  lg:h-[400px] 2xl:h-[450px]">
               <div
-                onClick={() => (window.location.href = '/our-work/laam-web')}
+                onClick={() => router.push( '/our-work/laam-web')}
                 className="flex cursor-pointer overflow-hidden relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Laam@2x.jpg)',
@@ -290,14 +293,14 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/laam-web">
+                    <Link className="font-poppin" href="/our-work/laam-web">
                       Laam
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
               <div
-                onClick={() => (window.location.href = '/our-work/eshop-app')}
+                onClick={() => router.push( '/our-work/eshop-app')}
                 className="flex cursor-pointer overflow-hidden relative group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Eshop@2x.jpg)',
@@ -309,9 +312,9 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/eshop-app">
+                    <Link className="font-poppin" href="/our-work/eshop-app">
                       Trendora
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
@@ -319,7 +322,7 @@ const page = () => {
             <div className="flex gap-5 mt-5 sm:mt-0 sm:gap-10 flex-col sm:flex-row-reverse  lg:h-[400px] 2xl:h-[450px]">
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/instant-save-app')
+                  router.push( '/our-work/instant-save-app')
                 }
                 className="flex overflow-hidden relative group w-[100%] cursor-pointer sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -332,18 +335,18 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
+                    <Link
                       className="font-poppin"
                       href="/our-work/instant-save-app"
                     >
                       Instant Save
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/legal-wise-web')
+                  router.push( '/our-work/legal-wise-web')
                 }
                 className="flex overflow-hidden relative group w-[100%] cursor-pointer sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -356,9 +359,9 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/legal-wise-web">
+                    <Link className="font-poppin" href="/our-work/legal-wise-web">
                       Legal Wise Web
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
@@ -366,7 +369,7 @@ const page = () => {
             <div className="flex gap-5 mt-5 sm:mt-0 sm:gap-10 flex-col sm:flex-row   lg:h-[400px] 2xl:h-[450px]">
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/faoolun-website')
+                  router.push( '/our-work/faoolun-website')
                 }
                 className="flex overflow-hidden relative group w-[100%] sm:w-[65%] cursor-pointer lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -379,15 +382,15 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/faoolun-website">
+                    <Link className="font-poppin" href="/our-work/faoolun-website">
                       Faoolun{' '}
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/doctor-booking-app')
+                  router.push( '/our-work/doctor-booking-app')
                 }
                 className="flex overflow-hidden relative group w-[100%] sm:w-[35%] cursor-pointer lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -400,12 +403,12 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
+                    <Link
                       className="font-poppin"
                       href="/our-work/doctor-booking-app"
                     >
                       MedEase
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
@@ -413,7 +416,7 @@ const page = () => {
             <div className="flex gap-5 mt-5 sm:mt-0 sm:gap-10   lg:h-[400px] 2xl:h-[450px] flex-col sm:flex-row-reverse ">
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/clixpos-website')
+                  router.push( '/our-work/clixpos-website')
                 }
                 className=" cursor-pointer flex overflow-hidden relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -426,15 +429,15 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/clixpos-website">
+                    <Link className="font-poppin" href="/our-work/clixpos-website">
                       ClixPOS
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/al-abour-app')
+                  router.push( '/our-work/al-abour-app')
                 }
                 className=" cursor-pointer flex overflow-hidden relative group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -447,7 +450,7 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a href="/our-work/al-abour-app">Al Abour</a>
+                    <Link href="/our-work/al-abour-app">Al Abour</Link >
                   </div>
                 </div>
               </div>
@@ -455,7 +458,7 @@ const page = () => {
             <div className="flex gap-5 mt-5 sm:mt-0 sm:gap-10 flex-col sm:flex-row  lg:h-[400px] 2xl:h-[450px] ">
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/word-smith-ai')
+                  router.push( '/our-work/word-smith-ai')
                 }
                 className="cursor-pointer flex overflow-hidden relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -468,15 +471,15 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/word-smith-ai">
+                    <Link className="font-poppin" href="/our-work/word-smith-ai">
                       Wordsmith{' '}
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/food-inventory-app')
+                  router.push( '/our-work/food-inventory-app')
                 }
                 className=" cursor-pointer flex overflow-hidden relative group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -489,12 +492,12 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a
+                    <Link
                       className="font-poppin"
                       href="/our-work/food-inventory-app"
                     >
                       FoodVentory App
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
@@ -510,7 +513,7 @@ const page = () => {
             <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row  lg:h-[370px] 2xl:h-[400px]">
               {/* Glamour Salon */}
               <div
-                onClick={() => (window.location.href = '/our-work/saloon-app')}
+                onClick={() => router.push( '/our-work/saloon-app')}
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Salon.jpg)',
@@ -521,7 +524,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/saloon-app">Glamour Salon</a>
+                    <Link href="/our-work/saloon-app">Glamour Salon</Link >
                   </div>
                 </div>
               </div>
@@ -529,7 +532,7 @@ const page = () => {
               {/* Wordsmith */}
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/word-smith-ai')
+                  router.push( '/our-work/word-smith-ai')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
@@ -541,7 +544,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/word-smith-ai">Wordsmith</a>
+                    <Link href="/our-work/word-smith-ai">Wordsmith</Link >
                   </div>
                 </div>
               </div>
@@ -551,7 +554,7 @@ const page = () => {
             <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row-reverse mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
               {/* Caption Gen */}
               <div
-                onClick={() => (window.location.href = '/our-work/caption-gen')}
+                onClick={() => router.push( '/our-work/caption-gen')}
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Caption.jpg)',
@@ -562,7 +565,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/caption-gen">Caption Gen</a>
+                    <Link href="/our-work/caption-gen">Caption Gen</Link >
                   </div>
                 </div>
               </div>
@@ -570,7 +573,7 @@ const page = () => {
               {/* Instant Save */}
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/instant-save-app')
+                  router.push( '/our-work/instant-save-app')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
@@ -582,7 +585,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/instant-save-app">Instant Save</a>
+                    <Link href="/our-work/instant-save-app">Instant Save</Link >
                   </div>
                 </div>
               </div>
@@ -592,7 +595,7 @@ const page = () => {
             <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row mt-5 sm:mt-0 lg:h-[400px] 2xl:h-[450px]">
               {/* Trendora (Eshop) */}
               <div
-                onClick={() => (window.location.href = '/our-work/eshop-app')}
+                onClick={() => router.push( '/our-work/eshop-app')}
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Eshop@2x.jpg)',
@@ -603,7 +606,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/eshop-app">Trendora</a>
+                    <Link href="/our-work/eshop-app">Trendora</Link >
                   </div>
                 </div>
               </div>
@@ -612,7 +615,7 @@ const page = () => {
 
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/food-inventory-app')
+                  router.push( '/our-work/food-inventory-app')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-full sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
@@ -624,7 +627,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/food-inventory-app">Foodventory</a>
+                    <Link href="/our-work/food-inventory-app">Foodventory</Link >
                   </div>
                 </div>
               </div>
@@ -635,7 +638,7 @@ const page = () => {
               {/* MedEase */}
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/doctor-booking-app')
+                  router.push( '/our-work/doctor-booking-app')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
@@ -647,7 +650,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/doctor-booking-app">MedEase</a>
+                    <Link href="/our-work/doctor-booking-app">MedEase</Link >
                   </div>
                 </div>
               </div>
@@ -655,7 +658,7 @@ const page = () => {
               {/* Al Abour */}
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/al-abour-app')
+                  router.push( '/our-work/al-abour-app')
                 }
                 className="flex overflow-hidden relative cursor-pointer group w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px]"
                 style={{
@@ -667,7 +670,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <a href="/our-work/al-abour-app">Al Abour</a>
+                    <Link href="/our-work/al-abour-app">Al Abour</Link >
                   </div>
                 </div>
               </div>
@@ -679,7 +682,7 @@ const page = () => {
           <>
             <div className="flex flex-col sm:flex-row-reverse  gap-5 sm:gap-10 mt-5 sm:mt-10 lg:h-[400px] 2xl:h-[450px]">
               <div
-                onClick={() => (window.location.href = '/our-work/caption-gen')}
+                onClick={() => router.push( '/our-work/caption-gen')}
                 className="flex overflow-hidden cursor-pointer relative group w-[100%] sm:w-[65%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Caption.jpg)',
@@ -691,15 +694,15 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/caption-gen">
+                    <Link className="font-poppin" href="/our-work/caption-gen">
                       Caption Gen{' '}
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
 
               <div
-                onClick={() => (window.location.href = '/our-work/food-app')}
+                onClick={() => router.push( '/our-work/food-app')}
                 className="flex overflow-hidden relative group w-[100%] cursor-pointer sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
                   backgroundImage: 'url(/our-work/main-page/Legal.jpg)',
@@ -711,9 +714,9 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/legal-wise-web">
+                    <Link className="font-poppin" href="/our-work/legal-wise-web">
                       Legal Wise Web
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
@@ -722,7 +725,7 @@ const page = () => {
             <div className="flex gap-5 sm:gap-10 flex-col sm:flex-row  mt-5 sm:mt-0 lg:h-[400px] 2xl:h-[450px]">
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/faoolun-website')
+                  router.push( '/our-work/faoolun-website')
                 }
                 className="flex overflow-hidden relative group w-[100%] sm:w-[65%] cursor-pointer lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -735,16 +738,16 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a className="font-poppin" href="/our-work/faoolun-website">
+                    <Link className="font-poppin" href="/our-work/faoolun-website">
                       Faoolun{' '}
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>
 
               <div
                 onClick={() =>
-                  (window.location.href = '/our-work/solwave-website')
+                  router.push( '/our-work/solwave-website')
                 }
                 className="flex overflow-hidden relative cursor-pointer group  w-[100%] sm:w-[35%] lg:h-[370px] 2xl:h-[400px] h-[300px] "
                 style={{
@@ -757,9 +760,9 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-2xl xl:text-4xl w-full text-center flex justify-center items-center gap-5">
-                    <a href="/our-work/solwave-website" className="font-poppin">
+                    <Link href="/our-work/solwave-website" className="font-poppin">
                       Solwave
-                    </a>
+                    </Link >
                   </div>
                 </div>
               </div>

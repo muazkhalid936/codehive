@@ -15,10 +15,10 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
-  const params = useParams();
-
+  
   const [isIndustriesDropdownOpen, setIsIndustriesDropdownOpen] =
-    useState(false);
+  useState(false);
+  const params = useParams();
   const t = useTranslations('translation');
 
   const [work, setWork] = useState(false);
@@ -67,7 +67,7 @@ const Navbar = () => {
             <Link href="/">
               <img
                 src="/Code hive Branding-01.png"
-                className="w-48 "
+                className="w-48"
                 alt="logo"
               />
             </Link>

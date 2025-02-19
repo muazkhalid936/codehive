@@ -1,15 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
-// React icons
 import { FiMenu } from "react-icons/fi";
 import { FaCaretDown, FaCaretUp, FaTimes } from "react-icons/fa";
-
-// Next.js Link
-import Link from "next/link";
-
-// Mock data imports (replace with actual data paths or APIs)
+import { usePathname, useRouter, Link } from "../i18n/routing";
 import { services, industries, ourWorks } from "../data";
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 import useStore from "../store/useUserStore";
 const NavbarPages = ({ isBlack }) => {
   const toggleLanguage = () => {
@@ -20,6 +16,8 @@ const NavbarPages = ({ isBlack }) => {
     }
     // console.log(language);
   };
+   const params = useParams();
+    const t = useTranslations('translation');
   const { language, setLanguage } = useStore();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
@@ -81,11 +79,7 @@ const NavbarPages = ({ isBlack }) => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <img
-            src="/Code hive Branding-02.png"
-            className="w-40 md:w-60"
-            alt="logo"
-          />
+          <img src="/Code hive Branding-02.png" className="w-48" alt="logo" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -129,16 +123,17 @@ const NavbarPages = ({ isBlack }) => {
             {language === "English" ? "Industries" : "المجالات"}
             {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {isIndustriesDropdownOpen && (
-              <div className="absolute top-4 mt-2 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 {industriesDropdown?.map(
                   (industry) =>
-                    industry.label !== "Our Booking System" && (
+                    industry.label !== "Our Booking System" &&
+                    industry.label !== "Reward Hive" && (
                       <Link
                         key={industry.label}
                         href={industry.href}
                         className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                       >
-                        {industry.label}
+                        {t(industry.label)}
                       </Link>
                     )
                 )}
@@ -154,13 +149,18 @@ const NavbarPages = ({ isBlack }) => {
             {language === "English" ? "Products" : "المنتجات"}
             {work ? <FaCaretUp /> : <FaCaretDown />}
             {work && (
-              <div className="absolute top-4 mt-2     left-0  bg-[#001A36]  w-[350px]  shadow-lg z-50">
+              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 <Link
-                  // key={industry.label}
-                  href={"/industries/our-booking-system"}
-                  className="block py-2 px-4  text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                  href="/industries/our-booking-system"
+                  className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                 >
-                  Our Booking System
+                  {t("ourBooking")}
+                </Link>
+                <Link
+                  href="/industries/reward-hive"
+                  className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                >
+                  {t("rewardHive")}
                 </Link>
               </div>
             )}

@@ -1,8 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { FiPhoneCall } from "react-icons/fi";
-import { FaArrowRight } from "react-icons/fa";
-import Link from "next/link";
 
 const Features = ({ data }) => {
   const [itemHovered, setItemHovered] = useState("");
@@ -29,7 +26,7 @@ const Features = ({ data }) => {
   return (
     <div className="bg-[#010b17] relative     z-50  overflow-hidden">
       <div className=" mx-8 py-[25px] sm:py-[45px]  text-white z-10 container">
-        <h1 className="sub_heading  gilray-font w-full  md:w-[60%]">
+        <h1 className="sub_heading  font-gilroy w-full  md:w-[60%]">
           {data.title.split(" ").map((word, index) => (
             <span
               key={index}
@@ -137,7 +134,9 @@ const Features = ({ data }) => {
                       backgroundOrigin: "padding-box, border-box",
                     }}
                   >
-                    <h2 className="text-center font-bold text-[17px]  ">{item.title}</h2>
+                    <h2 className="text-center font-bold text-[17px]  ">
+                      {item.title}
+                    </h2>
                     <p className="text-center text-[#fbfbfb] text-[8px] sm:text-[13px] ">
                       {item.description}
                     </p>

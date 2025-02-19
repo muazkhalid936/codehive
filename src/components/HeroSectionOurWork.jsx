@@ -17,7 +17,7 @@ const HeroSectionOurWork = ({
 }) => {
 
   const { language } = useStore();
-  
+  console.log(title)
   const titleWords = title.split(" ");
   const colors =
     bgImage && rightImage
@@ -29,7 +29,7 @@ const HeroSectionOurWork = ({
 
   const renderTitle = () => (
     <h2 className="main-heading hero_section_heading ">
-      {titleWords.length > 1 ? (
+      {titleWords.length > 0 ? (
         <>
           <span className="text-white">
             {titleWords.slice(0, -1).join(" ")}{" "}
@@ -63,7 +63,7 @@ const HeroSectionOurWork = ({
 
       <div className="container justify-between overflow-hidden mx-auto flex-col sm:flex-row flex max-h-[650px] pt-32 min-h-[600px] sm:min-h-[500px] h-[70vh]">
         {/* First Section */}
-        <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
+        <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5  flex-col">
           {" "}
           {renderTitle()}
           {description && (

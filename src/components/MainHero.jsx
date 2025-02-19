@@ -15,7 +15,7 @@ const MainHero = () => {
   const words1 = headingText1.split(' ');
 
   return (
-    <div className=" container flex-col-reverse h-[292px]    relative sm:pl-10 flex sm:flex-row bg-[#000B17] mx-auto  sm:mt-10">
+    <div className=" container flex-col-reverse h-[292px]    relative sm:pl-10 flex sm:flex-row bg-[#000B17] mx-auto  sm:mt-20">
       {/* Text Content */}
       <div className="flex sm:w-[50%] mt-[40vh] sm:mt-0   flex-col gap-5 text-white  xl:gap-8 ">
         <p
@@ -47,9 +47,10 @@ const MainHero = () => {
 
       {/* Spline Component */}
       <div
-        className="flex w-[200vw]  scale-75    flex-1 spline_model -top-20 -right-[16rem] absolute sm:-top-[100px] sm:scale-50   md:top-5 sm:h-[400px] xl:-top-14 md:scale-75 xl:scale-[0.8] 
-       sm:w-[850px] sm:-right-[21rem]  md:-right-60 xl:-right-44  sm:justify-end text-white sm:items-end  "
+        className="flex w-[200vw]  scale-75    flex-1 spline_model -top-20 -right-[16rem] absolute sm:-top-[50px]     sm:h-[400px]   sm:scale-[1] 
+        sm:-right-[21rem] sm:w-[70%] md:right-[-13vw]  sm:justify-end text-white sm:items-end  "
       >
+      {/* <div className='flex sm:w-1/2'> */}
         <Suspense>
           <Spline className=" " scene="/Logo animation.spline" />
         </Suspense>

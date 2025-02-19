@@ -87,7 +87,7 @@ import { Canvas } from '@react-three/fiber';
 import dynamic from 'next/dynamic';
 import useStore from '../../store/useUserStore';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import {Link} from '../../i18n/routing';
 gsap.registerPlugin(ScrollTrigger);
 
 // Lazy load the IphoneModel component

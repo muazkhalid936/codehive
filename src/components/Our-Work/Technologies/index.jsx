@@ -46,52 +46,126 @@ const Technologies = ({ rightImage }) => {
     {
       title: "Figma",
       image: "/technologies/Figma.png",
-      visible: ["Mr-app","word-smith-ai","caption-gen","doctor-booking-app","saloon-app","faoolun-website","solwave-website","instant-save-app","eshop-app","food-inventory-app","al-abour-app","legal-wise-web","laam-web","clixpos-website"],
+      visible: [
+        "Mr-app",
+        "word-smith-ai",
+        "caption-gen",
+        "doctor-booking-app",
+        "saloon-app",
+        "faoolun-website",
+        "solwave-website",
+        "instant-save-app",
+        "eshop-app",
+        "food-inventory-app",
+        "al-abour-app",
+        "legal-wise-web",
+        "laam-web",
+        "clixpos-website",
+      ],
     },
     {
       title: "Illustrator",
       image: "/technologies/Illustrator.png",
-      visible: ["instant-save-app","Mr-app","word-smith-ai","caption-gen","doctor-booking-app","laam-web","saloon-app","faoolun-website","solwave-website","eshop-app","food-inventory-app","al-abour-app","legal-wise-web","clixpos-website"],
+      visible: [
+        "instant-save-app",
+        "Mr-app",
+        "word-smith-ai",
+        "caption-gen",
+        "doctor-booking-app",
+        "laam-web",
+        "saloon-app",
+        "faoolun-website",
+        "solwave-website",
+        "eshop-app",
+        "food-inventory-app",
+        "al-abour-app",
+        "legal-wise-web",
+        "clixpos-website",
+      ],
     },
     {
       title: "Flutter",
       image: "/technologies/flutter.png",
-      visible: ["Mr-app","word-smith-ai","eshop-app","food-inventory-app","caption-gen","doctor-booking-app","saloon-app","instant-save-app","al-abour-app"],
+      visible: [
+        "Mr-app",
+        "word-smith-ai",
+        "eshop-app",
+        "food-inventory-app",
+        "caption-gen",
+        "doctor-booking-app",
+        "saloon-app",
+        "instant-save-app",
+        "al-abour-app",
+      ],
     },
     {
       title: "javaScript",
       image: "/technologies/js.png",
-      visible: ["Mr-app" ,"doctor-booking-app","al-abour-app","instant-save-app","food-inventory-app"],
+      visible: [
+        "Mr-app",
+        "doctor-booking-app",
+        "al-abour-app",
+        "instant-save-app",
+        "food-inventory-app",
+      ],
     },
     {
       title: "PHP",
       image: "/technologies/php.png",
-      visible: ["caption-gen","food-inventory-app","clixpos-website"],
+      visible: ["caption-gen", "food-inventory-app", "clixpos-website"],
     },
     {
       title: ".Net",
       image: "/technologies/net.png",
-      visible: ["word-smith-ai","saloon-app","eshop-app","solwave-website","laam-web"],
+      visible: [
+        "word-smith-ai",
+        "saloon-app",
+        "eshop-app",
+        "solwave-website",
+        "laam-web",
+      ],
     },
     {
       title: "React",
       image: "/technologies/react.png",
-      visible: ["Mr-app","legal-wise-web","doctor-booking-app","faoolun-website","al-abour-app","instant-save-app"],
+      visible: [
+        "Mr-app",
+        "legal-wise-web",
+        "doctor-booking-app",
+        "faoolun-website",
+        "al-abour-app",
+        "instant-save-app",
+      ],
     },
     {
       title: "Next.js",
       image: "/technologies/next.png",
-      visible: ["word-smith-ai","saloon-app","legal-wise-web","faoolun-website","clixpos-website","eshop-app","laam-web" ,"solwave-website"],
+      visible: [
+        "word-smith-ai",
+        "saloon-app",
+        "legal-wise-web",
+        "faoolun-website",
+        "clixpos-website",
+        "eshop-app",
+        "laam-web",
+        "solwave-website",
+      ],
     },
     {
       title: "SQL",
       image: "/technologies/sql.png",
-      visible: ["word-smith-ai","saloon-app","eshop-app"],
+      visible: ["word-smith-ai", "saloon-app", "eshop-app"],
     },
     {
       title: "Python",
       image: "/technologies/py.png",
-      visible: ["Mr-app","doctor-booking-app","food-inventory-app","al-abour-app","instant-save-app"],
+      visible: [
+        "Mr-app",
+        "doctor-booking-app",
+        "food-inventory-app",
+        "al-abour-app",
+        "instant-save-app",
+      ],
     },
     {
       title: "Indesign",
@@ -106,12 +180,26 @@ const Technologies = ({ rightImage }) => {
     {
       title: "CSS",
       image: "/technologies/css.png",
-      visible: ["caption-gen","faoolun-website","solwave-website","legal-wise-web","laam-web","clixpos-website"],
+      visible: [
+        "caption-gen",
+        "faoolun-website",
+        "solwave-website",
+        "legal-wise-web",
+        "laam-web",
+        "clixpos-website",
+      ],
     },
     {
       title: "HTML",
       image: "/technologies/html.png",
-      visible: ["caption-gen","laam-web","faoolun-website","solwave-website","legal-wise-web","clixpos-website"],
+      visible: [
+        "caption-gen",
+        "laam-web",
+        "faoolun-website",
+        "solwave-website",
+        "legal-wise-web",
+        "clixpos-website",
+      ],
     },
     {
       visible: [],
@@ -126,19 +214,18 @@ const Technologies = ({ rightImage }) => {
   ];
 
   return (
-    <div className="bg-[#010B17] overflow-hidden text-white py-20">
-      <div className="container flex flex-col md:flex-row justify-between gap-6">
-        <div ref={firstDivRef} className="first-div">
-          <h1 className="gilray-font sub_heading">
+    <div className="bg-[#010B17]  h-[600px] relative overflow-hidden text-white py-10">
+      <div className=" flex  container flex-col md:flex-row justify-between">
+        <div
+          ref={firstDivRef}
+          className="first-div justify-center items-center md:w-[40%] "
+        >
+          <h1 className="gilray-font text-[#229dd9] mt-[20px] sub_heading">
             Technologies
-            <span className="text-[#229dd9]"> We Used</span>
+            <span className="text-white"> We Used</span>
           </h1>
-          {/* <p className="w-full  main_hero_slogan my-5">
-            Our iOS app development services are powered by a cutting-edge tech
-            stack, ensuring exceptional performance and user experiences.
-          </p> */}
 
-          <div className="grid grid-cols-2 md:grid-cols-3 pt-4">
+          <div className="grid grid-cols-2  md:grid-cols-3 mt-[30px]">
             {technologies
               .filter((tech) => !tech.visible || tech.visible.includes(slug))
               .map((tech, index) => (
@@ -146,18 +233,14 @@ const Technologies = ({ rightImage }) => {
                   key={index}
                   className={`flex flex-col border border-[#343c45] py-5 items-center gap-4 ${
                     index === 0 ? "rounded-tl-[40px]" : ""
-                  }${
-                    index === 2 ? "rounded-tr-[40px]" : ""
-                  }${
+                  }${index === 2 ? "rounded-tr-[40px]" : ""}${
                     index === 3 ? "rounded-bl-[40px]" : ""
-                  }${
-                    index === 5 ? "rounded-br-[40px]" : ""
-                  }`}
+                  }${index === 5 ? "rounded-br-[40px]" : ""}`}
                 >
                   <img
                     src={tech.image}
                     alt="image"
-                    className="w-20 h-20 object-contain"
+                    className="w-20 h-20  object-contain"
                   />
                   <h1 className="text-lg ">{tech.title}</h1>
                 </div>
@@ -168,9 +251,15 @@ const Technologies = ({ rightImage }) => {
           ref={imageRef}
           src={rightImage}
           alt="image"
-          className="h-[400px] md:h-[500px] w-full md:w-1/2 object-contain"
+          className="h-[400px]  md:h-[500px] w-full md:w-[60%] object-contain"
         />
       </div>
+      {/* <img
+        src="/technologies/shade.png"
+        alt="image"
+        className="absolute  bottom-[-700px] right-[-40vw]"
+        // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
+      /> */}
     </div>
   );
 };

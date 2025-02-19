@@ -8,7 +8,7 @@ const Banner = ({
   description,
   backgroundColor,
   showBottomArrow,
-  buttonText = "Get Started", // Default button text
+  buttonText = "Book a call", // Default button text
   blueWords = [], // Words to be styled in blue
 }) => {
   // console.log(backgroundColor);
@@ -21,7 +21,7 @@ const Banner = ({
       <div
         className={`bg-cover relative bg-center  ${
           rightImage ? "h-[400px]" : "h-[100px]"
-        } sm:h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[300px] max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
+        } sm:h-[65vh] md:h-[55vh] 2xl:h-[55vh] min-h-[380px] max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundPosition: "top",

@@ -105,7 +105,7 @@ export const servicesAdvanceSolutionData = {
 };
 
 export const aboutScreenFeaturesData = {
-  title: 'Values Our Core',
+  title: 'Our Core Values',
   columns: 4,
   description:
     'Recognized globally for our industry-leading development expertise and innovative solutions. Creating innovative, user-friendly, and life-changing products is what we do!',
@@ -284,7 +284,7 @@ export const services = [
       rightImage: '/services/software-development-banner.png',
       showBottomArrow: false,
       backgroundColor: '#ffdfcb',
-      buttonTitle: 'Get Started',
+      buttonText: 'Book a call',
     },
 
     featuresData: {
@@ -383,6 +383,8 @@ export const services = [
       description:
         'Don’t settle for generic solutions when you can have software tailored specifically for your needs. Our expert team is here to help you streamline operations, enhance efficiency, and drive growth.',
       showBottomArrow: true,
+      buttonText: 'Get a Quote',
+
     },
     testimonialsData: [
       {
@@ -450,6 +452,8 @@ export const services = [
       rightImage: '/services/mobile-app-dev/bannerOne.png',
       showBottomArrow: false,
       backgroundColor: '#efefef',
+      buttonTitle: 'Book a call',
+
     },
 
     featuresData: {
@@ -3594,6 +3598,8 @@ export const ourWorks = [
     image: '/our-work/wordsmith-ai/banner.png',
   },
   {
+    bgColor:"#5b80e8",
+    bg:true,
     title: 'Caption Gen',
     slug: 'caption-gen',
     heroData: {
@@ -4954,6 +4960,9 @@ export const ourWorks = [
     image: '/our-work/al-abour-app/Banner.png',
   },
   {
+    bgColor:"#4e83af",
+    bg:true,
+
     title: 'Legal Wise Web',
     slug: 'legal-wise-web',
     heroData: {
@@ -5224,6 +5233,9 @@ export const ourWorks = [
     image: '/our-work/laam-web/Banner.png',
   },
   {
+    bgColor:"#7A9AF4",
+    bg:true,
+
     title: 'ClixPOS Website',
     slug: 'clixpos-website',
     heroData: {

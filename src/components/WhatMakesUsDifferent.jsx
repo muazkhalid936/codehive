@@ -76,7 +76,7 @@ const WhatMakesUsDifferent = ({ data }) => {
       ref={containerRef}
     >
       <div className="w-auto text-center mx-auto">
-        <h1 className="sub_heading mb-10 gilray-font w-full">
+        <h1 className="sub_heading mb-10 font-gilroy w-full">
           {data.title.split(" ").map((word, index) => (
             <span
               key={index}
@@ -108,20 +108,20 @@ const WhatMakesUsDifferent = ({ data }) => {
             {/* <span className="border-s border-gray-300 absolute h-full mt-10 left-8"></span> */}
             {data.steps.map((value, index) => (
               <div
-                className="flex gap-[2rem] flex-row justify-around flex-1 items-center"
+                className="flex  flex-row justify-around flex-1 items-center"
                 key={index}
               >
-                <div className="sm:w-1/2 sm:flex hidden  justify-center items-center">
+                <div className="sm:w-1/2 sm:flex hidden  justify-start items-center">
                   <img
                     key={index}
                     src={value.img}
-                    className="w-[70%] opacity-0 mx-auto  object-cover h-[180px] rounded-2xl"
+                    className=" opacity-0 w-[70%]  object-cover h-[180px] rounded-2xl"
                     ref={(el) => (imagesRef.current[index] = el)}
                   />
                 </div>
 
                 <li
-                  className="sm:ms-6 sm:w-1/2 flex flex-col sm:flex-row gap-3 sm:gap-10 justify-center items-center "
+                  className="sm:w-1/2 flex flex-col sm:flex-row gap-3 sm:gap-10 justify-start items-center "
                   key={index}
                   ref={(el) => (stepsRef.current[index] = el)}
                 >

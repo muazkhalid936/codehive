@@ -1,6 +1,7 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useRouter } from "next/navigation";
+import {  useRouter } from '../../i18n/routing';
+
 import useStore from "../../store/useUserStore";
 
 const StackCard = ({ bg, imgLink, heading, num, para, link }) => {

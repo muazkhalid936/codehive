@@ -7,16 +7,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const Testimonials = ({ testimonials }) => {
-  const swiperRef = useRef(null); // Ref for Swiper instance
+  const swiperRef = useRef(null); 
 
   return (
     <section className="bg-white  ">
       <div className="container mx-auto ">
-        {/* Title and Carousel Controls */}
         <div className="flex flex-row mt-[25px] sm:mt-[45px] items-center justify-between ">
-          {/* Title */}
           <h2
-            className=" text-left    sub_heading gilray-font"
+            className=" text-left    sub_heading font-gilroy"
             style={{
               textDecorationSkipInk: "none",
               textUnderlinePosition: "from-font",
@@ -25,7 +23,6 @@ const Testimonials = ({ testimonials }) => {
             What They <span className="text-blueColor">Say</span> About Us
           </h2>
 
-          {/* Carousel Buttons */}
           <div className=" gap-2 hidden sm:flex sm:mt-0">
             <button
               className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"

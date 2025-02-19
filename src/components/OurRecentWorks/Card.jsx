@@ -1,7 +1,9 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import useStore from "../../store/useUserStore";
-import { useRouter } from "next/navigation";
+import {  useRouter } from '../../i18n/routing';
+
+
 const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
   const router = useRouter();
   const { language } = useStore();
@@ -34,7 +36,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
           <img src={Img} className="h-10" />
         </div>
         <h2 className="text-black text-2xl font-semibold">{head}</h2>
-        <p className="text-black ">{para}</p>
+        <p className="text-black font-semibold ">{para}</p>
         <hr className="border hidden group-hover:flex border-black w-full" />
         <button
           onClick={() => router.push(link)}
