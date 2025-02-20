@@ -12,12 +12,12 @@ const IndustryDetails = ({ panelData }) => {
   return (
     <div className="bg-[#000B17] overflow-hidden text-white py-[55px]">
       <div className="container mx-auto">
-        <div className="bg-white rounded-full flex justify-center gap-5 py-4 px-5">
-          {panelData.map((panel) => (
+      <div className="bg-white rounded-full no-scrollbar overflow-x-auto sm:overflow-x-hidden flex gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide">
+      {panelData.map((panel) => (
             <button
               key={panel.id}
               onClick={() => setActivePanel(panel)}
-              className={`py-3 main_hero_slogan rounded-full flex flex-1 items-center justify-center ${
+              className={`py-3 main_hero_slogan rounded-full flex flex-1 px-4 items-center justify-center ${
                 activePanel.id === panel.id
                   ? "bg-gradient-to-r from-[#219DD9] to-[#125784] text-white"
                   : "bg-[#e9e9e9] text-[#68747b]"

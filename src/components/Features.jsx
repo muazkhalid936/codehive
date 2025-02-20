@@ -26,7 +26,7 @@ const Features = ({ data }) => {
   return (
     <div className="bg-[#010b17] relative     z-50  overflow-hidden">
       <div className=" mx-8 py-[25px] sm:py-[45px]  text-white z-10 container">
-        <h1 className="sub_heading  font-gilroy w-full  md:w-[60%]">
+        <h1 className="sub_heading  font-gilroy w-full text-center sm:text-start md:w-[60%]">
           {data.title.split(" ").map((word, index) => (
             <span
               key={index}
@@ -36,7 +36,7 @@ const Features = ({ data }) => {
             </span>
           ))}
         </h1>
-        <p className="w-full md:w-[55%] sm:my-5 my-2 main_hero_slogan sm:leading-6">
+        <p className="w-full md:w-[55%] text-center sm:text-start sm:my-5 my-2 main_hero_slogan sm:leading-6">
           {data.description}
         </p>
 
@@ -88,7 +88,7 @@ const Features = ({ data }) => {
                 >
                   {/* Image Container */}
                   <div
-                    className={`transition-opacity duration-500 ${
+                    className={`transition-opacity flex flex-col justify-center items-center duration-500 ${
                       itemHovered === item.title || clickedItem === item.title
                         ? "opacity-0"
                         : "opacity-100"
@@ -134,7 +134,7 @@ const Features = ({ data }) => {
                       backgroundOrigin: "padding-box, border-box",
                     }}
                   >
-                    <h2 className="text-center font-bold text-[17px]  ">
+                    <h2 className="text-center font-bold text-[14px] sm:text-[17px]  ">
                       {item.title}
                     </h2>
                     <p className="text-center text-[#fbfbfb] text-[8px] sm:text-[13px] ">

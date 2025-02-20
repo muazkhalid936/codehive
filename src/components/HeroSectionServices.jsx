@@ -47,7 +47,7 @@ const HeroSectionServices = ({
         <img
           src="/HeroVector.png"
           alt="Decorative Top Arrow"
-          className="absolute top-20 -right-0 -z-50  h-[200px] md:h-[300px] object-contain"
+          className="absolute hidden sm:flex top-20 -right-0 -z-50  h-[200px] md:h-[300px] object-contain"
           aria-label="Top Arrow"
         />
       )}

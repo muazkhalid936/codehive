@@ -15,9 +15,9 @@ const MainHero = () => {
   const words1 = headingText1.split(' ');
 
   return (
-    <div className=" container flex-col-reverse h-[292px]    relative sm:pl-10 flex sm:flex-row bg-[#000B17] mx-auto  sm:mt-20">
+    <div className=" container flex-col-reverse sm:h-[292px]    relative sm:pl-10 flex sm:flex-row bg-[#000B17] mx-auto  sm:mt-20">
       {/* Text Content */}
-      <div className="flex sm:w-[50%] mt-[40vh] sm:mt-0   flex-col gap-5 text-white  xl:gap-8 ">
+      <div className="flex sm:w-[50%] mt-[300px] sm:mt-0   flex-col gap-5 text-white  xl:gap-8 ">
         <p
           className={`
           

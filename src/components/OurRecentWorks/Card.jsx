@@ -1,11 +1,14 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import useStore from "../../store/useUserStore";
-import {  useRouter } from '../../i18n/routing';
-
+import { useRouter } from "../../i18n/routing";
 
 const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
   const router = useRouter();
+  const [height, setHeight] = React.useState(false);
+  const handleHeight = () => {
+  setHeight(!height);
+  };
   const { language } = useStore();
   return (
     <div
@@ -27,9 +30,10 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
 
       {/* Main card content with transition */}
       <div
-            dir={language === "English" ? "ltr" : "rtl"}
-
-      className="absolute backdrop-blur-sm h-[170px] bg-white bg-opacity-20 transition-all group ease-in-out duration-300 hover:h-[240px] bottom-0 inset-0  hover:md:top-[59%] md:top-[74%] top-[62%] rounded-lg flex flex-col justify-center p-4 gap-2">
+        dir={language === "English" ? "ltr" : "rtl"}
+        className={`absolute backdrop-blur-sm h-[170px] bg-white bg-opacity-20 transition-all ${height?"h-[240px] top-[47%]":"h-[170px] top-[62%]"} group ease-in-out duration-300 hover:h-[240px] bottom-0 inset-0  hover:md:top-[59%] md:top-[74%]   flex flex-col justify-center p-4 gap-2`}
+        onClick={() => handleHeight()}
+      >
         <div className="flex justify-start items-center">
           {/* {Icon && <Icon className="text-4xl pointer-events-none" />} Prevent hover effects
            */}

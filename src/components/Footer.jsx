@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import {Link} from "../i18n/routing";
 import React from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -10,8 +10,8 @@ const Footer = () => {
   const { language } = useStore();
   return (
     <div className="bg-gradient-to-b from-[#0a1929]   to-[#020d1a] flex justify-center items-center py-10  md:py-2 md:h-[250px]">
-      <div className="container flex flex-col md:flex-row gap-10 md:gap-0 mx-auto">
-        <div className="flex  flex-col  md:w-[70%] gap-4 md:gap-10 mt-5  items-start">
+      <div className="container flex flex-col md:flex-row gap-2 md:gap-0 mx-auto">
+        <div className="flex  flex-col  md:w-[70%]  gap-2 sm:gap-4 md:gap-10 mt-5  items-start">
           <div className="flex gap-4">
             <div className="bg-transparent cursor-pointer group transition-all duration-300 border border-white hover:border-blueColor   hover:bg-blueColor  rounded-full p-2">
               <FaInstagram className="text-white w-7 h-7  " />
@@ -63,7 +63,7 @@ const Footer = () => {
           <div className="text-gray-500 hidden sm:flex main_hero_slogan">
             <p>
               {language === "English"
-                ? "&copy; 2024 Codehive. All rights reserved."
+                ? "© 2024 Codehive. All rights reserved."
                 : ".كودھاف. جمع الحقوق محفوظة 2024 ©"}
             </p>
           </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         <div className="text-gray-500 flex sm:hidden justify-center main_hero_slogan">
           <p>
             {language === "English"
-              ? "&copy; 2024 Codehive. All rights reserved."
+              ? "© 2024 Codehive. All rights reserved."
               : ".كودھاف. جمع الحقوق محفوظة 2024 ©"}
           </p>
         </div>

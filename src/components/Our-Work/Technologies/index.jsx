@@ -214,18 +214,18 @@ const Technologies = ({ rightImage }) => {
   ];
 
   return (
-    <div className="bg-[#010B17]  h-[600px] relative overflow-hidden text-white py-10">
+    <div className="bg-[#010B17]  sm:h-[600px] relative overflow-hidden text-white sm:py-10">
       <div className=" flex  container flex-col md:flex-row justify-between">
         <div
           ref={firstDivRef}
           className="first-div justify-center items-center md:w-[40%] "
         >
-          <h1 className="gilray-font text-[#229dd9] mt-[20px] sub_heading">
+          <h1 className="gilray-font text-[#229dd9] text-center  sm:text-start mt-[20px] sub_heading">
             Technologies
             <span className="text-white"> We Used</span>
           </h1>
 
-          <div className="grid grid-cols-2  md:grid-cols-3 mt-[30px]">
+          <div className="grid grid-cols-3 mt-[30px]">
             {technologies
               .filter((tech) => !tech.visible || tech.visible.includes(slug))
               .map((tech, index) => (
@@ -240,7 +240,7 @@ const Technologies = ({ rightImage }) => {
                   <img
                     src={tech.image}
                     alt="image"
-                    className="w-20 h-20  object-contain"
+                    className="sm:w-20 w-10 h-10 sm:h-20  object-contain"
                   />
                   <h1 className="text-lg ">{tech.title}</h1>
                 </div>
@@ -251,7 +251,7 @@ const Technologies = ({ rightImage }) => {
           ref={imageRef}
           src={rightImage}
           alt="image"
-          className="h-[400px] z-[2] md:h-[500px] w-full md:w-[60%] object-contain"
+          className="h-[300px] z-[2] md:h-[500px] w-full md:w-[60%] object-contain"
         />
       </div>
       <img

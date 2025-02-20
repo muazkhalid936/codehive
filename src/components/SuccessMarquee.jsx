@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, History, EffectCards } from "swiper/modules";
@@ -8,10 +8,13 @@ import "swiper/css/bundle";
 
 const SuccessMarquee = () => {
   let space;
-  if (window.innerWidth < 640) {
-    space = 10;
-  } else {
-    space = 50;}
+  useEffect(() => {
+    if (window.innerWidth < 640) {
+      space = 0;
+    } else {
+      space = 50;
+    }
+  });
   return (
     <div className="bg-[#0d1e30] py-2 overflow-hidden w-full">
       <div className="marquee">
@@ -44,12 +47,8 @@ const SuccessMarquee = () => {
           >
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
-                <img
-                  src="/c1.png"
-                  alt="client-logo"
-                  className="w-10 h-10"
-                />
-                <p className="px-2 font-bold font-lato">
+                <img src="/c1.png" alt="client-logo" className="w-10 h-10" />
+                <p className="sm:px-2 font-bold pl-2 font-lato">
                   5+ Years of Experience
                 </p>
               </div>
@@ -57,37 +56,29 @@ const SuccessMarquee = () => {
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img src="/c2.png" alt="client-logo" className="w-10 h-10" />
-                <p className="px-2 font-bold font-lato">
+                <p className="sm:px-2 font-bold pl-2 font-lato">
                   500+ Successful Clients
                 </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex justify-center items-center text-white">
-                <img
-                  src="/c3.png"
-                  alt="client-logo"
-                  className="w-10 h-10"
-                />
-                <p className="px-2 font-bold font-lato">50+ Talent Globally</p>
+                <img src="/c3.png" alt="client-logo" className="w-10 h-10" />
+                <p className="sm:px-2 font-bold pl-2 font-lato">50+ Talent Globally</p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
                 <img src="/c4.png" alt="client-logo" className="w-10 h-10" />
-                <p className="px-2 font-bold font-lato">
-                  20+ Partners Globally 
+                <p className="sm:px-2 pl-2 font-bold font-lato">
+                  20+ Partners Globally
                 </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex ml-3 sm:ml-0 justify-center items-center text-white">
-                <img
-                  src="/c5.png"
-                  alt="client-logo"
-                  className="w-10 h-10"
-                />
-                <p className="px-2 font-bold font-lato">
+                <img src="/c5.png" alt="client-logo" className="w-10 h-10" />
+                <p className="sm:px-2 pl-2 font-bold font-lato">
                   500+ Projects Completion{" "}
                 </p>
               </div>

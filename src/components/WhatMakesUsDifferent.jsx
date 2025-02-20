@@ -12,6 +12,8 @@ const WhatMakesUsDifferent = ({ data }) => {
 
   useEffect(() => {
     stepsRef.current.forEach((step, index) => {
+      const startValue = window.innerWidth < 640 ? "top 40%" : "top 60%";
+
       gsap.fromTo(
         step.querySelector(".animate-title"),
         { opacity: 0 },
@@ -19,7 +21,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 60%",
+            start: startValue,
             end: "+=150",
             toggleActions: "play reverse play reverse",
           },
@@ -33,7 +35,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 60%",
+            start: startValue,
             end: "+=150",
             toggleActions: "play reverse play reverse",
           },
@@ -47,7 +49,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           borderColor: "#219DD9",
           scrollTrigger: {
             trigger: step,
-            start: "top 60%",
+            start: startValue,
             end: "+=150",
             toggleActions: "play reverse play reverse",
           },
@@ -61,7 +63,7 @@ const WhatMakesUsDifferent = ({ data }) => {
           opacity: 1,
           scrollTrigger: {
             trigger: step,
-            start: "top 60%",
+            start: startValue,
             end: "+=150",
             toggleActions: "play reverse play reverse",
           },
@@ -76,7 +78,7 @@ const WhatMakesUsDifferent = ({ data }) => {
       ref={containerRef}
     >
       <div className="w-auto text-center mx-auto">
-        <h1 className="sub_heading mb-10 font-gilroy w-full">
+        <h1 className="sub_heading sm:mb-10 font-gilroy w-full">
           {data.title.split(" ").map((word, index) => (
             <span
               key={index}
@@ -126,8 +128,8 @@ const WhatMakesUsDifferent = ({ data }) => {
                   ref={(el) => (stepsRef.current[index] = el)}
                 >
                   {/* Circle Animation */}
-                  <div className="w-[50px] mr-5 ">
-                    <span className="circle   flex items-center justify-center  p-8 px-12   border-[#ccc] border-2 rounded-full text-[#219DD9] z-150 bg-white">
+                  <div className="w-[50px] sm:mr-5 ">
+                    <span className="circle   flex items-center justify-center  sm:p-8 sm:px-12 py-2 px-4   border-[#ccc] border-2 rounded-full text-[#219DD9] z-150 bg-white">
                       <span className="font-extrabold text-xl font-gilroy">
                         {value.id.toString().padStart(2, "0")}
                       </span>

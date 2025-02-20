@@ -106,7 +106,6 @@ const ScrollAnimation = () => {
     '/iphoneModel/Car wash.jpg',
     '/iphoneModel/Delivery.png',
     '/iphoneModel/Health Care.jpg',
-    // "/iphoneModel/Booking.jpg",
     '/iphoneModel/Ecommerce.jpg',
     '/iphoneModel/Fitness.png',
   ];
@@ -268,7 +267,7 @@ const ScrollAnimation = () => {
     <div>
       <div
         ref={containerRef}
-        className="flex flex-col items-center justify-center mt-[-300px]  h-[100vh] min-h-[400px]  main22 overflow-hidden"
+        className="flex flex-col container items-center justify-center mt-[-300px]  h-[100vh] min-h-[400px]  main22 overflow-hidden"
       >
         {ourIndustriesData.map((item, index) => (
           <div

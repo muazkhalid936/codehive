@@ -49,24 +49,24 @@
 
 @media (max-width: 768px) {
   .card-1 {
-    top: 100px;
+    top: -40px;
   }
   .card-2 {
-    top: 110px;
+    top: -30px;
   }
   .card-3 {
-    top: 120px;
+    top: -20px;
   }
   .card-4 {
-    top: 130px;
+    top: -10px;
   }
   
   .card-5 {
     /* left: translate(-50%, -50%); */
-    top: 140px;
+    top: 0px;
   }
   .card-6 {
     /* left: translate(-50%, -50%); */
-    top: 150px;
+    top: 10px;
   }
 }

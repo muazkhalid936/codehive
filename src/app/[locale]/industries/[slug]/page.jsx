@@ -45,7 +45,7 @@ const page = async ({ params }) => {
         <Banner {...industry.bannerDataTwo} />
         <img
           src="/feature/Vector.png"
-          className="absolute top-[60%] right-0 w-60 "
+          className="absolute hidden sm:flex top-[60%] right-0 w-60 "
         />
       </div>
       {slug === 'our-booking-system' && <Packages />}

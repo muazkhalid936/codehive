@@ -34,7 +34,7 @@ const page = async ({ params }) => {
           <Banner {...service.bannerData} />
           <img
             src="/feature/Vector.png"
-            className="absolute top-[60%] right-0 w-60 "
+            className="absolute hidden sm:flex top-[60%] right-0 w-60 "
           />
         </div>
       )}

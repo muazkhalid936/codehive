@@ -40,7 +40,7 @@ const ShortRevealHeading = () => {
   }, []);
 
   return (
-    <div className="container h-[400px] mb-[800px] 2xl:mb-[700px] sm:mt-[-1400px] mt-[-1300px] 2xl:mt-[-1700px] flex justify-center items-center mx-auto">
+    <div className="container h-[400px] mb-[800px] 2xl:mb-[700px] sm:mt-[-1400px] mt-[-1800px] 2xl:mt-[-1700px] flex justify-center items-center mx-auto">
       <p
         ref={textRef}
         className="animated-text-short main-heading header text-4xl sm:text-[60px] text-white"

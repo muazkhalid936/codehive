@@ -47,7 +47,7 @@ const page = async ({ params }) => {
           <img
             src={work.image}
             alt={`${slug} featured image`}
-            className="w-full object-contain rounded-xl"
+            className="w-full  object-contain rounded-xl"
           />
         </div>
       )}

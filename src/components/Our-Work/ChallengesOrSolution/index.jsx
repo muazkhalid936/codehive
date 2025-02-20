@@ -45,22 +45,22 @@ const ChallengesOrSolution = ({ title, image, description }) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col  overflow-hidden md:flex-row items-center justify-around container sm:gap-6 py-[50px]"
+      className="flex flex-col gap-4   overflow-hidden md:flex-row items-center justify-around container sm:gap-6 py-[50px]"
     >
 
-      <div className=" w-full md:w-1/2">
+      <div className="  md:w-1/2">
         
       <img
         ref={imgRef}
         src={image}
         alt="image"
-        className=" object-contain h-[450px]"
+        className=" object-contain mx-auto h-[250px] sm:h-[450px]"
         // style={{ transform: "translateX(-200px)", opacity: 0 }}
       />
       </div>
       <div
         ref={textRef}
-        className="flex-col flex gap-4 w-full md:w-1/2"
+        className="flex-col flex gap-2 sm:gap-4 w-full md:w-1/2"
         style={{ transform: "translateX(200px)", opacity: 0 }}
       >
         <h1 className="gilray-font text-center sm:text-start sub_heading">{title}</h1>

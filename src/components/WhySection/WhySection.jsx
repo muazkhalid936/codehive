@@ -94,7 +94,10 @@ const ImageScrollEffect = () => {
         );
     };
 
-    headingAnimations();
+    if(window.innerWidth > 640){
+
+      headingAnimations();
+    }
 
     // Mobile animations
     // Select all mobile items (each containing an image and a heading)
