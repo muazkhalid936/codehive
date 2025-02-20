@@ -7,6 +7,11 @@ import { EffectFade } from "swiper/modules";
 import "swiper/css/bundle";
 
 const SuccessMarquee = () => {
+  let space;
+  if (window.innerWidth < 640) {
+    space = 10;
+  } else {
+    space = 50;}
   return (
     <div className="bg-[#0d1e30] py-2 overflow-hidden w-full">
       <div className="marquee">
@@ -15,7 +20,7 @@ const SuccessMarquee = () => {
         sm:text-[16px] gap-32 "
         >
           <Swiper
-            spaceBetween={50}
+            spaceBetween={space}
             slidesPerView={3}
             // centeredSlides={true}
             modules={[Autoplay, EffectFade, History, EffectCards]}

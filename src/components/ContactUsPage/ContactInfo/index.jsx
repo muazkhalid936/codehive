@@ -27,7 +27,8 @@ const ContactInfo = () => {
             {/* Phone */}
             <p className="flex items-center justify-center text-lg">
               <div className="flex items-center group">
-                <IoLogoWhatsapp className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
+                {/* <IoLogoWhatsapp className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" /> */}
+               < img src="/contact/wp.png" className="w-7 mr-3 " />
                 <a
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
@@ -38,8 +39,8 @@ const ContactInfo = () => {
             </p>
             <p className="flex items-center justify-center text-lg">
               <div className="flex items-center group">
-                <MdPhone className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
-                <a
+              < img src="/contact/phone.png" className="w-7 mr-3 " />
+              <a
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >
@@ -50,8 +51,8 @@ const ContactInfo = () => {
             {/* Email */}
             <p className="flex items-center justify-center text-lg">
               <div className="flex items-center group">
-                <MdEmail className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
-                <a
+              < img src="/contact/mail.png" className="w-7 mr-3 " />
+              <a
                   href="mailto:info@codehive.ae"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >
@@ -60,14 +61,14 @@ const ContactInfo = () => {
               </div>
             </p>
             {/* Location */}
-            <p className="flex items-center justify-center text-lg">
-              <HiOutlineLocationMarker className="bg-white text-black rounded-full p-1 w-6 h-6 mr-2" />
-              Office M-18, 1st floor, Sajaya Plaza Al Barsha 3, Dubai, UAE
+            <p className="flex items-center  justify-center text-lg">
+            < img src="/contact/gps.png" className="w-7 mr-3 " />
+            Office M-18, 1st floor, Sajaya Plaza Al Barsha 3, Dubai, UAE
             </p>
             <div className="flex items-center justify-center mt-2">
                 <div className="flex items-center group">
-                  <FaAt className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
-                  <a
+                < img src="/contact/support.png" className="w-7 mr-3 " />
+                <a
                     href="mailto:support@codehive.ae"
                     className=" text-white group-hover:text-blueColor   hover:underline"
                   >

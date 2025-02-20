@@ -258,12 +258,9 @@ const ScrollAnimation = () => {
   }, []);
 
   const canvasStyle = {
-    height: '70vh',
-    '@media (max-width: 768px)': {
       height: '50vh',
-    },
     '@media (max-width: 480px)': {
-      height: '40vh',
+      height: '300px',
     },
   };
 
@@ -289,19 +286,19 @@ const ScrollAnimation = () => {
                   {language === 'English' ? item.title : item.atitle}
                 </p>
               </div>
-              <p className="mt-4 main_hero_slogan ">
+              <p className="mt-4 main_hero_slogan text-white">
                 {language === 'English' ? item?.des1 : item?.ades1}
               </p>
-              <p className="mt-4 main_hero_slogan ">
+              <p className="mt-4 text-white main_hero_slogan ">
                 {language === 'English' ? item?.des2 : item?.ades2}
               </p>
-              <p className="mt-4 main_hero_slogan ">
+              <p className="mt-4 main_hero_slogan text-white ">
                 {language === 'English' ? item?.des3 : item?.ades3}
               </p>
-              <p className="mt-4 main_hero_slogan ">
+              <p className="mt-4 main_hero_slogan text-white">
                 {language === 'English' ? item?.des4 : item?.ades4}
               </p>
-              <p className="mt-4 main_hero_slogan ">
+              <p className="mt-4 text-white main_hero_slogan ">
                 {language === 'English' ? item?.des5 : item?.ades5}
               </p>
               <div className="flex justify-center sm:justify-start items-center gap-3">
@@ -318,8 +315,8 @@ const ScrollAnimation = () => {
               <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
-                style={canvasStyle}
-              >
+                className="canvas-container"
+                >
                 <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
               </Canvas>
             </div>

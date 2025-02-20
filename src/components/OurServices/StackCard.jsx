@@ -38,7 +38,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
           </h1>
         </div>
 
-        <div className="main_hero_slogan text-start ">{para}</div>
+        <div className="main_hero_slogan text-start text-white">{para}</div>
 
         <div className=" flex justify-start items-start flex-1 gap-2">
           <button

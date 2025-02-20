@@ -329,3 +329,14 @@
     width: 150px !important;
   }
 }
+
+
+.canvas-container {
+  height: 650px !important;
+}
+
+@media (max-width: 480px) {
+  .canvas-container {
+    height: 300px !important;
+  }
+}

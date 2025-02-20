@@ -12,7 +12,6 @@ const Navbar = () => {
   const { language, setLanguage } = useUserStore();
   const router = useRouter();
   const pathname = usePathname();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   
@@ -22,6 +21,7 @@ const Navbar = () => {
   const t = useTranslations('translation');
 
   const [work, setWork] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Toggle the sidebar for mobile
   const toggleSidebar = () => {

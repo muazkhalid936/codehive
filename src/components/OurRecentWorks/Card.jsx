@@ -36,7 +36,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
           <img src={Img} className="h-10" />
         </div>
         <h2 className="text-black text-2xl font-semibold">{head}</h2>
-        <p className="text-black font-semibold ">{para}</p>
+        <p className="text-black  ">{para}</p>
         <hr className="border hidden group-hover:flex border-black w-full" />
         <button
           onClick={() => router.push(link)}
