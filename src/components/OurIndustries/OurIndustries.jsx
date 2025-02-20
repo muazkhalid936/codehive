@@ -289,19 +289,19 @@ const ScrollAnimation = () => {
                   {language === 'English' ? item.title : item.atitle}
                 </p>
               </div>
-              <p className="mt-4 main_hero_slogan text-gray-500">
+              <p className="mt-4 main_hero_slogan ">
                 {language === 'English' ? item?.des1 : item?.ades1}
               </p>
-              <p className="mt-4 main_hero_slogan text-gray-500">
+              <p className="mt-4 main_hero_slogan ">
                 {language === 'English' ? item?.des2 : item?.ades2}
               </p>
-              <p className="mt-4 main_hero_slogan text-gray-500">
+              <p className="mt-4 main_hero_slogan ">
                 {language === 'English' ? item?.des3 : item?.ades3}
               </p>
-              <p className="mt-4 main_hero_slogan text-gray-500">
+              <p className="mt-4 main_hero_slogan ">
                 {language === 'English' ? item?.des4 : item?.ades4}
               </p>
-              <p className="mt-4 main_hero_slogan text-gray-500">
+              <p className="mt-4 main_hero_slogan ">
                 {language === 'English' ? item?.des5 : item?.ades5}
               </p>
               <div className="flex justify-center sm:justify-start items-center gap-3">

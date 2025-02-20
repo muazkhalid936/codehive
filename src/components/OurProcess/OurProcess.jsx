@@ -312,7 +312,7 @@ const StackingImages = () => {
                       </span>
                     </span>
                   </span>
-                  <span className=" text-[#525355] text-center sm:text-start main_hero_slogan !font-lato">
+                  <span className="  text-center sm:text-start main_hero_slogan !font-lato">
                     {language === "English"
                       ? item.description
                       : item.adescription}
