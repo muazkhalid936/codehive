@@ -92,13 +92,23 @@ const data = [
 ];
 
 const PartnerWithTopPeople = () => {
-  // Track which member is selected
   const [selectedIndex, setSelectedIndex] = React.useState(0);
-  const selectedMember = data[selectedIndex];
   const [hoveredSlide, setHoveredSlide] = React.useState("");
 
+  // Ensure selected card is removed and the list starts from the next one
+  const filteredData = data.filter((_, index) => index !== selectedIndex);
+
+  // Get the previous index (handles backward selection)
+  const previousIndex = (selectedIndex - 1 + data.length) % data.length;
+
+  // Shift the array correctly
+  const shiftedData = [
+    ...filteredData.slice(selectedIndex % filteredData.length),
+    ...filteredData.slice(0, selectedIndex % filteredData.length),
+  ];
+
   return (
-    <div className="bg-[#000B17] py-10 font-lato  sm:py-20 text-white">
+    <div className="bg-[#000B17] py-10 font-lato sm:py-20 text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-center mb-14 sm:w-[70%] mx-auto sub_heading leading-tight gilray-font">
           Meet the
@@ -106,82 +116,63 @@ const PartnerWithTopPeople = () => {
           Behind Our Most Successful Projects
         </h2>
 
-        {/* Main layout: big card on the left, details & swiper on the right */}
+        {/* Main Layout: Big Card & Swiper */}
         <div className="sm:flex hidden mt-10 h-[350px] sm:h-[500px] flex-col lg:flex-row gap-8 items-start">
-          {/* Left side: Big "card" with the same style as the small ones */}
-          <div className="w-full  lg:w-[30%]">
+          {/* Left Side: Big Card */}
+          <div className="w-full lg:w-[30%]">
             <div
-              className="relative overflow-hidden justify-end items-end flex h-[350px] sm:h-[500px]  rounded-md "
+              className="relative overflow-hidden flex h-[350px] sm:h-[500px] rounded-md"
               style={{
                 border: "1px solid transparent",
-                borderRadius: " 26px",
+                borderRadius: "26px",
                 background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
                 backgroundClip: "padding-box, border-box",
                 backgroundOrigin: "padding-box, border-box",
               }}
             >
-              {/* Example "Profile-3" label at top-left (optional) */}
-              {/* <div className="absolute top-2 left-2 text-gray-200 text-sm">Profile-3</div> */}
-
               <img
-                src={selectedMember.picture}
-                alt={selectedMember.name}
-                className="w-full  object-contain px-2 rounded-md"
+                src={data[selectedIndex].picture}
+                alt={data[selectedIndex].name}
+                className="px-1 pt-10 rounded-md"
               />
             </div>
           </div>
 
-          {/* Right side: two stacked sections */}
-          <div className="w-full lg:w-[70%]  flex flex-col justify-between h-[350px] sm:h-[500px] ">
-            {/* Top section: details (name, position, desc) */}
+          {/* Right Side: Swiper */}
+          <div className="w-full lg:w-[70%] flex flex-col justify-between h-[350px] sm:h-[500px]">
             <div>
-              <h3 className="text-[22px] font-bold">{selectedMember.name}</h3>
-              <h4 className="text-[19px] text-[#219DD9] font-semibold my-2 ">
-                {selectedMember.position}
+              <h3 className="text-[22px] font-bold">{data[selectedIndex].name}</h3>
+              <h4 className="text-[19px] text-[#219DD9] font-semibold my-2">
+                {data[selectedIndex].position}
               </h4>
-              <p className=" text-[14px] leading-relaxed">
-                {selectedMember.description}
-              </p>
+              <p className="text-[14px] leading-relaxed">{data[selectedIndex].description}</p>
             </div>
 
-            {/* Bottom section: Swiper with smaller cards */}
+            {/* Swiper - Shifted Order */}
             <div>
               <Swiper
-                // spaceBetween={20}
                 slidesPerView={3}
+                loop={true}
+                initialSlide={0}
                 modules={[EffectFade, History, EffectCards, Autoplay]}
                 breakpoints={{
-                  240: {
-                    slidesPerView: 1.3,
-                  },
-                  768: {
-                    slidesPerView: 3.3,
-                  },
+                  240: { slidesPerView: 1.3 },
+                  768: { slidesPerView: 3.3 },
                 }}
               >
-                {data.map((item, index) => (
-                  <SwiperSlide
-                    key={index}
-                    style={{
-                      marginRight: 0,
-                    }}
-                  >
+                {shiftedData.map((item, index) => (
+                  <SwiperSlide key={index}>
                     <div
                       onClick={() => {
                         setHoveredSlide(item.name);
-                        setSelectedIndex(index);
+                        setSelectedIndex(data.indexOf(item)); // Update actual index
                       }}
                       onMouseEnter={() => setHoveredSlide(item.name)}
-                      //  onClick={() => }
                       onMouseLeave={() => setHoveredSlide("")}
-                      className={`flex flex-col  text-center transition-transform duration-500 ease-in-out transform gap-2
-                        scale-90 
-                 bg-gradient-to-b from-[#010B1770]   to-[#2093CA70] relative  rounded-xl sm:min-h-[350px] h-[45vh] cursor-pointer pt-4 
-                 overflow-hidden hover:scale-100 
-                 `}
+                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl sm:min-h-[350px] h-[400px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
                       style={{
                         border: "1px solid transparent",
-                        borderRadius: " 26px",
+                        borderRadius: "26px",
                         background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
                         backgroundClip: "padding-box, border-box",
                         backgroundOrigin: "padding-box, border-box",
@@ -191,37 +182,31 @@ const PartnerWithTopPeople = () => {
                         <img
                           src={item.picture}
                           alt={item.name}
-                          className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform "
+                          className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform"
                         />
                       )}
                       {hoveredSlide === item.name && (
                         <img
                           src={"/gray-vector.png"}
                           alt={item.name}
-                          className="w-40 h-40 object-cover -z-10 absolute -right-5 top-20 "
+                          className="w-40 h-40 object-cover -z-10 absolute -right-5 top-20"
                         />
                       )}
 
-                      <div
-                        className={`absolute bottom-0 w-full flex flex-col items-center justify-center`}
-                      >
-                        <div className=" bg-gradient-to-t from-black  to-transparent w-full px-2 sm:px-6 py-6 m-auto">
-                          <h3
-                            className={`text-white text-[15px] sm:text-[22px] font-semibold text-left w-full`}
-                          >
+                      <div className="absolute bottom-0 w-full flex flex-col items-center justify-center">
+                        <div className="bg-gradient-to-t from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto">
+                          <h3 className="text-white text-[15px] sm:text-[22px] font-semibold text-left w-full">
                             {item.name}
                           </h3>
                           <h3
-                            className={`text-[#219DD9] main_hero_slogan font-semibold  text-left w-full gap-2  ${
-                              hoveredSlide === item.name ? " sm:mb-10" : "mb-0"
+                            className={`text-[#219DD9] main_hero_slogan font-semibold text-left w-full gap-2 ${
+                              hoveredSlide === item.name ? "sm:mb-10" : "mb-0"
                             }`}
                           >
                             {item.position}
                           </h3>
                           {hoveredSlide === item.name && (
-                            <h3
-                              className={`text-white text-[10px]  sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500`}
-                            >
+                            <h3 className="text-white text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500">
                               {item.description}
                             </h3>
                           )}
@@ -234,97 +219,11 @@ const PartnerWithTopPeople = () => {
             </div>
           </div>
         </div>
-
-        <div className="sm:hidden mt-10">
-          <Swiper
-            // spaceBetween={20}
-            slidesPerView={3}
-            modules={[EffectFade, History, EffectCards, Autoplay]}
-            breakpoints={{
-              240: {
-                slidesPerView: 1.3,
-              },
-              768: {
-                slidesPerView: 3.3,
-              },
-            }}
-          >
-            {data.map((item, index) => (
-              <SwiperSlide
-                key={index}
-                style={{
-                  marginRight: 0,
-                }}
-              >
-                <div
-                  onClick={() => {
-                    setHoveredSlide(item.name);
-                    setSelectedIndex(index);
-                  }}
-                  onMouseEnter={() => setHoveredSlide(item.name)}
-                  //  onClick={() => }
-                  onMouseLeave={() => setHoveredSlide("")}
-                  className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2
-                        scale-90 
-                 bg-gradient-to-b from-[#010B1770]   to-[#2093CA70] relative  rounded-xl sm:min-h-[350px] h-[45vh] cursor-pointer pt-4 
-                 overflow-hidden hover:scale-100 
-                 `}
-                  style={{
-                    border: "1px solid transparent",
-                    borderRadius: " 26px",
-                    background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
-                    backgroundClip: "padding-box, border-box",
-                    backgroundOrigin: "padding-box, border-box",
-                  }}
-                >
-                  {hoveredSlide !== item.name && (
-                    <img
-                      src={item.picture}
-                      alt={item.name}
-                      className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform "
-                    />
-                  )}
-                  {hoveredSlide === item.name && (
-                    <img
-                      src={"/gray-vector.png"}
-                      alt={item.name}
-                      className="w-40 h-40 object-cover -z-10 absolute -right-5 top-20 "
-                    />
-                  )}
-
-                  <div
-                    className={`absolute bottom-0 w-full flex flex-col items-center justify-center`}
-                  >
-                    <div className=" bg-gradient-to-t from-black  to-transparent w-full px-2 sm:px-6 py-6 m-auto">
-                      <h3
-                        className={`text-white text-[15px] sm:text-[22px] font-semibold text-left w-full`}
-                      >
-                        {item.name}
-                      </h3>
-                      <h3
-                        className={`text-[#219DD9] main_hero_slogan font-semibold  text-left w-full gap-2  ${
-                          hoveredSlide === item.name ? " sm:mb-10" : "mb-0"
-                        }`}
-                      >
-                        {item.position}
-                      </h3>
-                      {hoveredSlide === item.name && (
-                        <h3
-                          className={`text-white mt-10 sm:mt-0 text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500`}
-                        >
-                          {item.description}
-                        </h3>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
       </div>
     </div>
   );
 };
+
+
 
 export default PartnerWithTopPeople;

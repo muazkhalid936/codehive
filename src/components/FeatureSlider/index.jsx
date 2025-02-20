@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 
-// Swiper React components & styles
+import { HiChevronRight, HiChevronLeft } from "react-icons/hi2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules"; // Correct import for Swiper v8+
 
@@ -10,29 +10,50 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const FeatureSlider = ({ data, from }) => {
+  const swiperRef = useRef(null);
+
   return (
     <div className={`container z-50 ${from !== "contact" && "pb-[55px]"}`}>
-      <h2
-        className={`sub_heading font-extrabold gilray-font w-full ${
-          from !== "contact" ? "text-black" : "text-white"
-        }`}
-      >
-        {data?.title?.split(" ").map((word, index) => (
-          <span
-            key={index}
-            className={`${
-              // Last word in the title gets a special color
-              index === data.title.split(" ").length - 1 ? "text-[#219DD9]" : ""
-            }`}
+      <div className="flex justify-between">
+        <h2
+          className={`sub_heading font-extrabold gilray-font  ${
+            from !== "contact" ? "text-black" : "text-white"
+          }`}
+        >
+          {data?.title?.split(" ").map((word, index) => (
+            <span
+              key={index}
+              className={`${
+                // Last word in the title gets a special color
+                index === data.title.split(" ").length - 1
+                  ? "text-[#219DD9]"
+                  : ""
+              }`}
+            >
+              {word}{" "}
+            </span>
+          ))}
+        </h2>
+        <div className=" gap-2 hidden sm:flex sm:mt-0">
+          <button
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
+            onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
           >
-            {word}{" "}
-          </span>
-        ))}
-      </h2>
-
+            <HiChevronLeft className="text-white text-xl sm:text-2xl font-bold" />
+          </button>
+          <button
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
+            onClick={() => swiperRef.current?.slideNext()} // Slide to next
+          >
+            <HiChevronRight className="text-white text-xl sm:text-2xl font-bold" />
+          </button>
+        </div>
+      </div>
+    
       {/* Swiper Slider */}
       <div className="mt-[55px]">
         <Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           modules={[Mousewheel]} // Add Mousewheel module here
           cssMode={false}
           mousewheel={{
@@ -45,16 +66,16 @@ const FeatureSlider = ({ data, from }) => {
           breakpoints={{
             640: { slidesPerView: 1.5 },
             768: { slidesPerView: 2.2 },
-            1024: { slidesPerView: 4.2 },
+            1024: { slidesPerView: 3.2 },
           }}
           pagination={{ clickable: true }}
-          loop={false} // optional infinite loop
+          loop={true} // optional infinite loop
           className="mySwiper"
         >
           {data.cards.map((item, index) => (
             <SwiperSlide key={index}>
               <div
-               className="  p-[1px]"
+                className="  p-[1px]"
                 style={{
                   border: "1px solid transparent",
                   borderRadius: " 20px",
@@ -63,7 +84,7 @@ const FeatureSlider = ({ data, from }) => {
                   backgroundOrigin: "padding-box, border-box",
                 }}
               >
-                <div className="rounded-2xl h-[350px] w-full bg-black overflow-hidden relative">
+                <div className="rounded-2xl h-[450px] w-full bg-black overflow-hidden relative">
                   <img
                     src={item.picture}
                     alt={item.name}

@@ -13,6 +13,8 @@ const Testimonials = ({ testimonials }) => {
     <section className="bg-white  ">
       <div className="container mx-auto ">
         <div className="flex flex-row mt-[25px] sm:mt-[45px] items-center justify-between ">
+          
+          
           <h2
             className=" text-left    sub_heading font-gilroy"
             style={{
