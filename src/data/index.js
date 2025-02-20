@@ -4932,7 +4932,7 @@ export const ourWorks = [
       title: 'Challenges',
       description:
         'The Al Abour App faces challenges in ensuring real-time availability and accurate information from service providers. Designing a user-friendly interface for a diverse audience is complex, and building trust in a competitive market is crucial. Additionally, effective marketing to stand out and reach potential users is a continuous challenge.',
-      image: '/our-work/al-abour-app/challenges.png',
+      image: '/our-work/al-abour-app/Challenges.png',
     },
     noMoreWorriesSection: {
       title: 'Seamless Camel Transport with Al Abour',

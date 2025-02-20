@@ -47,13 +47,17 @@ const ChallengesOrSolution = ({ title, image, description }) => {
       ref={ref}
       className="flex flex-col  overflow-hidden md:flex-row items-center justify-around container sm:gap-6 py-[50px]"
     >
+
+      <div className=" w-full md:w-1/2">
+        
       <img
         ref={imgRef}
         src={image}
         alt="image"
-        className="h-[400px] md:h-[500px] w-full md:w-1/2 object-contain"
-        style={{ transform: "translateX(-200px)", opacity: 0 }}
+        className=" object-contain h-[450px]"
+        // style={{ transform: "translateX(-200px)", opacity: 0 }}
       />
+      </div>
       <div
         ref={textRef}
         className="flex-col flex gap-4 w-full md:w-1/2"

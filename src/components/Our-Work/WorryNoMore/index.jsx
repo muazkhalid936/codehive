@@ -21,7 +21,7 @@ const WorryNoMore = ({
         }}
       >
         <div
-          className={`flex flex-col text-black w-full md:w-1/2 pl-4 md:pl-12 pr-2 h-full sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
+          className={`flex flex-col text-black w-full md:w-[60%] pl-4 md:pl-12 pr-2 h-full sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
         >
           <h2 className="gilray-font leading-tight text-[30px] xl:text-[45px]">
             {titleParts.map((word, index) => (

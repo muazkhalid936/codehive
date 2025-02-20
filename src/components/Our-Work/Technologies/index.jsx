@@ -251,15 +251,15 @@ const Technologies = ({ rightImage }) => {
           ref={imageRef}
           src={rightImage}
           alt="image"
-          className="h-[400px]  md:h-[500px] w-full md:w-[60%] object-contain"
+          className="h-[400px] z-[2] md:h-[500px] w-full md:w-[60%] object-contain"
         />
       </div>
-      {/* <img
+      <img
         src="/technologies/shade.png"
         alt="image"
-        className="absolute  bottom-[-700px] right-[-40vw]"
+        className="absolute z-[1]  bottom-[-700px] right-[-40vw]"
         // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
-      /> */}
+      />
     </div>
   );
 };

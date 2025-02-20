@@ -3,6 +3,7 @@ import { FiPhone, FiMail } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { MdPhone, MdEmail } from "react-icons/md";
 import { FaAt } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const ContactInfo = () => {
   return (
@@ -24,6 +25,17 @@ const ContactInfo = () => {
           </div>
           <div className="space-y-6 mb-8">
             {/* Phone */}
+            <p className="flex items-center justify-center text-lg">
+              <div className="flex items-center group">
+                <IoLogoWhatsapp className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
+                <a
+                  href="tel:+971542203330"
+                  className=" text-white group-hover:text-blueColor   hover:underline"
+                >
+           Whatsapp: +971 54 220 3330
+                </a>
+              </div>
+            </p>
             <p className="flex items-center justify-center text-lg">
               <div className="flex items-center group">
                 <MdPhone className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
@@ -52,12 +64,7 @@ const ContactInfo = () => {
               <HiOutlineLocationMarker className="bg-white text-black rounded-full p-1 w-6 h-6 mr-2" />
               Office M-18, 1st floor, Sajaya Plaza Al Barsha 3, Dubai, UAE
             </p>
-            {/* Support Section */}
-            <div className="text-center">
-              <p className="text-lg mt-10">
-                If you need any type of support, please visit the Help Center
-              </p>
-              <div className="flex items-center justify-center mt-2">
+            <div className="flex items-center justify-center mt-2">
                 <div className="flex items-center group">
                   <FaAt className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" />
                   <a
@@ -68,6 +75,13 @@ const ContactInfo = () => {
                   </a>
                 </div>
               </div>
+            {/* Support Section */}
+            <div className="text-center flex justify-center items-center  ">
+              <p className="text-[24px]  mt-10 font-semibold bg-gradient-to-r  from-white via-white to-blueColor bg-clip-text text-transparent">
+              If you need any support, visit our office
+             <br/> we’re always happy to assist you!
+              </p>
+           
             </div>
           </div>
           {/* Google Map */}
