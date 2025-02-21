@@ -42,7 +42,7 @@ const HorizontalScroll = () => {
     {
       tech1: "Mobile App",
       tech2: "Flutter",
-      head: "Doctor Booking",
+      head: "MedEase",
       ahead: "حجزموعد مع الطبيب",
       para: "Book doctor appointments with ease.",
       apara: "احجز موعد مع طبيبك بسھولة",

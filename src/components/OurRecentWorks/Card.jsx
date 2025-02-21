@@ -1,5 +1,5 @@
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 import useStore from "../../store/useUserStore";
 import { useRouter } from "../../i18n/routing";
 
@@ -51,7 +51,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
               ? "View Complete Project"
               : "عرض المشروع كامل"}
           </p>
-          <FiArrowUpRight className="bg-white rounded-full text-[#000B17] text-xl" />
+          <HiMiniArrowUpRight className="bg-black rounded-full p-[1px] text-white text-xl" />
         </button>
       </div>
     </div>

@@ -41,8 +41,8 @@ const page = async ({ params }) => {
       <Features data={service.featuresData} />
       <WhatMakesUsDifferent data={service.makesDifferentData} />
       <Banner {...service.bannerDataTwo} />
-      <Testimonials testimonials={service.testimonialsData} />
       <ConnectContact sliderData={service.featureSlider} />
+      <Testimonials testimonials={service.testimonialsData} />
       <Footer />
     </div>
   );

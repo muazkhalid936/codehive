@@ -37,6 +37,7 @@ const HeroSection = ({
               }`}
             >
               {word}{" "}
+              {index === 1 && <br />} {/* Add a line break after the second word */}
             </span>
           ))}
         </>
@@ -64,9 +65,9 @@ const HeroSection = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-center sm:justify-end max-h-[650px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
+      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-center sm:justify-end max-h-[580px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
         {/* First Section */}
-        <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
+        <div className="left-section sm:w-1/2 flex  justify-center items-center sm:items-start gap-5  flex-col">
           {" "}
           {renderTitle()}
           {description && (

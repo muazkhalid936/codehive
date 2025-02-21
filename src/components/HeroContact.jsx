@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroContact = () => {
   return (
-    <div className="h-[70vh] overflow-hidden min-h-[500px] max-h-[650px] bg-gradient-to-t from-[#0d1724] via-[#0d1724] to-[#000b17] relative">
+    <div className="h-[70vh] overflow-hidden min-h-[500px] max-h-[580px] bg-gradient-to-t from-[#0d1724] via-[#0d1724] to-[#000b17] relative">
       {/* Background image container */}
       <div className="absolute inset-0 flex justify-center items-center">
         <img

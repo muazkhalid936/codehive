@@ -34,19 +34,18 @@ const page = async ({ params }) => {
       )}
       {industry.bannerData && <Banner {...industry.bannerData} />}
       <Features data={industry.featuresData} />
-      <div className="pt-[55px]">
+   
         {industry.showFeatureSlider && (
           <FeatureSlider data={industry.featureSlider} />
         )}
-      </div>
       {/* <WhatMakesUsDifferent data={industry.makesDifferentData} /> */}
 
       <div className="relative overflow-hidden">
         <Banner {...industry.bannerDataTwo} />
-        <img
+        {/* <img
           src="/feature/Vector.png"
           className="absolute hidden sm:flex top-[60%] right-0 w-60 "
-        />
+        /> */}
       </div>
       {slug === 'our-booking-system' && <Packages />}
       {slug === 'reward-hive' && <Packages2 />}

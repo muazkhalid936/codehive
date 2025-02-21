@@ -61,7 +61,7 @@ const HeroSectionOurWork = ({
         />
       )}
 
-      <div className="container justify-between overflow-hidden mx-auto gap-4 sm:gap-0 flex-col sm:flex-row flex max-h-[650px] pt-28 sm:pt-32  sm:min-h-[500px] h-[550px]">
+      <div className="container justify-between overflow-hidden mx-auto gap-4 sm:gap-0 flex-col sm:flex-row flex max-h-[580px] pt-28 sm:pt-32  sm:min-h-[500px] h-[550px]">
         {/* First Section */}
         <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start  gap-3 sm:gap-5  flex-col">
           {" "}

@@ -12,7 +12,9 @@ const HeroSectionServices = ({
   showButton = true,
 }) => {
   const t = useTranslations('translation');
-  const titleWords = t('aboutCodeh').split(' ');
+  // const titleWords = t('aboutCodeh').split(' ');
+  const titleWords = title.split(' ');
+
   const colors =
     bgImage && rightImage
       ? 'text-black'
@@ -52,14 +54,15 @@ const HeroSectionServices = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-center sm:justify-end max-h-[650px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
+      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-center sm:justify-end max-h-[580px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
         {/* First Section */}
         <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
           {' '}
           {renderTitle()}
           {description && (
             <p className={`main_hero_slogan text-center sm:text-start `}>
-              {t('codeHiveIs')}
+              {/* {t('codeHiveIs')}/ */}
+              {description}
             </p>
           )}
           {showButton && (

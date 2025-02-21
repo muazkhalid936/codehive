@@ -111,10 +111,10 @@ const PartnerWithTopPeople = () => {
     <div className="bg-[#000B17] py-10 font-lato sm:py-20 text-white">
       <div className="container  sm:px-4">
 
-        <h2 className="text-center mb-14 sm:w-[50%] mx-auto sub_heading leading-tight gilray-font">
+        <h2 className="text-center mb-14 sm:w-full mx-auto sub_heading leading-tight gilray-font">
           Meet the
           <span className="text-[#219DD9] mx-[3px] sm:mx-2">Creative  Minds</span>
-          Behind Our Most Successful Projects
+          Behind <br/> Our Most Successful Projects
         </h2>
         {/* Main Layout: Big Card & Swiper */}
         <div className="flex mt-3 sm:mt-10 h-[270px] sm:h-[500px] flex-row gap-8 items-start">

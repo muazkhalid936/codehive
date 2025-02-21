@@ -107,6 +107,7 @@ export const servicesAdvanceSolutionData = {
 export const aboutScreenFeaturesData = {
   title: 'Our Core Values',
   columns: 4,
+  blueWords: ['Values'],
   description:
     'Recognized globally for our industry-leading development expertise and innovative solutions. Creating innovative, user-friendly, and life-changing products is what we do!',
   subheading: 'Ready to Experience the Future \n of Technology with Codehive?',
@@ -272,7 +273,7 @@ export const services = [
       title: 'Software Development',
       blueWords: ['Software'],
       description:
-        'At Code Hive, we deliver tailored software solutions that align with your business needs, helping you streamline operations, improve efficiency, and drive innovation.',
+        'Developing reliable and future-ready software for businesses of all sizes.',
       bgImage: '/services/software-development-hero-bg.png',
       topArrow: true,
     },
@@ -291,7 +292,7 @@ export const services = [
       title: 'Our Offerings',
       columns: 4,
       description:
-        'Delivering convenience-focused custom software development services in any form is what we’re inclined towards.',
+        'Creating convenience-focused custom software development services in any form is what we’re inclined towards.',
       subheading: 'Reach Out Now to Discover Your Custom Software Options!',
       cards: [
         {
@@ -440,7 +441,7 @@ export const services = [
       title: 'Mobile App Development ',
       blueWords: ['Development'],
       description:
-        'We are globally recognized as a leading provider of custom mobile app development for Android, iOS, AI, Blockchain, and AR/VR.',
+        'Custom, user-friendly, and scalable mobile apps that engage, optimize, and are designed to perform smoothly.',
       bgImage: '/services/mobile-app-dev/hero-bg.png',
       topArrow: true,
     },
@@ -460,7 +461,7 @@ export const services = [
       title: 'Our Offerings',
       columns: 4,
       description:
-        'We align next-gen tech with your brand and audience. As a top enterprise mobile app development company, we utilize design sprints to identify growth opportunities beyond your core business.',
+        'Creating custom, innovative apps that engage users, streamline processes, and deliver seamless experiences across all platforms.',
       subheading: 'Connect with Us to Begin Your App Development!',
       cards: [
         {
@@ -532,11 +533,13 @@ export const services = [
     },
     bannerDataTwo: {
       bgImage: '/services/mobile-app-dev/bannerTwoBg.png',
-      title: 'Unlock New Possibilities with a Leading Mobile App Developer!',
-      blueWords: ['App', 'Developer!'],
+      title: 'Creating Apps That Connect, Engage, and Inspire.',
+      blueWords: ['Creating', 'Apps'],
       description:
-        'At Code Hive, we turn your ideas into innovative mobile solutions that drive growth, specializing in high-quality, user-friendly apps for iOS and Android.',
+        'Creating Apps That Connect, Engage, and Inspire.',
       showBottomArrow: true,
+      buttonTitle: 'Get a Quote',
+
     },
     testimonialsData: [
       {
@@ -628,13 +631,15 @@ export const services = [
       rightImage: '/services/digital-transform/bannerOne-right.png',
       showBottomArrow: false,
       backgroundColor: '#ffe9cb',
+      buttonTitle: 'Book a call',
+
     },
 
     featuresData: {
       title: 'Our Offerings',
       columns: 4,
       description:
-        'Delivering convenience-focused custom software development services in any form is what we’re inclined towards.',
+        'We specialize in delivering tailored digital transformation and automation solutions that prioritize convenience and streamline your processes.',
       subheading: 'Elevate Your Business with Our Automation Solutions!',
       cards: [
         {
@@ -719,11 +724,13 @@ export const services = [
     },
     bannerDataTwo: {
       bgImage: '/services/digital-transform/bannerTwoBg.png',
-      title: 'Ready to Future-Proof Your Business?',
-      blueWords: ['Business?'],
+      title: 'Revolutionizing Businesses with Intelligent Digital  Solutions.',
+      blueWords: ['Intelligent',"Digital"],
       description:
         'Embrace the power of digital transformation and automation to unlock new growth opportunities. Let us help you streamline operations, boost efficiency, and stay ahead of the competition.',
       showBottomArrow: true,
+      buttonTitle: 'Get a Quote',
+
     },
     testimonialsData: [
       {
@@ -779,7 +786,7 @@ export const services = [
       title: 'Digital Consultation Solutions',
       blueWords: ['Solutions'],
       description:
-        'At Code Hive, we deliver expert digital consultation to help businesses navigate challenges and drive growth.',
+        'From raw data to real results—our solutions simplify collection, analysis, and visualization to help you grow.',
       bgImage: '/services/digital-consultation/hero-bg.png',
       topArrow: true,
     },
@@ -790,13 +797,14 @@ export const services = [
         'Contact us today to discover how our digital transformation and automation solutions can drive efficiency and innovation!',
       bgImage: '/services/digital-consultation/bannerOneBg.png',
       showBottomArrow: false,
+      buttonTitle: 'Book a call',
     },
 
     featuresData: {
       title: 'Our Offerings',
       columns: 4,
       description:
-        'Delivering convenience-focused custom software development services in any form is what we’re inclined towards.',
+        'Providing expert digital consultation services to help you navigate the complexities of technology and achieve your business goals.',
       subheading: 'Elevate Your Business with Our Automation Solutions!',
       cards: [
         {
@@ -880,8 +888,10 @@ export const services = [
     },
     bannerDataTwo: {
       bgImage: '/services/digital-consultation/bannerTwoBg.png',
-      title: 'Ready to Transform Your Business?',
-      blueWords: ['Business?'],
+      title: 'Your Trusted Partner for Smarter Digital Decisions.',
+      blueWords: ['Smarter',"Digital"],
+      buttonTitle: 'Get a Quote',
+
       description:
         'Unlock the potential of digital transformation with our expert consultation services. Let us help you navigate the complexities of the digital landscape and drive your business toward success.',
       showBottomArrow: true,
@@ -940,13 +950,14 @@ export const services = [
       title: 'Website Development ',
       blueWords: ['Website'],
       description:
-        'At Code Hive, we deliver cutting-edge web app development services, creating customized applications to help businesses succeed in the digital landscape.',
+        'Functional and responsive websites that connect, engage, and drive conversions to help your business thrive across all devices.',
       bgImage: '/services/web-dev/hero-bg.png',
       topArrow: true,
     },
     bannerData: {
       title: 'Reach Out Now to Begin Your Website Development Journey!',
       blueWords: ['Journey!'],
+      buttonTitle: 'Book a call',
       description:
         'Contact us today to discuss how our website development services can transform your vision into a reality!',
       rightImage: '/services/web-dev/bannerOne.png',
@@ -1030,7 +1041,9 @@ export const services = [
     },
     bannerDataTwo: {
       bgImage: '/services/web-dev/bannerTwoBg.png',
-      title: 'Unlock New Possibilities with a Top Web Development Company!',
+      title: 'Modern, Responsive, and Tailor-Made Websites for Every Business.',
+      blueWords: ['Websites'],
+      buttonTitle: 'Get a Quote',
       description:
         'At Code Hive, we transform your ideas into innovative mobile solutions that drive growth, specializing in high-quality, user-friendly apps for iOS and Android.',
       showBottomArrow: true,
@@ -1113,7 +1126,7 @@ export const services = [
       title: 'Business Intelligence & Data Analysis',
       blueWords: ['Analysis', 'Business'],
       description:
-        'At Code Hive, we deliver cutting-edge web app development services, creating customized applications to help businesses succeed in the digital landscape.',
+        'Our BI and data analysis solutions turn raw data into actionable insights, streamlining collection and visualization to drive growth and optimize performance.',
       bgImage: '/services/business-intelligence/hero-bg.png',
       topArrow: true,
     },
@@ -1125,7 +1138,7 @@ export const services = [
         {
           title: 'AI with a purpose',
           description:
-            'Our prudent approach to web development ensures reliable plans and projections you can trust.',
+            'Crafting purpose-driven AI strategies, targeting specific opportunities from tech choices to deployment.',
           image: '/services/business-intelligence/advance-ai-with-purpose.png',
         },
         {
@@ -1137,7 +1150,7 @@ export const services = [
         {
           title: 'Seamless integration',
           description:
-            'We prioritize quality and transparency, ensuring you are always informed about your project’s status.',
+            'Creating custom AI models and scale them seamlessly into tailored solutions.',
           image: '/services/business-intelligence/seamless-integration.png',
         },
       ],
@@ -1147,7 +1160,7 @@ export const services = [
       columns: 4,
       title: 'Our Offerings',
       description:
-        'Whether you need a domain-specific chatbot, an assistant to enhance interactions, or AI to improve operational efficiency, we have the expertise to deliver.',
+        'Transforming your data into actionable insights with advanced business intelligence and data analysis solutions that drive smarter decisions and growth.',
       subheading: 'Ready to Transform Your Data into Actionable Insights?',
       cards: [
         {
@@ -1244,10 +1257,11 @@ export const services = [
     },
     bannerDataTwo: {
       bgImage: '/services/business-intelligence/bannerTwoBg.png',
-      title: 'Visualize Your Data, Drive Your Success',
-      blueWords: ['Success'],
+      title: 'Turn Data into Decisions with Smart Business Intelligence.',
+      blueWords: ['Smart',"Business"],
       description: 'Start Your Project Today and Elevate Your Online Presence!',
       showBottomArrow: true,
+      buttonTitle: 'Get a Quote',
     },
     testimonialsData: [
       {
@@ -1451,9 +1465,10 @@ export const industries = [
       title: 'Boost your business with our efficient Booking System',
       blueWords: ['efficient'],
       description:
-        'A booking system is a digital platform designed to facilitate and automate the process of scheduling appointments, reservations, or services for your business. Book a free consultation with us!',
+        'Designed for speed and convenience, our solution allows customers to schedule appointments effortlessly while giving you full control over bookings, availability, and management.',
+        showDecsription: true,
       rightImage: '/IndustriesBooking/Banner.png',
-      buttonText: 'Book a Call',
+      buttonTitle: 'Book a Call',
       backgroundColor: '#EAECEF',
     },
     featuresData: {
@@ -1586,9 +1601,11 @@ export const industries = [
       title: 'Automate Your Scheduling with Our Booking System',
       blueWords: ['Booking', 'System'],
       description:
-        'A booking system is a digital tool that simplifies and automates the scheduling of appointments, reservations, or services for your business. Schedule a free consultation with us today!',
-      buttonText: 'Get a Quote',
+        'Say goodbye to manual scheduling and streamline your appointments with our smart booking system.',
+      buttonTitle: 'Get a Quote',
       showBottomArrow: true,
+      showDecsription: true,
+
     },
     features1: [
       { name: 'Basic appointment scheduling', available: true },
@@ -1660,7 +1677,7 @@ export const industries = [
       // bgImage: '/Hero/BGImage.png',
       title: 'E-Commerce App Development Services',
       description:
-        'Codehive is the best ecommerce app development company that helps you build your ecommerce app and platform. Hire our ecommerce app developers now!',
+        'Our expert development team builds feature-rich, scalable, and secure mobile apps that enhance customer engagement and drive sales.',
       rightImage: '/IndustriesBooking/HeroEcommerce.png',
       topArrow: true,
       buttonText: 'Book a Session',
@@ -1672,7 +1689,7 @@ export const industries = [
         title: 'User Mobile App',
         heading: 'User Mobile App',
         description:
-          'We equip eCommerce user mobile apps with user-centric features to offer customers a hassle-free experience that makes them come back for more:',
+          'We equip ecommerce user mobile apps with user-centric features to offer customers a hassle-free experience that makes them come back for more.',
         features: [
           {
             icon: '/E-commerce/1.png',
@@ -1696,7 +1713,7 @@ export const industries = [
             icon: '/E-commerce/4.png',
             title: 'Push Notification',
             description:
-              'Offer your shipper with multiple payment options and help in invoice generation.',
+              'keep customers engaged by sending timely updates, promotions, and alerts directly to their mobile devices.',
           },
           {
             icon: '/E-commerce/5.png',
@@ -1718,7 +1735,7 @@ export const industries = [
         title: 'Ecommerce Website',
         heading: 'Ecommerce Website',
         description:
-          'By leveraging our eCommerce website development services, you can create a website or eCommerce app design like Myntra, eBay, and Flipkart:',
+          'By leveraging our ecommerce website development services you can create a website or eCommerce app design like Amazon, eBay, and Noon.',
         features: [
           {
             icon: '/E-commerce/7.png',
@@ -1764,7 +1781,7 @@ export const industries = [
         title: 'Admin Panel',
         heading: 'Admin Panel',
         description:
-          'By leveraging our eCommerce mobile app development services, you can create a website or design an eCommerce app like Amazon, eBay, or Flipkart:',
+          'Efficiently manage products, orders, and customers with our powerful eCommerce admin panel.',
         features: [
           {
             icon: '/E-commerce/13.png',
@@ -1810,7 +1827,7 @@ export const industries = [
         title: 'Vendor Panel',
         heading: 'Vendor Panel',
         description:
-          'With our retail, healthcare, or fashion eCommerce app development, get powerful & simple panels for your vendors to take care of products & manage requests effectively:',
+          'Seamlessly manage products, orders, and sales with our intuitive vendor panel.',
         features: [
           {
             icon: '/E-commerce/19.png',
@@ -1859,13 +1876,13 @@ export const industries = [
       description:
         'We partner with multi-million dollar funded eCommerce startups, fueling growth and success in a competitive market.',
       rightImage: '/IndustriesBooking/ecommerce/Banner.png',
-      buttonText: 'Book a Call',
+      buttonTitle: 'Book a Call',
       backgroundColor: '#F2EFE9',
     },
     featuresData: {
       title: 'Key Features',
       description:
-        'Recognized globally for our industry-leading development expertise and innovative solutions. Creating innovative, user-friendly, and life-changing products is what we do!',
+        'Smooth shopping experience with secure payments, real-time tracking, and personalized recommendations.',
       subheading:
         'Let’s talk about simplifying your bookings and boosting your business.',
       columns: 4,
@@ -1904,7 +1921,7 @@ export const industries = [
         },
       ],
     },
-    showFeatureSlider: true,
+    showFeatureSlider: false,
     featureSlider: {
       title: 'eCommerce App Industry',
       cards: [
@@ -1942,7 +1959,7 @@ export const industries = [
 
       description:
         'Our eCommerce app development streamlines the shopping experience, reducing cart abandonment by up to 75%.',
-      buttonText: 'Get a Quote',
+      buttonTitle: 'Get a Quote',
       showBottomArrow: true,
     },
     testimonialsData: [
@@ -1970,7 +1987,7 @@ export const industries = [
       // bgImage: '/Hero/BGImage.png',
       title: 'Fitness Mobile App Development Services',
       description:
-        'Codehive is a top fitness app development company that provides custom fitness app development services. Hire fitness app developers today!',
+        'Redefine your fitness brand with a custom mobile app designed to enhance user engagement and help users achieve their fitness goals.',
       rightImage: '/IndustriesBooking/industriesFitness/Hero1.png',
       topArrow: true,
       buttonText: 'Book a Session',
@@ -2152,12 +2169,12 @@ export const industries = [
       description:
         'With nearly 21 million downloads and a projected US$19.33 billion revenue in2023, the fitness app industry is booming.',
       rightImage: '/IndustriesBooking/industriesFitness/fitnessRightImage.png',
-      buttonText: 'Book a Call',
+      buttonTitle: 'Book a Call',
     },
     featuresData: {
       title: 'Key Features',
       description:
-        'Recognized globally for our industry-leading development expertise and innovative solutions. Creating innovative, user-friendly, and life-changing products is what we do!',
+        'Track workouts, set goals, monitor progress, and stay motivated with personalized fitness insights.',
       subheading: 'Unlock Your Fitness App Potential Reach Out Now!',
       columns: 4,
       cards: [
@@ -2202,7 +2219,7 @@ export const industries = [
       blueWords: ['vision', 'life!'],
       description:
         'Our fitness app development combines strategy, design, and seamless implementation for an engaging, high-quality app.',
-      buttonText: 'Get a Quote',
+      buttonTitle: 'Get a Quote',
       showBottomArrow: true,
     },
     showFeatureSlider: false,
@@ -2231,7 +2248,7 @@ export const industries = [
       // bgImage: '/Hero/BGImage.png',
       title: 'Healthcare Mobile App Development Services',
       description:
-        'Codehive is a top fitness app development company that provides custom fitness app development services. Hire fitness app developers today!',
+        'Building secure, user-friendly apps that streamline appointments, telemedicine consultations, health tracking, and medical record management.',
       rightImage: '/IndustriesBooking/Healthcare/hero.png',
       topArrow: true,
       buttonText: 'Book a Session',
@@ -2243,7 +2260,7 @@ export const industries = [
       description:
         'With 94% of Gen Z seeking health apps, there is a huge opportunity to empower their well-being. Ready to lead?',
       rightImage: '/IndustriesBooking/Healthcare/banner1.png',
-      buttonText: 'Book a Call',
+      buttonTitle: 'Book a Call',
     },
     panelData: [
       {
@@ -2458,7 +2475,7 @@ export const industries = [
       blueWords: ['Development!'],
       description:
         'Share your inquiries with us, and our healthcare app developers will provide you with tailored solutions.',
-      buttonText: 'Get a Quote',
+      buttonTitle: 'Get a Quote',
       showBottomArrow: true,
     },
     showFeatureSlider: false,
@@ -2485,9 +2502,9 @@ export const industries = [
     title: 'Delivery',
     heroData: {
       // bgImage: '/Hero/BGImage.png',
-      title: 'Pickup and Delivery App Development',
+      title: 'Delivery App  Development Services',
       description:
-        'Maximize your business with our on-demand delivery management software. Develop your pickup and delivery app today!',
+        "Whether you're in the food delivery, parcel shipping, or any other on-demand service industry, our solutions streamline the process, improve communication, and boost your business's reliability.",
       rightImage: '/IndustriesBooking/Delivery/Hero.png',
       topArrow: true,
       buttonText: 'Book a Session',
@@ -2499,7 +2516,7 @@ export const industries = [
       description:
         'Our on-demand services offer seamless operations with real-time tracking and efficient logistics.',
       rightImage: '/IndustriesBooking/Delivery/banner1.png',
-      buttonText: 'Book a Call',
+      buttonTitle: 'Book a Call',
       backgroundColor: '#D1D5DF',
     },
     panelData: [
@@ -2667,7 +2684,7 @@ export const industries = [
         },
       ],
     },
-    showFeatureSlider: true,
+    showFeatureSlider: false,
     featureSlider: {
       title: 'Pickup & Delivery App Industries',
       cards: [
@@ -2703,7 +2720,7 @@ export const industries = [
       blueWords: ['Work?'],
       description:
         'Our on-demand app simplifies logistics with a user-friendly interface, real-time tracking, and secure payments.',
-      buttonText: 'Get a Quote',
+      buttonTitle: 'Get a Quote',
       showBottomArrow: true,
     },
     testimonialsData: [
@@ -2729,9 +2746,9 @@ export const industries = [
     title: 'Car Wash',
     heroData: {
       // bgImage: '/Hero/BGImage.png',
-      title: 'Car Wash Industry Solutions',
+      title: 'Car Wash App Development Services',
       description:
-        'At Codehive, we deliver custom software solutions for the car wash industry, streamlining operations and enhancing customer experiences.',
+        'Upgrade your car wash business with a custom-built mobile app designed to offer a seamless, on-demand car washing experience.',
       rightImage: '/IndustriesBooking/Carwash/Hero.png',
       topArrow: true,
       buttonText: 'Book a Session',
@@ -2954,7 +2971,7 @@ export const industries = [
       description:
         'With nearly 21 million downloads and a projected US$19.33 billion revenue in2023, the fitness app industry is booming.',
       rightImage: '/bg.png',
-      buttonText: 'Book a Call',
+      buttonTitle: 'Book a Call',
     },
     featuresData: {
       title: 'Key Features',
@@ -3005,7 +3022,7 @@ export const industries = [
       blueWords: ['Business?'],
       description:
         'Take the next step toward growth with our custom car wash software solutions!',
-      buttonText: 'Get a Quote',
+      buttonTitle: 'Get a Quote',
       showBottomArrow: true,
     },
     showFeatureSlider: false,
@@ -3039,53 +3056,7 @@ export const industries = [
       topArrow: true,
       buttonText: 'Book a Session',
     },
-    features1: [
-      { name: '100 Digital Cards', available: true },
-      { name: '1 Geo Location', available: true },
-      { name: '1 Sales Seat', available: true },
-      { name: '1 Manager Seat', available: true },
-      { name: 'Free on boadring', available: true },
-      { name: 'Product & Size management', available: true },
-      // { name: "iOS and Android apps", available: true },
-      // { name: "Loyalty program integration", available: false },
-      // { name: "Chat Support", available: false },
-      // { name: "Customized notification", available: false },
-      // { name: "Custom branding", available: false },
-      // { name: "SMS and Email Reminders", available: false },
-      // { name: "Inventory management", available: false },
-    ],
-    features2: [
-      { name: '500 Digital Cards', available: true },
-      { name: '5 Geo Location', available: true },
-      { name: '5 Sales Seat', available: true },
-      { name: '5 Manager Seat', available: true },
-      { name: 'Free on Boadring', available: true },
-      { name: 'Producr & Size management', available: true },
-      { name: 'Product-Based Rewards', available: true },
-      // { name: "Loyalty program integration", available: true },
-      // { name: "Chat Support", available: true },
-      // { name: "Cust omized notification", available: false },
-      // { name: "Custom branding", available: false },
-      // { name: "SMS and Email Reminders", available: false },
-      // { name: "Inventory management", available: false },
-    ],
-    features3: [
-      { name: 'Unlimited Digital Cards', available: true },
-      { name: '10 Geo Location', available: true },
-      { name: 'Unlimited Sales Seat', available: true },
-      { name: '10 Manager Seat', available: true },
-      { name: '24/7 Support', available: true },
-      { name: 'Producr & Size management', available: true },
-      { name: 'Product-Based Rewards', available: true },
-      // { name: "", available: true },
-      // { name: "iOS and Android apps", available: true },
-      // { name: "Loyalty program integration", available: true },
-      // { name: "Chat Support", available: true },
-      // { name: "Customized notification", available: true },
-      // { name: "Custom branding", available: true },
-      // { name: "SMS and Email Reminders", available: true },
-      // { name: "Inventory management", available: true },
-    ],
+   
     panelData: [],
     bannerData: {
       title: 'Boost Sales & Loyalty with Reward Hive',
@@ -3093,7 +3064,8 @@ export const industries = [
       description:
         'Drive repeat purchases, increase engagement, and grow your business with a rewards program that keeps customers coming back.',
       rightImage: '/IndustriesBooking/reward/banner1.png',
-      buttonText: 'Book a Call',
+      buttonTitle: 'Book a Call',
+      showDecsription: true,
       backgroundColor: '#EAECEF',
     },
     featuresData: {
@@ -3213,8 +3185,9 @@ export const industries = [
       blueWords: ['Reward', 'Hive'],
       description:
         'Creating intuitive mobile solutions that help businesses in the café and restaurant industry drive growth and increase customer retention through our powerful loyalty programs like Reward Hive.',
-      buttonText: 'Get a Quote',
+      buttonTitle: 'Get a Quote',
       showBottomArrow: true,
+      showDecsription: true,
     },
     showFeatureSlider: true,
     testimonialsData: [

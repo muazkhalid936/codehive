@@ -27,10 +27,11 @@ const Features = ({ data }) => {
     <div className="bg-[#010b17] relative     z-50  overflow-hidden">
       <div className=" mx-8 py-[25px] sm:py-[45px]  text-white z-10 container">
         <h1 className="sub_heading  font-gilroy w-full text-center sm:text-start md:w-[60%]">
-          {data.title.split(" ").map((word, index) => (
+          {data.title.split(" ").map((word, index, array) => (
             <span
               key={index}
-              className={`${index === 1 ? "text-[#219DD9]" : ""}`}
+              className={`${ index === array.length - 1 ? "text-[#219DD9]" : ""
+              }`}
             >
               {word}{" "}
             </span>

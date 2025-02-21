@@ -1,9 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 
-import { HiChevronRight, HiChevronLeft } from "react-icons/hi2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules"; // Correct import for Swiper v8+
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,7 +13,7 @@ const FeatureSlider = ({ data, from }) => {
   const swiperRef = useRef(null);
 
   return (
-    <div className={`container z-50 ${from !== "contact" && "pb-[55px]"}`}>
+    <div className={`container mt-[55px] z-50 ${from !== "contact" && "pb-[55px]"}`}>
       <div className="flex justify-between">
         <h2
           className={`sub_heading font-extrabold gilray-font  ${
@@ -36,16 +36,16 @@ const FeatureSlider = ({ data, from }) => {
         </h2>
         <div className=" gap-2 hidden sm:flex sm:mt-0">
           <button
-            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#2A313b] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
             onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
           >
-            <HiChevronLeft className="text-white text-xl sm:text-2xl font-bold" />
+            <FaAngleLeft className="text-white text-xl sm:text-2xl font-bold" />
           </button>
           <button
-            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#2A313b] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
             onClick={() => swiperRef.current?.slideNext()} // Slide to next
           >
-            <HiChevronRight className="text-white text-xl sm:text-2xl font-bold" />
+            <FaAngleRight className="text-white text-xl sm:text-2xl font-extrabold" />
           </button>
         </div>
       </div>
@@ -90,8 +90,8 @@ const FeatureSlider = ({ data, from }) => {
                     alt={item.name}
                     className="w-full h-full object-cover opacity-60"
                   />
-                  <div className="p-4 h-[200px] absolute bottom-0 w-full bg-gradient-to-t from-black  to-transparent">
-                    <div className="flex flex-col justify-center mt-5 h-full text-center text-white">
+                  <div className="p-4 h-[300px] absolute bottom-0 w-full bg-gradient-to-t from-[#021629]   to-transparent">
+                    <div className="flex flex-col pt-[100px] justify-center mt-5 h-full text-center text-white">
                       <h3 className="text-[22px] font-bold px-2">
                         {item.name}
                       </h3>
