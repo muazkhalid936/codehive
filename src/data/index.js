@@ -1995,10 +1995,10 @@ export const industries = [
     panelData: [
       {
         id: 1,
-        title: 'Customer Fitness App',
-        heading: 'Customer Fitness App',
+        title: 'User App',
+        heading: 'User App',
         description:
-          'We craft user-focused mobile applications designed to engage your customers and foster long-term loyalty to your business:',
+          'User-focused mobile applications designed to engage your customers and foster long-term loyalty to your business.',
         features: [
           {
             icon: '/FitnessApp/1.png',
