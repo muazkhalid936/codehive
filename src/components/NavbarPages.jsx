@@ -120,7 +120,7 @@ const NavbarPages = ({ isBlack }) => {
                       onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
                       onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
                     >
-                      <Link href="/industries">{t('industries')}</Link>
+{t('industries')}
                       {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
                       {isIndustriesDropdownOpen && (
                         <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">

@@ -107,7 +107,7 @@ const Navbar = () => {
               onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
               onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
             >
-              <Link href="/industries">{t('industries')}</Link>
+{t('industries')}
               {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
               {isIndustriesDropdownOpen && (
                 <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
@@ -135,7 +135,7 @@ const Navbar = () => {
               onMouseEnter={() => setWork(true)}
               onMouseLeave={() => setWork(false)}
             >
-              <Link href="/industries">{t('products')}</Link>
+{t('products')}
               {work ? <FaCaretUp /> : <FaCaretDown />}
               {work && (
                 <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
