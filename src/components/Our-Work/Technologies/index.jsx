@@ -215,7 +215,7 @@ const Technologies = ({ rightImage }) => {
 
   return (
     <div className="bg-[#010B17]  sm:h-[600px] relative overflow-hidden text-white sm:py-10">
-      <div className=" flex  container flex-col md:flex-row justify-between">
+      <div className=" flex  container flex-col md:flex-row gap-10 justify-between">
         <div
           ref={firstDivRef}
           className="first-div justify-center items-center md:w-[40%] "
@@ -247,12 +247,14 @@ const Technologies = ({ rightImage }) => {
               ))}
           </div>
         </div>
-        <img
-          ref={imageRef}
-          src={rightImage}
-          alt="image"
-          className="h-[300px] z-[2] md:h-[500px] w-full md:w-[60%] object-contain"
-        />
+        <div className="h-[300px] z-[2] md:h-[500px] w-full md:w-[60%] flex justify-center items-center">
+          <img
+            ref={imageRef}
+            src={rightImage}
+            alt="image"
+            className="object-contain md:h-[500px]"
+          />
+        </div>
       </div>
       <img
         src="/technologies/shade.png"

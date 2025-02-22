@@ -1,3 +1,5 @@
+import { tr } from "intl-tel-input/i18n";
+
 export const ourMissionData = [
   {
     id: 1,
@@ -1558,7 +1560,7 @@ export const industries = [
         {
           name: 'Restaurant',
           description: 'Streamline table reservations and online ordering.',
-          picture: '/IndustriesBooking/Slider2.png',
+          picture: '/IndustriesBooking/Slider2.jpeg',
         },
         {
           name: 'Hotels and Resorts',
@@ -4234,6 +4236,7 @@ export const ourWorks = [
     noMoreWorriesSection: {
       title: 'Master Arabic Poetry with Faoolun',
       blueWords: ['Faoolun'],
+      cut:true,
       description: 'Unlock the beauty of Arabic poetry with Faoolun, offering:',
       points: [
         'Interactive lessons on classical and modern poetry',
@@ -4363,6 +4366,7 @@ export const ourWorks = [
     noMoreWorriesSection: {
       title: 'Unlock Growth with Solwave',
       blueWords: ['Solwave'],
+      cut:true,
       description:
         'Empower your business and personal development with Solwave, offering:',
       points: [
@@ -5041,6 +5045,7 @@ export const ourWorks = [
     noMoreWorriesSection: {
       title: 'Your Trusted Platform for Legal Consultation',
       blueWords: ['Legal', 'Consultation', 'Web'],
+      cut:true,
       description:
         'Easily find and book expert lawyers for consultations, legal advice, and case assistance.',
       points: [
@@ -5182,6 +5187,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: 'Timeless Elegance, Designed for You',
+      cut:true,
       blueWords: ['Designed', 'for', 'You'],
       description:
         'Discover exquisite jewelry that defines luxury and sophistication.',
@@ -5371,6 +5377,7 @@ export const ourWorks = [
       image: '/our-work/clixpos-web/challenges.png',
     },
     noMoreWorriesSection: {
+      cut:true,
       title: 'Smart & Seamless Point of Sale',
       blueWords: ['Point', 'of', 'Sale'],
       description:

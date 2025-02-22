@@ -20,7 +20,7 @@ const index = () => {
     { name: "5 Sales Seat", available: true },
     { name: "5 Manager Seat", available: true },
     { name: "Free on Boadring", available: true },
-    { name: "Producr & Size management", available: true },
+    { name: "Product & Size management", available: true },
     { name: "Product-Based Rewards", available: true },
   ];
   const features3 = [
@@ -29,7 +29,7 @@ const index = () => {
     { name: "Unlimited Sales Seat", available: true },
     { name: "10 Manager Seat", available: true },
     { name: "24/7 Support", available: true },
-    { name: "Producr & Size management", available: true },
+    { name: "Product & Size management", available: true },
     { name: "Product-Based Rewards", available: true },
   ];
 
