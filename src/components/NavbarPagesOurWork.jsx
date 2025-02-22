@@ -90,62 +90,51 @@ const NavbarPages = ({ isBlack }) => {
             {language === "English" ? "About Us" : "عنا"}
           </Link>
 
-          {/* {language==="English"?"Services" :"الخدمات"} Dropdown */}
+          {/* Services Dropdown */}
           <div
             className="relative flex justify-center gap-3 items-center cursor-pointer"
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
             onMouseLeave={() => setIsServicesDropdownOpen(false)}
           >
-            <Link href="/services">
-              {language === "English" ? "Services" : "الخدمات"}
-            </Link>
-            {/* {language==="English"?"Services" :"الخدمات"}  */}
-
+            <Link href="/services">{t("services1")}</Link>
             {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-            {/* <FaChevronDown className="text-blue-600 text-base" /> */}
             {isServicesDropdownOpen && (
-              <div className="absolute top-4 left-0 mt-2 bg-[#001A36]  w-[350px] rounded shadow-lg z-50">
-                {/* <Link
-                  href="/services"
-                  className="block py-2 px-4 text-white hover:bg-[#219DD92B]"
-                >
-                  All {language==="English"?"Services" :"الخدمات"}
-                </Link> */}
+              <div className="absolute top-5 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
                 {servicesDropdown?.map((service) => (
                   <Link
                     key={service.label}
                     href={service.href}
-                    className="block py-2 px-4  text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                    className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                   >
-                    {service.label}
+                    {t(service.label)}
+                    {/* {service.label} */}
                   </Link>
                 ))}
               </div>
             )}
           </div>
 
-          {/* {language==="English"?"Industries": "المجالات"}  Dropdown */}
+          {/* Industries Dropdown */}
           <div
             className="relative flex justify-center gap-3 items-center cursor-pointer"
             onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
             onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
           >
-            {language === "English" ? "Industries" : "المجالات"}
-
+            <Link href="/industries">{t("industries")}</Link>
             {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-            {/* <FaChevronDown className="text-blue-600 text-base" /> */}
             {isIndustriesDropdownOpen && (
               <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 {industriesDropdown?.map(
                   (industry) =>
                     industry.label !== "Our Booking System" &&
-                    industry.label !== "Reward Hive" && (
+                    industry.label !== "rewardHive" && (
                       <Link
                         key={industry.label}
                         href={industry.href}
                         className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                       >
-                        {t(industry.label)}
+                        {/* {t(industry.label)} */}
+                        {industry.label}
                       </Link>
                     )
                 )}

@@ -94,6 +94,7 @@ const Navbar = () => {
                       className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                     >
                       {t(service.label)}
+                      {/* {service.label} */}
                     </Link>
                   ))}
                 </div>
@@ -113,13 +114,14 @@ const Navbar = () => {
                   {industriesDropdown?.map(
                     (industry) =>
                       industry.label !== 'Our Booking System' &&
-                      industry.label !== 'Reward Hive' && (
+                      industry.label !== 'rewardHive' && (
                         <Link
                           key={industry.label}
                           href={industry.href}
                           className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                         >
-                          {t(industry.label)}
+                          {/* {t(industry.label)} */}
+                          {industry.label}
                         </Link>
                       )
                   )}

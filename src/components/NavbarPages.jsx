@@ -90,56 +90,57 @@ const NavbarPages = ({ isBlack }) => {
           </Link>
 
           {/* {language==="English"?"Services" :"الخدمات"} Dropdown */}
-          <div
-            className="relative flex justify-center gap-3 items-center cursor-pointer"
-            onMouseEnter={() => setIsServicesDropdownOpen(true)}
-            onMouseLeave={() => setIsServicesDropdownOpen(false)}
-          >
-            <Link href="/services">
-              {language === "English" ? "Services" : "الخدمات"}
-            </Link>
-            {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-            {isServicesDropdownOpen && (
-              <div className="absolute top-4 left-0 mt-2 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
-                {servicesDropdown?.map((service) => (
-                  <Link
-                    key={service.label}
-                    href={service.href}
-                    className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
-                  >
-                    {service.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* {language==="English"?"Industries": "المجالات"}  Dropdown */}
-          <div
-            className="relative flex justify-center gap-3 items-center cursor-pointer"
-            onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
-            onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
-          >
-            {language === "English" ? "Industries" : "المجالات"}
-            {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-            {isIndustriesDropdownOpen && (
-              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
-                {industriesDropdown?.map(
-                  (industry) =>
-                    industry.label !== "Our Booking System" &&
-                    industry.label !== "Reward Hive" && (
-                      <Link
-                        key={industry.label}
-                        href={industry.href}
-                        className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
-                      >
-                        {t(industry.label)}
-                      </Link>
-                    )
-                )}
-              </div>
-            )}
-          </div>
+          {/* Services Dropdown */}
+                    <div
+                      className="relative flex justify-center gap-3 items-center cursor-pointer"
+                      onMouseEnter={() => setIsServicesDropdownOpen(true)}
+                      onMouseLeave={() => setIsServicesDropdownOpen(false)}
+                    >
+                      <Link href="/services">{t('services1')}</Link>
+                      {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+                      {isServicesDropdownOpen && (
+                        <div className="absolute top-5 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
+                          {servicesDropdown?.map((service) => (
+                            <Link
+                              key={service.label}
+                              href={service.href}
+                              className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                            >
+                              {t(service.label)}
+                              {/* {service.label} */}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+        
+                    {/* Industries Dropdown */}
+                    <div
+                      className="relative flex justify-center gap-3 items-center cursor-pointer"
+                      onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
+                      onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
+                    >
+                      <Link href="/industries">{t('industries')}</Link>
+                      {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+                      {isIndustriesDropdownOpen && (
+                        <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+                          {industriesDropdown?.map(
+                            (industry) =>
+                              industry.label !== 'Our Booking System' &&
+                              industry.label !== 'rewardHive' && (
+                                <Link
+                                  key={industry.label}
+                                  href={industry.href}
+                                  className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                                >
+                                  {/* {t(industry.label)} */}
+                                  {industry.label}
+                                </Link>
+                              )
+                          )}
+                        </div>
+                      )}
+                    </div>
 
           <div
             className="relative flex justify-center gap-3 items-center cursor-pointer"

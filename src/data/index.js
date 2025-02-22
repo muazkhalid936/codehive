@@ -268,7 +268,7 @@ export const serviceHeroData = {
 export const services = [
   {
     slug: 'software-development',
-    title: 'Customized Software Development',
+    title: 'softwareDe',
     heroData: {
       title: 'Software Development',
       blueWords: ['Software'],
@@ -781,7 +781,7 @@ export const services = [
   },
   {
     slug: 'digital-consultation',
-    title: 'Digital Consultation',
+    title: 'digitalCon',
     heroData: {
       title: 'Digital Consultation Solutions',
       blueWords: ['Solutions'],
@@ -945,7 +945,7 @@ export const services = [
   },
   {
     slug: 'website-development',
-    title: 'Website Development',
+    title: 'websiteDev',
     heroData: {
       title: 'Website Development ',
       blueWords: ['Website'],
@@ -1121,7 +1121,7 @@ export const services = [
   },
   {
     slug: 'business-intelligence',
-    title: 'Business Intelligence & Data Analysis',
+    title: 'businessIn',
     heroData: {
       title: 'Business Intelligence & Data Analysis',
       blueWords: ['Analysis', 'Business'],
@@ -3046,7 +3046,7 @@ export const industries = [
   },
   {
     slug: 'reward-hive',
-    title: 'Reward Hive',
+    title: 'rewardHive',
     heroData: {
       // bgImage: '/Hero/BGImage.png',
       title: 'Reward Hive',
