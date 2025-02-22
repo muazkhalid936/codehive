@@ -267,7 +267,7 @@ const ScrollAnimation = () => {
     <div>
       <div
         ref={containerRef}
-        className="flex flex-col container items-center justify-center mt-[-300px]  h-[100vh] min-h-[400px]  main22 overflow-hidden"
+        className="flex flex-col container items-center justify-center mt-[-300px]  h-[100vh] min-h-[400px]  main22 "
       >
         {ourIndustriesData.map((item, index) => (
           <div

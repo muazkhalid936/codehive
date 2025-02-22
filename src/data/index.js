@@ -287,7 +287,7 @@ export const services = [
       rightImage: '/services/software-development-banner.png',
       showBottomArrow: false,
       backgroundColor: '#ffdfcb',
-      buttonText: 'Book a call',
+      buttonTitle: 'Book a call',
     },
 
     featuresData: {
@@ -386,7 +386,7 @@ export const services = [
       description:
         'Don’t settle for generic solutions when you can have software tailored specifically for your needs. Our expert team is here to help you streamline operations, enhance efficiency, and drive growth.',
       showBottomArrow: true,
-      buttonText: 'Get a Quote',
+      buttonTitle: 'Get a Quote',
 
     },
     testimonialsData: [
