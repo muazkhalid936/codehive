@@ -4660,7 +4660,7 @@ export const ourWorks = [
       title: 'Challenges',
       description:
         'The Trendora App encounters challenges in providing a seamless user experience with diverse products and sellers. Managing inventory accurately is crucial to avoid customer dissatisfaction, while building trust around secure payments and reliable delivery is essential. Additionally, effectively marketing the platform to stand out in a competitive landscape presents a significant hurdle. Addressing these issues is key to ensuring a successful shopping experience.',
-      image: '/our-work/eshop-app/Challenges.png',
+      image: '/our-work/eshop-app/challenges.png',
     },
     noMoreWorriesSection: {
       title: 'Shop Smarter with Trendora',
