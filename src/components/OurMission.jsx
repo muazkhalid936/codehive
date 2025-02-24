@@ -286,10 +286,16 @@
 // };
 
 import React from 'react'
+import { useTranslations } from 'next-intl';
+import useStore from '../store/useUserStore';
 
-const OurMission = () => {
+const OurMission = ({data}) => {
+  const t = useTranslations('translation');
+  const { language } = useStore();
   return (
-    <div className='container mb-[55px] flex flex-col gap-10 sm:gap-0 mx-auto'>
+    <div className='container mb-[55px] flex flex-col gap-10 sm:gap-0 mx-auto'
+    dir={language === 'ar' ? 'rtl' : 'ltr'}
+    >
       <div className='flex flex-col-reverse gap-5 sm:gap-0 sm:flex-row '>
         <div className='sm:w-1/2'>
           <img src='/G2.png'/>
@@ -297,8 +303,8 @@ const OurMission = () => {
 
         <div className='sm:w-1/2 flex font-lato justify-center  sm:px-20 flex-col'>
         <p className='font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start'>01.</p>
-        <p className='font-bold text-[23px] sm:text-[30px] text-center sm:text-start'>Our Mission</p>
-          <p className=' text-[#878787]  text-[15px] text-center sm:text-start'>Our mission is to transform innovative visions into dynamic applications for emerging businesses. We strive to deliver top-tier, cost-effective app development services, equipping every business with the digital tools they need to thrive in today’s fast-paced market.</p>
+        <p className='font-bold text-[23px] sm:text-[30px] text-center sm:text-start'>{t(data.mission)}</p>
+          <p className=' text-[#878787]  text-[15px] text-center sm:text-start'>{t(data.missionDesc)}</p>
         </div>
       </div>
 
@@ -309,8 +315,8 @@ const OurMission = () => {
 
         <div className='sm:w-1/2 flex font-lato justify-center  sm:px-20 flex-col'>
         <p className='font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start'>02.</p>
-        <p className='font-bold text-[23px] sm:text-[30px] text-center sm:text-start '>Our Vision</p>
-          <p className='text-[#878787] text-[15px] text-center sm:text-start'>Our vision is to become leaders in the app development industry, breaking down barriers to market entry for businesses of all sizes. We aspire to create a world where every business, regardless of its budget or resources, has access to high-quality, custom-built digital solutions that enhance their competitiveness and success.</p>
+        <p className='font-bold text-[23px] sm:text-[30px] text-center sm:text-start '>{t(data.vision)}</p>
+          <p className='text-[#878787] text-[15px] text-center sm:text-start'>{t(data.visionDesc)}</p>
         </div>
       </div>
     </div>

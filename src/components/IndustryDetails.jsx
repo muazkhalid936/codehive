@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import { useTranslations } from "next-intl";
 const IndustryDetails = ({ panelData }) => {
+  const t=useTranslations("translation");
   if (!panelData || panelData.length === 0) {
     return null;
   }
@@ -12,8 +13,8 @@ const IndustryDetails = ({ panelData }) => {
   return (
     <div className="bg-[#000B17] overflow-hidden text-white py-[55px]">
       <div className="container mx-auto">
-      <div className="bg-white rounded-full no-scrollbar overflow-x-auto sm:overflow-x-hidden flex gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide">
-      {panelData.map((panel) => (
+        <div className="bg-white rounded-full no-scrollbar overflow-x-auto sm:overflow-x-hidden flex gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide">
+          {panelData.map((panel) => (
             <button
               key={panel.id}
               onClick={() => setActivePanel(panel)}
@@ -23,7 +24,7 @@ const IndustryDetails = ({ panelData }) => {
                   : "bg-[#e9e9e9] text-[#68747b]"
               }`}
             >
-              {panel.title}
+              {t(panel.title)}
             </button>
           ))}
         </div>
@@ -35,9 +36,9 @@ const IndustryDetails = ({ panelData }) => {
           transition={{ duration: 0.5 }}
         >
           <h1 className="gilray-font mt-10 sub_heading">
-            {activePanel.heading.split(" ").slice(0, -1).join(" ")}{" "}
+            {t(activePanel.heading).split(" ").slice(0, -1).join(" ")}{" "}
             <span className="text-blueColor">
-              {activePanel.heading.split(" ").slice(-1)}
+              {t(activePanel.heading).split(" ").slice(-1)}
             </span>
           </h1>
         </motion.div>
@@ -49,7 +50,7 @@ const IndustryDetails = ({ panelData }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className=" main_hero_slogan">{activePanel.description}</p>
+            <p className=" main_hero_slogan">{t(activePanel.description)}</p>
 
             <div className="flex">
               <div className="mt-10 flex flex-col justify-between gap-6">
@@ -62,10 +63,10 @@ const IndustryDetails = ({ panelData }) => {
                     />
                     <div>
                       <h3 className="text-[17px] font-semibold">
-                        {feature.title}
+                        {t(feature.title)}
                       </h3>
                       <p className="text-[14px] text-gray-300">
-                        {feature.description}
+                        {t(feature.description)}
                       </p>
                     </div>
                   </div>

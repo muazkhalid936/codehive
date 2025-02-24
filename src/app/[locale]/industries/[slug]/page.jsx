@@ -51,7 +51,7 @@ const page = async ({ params }) => {
       {slug === 'reward-hive' && <Packages2 />}
 
       <IndustryDetails panelData={industry.panelData} />
-      <Testimonials testimonials={industry.testimonialsData} />
+      {/* <Testimonials testimonials={industry.testimonialsData} /> */}
       {/* <ConnectContact /> */}
       <Footer />
     </div>

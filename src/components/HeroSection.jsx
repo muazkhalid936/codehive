@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+import useStore from "../store/useUserStore";
 const HeroSection = ({
   bgImage,
   title,
@@ -8,10 +11,11 @@ const HeroSection = ({
   blueWords = [],
   transparent = false,
   topArrow = false,
-  buttonText = "Get Started",
+  buttonText = "getStarted",
   showButton = true,
 }) => {
-  const titleWords = title.split(" ");
+  const t = useTranslations("translation");
+  const titleWords = t(title).split(" ");
   const colors =
     bgImage && rightImage
       ? "text-black"
@@ -19,12 +23,13 @@ const HeroSection = ({
       ? "text-black"
       : "text-white";
   const highlightColor = "text-[#219DD9]";
-
+  const { language } = useStore();
+  buttonText = t(buttonText);
   const renderTitle = () => (
     <h2 className="font-black hero_section_heading  sm:w-full text-center sm:text-start  leading-tight">
       {titleWords.length > 1 ? (
         <>
-          {title.split(" ").map((word, index) => (
+          {titleWords.map((word, index) => (
             <span
               key={index}
               className={`${
@@ -36,19 +41,20 @@ const HeroSection = ({
                   : "text-white"
               }`}
             >
-              {word}{" "}
-              {index === 1 && <br />} {/* Add a line break after the second word */}
+              {word} {index === 1 && <br />}{" "}
+              {/* Add a line break after the second word */}
             </span>
           ))}
         </>
       ) : (
-        <span className={colors}>{title}</span>
+        <span className={colors}>{t(title)}</span>
       )}
     </h2>
   );
 
   return (
     <div
+      dir={language === "en" ? "ltr" : "rtl"}
       className="overflow-hidden "
       style={{
         backgroundImage: bgImage ? `url(${bgImage})` : "",
@@ -74,16 +80,22 @@ const HeroSection = ({
             <p
               className={`main_hero_slogan text-center sm:text-start sm:my-0 ${colors}`}
             >
-              {description}
+              {t(description)}
             </p>
           )}
           {showButton && (
-            <div className="flex justify-center sm:justify-start">
+            <div className="flex justify-center sm:justify-start" dir="ltr">
               <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
                 <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
                   {buttonText}
                 </p>
-                <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-20 md:group-hover:translate-x-24 overflow-hidden">
+                <div
+                  className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-24 ${
+                    language === "en"
+                      ? "md:group-hover:translate-x-28"
+                      : "md:group-hover:translate-x-12"
+                  } overflow-hidden`}
+                >
                   <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />
                 </div>
               </button>

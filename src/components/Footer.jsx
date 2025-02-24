@@ -5,8 +5,10 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa";
 import { ImFacebook } from "react-icons/im";
+import { useTranslations } from "next-intl";
 import useStore from "../store/useUserStore";
 const Footer = () => {
+  const t=useTranslations("translation")
   const { language } = useStore();
   return (
     <div className="bg-gradient-to-b from-[#0a1929]   to-[#020d1a] flex justify-center items-center py-10  md:py-2 md:h-[250px]">
@@ -29,40 +31,39 @@ const Footer = () => {
 
           <div className="flex flex-wrap gap-4 main_hero_slogan text-white">
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
-              {language === "English" ? "Home" : "الصفحة"}
+              {language === "en" ? "Home" : "الصفحة"}
             </Link>
             <Link
               href="/about-us"
               className="hover:text-blueColor dura ease-in-out"
             >
-              {language === "English" ? "About Us" : "عنا"}
+              {language === "en" ? "About Us" : "عنا"}
             </Link>
             <Link
               href="/services"
               className="hover:text-blueColor dura ease-in-out"
             >
-              {language === "English" ? "Services" : "الخدمات"}
+              {language === "en" ? "Services" : "الخدمات"}
             </Link>
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
-              {language === "English" ? "Industries" : "المجالات"}
+              {language === "en" ? "Industries" : "المجالات"}
             </Link>
 
             <Link
               href="/our-work"
               className="hover:text-blueColor dura ease-in-out"
             >
-              {language === "English" ? "Our Work" : "   أعمالنا"}
+              {language === "en" ? "Our Work" : "   أعمالنا"}
             </Link>
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
-              {language === "English" ? "Contact Us" : "تحدث معنا"}
+              {language === "en" ? "Contact Us" : "تحدث معنا"}
             </Link>
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
-              Privacy Policy
-            </Link>
+{t("privacyPol")}            </Link>
           </div>
           <div className="text-gray-500 hidden sm:flex main_hero_slogan">
             <p>
-              {language === "English"
+              {language === "en"
                 ? "© 2024 Codehive. All rights reserved."
                 : ".كودھاف. جمع الحقوق محفوظة 2024 ©"}
             </p>
@@ -71,31 +72,31 @@ const Footer = () => {
         <div className="flex flex-col  gap-1 md:w-[30%] justify-start  sm:items-end">
           <div>
             <p className="text-[30px] header xl:text-[50px]  main-heading  text-[#F6Be3C] ">
-              {language === "English" ? "   Let's Talk?" : "لنبدأ الحدث؟ "}
+              {language === "en" ? "   Let's Talk?" : "لنبدأ الحدث؟ "}
             </p>
           </div>
           <p className="text-white main_hero_slogan font-bold jutify-end flex  ">
-            {language === "English" ? "Contact Us" : "تحدث معنا"}
+            {language === "en" ? "Contact Us" : "تحدث معنا"}
           </p>
           <p className="text-white main_hero_slogan ">
-            {language === "English"
+            {language === "en"
               ? "Phone: +971 4 234 2168"
               : "رقم الھاتف : +97142342168"}
           </p>
           <p className="text-white main_hero_slogan ">
-            {language === "English"
+            {language === "en"
               ? "Whatsapp: +971 54 220 3330"
               : "واتساب: +971 54 220 3330"}
           </p>
           <p className="text-white main_hero_slogan ">
-            {language === "English"
+            {language === "en"
               ? "  Email: info@codehive.ae"
               : "info@codehive.ae :البريد الكتروني"}
           </p>
         </div>
         <div className="text-gray-500 flex sm:hidden justify-center main_hero_slogan">
           <p>
-            {language === "English"
+            {language === "en"
               ? "© 2024 Codehive. All rights reserved."
               : ".كودھاف. جمع الحقوق محفوظة 2024 ©"}
           </p>

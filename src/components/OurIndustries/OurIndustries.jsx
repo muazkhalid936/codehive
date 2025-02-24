@@ -79,7 +79,7 @@ export const ourIndustriesData = [
   },
 ];
 
-import { useEffect, useRef, useState, lazy, Suspense } from 'react';
+import { useEffect, useRef, useState, lazy, Suspense, use } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FiArrowUpRight } from 'react-icons/fi';
@@ -89,7 +89,7 @@ import useStore from '../../store/useUserStore';
 import { useRouter } from 'next/navigation';
 import {Link} from '../../i18n/routing';
 gsap.registerPlugin(ScrollTrigger);
-
+import { useTranslations } from 'next-intl';
 // Lazy load the IphoneModel component
 const IphoneModel = dynamic(() =>
   import('../IphoneModel', {
@@ -99,7 +99,7 @@ const IphoneModel = dynamic(() =>
 
 const ScrollAnimation = () => {
   const router = useRouter();
-
+const t= useTranslations("translation")
   const [activeSection, setActiveSection] = useState(0);
 
   const texturePaths = [
@@ -279,30 +279,32 @@ const ScrollAnimation = () => {
               zIndex: activeSection === index ? 1 : 0,
             }}
           >
-            <div className="sm:w-[640px] text-center sm:text-start   flex-1 heading">
+            <div className="sm:w-[640px] text-center sm:text-start   flex-1 heading"
+                  dir={language === 'en' ? 'ltr' : 'rtl'}
+>
               <div className="flex justify-center sm:justify-start">
                 <p className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
-                  {language === 'English' ? item.title : item.atitle}
+                  {language === 'en' ? item.title : item.atitle}
                 </p>
               </div>
               <p className="mt-4 main_hero_slogan text-white">
-                {language === 'English' ? item?.des1 : item?.ades1}
+                {language === 'en' ? item?.des1 : item?.ades1}
               </p>
               <p className="mt-4 text-white main_hero_slogan ">
-                {language === 'English' ? item?.des2 : item?.ades2}
+                {language === 'en' ? item?.des2 : item?.ades2}
               </p>
               <p className="mt-4 main_hero_slogan text-white ">
-                {language === 'English' ? item?.des3 : item?.ades3}
+                {language === 'en' ? item?.des3 : item?.ades3}
               </p>
               <p className="mt-4 main_hero_slogan text-white">
-                {language === 'English' ? item?.des4 : item?.ades4}
+                {language === 'en' ? item?.des4 : item?.ades4}
               </p>
               <p className="mt-4 text-white main_hero_slogan ">
-                {language === 'English' ? item?.des5 : item?.ades5}
+                {language === 'en' ? item?.des5 : item?.ades5}
               </p>
               <div className="flex justify-center sm:justify-start items-center gap-3">
                 <Link href={item.link} className="mt-2 xl:text-xl text-white">
-                  Read More
+                 {t("readMore9")}
                 </Link>
                 <div className="bg-white text-black mt-2 sm:mt-3 rounded-full">
                   <FiArrowUpRight className=" text-sm sm:text-lg" />

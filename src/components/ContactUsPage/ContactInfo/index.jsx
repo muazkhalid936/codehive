@@ -1,17 +1,14 @@
 import React from "react";
-import { FiPhone, FiMail } from "react-icons/fi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { MdPhone, MdEmail } from "react-icons/md";
-import { FaAt } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io";
-
+import { useTranslations } from "next-intl";
+import useStore from "../../../store/useUserStore";
 const ContactInfo = () => {
+  const t = useTranslations("translation");
+const {language} = useStore()
   return (
-    <div className="w-[75%] mx-auto mb-[55px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
-      <div
-        className=" mx-auto p-8   bg-[#041c30] text-white rounded-xl shadow-lg"
-      
-      >
+    <div className="w-[75%] mx-auto mb-[55px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl"
+    dir={language === "ar" ? "rtl" : "ltr"}
+    >
+      <div className=" mx-auto p-8   bg-[#041c30] text-white rounded-xl shadow-lg">
         {/* Inner content div to apply border-radius */}
         <div className="rounded-xl overflow-hidden">
           <div className="my-5">
@@ -20,27 +17,29 @@ const ContactInfo = () => {
               <span className="main-heading bg-gradient-to-r from-white via-white to-blueColor bg-clip-text text-transparent">
                 Reach
               </span>{" "}
-              <span className="text-blueColor main-heading"> us</span>
+              <span className="text-blueColor main-heading"> Us</span>
             </h3>
           </div>
           <div className="space-y-6 mb-8">
             {/* Phone */}
             <p className="flex items-center justify-center text-lg">
-              <div className="flex items-center group">
+              <div className="flex items-center group"
+              dir
+              >
                 {/* <IoLogoWhatsapp className="bg-white group-hover:bg-blueColor  text-black rounded-full p-1 w-6 h-6 mr-2" /> */}
-               < img src="/contact/wp.png" className="w-7 mr-3 " />
+                <img src="/contact/wp.png" className="w-7 mx-3 " />
                 <a
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >
-           Whatsapp: +971 54 220 3330
+                  {t("whatsapp97")}+971 54 220 3330
                 </a>
               </div>
             </p>
             <p className="flex items-center justify-center text-lg">
               <div className="flex items-center group">
-              < img src="/contact/phone.png" className="w-7 mr-3 " />
-              <a
+                <img src="/contact/phone.png" className="w-7 mx-3 " />
+                <a
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >
@@ -51,8 +50,8 @@ const ContactInfo = () => {
             {/* Email */}
             <p className="flex items-center justify-center text-lg">
               <div className="flex items-center group">
-              < img src="/contact/mail.png" className="w-7 mr-3 " />
-              <a
+                <img src="/contact/mail.png" className="w-7 mx-3 " />
+                <a
                   href="mailto:info@codehive.ae"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >
@@ -62,27 +61,25 @@ const ContactInfo = () => {
             </p>
             {/* Location */}
             <p className="flex items-center  justify-center text-lg">
-            < img src="/contact/gps.png" className="w-7 mr-3 " />
-            Office M-18, 1st floor, Sajaya Plaza Al Barsha 3, Dubai, UAE
+              <img src="/contact/gps.png" className="w-7 mx-3 " />
+            {t("officeM181")}
             </p>
             <div className="flex items-center justify-center mt-2">
-                <div className="flex items-center group">
-                < img src="/contact/support.png" className="w-7 mr-3 " />
+              <div className="flex items-center group">
+                <img src="/contact/support.png" className="w-7 mx-3 " />
                 <a
-                    href="mailto:support@codehive.ae"
-                    className=" text-white group-hover:text-blueColor   hover:underline"
-                  >
-                    support@codehive.ae
-                  </a>
-                </div>
+                  href="mailto:support@codehive.ae"
+                  className=" text-white group-hover:text-blueColor   hover:underline"
+                >
+                  support@codehive.ae
+                </a>
               </div>
+            </div>
             {/* Support Section */}
             <div className="text-center flex justify-center items-center  ">
-              <p className="text-[24px]  mt-10 font-semibold bg-gradient-to-r  from-white via-white to-blueColor bg-clip-text text-transparent">
-              If you need any support, visit our office
-             <br/> we’re always happy to assist you!
+              <p className={`text-[24px] w-[400px]  mt-10 font-semibold ${language==="en"?"bg-gradient-to-r":"bg-gradient-to-l"}  from-white via-white to-blueColor bg-clip-text text-transparent`}>
+           {t("ifYouNeedA")}
               </p>
-           
             </div>
           </div>
           {/* Google Map */}

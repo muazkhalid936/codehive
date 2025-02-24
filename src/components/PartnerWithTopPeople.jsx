@@ -5,96 +5,90 @@ import "swiper/css";
 import { Autoplay, History, EffectCards } from "swiper/modules";
 import { EffectFade } from "swiper/modules";
 import "swiper/css/bundle";
-const data = [
+import { useTranslations } from "next-intl";
+
+ const data = [
   {
     name: "Saif AL Alwar",
-    position: "CEO",
-    description:
-      "As the CEO of Code Hive, Saif Alawar leads with a focus on digital transformation, data analytics, and customized software solutions. His expertise drives innovation, efficiency, and strategic decision-making, establishing Code Hive as a trusted leader in the tech industry. ",
+    position: "ceo",
+    description: "asTheCeoOf",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
     twitter: "https://twitter.com/aisha_alhassan",
     picture: "/partnerwithtoppeople/boss.png",
   },
   {
     name: "Shoaib Ahmad",
-    position: "General Manager",
-    description:
-      "A strategic leader focused on operational excellence, efficiency, and innovation. With strong business management expertise, he ensures seamless execution, fosters collaboration, and strengthens client relationships to drive success.",
+    position: "generalMan",
+    description: "aStrategic",
     linkedin: "https://www.linkedin.com/in/omaralfahad/",
     twitter: "https://twitter.com/omaralfahad",
     picture: "/partnerwithtoppeople/Sohaib.png",
   },
-
   {
     name: "Yousef Issa",
-    position: "Project Manager",
-    description:
-      "An expert in strategic planning and team coordination, our Project Manager ensures smooth project execution. Focused on innovation and client satisfaction, they drive success while maintaining quality and timely delivery.",
+    position: "projectMan",
+    description: "anExpertIn",
     linkedin: "https://www.linkedin.com/in/hassan-sayed/",
     twitter: "https://twitter.com/hassan_sayed",
     picture: "/partnerwithtoppeople/Yousef.png",
   },
   {
     name: "Balawal Hussain",
-    position: "Technical Lead",
-    description:
-      "A leader in innovation and technical excellence, our Technical Lead provides expert guidance, solves problems efficiently, and ensures seamless project execution. With a focus on quality and performance, they lead teams to deliver cutting-edge solutions. ",
+    position: "technicalL",
+    description: "aLeaderInI",
     linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
     twitter: "https://twitter.com/youssef_almansoori",
     picture: "/partnerwithtoppeople/Bilawal.png",
   },
   {
     name: "Muskaan Iqbal",
-    position: "Head of Designer",
-    description:
-      "A creative visionary, our Head of Design ensures innovative, user-centered designs that elevate brand identity and enhance user experience. With a balance of aesthetics and functionality, they drive design excellence across all projects.",
+    position: "headOfDesi",
+    description: "aCreativeV",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
     twitter: "https://twitter.com/aisha_alhassan",
     picture: "/partnerwithtoppeople/Muskan.png",
   },
   {
     name: "Asfand Naveed",
-    position: "DevOps Engineer",
-    description:
-      "Our DevOps Engineer streamlines integration, automation, and deployment, optimizing infrastructure for efficiency and scalability. Focused on reliability and performance, they bridge development and operations, driving continuous improvement and innovation.",
+    position: "devopsEngi",
+    description: "ourDevopsE",
     linkedin: "https://www.linkedin.com/in/omaralfahad/",
     twitter: "https://twitter.com/omaralfahad",
     picture: "/partnerwithtoppeople/Asfand.png",
   },
-
   {
     name: "Hina Liaqat",
-    position: "Dotnet Developer",
-    description:
-      "Our Dotnet Developer specializes in building robust, scalable applications using the latest .NET technologies. With a focus on performance, security, and seamless integration, they deliver high-quality solutions tailored to meet business needs.",
+    position: "dotnetDeve",
+    description: "ourDotnetD",
     linkedin: "https://www.linkedin.com/in/hassan-sayed/",
     twitter: "https://twitter.com/hassan_sayed",
     picture: "/partnerwithtoppeople/Hina.png",
   },
   {
     name: "Muhammad Hamwi",
-    position: "Content Creater",
-    description:
-      "Our Content Creator produces engaging, high-quality content that strengthens brand storytelling and boosts audience engagement. With a blend of creativity and strategy, they craft compelling visuals and copy to drive brand awareness and impact.",
+    position: "contentCre",
+    description: "ourContent",
     linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
     twitter: "https://twitter.com/youssef_almansoori",
     picture: "/partnerwithtoppeople/Hamvi.png",
   },
   {
     name: "Samer Alhelou",
-    position: "Senior Developer",
-    description:
-      "Bringing advanced technical expertise and problem-solving skills, the Senior Developer delivers high-quality, scalable solutions. With a focus on efficiency and innovation, they mentor teams, ensure code quality, and drive complex projects to successful completion. ",
+    position: "seniorDeve",
+    description: "bringingAd",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
     twitter: "https://twitter.com/aisha_alhassan",
     picture: "/partnerwithtoppeople/Samer.png",
   },
 ];
+import useStore from "../store/useUserStore";
 
 const PartnerWithTopPeople = () => {
+  const {language}=useStore();
+  const t=useTranslations("translation");
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [hoveredSlide, setHoveredSlide] = React.useState("");
-
+const title=t("meetTheCre").split(" ");
   // Ensure selected card is removed and the list starts from the next one
   const filteredData = data.filter((_, index) => index !== selectedIndex);
 
@@ -106,22 +100,31 @@ const PartnerWithTopPeople = () => {
     ...filteredData.slice(selectedIndex % filteredData.length),
     ...filteredData.slice(0, selectedIndex % filteredData.length),
   ];
+  console.log(language)
 
   return (
-    <div className="bg-[#000B17] py-10 font-lato sm:py-20 text-white">
+    <div className="bg-[#000B17] py-10 font-lato sm:py-20 text-white"
+    dir={language==="ar"?"rtl":"ltr"}
+
+    >
       <div className="container  sm:px-4">
 
-        <h2 className="text-center mb-14 sm:w-full mx-auto sub_heading leading-tight gilray-font">
-          Meet the
-          <span className="text-[#219DD9] mx-[3px] sm:mx-2">Creative  Minds</span>
-          Behind <br/> Our Most Successful Projects
+        <h2 className="text-center mb-14 sm:w-[65%] mx-auto sub_heading  leading-tight gilray-font">
+          {title.map((word, index) => (
+            <span
+              key={index}
+              className={index === 2 || index === 3 ? "text-[#219DD9]" : ""}
+            >
+              {word}{" "}
+            </span>
+          ))}
         </h2>
         {/* Main Layout: Big Card & Swiper */}
         <div className="flex mt-3 sm:mt-10 h-[270px] sm:h-[500px] flex-row gap-8 items-start">
           {/* Left Side: Big Card */}
           <div className=" w-[50%] lg:w-[30%]">
             <div
-              className="relative overflow-hidden flex h-[250px] sm:h-[500px] rounded-md"
+              className="relative overflow-hidden flex h-[250px] sm:h-[400px] md:h-[500px] rounded-md"
               style={{
                 border: "1px solid transparent",
                 borderRadius: "26px",
@@ -139,13 +142,18 @@ const PartnerWithTopPeople = () => {
           </div>
 
           {/* Right Side: Swiper */}
-          <div className="w-[50%] lg:w-[70%] flex flex-col justify-between h-[350px] sm:h-[500px]">
-            <div>
-              <h3 className="text-[22px] font-bold">{data[selectedIndex].name}</h3>
-              <h4 className="text-[19px] text-[#219DD9] font-semibold my-2">
-                {data[selectedIndex].position}
+          <div 
+          
+
+          className="w-[50%] lg:w-[70%] flex flex-col justify-between h-[350px] sm:h-[500px]">
+            <div
+
+            >
+              <h3 className="text-[18px] sm:text-[22px] font-bold">{data[selectedIndex].name}</h3>
+              <h4 className="text-[16px] sm:text-[19px] text-[#219DD9] font-semibold sm:my-2">
+                {t(data[selectedIndex].position)}
               </h4>
-              <p className="main_hero_slogan leading-relaxed">{data[selectedIndex].description}</p>
+              <p className="main_hero_slogan leading-relaxed">{t(data[selectedIndex].description)}</p>
             </div>
 
             {/* Swiper - Shifted Order */}
@@ -157,7 +165,8 @@ const PartnerWithTopPeople = () => {
                 modules={[EffectFade, History, EffectCards, Autoplay]}
                 breakpoints={{
                   240: { slidesPerView: 1.3 },
-                  768: { slidesPerView: 3.3 },
+                  768: { slidesPerView: 2.3 },
+                  1280: { slidesPerView: 3.3 },
                 }}
               >
                 {shiftedData.map((item, index) => (
@@ -169,7 +178,7 @@ const PartnerWithTopPeople = () => {
                       }}
                       onMouseEnter={() => setHoveredSlide(item.name)}
                       onMouseLeave={() => setHoveredSlide("")}
-                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl sm:min-h-[350px] h-[400px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
+                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl  h-[360px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
                       style={{
                         border: "1px solid transparent",
                         borderRadius: "26px",
@@ -195,7 +204,7 @@ const PartnerWithTopPeople = () => {
 
                       <div className="absolute bottom-0 w-full flex flex-col items-center justify-center">
                         <div className="bg-gradient-to-t from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto">
-                          <h3 className="text-white text-[15px] sm:text-[22px] font-semibold text-left w-full">
+                          <h3 className={`text-white text-[15px] sm:text-[22px] font-semibold text-left w-full`}>
                             {item.name}
                           </h3>
                           <h3
@@ -203,11 +212,11 @@ const PartnerWithTopPeople = () => {
                               hoveredSlide === item.name ? "sm:mb-10" : "mb-0"
                             }`}
                           >
-                            {item.position}
+                            {t(item.position)}
                           </h3>
                           {hoveredSlide === item.name && (
                             <h3 className="text-white text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500">
-                              {item.description}
+                              {t(item.description)}
                             </h3>
                           )}
                         </div>
@@ -275,11 +284,11 @@ const PartnerWithTopPeople = () => {
                               hoveredSlide === item.name ? "sm:mb-10" : "mb-0"
                             }`}
                           >
-                            {item.position}
+                            {t(item.position)}
                           </h3>
                           {hoveredSlide === item.name && (
                             <h3 className="text-white text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500">
-                              {item.description}
+                              {t(item.description)}
                             </h3>
                           )}
                         </div>

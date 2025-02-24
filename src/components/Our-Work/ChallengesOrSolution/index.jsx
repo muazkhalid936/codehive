@@ -2,8 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useInView } from "react-intersection-observer";
-
+import { useTranslations } from "next-intl";
 const ChallengesOrSolution = ({ title, image, description }) => {
+
+  const t=useTranslations("translation")
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
@@ -63,9 +65,9 @@ const ChallengesOrSolution = ({ title, image, description }) => {
         className="flex-col flex gap-2 sm:gap-4 w-full md:w-1/2"
         style={{ transform: "translateX(200px)", opacity: 0 }}
       >
-        <h1 className="gilray-font text-center sm:text-start sub_heading">{title}</h1>
+        <h1 className="gilray-font text-center sm:text-start sub_heading">{t(title)}</h1>
         <p className="font-lato text-center sm:text-start text-[#535D66] main_hero_slogan ">
-          {description}
+          {t(description)}
         </p>
       </div>
     </div>

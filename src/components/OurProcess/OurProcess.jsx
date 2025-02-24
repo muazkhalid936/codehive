@@ -291,7 +291,7 @@ const StackingImages = () => {
               },
             ].map((item, i) => {
               const titleWords =
-                language === "English"
+                language === "en"
                   ? item.title.split(" ")
                   : item.atitle.split(" ");
               const lastTwoWords = titleWords.slice(-2).join(" ");
@@ -299,24 +299,24 @@ const StackingImages = () => {
               return (
                 <div
                   key={i}
-                  dir={language === "English" ? "ltr" : "rtl"}
-                  className={`new-text mt-[15vh] flex flex-col gap-4 main_hero_slogan new-text-${
+                  dir={language === "en" ? "ltr" : "rtl"}
+                  className={`new-text mt-[15vh] container sm:w-auto ml-0 sm:ml-[-40px] flex flex-col gap-4 main_hero_slogan new-text-${
                     i + 1
                   }`}
                 >
-                  <span className="font-bold text-center sm:text-start !font-lato !text-white  ">
+                  <p className="font-bold text-center sm:text-start !font-lato !text-white  ">
                     <span className="font-bold  w-[90%] text-3xl sm:text-[50px] leading-none mt-5  main-heading text-white">
                       {firstWords}{" "}
                       <span className="bg-gradient-to-r from-white  to-blueColor bg-clip-text text-transparent">
                         {lastTwoWords}
                       </span>
                     </span>
-                  </span>
-                  <span className="  text-center text-white sm:text-start main_hero_slogan !font-lato">
-                    {language === "English"
+                  </p>
+                  <p className="  text-center text-white sm:text-start main_hero_slogan !font-lato">
+                    {language === "en"
                       ? item.description
                       : item.adescription}
-                  </span>
+                  </p>
                 </div>
               );
             })}

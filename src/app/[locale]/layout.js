@@ -25,7 +25,7 @@ export default async function RootLayout({ children, params: { locale } }) {
       </head>
       <body
         // current langauge is arabic then set dir to rtl
-        dir={locale === 'ar' ? 'rtl' : 'ltr'}
+        // dir={locale === 'ar' ? 'rtl' : 'ltr'}
       >
         {/* <Loader> */}
         {/* <NextTopLoader showSpinner={false} /> */}

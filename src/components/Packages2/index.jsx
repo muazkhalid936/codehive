@@ -3,58 +3,60 @@ import React from "react";
 import { HiArrowUpRight, HiMiniCheck } from "react-icons/hi2";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
-
+import { useTranslations } from "next-intl";
 import "./style.css";
 const index = () => {
   const features1 = [
-    { name: "100 Digital Cards", available: true },
-    { name: "1 Geo Location", available: true },
-    { name: "1 Sales Seat", available: true },
-    { name: "1 Manager Seat", available: true },
-    { name: "Free on boadring", available: true },
-    { name: "Product & Size management", available: true },
+    { name: "100Digital", available: true },
+    { name: "1GeoLocati", available: true },
+    { name: "1SalesSeat", available: true },
+    { name: "1ManagerSe", available: true },
+    { name: "freeOnBoar", available: true },
+    { name: "productSiz", available: true },
   ];
   const features2 = [
-    { name: "500 Digital Cards", available: true },
-    { name: "5 Geo Location", available: true },
-    { name: "5 Sales Seat", available: true },
-    { name: "5 Manager Seat", available: true },
-    { name: "Free on Boadring", available: true },
-    { name: "Product & Size management", available: true },
-    { name: "Product-Based Rewards", available: true },
+    { name: "500Digital", available: true },
+    { name: "5GeoLocati", available: true },
+    { name: "5SalesSeat", available: true },
+    { name: "5ManagerSe", available: true },
+    { name: "freeOnBoar", available: true },
+    { name: "productSiz", available: true },
+    { name: "productBa1", available: true },
   ];
   const features3 = [
-    { name: "Unlimited Digital Cards", available: true },
-    { name: "10 Geo Location", available: true },
-    { name: "Unlimited Sales Seat", available: true },
-    { name: "10 Manager Seat", available: true },
-    { name: "24/7 Support", available: true },
-    { name: "Product & Size management", available: true },
-    { name: "Product-Based Rewards", available: true },
+    { name: "unlimitedD", available: true },
+    { name: "10GeoLocat", available: true },
+    { name: "unlimitedS", available: true },
+    { name: "10ManagerS", available: true },
+    { name: "247Support", available: true },
+    { name: "productSiz", available: true },
+    { name: "productBa1", available: true },
   ];
+  const t=useTranslations("translation")
+  const title = t("monthlyPac")
 
   return (
     <div className=" py-[55px]  bg-[#000B17] ">
       <div className="container mx-auto   text-white">
         <div className="">
-          <h2 className=" pb-[55px] text-center text-[45px] gilray-font leading-[55px]">
-            <span className="text-white">Monthly </span>
-            <span className="text-[#1E90FF]">Packages</span>
+        <h2 className=" pb-[55px] text-center text-[45px] gilray-font leading-[55px]">
+            {title.split(" ").slice(0, -1).join(" ")}{" "}
+            <span className="text-blueColor">{title.split(" ").slice(-1)}</span>
           </h2>
 
           <div className="flex md:flex-row justify-end items-end flex-col gap-5">
             <div className="md:w-[30%] md:mt-[10vh] mx-auto h-[520px]  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
-                  Basic
+                {t("basic")}
                 </p>
                 <p className="text-center  text-[25px]  leading-none mb-8">
-                AED 190 Monthly
+                {t("basicAed19")}
                 </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
-                  <span className="truncate">Get Started</span>
-                  <span
+                <span className="truncate">{t("getStarted")}</span>
+                <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                     style={{ width: "24px", height: "24px" }}
                   >
@@ -92,7 +94,7 @@ const index = () => {
                         }`}
                       >
                         {" "}
-                        {features.name}
+                        {t(features.name)}
                       </span>
                     </li>
                   ))}
@@ -103,19 +105,19 @@ const index = () => {
             <div className="md:w-[30%] mx-auto bg-gradient-to-br h-[620px] from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
                 <p className="w-[60%] mx-auto text-center text-[#1FCB78] border border-[#1FCB78] px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
-                  Most Popular
+                {t("mostPopula")}
                 </p>
 
                 <p className="gilray-font text-[30px] mx-auto text-center">
-                  Advanced
+                {t("advanced")}
                 </p>
                 <p className="text-center  text-[25px]  leading-none mb-8">
-                AED 250 Monthly
+                {t("advanceAed")}
                 </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
-                  <span className="truncate">Get Started</span>
-                  <span
+                <span className="truncate">{t("getStarted")}</span>
+                <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                     style={{ width: "24px", height: "24px" }}
                   >
@@ -152,7 +154,7 @@ const index = () => {
                      }`}
                    >
                      {" "}
-                     {features.name}
+                     {t(features.name)}
                    </span>
                  </li>
                   ))}
@@ -163,15 +165,14 @@ const index = () => {
             <div className="md:w-[30%]  md:mt-[10vh] mx-auto h-[520px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
-                  Enterprise
+                {t("enterprise")}
                 </p>
                 <p className="text-center  text-[25px]  leading-none mb-8">
-                AED 350 Monthly
-                </p>
+{t("enterpris1")}                </p>
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
-                  <span className="truncate">Get Started</span>
-                  <span
+                <span className="truncate">{t("getStarted")}</span>
+                <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                     style={{ width: "24px", height: "24px" }}
                   >
@@ -207,7 +208,7 @@ const index = () => {
                      }`}
                    >
                      {" "}
-                     {features.name}
+                     {t(features.name)}
                    </span>
                  </li>
                   ))}

@@ -1,6 +1,8 @@
+"use client"
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import  useStore  from '../store/useUserStore';
 const HeroSectionServices = ({
   bgImage,
   title,
@@ -8,13 +10,13 @@ const HeroSectionServices = ({
   rightImage,
   transparent = false,
   topArrow = false,
-  buttonText = 'Get Started',
+  buttonText = 'getStarted',
   showButton = true,
 }) => {
   const t = useTranslations('translation');
-  // const titleWords = t('aboutCodeh').split(' ');
-  const titleWords = title.split(' ');
-
+  const titleWords = t(title).split(' ');
+  // const titleWords = title.split(' ');
+const {language}=useStore();
   const colors =
     bgImage && rightImage
       ? 'text-black'
@@ -39,6 +41,7 @@ const HeroSectionServices = ({
   return (
     <div
       className="overflow-hidden "
+      dir ={language === 'en' ? 'ltr' : 'rtl'}
       style={{
         backgroundImage: bgImage ? `url(${bgImage})` : '',
         backgroundSize: 'cover',
@@ -62,16 +65,19 @@ const HeroSectionServices = ({
           {description && (
             <p className={`main_hero_slogan text-center sm:text-start `}>
               {/* {t('codeHiveIs')}/ */}
-              {description}
+              {t(description)}
             </p>
           )}
           {showButton && (
-            <div className="flex justify-center sm:justify-start">
+            <div className="flex justify-center sm:justify-start"
+            dir='ltr'>
               <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
                 <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
-                  {buttonText}
+                  {t(buttonText)}
                 </p>
-                <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-24 md:group-hover:translate-x-32 overflow-hidden">
+                <div className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-24 ${language==="en"?"md:group-hover:translate-x-32" :
+                  "md:group-hover:translate-x-12"
+                } overflow-hidden`}>
                   <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />
                 </div>
               </button>

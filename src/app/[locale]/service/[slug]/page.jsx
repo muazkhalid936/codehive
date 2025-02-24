@@ -1,16 +1,16 @@
-import React from 'react';
-import { services } from '../../../../data';
-import NavbarPages from '../../../../components/NavbarPagesOurWork';
-import Hero from '../../../../components/Hero';
-import Banner from '../../../../components/Banner';
-import SuccessMarquee from '../../../../components/SuccessMarquee';
-import Features from '../../../../components/Features';
-import WhatMakesUsDifferent from '../../../../components/WhatMakesUsDifferent';
-import Testimonials from '../../../../components/Testimonials';
-import ConnectContact from '../../../../components/ConnectContact';
-import AdvantagesSection from '../../../../components/AdvantagesSection';
-import HeroSection from '../../../../components/HeroSection';
-import Footer from '../../../../components/Footer';
+import React from "react";
+import { services } from "../../../../data";
+import NavbarPages from "../../../../components/NavbarPagesOurWork";
+import Hero from "../../../../components/Hero";
+import Banner from "../../../../components/Banner";
+import SuccessMarquee from "../../../../components/SuccessMarquee";
+import Features from "../../../../components/Features";
+import WhatMakesUsDifferent from "../../../../components/WhatMakesUsDifferent";
+import Testimonials from "../../../../components/Testimonials";
+import ConnectContact from "../../../../components/ConnectContact";
+import AdvantagesSection from "../../../../components/AdvantagesSection";
+import HeroSection from "../../../../components/HeroSection";
+import Footer from "../../../../components/Footer";
 const page = async ({ params }) => {
   const slug = await params.slug;
   const service = services?.find((service) => service.slug === slug);
@@ -41,7 +41,9 @@ const page = async ({ params }) => {
       <Features data={service.featuresData} />
       <WhatMakesUsDifferent data={service.makesDifferentData} />
       <Banner {...service.bannerDataTwo} />
-      <ConnectContact sliderData={service.featureSlider} />
+      {service?.featureSlider && (
+        <ConnectContact sliderData={service.featureSlider} />
+      )}
       <Testimonials testimonials={service.testimonialsData} />
       <Footer />
     </div>

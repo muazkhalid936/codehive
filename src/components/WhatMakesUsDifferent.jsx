@@ -2,17 +2,18 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { useTranslations } from "next-intl";
 gsap.registerPlugin(ScrollTrigger);
-
+import useStore from "../store/useUserStore";
 const WhatMakesUsDifferent = ({ data }) => {
+  const t=useTranslations("translation");
   const containerRef = useRef(null);
   const imagesRef = useRef([]);
   const stepsRef = useRef([]);
-
+const {language}=useStore()
   useEffect(() => {
     stepsRef.current.forEach((step, index) => {
-      const startValue = window.innerWidth < 640 ? "top 40%" : "top 60%";
+      const startValue = window.innerWidth < 640 ? "top 10%" : "top 60%";
 
       gsap.fromTo(
         step.querySelector(".animate-title"),
@@ -79,7 +80,7 @@ const WhatMakesUsDifferent = ({ data }) => {
     >
       <div className="w-auto text-center mx-auto">
         <h1 className="sub_heading sm:mb-10 font-gilroy w-full">
-          {data.title.split(" ").map((word, index) => (
+          {t(data.title).split(" ").map((word, index) => (
             <span
               key={index}
               className={`${
@@ -136,12 +137,14 @@ const WhatMakesUsDifferent = ({ data }) => {
                     </span>
                   </div>
                   {/* Text Animation */}
-                  <div className="">
+                  <div className=""
+                  dir={language === 'en' ? 'ltr' : 'rtl'}
+                  >
                     <h3 className="animate-title text-center sm:text-start  text-[#162E4A] text-[19px] font-semibold mb-2 ">
-                      {value.title}
+                      {t(value.title)}
                     </h3>
                     <p className="animate-description text-[14px] sm:text-[16px] text-center sm:text-start text-gray-600  ">
-                      {value.description}
+                      {t(value.description)}
                     </p>
                   </div>
                 </li>

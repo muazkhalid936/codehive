@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { GoDotFill } from "react-icons/go";
-
+import { useTranslations } from "next-intl";
 const WorryNoMore = ({
   rightImage,
   title,
@@ -10,12 +10,14 @@ const WorryNoMore = ({
   points,
   cut,
   blueWords = [],
-}) => {
-  const titleParts = title.split(" ");
+}) => {``
+  const t = useTranslations("translation");
+  const titleParts = t(title).split(" ");
+  console.log("WorryNoMore -> blueWords", blueWords,"s",titleParts);
   return (
     <div className={`container pb-[50px] rounded-lg    `}>
       <div
-        className={`bg-cover bg-center"
+        className={`bg-cover bg-center
          h-[600px]  md:h-[370px] w-full relative rounded-[20px] overflow-hidden items-center md:items-center justify-between flex flex-col md:flex-row gap:4 sm:px-0 `}
         style={{
           backgroundColor: backgroundColor || undefined,
@@ -41,7 +43,7 @@ const WorryNoMore = ({
               </span>
             ))}
           </h2>
-          <p className="mb-5 text-[#535D66] main_hero_slogan">{description}</p>
+          <p className="mb-5 text-[#535D66] main_hero_slogan">{t(description)}</p>
           <ul className="list-disc xl:gap-2 flex flex-col">
             {points.map((point, index) => (
               <li
@@ -49,7 +51,7 @@ const WorryNoMore = ({
                 className="flex main_hero_slogan gap-2 list-disc items-center"
               >
                 <GoDotFill className="text-black" />
-                <span className="text-[#535D66]">{point}</span>
+                <span className="text-[#535D66]">{t(point)}</span>
               </li>
             ))}
           </ul>

@@ -12,6 +12,7 @@ import HeroSection from '../../../components/HeroSectionServices';
 import Footer from '../../../components/Footer';
 import {
   aboutHeroData,
+  ourMissionData,
   aboutScreenFeaturesData,
   aboutTestimonialsData,
   WhatMakesUsDifferentData,
@@ -27,7 +28,7 @@ const AboutUs = () => {
       <HeroSection {...aboutHeroData} />
       <SuccessMarquee />
       <WhoWeAre />
-      <OurMission />
+      <OurMission data={ourMissionData}/>
       <Features data={aboutScreenFeaturesData} />
       <WhatMakesUsDifferent data={WhatMakesUsDifferentData} />
       <PartnerWithTopPeople />

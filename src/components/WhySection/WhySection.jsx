@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { use, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./WhySection.css";
 import dynamic from "next/dynamic";
-
+import { useTranslations } from "next-intl";
 const ScrollAnimation = dynamic(() => import("../Home/ScrollAnimation"), {
   ssr: false,
 });
@@ -121,6 +121,20 @@ const ImageScrollEffect = () => {
     });
   }, []);
 
+  const t = useTranslations("translation");
+  const firstTitle = t("customerCe");
+  const firstTitleParts = firstTitle.split(" ");
+  const firstTitleRest = firstTitleParts.slice(0, -1).join(" ");
+  const firstTitleLast = firstTitleParts[firstTitleParts.length - 1];
+  const ScndTitle = t("endToEndsu");
+  const ScndTitleParts = ScndTitle.split(" ");
+  const ScndTitleRest = ScndTitleParts.slice(0, -1).join(" ");
+  const ScndTitleLast = ScndTitleParts[ScndTitleParts.length - 1];
+
+  const thirdTitle = t("unrivaledE");
+  const thirdTitleParts = thirdTitle.split(" ");
+  const thirdTitleRest = thirdTitleParts.slice(0, -1).join(" ");
+  const thirdTitleLast = thirdTitleParts[thirdTitleParts.length - 1];
   return (
     <>
       {/* Desktop Div */}
@@ -133,13 +147,13 @@ const ImageScrollEffect = () => {
         {/* Headings */}
         <div className="text-4xl sm:text-[60px] justify-start flex flex-col">
           <h1 className="why-section-heading-1 main-heading">
-            Customer-Centric <span className="colorText1 ml-4">Approach</span>
+            {firstTitleRest} <span className="colorText1 ml-4">{firstTitleLast}</span>
           </h1>
           <h1 className="why-section-heading-2 main-heading">
-            End-to-End <span className="colorText2 ml-4">Support</span>
+            {ScndTitleRest} <span className="colorText2 ml-4">{ScndTitleLast}</span>
           </h1>
           <h1 className="why-section-heading-3 main-heading">
-            Unrivaled <span className="colorText3">Expertise</span>
+            {thirdTitleRest} <span className="colorText3">{thirdTitleLast}</span>
           </h1>
         </div>
       </div>

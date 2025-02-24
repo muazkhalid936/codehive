@@ -39,13 +39,13 @@ const LongRevealHeading = (params) => {
 
   return (
     <div
-    dir={language === "English" ? "ltr" : "rtl"}
+    dir={language === "en" ? "ltr" : "rtl"}
 
       className="container h-[50vh]  mb-[1500px] mt-[-900px] sm:mt-[-800px] items-center flex justify-center  mx-auto"
     >
       <p
         ref={textRef}
-        className={`animated-text-long1 ${language!="English"?"!pr-[7vw]":""}  main-heading header text-4xl sm:text-[60px] text-white`}
+        className={`animated-text-long1  main-heading header text-4xl sm:text-[60px] text-white`}
       >
         {params.text}
       </p>

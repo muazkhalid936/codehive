@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
-
+import { useTranslations } from "next-intl";
 const Banner = ({
   bgImage,
   rightImage,
@@ -12,9 +12,10 @@ const Banner = ({
   buttonTitle , // Default button text
   blueWords = [], // Words to be styled in blue
 }) => {
+  const t=useTranslations("translation");
   // console.log(backgroundColor);
   // Split the title into words for easier manipulation
-  const titleParts = title.split(" ");
+  const titleParts = t(title).split(" ");
   const color = rightImage ? "text-black" : "text-white";
 
   return (
@@ -59,13 +60,13 @@ const Banner = ({
           </h2>
           {showDecsription &&
             <p className="main_hero_slogan hidden sm:flex  leading-snug">
-            {showDecsription && description}
+            {showDecsription && t(description)}
           </p>
           }
           <div className="flex justify-center sm:justify-start items-start">
             <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
               <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
-                {buttonTitle}
+                {t(buttonTitle)}
               </p>
               <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-20 md:group-hover:translate-x-24 overflow-hidden">
                 <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />

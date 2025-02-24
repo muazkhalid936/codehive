@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 import useStore from "../store/useUserStore";
 const HeroSectionOurWork = ({
   bgImage,
@@ -15,10 +16,9 @@ const HeroSectionOurWork = ({
   abuttonText = "Get Started",
   showButton = true,
 }) => {
-
-  const { language } = useStore();
-  console.log(title)
-  const titleWords = title.split(" ");
+const t=useTranslations("translation")
+  // console.log("asd",title)
+  const titleWords = t(title).split(" ");
   const colors =
     bgImage && rightImage
       ? "text-white"
@@ -26,7 +26,7 @@ const HeroSectionOurWork = ({
       ? "text-black"
       : "text-white";
   const highlightColor = "text-[#219DD9]";
-
+const {language}=useStore();
   const renderTitle = () => (
     <h2 className="main-heading hero_section_heading ">
       {titleWords.length > 0 ? (
@@ -46,6 +46,7 @@ const HeroSectionOurWork = ({
     
     <div
       className="overflow-hidden "
+      dir={language === 'en' ? 'ltr' : 'rtl'}
       style={{
         backgroundImage: bgImage ? `url(${bgImage})` : "",
         backgroundSize: "cover",
@@ -67,13 +68,13 @@ const HeroSectionOurWork = ({
           {" "}
           {renderTitle()}
           {description && (
-            <p className={`main_hero_slogan text-center sm:text-start text-white`}>{description}</p>
+            <p className={`main_hero_slogan text-center sm:text-start text-white`}>{t(description)}</p>
           )}
           {showButton && (
             <div className="flex justify-center sm:justify-start">
               <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
                 <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
-                  {buttonText}
+                  {t(buttonText)}
                 </p>
                 <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 sm:group-hover:translate-x-44 group-hover:translate-x-36 lg:group-hover:translate-x-56 overflow-hidden">
                   <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />

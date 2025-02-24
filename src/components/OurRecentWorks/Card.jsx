@@ -30,7 +30,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
 
       {/* Main card content with transition */}
       <div
-        dir={language === "English" ? "ltr" : "rtl"}
+        dir={language === "en" ? "ltr" : "rtl"}
         className={`absolute backdrop-blur-sm h-[170px] bg-white bg-opacity-20 transition-all ${height?"h-[240px] top-[47%]":"h-[170px] top-[62%]"} group ease-in-out duration-300 hover:h-[240px] bottom-0 inset-0  hover:md:top-[59%] md:top-[74%]   flex flex-col justify-center p-4 gap-2`}
         onClick={() => handleHeight()}
       >
@@ -47,7 +47,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
           className="flex gap-2 items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
           <p>
-            {language === "English"
+            {language === "en"
               ? "View Complete Project"
               : "عرض المشروع كامل"}
           </p>

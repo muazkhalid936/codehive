@@ -4,12 +4,13 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules"; // Correct import for Swiper v8+
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-
+import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const FeatureSlider = ({ data, from }) => {
+  const t=useTranslations("translation");
   const swiperRef = useRef(null);
 
   return (
@@ -20,7 +21,7 @@ const FeatureSlider = ({ data, from }) => {
             from !== "contact" ? "text-black" : "text-white"
           }`}
         >
-          {data?.title?.split(" ").map((word, index) => (
+          {t(data?.title)?.split(" ").map((word, index) => (
             <span
               key={index}
               className={`${
@@ -93,10 +94,10 @@ const FeatureSlider = ({ data, from }) => {
                   <div className="p-4 h-[300px] absolute bottom-0 w-full bg-gradient-to-t from-[#021629]   to-transparent">
                     <div className="flex flex-col pt-[100px] justify-center mt-5 h-full text-center text-white">
                       <h3 className="text-[22px] font-bold px-2">
-                        {item.name}
+                        {t(item.name)}
                       </h3>
                       <p className="text-[14px] px-4 sm:px-0">
-                        {item.description}
+                        {t(item.description)}
                       </p>
                     </div>
                   </div>

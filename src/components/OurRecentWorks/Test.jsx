@@ -143,10 +143,10 @@ const HorizontalScroll = () => {
             ) => (
               <Card
                 key={index}
-                head={language === "English" ? head : ahead}
+                head={language === "en" ? head : ahead}
                 tech1={tech1}
                 tech2={tech2}
-                para={language === "English" ? para : apara}
+                para={language === "en" ? para : apara}
                 bgImg={`url(${bgImg})`}
                 Img={Img}
                 link={link}

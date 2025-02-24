@@ -4,8 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ShortRevealHeading.css";
 gsap.registerPlugin(ScrollTrigger);
+import { useTranslations } from "next-intl";
 
 const ShortRevealHeading = () => {
+  const t = useTranslations("translation");
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -45,8 +47,7 @@ const ShortRevealHeading = () => {
         ref={textRef}
         className="animated-text-short main-heading header text-4xl sm:text-[60px] text-white"
       >
-        Our Process
-      </p>
+{t("ourProcess")}      </p>
     </div>
   );
 };

@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import { useRef, useState } from "react";
+import { useTranslations } from 'next-intl';
+
 const WhoWeAre = () => {
   const videoRef = useRef(null); // Reference to the video element
   const [isPlaying, setIsPlaying] = useState(false); // Track video play/pause state
-
+const  t= useTranslations('translation');
   const handlePlayPause = () => {
     if (isPlaying) {
       videoRef.current.pause();

@@ -1,7 +1,11 @@
 "use client";
 import React, { useState } from "react";
-
+import { useTranslations } from "next-intl";
+import useStore from "../store/useUserStore";
 const Features = ({ data }) => {
+  const t = useTranslations("translation");
+  const title1 = t(data.title);
+const {language}=useStore()
   const [itemHovered, setItemHovered] = useState("");
   const [clickedItem, setClickedItem] = useState("");
 
@@ -24,10 +28,13 @@ const Features = ({ data }) => {
   };
 
   return (
-    <div className="bg-[#010b17] relative     z-50  overflow-hidden">
+    <div className="bg-[#010b17] relative     z-50  overflow-hidden"
+        dir={language === 'en' ? 'ltr' : 'rtl'}
+
+    >
       <div className=" mx-8 py-[25px] sm:py-[45px]  text-white z-10 container">
         <h1 className="sub_heading  font-gilroy w-full text-center sm:text-start md:w-[60%]">
-          {data.title.split(" ").map((word, index, array) => (
+          {title1.split(" ").map((word, index, array) => (
             <span
               key={index}
               className={`${ index === array.length - 1 ? "text-[#219DD9]" : ""
@@ -38,7 +45,7 @@ const Features = ({ data }) => {
           ))}
         </h1>
         <p className="w-full md:w-[55%] text-center sm:text-start sm:my-5 my-2 main_hero_slogan sm:leading-6">
-          {data.description}
+          {t(data.description)}
         </p>
 
         <div className="flex flex-wrap  justify-center items-center">
@@ -101,7 +108,7 @@ const Features = ({ data }) => {
                       className="sm:w-16 sm:h-16 h-9 mb-3 w-9 mx-auto"
                     />
                     <h2 className="text-center text-[13px] sm:text-[17px] mb-2">
-                      {item.title}
+                      {t(item.title)}
                     </h2>
                   </div>
 
@@ -136,10 +143,10 @@ const Features = ({ data }) => {
                     }}
                   >
                     <h2 className="text-center font-bold text-[14px] sm:text-[17px]  ">
-                      {item.title}
+                      {t(item.title)}
                     </h2>
                     <p className="text-center text-[#fbfbfb] text-[8px] sm:text-[13px] ">
-                      {item.description}
+                      {t(item.description)}
                     </p>
 
                     {/* {item.getStarted && (

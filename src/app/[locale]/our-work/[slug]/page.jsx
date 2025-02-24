@@ -51,7 +51,7 @@ const page = async ({ params }) => {
           />
         </div>
       )}
-      <CallToAction heading="Ready to Elevate your App Experience?" />
+      {/* <CallToAction heading="Ready to Elevate your App Experience?" /> */}
       {/* <ConnectContact> */}
       {/* <CaseStudies /> */}
       {/* </ConnectContact> */}

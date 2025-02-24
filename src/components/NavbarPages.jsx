@@ -1,23 +1,36 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useTransition } from "react";
 import { FiMenu } from "react-icons/fi";
 import { FaCaretDown, FaCaretUp, FaTimes } from "react-icons/fa";
 import { usePathname, useRouter, Link } from "../i18n/routing";
 import { services, industries, ourWorks } from "../data";
-import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import useStore from "../store/useUserStore";
 const NavbarPages = ({ isBlack }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useParams();
+
   const toggleLanguage = () => {
-    if (language === "English") {
-      setLanguage("ar");
-    } else {
-      setLanguage("English");
-    }
-    // console.log(language);
+    const nextLocale = language === "en" ? "ar" : "en";
+    setLanguage(nextLocale);
+
+    console.log(nextLocale);
+
+    startTransition(() => {
+      router.replace(
+        // @ts-expect-error -- TypeScript will validate that only known `params`
+        // are used in combination with a given `pathname`. Since the two will
+        // always match for the current route, we can skip runtime checks.
+        { pathname, params },
+        { locale: nextLocale }
+      );
+    });
   };
-   const params = useParams();
-    const t = useTranslations('translation');
+  const [isPending, startTransition] = useTransition();
+
+  const t = useTranslations("translation");
   const { language, setLanguage } = useStore();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
@@ -84,70 +97,68 @@ const NavbarPages = ({ isBlack }) => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-4 main_hero_slogan md:gap-2  xl:gap-8">
-          <Link href="/about-us">
-            {" "}
-            {language === "English" ? "About Us" : "عنا"}
-          </Link>
+                     <Link href="/about-us" >{t("aboutUs1")}</Link>
+         
 
-          {/* {language==="English"?"Services" :"الخدمات"} Dropdown */}
+          {/* {language==="en"?"Services" :"الخدمات"} Dropdown */}
           {/* Services Dropdown */}
-                    <div
-                      className="relative flex justify-center gap-3 items-center cursor-pointer"
-                      onMouseEnter={() => setIsServicesDropdownOpen(true)}
-                      onMouseLeave={() => setIsServicesDropdownOpen(false)}
-                    >
-                      <Link href="/services">{t('services1')}</Link>
-                      {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-                      {isServicesDropdownOpen && (
-                        <div className="absolute top-5 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
-                          {servicesDropdown?.map((service) => (
-                            <Link
-                              key={service.label}
-                              href={service.href}
-                              className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
-                            >
-                              {t(service.label)}
-                              {/* {service.label} */}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-        
-                    {/* Industries Dropdown */}
-                    <div
-                      className="relative flex justify-center gap-3 items-center cursor-pointer"
-                      onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
-                      onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
-                    >
-{t('industries')}
-                      {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-                      {isIndustriesDropdownOpen && (
-                        <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
-                          {industriesDropdown?.map(
-                            (industry) =>
-                              industry.label !== 'Our Booking System' &&
-                              industry.label !== 'rewardHive' && (
-                                <Link
-                                  key={industry.label}
-                                  href={industry.href}
-                                  className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
-                                >
-                                  {/* {t(industry.label)} */}
-                                  {industry.label}
-                                </Link>
-                              )
-                          )}
-                        </div>
-                      )}
-                    </div>
+          <div
+            className="relative flex justify-center gap-3 items-center cursor-pointer"
+            onMouseEnter={() => setIsServicesDropdownOpen(true)}
+            onMouseLeave={() => setIsServicesDropdownOpen(false)}
+          >
+            <Link href="/services">{t("services1")}</Link>
+            {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+            {isServicesDropdownOpen && (
+              <div className="absolute top-5 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
+                {servicesDropdown?.map((service) => (
+                  <Link
+                    key={service.label}
+                    href={service.href}
+                    className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                  >
+                    {t(service.label)}
+                    {/* {service.label} */}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Industries Dropdown */}
+          <div
+            className="relative flex justify-center gap-3 items-center cursor-pointer"
+            onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
+            onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
+          >
+            {t("industries")}
+            {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+            {isIndustriesDropdownOpen && (
+              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+                {industriesDropdown?.map(
+                  (industry) =>
+                    industry.label !== "Our Booking System" &&
+                    industry.label !== "rewardHive" && (
+                      <Link
+                        key={industry.label}
+                        href={industry.href}
+                        className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                      >
+                        {/* {t(industry.label)} */}
+                        {industry.label}
+                      </Link>
+                    )
+                )}
+              </div>
+            )}
+          </div>
 
           <div
             className="relative flex justify-center gap-3 items-center cursor-pointer"
             onMouseEnter={() => setWork(true)}
             onMouseLeave={() => setWork(false)}
           >
-            {language === "English" ? "Products" : "المنتجات"}
+            {language === "en" ? "Products" : "المنتجات"}
             {work ? <FaCaretUp /> : <FaCaretDown />}
             {work && (
               <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
@@ -168,21 +179,21 @@ const NavbarPages = ({ isBlack }) => {
           </div>
 
           <Link href="/our-work">
-            {language === "English" ? "Our Work" : "   أعمالنا"}
+            {language === "en" ? "Our Work" : "   أعمالنا"}
           </Link>
         </div>
 
         {/* Call-to-Action */}
         <div className="hidden lg:flex text-[16px] items-center gap-5">
           <button
-            onClick={() => toggleLanguage()}
+            onClick={toggleLanguage}
             className="font-archivo text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-black"
           >
-            {language === "English" ? "العربية" : "English"}
+            {language === "en" ? "العربية" : "English"}
           </button>
           <Link href="/contact">
             <button className="mx-auto text-white text-[16px] h-10 w-40 rounded-full bg-blueColor">
-              {language === "English" ? "Contact Us" : "تحدث معنا"}
+              {language === "en" ? "Contact Us" : "تحدث معنا"}
             </button>
           </Link>
         </div>
@@ -221,42 +232,57 @@ const NavbarPages = ({ isBlack }) => {
         </div>
 
         {/* Sidebar Links */}
+ <div
+        className={`fixed top-0 right-0 h-screen w-[80%] max-w-[300px] 
+          !font-lato main_hero_slogan bg-[#000b17] text-white transform ${
+            isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 z-[999]`}
+      >
+        <div className="flex justify-end items-center px-4 py-4 border-b border-gray-600">
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="text-2xl focus:outline-none"
+          >
+            <FaTimes />
+          </button>
+        </div>
+
+        {/* Sidebar Links */}
         <div className="flex flex-col gap-4 p-4">
-          {/*   {language === "English" ? "About Us" : "عنا"} */}
           <Link
             href="/about-us"
             onClick={() => setIsSidebarOpen(false)}
             className="hover:text-blueColor transition-colors"
           >
-            {language === "English" ? "About Us" : "عنا"}
+            {t("aboutUs")}
           </Link>
 
-          {/* {language==="English"?"Services" :"الخدمات"} (Collapsible) */}
+          {/* Services (Collapsible) */}
           <div>
             <div
               className="flex items-center justify-between hover:text-blueColor cursor-pointer"
               onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
             >
-              <span>{language === "English" ? "Services" : "الخدمات"}</span>
+              <span>{t("services")}</span>
               {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {isServicesDropdownOpen && (
-              <div className="mt-2  flex flex-col space-y-2">
+              <div className="mt-2 flex flex-col space-y-2">
                 {servicesDropdown?.map((service) => (
                   <Link
                     key={service.label}
                     href={service.href}
-                    className="hover:bg-[#219DD92B] hover:border-l-2 hover:bg- hover:border-blueColor"
                     onClick={() => setIsSidebarOpen(false)}
+                    className="hover:bg-[#219DD92B] hover:border-l-2 hover:border-blueColor"
                   >
-                    <span className="ml-2">{service.label}</span>
+                    <span className="ml-2">{t(service.label)}</span>
                   </Link>
                 ))}
               </div>
             )}
           </div>
 
-          {/* {language==="English"?"Industries": "المجالات"}  (Collapsible) */}
+          {/* Industries (Collapsible) */}
           <div>
             <div
               className="flex items-center justify-between hover:text-blueColor cursor-pointer"
@@ -264,21 +290,22 @@ const NavbarPages = ({ isBlack }) => {
                 setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen)
               }
             >
-              <span>{language === "English" ? "Industries" : "المجالات"} </span>
+              <span>{t("industries")}</span>
               {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {isIndustriesDropdownOpen && (
               <div className="mt-2 ml-4 flex flex-col space-y-2">
                 {industriesDropdown?.map(
                   (industry) =>
-                    industry.label !== "Our Booking System" && (
+                    industry.label !== "ourBooking" &&
+                  industry.label !== "rewardHive" && (
                       <Link
                         key={industry.label}
                         href={industry.href}
-                        className="hover:text-blueColor"
                         onClick={() => setIsSidebarOpen(false)}
+                        className="hover:text-blueColor"
                       >
-                        {industry.label}
+                        {t(industry.label)}
                       </Link>
                     )
                 )}
@@ -286,52 +313,61 @@ const NavbarPages = ({ isBlack }) => {
             )}
           </div>
 
-          {/* {language==="English"?"Products": "المنتجات"} (Collapsible) */}
+          {/* Products (Collapsible) */}
           <div>
             <div
               className="flex items-center justify-between hover:text-blueColor cursor-pointer"
               onClick={() => setWork(!work)}
             >
-              <span>{language === "English" ? "Products" : "المنتجات"}</span>
+              <span>{t("products")}</span>
               {work ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {work && (
               <div className="mt-2 ml-4 flex flex-col space-y-2">
-                <Link
-                  href="industries/our-booking-system"
-                  className="hover:text-blueColor"
-                  onClick={() => setIsSidebarOpen(false)}
-                >
-                  Our Booking System
-                </Link>
-              </div>
+                  <Link
+                    href="/industries/our-booking-system"
+                    className="hover:text-blueColor"
+                    >
+                    {t("ourBooking")}
+                  </Link>
+                  <Link
+                    href="/industries/reward-hive"
+                    className="hover:text-blueColor"
+                    >
+                    {t("rewardHive")}
+                  </Link>
+                </div>
             )}
           </div>
 
-          {/* {language==="English"?"Our Work":"   أعمالنا"} */}
           <Link
             href="/our-work"
-            className="hover:text-blueColor transition-colors"
             onClick={() => setIsSidebarOpen(false)}
+            className="hover:text-blueColor transition-colors"
           >
-            {language === "English" ? "Our Work" : "   أعمالنا"}
+            {t("ourWork2")}
           </Link>
 
           {/* Language & Contact */}
-          <div className="flex flex-col gap-2 pt-2 border-t border-gray-600 mt-4">
-            <div className="font-lato">العربية</div>
-            <Link
-              href="/contact"
-              className="hover:text-white transition-colors"
-              onClick={() => setIsSidebarOpen(false)}
+          <Link
+            href="/contact"
+            onClick={() => setIsSidebarOpen(false)}
+            className="hover:text-white transition-colors"
+          >
+            <button className="mx-auto main_hero_slogan h-7 sm:h-10 w-20 sm:w-40 rounded-full bg-blueColor">
+              {t("contactUs5")}
+            </button>
+          </Link>
+          <div className="flex justify-end gap-2 pt-2 border-t border-gray-600 mt-4">
+            <button
+              onClick={toggleLanguage}
+              className="font-archivo main_hero_slogan font-lato text-white"
             >
-              <button className="mx-auto text-[16px] h-10 w-40 rounded-full bg-blueColor">
-                Contact Us
-              </button>
-            </Link>
+              {language === "en" ? "العربية" : "English"}
+            </button>
           </div>
         </div>
-      </div>
+      </div>      </div>
     </div>
   );
 };
