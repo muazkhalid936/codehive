@@ -79,7 +79,7 @@ const HeroSectionServices = ({
                 <div
                   className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-24 ${
                     flag ? "md:group-hover:translate-x-32"
-                    : language === "en"?"md:group-hover:translate-x-28"
+                    : language === "en"?"md:group-hover:translate-x-[102px]"
                       : "md:group-hover:translate-x-12"
                   } overflow-hidden`}
                 >

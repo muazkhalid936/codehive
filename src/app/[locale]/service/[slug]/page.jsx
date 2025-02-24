@@ -10,6 +10,7 @@ import Testimonials from "../../../../components/Testimonials";
 import ConnectContact from "../../../../components/ConnectContact";
 import AdvantagesSection from "../../../../components/AdvantagesSection";
 import HeroSection from "../../../../components/HeroSection";
+import FeatureSlider from "../../../../components/FeatureSlider";
 import Footer from "../../../../components/Footer";
 const page = async ({ params }) => {
   const slug = await params.slug;
@@ -32,19 +33,22 @@ const page = async ({ params }) => {
       {service.bannerData && (
         <div className="relative">
           <Banner {...service.bannerData} />
-          <img
+          {/* <img
             src="/feature/Vector.png"
             className="absolute hidden sm:flex top-[60%] right-0 w-60 "
-          />
+          /> */}
         </div>
       )}
       <Features data={service.featuresData} />
       <WhatMakesUsDifferent data={service.makesDifferentData} />
       <Banner {...service.bannerDataTwo} />
       {service?.featureSlider && (
-        <ConnectContact sliderData={service.featureSlider} />
-      )}
-      <Testimonials testimonials={service.testimonialsData} />
+        <div className="bg-[#000B17] ">
+
+        <FeatureSlider data={service.featureSlider} from="contact" />
+    </div>
+    )}
+      {/* <Testimonials testimonials={service.testimonialsData} /> */}
       <Footer />
     </div>
   );

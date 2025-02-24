@@ -124,7 +124,7 @@ const title=t("meetTheCre").split(" ");
           {/* Left Side: Big Card */}
           <div className=" w-[50%] lg:w-[30%]">
             <div
-              className="relative overflow-hidden flex h-[250px] sm:h-[400px] md:h-[500px] rounded-md"
+              className="relative overflow-hidden justify-center flex h-[250px] sm:h-[400px] md:h-[500px] rounded-md"
               style={{
                 border: "1px solid transparent",
                 borderRadius: "26px",

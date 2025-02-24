@@ -14,7 +14,7 @@ const FeatureSlider = ({ data, from }) => {
   const swiperRef = useRef(null);
 
   return (
-    <div className={`container mt-[55px] z-50 ${from !== "contact" && "pb-[55px]"}`}>
+    <div className={`container ${from==="contact"?"mt-[55px] py-[55px]":"mt-0 pt-[55px]"}  z-50 `}>
       <div className="flex justify-between">
         <h2
           className={`sub_heading font-extrabold gilray-font  ${
@@ -26,7 +26,7 @@ const FeatureSlider = ({ data, from }) => {
               key={index}
               className={`${
                 // Last word in the title gets a special color
-                index === data.title.split(" ").length - 1
+                index === t(data.title).split(" ").length -1
                   ? "text-[#219DD9]"
                   : ""
               }`}
@@ -52,7 +52,7 @@ const FeatureSlider = ({ data, from }) => {
       </div>
     
       {/* Swiper Slider */}
-      <div className="mt-[55px]">
+      <div className="mt-[50px]">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           modules={[Mousewheel]} // Add Mousewheel module here

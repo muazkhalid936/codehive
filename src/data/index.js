@@ -246,6 +246,323 @@ export const serviceHeroData = {
 };
 
 export const services = [
+  
+  {
+    slug: "mobile-app-development",
+    title: "mobileApp3",
+    heroData: {
+      title: "mobileApp3",
+      blueWords: ["Development"],
+      description: "customUser",
+      bgImage: "/services/mobile-app-dev/hero-bg.png",
+      topArrow: true,
+    },
+    bannerData: {
+      title: "readyToTr1",
+      blueWords: ["Mobile", "App?"],
+      description:
+        "Contact us today to discuss your project and discover how our expert team can bring your vision to life!",
+      rightImage: "/services/mobile-app-dev/bannerOne.png",
+      showBottomArrow: false,
+      backgroundColor: "#efefef",
+      buttonTitle: "bookACall7",
+    },
+    featuresData: {
+      title: "ourOfferin",
+      columns: 4,
+      description: "creatingCu",
+      subheading: "Connect with Us to Begin Your App Development!",
+      cards: [
+        {
+          title: "iosAppDeve",
+          description: "craftIntui",
+          image: "/feature/b1.png",
+        },
+        {
+          title: "androidApp",
+          description: "buildDynam",
+          image: "/feature/b2.png",
+        },
+        {
+          title: "crossPlatf",
+          description: "developVer",
+          image: "/feature/b3.png",
+        },
+        {
+          title: "uiUxDesig2",
+          description: "ourTeamCra",
+          image: "/feature/b4.png",
+        },
+      ],
+    },
+    makesDifferentData: {
+      title: "mobileApp4",
+      blueWords: ["Mobile", "App"],
+      steps: [
+        {
+          id: 1,
+          img: "/services/mobile-app-dev/1.jpeg",
+          title: "discoveryA",
+          description: "weCollabor",
+        },
+        {
+          id: 2,
+          img: "/services/mobile-app-dev/2.jpeg",
+          title: "designAndP",
+          description: "ourTeamCr1",
+        },
+        {
+          id: 3,
+          img: "/services/mobile-app-dev/3.jpeg",
+          title: "developme1",
+          description: "utilizingT",
+        },
+        {
+          id: 4,
+          img: "/services/mobile-app-dev/4.jpeg",
+          title: "testingAnd",
+          description: "weConductT",
+        },
+        {
+          id: 5,
+          img: "/services/mobile-app-dev/5.jpeg",
+          title: "launchAndS",
+          description: "onceYourAp",
+        },
+      ],
+    },
+    bannerDataTwo: {
+      top:true,
+
+      bgImage: "/services/mobile-app-dev/bannerTwoBg.png",
+      title: "creatingAp",
+      blueWords: ["Creating", "Apps"],
+      description: "creatingAp",
+      showBottomArrow: true,
+      buttonTitle: "getAQuote7",
+    },
+    testimonialsData: [
+      {
+        text: "Partnering with Codehive for our mobile app development was a game changer. Their team took the time to understand our vision and delivered an app that exceeded our expectations. The user experience has been outstanding, and we've seen a significant increase in customer engagement!",
+        name: "Jordan P",
+        designation: "CTO of a Tech Startup",
+      },
+      {
+        text: "The expertise and creativity of the Codehive team truly set them apart. They not only developed a high-quality app but also guided us through the entire process with exceptional communication. The end result was a powerful tool that has greatly enhanced our business operations.",
+        name: "Rachel H",
+        designation: "Operations Manager",
+      },
+      {
+        text: "Codehive's mobile app development services have helped us reach a wider audience and improve customer satisfaction. Their attention to detail and commitment to quality are evident in every aspect of the app. We're thrilled with the results and look forward to future projects together!",
+        name: "Alex J",
+        designation: "Owner of a Retail Business",
+      },
+    ],
+    featureSlider: {
+      title: "mobileApp5",
+      cards: [
+        {
+          name: "healthcar3",
+          description: "developSec",
+          picture: "/CustomSoftwareDevelopmentIndustries/1.jpeg",
+        },
+        {
+          name: "ecommerceA",
+          description: "createSeam",
+          picture: "/CustomSoftwareDevelopmentIndustries/2.jpeg",
+        },
+        {
+          name: "educationA",
+          description: "buildInter",
+          picture: "/CustomSoftwareDevelopmentIndustries/3.jpeg",
+        },
+        {
+          name: "travelTour",
+          description: "createApps",
+          picture: "/CustomSoftwareDevelopmentIndustries/4.jpeg",
+        },
+        {
+          name: "fitnessApp",
+          description: "designApps",
+          picture: "/CustomSoftwareDevelopmentIndustries/5.jpeg",
+        },
+        {
+          name: "realEstate",
+          description: "buildAppsW",
+          picture: "/CustomSoftwareDevelopmentIndustries/6.jpeg",
+        },
+        {
+          name: "foodDelive",
+          description: "developApp",
+          picture: "/CustomSoftwareDevelopmentIndustries/7.jpeg",
+        },
+        {
+          name: "financeApp",
+          description: "createSecu",
+          picture: "/CustomSoftwareDevelopmentIndustries/8.jpeg",
+        },
+      ],
+    },
+  }
+  ,{
+    slug: "website-development",
+    title: "websiteDe2",
+    heroData: {
+      title: "websiteDe2",
+      blueWords: ["Development"],
+      description: "functional",
+      bgImage: "/services/web-dev/hero-bg.png",
+      topArrow: true,
+    },
+    bannerData: {
+      title: "reachOutNo",
+      blueWords: ["Website", "Development"],
+      description: "Reach Out Now to Begin Your Website Development Journey!",
+      rightImage: "/services/web-dev/bannerOne.png",
+      showBottomArrow: false,
+      backgroundColor: "#efefef",
+      buttonTitle: "bookACall8",
+    },
+    featuresData: {
+      title: "ourOfferi1",
+      columns: 4,
+      description: "delivering",
+      subheading:
+        "Delivering convenience-focused web application development services in any form is what we're inclined towards.",
+      cards: [
+        {
+          title: "webPortalW",
+          description: "designAndB",
+          image: "/feature/p1.png",
+        },
+        {
+          title: "ecommerce1",
+          description: "createPowe",
+          image: "/feature/p2.png",
+        },
+        {
+          title: "corporateW",
+          description: "developPro",
+          image: "/feature/p3.png",
+        },
+        {
+          title: "frontendBa",
+          description: "deliverRob",
+          image: "/feature/p4.png",
+        },
+      ],
+    },
+    makesDifferentData: {
+      title: "websiteDe3",
+      blueWords: ["Website", ],
+      steps: [
+        {
+          id: 1,
+          img: "/services/web-dev/1.jpeg",
+          title: "discovery1",
+          description: "weBeginBy1",
+        },
+        {
+          id: 2,
+          img: "/services/web-dev/2.jpeg",
+          title: "designAnd1",
+          description: "ourTeamDes",
+        },
+        {
+          id: 3,
+          img: "/services/web-dev/3.jpeg",
+          title: "developme2",
+          description: "usingTheLa",
+        },
+        {
+          id: 4,
+          img: "/services/web-dev/4.jpeg",
+          title: "testingAn1",
+          description: "weRigorous",
+        },
+        {
+          id: 5,
+          img: "/services/web-dev/5.jpeg",
+          title: "launchAnd1",
+          description: "afterSucce",
+        },
+      ],
+    },
+    bannerDataTwo: {
+      top:true,
+
+      bgImage: "/services/web-dev/bannerTwoBg.png",
+      title: "modernResp",
+      blueWords: ["Websites", "Responsive"],
+      description:
+        "Modern, Responsive, and Tailor-Made Websites for Every Business.",
+      showBottomArrow: true,
+      buttonTitle: "getAQuote8",
+    },
+    testimonialsData: [
+      {
+        text: "Our new website developed by Codehive has significantly improved our online presence. The intuitive design and seamless navigation have resulted in higher engagement and conversions. We highly recommend their services!",
+        name: "David M",
+        designation: "CEO of a Tech Company",
+      },
+      {
+        text: "Codehive transformed our outdated website into a modern, high-performing platform. The team was professional, detail-oriented, and dedicated to delivering an outstanding solution.",
+        name: "Sarah L",
+        designation: "Marketing Manager",
+      },
+      {
+        text: "Working with Codehive was a great experience. They understood our business needs and delivered a website that perfectly aligns with our brand identity. The process was smooth, and the results were exceptional.",
+        name: "Michael R",
+        designation: "Founder of a Startup",
+      },
+    ],
+    featureSlider: {
+      title: "websiteDe4",
+      cards: [
+        {
+          name: "healthcar4",
+          description: "createWebs",
+          picture: "/CustomSoftwareDevelopmentIndustries/w1.jpeg",
+        },
+        {
+          name: "ecommerce2",
+          description: "developUse",
+          picture: "/CustomSoftwareDevelopmentIndustries/w2.jpeg",
+        },
+        {
+          name: "education",
+          description: "designWebs",
+          picture: "/CustomSoftwareDevelopmentIndustries/w3.jpeg",
+        },
+        {
+          name: "hospitalit",
+          description: "buildWebsi",
+          picture: "/CustomSoftwareDevelopmentIndustries/w4.jpeg",
+        },
+        {
+          name: "fitnessAnd",
+          description: "developWeb",
+          picture: "/CustomSoftwareDevelopmentIndustries/w5.jpeg",
+        },
+        {
+          name: "automotive",
+          description: "createSite",
+          picture: "/CustomSoftwareDevelopmentIndustries/w6.jpeg",
+        },
+        {
+          name: "realEstat1",
+          description: "buildPrope",
+          picture: "/CustomSoftwareDevelopmentIndustries/w7.jpeg",
+        },
+        {
+          name: "travelAndT",
+          description: "designVisu",
+          picture: "/CustomSoftwareDevelopmentIndustries/w8.jpeg",
+        },
+      ],
+    },
+  },
+  
   {
     slug: "software-development",
     title: "softwareD2",
@@ -341,6 +658,7 @@ export const services = [
       ],
     },
     bannerDataTwo: {
+      top:true,
       bgImage: "/services/custom-software-bg-banner.png",
       title: "readyToTr2",
       blueWords: ["Software?"],
@@ -388,161 +706,6 @@ export const services = [
           name: "posSystem",
           description: "transformT",
           picture: "/CustomSoftwareDevelopmentIndustries/q4.jpeg",
-        },
-      ],
-    },
-  },
-  {
-    slug: "mobile-app-development",
-    title: "mobileApp3",
-    heroData: {
-      title: "mobileApp3",
-      blueWords: ["Development"],
-      description: "customUser",
-      bgImage: "/services/mobile-app-dev/hero-bg.png",
-      topArrow: true,
-    },
-    bannerData: {
-      title: "readyToTr1",
-      blueWords: ["Mobile", "App?"],
-      description:
-        "Contact us today to discuss your project and discover how our expert team can bring your vision to life!",
-      rightImage: "/services/mobile-app-dev/bannerOne.png",
-      showBottomArrow: false,
-      backgroundColor: "#efefef",
-      buttonTitle: "bookACall7",
-    },
-    featuresData: {
-      title: "ourOfferin",
-      columns: 4,
-      description: "creatingCu",
-      subheading: "Connect with Us to Begin Your App Development!",
-      cards: [
-        {
-          title: "iosAppDeve",
-          description: "craftIntui",
-          image: "/feature/b1.png",
-        },
-        {
-          title: "androidApp",
-          description: "buildDynam",
-          image: "/feature/b2.png",
-        },
-        {
-          title: "crossPlatf",
-          description: "developVer",
-          image: "/feature/b3.png",
-        },
-        {
-          title: "uiUxDesig2",
-          description: "ourTeamCra",
-          image: "/feature/b4.png",
-        },
-      ],
-    },
-    makesDifferentData: {
-      title: "mobileApp4",
-      blueWords: ["Mobile", "App"],
-      steps: [
-        {
-          id: 1,
-          img: "/services/mobile-app-dev/1.jpeg",
-          title: "discoveryA",
-          description: "weCollabor",
-        },
-        {
-          id: 2,
-          img: "/services/mobile-app-dev/2.jpeg",
-          title: "designAndP",
-          description: "ourTeamCr1",
-        },
-        {
-          id: 3,
-          img: "/services/mobile-app-dev/3.jpeg",
-          title: "developme1",
-          description: "utilizingT",
-        },
-        {
-          id: 4,
-          img: "/services/mobile-app-dev/4.jpeg",
-          title: "testingAnd",
-          description: "weConductT",
-        },
-        {
-          id: 5,
-          img: "/services/mobile-app-dev/5.jpeg",
-          title: "launchAndS",
-          description: "onceYourAp",
-        },
-      ],
-    },
-    bannerDataTwo: {
-      bgImage: "/services/mobile-app-dev/bannerTwoBg.png",
-      title: "creatingAp",
-      blueWords: ["Creating", "Apps"],
-      description: "creatingAp",
-      showBottomArrow: true,
-      buttonTitle: "getAQuote7",
-    },
-    testimonialsData: [
-      {
-        text: "Partnering with Codehive for our mobile app development was a game changer. Their team took the time to understand our vision and delivered an app that exceeded our expectations. The user experience has been outstanding, and we've seen a significant increase in customer engagement!",
-        name: "Jordan P",
-        designation: "CTO of a Tech Startup",
-      },
-      {
-        text: "The expertise and creativity of the Codehive team truly set them apart. They not only developed a high-quality app but also guided us through the entire process with exceptional communication. The end result was a powerful tool that has greatly enhanced our business operations.",
-        name: "Rachel H",
-        designation: "Operations Manager",
-      },
-      {
-        text: "Codehive's mobile app development services have helped us reach a wider audience and improve customer satisfaction. Their attention to detail and commitment to quality are evident in every aspect of the app. We're thrilled with the results and look forward to future projects together!",
-        name: "Alex J",
-        designation: "Owner of a Retail Business",
-      },
-    ],
-    featureSlider: {
-      title: "mobileApp5",
-      cards: [
-        {
-          name: "healthcar3",
-          description: "developSec",
-          picture: "/CustomSoftwareDevelopmentIndustries/1.jpeg",
-        },
-        {
-          name: "ecommerceA",
-          description: "createSeam",
-          picture: "/CustomSoftwareDevelopmentIndustries/2.jpeg",
-        },
-        {
-          name: "educationA",
-          description: "buildInter",
-          picture: "/CustomSoftwareDevelopmentIndustries/3.jpeg",
-        },
-        {
-          name: "travelTour",
-          description: "createApps",
-          picture: "/CustomSoftwareDevelopmentIndustries/4.jpeg",
-        },
-        {
-          name: "fitnessApp",
-          description: "designApps",
-          picture: "/CustomSoftwareDevelopmentIndustries/5.jpeg",
-        },
-        {
-          name: "realEstate",
-          description: "buildAppsW",
-          picture: "/CustomSoftwareDevelopmentIndustries/6.jpeg",
-        },
-        {
-          name: "foodDelive",
-          description: "developApp",
-          picture: "/CustomSoftwareDevelopmentIndustries/7.jpeg",
-        },
-        {
-          name: "financeApp",
-          description: "createSecu",
-          picture: "/CustomSoftwareDevelopmentIndustries/8.jpeg",
         },
       ],
     },
@@ -642,6 +805,8 @@ export const services = [
       ],
     },
     bannerDataTwo: {
+      top:true,
+
       bgImage: "/services/digital-transform/bannerTwoBg.png",
       title: "revolution",
       blueWords: ["Intelligent", "Digital"],
@@ -762,6 +927,8 @@ export const services = [
       ],
     },
     bannerDataTwo: {
+      top:true,
+
       bgImage: "/services/digital-consultation/bannerTwoBg.png",
       title: "yourTruste",
       blueWords: ["Smarter", "Digital"],
@@ -814,162 +981,7 @@ export const services = [
     //     ]
     // }
   },
-  {
-    slug: "website-development",
-    title: "websiteDe2",
-    heroData: {
-      title: "websiteDe2",
-      blueWords: ["Development"],
-      description: "functional",
-      bgImage: "/services/web-dev/hero-bg.png",
-      topArrow: true,
-    },
-    bannerData: {
-      title: "reachOutNo",
-      blueWords: ["Website", "Development"],
-      description: "Reach Out Now to Begin Your Website Development Journey!",
-      rightImage: "/services/web-dev/bannerOne.png",
-      showBottomArrow: false,
-      backgroundColor: "#efefef",
-      buttonTitle: "bookACall8",
-    },
-    featuresData: {
-      title: "ourOfferi1",
-      columns: 4,
-      description: "delivering",
-      subheading:
-        "Delivering convenience-focused web application development services in any form is what we're inclined towards.",
-      cards: [
-        {
-          title: "webPortalW",
-          description: "designAndB",
-          image: "/feature/p1.png",
-        },
-        {
-          title: "ecommerce1",
-          description: "createPowe",
-          image: "/feature/p2.png",
-        },
-        {
-          title: "corporateW",
-          description: "developPro",
-          image: "/feature/p3.png",
-        },
-        {
-          title: "frontendBa",
-          description: "deliverRob",
-          image: "/feature/p4.png",
-        },
-      ],
-    },
-    makesDifferentData: {
-      title: "websiteDe3",
-      blueWords: ["Website", "Development"],
-      steps: [
-        {
-          id: 1,
-          img: "/services/web-dev/1.jpeg",
-          title: "discovery1",
-          description: "weBeginBy1",
-        },
-        {
-          id: 2,
-          img: "/services/web-dev/2.jpeg",
-          title: "designAnd1",
-          description: "ourTeamDes",
-        },
-        {
-          id: 3,
-          img: "/services/web-dev/3.jpeg",
-          title: "developme2",
-          description: "usingTheLa",
-        },
-        {
-          id: 4,
-          img: "/services/web-dev/4.jpeg",
-          title: "testingAn1",
-          description: "weRigorous",
-        },
-        {
-          id: 5,
-          img: "/services/web-dev/5.jpeg",
-          title: "launchAnd1",
-          description: "afterSucce",
-        },
-      ],
-    },
-    bannerDataTwo: {
-      bgImage: "/services/web-dev/bannerTwoBg.png",
-      title: "modernResp",
-      blueWords: ["Modern", "Responsive"],
-      description:
-        "Modern, Responsive, and Tailor-Made Websites for Every Business.",
-      showBottomArrow: true,
-      buttonTitle: "getAQuote8",
-    },
-    testimonialsData: [
-      {
-        text: "Our new website developed by Codehive has significantly improved our online presence. The intuitive design and seamless navigation have resulted in higher engagement and conversions. We highly recommend their services!",
-        name: "David M",
-        designation: "CEO of a Tech Company",
-      },
-      {
-        text: "Codehive transformed our outdated website into a modern, high-performing platform. The team was professional, detail-oriented, and dedicated to delivering an outstanding solution.",
-        name: "Sarah L",
-        designation: "Marketing Manager",
-      },
-      {
-        text: "Working with Codehive was a great experience. They understood our business needs and delivered a website that perfectly aligns with our brand identity. The process was smooth, and the results were exceptional.",
-        name: "Michael R",
-        designation: "Founder of a Startup",
-      },
-    ],
-    featureSlider: {
-      title: "websiteDe4",
-      cards: [
-        {
-          name: "healthcar4",
-          description: "createWebs",
-          picture: "/CustomSoftwareDevelopmentIndustries/1.jpeg",
-        },
-        {
-          name: "ecommerce2",
-          description: "developUse",
-          picture: "/CustomSoftwareDevelopmentIndustries/2.jpeg",
-        },
-        {
-          name: "education",
-          description: "designWebs",
-          picture: "/CustomSoftwareDevelopmentIndustries/3.jpeg",
-        },
-        {
-          name: "hospitalit",
-          description: "buildWebsi",
-          picture: "/CustomSoftwareDevelopmentIndustries/4.jpeg",
-        },
-        {
-          name: "fitnessAnd",
-          description: "developWeb",
-          picture: "/CustomSoftwareDevelopmentIndustries/5.jpeg",
-        },
-        {
-          name: "automotive",
-          description: "createSite",
-          picture: "/CustomSoftwareDevelopmentIndustries/6.jpeg",
-        },
-        {
-          name: "realEstat1",
-          description: "buildPrope",
-          picture: "/CustomSoftwareDevelopmentIndustries/7.jpeg",
-        },
-        {
-          name: "travelAndT",
-          description: "designVisu",
-          picture: "/CustomSoftwareDevelopmentIndustries/8.jpeg",
-        },
-      ],
-    },
-  },
+ 
   {
     slug: "business-intelligence",
     title: "businessI1",
@@ -1086,6 +1098,8 @@ export const services = [
       ],
     },
     bannerDataTwo: {
+      top:true,
+
       bgImage: "/services/business-intelligence/bannerTwoBg.png",
       title: "turnDataIn",
       blueWords: ["Smart", "Business"],

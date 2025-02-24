@@ -217,7 +217,7 @@ const StackingImages = () => {
     <div className="bg-[#000B17] container mx-auto ">
       <div className="new-cards flex sm:flex-row flex-col-reverse  items-center gap-20  justify-center sm:justify-between  h-[100vh] min-h-[400px] mx-auto">
         <div className="flex sm:w-1/2  mt-[100px] sm:mt-0 sm:h-auto justify-between  flex-col gap-20 sm:gap-5 first-container">
-          <div className="new-icon-container absolute flex-1 left-0 -mt-[10vh]  gap-1">
+          <div className="new-icon-container absolute flex-1 left-0 -mt-[90px]  gap-1">
             {IconsArr.map((Icon, i) => {
               const activeColor = active === i ? "#219bd9" : "#FFFFFF";
               return (
@@ -324,7 +324,7 @@ const StackingImages = () => {
           {IconsArr.map((_, i) => (
             <div
               key={i}
-              className={`new-card ss sm:h-screen absolute new-card-${i + 1}`}
+              className={`new-card ss sm:h-screen absolute top-0 new-card-${i + 1}`}
             >
               <div className="our-process-main-pic ">
                 <img

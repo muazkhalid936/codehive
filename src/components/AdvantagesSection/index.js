@@ -6,9 +6,9 @@ import { useTranslations } from "next-intl";
 const AdvantagesSection = ({ data }) => {
   const t = useTranslations("translation");
   return (
-    <section className="bg-white py-10 sm:py-32">
+    <section className="bg-white py-10 sm:py-[55px]">
       <div className="container mx-auto px-4">
-        <h2 className="sub_heading  text-center text-gray-900 mb-5 gilray-font">
+        <p className="sub_heading leading-none  text-center text-gray-900 mb-5 gilray-font">
           {t(data.title)
             .split(" ")
             .map((word, index) => (
@@ -23,7 +23,7 @@ const AdvantagesSection = ({ data }) => {
                 {word}{" "}
               </span>
             ))}
-        </h2>
+        </p>
         <div className="flex justify-center mb-10 items-center">
           <p className="main_hero_slogan text-[#858585]">
             {t(data.description)}
@@ -40,7 +40,7 @@ const AdvantagesSection = ({ data }) => {
                 alt={card.title}
                 className="w-full h-96 object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent  bg-opacity-50 flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#021629] to-transparent  bg-opacity-50 flex flex-col justify-end p-6">
                 <h3 className=" text-[18px] font-semibold  text-white mb-2">
                   {t(card.title)}
                 </h3>

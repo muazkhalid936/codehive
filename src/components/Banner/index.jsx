@@ -8,6 +8,7 @@ const Banner = ({
   description,
   backgroundColor,
   showDecsription ,
+  top,
   showBottomArrow,
   buttonTitle , // Default button text
   blueWords = [], // Words to be styled in blue
@@ -19,7 +20,7 @@ const Banner = ({
   const color = rightImage ? "text-black" : "text-white";
 
   return (
-    <div className={`container  rounded-lg my-[55px]  overflow-hidden`}>
+    <div className={`container  rounded-lg ${top?"mb-[55px]":"my-[55px]"}  overflow-hidden`}>
       <div
         className={`bg-cover relative bg-center  ${
           rightImage ? "h-[300px]" : "h-[200px]"
@@ -41,7 +42,7 @@ const Banner = ({
           "sm:gap-10"
         } `}
         >
-         <div className={`${rightImage ? "md:w-full" : "md:w-[52%]"} flex flex-col gap-3 `}> <h2 className="banner_heading leading-none text-center sm:text-start gilray-font">
+         <div className={`${rightImage ? "md:w-full" : "md:w-[52%]"} flex flex-col gap-5 `}> <h2 className="banner_heading leading-none text-center sm:text-start gilray-font">
             {titleParts.map((word, index) => (
               <span
                 key={index}

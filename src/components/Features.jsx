@@ -76,17 +76,8 @@ const {language}=useStore()
                   style={{
                     border: "1px solid transparent",
                     borderRadius: " 29px",
-                    background: `linear-gradient(to ${
-                      isFirst
-                        ? "bottom right"
-                        : isSec
-                        ? "top left"
-                        : isThird
-                        ? "bottom left"
-                        : isForth
-                        ? "top right"
-                        : ""
-                    }, #052036, #02101f),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
+                    //here
+                    background: `linear-gradient(135deg, #021220, #0a3652),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
                     backgroundClip: "padding-box, border-box",
                     backgroundOrigin: "padding-box, border-box",
                   }}
@@ -137,7 +128,7 @@ const {language}=useStore()
                           : isForth
                           ? "bottom left"
                           : ""
-                      }, #052036, #02101f)`,
+                      }, #021220, #0a3652)`,
                       backgroundClip: "padding-box, border-box",
                       backgroundOrigin: "padding-box, border-box",
                     }}
