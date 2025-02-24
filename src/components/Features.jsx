@@ -77,7 +77,7 @@ const {language}=useStore()
                     border: "1px solid transparent",
                     borderRadius: " 29px",
                     //here
-                    background: `linear-gradient(135deg, #021220, #0a3652),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
+                    background: `linear-gradient(135deg, #052036, #02101f),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
                     backgroundClip: "padding-box, border-box",
                     backgroundOrigin: "padding-box, border-box",
                   }}

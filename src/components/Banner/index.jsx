@@ -1,6 +1,8 @@
+"use client"
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
+import useStore from "../../store/useUserStore";
 const Banner = ({
   bgImage,
   rightImage,
@@ -13,6 +15,7 @@ const Banner = ({
   buttonTitle , // Default button text
   blueWords = [], // Words to be styled in blue
 }) => {
+  const {language} = useStore();
   const t=useTranslations("translation");
   // console.log(backgroundColor);
   // Split the title into words for easier manipulation
@@ -30,6 +33,7 @@ const Banner = ({
           backgroundPosition: "top",
           backgroundColor: backgroundColor || undefined,
         }}
+       
       >
         <div
           className={`flex flex-col ${color} w-full ${
@@ -41,6 +45,11 @@ const Banner = ({
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 ${showDecsription ?"sm:gap-5":
           "sm:gap-10"
         } `}
+        dir={
+          language === "en"
+            ? "ltr"
+            : "rtl"
+        }
         >
          <div className={`${rightImage ? "md:w-full" : "md:w-[52%]"} flex flex-col gap-5 `}> <h2 className="banner_heading leading-none text-center sm:text-start gilray-font">
             {titleParts.map((word, index) => (
