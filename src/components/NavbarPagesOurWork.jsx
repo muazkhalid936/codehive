@@ -1,5 +1,5 @@
 "use client";
-import React, { useState ,useTransition} from "react";
+import React, { useState, useTransition } from "react";
 import { FiMenu } from "react-icons/fi";
 import { services, industries, ourWorks } from "../data";
 import { usePathname, useRouter, Link } from "../i18n/routing";
@@ -11,32 +11,30 @@ import { useParams } from "next/navigation";
 
 import useStore from "../store/useUserStore";
 const NavbarPages = ({ isBlack }) => {
-
-
   const router = useRouter();
-    const pathname = usePathname();
-    const params = useParams();
-  
-    const toggleLanguage = () => {
-      const nextLocale = language === "en" ? "ar" : "en";
-      setLanguage(nextLocale);
-  
-      console.log(nextLocale);
-  
-      startTransition(() => {
-        router.replace(
-          // @ts-expect-error -- TypeScript will validate that only known `params`
-          // are used in combination with a given `pathname`. Since the two will
-          // always match for the current route, we can skip runtime checks.
-          { pathname, params },
-          { locale: nextLocale }
-        );
-      });
-    };
-    const [isPending, startTransition] = useTransition();
-    const { language, setLanguage } = useStore();
+  const pathname = usePathname();
+  const params = useParams();
 
-    const t = useTranslations("translation");
+  const toggleLanguage = () => {
+    const nextLocale = language === "en" ? "ar" : "en";
+    setLanguage(nextLocale);
+
+    console.log(nextLocale);
+
+    startTransition(() => {
+      router.replace(
+        // @ts-expect-error -- TypeScript will validate that only known `params`
+        // are used in combination with a given `pathname`. Since the two will
+        // always match for the current route, we can skip runtime checks.
+        { pathname, params },
+        { locale: nextLocale }
+      );
+    });
+  };
+  const [isPending, startTransition] = useTransition();
+  const { language, setLanguage } = useStore();
+
+  const t = useTranslations("translation");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [work, setWork] = useState(false);
 
@@ -95,11 +93,13 @@ const NavbarPages = ({ isBlack }) => {
 
   return (
     <div
-    // dir={language === 'en' ? 'ltr' : 'rtl'}
+      // dir={language === 'en' ? 'ltr' : 'rtl'}
       className={`flex !font-lato justify-center transition-all duration-300 ease-in-out z-[999] items-center w-full bg-transparent 
   ${isScrolling ? "!bg-[#000B17] py-2 !fixed" : "py-4 absolute bg-transparent"} 
   
    top-0 z-50`}
+   dir={language === "ar" ? "rtl" : "ltr"}
+
     >
       <div className="  container mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -110,8 +110,9 @@ const NavbarPages = ({ isBlack }) => {
         {/* Desktop Navigation */}
         <div className="hidden text-white lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
           {/* <Link href="/">Home</Link> */}
-                     <Link href="/about-us" >{t("aboutUs1")}</Link>
-         
+          <Link href="/about-us" className="m-auto">
+            {t("aboutUs1")}
+          </Link>
 
           {/* Services Dropdown */}
           <div
@@ -122,7 +123,7 @@ const NavbarPages = ({ isBlack }) => {
             <Link href="/services">{t("services1")}</Link>
             {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {isServicesDropdownOpen && (
-              <div className="absolute top-5 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
+              <div className="absolute top-7 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
                 {servicesDropdown?.map((service) => (
                   <Link
                     key={service.label}
@@ -143,13 +144,13 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
             onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
           >
-{t("industries")}
+            {t("industries")}
             {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {isIndustriesDropdownOpen && (
-              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+              <div className="absolute top-7 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 {industriesDropdown?.map(
                   (industry) =>
-                    industry.label !== "Our Booking System" &&
+                    industry.label !== "ourBooking" &&
                     industry.label !== "rewardHive" && (
                       <Link
                         key={industry.label}
@@ -157,7 +158,7 @@ const NavbarPages = ({ isBlack }) => {
                         className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                       >
                         {/* {t(industry.label)} */}
-                        {industry.label}
+                        {t(industry.label)}
                       </Link>
                     )
                 )}
@@ -169,11 +170,11 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setWork(true)}
             onMouseLeave={() => setWork(false)}
           >
-              {language === "en" ? "Products" : "المنتجات"}
+            {language === "en" ? "Products" : "المنتجات"}
 
             {work ? <FaCaretUp /> : <FaCaretDown />}
             {work && (
-              <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+              <div className="absolute top-7 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 <Link
                   href="/industries/our-booking-system"
                   className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
@@ -190,37 +191,31 @@ const NavbarPages = ({ isBlack }) => {
             )}
           </div>
 
-          <Link href="/our-work">
+          <Link href="/our-work" className="m-auto">
             {language === "en" ? "Our Work" : "   أعمالنا"}
           </Link>
           {/* <Link href="/contact-us">Contact</Link> */}
-        </div>
-
-        {/* Call-to-Action */}
-        <div className="hidden  lg:flex  main_hero_slogan items-center gap-5">
-        <button
-              onClick={toggleLanguage}
-              className="font-archivo text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white"
-            >
-              {language === 'en' ? 'العربية' : 'English'}
-            </button>
+          <button
+            onClick={toggleLanguage}
+            className="font-archivo mx-8 text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white"
+          >
+            {language === "en" ? "العربية" : "English"}
+          </button>
 
           <Link href={"/contact"}>
             <button className="mx-auto  h-10 w-40 rounded-full  bg-transparent border-2 border-white text-white">
               Contact Us
             </button>
           </Link>
-          {/* <div className="bg-white text-black rounded-full">
-            <FiArrowUpRight className="w-5 h-5" />
-          </div> */}
         </div>
+
+      
         {/* Mobile Menu Button */}
         <div className="lg:hidden" onClick={toggleSidebar}>
           <FiMenu className=" text-white w-6 h-6 cursor-pointer" />
         </div>
       </div>
-
- <div
+      <div
         className={`fixed top-0 right-0 h-screen w-[80%] max-w-[300px] 
           !font-lato main_hero_slogan bg-[#000b17] text-white transform ${
             isSidebarOpen ? "translate-x-0" : "translate-x-full"
@@ -286,7 +281,7 @@ const NavbarPages = ({ isBlack }) => {
                 {industriesDropdown?.map(
                   (industry) =>
                     industry.label !== "ourBooking" &&
-                  industry.label !== "rewardHive" && (
+                    industry.label !== "rewardHive" && (
                       <Link
                         key={industry.label}
                         href={industry.href}
@@ -312,19 +307,19 @@ const NavbarPages = ({ isBlack }) => {
             </div>
             {work && (
               <div className="mt-2 ml-4 flex flex-col space-y-2">
-                  <Link
-                    href="/industries/our-booking-system"
-                    className="hover:text-blueColor"
-                    >
-                    {t("ourBooking")}
-                  </Link>
-                  <Link
-                    href="/industries/reward-hive"
-                    className="hover:text-blueColor"
-                    >
-                    {t("rewardHive")}
-                  </Link>
-                </div>
+                <Link
+                  href="/industries/our-booking-system"
+                  className="hover:text-blueColor"
+                >
+                  {t("ourBooking")}
+                </Link>
+                <Link
+                  href="/industries/reward-hive"
+                  className="hover:text-blueColor"
+                >
+                  {t("rewardHive")}
+                </Link>
+              </div>
             )}
           </div>
 
@@ -355,7 +350,8 @@ const NavbarPages = ({ isBlack }) => {
             </button>
           </div>
         </div>
-      </div>    </div>
+      </div>{" "}
+    </div>
   );
 };
 

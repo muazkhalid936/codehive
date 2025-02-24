@@ -59,10 +59,11 @@ const Navbar = () => {
 
   return (
     <>
-      {/* NAVBAR (Desktop & Tablet) */}
-      <div className="bg-[#000b17] !font-lato w-full mx-auto z-[900] py-4 flex justify-center items-center">
+      <div
+        className="bg-[#000b17] !font-lato w-full mx-auto z-[900] py-4 flex justify-center items-center"
+        dir={language === "ar" ? "rtl" : "ltr"}
+      >
         <div className="text-white container mx-auto flex justify-between items-center">
-          {/* Logo */}
           <div>
             <Link href="/">
               <img
@@ -73,11 +74,11 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
-            <Link href="/about-us">{t("aboutUs1")}</Link>
+            <Link href="/about-us" className="flex justify-center items-center">
+              {t("aboutUs1")}
+            </Link>
 
-            {/* Services Dropdown */}
             <div
               className="relative flex justify-center gap-3 items-center cursor-pointer"
               onMouseEnter={() => setIsServicesDropdownOpen(true)}
@@ -86,7 +87,7 @@ const Navbar = () => {
               <Link href="/services">{t("services1")}</Link>
               {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
               {isServicesDropdownOpen && (
-                <div className="absolute top-5 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
+                <div className="absolute top-7 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
                   {servicesDropdown?.map((service) => (
                     <Link
                       key={service.label}
@@ -94,14 +95,12 @@ const Navbar = () => {
                       className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                     >
                       {t(service.label)}
-                      {/* {service.label} */}
                     </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            {/* Industries Dropdown */}
             <div
               className="relative flex justify-center gap-3 items-center cursor-pointer"
               onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
@@ -110,7 +109,7 @@ const Navbar = () => {
               {t("industries")}
               {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
               {isIndustriesDropdownOpen && (
-                <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+                <div className="absolute top-7 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                   {industriesDropdown?.map(
                     (industry) =>
                       industry.label !== "ourBooking" &&
@@ -120,7 +119,6 @@ const Navbar = () => {
                           href={industry.href}
                           className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
                         >
-                          {/* {t(industry.label)} */}
                           {t(industry.label)}
                         </Link>
                       )
@@ -129,7 +127,6 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Products Dropdown */}
             <div
               className="relative flex justify-center gap-3 items-center cursor-pointer"
               onMouseEnter={() => setWork(true)}
@@ -138,7 +135,7 @@ const Navbar = () => {
               {t("products")}
               {work ? <FaCaretUp /> : <FaCaretDown />}
               {work && (
-                <div className="absolute top-5 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+                <div className="absolute top-7 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                   <Link
                     href="/industries/our-booking-system"
                     className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
@@ -155,14 +152,13 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link href="/our-work">{t("ourWork2")}</Link>
-          </div>
+            <Link href="/our-work" className="flex justify-center items-center">
+              {t("ourWork2")}
+            </Link>
 
-          {/* Contact + Language (Desktop) */}
-          <div className="hidden lg:flex text-sm lg:text-base xl:text-xl items-center gap-5">
             <button
               onClick={toggleLanguage}
-              className="font-archivo text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white"
+              className={`font-archivo ${language} mx-8 text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white`}
             >
               {language === "en" ? "العربية" : "English"}
             </button>
@@ -173,7 +169,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="lg:hidden" onClick={toggleSidebar}>
             <FiMenu
               className={`w-6 h-6 cursor-pointer duration-300 ease-in-out ${
@@ -251,7 +246,7 @@ const Navbar = () => {
                 {industriesDropdown?.map(
                   (industry) =>
                     industry.label !== "ourBooking" &&
-                  industry.label !== "rewardHive" && (
+                    industry.label !== "rewardHive" && (
                       <Link
                         key={industry.label}
                         href={industry.href}
@@ -277,19 +272,19 @@ const Navbar = () => {
             </div>
             {work && (
               <div className="mt-2 ml-4 flex flex-col space-y-2">
-                  <Link
-                    href="/industries/our-booking-system"
-                    className="hover:text-blueColor"
-                    >
-                    {t("ourBooking")}
-                  </Link>
-                  <Link
-                    href="/industries/reward-hive"
-                    className="hover:text-blueColor"
-                    >
-                    {t("rewardHive")}
-                  </Link>
-                </div>
+                <Link
+                  href="/industries/our-booking-system"
+                  className="hover:text-blueColor"
+                >
+                  {t("ourBooking")}
+                </Link>
+                <Link
+                  href="/industries/reward-hive"
+                  className="hover:text-blueColor"
+                >
+                  {t("rewardHive")}
+                </Link>
+              </div>
             )}
           </div>
 

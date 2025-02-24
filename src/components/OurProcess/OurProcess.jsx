@@ -79,7 +79,7 @@ const StackingImages = () => {
           timeline.fromTo(
             `.new-text-${nextCard}`,
             { opacity: 0, y: 50 },
-            { opacity: 1, y: 10, duration: 0.5 },
+            { opacity: 1, y: 0, duration: 0.5 },
             `card-${nextCard}+=0.3`
           );
 
@@ -292,23 +292,20 @@ const StackingImages = () => {
             ].map((item, i) => {
               const titleWords =
                 language === "en"
-                  ? item.title.split(" ")
-                  : item.atitle.split(" ");
-              const lastTwoWords = titleWords.slice(-2).join(" ");
-              const firstWords = titleWords.slice(0, -2).join(" ");
+                  ? item.title
+                  : item.atitle;
               return (
                 <div
                   key={i}
                   dir={language === "en" ? "ltr" : "rtl"}
-                  className={`new-text mt-[15vh] container sm:w-auto ml-0 sm:ml-[-40px] flex flex-col gap-4 main_hero_slogan new-text-${
+                  className={`new-text mt-[65px]  sm:w-auto  flex flex-col gap-4 main_hero_slogan new-text-${
                     i + 1
                   }`}
                 >
                   <p className="font-bold text-center sm:text-start !font-lato !text-white  ">
-                    <span className="font-bold  w-[90%] text-3xl sm:text-[50px] leading-none mt-5  main-heading text-white">
-                      {firstWords}{" "}
+                    <span className="font-bold   sub_heading leading-none mt-5  main-heading text-white">
                       <span className="bg-gradient-to-r from-white  to-blueColor bg-clip-text text-transparent">
-                        {lastTwoWords}
+                        {titleWords}
                       </span>
                     </span>
                   </p>

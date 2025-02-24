@@ -137,7 +137,7 @@ const {language}=useStore()
                           : isForth
                           ? "bottom left"
                           : ""
-                      }, #052036, #02101f),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
+                      }, #052036, #02101f)`,
                       backgroundClip: "padding-box, border-box",
                       backgroundOrigin: "padding-box, border-box",
                     }}

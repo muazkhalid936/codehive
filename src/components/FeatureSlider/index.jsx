@@ -76,7 +76,7 @@ const FeatureSlider = ({ data, from }) => {
           {data.cards.map((item, index) => (
             <SwiperSlide key={index}>
               <div
-                className="  p-[1px]"
+                className=" overflow-hidden "
                 style={{
                   border: "1px solid transparent",
                   borderRadius: " 20px",
