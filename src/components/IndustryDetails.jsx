@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 const IndustryDetails = ({ panelData }) => {
-  const t=useTranslations("translation");
+  const t = useTranslations("translation");
   if (!panelData || panelData.length === 0) {
     return null;
   }
@@ -12,7 +12,7 @@ const IndustryDetails = ({ panelData }) => {
 
   return (
     <div className="bg-[#000B17] overflow-hidden text-white py-[55px]">
-      <div className="container mx-auto">
+      <div className="container relative mx-auto">
         <div className="bg-white rounded-full no-scrollbar overflow-x-auto sm:overflow-x-hidden flex gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide">
           {panelData.map((panel) => (
             <button
@@ -87,6 +87,12 @@ const IndustryDetails = ({ panelData }) => {
               className="object-contain max-h-[450px] "
             />
           </motion.div>
+          <img
+            src="/technologies/shade.png"
+            alt="image"
+            className="absolute top-[-300px] right-[-25vw] "
+            // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
+          />
         </div>
       </div>
     </div>

@@ -74,7 +74,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
+          <div className="hidden lg:flex  main_hero_slogan navbar_gap">
             <Link href="/about-us" className="flex justify-center items-center">
               {t("aboutUs1")}
             </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
               onMouseEnter={() => setIsServicesDropdownOpen(true)}
               onMouseLeave={() => setIsServicesDropdownOpen(false)}
             >
-              <Link href="/services">{t("services1")}</Link>
+              <p>{t("services1")}</p>
               {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
               {isServicesDropdownOpen && (
                 <div className="absolute top-7 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
@@ -158,12 +158,12 @@ const Navbar = () => {
 
             <button
               onClick={toggleLanguage}
-              className={`font-archivo ${language} mx-8 text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white`}
+              className={`font-archivo ${language} xl:mx-8 mx-2 text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white`}
             >
               {language === "en" ? "العربية" : "English"}
             </button>
             <Link href="/contact">
-              <button className="mx-auto text-[16px] h-10 w-40 rounded-full bg-blueColor">
+              <button className="mx-auto text-[16px] h-10 px-4 xl:px-10 rounded-full bg-blueColor">
                 {t("contactUs5")}
               </button>
             </Link>

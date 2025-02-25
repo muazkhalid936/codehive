@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 
  const data = [
   {
-    name: "Saif AL Alwar",
+    name: "Saif Al Alwar",
     position: "ceo",
     description: "asTheCeoOf",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
@@ -41,7 +41,7 @@ import { useTranslations } from "next-intl";
     picture: "/partnerwithtoppeople/Bilawal.png",
   },
   {
-    name: "Muskaan Iqbal",
+    name: "Muskaan Jaipal",
     position: "headOfDesi",
     description: "aCreativeV",
     linkedin: "https://www.linkedin.com/in/aisha-al-hassan/",
@@ -65,7 +65,7 @@ import { useTranslations } from "next-intl";
     picture: "/partnerwithtoppeople/Hina.png",
   },
   {
-    name: "Muhammad Hamwi",
+    name: "Muhammed Hamwi",
     position: "contentCre",
     description: "ourContent",
     linkedin: "https://www.linkedin.com/in/youssef-al-mansoori/",
@@ -136,7 +136,7 @@ const title=t("meetTheCre").split(" ");
               <img
                 src={data[selectedIndex].picture}
                 alt={data[selectedIndex].name}
-                className="px-1 pt-10 rounded-md"
+                className="px-1 pt-10 rounded-md object-contain"
               />
             </div>
           </div>
@@ -178,7 +178,7 @@ const title=t("meetTheCre").split(" ");
                       }}
                       onMouseEnter={() => setHoveredSlide(item.name)}
                       onMouseLeave={() => setHoveredSlide("")}
-                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl  h-[360px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
+                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl  h-[367px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
                       style={{
                         border: "1px solid transparent",
                         borderRadius: "26px",

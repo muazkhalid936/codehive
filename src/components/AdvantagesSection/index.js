@@ -15,7 +15,7 @@ const AdvantagesSection = ({ data }) => {
               <span
                 key={index}
                 className={`${
-                  index === data.title.split(" ").length - 1
+                  index === 0
                     ? "text-[#219DD9]"
                     : ""
                 }`}

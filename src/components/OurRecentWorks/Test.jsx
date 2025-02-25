@@ -174,6 +174,7 @@ const HorizontalScroll = () => {
             </button>
           </div>
         </div>
+        
       </div>
     </div>
   );

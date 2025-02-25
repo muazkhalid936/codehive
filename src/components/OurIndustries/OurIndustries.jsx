@@ -248,7 +248,7 @@ const ScrollAnimation = () => {
               zIndex: activeSection === index ? 1 : 0,
             }}
           >
-            <div className="sm:w-[640px] text-center sm:text-start flex-1 heading" dir={language === 'en' ? 'ltr' : 'rtl'}>
+            <div className="sm:w-1/2 text-center sm:text-start flex-1 heading" dir={language === 'en' ? 'ltr' : 'rtl'}>
               <div className="flex justify-center sm:justify-start">
                 <p className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl">
                   {language === 'en' ? item.title : item.atitle}

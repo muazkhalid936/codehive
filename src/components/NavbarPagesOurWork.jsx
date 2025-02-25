@@ -98,8 +98,7 @@ const NavbarPages = ({ isBlack }) => {
   ${isScrolling ? "!bg-[#000B17] py-2 !fixed" : "py-4 absolute bg-transparent"} 
   
    top-0 z-50`}
-   dir={language === "ar" ? "rtl" : "ltr"}
-
+      dir={language === "ar" ? "rtl" : "ltr"}
     >
       <div className="  container mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -108,7 +107,7 @@ const NavbarPages = ({ isBlack }) => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden text-white lg:flex gap-4 main_hero_slogan lg:gap-3 xl:gap-8">
+        <div className="hidden text-white lg:flex  main_hero_slogan navbar_gap">
           {/* <Link href="/">Home</Link> */}
           <Link href="/about-us" className="m-auto">
             {t("aboutUs1")}
@@ -120,7 +119,7 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
             onMouseLeave={() => setIsServicesDropdownOpen(false)}
           >
-            <Link href="/services">{t("services1")}</Link>
+{t("services1")}
             {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {isServicesDropdownOpen && (
               <div className="absolute top-7 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
@@ -203,13 +202,12 @@ const NavbarPages = ({ isBlack }) => {
           </button>
 
           <Link href={"/contact"}>
-            <button className="mx-auto  h-10 w-40 rounded-full  bg-transparent border-2 border-white text-white">
+            <button className="mx-auto text-[16px] h-10 px-4 xl:px-10 rounded-full border-white border text-white">
               Contact Us
             </button>
           </Link>
         </div>
 
-      
         {/* Mobile Menu Button */}
         <div className="lg:hidden" onClick={toggleSidebar}>
           <FiMenu className=" text-white w-6 h-6 cursor-pointer" />
@@ -337,7 +335,7 @@ const NavbarPages = ({ isBlack }) => {
             onClick={() => setIsSidebarOpen(false)}
             className="hover:text-white transition-colors"
           >
-            <button className="mx-auto main_hero_slogan h-7 sm:h-10 w-20 sm:w-40 rounded-full bg-blueColor">
+            <button className="mx-auto main_hero_slogan h-7 sm:h-10 w-20 sm:w-40  rounded-full bg-blueColor">
               {t("contactUs5")}
             </button>
           </Link>

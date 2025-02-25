@@ -32,7 +32,7 @@ const {language} = useStore()
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >
-                  {t("whatsapp97")}+971 54 220 3330
+                 +971 54 220 3330
                 </a>
               </div>
             </p>

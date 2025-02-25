@@ -98,8 +98,8 @@ const NavbarPages = ({ isBlack }) => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex gap-4 main_hero_slogan md:gap-2  xl:gap-8">
-          <Link href="/about-us" className="m-auto">{t("aboutUs1")}</Link>
+        <div className="hidden lg:flex  main_hero_slogan navbar_gap">
+        <Link href="/about-us" className="m-auto">{t("aboutUs1")}</Link>
 
           {/* {language==="en"?"Services" :"الخدمات"} Dropdown */}
           {/* Services Dropdown */}
@@ -108,7 +108,7 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
             onMouseLeave={() => setIsServicesDropdownOpen(false)}
           >
-            <Link href="/services">{t("services1")}</Link>
+{t("services1")}
             {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {isServicesDropdownOpen && (
               <div className="absolute top-7 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
@@ -189,8 +189,8 @@ const NavbarPages = ({ isBlack }) => {
             {language === "en" ? "العربية" : "English"}
           </button>
           <Link href="/contact">
-            <button className="mx-auto text-white text-[16px] h-10 w-40 rounded-full bg-blueColor">
-              {language === "en" ? "Contact Us" : "تحدث معنا"}
+          <button className="mx-auto text-[16px] h-10 px-4 xl:px-10 rounded-full text-white bg-blueColor">
+          {language === "en" ? "Contact Us" : "تحدث معنا"}
             </button>
           </Link>
         </div>

@@ -189,6 +189,13 @@ const {language}=useStore()
             </div>
           </div>
         </div> */}
+
+<img
+        src="/technologies/shade.png"
+        alt="image"
+        className="absolute z-[-1]  bottom-[-500px] right-[-30vw]"
+        // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
+      />
       </div>
     </div>
   );

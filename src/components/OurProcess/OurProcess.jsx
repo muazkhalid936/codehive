@@ -298,7 +298,7 @@ const StackingImages = () => {
                 <div
                   key={i}
                   dir={language === "en" ? "ltr" : "rtl"}
-                  className={`new-text mt-[65px]  sm:w-auto  flex flex-col gap-4 main_hero_slogan new-text-${
+                  className={`new-text mt-[65px] flex-1 w-auto  flex flex-col gap-4 main_hero_slogan new-text-${
                     i + 1
                   }`}
                 >
