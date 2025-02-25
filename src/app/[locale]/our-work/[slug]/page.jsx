@@ -42,7 +42,7 @@ const page = async ({ params }) => {
       ) : (
         <div
           style={{ backgroundColor: work.bgColor }}
-          className={`flex container rounded-2xl h-[500px]  mt-10 mb-10`}
+          className={`flex !container mx-auto overflow-hidden rounded-2xl h-[300px] xl:h-[500px]  mt-10 mb-10`}
         >
           <img
             src={work.image}

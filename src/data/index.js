@@ -4295,6 +4295,7 @@ export const ourWorks = [
         "image": "/our-work/clixpos-web/main1.png"
       },
       {
+        blueTitle:true,
         "id": 2,
         "title": "customerR1",
         "heading": "customerR1",

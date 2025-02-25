@@ -184,7 +184,7 @@ const NavbarPages = ({ isBlack }) => {
           </Link>
           <button
             onClick={toggleLanguage}
-            className="font-archivo mx-8 text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-black"
+            className="font-archivo xl:mx-8 mx-2  text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-black"
           >
             {language === "en" ? "العربية" : "English"}
           </button>
@@ -230,144 +230,125 @@ const NavbarPages = ({ isBlack }) => {
           </button>
         </div>
         {/* Sidebar Links */}
-        <div
-          className={`fixed top-0 right-0 h-screen w-[80%] max-w-[300px] 
-          !font-lato main_hero_slogan bg-[#000b17] text-white transform ${
-            isSidebarOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-300 z-[999]`}
-        >
-          <div className="flex justify-end items-center px-4 py-4 border-b border-gray-600">
-            <button
-              onClick={() => setIsSidebarOpen(false)}
-              className="text-2xl focus:outline-none"
-            >
-              <FaTimes />
-            </button>
-          </div>
-
-          {/* Sidebar Links */}
-          <div className="flex flex-col gap-4 p-4">
-            <Link
-              href="/about-us"
-              onClick={() => setIsSidebarOpen(false)}
-              className="hover:text-blueColor transition-colors"
-            >
-              {t("aboutUs")}
-            </Link>
-
-            {/* Services (Collapsible) */}
-            <div>
-              <div
-                className="flex items-center justify-between hover:text-blueColor cursor-pointer"
-                onClick={() =>
-                  setIsServicesDropdownOpen(!isServicesDropdownOpen)
-                }
-              >
-                <span>{t("services")}</span>
-                {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-              </div>
-              {isServicesDropdownOpen && (
-                <div className="mt-2 flex flex-col space-y-2">
-                  {servicesDropdown?.map((service) => (
-                    <Link
-                      key={service.label}
-                      href={service.href}
-                      onClick={() => setIsSidebarOpen(false)}
-                      className="hover:bg-[#219DD92B] hover:border-l-2 hover:border-blueColor"
+         <div className="flex flex-col gap-4 p-4">
+                  <Link
+                    href="/about-us"
+                    onClick={() => setIsSidebarOpen(false)}
+                    className="hover:text-blueColor transition-colors"
+                  >
+                    {t("aboutUs")}
+                  </Link>
+        
+                  {/* Services (Collapsible) */}
+                  <div>
+                    <div
+                      className="flex items-center justify-between hover:text-blueColor cursor-pointer"
+                      onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                     >
-                      <span className="ml-2">{t(service.label)}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Industries (Collapsible) */}
-            <div>
-              <div
-                className="flex items-center justify-between hover:text-blueColor cursor-pointer"
-                onClick={() =>
-                  setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen)
-                }
-              >
-                <span>{t("industries")}</span>
-                {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
-              </div>
-              {isIndustriesDropdownOpen && (
-                <div className="mt-2 ml-4 flex flex-col space-y-2">
-                  {industriesDropdown?.map(
-                    (industry) =>
-                      industry.label !== "ourBooking" &&
-                      industry.label !== "rewardHive" && (
+                      <span>{t("services")}</span>
+                      {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+                    </div>
+                    {isServicesDropdownOpen && (
+                      <div className="mt-2 flex flex-col space-y-2">
+                        {servicesDropdown?.map((service) => (
+                          <Link
+                            key={service.label}
+                            href={service.href}
+                            onClick={() => setIsSidebarOpen(false)}
+                            className="hover:bg-[#219DD92B] hover:border-l-2 hover:border-blueColor"
+                          >
+                            <span className="ml-2">{t(service.label)}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+        
+                  {/* Industries (Collapsible) */}
+                  <div>
+                    <div
+                      className="flex items-center justify-between hover:text-blueColor cursor-pointer"
+                      onClick={() =>
+                        setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen)
+                      }
+                    >
+                      <span>{t("industries")}</span>
+                      {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
+                    </div>
+                    {isIndustriesDropdownOpen && (
+                      <div className="mt-2 ml-4 flex flex-col space-y-2">
+                        {industriesDropdown?.map(
+                          (industry) =>
+                            industry.label !== "ourBooking" &&
+                            industry.label !== "rewardHive" && (
+                              <Link
+                                key={industry.label}
+                                href={industry.href}
+                                onClick={() => setIsSidebarOpen(false)}
+                                className="hover:text-blueColor"
+                              >
+                                {t(industry.label)}
+                              </Link>
+                            )
+                        )}
+                      </div>
+                    )}
+                  </div>
+        
+                  {/* Products (Collapsible) */}
+                  <div>
+                    <div
+                      className="flex items-center justify-between hover:text-blueColor cursor-pointer"
+                      onClick={() => setWork(!work)}
+                    >
+                      <span>{t("products")}</span>
+                      {work ? <FaCaretUp /> : <FaCaretDown />}
+                    </div>
+                    {work && (
+                      <div className="mt-2 ml-4 flex flex-col space-y-2">
                         <Link
-                          key={industry.label}
-                          href={industry.href}
-                          onClick={() => setIsSidebarOpen(false)}
+                          href="/industries/our-booking-system"
                           className="hover:text-blueColor"
                         >
-                          {t(industry.label)}
+                          {t("ourBooking")}
                         </Link>
-                      )
-                  )}
-                </div>
-              )}
-            </div>
-
-            {/* Products (Collapsible) */}
-            <div>
-              <div
-                className="flex items-center justify-between hover:text-blueColor cursor-pointer"
-                onClick={() => setWork(!work)}
-              >
-                <span>{t("products")}</span>
-                {work ? <FaCaretUp /> : <FaCaretDown />}
-              </div>
-              {work && (
-                <div className="mt-2 ml-4 flex flex-col space-y-2">
+                        <Link
+                          href="/industries/reward-hive"
+                          className="hover:text-blueColor"
+                        >
+                          {t("rewardHive")}
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+        
                   <Link
-                    href="/industries/our-booking-system"
-                    className="hover:text-blueColor"
+                    href="/our-work"
+                    onClick={() => setIsSidebarOpen(false)}
+                    className="hover:text-blueColor transition-colors"
                   >
-                    {t("ourBooking")}
+                    {t("ourWork2")}
                   </Link>
+        
+                  {/* Language & Contact */}
                   <Link
-                    href="/industries/reward-hive"
-                    className="hover:text-blueColor"
+                    href="/contact"
+                    onClick={() => setIsSidebarOpen(false)}
+                    className="hover:text-white transition-colors"
                   >
-                    {t("rewardHive")}
+                    <button className="mx-auto main_hero_slogan h-7 sm:h-10 w-20 sm:w-40 rounded-full bg-blueColor">
+                      {t("contactUs5")}
+                    </button>
                   </Link>
-                </div>
-              )}
-            </div>
-
-            <Link
-              href="/our-work"
-              onClick={() => setIsSidebarOpen(false)}
-              className="hover:text-blueColor transition-colors"
-            >
-              {t("ourWork2")}
-            </Link>
-
-            {/* Language & Contact */}
-            <Link
-              href="/contact"
-              onClick={() => setIsSidebarOpen(false)}
-              className="hover:text-white transition-colors"
-            >
-              <button className="mx-auto main_hero_slogan h-7 sm:h-10 w-20 sm:w-40 rounded-full bg-blueColor">
-                {t("contactUs5")}
-              </button>
-            </Link>
-            <div className="flex justify-end gap-2 pt-2 border-t border-gray-600 mt-4">
-              <button
-                onClick={toggleLanguage}
-                className="font-archivo main_hero_slogan font-lato text-white"
-              >
-                {language === "en" ? "العربية" : "English"}
-              </button>
-            </div>
-          </div>
-        </div>{" "}
+                  <div className="flex justify-end gap-2 pt-2 border-t border-gray-600 mt-4">
+                    <button
+                      onClick={toggleLanguage}
+                      className="font-archivo main_hero_slogan font-lato text-white"
+                    >
+                      {language === "en" ? "العربية" : "English"}
+                    </button>
+                  </div>
+                </div>{" "}
       </div>
     </div>
   );

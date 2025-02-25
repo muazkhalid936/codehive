@@ -49,8 +49,8 @@ const index = () => {
             <span className="text-blueColor">{title.split(" ").slice(-1)}</span>
           </h2>
 
-          <div className="flex justify-end items-end    gap-5">
-            <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[600px] xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+          <div className="flex flex-col md:flex-row justify-center items-end    gap-5">
+            <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[600px] md:h-[650px] lg:h-[660px] xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
                   {t("basic")}
@@ -107,9 +107,9 @@ const index = () => {
               </div>
             </div>
 
-            <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[700px] xl:h-[670px] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[700px] md:h-[750px] lg:h-[760px] xl:h-[670px] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
-                <p className="sm:w-[90%] xl:w-1/2 mx-auto text-center text-[#1FCB78] border border-[#1FCB78] px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
+                <p className="sm:w-[80%] xl:w-1/2 mx-auto text-center text-[#1FCB78] border border-[#1FCB78] px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
                   {t("mostPopula")}
                 </p>
 
@@ -167,7 +167,7 @@ const index = () => {
               </div>
             </div>
 
-            <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[600px] xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[600px] md:h-[650px] lg:h-[660px]  xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
                   {t("enterprise")}

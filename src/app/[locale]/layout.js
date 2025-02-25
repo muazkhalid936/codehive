@@ -3,7 +3,7 @@ import Footer from '../../components/Footer';
 import { Suspense } from 'react';
 import Loader from '../../components/Loader';
 import { getMessages } from 'next-intl/server';
-
+import NextTopLoader from 'nextjs-toploader';
 import { routing } from '../../i18n/routing';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
@@ -27,12 +27,12 @@ export default async function RootLayout({ children, params: { locale } }) {
         // current langauge is arabic then set dir to rtl
         // dir={locale === 'ar' ? 'rtl' : 'ltr'}
       >
-        <Loader>
-        {/* <NextTopLoader showSpinner={false} /> */}
+        {/* <Loader> */}
+        <NextTopLoader showSpinner={false} />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
-        </Loader>
+        {/* </Loader> */}
       </body>
     </html>
   );

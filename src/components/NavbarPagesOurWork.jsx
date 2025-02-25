@@ -196,7 +196,7 @@ const NavbarPages = ({ isBlack }) => {
           {/* <Link href="/contact-us">Contact</Link> */}
           <button
             onClick={toggleLanguage}
-            className="font-archivo mx-8 text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white"
+            className="font-archivo xl:mx-8 mx-2  text-[14px] sm:text-[16px] lg:text-[18px] font-lato text-white"
           >
             {language === "en" ? "العربية" : "English"}
           </button>

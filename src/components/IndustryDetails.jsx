@@ -41,12 +41,24 @@ const IndustryDetails = ({ panelData }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="gilray-font mt-10 sub_heading">
-            {t(activePanel.heading).split(" ").slice(0, -1).join(" ")}{" "}
-            <span className="text-blueColor">
-              {t(activePanel.heading).split(" ").slice(-1)}
-            </span>
-          </h1>
+         <h1 className="gilray-font mt-10 sub_heading">
+  {activePanel.blueTitle ? (
+    <>
+      {t(activePanel.heading).split(" ").slice(0, -2).join(" ")}
+      <span className="text-blueColor ml-2">
+        {t(activePanel.heading).split(" ").slice(-2)}
+      </span>
+    </>
+  ) : (
+    <>
+      {t(activePanel.heading).split(" ").slice(0, -1).join(" ")}
+      <span className="text-blueColor ml-2">
+        {t(activePanel.heading).split(" ").slice(-1).join(" ")}
+      </span>
+    </>
+  )}
+</h1>
+
         </motion.div>
         <div className="flex  mt-5">
           <motion.div

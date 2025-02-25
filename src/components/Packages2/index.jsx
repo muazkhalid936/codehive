@@ -44,17 +44,17 @@ const index = () => {
             <span className="text-blueColor">{title.split(" ").slice(-1)}</span>
           </h2>
 
-          <div className="flex md:flex-row justify-end items-end flex-col gap-5">
-            <div className="md:w-[30%] md:mt-[10vh] mx-auto h-[520px]  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+          <div className="flex flex-col md:flex-row justify-end items-end    xl:gap-5">
+            <div className="md:w-[30%] md:mt-[10vh] mx-auto h-[560px]  lg:h-[590px] xl:h-[530px]  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
                 {t("basic")}
                 </p>
-                <p className="text-center  text-[25px]  leading-none mb-8">
+                <p className="text-center text-[18px] xl:text-[25px]  leading-none mb-4 lg:mb-8">
                 {t("basicAed19")}
                 </p>
 
-                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[15px] xl:text-[18px] py-3 px-6 shadow-md rounded-lg">
                 <span className="truncate">{t("getStarted")}</span>
                 <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
@@ -102,20 +102,20 @@ const index = () => {
               </div>
             </div>
 
-            <div className="md:w-[30%] mx-auto bg-gradient-to-br h-[620px] from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <div className="md:w-[30%] mx-auto bg-gradient-to-br  h-[700px] lg:h-[690px] xl:h-[650px] from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
-                <p className="w-[60%] mx-auto text-center text-[#1FCB78] border border-[#1FCB78] px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
-                {t("mostPopula")}
+              <p className="sm:w-[80%] xl:w-1/2 mx-auto text-center text-[#1FCB78] border border-[#1FCB78] px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
+                  {t("mostPopula")}
                 </p>
 
                 <p className="gilray-font text-[30px] mx-auto text-center">
                 {t("advanced")}
                 </p>
-                <p className="text-center  text-[25px]  leading-none mb-8">
+                <p className="text-center text-[18px] xl:text-[25px]  leading-none mb-4 lg:mb-8">
                 {t("advanceAed")}
                 </p>
 
-                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] xl:text-[18px] py-3 px-6 shadow-md rounded-lg">
                 <span className="truncate">{t("getStarted")}</span>
                 <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
@@ -162,15 +162,15 @@ const index = () => {
               </div>
             </div>
 
-            <div className="md:w-[30%]  md:mt-[10vh] mx-auto h-[520px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <div className="md:w-[30%]  md:mt-[10vh] mx-auto h-[560px] lg:h-[590px] xl:h-[530px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
                 {t("enterprise")}
                 </p>
-                <p className="text-center  text-[25px]  leading-none mb-8">
+                <p className="text-center text-[18px] xl:text-[25px]  leading-none mb-4 lg:mb-8">
 {t("enterpris1")}                </p>
 
-                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] xl:text-[18px] py-3 px-6 shadow-md rounded-lg">
                 <span className="truncate">{t("getStarted")}</span>
                 <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
