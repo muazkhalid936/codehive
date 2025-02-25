@@ -231,7 +231,7 @@ const StackingImages = () => {
             })}
           </div>
 
-          <div className="new-text-section  text-white">
+          <div className="new-text-section relative  text-white">
             {[
               {
                 title: "Requirement Gathering ",

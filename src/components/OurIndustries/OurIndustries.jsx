@@ -79,7 +79,7 @@ export const ourIndustriesData = [
   },
 ];
 
-import { useEffect, useRef, useState, lazy, Suspense, use } from 'react';
+import { useEffect, useRef, useState, lazy, Suspense } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FiArrowUpRight } from 'react-icons/fi';
@@ -87,19 +87,17 @@ import { Canvas } from '@react-three/fiber';
 import dynamic from 'next/dynamic';
 import useStore from '../../store/useUserStore';
 import { useRouter } from 'next/navigation';
-import {Link} from '../../i18n/routing';
-gsap.registerPlugin(ScrollTrigger);
+import { Link } from '../../i18n/routing';
 import { useTranslations } from 'next-intl';
+
+gsap.registerPlugin(ScrollTrigger);
+
 // Lazy load the IphoneModel component
-const IphoneModel = dynamic(() =>
-  import('../IphoneModel', {
-    ssr: false,
-  })
-);
+const IphoneModel = dynamic(() => import('../IphoneModel'), { ssr: false });
 
 const ScrollAnimation = () => {
   const router = useRouter();
-const t= useTranslations("translation")
+  const t = useTranslations("translation");
   const [activeSection, setActiveSection] = useState(0);
 
   const texturePaths = [
@@ -109,14 +107,15 @@ const t= useTranslations("translation")
     '/iphoneModel/Ecommerce.jpg',
     '/iphoneModel/Fitness.png',
   ];
-  let progress;
+
   const containerRef = useRef();
-  const isInViewRef = useRef(false); // Ref instead of state for performance
+  const isInViewRef = useRef(false);
   const [textureUrl, setTextureUrl] = useState(texturePaths[0]);
   const meshRef = useRef();
   const imageObjectsRef = useRef([]);
 
   const { language } = useStore();
+
   useEffect(() => {
     // Preload images and store them in a ref
     imageObjectsRef.current = texturePaths.map((path) => {
@@ -135,13 +134,10 @@ const t= useTranslations("translation")
         scrub: 1,
         pin: true,
         toggleActions: 'play none none none',
-
         onUpdate: (self) => {
-          const currentSectionIndex = Math.floor(
-            self.progress * sections.length
-          );
+          const currentSectionIndex = Math.floor(self.progress * sections.length);
           setActiveSection(currentSectionIndex);
-        }, // Set startRotation to false when animation is reversed
+        },
       },
     });
 
@@ -175,6 +171,7 @@ const t= useTranslations("translation")
           { x: 0, opacity: 1, duration: 0.5 },
           index + 0.5
         );
+
         const startRotation = 5;
         const endRotation = 11.3;
         const midRotation = (startRotation + endRotation) / 2;
@@ -184,45 +181,22 @@ const t= useTranslations("translation")
           {
             onUpdate: () => {
               const sectionProgress = tl.progress() * sections.length - index;
-              if (
-                (tl.progress() * sections.length - index).toFixed(3) == 0.002
-              ) {
-                progress = tl.progress() * sections.length - index;
+              const rotationValue = gsap.utils.interpolate(
+                startRotation,
+                endRotation,
+                sectionProgress
+              );
+
+              if (meshRef.current) {
+                meshRef.current.rotation.y = rotationValue;
               }
 
-              if (sectionProgress >= progress) {
-                progress = tl.progress() * sections.length - index;
-
-                const rotationValue = gsap.utils.interpolate(
-                  startRotation,
-                  endRotation,
-                  sectionProgress
-                );
-
-                if (meshRef.current) {
-                  meshRef.current.rotation.y = rotationValue;
-                }
-                if (Math.abs(rotationValue - midRotation) < 0.4) {
-                  setTextureUrl(texturePaths[index]);
-                }
-              } else {
-                progress = tl.progress() * sections.length - index;
-                const rotationValue = gsap.utils.interpolate(
-                  startRotation,
-                  endRotation,
-                  sectionProgress
-                );
-                if (meshRef.current) {
-                  meshRef.current.rotation.y = rotationValue;
-                }
-                console.log('ok', Math.abs(rotationValue));
-
-                if (Math.abs(rotationValue) < 7.8) {
-                  setTextureUrl(texturePaths[index - 1]);
-                }
+              if (Math.abs(rotationValue - midRotation) < 0.4) {
+                setTextureUrl(texturePaths[index]);
+              } else if (Math.abs(rotationValue) < 7.8) {
+                setTextureUrl(texturePaths[index - 1]);
               }
             },
-
             ease: 'none',
           },
           index + 0.2
@@ -233,11 +207,7 @@ const t= useTranslations("translation")
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            isInViewRef.current = true; // Ref update
-          } else {
-            isInViewRef.current = false; // Ref update
-          }
+          isInViewRef.current = entry.isIntersecting;
         });
       },
       { threshold: 0.1 }
@@ -257,7 +227,7 @@ const t= useTranslations("translation")
   }, []);
 
   const canvasStyle = {
-      height: '50vh',
+    height: '50vh',
     '@media (max-width: 480px)': {
       height: '300px',
     },
@@ -267,58 +237,57 @@ const t= useTranslations("translation")
     <div>
       <div
         ref={containerRef}
-        className="flex flex-col container items-center justify-center mt-[-300px]  h-[100vh] min-h-[400px]  main22 "
+        className="flex flex-col container items-center justify-center mt-[-300px] h-[100vh] min-h-[400px] main22"
       >
         {ourIndustriesData.map((item, index) => (
           <div
             key={index}
-            className="section  absolute flex  flex-col sm:flex-row-reverse justify-end items-end sm:items-center sm:justify-between sm:gap-8  px-16"
+            className="section absolute flex flex-col sm:flex-row-reverse justify-end items-end sm:items-center sm:justify-between sm:gap-8 px-16"
             style={{
               pointerEvents: activeSection === index ? 'auto' : 'none',
-              // Optionally, adjust z-index so the active section sits on top.
               zIndex: activeSection === index ? 1 : 0,
             }}
           >
-            <div className="sm:w-[640px] text-center sm:text-start   flex-1 heading"
-                  dir={language === 'en' ? 'ltr' : 'rtl'}
->
+            <div className="sm:w-[640px] text-center sm:text-start flex-1 heading" dir={language === 'en' ? 'ltr' : 'rtl'}>
               <div className="flex justify-center sm:justify-start">
-                <p className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl ">
+                <p className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl">
                   {language === 'en' ? item.title : item.atitle}
                 </p>
               </div>
               <p className="mt-4 main_hero_slogan text-white">
                 {language === 'en' ? item?.des1 : item?.ades1}
               </p>
-              <p className="mt-4 text-white main_hero_slogan ">
+              <p className="mt-4 text-white main_hero_slogan">
                 {language === 'en' ? item?.des2 : item?.ades2}
               </p>
-              <p className="mt-4 main_hero_slogan text-white ">
+              <p className="mt-4 main_hero_slogan text-white">
                 {language === 'en' ? item?.des3 : item?.ades3}
               </p>
               <p className="mt-4 main_hero_slogan text-white">
                 {language === 'en' ? item?.des4 : item?.ades4}
               </p>
-              <p className="mt-4 text-white main_hero_slogan ">
+              <p className="mt-4 text-white main_hero_slogan">
                 {language === 'en' ? item?.des5 : item?.ades5}
               </p>
               <div className="flex justify-center sm:justify-start items-center gap-3">
                 <Link href={item.link} className="mt-2 xl:text-xl text-white">
-                 {t("readMore9")}
+                  {t("readMore9")}
                 </Link>
                 <div className="bg-white text-black mt-2 sm:mt-3 rounded-full">
-                  <FiArrowUpRight className=" text-sm sm:text-lg" />
+                  <FiArrowUpRight className="text-sm sm:text-lg" />
                 </div>
               </div>
             </div>
 
-            <div className="sm:w-1/2 w-full  iphone">
+            <div className="sm:w-1/2 w-full iphone">
               <Canvas
                 dpr={[1, 2]}
                 camera={{ position: [25, 0, 0], fov: 50 }}
                 className="canvas-container"
-                >
-                <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
+              >
+                <Suspense fallback={null}>
+                  <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
+                </Suspense>
               </Canvas>
             </div>
           </div>

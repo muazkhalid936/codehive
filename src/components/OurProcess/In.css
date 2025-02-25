@@ -52,7 +52,8 @@
   /* top: 30px !important; */
 }
 .our-process-main-pic {
-  @apply !h-[400px];
+  height: 400px;
+  width: 600px;
   }
 @media (max-width: 1300px) {
   /* .our-process-main-pic {

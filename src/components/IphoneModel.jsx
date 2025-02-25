@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useMemo } from "react";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -6,13 +7,12 @@ import { Stage } from "@react-three/drei";
 
 const texturePaths = [
   "/iphoneModel/Car wash.jpg",
-  "/iphoneModel/Car wash.jpg",
   "/iphoneModel/Delivery.png",
   "/iphoneModel/Health Care.jpg",
-  "/iphoneModel/Booking.jpg",
   "/iphoneModel/Ecommerce.jpg",
   "/iphoneModel/Fitness.png",
 ];
+
 
 const IphoneModel = React.memo(({ textureUrl, meshRef }) => {
   const { scene } = useLoader(GLTFLoader, "/iphoneModel/3.glb");

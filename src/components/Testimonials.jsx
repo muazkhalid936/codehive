@@ -7,14 +7,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const Testimonials = ({ testimonials }) => {
-  const swiperRef = useRef(null); 
+  const swiperRef = useRef(null);
 
   return (
     <section className="bg-white  ">
       <div className="container mx-auto ">
         <div className="flex flex-row mt-[25px] sm:mt-[45px] items-center justify-between ">
-          
-          
           <h2
             className=" text-left    sub_heading font-gilroy"
             style={{
@@ -41,11 +39,9 @@ const Testimonials = ({ testimonials }) => {
           </div>
         </div>
 
-        {/* Testimonials Carousel */}
         <Swiper
           modules={[Navigation, Autoplay]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          // spaceBetween={20}
           slidesPerView={1}
           loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
