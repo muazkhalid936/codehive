@@ -82,7 +82,7 @@
 }
 @media (max-width: 1440px) {
   .ss {
-    left: 52% !important;
+    left: 58% !important;
     /* top: 30px !important; */
   }
   /* .our-process-main-pic {
@@ -91,6 +91,10 @@
   .new-icon {
     font-size: 5rem;
   }
+  .our-process-main-pic {
+    height: 300px;
+    width: 500px;
+    }
 }
 @media (max-width: 1280px) {
   .ss {

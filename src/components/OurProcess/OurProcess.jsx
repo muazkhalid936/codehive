@@ -298,11 +298,11 @@ const StackingImages = () => {
                 <div
                   key={i}
                   dir={language === "en" ? "ltr" : "rtl"}
-                  className={`new-text mt-[65px] flex-1 w-auto  flex flex-col gap-4 main_hero_slogan new-text-${
+                  className={`new-text mt-[65px] flex-1 w-[90vw] sm:w-auto  flex flex-col gap-4 main_hero_slogan new-text-${
                     i + 1
                   }`}
                 >
-                  <p className="font-bold text-center sm:text-start !font-lato !text-white  ">
+                  <p className="font-bold w-full text-center sm:text-start !font-lato !text-white  ">
                     <span className="font-bold   sub_heading leading-none mt-5  main-heading text-white">
                       <span className="bg-gradient-to-r from-white  to-blueColor bg-clip-text text-transparent">
                         {titleWords}

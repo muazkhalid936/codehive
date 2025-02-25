@@ -11,7 +11,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
   const lastTwoWords = splitHeading.slice(-2).join(" ");
   const restOfHeading = splitHeading.slice(0, -2).join(" ");
   return (
-    <div className="service-stack-card flex   text-white flex-col md:flex-row justify-between sm:gap-10 my-auto sm:w-[95%] rounded-3xl overflow-hidden sm:p-5  p-2 relative ">
+    <div className="service-stack-card flex   text-white flex-col md:flex-row justify-center gap-5 sm:justify-between sm:gap-10 my-auto sm:w-[95%] rounded-3xl overflow-hidden sm:p-5  p-2 relative ">
       <div
         className="absolute p-[1px] top-0  left-0 h-full w-full "
         style={{

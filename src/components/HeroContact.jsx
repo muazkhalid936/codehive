@@ -14,35 +14,35 @@ const HeroContact = () => {
     </>
   );
   return (
-    <div className="h-[70vh] overflow-hidden min-h-[500px] max-h-[580px] bg-gradient-to-t from-[#0d1724] via-[#0d1724] to-[#000b17] relative">
+    <div className="sm:h-[70vh] overflow-hidden sm:min-h-[500px] sm:max-h-[580px] h-[350px] bg-gradient-to-t from-[#0d1724] via-[#0d1724] to-[#000b17] relative">
       {/* Background image container */}
       <div className="absolute inset-0 flex justify-center items-center">
         <img
           src="/contact.png"
-          className="h-[62vh] mt-[5rem] min-h-[500px] max-h-[650px] object-contain"
+          className="h-[62vh] mt-[5rem] min-h-[500px] max-h-[650px]  object-cover sm:object-contain"
           alt="Contact"
         />
       </div>
 
       {/* Content overlay */}
-      <div className="relative z-10 flex container justify-center mt-[200px] flex-row gap-2">
+      <div className="relative z-10 flex container justify-center mt-[100px] sm:mt-[200px] flex-row gap-2">
         {/* Left Column */}
         <div
           className="flex-1 lg:w-1/2 flex-col flex justify-center"
           dir={language === "en" ? "ltr" : "rtl"}
         >
           <div className="flex flex-col gap-5">
-            <h2 className=" header hero_section_heading leading-tight main-heading text-white">
+            <h2 className=" header text-center sm:text-start hero_section_heading leading-tight main-heading text-white">
               {formattedTitle}
             </h2>
-            <p className="main_hero_slogan text-[#ebeced]">
+            <p className="main_hero_slogan text-center sm:text-start text-[#ebeced]">
               {t("haveQuesti")}{" "}
             </p>
           </div>
         </div>
 
         {/* Right Column */}
-        <div className="flex w-1/2 "></div>
+        <div className="sm:flex  hidden w-1/2 "></div>
       </div>
     </div>
   );

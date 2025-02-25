@@ -61,7 +61,7 @@ const WorryNoMore = ({
           <div className=" text-white w-full sm:w-1/2  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]">
             <img
               src={rightImage}
-              className={`object-contain  h-auto ${cut?"md:h-[375px]":"md:h-[360px]"}`}
+              className={`object-cover  h-auto ${cut?"md:h-[375px]":"md:h-[360px]"}`}
             />
           </div>
         )}

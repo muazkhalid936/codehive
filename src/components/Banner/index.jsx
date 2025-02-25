@@ -25,6 +25,11 @@ const Banner = ({
   return (
     <div className={`container  rounded-lg ${top?"mb-[55px]":"my-[55px]"}  overflow-hidden`}>
       <div
+        dir={
+          language === "en"
+            ? "ltr"
+            : "rtl"
+        }
         className={`bg-cover relative bg-center  ${
           rightImage ? "h-[300px]" : "h-[200px]"
         } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
@@ -45,11 +50,7 @@ const Banner = ({
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 ${showDecsription ?"sm:gap-5":
           "sm:gap-10"
         } `}
-        dir={
-          language === "en"
-            ? "ltr"
-            : "rtl"
-        }
+      
         >
          <div className={`${rightImage ? "md:w-full" : "md:w-[52%]"} flex flex-col gap-5 `}> <h2 className="banner_heading leading-none text-center sm:text-start gilray-font">
             {titleParts.map((word, index) => (
@@ -88,7 +89,7 @@ const Banner = ({
           <div className=" text-white w-[300px] md:w-1/2 right-0 absolute sm:relative bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-[20px]">
             <img
               src={rightImage}
-              className="object-contain  h-auto md:h-[340px] xl:h-[400px]"
+              className="object-cover  h-auto sm:h-[340px] md:h-[400px]"
             />
           </div>
         )}

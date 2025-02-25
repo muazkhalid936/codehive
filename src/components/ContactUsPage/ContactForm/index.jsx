@@ -200,7 +200,7 @@ const {language}=useStore();
         </div>
 
         {/* Submit Button */}
-        <div className="flex justify-center my-20 ">
+        <div className="flex justify-center my-10 sm:my-20 ">
           <button
             type="submit"
             className="flex items-center justify-center w-[30%] py-3 bg-slate-800 text-white font-semibold rounded-xl transition-colors"

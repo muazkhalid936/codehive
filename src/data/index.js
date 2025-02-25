@@ -1166,7 +1166,7 @@ export const industries = [
     },
     bannerData: {
       title: "boostYourB",
-      blueWords: ["efficient3"],
+      blueWords: ["efficient"],
       description: "designedFo",
       showDecsription: true,
       rightImage: "/IndustriesBooking/Banner.png",
