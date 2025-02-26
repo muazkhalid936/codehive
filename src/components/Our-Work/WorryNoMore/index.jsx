@@ -1,6 +1,8 @@
+"use client"
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { GoDotFill } from "react-icons/go";
+import useStore from "../../../store/useUserStore";
 import { useTranslations } from "next-intl";
 const WorryNoMore = ({
   rightImage,
@@ -10,7 +12,8 @@ const WorryNoMore = ({
   points,
   cut,
   blueWords = [],
-}) => {``
+}) => {
+  const { language } = useStore();
   const t = useTranslations("translation");
   const titleParts = t(title).split(" ");
   console.log("WorryNoMore -> blueWords", blueWords,"s",titleParts);
@@ -24,9 +27,10 @@ const WorryNoMore = ({
         }}
       >
         <div
-          className={`flex flex-col  text-black w-full md:w-[60%] pl-4 md:pl-12 pr-2  sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
-        >
-          <h2 className="gilray-font leading-tight text-[30px] xl:text-[45px]">
+          className={`flex flex-col  text-black w-full ${language==="en"?"md:w-[60%]":"md:w-[50%]"} pl-4 md:pl-12 pr-2  sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
+      dir={language === 'en' ? 'ltr' : 'rtl'}
+      >
+          <h2 className="gilray-font z-[2] leading-tight text-[30px] xl:text-[45px]">
             {titleParts.map((word, index) => (
               <span
                 key={index}
@@ -58,7 +62,7 @@ const WorryNoMore = ({
         </div>
 
         {rightImage && (
-          <div className={` text-white w-full sm:w-[70%] ${cut?"absolute right-[-2vw]":" "}  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]`
+          <div className={` z-[1] text-white w-full sm:w-[65%] ${cut?"absolute right-[-2vw]":" "}  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]`
           }>
             <img
               src={rightImage}

@@ -4140,8 +4140,8 @@ export const ourWorks = [
     image: "/our-work/legal-wise-web/Banner.png",
   },
   {
-    bgColor: "#4e83af",
-    bg: false,
+    bgColor: "#B59F83",
+    bg: true,
 
     title: "laamWeb",
     slug: "laam-web",
@@ -4320,7 +4320,8 @@ export const ourWorks = [
           { "icon": "/our-work/clixpos-web/14.png", "title": "orderInvoi", "description": "trackOrder" },
           { "icon": "/our-work/clixpos-web/15.png", "title": "multiLoca1", "description": "manageMult" },
           { "icon": "/our-work/clixpos-web/16.png", "title": "salesForec", "description": "analysePat" },
-          { "icon": "/our-work/clixpos-web/17.png", "title": "integrate1", "description": "acceptVari" }
+          { "icon": "/our-work/clixpos-web/17.png", "title": "integrate1", "description": "acceptVari" },
+          { "icon": "/our-work/clixpos-web/18.png", "title": "commissio1", "description": "monitorSal" }
         ],
         "image": "/our-work/clixpos-web/main3.png"
       }

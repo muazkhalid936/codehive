@@ -28,7 +28,7 @@ const t=useTranslations("translation")
   const highlightColor = "text-[#219DD9]";
 const {language}=useStore();
   const renderTitle = () => (
-    <h2 className="main-heading hero_section_heading ">
+    <h2 className="main-heading  hero_section_heading leading-[0.5] ">
       {titleWords.length > 0 ? (
         <>
           <span className="text-white">

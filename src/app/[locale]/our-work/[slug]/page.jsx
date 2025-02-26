@@ -41,14 +41,15 @@ const page = async ({ params }) => {
         </div>
       ) : (
         <div
-          style={{ backgroundColor: work.bgColor }}
-          className={`flex !container mx-auto overflow-hidden rounded-2xl h-[300px] xl:h-[500px]  mt-10 mb-10`}
+          className={`flex  container    overflow-hidden rounded-2xl   mt-10 mb-10`}
         >
-          <img
-            src={work.image}
-            alt={`${slug} featured image`}
-            className="w-full  object-contain rounded-xl"
-          />
+          <div style={{ backgroundColor: work.bgColor }} className="rounded-2xl container ">
+            <img
+              src={work.image}
+              alt={`${slug} featured image`}
+              className="  object-contain h-[300px] xl:h-[500px] w-full"
+            />
+          </div>
         </div>
       )}
       {/* <CallToAction heading="Ready to Elevate your App Experience?" /> */}
