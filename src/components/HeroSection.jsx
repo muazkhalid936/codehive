@@ -66,12 +66,12 @@ const HeroSection = ({
         <img
           src="/feature/gray.png"
           alt="Decorative Top Arrow"
-          className="absolute top-20 -right-0  h-[200px]  md:h-[300px] object-contain"
+          className="absolute hidden sm:flex top-20 -right-0  h-[200px]  md:h-[300px] object-contain"
           aria-label="Top Arrow"
         />
       )}
 
-      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-center sm:justify-end max-h-[580px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
+      <div className="container overflow-hidden mx-auto sm:flex-row flex-col justify-center sm:justify-end max-h-[580px]  flex pt-10 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
         {/* First Section */}
         <div className="left-section sm:w-1/2 flex  justify-center items-center sm:items-start gap-5  flex-col">
           {" "}

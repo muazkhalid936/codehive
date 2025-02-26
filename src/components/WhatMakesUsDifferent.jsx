@@ -13,7 +13,7 @@ const WhatMakesUsDifferent = ({ data }) => {
 const {language}=useStore()
   useEffect(() => {
     stepsRef.current.forEach((step, index) => {
-      const startValue = window.innerWidth < 640 ? "top 10%" : "top 60%";
+      const startValue = window.innerWidth < 640 ? "top 250px" : "top 60%";
 
       gsap.fromTo(
         step.querySelector(".animate-title"),
@@ -75,7 +75,7 @@ const {language}=useStore()
   console.log(data);
   return (
     <div
-      className="bg-white relative py-[25px] sm:py-[55px]"
+      className="bg-white relative py-[30px] sm:py-[55px]"
       ref={containerRef}
     >
       <div className="w-auto text-center mx-auto">

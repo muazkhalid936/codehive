@@ -21,16 +21,16 @@ const WorryNoMore = ({
     <div className={`container pb-[50px] rounded-lg    `}>
       <div
         className={`bg-cover  bg-center
-         h-[600px]  md:h-[370px] w-full relative rounded-[20px] overflow-hidden items-center md:items-center justify-between flex flex-col md:flex-row gap:4 sm:px-0 `}
+         h-[450px]  md:h-[260px] xl:h-[370px] w-full relative rounded-[20px] overflow-hidden items-center md:items-center justify-between flex flex-col md:flex-row gap:4 sm:px-0 `}
         style={{
           backgroundColor: backgroundColor || undefined,
         }}
       >
         <div
-          className={`flex flex-col  text-black w-full ${language==="en"?"md:w-[60%]":"md:w-[50%]"} pl-4 md:pl-12 pr-2  sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
+          className={`flex flex-col  text-black w-full ${language==="en"?"md:w-[60%]":"md:w-[50%]"} ${cut?"":"md:!w-[70%]"} pl-4 xl:pl-12 pr-2  sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
       dir={language === 'en' ? 'ltr' : 'rtl'}
       >
-          <h2 className="gilray-font z-[2] leading-tight text-[30px] xl:text-[45px]">
+          <h2 className="gilray-font z-[2] leading-tight sub_heading">
             {titleParts.map((word, index) => (
               <span
                 key={index}
@@ -47,7 +47,7 @@ const WorryNoMore = ({
               </span>
             ))}
           </h2>
-          <p className="mb-5 text-[#535D66] main_hero_slogan">{t(description)}</p>
+          <p className="xl:mb-5 text-[#535D66] main_hero_slogan">{t(description)}</p>
           <ul className="list-disc xl:gap-2 flex flex-col">
             {points.map((point, index) => (
               <li
@@ -62,11 +62,11 @@ const WorryNoMore = ({
         </div>
 
         {rightImage && (
-          <div className={` z-[1] text-white w-full sm:w-[65%] ${cut?"absolute right-[-2vw]":" "}  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]`
+          <div className={` z-[1] text-white w-full sm:w-[65%] ${cut?"absolute md:right-[-2vw]":" "}  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]`
           }>
             <img
               src={rightImage}
-              className={`object-cover  h-auto ${cut?"md:w-[75%]":"md:h-[360px]"}`}
+              className={`object-cover  h-[200px] ${cut?"md:w-[75%] xl:h-[370px]":"xl:h-[360px]"}`}
             />
           </div>
         )}

@@ -8,10 +8,11 @@ const Features = ({ data }) => {
 const {language}=useStore()
   const [itemHovered, setItemHovered] = useState("");
   const [clickedItem, setClickedItem] = useState("");
-
+const [borderRadius,setBorderRadius]=useState("29px")
   const handleCardClick = (title) => {
     if (window.innerWidth < 768) {
       setClickedItem(clickedItem === title ? "" : title);
+      setBorderRadius("19px")
     }
   };
 
@@ -24,6 +25,8 @@ const {language}=useStore()
   const handleMouseLeave = () => {
     if (window.innerWidth >= 768) {
       setItemHovered("");
+      setBorderRadius("29px")
+
     }
   };
 
@@ -59,7 +62,7 @@ const {language}=useStore()
             // Define classes based on even/odd
             const cardClasses = `
               sm:mx-5 mx-2 my-2 sm:my-5 p-6 h-[150px] sm:h-[280px] flex cursor-pointer flex-col justify-center items-center   
-              rounded-[20px] gap-4 relative overflow-hidden 
+              sm:rounded-[29px] rounded-[19px] gap-4 relative overflow-hidden 
               transition-transform duration-300 transform sm:hover:scale-[1.1]
              
             `;
@@ -75,7 +78,7 @@ const {language}=useStore()
                   className={cardClasses}
                   style={{
                     border: "1px solid transparent",
-                    borderRadius: " 29px",
+                    // borderRadius: {borderRadius},
                     //here
                     background: `linear-gradient(135deg, #052036, #02101f),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
                     backgroundClip: "padding-box, border-box",
@@ -117,7 +120,7 @@ const {language}=useStore()
                                `}
                     style={{
                       border: "1px solid transparent",
-                      borderRadius: " 26px",
+                      // borderRadius: {borderRadius},
                       background: `linear-gradient(to ${
                         isFirst
                           ? "top left"

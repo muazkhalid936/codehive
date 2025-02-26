@@ -25,7 +25,7 @@ const AdvantagesSection = ({ data }) => {
             ))}
         </p>
         <div className="flex justify-center mb-10 items-center">
-          <p className="main_hero_slogan text-[#858585]">
+          <p className="main_hero_slogan text-center sm:text-start text-[#858585]">
             {t(data.description)}
           </p>
         </div>

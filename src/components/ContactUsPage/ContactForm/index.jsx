@@ -5,11 +5,11 @@ import PhoneInput from "../../PhoneInput";
 import "react-phone-input-2/lib/style.css"; // Import styles for the PhoneInput
 import { FiArrowUpRight } from "react-icons/fi";
 import { useTranslations } from "next-intl";
-import useStore from '../../../store/useUserStore';
+import useStore from "../../../store/useUserStore";
 const ContactForm = () => {
-  const t= useTranslations("translation");
+  const t = useTranslations("translation");
   const [isOpen, setIsOpen] = useState(false);
-const {language}=useStore();
+  const { language } = useStore();
   const [phone, setPhone] = useState("");
   const [inputData, setInputData] = useState({
     name: "",
@@ -44,11 +44,11 @@ const {language}=useStore();
 
   return (
     <div
-    dir={language === 'en' ? 'ltr' : 'rtl'}
-
-    className="sm:w-[75%] w-[90%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl">
+      dir={language === "en" ? "ltr" : "rtl"}
+      className="sm:w-[75%] w-[90%] mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#010B1770]   p-[2px] rounded-2xl"
+    >
       <form
-        className=" mx-auto pt-20   bg-[#041c30] text-white rounded-2xl overflow-hidden shadow-lg"
+        className=" mx-auto pt-10 sm:pt-20   bg-[#041c30] text-white rounded-2xl overflow-hidden shadow-lg"
         // style={{
         //   transition: "all 0.3s ease-in-out",
         //   border: "2px solid",
@@ -64,7 +64,8 @@ const {language}=useStore();
           </h2> */}
           <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
             <span className="main-heading bg-gradient-to-r from-white to-blueColor bg-clip-text text-transparent">
-{t("contactUs")}            </span>
+              {t("contactUs")}{" "}
+            </span>
           </h3>
         </div>
         <div className="form-grid grid grid-cols-1 lg:grid-cols-2 gap-6  mt-8">
@@ -92,7 +93,7 @@ const {language}=useStore();
                 "uiUxDesig1",
                 "appDevelop",
                 "websiteDe1",
-"softwareD1",
+                "softwareD1",
                 "consultati",
                 "other",
               ],

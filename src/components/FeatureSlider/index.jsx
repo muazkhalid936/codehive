@@ -16,7 +16,7 @@ const FeatureSlider = ({ data, from }) => {
   return (
     <div
       className={`container ${
-        from === "contact" ? "mt-[55px] py-[55px]" : "mt-0 pt-[55px]"
+        from === "contact" ? "sm:mt-[55px] mt-[40px] py-[40px] sm:py-[55px]" : "mt-0 pt-[40px] sm:pt-[55px]"
       }  z-50 `}
     >
       <div className="flex justify-between">
@@ -41,7 +41,7 @@ const FeatureSlider = ({ data, from }) => {
               </span>
             ))}
         </h2>
-        <div className=" gap-2 hidden sm:flex sm:mt-0">
+        <div className=" gap-2 hidden sm:flex  sm:mt-0">
           <button
             className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
               from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
@@ -62,7 +62,7 @@ const FeatureSlider = ({ data, from }) => {
       </div>
 
       {/* Swiper Slider */}
-      <div className="mt-[50px]">
+      <div className=" mt-[30px] sm:mt-[50px]">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           modules={[Mousewheel]} // Add Mousewheel module here
@@ -73,9 +73,9 @@ const FeatureSlider = ({ data, from }) => {
           }}
           keyboard={true}
           spaceBetween={20}
-          slidesPerView={1.2}
+          slidesPerView={2.2}
           breakpoints={{
-            640: { slidesPerView: 1.5 },
+            640: { slidesPerView: 2.2 },
             768: { slidesPerView: 2.2 },
             1024: { slidesPerView: 3.2 },
           }}
@@ -95,18 +95,18 @@ const FeatureSlider = ({ data, from }) => {
                   backgroundOrigin: "padding-box, border-box",
                 }}
               >
-                <div className="rounded-2xl h-[450px] w-full bg-black overflow-hidden relative">
+                <div className="rounded-2xl h-[230px] sm:h-[450px] w-full bg-black overflow-hidden relative">
                   <img
                     src={item.picture}
                     alt={item.name}
                     className="w-full h-full object-cover opacity-60"
                   />
-                  <div className="p-4 h-[300px] absolute bottom-0 w-full bg-gradient-to-t from-[#021629]   to-transparent">
-                    <div className="flex flex-col pt-[100px] justify-center mt-5 h-full text-center text-white">
-                      <h3 className="text-[22px] font-bold px-2">
+                  <div className="sm:p-4 h-[200px] sm:h-[300px] absolute bottom-0 w-full bg-gradient-to-t from-[#021629]   to-transparent">
+                    <div className="flex flex-col sm:pt-[100px] justify-center mt-5 h-full text-center text-white">
+                      <h3 className="text-[16px] sm:text-[22px] font-bold px-2">
                         {t(item.name)}
                       </h3>
-                      <p className="text-[14px] px-4 sm:px-0">
+                      <p className="text-[10px] sm:text-[14px] px-4 sm:px-0">
                         {t(item.description)}
                       </p>
                     </div>

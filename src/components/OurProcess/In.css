@@ -139,7 +139,7 @@
   .ss {
     left: 6% !important;
     transform: translateX(-50%, -50%);
-    top: 150px !important;
+    top: 230px !important;
   }
   .our-process-main-pic {
     @apply !w-[135%] !h-[200px] left-1/2;

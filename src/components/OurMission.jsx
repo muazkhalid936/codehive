@@ -285,42 +285,55 @@
 //   },
 // };
 
-import React from 'react'
-import { useTranslations } from 'next-intl';
-import useStore from '../store/useUserStore';
+import React from "react";
+import { useTranslations } from "next-intl";
+import useStore from "../store/useUserStore";
 
-const OurMission = ({data}) => {
-  const t = useTranslations('translation');
+const OurMission = ({ data }) => {
+  const t = useTranslations("translation");
   const { language } = useStore();
   return (
-    <div className='container mb-[55px] flex flex-col gap-10 sm:gap-0 mx-auto'
-    dir={language === 'ar' ? 'rtl' : 'ltr'}
+    <div
+      className="container mb-[55px] flex flex-col gap-10 sm:gap-0 mx-auto"
+      dir={language === "ar" ? "rtl" : "ltr"}
     >
-      <div className='flex flex-col-reverse gap-5 sm:gap-0 sm:flex-row '>
-        <div className='sm:w-1/2'>
-          <img src='/G2.png'/>
+      <div className="flex flex-col-reverse gap-[30px] sm:gap-0 sm:flex-row ">
+        <div className="sm:w-1/2">
+          <img src="/G2.png" />
         </div>
 
-        <div className='sm:w-1/2 flex font-lato justify-center  sm:px-20 flex-col'>
-        <p className='font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start'>01.</p>
-        <p className='font-bold text-[23px] sm:text-[30px] text-center sm:text-start'>{t(data.mission)}</p>
-          <p className=' text-[#878787]  text-[15px] text-center sm:text-start'>{t(data.missionDesc)}</p>
+        <div className="sm:w-1/2 flex font-lato justify-center  sm:px-20 flex-col">
+          <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
+            01.
+          </p>
+          <p className="font-bold text-[23px] sm:text-[30px] mb-[20px] sm:mb-0 text-center sm:text-start">
+            {t(data.mission)}
+          </p>
+          <p className=" text-[#878787] text-[12px]  sm:text-[15px] text-center sm:text-start">
+            {t(data.missionDesc)}
+          </p>
         </div>
       </div>
 
-      <div className='flex flex-col-reverse gap-5 sm:gap-0 sm:flex-row-reverse '>
-        <div className='sm:w-1/2'>
-          <img src='/G1.png'/>
+      <div className="flex flex-col-reverse gap-[30px] sm:gap-0 sm:flex-row-reverse ">
+        <div className="sm:w-1/2">
+          <img src="/G1.png" />
         </div>
 
-        <div className='sm:w-1/2 flex font-lato justify-center  sm:px-20 flex-col'>
-        <p className='font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start'>02.</p>
-        <p className='font-bold text-[23px] sm:text-[30px] text-center sm:text-start '>{t(data.vision)}</p>
-          <p className='text-[#878787] text-[15px] text-center sm:text-start'>{t(data.visionDesc)}</p>
+        <div className="sm:w-1/2 flex font-lato justify-center  sm:px-20 flex-col">
+          <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
+            02.
+          </p>
+          <p className="font-bold text-[23px] sm:text-[30px] mb-[20px] sm:mb-0 text-center sm:text-start ">
+            {t(data.vision)}
+          </p>
+          <p className="text-[#878787] text-[12px] sm:text-[15px] text-center sm:text-start">
+            {t(data.visionDesc)}
+          </p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default OurMission
+export default OurMission;

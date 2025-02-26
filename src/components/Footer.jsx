@@ -11,7 +11,7 @@ const Footer = () => {
   const t=useTranslations("translation")
   const { language } = useStore();
   return (
-    <div className="bg-gradient-to-b from-[#0a1929]   to-[#020d1a] flex justify-center items-center py-10  md:py-2 md:h-[250px]">
+    <div className="bg-gradient-to-b from-[#0a1929]   to-[#020d1a] flex justify-center items-center py-[20px]  md:py-2 md:h-[250px]">
       <div className="container flex flex-col md:flex-row gap-2 md:gap-0 mx-auto">
         <div className="flex  flex-col  md:w-[70%]  gap-2 sm:gap-4 md:gap-10 mt-5  items-start">
           <div className="flex gap-4">

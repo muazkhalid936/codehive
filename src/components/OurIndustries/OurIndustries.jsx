@@ -226,12 +226,7 @@ const ScrollAnimation = () => {
     };
   }, []);
 
-  const canvasStyle = {
-    height: '50vh',
-    '@media (max-width: 480px)': {
-      height: '300px',
-    },
-  };
+
 
   return (
     <div>
@@ -254,27 +249,27 @@ const ScrollAnimation = () => {
                   {language === 'en' ? item.title : item.atitle}
                 </p>
               </div>
-              <p className="mt-4 main_hero_slogan text-white">
+              <p className="mt-2 sm:mt-4 main_hero_slogan text-white">
                 {language === 'en' ? item?.des1 : item?.ades1}
               </p>
-              <p className="mt-4 text-white main_hero_slogan">
+              <p className="mt-2 sm:mt-4 text-white main_hero_slogan">
                 {language === 'en' ? item?.des2 : item?.ades2}
               </p>
-              <p className="mt-4 main_hero_slogan text-white">
+              <p className="mt-2 sm:mt-4 main_hero_slogan text-white">
                 {language === 'en' ? item?.des3 : item?.ades3}
               </p>
-              <p className="mt-4 main_hero_slogan text-white">
+              <p className="mt-2 sm:mt-4 main_hero_slogan text-white">
                 {language === 'en' ? item?.des4 : item?.ades4}
               </p>
-              <p className="mt-4 text-white main_hero_slogan">
+              <p className="mt-2 sm:mt-4 text-white main_hero_slogan">
                 {language === 'en' ? item?.des5 : item?.ades5}
               </p>
-              <div className="flex justify-center sm:justify-start items-center gap-3">
-                <Link href={item.link} className="mt-2 xl:text-xl text-white">
+              <div className="flex justify-center sm:justify-start items-center gap-2 sm:gap-3">
+                <Link href={item.link} className="mt-2 text-sm xl:text-xl text-white">
                   {t("readMore9")}
                 </Link>
                 <div className="bg-white text-black mt-2 sm:mt-3 rounded-full">
-                  <FiArrowUpRight className="text-sm sm:text-lg" />
+                  <FiArrowUpRight className="text-[12px] sm:text-lg" />
                 </div>
               </div>
             </div>

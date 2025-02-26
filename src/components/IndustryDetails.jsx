@@ -15,7 +15,7 @@ const IndustryDetails = ({ panelData }) => {
   // const xVar2 = language === "ar" ? 100 : -100;
 
   return (
-    <div className="bg-[#000B17] overflow-hidden text-white py-[55px]">
+    <div className="bg-[#000B17] overflow-hidden text-white py-[40px] sm:py-[55px]">
       <div
         className="container relative mx-auto"
         dir={language === "ar" ? "rtl" : "ltr"}

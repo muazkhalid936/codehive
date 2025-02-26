@@ -36,7 +36,7 @@ const index = () => {
   const title = t("monthlyPac")
 
   return (
-    <div className=" py-[55px]  bg-[#000B17] ">
+    <div className=" py-[40px] sm:py-[55px]  bg-[#000B17] ">
       <div className="container mx-auto   text-white">
         <div className="">
         <h2 className=" pb-[55px] text-center text-[45px] gilray-font leading-[55px]">
