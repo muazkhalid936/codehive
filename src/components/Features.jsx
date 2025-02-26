@@ -58,7 +58,7 @@ const {language}=useStore()
 
             // Define classes based on even/odd
             const cardClasses = `
-              sm:mx-5 mx-2 my-2 sm:my-5  h-[150px] sm:h-[280px] flex cursor-pointer flex-col justify-center items-center   
+              sm:mx-5 mx-2 my-2 sm:my-5 p-6 h-[150px] sm:h-[280px] flex cursor-pointer flex-col justify-center items-center   
               rounded-[20px] gap-4 relative overflow-hidden 
               transition-transform duration-300 transform sm:hover:scale-[1.1]
              
