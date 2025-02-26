@@ -122,7 +122,7 @@ const title=t("meetTheCre").split(" ");
         {/* Main Layout: Big Card & Swiper */}
         <div className="flex mt-3 sm:mt-10 h-[270px] sm:h-[500px] flex-row gap-8 items-start">
           {/* Left Side: Big Card */}
-          <div className=" w-[50%] lg:w-[30%]">
+          <div className=" w-[50%] xl:w-[30%]">
             <div
               className="relative overflow-hidden justify-center flex h-[250px] sm:h-[400px] md:h-[500px] rounded-md"
               style={{
@@ -178,7 +178,7 @@ const title=t("meetTheCre").split(" ");
                       }}
                       onMouseEnter={() => setHoveredSlide(item.name)}
                       onMouseLeave={() => setHoveredSlide("")}
-                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl  h-[367px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
+                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl h-[200px]  xl:h-[367px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
                       style={{
                         border: "1px solid transparent",
                         borderRadius: "26px",

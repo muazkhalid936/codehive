@@ -114,7 +114,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-7 2xl:py-10 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl xl:text-4xl text-center font-poppin">
-                    <Link href="/our-work/solwave-website">{t(solwave1)}</Link>
+                    <Link href="/our-work/solwave-website">{t("solwave1")}</Link>
                   </div>
                 </div>
               </div>

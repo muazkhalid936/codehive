@@ -8,7 +8,7 @@ const IndustryDetails = ({ panelData }) => {
   if (!panelData || panelData.length === 0) {
     return null;
   }
-  const {language} = useStore();
+  const { language } = useStore();
 
   const [activePanel, setActivePanel] = useState(panelData[0]);
   const xVar = language === "ar" ? -100 : 100;
@@ -16,8 +16,9 @@ const IndustryDetails = ({ panelData }) => {
 
   return (
     <div className="bg-[#000B17] overflow-hidden text-white py-[55px]">
-      <div className="container relative mx-auto"
-      dir={language === "ar" ? "rtl" : "ltr"}
+      <div
+        className="container relative mx-auto"
+        dir={language === "ar" ? "rtl" : "ltr"}
       >
         <div className="bg-white rounded-full no-scrollbar overflow-x-auto sm:overflow-x-hidden flex gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide">
           {panelData.map((panel) => (
@@ -41,24 +42,23 @@ const IndustryDetails = ({ panelData }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-         <h1 className="gilray-font mt-10 sub_heading">
-  {activePanel.blueTitle ? (
-    <>
-      {t(activePanel.heading).split(" ").slice(0, -2).join(" ")}
-      <span className="text-blueColor ml-2">
-        {t(activePanel.heading).split(" ").slice(-2)}
-      </span>
-    </>
-  ) : (
-    <>
-      {t(activePanel.heading).split(" ").slice(0, -1).join(" ")}
-      <span className="text-blueColor ml-2">
-        {t(activePanel.heading).split(" ").slice(-1).join(" ")}
-      </span>
-    </>
-  )}
-</h1>
-
+          <h1 className="gilray-font mt-10 sub_heading">
+            {activePanel.blueTitle ? (
+              <>
+                {t(activePanel.heading).split(" ").slice(0, -2).join(" ")}
+                <span className="text-blueColor ml-2">
+                  {t(activePanel.heading).split(" ").slice(-2)}
+                </span>
+              </>
+            ) : (
+              <>
+                {t(activePanel.heading).split(" ").slice(0, -1).join(" ")}
+                <span className="text-blueColor ml-2">
+                  {t(activePanel.heading).split(" ").slice(-1).join(" ")}
+                </span>
+              </>
+            )}
+          </h1>
         </motion.div>
         <div className="flex  mt-5">
           <motion.div

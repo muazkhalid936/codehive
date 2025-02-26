@@ -37,13 +37,13 @@ const FeatureSlider = ({ data, from }) => {
         </h2>
         <div className=" gap-2 hidden sm:flex sm:mt-0">
           <button
-            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#2A313b] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
             onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
           >
             <FaAngleLeft className="text-white text-xl sm:text-2xl font-bold" />
           </button>
           <button
-            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#2A313b] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center ease-in-out duration-300 justify-center hover:bg-blueColor"
             onClick={() => swiperRef.current?.slideNext()} // Slide to next
           >
             <FaAngleRight className="text-white text-xl sm:text-2xl font-extrabold" />

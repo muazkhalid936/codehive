@@ -55,11 +55,9 @@ const index = () => {
                 <p className="gilray-font text-[30px] mx-auto text-center">
                   {t("basic")}
                 </p>
-                <p className="text-center main_hero_slogan leading-none my-8">
-                  When she reached the first hills of the italic mountains{" "}
-                </p>
+               
 
-                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                 <span className="truncate">{t("getStarted")}</span>
                 <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
@@ -109,18 +107,16 @@ const index = () => {
 
             <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[700px] md:h-[750px] lg:h-[760px] xl:h-[670px] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
-                <p className="sm:w-[80%] xl:w-1/2 mx-auto text-center text-[#1FCB78] border border-[#1FCB78] px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
+                <p className="sm:w-[80%] xl:w-[60%] mx-auto text-center text-[#1FCB78] border border-[#1FCB78] xl:px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
                   {t("mostPopula")}
                 </p>
 
                 <p className="gilray-font text-[30px] mx-auto text-center">
                 {t("advanced")}
                 </p>
-                <p className="text-center main_hero_slogan leading-none my-8">
-                  When she reached the first hills of the italic mountains{" "}
-                </p>
+              
 
-                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                 <span className="truncate">{t("getStarted")}</span>
                 <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
@@ -172,11 +168,9 @@ const index = () => {
                 <p className="gilray-font text-[30px] mx-auto text-center">
                   {t("enterprise")}
                 </p>
-                <p className="text-center main_hero_slogan leading-none my-8">
-                  When she reached the first hills of the italic mountains{" "}
-                </p>
+              
 
-                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] md:w-[200px] mt-10 h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"

@@ -17,7 +17,7 @@ const WorryNoMore = ({
   return (
     <div className={`container pb-[50px] rounded-lg    `}>
       <div
-        className={`bg-cover bg-center
+        className={`bg-cover  bg-center
          h-[600px]  md:h-[370px] w-full relative rounded-[20px] overflow-hidden items-center md:items-center justify-between flex flex-col md:flex-row gap:4 sm:px-0 `}
         style={{
           backgroundColor: backgroundColor || undefined,
@@ -58,10 +58,11 @@ const WorryNoMore = ({
         </div>
 
         {rightImage && (
-          <div className=" text-white w-full sm:w-1/2  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]">
+          <div className={` text-white w-full sm:w-[70%] ${cut?"absolute right-[-2vw]":" "}  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]`
+          }>
             <img
               src={rightImage}
-              className={`object-cover  h-auto ${cut?"md:h-[375px]":"md:h-[360px]"}`}
+              className={`object-cover  h-auto ${cut?"md:w-[75%]":"md:h-[360px]"}`}
             />
           </div>
         )}
