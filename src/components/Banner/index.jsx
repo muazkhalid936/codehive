@@ -97,7 +97,7 @@ const Banner = ({
           <div className=" text-white w-[300px] md:w-1/2 right-0 absolute sm:relative bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-[20px]">
             <img
               src={rightImage}
-              className="object-contain z-[1]  h-auto sm:h-[340px] md:h-[400px]"
+              className="object-cover z-[1]  h-auto sm:h-[340px] md:h-[400px]"
             />
           </div>
         )}

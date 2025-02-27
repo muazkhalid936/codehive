@@ -47,7 +47,7 @@ const page = async ({ params }) => {
             <img
               src={work.image}
               alt={`${slug} featured image`}
-              className="  object-contain h-[300px] xl:h-[500px] w-full"
+              className="  object-contain h-[200px] md:h-[400px] xl:h-[500px] w-full"
             />
           </div>
         </div>

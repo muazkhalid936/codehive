@@ -1,4 +1,3 @@
-import { tr } from "intl-tel-input/i18n";
 
 export const ourMissionData = {
   vision: "ourVision",
@@ -2737,6 +2736,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "effortles6",
+      wordsCut:3,
       description: "discoverAS",
       points: ["personaliz", "multipleOr", "realTimeOr", "seamlessRe"],
       blueWords: ["Mr", "Take"],
@@ -2881,6 +2881,7 @@ export const ourWorks = [
       "title": "shopSmarte",
       "blueWords": ["Trendora"],
       "description": "discoverA1",
+      wordsCut: "3",
       "points": [
         "easyBrowsi",
         "wideSelect",
@@ -3003,6 +3004,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "enhancePr2",
+      wordsCut:3,
       description: "yourIntell",
       points: ["contextual", "multiForma", "realTimeCo", "integrated"],
       blueWords: ["Wordsmith", "—", "Al"],
@@ -3128,6 +3130,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "createPerf",
+      wordsCut:3,
       blueWords: ["Caption", "Gen"],
       description: "letCaption",
       points: ["instantCap", "contextua1", "customiza4", "effortles8"],
@@ -3285,6 +3288,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "bookYourDo",
+      wordsCut:3,
       blueWords: ["Doctor", "Appointment"],
       description: "simplifyHe",
       points: ["quickAppoi", "doctorSear", "realTimeAp", "secureAndS"],
@@ -3457,6 +3461,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "bookYourSa",
+      wordsCut:3,
       blueWords: ["Salon", "Appointment"],
       description: "experienc1",
       points: ["easyAppoi2", "searchSalo", "realTimeBo", "seamlessI1"],
@@ -3576,6 +3581,7 @@ export const ourWorks = [
     noMoreWorriesSection: {
       title: "masterAra1",
       blueWords: ["Faoolun"],
+      wordsCut:3,
       cut: true,
       description: "unlockTheB",
       points: ["interacti2", "inDepthAna", "personali2", "accessToAC"],
@@ -3688,6 +3694,7 @@ export const ourWorks = [
       title: "unlockGrow",
       blueWords: ["Solwave"],
       cut: true,
+      wordsCut:2,
       description: "empowerYo1",
       points: ["tailoredSe", "expertLedW", "personali4", "flexibleL1"],
       backgroundColor: "#BC735D33",
@@ -3796,6 +3803,7 @@ export const ourWorks = [
     noMoreWorriesSection: {
       title: "instantSa3",
       blueWords: ["Instant", "Save"],
+      wordsCut:3,
       description: "easilySave",
       points: ["oneClickHd", "highQualit", "simpleAndF", "noSignInRe"],
       backgroundColor: "#BC735D33",
@@ -3904,6 +3912,7 @@ export const ourWorks = [
     noMoreWorriesSection: {
       title: "stayOrgani",
       blueWords: ["Foodventory"],
+      wordsCut:3,
       description: "manageYour",
       points: ["expiryDate", "recipeSugg", "barcodeSca", "smartNotif"],
       backgroundColor: "#2BBA7F4F",
@@ -4011,6 +4020,7 @@ export const ourWorks = [
     },
     noMoreWorriesSection: {
       title: "seamlessCa",
+      wordsCut:3,
       blueWords: ["Al", "Abour"],
       description: "effortle10",
       points: ["eventBased", "realTimeTr", "secureAndR", "easySchedu"],
@@ -4124,6 +4134,7 @@ export const ourWorks = [
       title: "yourTrust1",
       blueWords: ["Legal", "Consultation", "Web"],
       cut: true,
+      wordsCut:4,
       description: "easilyFin1",
       points: ["personali8", "accessToVe", "documentTe", "secureComm"],
       backgroundColor: "#4E83AF33",
@@ -4246,6 +4257,7 @@ export const ourWorks = [
       title: "timelessEl",
       blueWords: ["Designed", "for", "You"],
       cut: true,
+      wordsCut:2,
       description: "discoverEx",
       points: ["handcrafte", "exclusiveC", "secureShop", "worldwideS"],
       backgroundColor: "#B59F8354",
@@ -4336,6 +4348,7 @@ export const ourWorks = [
       "title": "smartSeaml",
       "blueWords": ["Point", "of", "Sale"],
       "description": "optimizeSa",
+      wordsCut:3,
       "points": [
         "fastSecure",
         "inventory1",

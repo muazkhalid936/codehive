@@ -18,22 +18,22 @@ const page = () => {
     <div>
       <NavbarPages />
 
-      <div className="sm:h-[60vh] h-[400px]  flex justify-center relative items-center bg-[#000B17] mt-20">
+      <div className="sm:h-[60vh] h-[400px]  overflow-hidden flex justify-center relative items-center bg-[#000B17] mt-20">
         <div className="absolute -left-10 -bottom-8">
           <img
             src="/12.png"
-            className=" w-[150px] lg:w-[200px] 2xl:w-[250px] rotate-[130deg] cover"
+            className=" w-[140px] z-[-1] lg:w-[200px] 2xl:w-[250px] rotate-[130deg] cover"
           />
         </div>
         <div className="absolute right-0 sm:right-5 -top-5">
           <img
             src="/outline.png"
-            className=" w-[150px] lg:w-[300px] 2xl:w-[400px] rotate-[90deg] cover"
+            className=" w-[140px] z-[-1] lg:w-[300px] 2xl:w-[400px] rotate-[90deg] cover"
           />
         </div>
 
         <div className="sm:w-[60%]">
-          <h2 className=" font-black leading-tight text-center hero_section_heading text-white">
+          <h2 className=" font-black z-1 leading-tight text-center text-[30px] lg:text-[45px] text-white">
             {words.map((word, index) => {
               const shouldHighlight =
                 highlightIndices.includes(index + 1) &&

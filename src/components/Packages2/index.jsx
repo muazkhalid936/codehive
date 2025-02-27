@@ -104,9 +104,10 @@ const index = () => {
 
             <div className="md:w-[30%] mx-auto bg-gradient-to-br  h-[700px] lg:h-[690px] xl:h-[650px] from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
-              <p className="sm:w-[80%] xl:w-1/2 mx-auto text-center text-[#1FCB78] border border-[#1FCB78] px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
+              <p className="sm:w-[80%] xl:w-[65%] mx-auto text-center text-[#1FCB78] border border-[#1FCB78] xl:px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
                   {t("mostPopula")}
                 </p>
+
 
                 <p className="gilray-font text-[30px] mx-auto text-center">
                 {t("advanced")}

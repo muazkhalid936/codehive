@@ -214,18 +214,18 @@ const Technologies = ({ rightImage }) => {
   ];
 
   return (
-    <div className="bg-[#010B17]  sm:h-[600px] relative overflow-hidden text-white sm:py-10">
+    <div className="bg-[#010B17]  sm:h-[600px] relative overflow-hidden text-white py-[40px] sm:py-10">
       <div className=" flex  container flex-col md:flex-row gap-10 justify-between">
         <div
           ref={firstDivRef}
-          className="first-div justify-center items-center md:w-[40%] "
+          className="first-div justify-center gap-5 sm:gap-10 items-center flex flex-col md:w-[40%] "
         >
-          <h1 className="gilray-font text-[#229dd9] text-center  sm:text-start mt-[20px] sub_heading">
+          <p className="gilray-font leading-none text-[#229dd9] text-center  sm:text-start  sub_heading">
             Technologies
             <span className="text-white"> We Used</span>
-          </h1>
+          </p>
 
-          <div className="grid grid-cols-3 mt-[30px]">
+          <div className="grid  w-full grid-cols-3 ">
             {technologies
               .filter((tech) => !tech.visible || tech.visible.includes(slug))
               .map((tech, index) => (

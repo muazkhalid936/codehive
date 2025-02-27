@@ -87,6 +87,10 @@
   .navbar_gap{
     @apply gap-4
   }
+  .worryNoMoreHeight{
+    height: 400px !important;
+    right: -10vw !important;
+  }
   
 }
 
@@ -103,7 +107,10 @@
   font-family: "Gilroy", sans-serif !important;
   font-weight: bold;
 }
-
+.worryNoMoreHeight{
+  height: 300px !important;
+  right: -10vw !important;
+}
 .content_title::before {
   font-weight: 400;
   display: block;
@@ -276,6 +283,18 @@
   }
   .hero_section_heading {
     font-size: 35px;
+  }
+  .worryNoMoreWidth{
+    width: 50% !important;
+  }
+}
+@media (max-width: 767px) {
+
+.worryNoMoreWidth{
+  width: 100% !important;
+}
+  .worryNoMoreHeight{
+    height: 200px !important;
   }
 }
 @media (max-width: 640px) {
