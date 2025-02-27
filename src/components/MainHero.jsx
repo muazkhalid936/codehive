@@ -11,19 +11,19 @@ const MainHero = () => {
 
   const [isVisible, setIsVisible] = useState(true);
 
-  useEffect(() => {
-    // const handleScroll = () => {
-    //   const scrollY = window.scrollY;
-    //   if (scrollY > window.innerHeight * 1.5) {
-    //     setIsVisible(false); // Hide after 150vh scroll
-    //   } else {
-    //     setIsVisible(true); // Show when user scrolls back up
-    //   }
-    // };
+  // useEffect(() => {
+  //   // const handleScroll = () => {
+  //   //   const scrollY = window.scrollY;
+  //   //   if (scrollY > window.innerHeight * 1.5) {
+  //   //     setIsVisible(false); // Hide after 150vh scroll
+  //   //   } else {
+  //   //     setIsVisible(true); // Show when user scrolls back up
+  //   //   }
+  //   // };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
 
   return (
