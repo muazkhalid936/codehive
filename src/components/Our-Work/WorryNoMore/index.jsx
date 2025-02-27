@@ -33,7 +33,7 @@ const WorryNoMore = ({
           className={`flex flex-col   text-black  ${
             language === "en" ? " xl:w-[60%]" : "md:w-[50%]"
           } ${
-            cut ? "worryNoMoreWidth" : "md:w-[65%] lg:!w-[60%]"
+            cut ? "worryNoMoreWidth xl:!w-[55%]" : "md:w-[65%] lg:!w-[60%]"
           } pl-4 md:pl-10 xl:pl-20 pr-2  sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
           dir={language === "en" ? "ltr" : "rtl"}
         >
@@ -93,7 +93,7 @@ const WorryNoMore = ({
         {rightImage && (
           <div
             className={` sm:z-10 text-white w-full lg:w-[65%] ${
-              cut ? "sm:absolute md:right-[-25vw]  lg:right-[-14vw] xl:right-[-2vw]" : " sm:absolute right-0 "
+              cut ? "sm:absolute md:right-[-25vw] lg:!w-[80%] lg:right-[-14vw] xl:right-[-5vw]" : " sm:absolute right-0 "
             }  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]`}
           >
             <img
