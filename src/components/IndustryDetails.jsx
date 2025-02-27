@@ -42,7 +42,7 @@ const IndustryDetails = ({ panelData }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="gilray-font mt-10 sub_heading">
+          <h1 className="gilray-font mt-5 sm:mt-10 sub_heading">
             {activePanel.blueTitle ? (
               <>
                 {t(activePanel.heading).split(" ").slice(0, -2).join(" ")}
@@ -60,7 +60,7 @@ const IndustryDetails = ({ panelData }) => {
             )}
           </h1>
         </motion.div>
-        <div className="flex  mt-5">
+        <div className="flex  sm:mt-5">
           <motion.div
             className="flex flex-col sm:w-[60%]"
             key={activePanel.id}
@@ -68,22 +68,22 @@ const IndustryDetails = ({ panelData }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className=" main_hero_slogan">{t(activePanel.description)}</p>
+            <p className=" main_hero_slogan mt-2 sm:mt-0">{t(activePanel.description)}</p>
 
             <div className="flex">
-              <div className="mt-10 flex flex-col justify-between gap-6">
+              <div className="mt-5 sm:mt-10 flex flex-col justify-between gap-3 sm:gap-6">
                 {activePanel.features.map((feature, index) => (
-                  <div key={index} className="flex gap-5 items-start">
+                  <div key={index} className="flex gap-2 sm:gap-5 items-start">
                     <img
                       src={feature.icon}
                       className="w-10 h-10 lg:w-14 lg:h-14"
                       alt={feature.title}
                     />
                     <div>
-                      <h3 className="text-[17px] font-semibold">
+                      <h3 className="text-[14px] sm:text-[17px] font-semibold">
                         {t(feature.title)}
                       </h3>
-                      <p className="text-[14px] text-gray-300">
+                      <p className="text-[10px] sm:text-[14px] text-gray-300">
                         {t(feature.description)}
                       </p>
                     </div>

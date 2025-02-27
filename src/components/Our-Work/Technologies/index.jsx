@@ -247,7 +247,7 @@ const Technologies = ({ rightImage }) => {
               ))}
           </div>
         </div>
-        <div className="h-[300px] z-[2] md:h-[500px] w-full md:w-[60%] flex justify-center items-center">
+        <div className="h-[300px] hidden  z-[2] md:h-[500px] w-full md:w-[60%] md:flex justify-center items-center">
           <img
             ref={imageRef}
             src={rightImage}

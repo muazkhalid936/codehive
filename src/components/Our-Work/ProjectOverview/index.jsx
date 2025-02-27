@@ -4,7 +4,7 @@ const ProjectOverview = ({ title, description }) => {
   const t=useTranslations("translation")
   return (
     <div className="bg-[#F4F4F4]">
-      <div className="container py-[50px]">
+      <div className="container py-[40px] sm:py-[50px]">
         <div className="flex flex-col justify-center items-center text-center gap-4">
           <h1 className="gilray-font sub_heading">
             {t(title).split(" ")[0]}

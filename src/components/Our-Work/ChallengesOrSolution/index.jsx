@@ -47,7 +47,7 @@ const ChallengesOrSolution = ({ title, image, description }) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col gap-4   overflow-hidden md:flex-row items-center justify-around container sm:gap-6 py-[50px]"
+      className="flex flex-col gap-4   overflow-hidden md:flex-row items-center justify-around container sm:gap-6 py-[40px] sm:py-[50px]"
     >
 
       <div className="  md:w-1/2">

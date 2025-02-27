@@ -498,7 +498,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/food-inventory-app"
                     >
-                      FoodVentory
+                      Foodventory
                     </Link>
                   </div>
                 </div>
