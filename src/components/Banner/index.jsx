@@ -54,7 +54,7 @@ const Banner = ({
         >
           <div
             className={`${
-              rightImage ? "md:w-full" : "md:w-[52%]"
+              rightImage ? "md:w-full" : "md:w-[60%]"
             } flex flex-col gap-5 `}
           >
             {" "}

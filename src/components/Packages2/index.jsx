@@ -180,8 +180,8 @@ const index = () => {
                     <HiMiniArrowUpRight size={16} />
                   </span>
                 </button>
-                <hr className="my-10 border-slate-500 " />
-                <div className="h-[40vh] ab mt-5 ">
+                <hr className="xl:my-[30px] border-slate-500 " />
+                <div className="h-[40vh]  mt-[10px] ">
                   {features3.map((features, i) => (
                    <li
                    key={i}

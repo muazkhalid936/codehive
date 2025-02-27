@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Testimonials = ({ testimonials }) => {
   const swiperRef = useRef(null);
@@ -44,7 +45,7 @@ const Testimonials = ({ testimonials }) => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={1}
           loop={true}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
             640: { slidesPerView: 1 },
             1024: { slidesPerView: 2 },
