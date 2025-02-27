@@ -5,12 +5,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./WhySection.css";
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
+import useStore from "../../store/useUserStore";
 const ScrollAnimation = dynamic(() => import("../Home/ScrollAnimation"), {
   ssr: false,
 });
 gsap.registerPlugin(ScrollTrigger);
 
 const ImageScrollEffect = () => {
+  const {setModel} = useStore();
   useEffect(() => {
     // Desktop GSAP timeline animations
     const timeline = gsap.timeline({
@@ -19,6 +21,8 @@ const ImageScrollEffect = () => {
         start: "top top",
         end: "+=4500", // Total scroll length
         scrub: true,
+        onEnter: () => setModel("iphone"),
+
         pin: true, // Pin the entire container
       },
     });

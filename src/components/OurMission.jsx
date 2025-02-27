@@ -302,7 +302,7 @@ const OurMission = ({ data }) => {
           <img src="/G2.png" />
         </div>
 
-        <div className="sm:w-1/2 flex font-lato justify-center  sm:px-20 flex-col">
+        <div className="sm:w-1/2 flex font-lato justify-center sm:pr-[30px]  sm:pl-20 flex-col">
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
             01.
           </p>
@@ -320,7 +320,7 @@ const OurMission = ({ data }) => {
           <img src="/G1.png" />
         </div>
 
-        <div className="sm:w-1/2 flex font-lato justify-center  sm:px-20 flex-col">
+        <div className="sm:w-1/2 flex font-lato justify-center  sm:pr-20 sm:pl-[30px] flex-col">
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
             02.
           </p>

@@ -6,7 +6,7 @@ import useStore from "../../store/useUserStore";
 import StackCard from "./StackCard";
 
 const StackingImages = () => {
-  const { language } = useStore();
+  const { language,setModel } = useStore();
   useEffect(() => {
     const cardCount = 6; // Total numbers of cards
     const cards = Array.from(
@@ -25,7 +25,7 @@ const StackingImages = () => {
         pin: true,
         pinSpacing: true,
         start: "top top",
-        end: "+=6000", // Adjust as needed
+        end: "+=6000",
         scrub: 2,
       },
     });
