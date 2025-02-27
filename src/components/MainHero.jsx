@@ -1,13 +1,10 @@
 "use client";
 import React, { Suspense,useState,useEffect } from "react";
 import Spline from "@splinetool/react-spline/next";
-import { FiArrowUpRight } from "react-icons/fi";
-import { useRouter } from "next/navigation";
 import useStore from "../store/useUserStore";
 import { useTranslations } from "next-intl";
 const MainHero = () => {
   const { language } = useStore();
-  const router = useRouter();
   const t = useTranslations("translation");
   const headingText = t("bespokeSol");
   const words = headingText.split(" ");
@@ -15,14 +12,14 @@ const MainHero = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY > window.innerHeight * 1.5) {
-        setIsVisible(false); // Hide after 150vh scroll
-      } else {
-        setIsVisible(true); // Show when user scrolls back up
-      }
-    };
+    // const handleScroll = () => {
+    //   const scrollY = window.scrollY;
+    //   if (scrollY > window.innerHeight * 1.5) {
+    //     setIsVisible(false); // Hide after 150vh scroll
+    //   } else {
+    //     setIsVisible(true); // Show when user scrolls back up
+    //   }
+    // };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

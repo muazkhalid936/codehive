@@ -118,27 +118,27 @@ const ScrollAnimation = () => {
 
   const [shouldLoadModel, setShouldLoadModel] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.boundingClientRect.top < window.innerHeight * 0.7) {
-            // Set state to true when the user is near the section
-            setShouldLoadModel(true);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.boundingClientRect.top < window.innerHeight * 0.7) {
+  //           // Set state to true when the user is near the section
+  //           setShouldLoadModel(true);
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.1 }
+  //   );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+  //   if (containerRef.current) {
+  //     observer.observe(containerRef.current);
+  //   }
 
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  //   return () => {
+  //     observer.disconnect();
+  //   };
+  // }, []);
 
   useEffect(() => {
     // Preload images and store them in a ref
@@ -306,7 +306,7 @@ const ScrollAnimation = () => {
             </div>
 
             <div className="sm:w-1/2 w-full iphone">
-              {shouldLoadModel && (
+              {/* {shouldLoadModel && ( */}
                 <Canvas
                   dpr={[1, 2]}
                   camera={{ position: [25, 0, 0], fov: 50 }}
@@ -317,7 +317,7 @@ const ScrollAnimation = () => {
                     <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
                   </Suspense>
                 </Canvas>
-              )}
+              {/* )} */}
             </div>
           </div>
         ))}

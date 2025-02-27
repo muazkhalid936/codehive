@@ -221,13 +221,13 @@ const ContactForm = () => {
       <img
         src="/technologies/shade.png"
         alt="image"
-        className="absolute z-[10]  h-[800px] right-[-200px] top-[550px] "
+        className="absolute sm:hidden z-[10]  h-[800px] right-[-200px] top-[550px] "
         // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
       />
       <img
         src="/technologies/shade.png"
         alt="image"
-        className="absolute z-[10]  h-[800px] right-[-200px] top-[550px] "
+        className="absolute sm:hidden z-[10]  h-[800px] right-[-200px] top-[550px] "
         // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
       />
     </div>

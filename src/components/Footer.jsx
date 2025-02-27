@@ -1,6 +1,6 @@
 "use client";
-import {Link} from "../i18n/routing";
-import React from "react";
+import { Link } from "../i18n/routing";
+import React, { useEffect } from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa";
@@ -8,8 +8,11 @@ import { ImFacebook } from "react-icons/im";
 import { useTranslations } from "next-intl";
 import useStore from "../store/useUserStore";
 const Footer = () => {
-  const t=useTranslations("translation")
-  const { language } = useStore();
+  const t = useTranslations("translation");
+  const { language, setLanguage } = useStore();
+  useEffect(() => {
+    setLanguage(localStorage.getItem("language") || "en");
+  }, []);
   return (
     <div className="bg-gradient-to-b from-[#0a1929]   to-[#020d1a] flex justify-center items-center py-[20px]  md:py-2 md:h-[250px]">
       <div className="container flex flex-col md:flex-row gap-2 md:gap-0 mx-auto">
@@ -59,7 +62,8 @@ const Footer = () => {
               {language === "en" ? "Contact Us" : "تحدث معنا"}
             </Link>
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
-{t("privacyPol")}            </Link>
+              {t("privacyPol")}{" "}
+            </Link>
           </div>
           <div className="text-gray-500 hidden sm:flex main_hero_slogan">
             <p>
