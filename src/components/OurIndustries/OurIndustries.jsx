@@ -79,7 +79,7 @@ export const ourIndustriesData = [
   },
 ];
 
-import { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { useEffect, useRef, useState, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -118,38 +118,17 @@ const ScrollAnimation = () => {
 
   const [shouldLoadModel, setShouldLoadModel] = useState(true);
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.boundingClientRect.top < window.innerHeight * 0.7) {
-  //           // Set state to true when the user is near the section
-  //           setShouldLoadModel(true);
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.1 }
-  //   );
-
-  //   if (containerRef.current) {
-  //     observer.observe(containerRef.current);
-  //   }
-
-  //   return () => {
-  //     observer.disconnect();
-  //   };
-  // }, []);
 
   useEffect(() => {
-    // Preload images and store them in a ref
+    // Preload images
     imageObjectsRef.current = texturePaths.map((path) => {
       const img = new Image();
       img.src = path;
       return img;
     });
-
+  
     const sections = containerRef.current.querySelectorAll(".section");
-
+  
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
@@ -158,66 +137,39 @@ const ScrollAnimation = () => {
         scrub: 1,
         pin: true,
         toggleActions: "play none none none",
-        // onEnter: () => console.log(model),÷
         onUpdate: (self) => {
-          const currentSectionIndex = Math.floor(
-            self.progress * sections.length
-          );
+          const currentSectionIndex = Math.floor(self.progress * sections.length);
           setActiveSection(currentSectionIndex);
         },
       },
     });
-
+  
     sections.forEach((section, index) => {
       const heading = section.querySelector(".heading");
-
+  
       if (index === 0) {
-        tl.fromTo(
-          heading,
-          { x: 150, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5 },
-          0
-        );
-        tl.fromTo(
-          ".iphone",
-          { x: -150, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.2 },
-          0
-        );
+        tl.fromTo(heading, { x: 150, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5 }, 0);
+        tl.fromTo(".iphone", { x: -150, opacity: 0 }, { x: 0, opacity: 1, duration: 0.2 }, 0);
       }
       if (index > 0) {
-        tl.to(
-          sections[index - 1].querySelector(".heading"),
-          { x: -50, opacity: 0, duration: 0.5 },
-          index
-        );
-
-        tl.fromTo(
-          heading,
-          { x: 50, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5 },
-          index + 0.5
-        );
-
+        tl.to(sections[index - 1].querySelector(".heading"), { x: -50, opacity: 0, duration: 0.5 }, index);
+        tl.fromTo(heading, { x: 50, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5 }, index + 0.5);
+  
         const startRotation = 5;
         const endRotation = 11.3;
         const midRotation = (startRotation + endRotation) / 2;
-
+  
         tl.to(
           {},
           {
             onUpdate: () => {
               const sectionProgress = tl.progress() * sections.length - index;
-              const rotationValue = gsap.utils.interpolate(
-                startRotation,
-                endRotation,
-                sectionProgress
-              );
-
+              const rotationValue = gsap.utils.interpolate(startRotation, endRotation, sectionProgress);
+  
               if (meshRef.current) {
                 meshRef.current.rotation.y = rotationValue;
               }
-
+  
               if (Math.abs(rotationValue - midRotation) < 0.4) {
                 setTextureUrl(texturePaths[index]);
               } else if (Math.abs(rotationValue) < 7.8) {
@@ -230,20 +182,23 @@ const ScrollAnimation = () => {
         );
       }
     });
-
+  
+    // Intersection Observer to preload model before the user reaches the section
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          isInViewRef.current = entry.isIntersecting;
+          if (entry.isIntersecting) {
+            setShouldLoadModel(true); // Load the model before the section comes into view
+          }
         });
       },
-      { threshold: 0.1 }
+      { root: null, rootMargin: "200%", threshold: 0.1 } // Detect 200vh before
     );
-
+  
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
-
+  
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       gsap.globalTimeline.clear();
@@ -252,6 +207,7 @@ const ScrollAnimation = () => {
       }
     };
   }, []);
+  
 
   return (
     <div>
