@@ -17,10 +17,11 @@ export default function Home() {
   const t = useTranslations('translation');
 
   return (
-    <div className={`no-scrollbar`}>
+    <div className={`overflow-hidden  bg-[#000B17]`}>
       <Navbar />
-      <div className="bg-[#000B17] no-scrollbar overflow-x-hidden">
+      {/* <div className=" bg-[#000B17] no-scrollbar overflow-x-hidden"> */}
         <MainHero />
+        
         <LongRevealHeading text={t('whyChooseU')} />
         <WhySection />
         <ShortRevealHeading text={t('ourService')} />
@@ -35,7 +36,7 @@ export default function Home() {
           <ContactForm />
         </div>
         <Footer />
-      </div>
+      {/* </div> */}
     </div>
   );
 }

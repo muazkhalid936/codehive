@@ -78,8 +78,6 @@ const [borderRadius,setBorderRadius]=useState("29px")
                   className={cardClasses}
                   style={{
                     border: "1px solid transparent",
-                    // borderRadius: {borderRadius},
-                    //here
                     background: `linear-gradient(135deg, #052036, #02101f),linear-gradient(30deg, transparent, #2194cd ,transparent)`,
                     backgroundClip: "padding-box, border-box",
                     backgroundOrigin: "padding-box, border-box",

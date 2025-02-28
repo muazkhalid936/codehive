@@ -84,18 +84,16 @@ const data = [
 import useStore from "../store/useUserStore";
 
 const PartnerWithTopPeople = () => {
+  const [isHover, setIsHover] = React.useState(null);
   const { language } = useStore();
   const t = useTranslations("translation");
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const [hoveredSlide, setHoveredSlide] = React.useState("");
   const title = t("meetTheCre").split(" ");
-  // Ensure selected card is removed and the list starts from the next one
   const filteredData = data.filter((_, index) => index !== selectedIndex);
 
-  // Get the previous index (handles backward selection)
   const previousIndex = (selectedIndex - 1 + data.length) % data.length;
 
-  // Shift the array correctly
   const shiftedData = [
     ...filteredData.slice(selectedIndex % filteredData.length),
     ...filteredData.slice(0, selectedIndex % filteredData.length),
@@ -108,7 +106,7 @@ const PartnerWithTopPeople = () => {
       dir={language === "ar" ? "rtl" : "ltr"}
     >
       <div className="container  sm:px-4">
-        <h2 className="text-center mb-14 sm:w-[65%] mx-auto sub_heading  leading-tight gilray-font">
+        <h2 className="text-center sm:mb-14 sm:w-[65%] mx-auto sub_heading  leading-tight gilray-font">
           {title.map((word, index) => (
             <span
               key={index}
@@ -119,9 +117,9 @@ const PartnerWithTopPeople = () => {
           ))}
         </h2>
         {/* Main Layout: Big Card & Swiper */}
-        <div className="flex mt-3 sm:mt-10 h-[270px] sm:h-[500px] flex-row gap-8 items-start">
+        <div className=" hidden sm:flex mt-3 sm:mt-10 h-[270px] sm:h-[500px] flex-row gap-8 items-start">
           {/* Left Side: Big Card */}
-          <div className=" w-[50%] xl:w-[30%]">
+          <div className=" w-[50%]  xl:w-[30%]">
             <div
               className="relative overflow-hidden justify-center flex h-[250px] sm:h-[400px] md:h-[500px] rounded-md"
               style={{
@@ -230,73 +228,72 @@ const PartnerWithTopPeople = () => {
         </div>
 
         <div className="flex mt-3 sm:hidden">
-          <Swiper
-            // slidesPerView={3}
-            loop={true}
-            initialSlide={0}
-            modules={[EffectFade, History, EffectCards, Autoplay]}
-            breakpoints={{
-              240: { slidesPerView: 2.3 },
-              768: { slidesPerView: 2.3 },
-            }}
-          >
-            {shiftedData.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div
-                  onClick={() => {
-                    setHoveredSlide(item.name);
-                    setSelectedIndex(data.indexOf(item)); // Update actual index
-                  }}
-                  onMouseEnter={() => setHoveredSlide(item.name)}
-                  onMouseLeave={() => setHoveredSlide("")}
-                  className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl sm:min-h-[350px] h-[250px] cursor-pointer sm:pt-4 overflow-hidden sm:hover:scale-100"
-                  style={{
-                    border: "1px solid transparent",
-                    borderRadius: "26px",
-                    background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
-                    backgroundClip: "padding-box, border-box",
-                    backgroundOrigin: "padding-box, border-box",
-                  }}
-                >
-                  {hoveredSlide !== item.name && (
-                    <img
-                      src={item.picture}
-                      alt={item.name}
-                      className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform"
-                    />
-                  )}
-                  {hoveredSlide === item.name && (
-                    <img
-                      src={"/gray-vector.png"}
-                      alt={item.name}
-                      className="w-40 h-40 object-cover -z-10 absolute -right-5 top-20"
-                    />
-                  )}
+  <Swiper
+    loop={true}
+    initialSlide={0}
+    modules={[EffectFade, History, EffectCards, Autoplay]}
+    breakpoints={{
+      240: { slidesPerView: 1.3 },
+    }}
+  >
+    {data.map((item, index) => (
+      <SwiperSlide key={index}>
+        <div
+          onClick={() => {
+            setIsHover((prev) => (prev === index ? null : index));
+          }}
+          className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 relative rounded-xl sm:min-h-[350px] h-[350px] cursor-pointer sm:pt-4 overflow-hidden ${
+            isHover === index ? "scale-100" : ""
+          }`}
+          style={{
+            border: "1px solid transparent",
+            borderRadius: "26px",
+            
+            background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
+            backgroundClip: "padding-box, border-box",
+            backgroundOrigin: "padding-box, border-box",
+          }}
+        >
+          {isHover !== index && (
+            <img
+              src={item.picture}
+              alt={item.name}
+              className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform"
+            />
+          )}
+                    {isHover === index && (
 
-                  <div className="absolute bottom-0 w-full flex flex-col items-center justify-center">
-                    <div className="bg-gradient-to-t from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto">
-                      <h3 className="text-white text-[15px] sm:text-[22px] font-semibold text-left w-full">
-                        {item.name}
-                      </h3>
-                      <h3
-                        className={`text-[#219DD9] main_hero_slogan font-semibold text-left w-full gap-2 ${
-                          hoveredSlide === item.name ? "sm:mb-10" : "mb-0"
-                        }`}
-                      >
-                        {t(item.position)}
-                      </h3>
-                      {hoveredSlide === item.name && (
-                        <h3 className="text-white text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500">
-                          {t(item.description)}
-                        </h3>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <img
+            src={"/PartnerLogo.png"}
+            alt={item.name}
+            className="w-40 h-40 object-contain -z-10 absolute -right-5 top-20"
+          />)}
+
+          <div className="absolute bottom-0 w-full flex flex-col items-center justify-center">
+            <div className="bg-gradient-to-t from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto">
+              <h3 className="text-white text-[15px] sm:text-[22px] font-semibold text-left w-full">
+                {item.name}
+              </h3>
+              <h3
+                className={`text-[#219DD9] main_hero_slogan font-semibold text-left w-full gap-2 ${
+                  isHover===index ? "mb-5 mt-1" : "mb-0"
+                }`}
+              >
+                {t(item.position)}
+              </h3>
+              {isHover === index && (
+                <h3 className="text-white text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500">
+                  {t(item.description)}
+                </h3>
+              )}
+            </div>
+          </div>
         </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
       </div>
     </div>
   );

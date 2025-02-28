@@ -143,7 +143,7 @@ const {language}=useStore()
                     <h3 className="animate-title text-center sm:text-start  text-[#162E4A] text-[19px] font-semibold mb-2 ">
                       {t(value.title)}
                     </h3>
-                    <p className="animate-description text-[14px] sm:text-[16px] text-center sm:text-start text-gray-600  ">
+                    <p className="animate-description text-[12px] sm:text-[16px] text-center sm:text-start text-gray-600  ">
                       {t(value.description)}
                     </p>
                   </div>

@@ -55,7 +55,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
         <hr className={`border ${height?"opacity-100":"opacity-0"} border-black w-full`} />
         <button
           onClick={() => router.push(link)}
-          className="flex gap-2 items-center justify-between "
+          className={`flex gap-2 r ${height?"opacity-100":"opacity-0"} items-center justify-between `}
         >
           <p>
             {language === "en" ? "View Complete Project" : "عرض المشروع كامل"}

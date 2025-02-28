@@ -34,7 +34,6 @@
 
 .new-icon-container {
   display: flex;
-  /* flex-wrap: wrap; */
   color: white;
 }
 
@@ -139,7 +138,7 @@
   .ss {
     left: 6% !important;
     transform: translateX(-50%, -50%);
-    top: 230px !important;
+    top: 20vh !important;
   }
   .our-process-main-pic {
     @apply !w-[135%] !h-[200px] left-1/2;

@@ -136,16 +136,16 @@ const ContactForm = () => {
                       onClick={() => setIsOpen((prev) => !prev)} // Toggle dropdown open/close state
                       className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full border-b-2 border-gray-500 appearance-none pr-8 invalid:text-gray-400"
                     >
-                      <option value="" disabled selected hidden>
+                      <option value="" disabled defaultValue={""} hidden>
                         {t(field.placeholder)}
                       </option>
-                      {field.options.map((option, index) => (
+                      {field.options.map((option1, index) => (
                         <option
                           key={index}
-                          value={option}
+                          value={option1}
                           className="text-white"
                         >
-                          {t(option)}
+                          {t(option1)}
                         </option>
                       ))}
                     </select>

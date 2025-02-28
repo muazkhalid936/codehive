@@ -116,7 +116,7 @@ const ScrollAnimation = () => {
 
   const { language, model } = useStore();
 
-  const [shouldLoadModel, setShouldLoadModel] = useState(false);
+  const [shouldLoadModel, setShouldLoadModel] = useState(true);
 
   // useEffect(() => {
   //   const observer = new IntersectionObserver(
@@ -306,7 +306,7 @@ const ScrollAnimation = () => {
             </div>
 
             <div className="sm:w-1/2 w-full iphone">
-              {/* {shouldLoadModel && ( */}
+              {shouldLoadModel && (
                 <Canvas
                   dpr={[1, 2]}
                   camera={{ position: [25, 0, 0], fov: 50 }}
@@ -317,7 +317,7 @@ const ScrollAnimation = () => {
                     <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
                   </Suspense>
                 </Canvas>
-              {/* )} */}
+              )}
             </div>
           </div>
         ))}

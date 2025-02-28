@@ -9,6 +9,7 @@
     url("./fonts/Gilroy-Black.ttf") format("truetype");
 }
 
+
 @font-face {
   font-family: "Gilroy Semibold";
   src: local("Gilroy Semibold"), local("Gilroy-Semibold"),
@@ -254,7 +255,7 @@
 }
 
 .service-stack-card {
-  @apply sm:h-[400px] h-[450px];
+  @apply sm:h-[400px] h-[460px];
 }
 
 .second-component {

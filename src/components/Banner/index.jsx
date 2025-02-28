@@ -3,6 +3,8 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 import useStore from "../../store/useUserStore";
+import { useParams } from "next/navigation";
+
 const Banner = ({
   bgImage,
   rightImage,
@@ -16,6 +18,8 @@ const Banner = ({
   blueWords = [], // Words to be styled in blue
 }) => {
   const { language } = useStore();
+  const params=useParams()
+  console.log(params.slug)
   const t = useTranslations("translation");
   // console.log(backgroundColor);
   // Split the title into words for easier manipulation
@@ -31,8 +35,8 @@ const Banner = ({
       <div
         dir={language === "en" ? "ltr" : "rtl"}
         className={`bg-cover relative bg-center  ${
-          rightImage ? "h-[350px]" : "h-[200px]"
-        } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full rounded-[20px]  justify-between flex flex-row gap:4  sm:px-0`}
+          params.slug==="car-wash"?"h-[200px]":rightImage ? "h-[420px]" : "h-[200px]"
+        } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full rounded-[20px]  justify-between flex flex-col sm:flex-row   sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundPosition: "top",
@@ -46,8 +50,8 @@ const Banner = ({
             rightImage ? "md:w-1/2" : "md:w-[100%]"
           } pl-4 md:pl-[45px] pr-2  ${
             !rightImage &&
-            "sm:bg-gradient-to-r bg-black bg-opacity-70 sm:from-black   sm:bg-opacity-50   sm:to-transparent"
-          } h-full p-5  sm:mt-0 sm:justify-center
+            "sm:bg-gradient-to-r !h-full bg-black bg-opacity-50 sm:from-black  z-[4]  sm:bg-opacity-50   sm:to-transparent"
+          } sm:h-full p-5  sm:mt-0 sm:justify-center
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 ${
           showDecsription ? "sm:gap-5" : "sm:gap-10"
         } `}
@@ -94,10 +98,10 @@ const Banner = ({
           </div>
         </div>
         {rightImage && (
-          <div className=" text-white w-[300px] md:w-1/2 right-0 absolute sm:relative bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-[20px]">
+          <div className=" text-white sm:w-[300px] md:w-1/2 right-0 ] sm:relative bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-[20px]">
             <img
               src={rightImage}
-              className="object-cover z-[1]  h-auto sm:h-[340px] md:h-[400px]"
+              className="object-cover z-[50]  h-[100%] sm:h-[340px] md:h-[400px]"
             />
           </div>
         )}

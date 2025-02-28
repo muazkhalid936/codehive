@@ -294,7 +294,7 @@ const OurMission = ({ data }) => {
   const { language } = useStore();
   return (
     <div
-      className="container mb-[55px] flex flex-col gap-10 sm:gap-0 mx-auto"
+      className="container mb-[40px] sm:mb-[55px] flex flex-col gap-[30px] sm:gap-0 mx-auto"
       dir={language === "ar" ? "rtl" : "ltr"}
     >
       <div className="flex flex-col-reverse gap-[30px] sm:gap-0 sm:flex-row ">
@@ -309,7 +309,7 @@ const OurMission = ({ data }) => {
           <p className="font-bold text-[23px] sm:text-[30px] mb-[20px] sm:mb-0 text-center sm:text-start">
             {t(data.mission)}
           </p>
-          <p className=" text-[#878787] text-[12px]  sm:text-[15px] text-center sm:text-start">
+          <p className=" text-[#878787] text-[10px]  sm:text-[15px] text-center sm:text-start">
             {t(data.missionDesc)}
           </p>
         </div>
@@ -327,7 +327,7 @@ const OurMission = ({ data }) => {
           <p className="font-bold text-[23px] sm:text-[30px] mb-[20px] sm:mb-0 text-center sm:text-start ">
             {t(data.vision)}
           </p>
-          <p className="text-[#878787] text-[12px] sm:text-[15px] text-center sm:text-start">
+          <p className="text-[#878787] text-[10px] sm:text-[15px] text-center sm:text-start">
             {t(data.visionDesc)}
           </p>
         </div>

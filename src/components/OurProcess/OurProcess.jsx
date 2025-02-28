@@ -217,7 +217,7 @@ const StackingImages = () => {
     <div className="bg-[#000B17] container mx-auto ">
       <div className="new-cards flex sm:flex-row  flex-col-reverse  items-center gap-20  justify-center sm:justify-between  h-[100vh] min-h-[400px] mx-auto">
         <div className="flex sm:w-1/2  mt-[200px] sm:mt-0 sm:h-auto justify-between  flex-col gap-20 sm:gap-5 first-container">
-          <div className="new-icon-container absolute flex-1 left-0 -mt-[90px]  gap-1">
+          <div className="new-icon-container sm:absolute flex justify-between flex-1 left-0 -mt-[90px]  gap-1">
             {IconsArr.map((Icon, i) => {
               const activeColor = active === i ? "#219bd9" : "#FFFFFF";
               return (
@@ -298,7 +298,7 @@ const StackingImages = () => {
                 <div
                   key={i}
                   dir={language === "en" ? "ltr" : "rtl"}
-                  className={`new-text mt-[30px] sm:mt-[65px] flex-1 w-[90vw] sm:w-auto  flex flex-col gap-4 main_hero_slogan new-text-${
+                  className={`new-text mt-[30px] sm:mt-[65px] flex-1 w-[85vw] sm:w-auto  flex flex-col gap-4 main_hero_slogan new-text-${
                     i + 1
                   }`}
                 >
