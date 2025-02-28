@@ -112,7 +112,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl  text-center font-poppin">
                     <Link href="/our-work/solwave-website">{t("solwave1")}</Link>
                   </div>
@@ -130,7 +130,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/laam-web">Laam</Link>
                   </div>
@@ -151,7 +151,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/clixpos-website">ClixPOS</Link>
                   </div>
@@ -169,7 +169,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/faoolun-website">Faoolun</Link>
                   </div>
@@ -190,7 +190,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/legal-wise-web">Legal Wise Web</Link>
                   </div>
@@ -257,7 +257,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/saloon-app">
                       Glamour Salon
@@ -276,7 +276,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/caption-gen">
                       Caption Gen{" "}
@@ -297,7 +297,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/laam-web">
                       Laam
@@ -316,7 +316,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/eshop-app">
                       Trendora
@@ -337,7 +337,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -359,7 +359,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -383,7 +383,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -405,7 +405,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -429,7 +429,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -451,7 +451,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link href="/our-work/al-abour-app">Al Abour</Link>
                   </div>
@@ -470,7 +470,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -492,7 +492,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -524,7 +524,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/saloon-app">Glamour Salon</Link>
                   </div>
@@ -542,7 +542,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/word-smith-ai">Wordsmith</Link>
                   </div>
@@ -563,7 +563,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/caption-gen">Caption Gen</Link>
                   </div>
@@ -581,7 +581,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/instant-save-app">Instant Save</Link>
                   </div>
@@ -602,7 +602,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/eshop-app">Trendora</Link>
                   </div>
@@ -621,7 +621,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/food-inventory-app">Foodventory</Link>
                   </div>
@@ -642,7 +642,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/doctor-booking-app">MedEase</Link>
                   </div>
@@ -660,7 +660,7 @@ const page = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="absolute -bottom-40 py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
+                <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
                     <Link href="/our-work/al-abour-app">Al Abour</Link>
                   </div>
@@ -684,7 +684,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/caption-gen">
                       Caption Gen{" "}
@@ -704,7 +704,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -729,7 +729,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       className="font-poppin"
@@ -752,7 +752,7 @@ const page = () => {
                 }}
               >
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
-                <div className="absolute   -bottom-40 py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
+                <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link
                       href="/our-work/solwave-website"
