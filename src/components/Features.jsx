@@ -117,7 +117,7 @@ const [borderRadius,setBorderRadius]=useState("29px")
                                 }
                                `}
                     style={{
-                      border: "1px solid transparent",
+                      // border: "px solid transparent",
                       // borderRadius: {borderRadius},
                       background: `linear-gradient(to ${
                         isFirst

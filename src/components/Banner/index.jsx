@@ -35,8 +35,8 @@ const Banner = ({
       <div
         dir={language === "en" ? "ltr" : "rtl"}
         className={`bg-cover relative bg-center  ${
-          params.slug==="car-wash"?"h-[200px]":rightImage ? "h-[420px]" : "h-[200px]"
-        } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full rounded-[20px]  justify-between flex flex-col sm:flex-row   sm:px-0`}
+          params.slug==="car-wash"?"h-[200px]":rightImage ? "h-[380px]" : "h-[200px]"
+        } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full  rounded-[20px]  justify-between flex flex-col sm:flex-row   sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundPosition: "top",
@@ -44,7 +44,7 @@ const Banner = ({
         }}
       >
         <div
-          className={`flex flex-col ${color} w-full ${
+          className={`flex  justify-between flex-col ${color} w-full ${
             backgroundColor && `bg-[${backgroundColor}]`
           } ${
             rightImage ? "md:w-1/2" : "md:w-[100%]"
@@ -59,7 +59,7 @@ const Banner = ({
           <div
             className={`${
               rightImage ? "md:w-full" : "md:w-[60%]"
-            } flex flex-col gap-5 `}
+            } flex flex-col h-full justify-center gap-5 `}
           >
             {" "}
             <h2 className="banner_heading leading-none text-center sm:text-start gilray-font">
@@ -98,7 +98,7 @@ const Banner = ({
           </div>
         </div>
         {rightImage && (
-          <div className=" text-white sm:w-[300px] md:w-1/2 right-0 ] sm:relative bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-[20px]">
+          <div className=" text-white justify-center sm:w-[300px] md:w-1/2 right-0 w-full sm:relative bottom-0  overflow-hidden sm:justify-end items-end flex  self-end rounded-[20px]">
             <img
               src={rightImage}
               className="object-cover z-[50]  h-[100%] sm:h-[340px] md:h-[400px]"

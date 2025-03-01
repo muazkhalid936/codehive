@@ -232,7 +232,7 @@ const index = () => {
               // pagination={{ clickable: true }}
               className="flex sm:hidden items-end justify-end"
             >
-              <SwiperSlide className="">
+              <SwiperSlide className="mt-[140px">
                 <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[500px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] mx-auto text-center">
@@ -290,7 +290,7 @@ const index = () => {
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide className="">
+              <SwiperSlide className="mt-[140px]">
                 <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[550px]  to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
                     <p className=" w-[70%] mx-auto text-center text-[14px] text-[#1FCB78] border border-[#1FCB78] py-2  font-semibold rounded-full z-20 my-6">
@@ -350,7 +350,7 @@ const index = () => {
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide className="">
+              <SwiperSlide className="mt-[140px]">
                 <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[500px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] mx-auto text-center">

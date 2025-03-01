@@ -19,9 +19,9 @@ const FeatureSlider = ({ data, from }) => {
         from === "contact" ? "sm:mt-[55px] mt-[40px] py-[40px] sm:py-[55px]" : "mt-0 pt-[40px] sm:pt-[55px]"
       }  z-50 `}
     >
-      <div className="flex justify-between">
+      <div className="flex justify-center sm:justify-between">
         <h2
-          className={`sub_heading font-extrabold gilray-font  ${
+          className={`sub_heading text-center sm:text-start font-extrabold gilray-font  ${
             from !== "contact" ? "text-black" : "text-white"
           }`}
         >
@@ -72,11 +72,11 @@ const FeatureSlider = ({ data, from }) => {
             invert: false, // Normal scroll direction
           }}
           keyboard={true}
-          spaceBetween={20}
-          slidesPerView={2.2}
+          spaceBetween={10}
+          // slidesPerView={3.2}
           breakpoints={{
-            640: { slidesPerView: 2.2 },
-            768: { slidesPerView: 2.2 },
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 1.2 },
             1024: { slidesPerView: 3.2 },
           }}
           pagination={{ clickable: true }}
