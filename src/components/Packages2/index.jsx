@@ -239,8 +239,8 @@ const index = () => {
             // pagination={{ clickable: true }}
             className="flex sm:hidden items-end justify-end"
           >
-            <SwiperSlide className="mt-[70px]">
-              <div className="md:w-[30%] md:mt-[10vh] mx-auto h-[460px]   bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <SwiperSlide className="mt-[100px]">
+              <div className="md:w-[30%] md:mt-[10vh] mx-auto h-[430px]   bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                 <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                   <p className="gilray-font text-[30px] mx-auto text-center">
                     {t("basic")}
@@ -249,17 +249,18 @@ const index = () => {
                     {t("basicAed19")}
                   </p>
 
-                  <button className="flex items-center w-[150px] mt-5 sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
-                    <span className="truncate text-[14px] ">
-                      {t("getStarted")}
-                    </span>
-                    <span
-                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                      style={{ width: "22px", height: "22px" }}
-                    >
-                      <HiMiniArrowUpRight size={16} />
-                    </span>
-                  </button>
+                 
+                                     <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                                       <span className="truncate text-[12px] ">
+                                         {t("getStarted")}
+                                       </span>
+                                       <span
+                                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                                         style={{ width: "18px", height: "18px" }}
+                                       >
+                                         <HiMiniArrowUpRight size={16} />
+                                       </span>
+                                     </button>
 
                   <hr className=" my-5 sm:my-10 border-slate-500 " />
 
@@ -314,17 +315,18 @@ const index = () => {
                     {t("advanceAed")}
                   </p>
 
-                  <button className="flex items-center w-[150px] mt-5 sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
-                    <span className="truncate text-[14px] ">
-                      {t("getStarted")}
-                    </span>
-                    <span
-                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                      style={{ width: "22px", height: "22px" }}
-                    >
-                      <HiMiniArrowUpRight size={16} />
-                    </span>
-                  </button>
+                 
+                                     <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                                       <span className="truncate text-[12px] ">
+                                         {t("getStarted")}
+                                       </span>
+                                       <span
+                                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                                         style={{ width: "18px", height: "18px" }}
+                                       >
+                                         <HiMiniArrowUpRight size={16} />
+                                       </span>
+                                     </button>
                   <hr className="my-5 sm:my-10 border-slate-500 " />
 
                   <div className="h-[40vh] ab mt-5 ">
@@ -364,8 +366,8 @@ const index = () => {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide className="mt-[70px]">
-              <div className="md:w-[30%]  md:mt-[10vh] mx-auto h-[460px]  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <SwiperSlide className="mt-[100px]">
+              <div className="md:w-[30%]  md:mt-[10vh] mx-auto h-[430px]  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                 <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                   <p className="gilray-font text-[30px] mx-auto text-center">
                     {t("enterprise")}
@@ -374,17 +376,18 @@ const index = () => {
                     {t("enterpris1")}{" "}
                   </p>
 
-                  <button className="flex items-center w-[150px] mt-5 sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
-                    <span className="truncate text-[14px] ">
-                      {t("getStarted")}
-                    </span>
-                    <span
-                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                      style={{ width: "22px", height: "22px" }}
-                    >
-                      <HiMiniArrowUpRight size={16} />
-                    </span>
-                  </button>
+                
+                                    <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                                      <span className="truncate text-[12px] ">
+                                        {t("getStarted")}
+                                      </span>
+                                      <span
+                                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                                        style={{ width: "18px", height: "18px" }}
+                                      >
+                                        <HiMiniArrowUpRight size={16} />
+                                      </span>
+                                    </button>
                   <hr className="my-5 sm:my-[30px] border-slate-500 " />
                   <div className="h-[40vh]  mt-[10px] ">
                     {features3.map((features, i) => (
