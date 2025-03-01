@@ -16,7 +16,7 @@ const SuccessMarquee = () => {
     }
   });
   return (
-    <div className="bg-[#0d1e30] py-2 overflow-hidden w-full">
+    <div className="bg-[#0d1e30] mt-[-1px] py-2 overflow-hidden w-full">
       <div className="marquee">
         <div
           className="marquee-content   text-[10px] 

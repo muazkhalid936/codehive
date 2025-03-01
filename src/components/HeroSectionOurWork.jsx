@@ -7,6 +7,8 @@ const HeroSectionOurWork = ({
   bgImage,
   title,
   atitle,
+  right,
+  bottom,
   description,
   adescription,
   rightImage,
@@ -76,7 +78,7 @@ const {language}=useStore();
                 <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
                   {t(buttonText)}
                 </p>
-                <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 sm:group-hover:translate-x-44 group-hover:translate-x-36 lg:group-hover:translate-x-56 overflow-hidden">
+                <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 sm:group-hover:translate-x-44 group-hover:translate-x-[180px] lg:group-hover:translate-x-56 overflow-hidden">
                   <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />
                 </div>
               </button>
@@ -84,12 +86,13 @@ const {language}=useStore();
           )}
         </div>
         {/* Second Section */}
-        <div className="right-section flex justify-end items-end sm:w-1/2">
+        <div className={`right-section w-full flex justify-center sm:justify-end ${right=== true?"":"pb-[10px] sm:pb-[20px]  sm:pr-[70px]"} items-end sm:w-1/2`}>
           {rightImage && (
             <img
               src={rightImage}
               alt="Hero Right Image"
-              className="w-full object-contain h-[300px] sm:h-[100%] "
+              className={` object-contain h-[300px] ${bottom=== true?"pb-[20px] sm:pb-0":
+                ""} sm:h-[100%] `}
             />
           )}
         </div>

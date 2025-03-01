@@ -232,14 +232,14 @@ const index = () => {
               // pagination={{ clickable: true }}
               className="flex sm:hidden items-end justify-end"
             >
-              <SwiperSlide className="mt-[140px">
-                <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[500px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+              <SwiperSlide className="mt-[90px]">
+                <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[430px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
-                    <p className="gilray-font text-[30px] mx-auto text-center">
+                    <p className="gilray-font text-[30px] leading-none mx-auto text-center">
                       {t("basic")}
                     </p>
 
-                    <button className="flex items-center w-[150px] mt-5 sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
+                    <button className="flex items-center w-[150px] mt-[15px] sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
                       <span className="truncate text-[14px] ">
                         {t("getStarted")}
                       </span>
@@ -251,7 +251,7 @@ const index = () => {
                       </span>
                     </button>
 
-                    <hr className="my-10 border-slate-500 " />
+                    <hr className="my-5 sm:my-10 border-slate-500 " />
 
                     <div className="h-[40vh]  ab mt-5 ">
                       {features1.map((features, i) => (
@@ -290,17 +290,17 @@ const index = () => {
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide className="mt-[140px]">
-                <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[550px]  to-[#2093CA70]  p-[2px] rounded-2xl">
+              <SwiperSlide className="">
+                <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[520px]  to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
-                    <p className=" w-[70%] mx-auto text-center text-[14px] text-[#1FCB78] border border-[#1FCB78] py-2  font-semibold rounded-full z-20 my-6">
+                    <p className=" w-[70%] mx-auto text-center text-[14px] text-[#1FCB78] border border-[#1FCB78] py-2  font-semibold rounded-full z-20 my-5">
                       {t("mostPopula")}
                     </p>
 
                     <p className="gilray-font text-[30px] mx-auto text-center">
                       {t("advanced")}
                     </p>
-                    <button className="flex items-center w-[150px] mt-5 sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
+                    <button className="flex items-center w-[150px] mt-[15px] sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
                       <span className="truncate text-[14px] ">
                         {t("getStarted")}
                       </span>
@@ -311,7 +311,7 @@ const index = () => {
                         <HiMiniArrowUpRight size={16} />
                       </span>
                     </button>
-                    <hr className="my-10 border-slate-500 " />
+                    <hr className="my-5 sm:my-10 border-slate-500 " />
 
                     <div className="h-[40vh] ab mt-5 ">
                       {features2.map((features, i) => (
@@ -350,14 +350,14 @@ const index = () => {
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide className="mt-[140px]">
-                <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[500px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+              <SwiperSlide className="mt-[90px]">
+                <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[430px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] mx-auto text-center">
                       {t("enterprise")}
                     </p>
 
-                    <button className="flex items-center w-[150px] mt-5 sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
+                    <button className="flex items-center w-[150px] mt-[15px] sm:mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-2 sm:px-6 shadow-md rounded-lg">
                       <span className="truncate text-[14px] ">
                         {t("getStarted")}
                       </span>
@@ -368,7 +368,7 @@ const index = () => {
                         <HiMiniArrowUpRight size={16} />
                       </span>
                     </button>
-                    <hr className="my-10 border-slate-500 " />
+                    <hr className="my-5 sm:my-10 border-slate-500 " />
                     <div className="h-[40vh] ab mt-5 ">
                       {features3.map((features, i) => (
                         <li

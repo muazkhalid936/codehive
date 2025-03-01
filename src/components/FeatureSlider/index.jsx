@@ -75,7 +75,7 @@ const FeatureSlider = ({ data, from }) => {
           spaceBetween={10}
           // slidesPerView={3.2}
           breakpoints={{
-            640: { slidesPerView: 1.2 },
+            240: { slidesPerView: 1.3 },
             768: { slidesPerView: 1.2 },
             1024: { slidesPerView: 3.2 },
           }}
@@ -95,7 +95,7 @@ const FeatureSlider = ({ data, from }) => {
                   backgroundOrigin: "padding-box, border-box",
                 }}
               >
-                <div className="rounded-2xl h-[230px] sm:h-[450px] w-full bg-black overflow-hidden relative">
+                <div className="rounded-2xl h-[330px] sm:h-[450px] w-full bg-black overflow-hidden relative">
                   <img
                     src={item.picture}
                     alt={item.name}

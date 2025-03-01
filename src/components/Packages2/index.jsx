@@ -239,7 +239,7 @@ const index = () => {
             // pagination={{ clickable: true }}
             className="flex sm:hidden items-end justify-end"
           >
-            <SwiperSlide className="mt-[140px]">
+            <SwiperSlide className="mt-[70px]">
               <div className="md:w-[30%] md:mt-[10vh] mx-auto h-[460px]   bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                 <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                   <p className="gilray-font text-[30px] mx-auto text-center">
@@ -261,7 +261,7 @@ const index = () => {
                     </span>
                   </button>
 
-                  <hr className="my-10 border-slate-500 " />
+                  <hr className=" my-5 sm:my-10 border-slate-500 " />
 
                   <div className="  ab mt-5 ">
                     {features1.map((features, i) => (
@@ -301,7 +301,7 @@ const index = () => {
             </SwiperSlide>
 
             <SwiperSlide className="">
-              <div className="md:w-[30%] mx-auto bg-gradient-to-br  h-[600px]  from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+              <div className="md:w-[30%] mx-auto bg-gradient-to-br  h-[530px]  from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                 <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
                 <p className=" w-[70%] mx-auto text-center text-[14px] text-[#1FCB78] border border-[#1FCB78] py-2  font-semibold rounded-full z-20 my-6">
                       {t("mostPopula")}
@@ -325,7 +325,7 @@ const index = () => {
                       <HiMiniArrowUpRight size={16} />
                     </span>
                   </button>
-                  <hr className="my-10 border-slate-500 " />
+                  <hr className="my-5 sm:my-10 border-slate-500 " />
 
                   <div className="h-[40vh] ab mt-5 ">
                     {features2.map((features, i) => (
@@ -364,7 +364,7 @@ const index = () => {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide className="mt-[140px]">
+            <SwiperSlide className="mt-[70px]">
               <div className="md:w-[30%]  md:mt-[10vh] mx-auto h-[460px]  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                 <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                   <p className="gilray-font text-[30px] mx-auto text-center">
@@ -385,7 +385,7 @@ const index = () => {
                       <HiMiniArrowUpRight size={16} />
                     </span>
                   </button>
-                  <hr className="my-[30px] border-slate-500 " />
+                  <hr className="my-5 sm:my-[30px] border-slate-500 " />
                   <div className="h-[40vh]  mt-[10px] ">
                     {features3.map((features, i) => (
                       <li

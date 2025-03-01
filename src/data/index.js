@@ -2594,6 +2594,7 @@ export const ourWorks = [
     title: "mrTakeApp",
     slug: "Mr-app",
     heroData: {
+      
       title: "mrTakeApp",
       description: "satisfyYou",
       bgImage: "/our-work/delicious-bite-app/hero-bg.png",
@@ -2922,6 +2923,7 @@ export const ourWorks = [
     slug: "word-smith-ai",
     heroData: {
       title: "wordsmithA",
+      bottom:true,
       description: "writeEmail",
       bgImage: "/our-work/wordsmith-ai/herobg.png",
       rightImage: "/our-work/wordsmith-ai/hero-right.png",
@@ -3499,6 +3501,7 @@ export const ourWorks = [
     heroData: {
       title: "faoolun1",
       description: "exploreYou",
+      right:true,
       bgImage: "/our-work/faoolun/hero-bg.png",
       rightImage: "/our-work/faoolun/hero-right.png",
       topArrow: true,
@@ -3619,6 +3622,7 @@ export const ourWorks = [
     title: "solwave1",
     slug: "solwave-website",
     heroData: {
+      right:true,
       title: "solwave1",
       description: "growPerson",
       bgImage: "/our-work/solwave/hero-bg.png",
@@ -4060,6 +4064,7 @@ export const ourWorks = [
     slug: "legal-wise-web",
     heroData: {
       title: "legalWiseW",
+      right:true,
       description: "navigateLe",
       bgImage: "/our-work/legal-wise-web/hero-bg.png",
       rightImage: "/our-work/legal-wise-web/hero-right.png",
@@ -4173,6 +4178,7 @@ export const ourWorks = [
     slug: "laam-web",
     heroData: {
       title: "laamWeb",
+      right:true,
       description: "elevateYou",
       bgImage: "/our-work/laam-web/hero-bg.png",
       rightImage: "/our-work/laam-web/hero-right.png",
@@ -4294,6 +4300,7 @@ export const ourWorks = [
     "title": "clixposWeb",
     "slug": "clixpos-website",
     "heroData": {
+      right:true,
       "title": "clixposWeb",
       "description": "clixposIsY",
       "bgImage": "/our-work/clixpos-web/hero-bg.png",

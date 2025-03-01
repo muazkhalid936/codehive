@@ -55,7 +55,7 @@ const HeroSection = ({
   return (
     <div
       dir={language === "en" ? "ltr" : "rtl"}
-      className="overflow-hidden "
+      className="overflow-hidden bg-[#042A3E] "
       style={{
         backgroundImage: bgImage ? `url(${bgImage})` : "",
         backgroundSize: "cover",
@@ -90,7 +90,7 @@ const HeroSection = ({
                   {buttonText}
                 </p>
                 <div
-                  className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-24 ${
+                  className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-20 ${
                     language === "en"
                       ? "md:group-hover:translate-x-28"
                       : "md:group-hover:translate-x-12"

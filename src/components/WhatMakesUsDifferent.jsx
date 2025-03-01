@@ -78,7 +78,7 @@ const {language}=useStore()
       className="bg-white relative py-[30px] sm:py-[55px]"
       ref={containerRef}
     >
-      <div className="w-auto text-center mx-auto">
+      <div className="w-[70%] sm:w-auto text-center mx-auto">
         <h1 className="sub_heading sm:mb-10 font-gilroy w-full">
           {t(data.title).split(" ").map((word, index) => (
             <span

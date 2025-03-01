@@ -52,50 +52,50 @@ const page = () => {
       </div>
 
       <div className="  container mb-[55px]  mx-auto ">
-        <div className="w-full  ">
-          <div className="flex my-[55px] main_hero_slogan gap-2 sm:gap-5">
-            <button
-              onClick={() => setOption("all")}
-              className={`text-white px-5 sm:px-10 main_hero_slogan py-2 rounded-full ${
-                option === "all"
-                  ? " bg-gradient-to-r from-[#053c7D] to-blueColor"
-                  : "bg-[#c3c3c3]"
-              } `}
-            >
-              {t("all")}
-            </button>
-            <button
-              onClick={() => setOption("web")}
-              className={`text-white px-5 sm:px-10  main_hero_slogan  py-2 rounded-full ${
-                option === "web"
-                  ? " bg-gradient-to-r from-[#053c7D] to-blueColor"
-                  : "bg-[#c3c3c3]"
-              } `}
-            >
-              {t("web")}
-            </button>
-            <button
-              onClick={() => setOption("mobile")}
-              className={`text-white px-5 sm:px-10  main_hero_slogan  py-2 rounded-full ${
-                option === "mobile"
-                  ? " bg-gradient-to-r from-[#053c7D] to-blueColor"
-                  : "bg-[#c3c3c3]"
-              } `}
-            >
-              {t("mobileAppl")}{" "}
-            </button>
-            <button
-              onClick={() => setOption("web-app")}
-              className={`text-white px-5 sm:px-10  main_hero_slogan  py-2 rounded-full ${
-                option === "web-app"
-                  ? " bg-gradient-to-r from-[#053c7D] to-blueColor"
-                  : "bg-[#c3c3c3]"
-              } `}
-            >
-              {t("webApplica")}{" "}
-            </button>
-          </div>
-        </div>
+      <div className="w-full overflow-x-scroll no-scrollbar">
+  <div className="flex my-[40px] sm:my-[55px] main_hero_slogan gap-2 sm:gap-5 whitespace-nowrap">
+    <button
+      onClick={() => setOption("all")}
+      className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+        option === "all"
+          ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
+          : "bg-[#c3c3c3]"
+      }`}
+    >
+      {t("all")}
+    </button>
+    <button
+      onClick={() => setOption("web")}
+      className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+        option === "web"
+          ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
+          : "bg-[#c3c3c3]"
+      }`}
+    >
+      {t("web")}
+    </button>
+    <button
+      onClick={() => setOption("mobile")}
+      className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+        option === "mobile"
+          ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
+          : "bg-[#c3c3c3]"
+      }`}
+    >
+      {t("mobileAppl")}
+    </button>
+    <button
+      onClick={() => setOption("web-app")}
+      className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+        option === "web-app"
+          ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
+          : "bg-[#c3c3c3]"
+      }`}
+    >
+      {t("webApplica")}
+    </button>
+  </div>
+</div>
 
         {option === "web" ? (
           <>
