@@ -101,7 +101,7 @@ const FeatureSlider = ({ data, from }) => {
                     alt={item.name}
                     className="w-full h-full object-cover opacity-60"
                   />
-                  <div className="sm:p-4 h-[200px] sm:h-[300px] absolute bottom-0 w-full bg-gradient-to-t from-[#021629]   to-transparent">
+                  <div className="sm:p-4 h-[150px] sm:h-[300px] absolute bottom-0 w-full bg-gradient-to-t from-[#021629]   to-transparent">
                     <div className="flex flex-col sm:pt-[100px] justify-center mt-5 h-full text-center text-white">
                       <h3 className="text-[16px] sm:text-[22px] font-bold px-2">
                         {t(item.name)}

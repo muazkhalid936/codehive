@@ -64,7 +64,7 @@ const {language}=useStore();
         />
       )}
 
-      <div className="container justify-between overflow-hidden mx-auto gap-4 sm:gap-0 flex-col sm:flex-row flex max-h-[580px] pt-28 sm:pt-32  sm:min-h-[500px] h-[550px]">
+      <div className="container justify-center sm:justify-between overflow-hidden mx-auto gap-3 sm:gap-0 flex-col sm:flex-row flex max-h-[580px] pt-28 sm:pt-32  sm:min-h-[500px] h-[550px]">
         {/* First Section */}
         <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start sm:mt-[-70px]  gap-3 sm:gap-5  flex-col">
           {" "}
@@ -86,12 +86,12 @@ const {language}=useStore();
           )}
         </div>
         {/* Second Section */}
-        <div className={`right-section w-full flex justify-center sm:justify-end ${right=== true?"":"pb-[10px] sm:pb-[20px]  sm:pr-[70px]"} items-end sm:w-1/2`}>
+        <div className={`right-section w-full h-[32vh] sm:h-full  flex justify-center sm:justify-end ${right=== true?"":"pb-[0px] sm:pb-[20px]  sm:pr-[70px]"} sm:items-end sm:w-1/2`}>
           {rightImage && (
             <img
               src={rightImage}
               alt="Hero Right Image"
-              className={` object-contain h-[300px] ${bottom=== true?"pb-[20px] sm:pb-0":
+              className={` object-contain h-[100%]  ${bottom=== true?"pb-[20px] sm:pb-0":
                 ""} sm:h-[100%] `}
             />
           )}

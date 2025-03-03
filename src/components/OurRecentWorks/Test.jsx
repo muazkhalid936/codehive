@@ -3,9 +3,8 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {  useRouter } from '../../i18n/routing';
-
 import useStore from "../../store/useUserStore";
-import Lenis from "@studio-freight/lenis"; // Import Lenis
+import Lenis from "@studio-freight/lenis"; 
 import Card from "./Card";
 gsap.registerPlugin(ScrollTrigger);
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -101,7 +100,7 @@ const HorizontalScroll = () => {
       scrollTrigger: {
         trigger: container,
         start: "top top",
-        end: `+=${cards.scrollWidth}`,
+        end: `+=${cards.scrollWidth*0.5}`,
         scrub: true,
         pin: true,
         invalidateOnRefresh: true,

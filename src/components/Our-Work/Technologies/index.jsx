@@ -99,7 +99,7 @@ const Technologies = ({ rightImage }) => {
       ],
     },
     {
-      title: "javaScript",
+      title: "JavaScript",
       image: "/technologies/js.png",
       visible: [
         "Mr-app",
@@ -259,7 +259,7 @@ const Technologies = ({ rightImage }) => {
       <img
         src="/technologies/shade.png"
         alt="image"
-        className="absolute z-[1]  bottom-[-700px] right-[-40vw]"
+        className="absolute z-[1]  sm:bottom-[-700px] bottom-[-150px] right-[-50vw] sm:right-[-40vw]"
         // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
       />
     </div>

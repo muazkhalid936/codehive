@@ -168,6 +168,7 @@ const ScrollAnimation = () => {
   
               if (meshRef.current) {
                 meshRef.current.rotation.y = rotationValue;
+                console.log(meshRef);
               }
   
               if (Math.abs(rotationValue - midRotation) < 0.4) {
@@ -265,10 +266,9 @@ const ScrollAnimation = () => {
               {shouldLoadModel && (
                 <Canvas
                   dpr={[1, 2]}
-                  camera={{ position: [25, 0, 0], fov: 50 }}
+                  camera={{ position: [25, 0, 0], fov: 20 }}
                   className="canvas-container"
                 >
-                  {" "}
                   <Suspense fallback={null}>
                     <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
                   </Suspense>

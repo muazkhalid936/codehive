@@ -60,7 +60,7 @@ const index = () => {
                   {t("basic")}
                 </p>
 
-                <button className="flex items-center w-[180px] mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] mt-8 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
@@ -118,7 +118,7 @@ const index = () => {
                   {t("advanced")}
                 </p>
 
-                <button className="flex items-center w-[180px] mt-10 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] mt-8 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
@@ -171,7 +171,7 @@ const index = () => {
                   {t("enterprise")}
                 </p>
 
-                <button className="flex items-center w-[180px] md:w-[200px] mt-10 h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] md:w-[200px] mt-8 h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
@@ -239,7 +239,7 @@ const index = () => {
                       {t("basic")}
                     </p>
 
-                    <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                    <button className="flex items-center w-[130px] mt-[15px] sm:mt-8 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
                       <span className="truncate text-[12px] ">
                         {t("getStarted")}
                       </span>
@@ -301,7 +301,7 @@ const index = () => {
                       {t("advanced")}
                     </p>
                   
-                    <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                    <button className="flex items-center w-[130px] mt-[15px] sm:mt-8 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
                       <span className="truncate text-[12px] ">
                         {t("getStarted")}
                       </span>
@@ -359,7 +359,7 @@ const index = () => {
                     </p>
 
                   
-                    <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                    <button className="flex items-center w-[130px] mt-[15px] sm:mt-8 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
                       <span className="truncate text-[12px] ">
                         {t("getStarted")}
                       </span>
