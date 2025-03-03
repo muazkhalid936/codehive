@@ -33,7 +33,6 @@ const Banner = ({
       }  overflow-hidden`}
     >
       <div
-        dir={language === "en" ? "ltr" : "rtl"}
         className={`bg-cover relative bg-center  ${
           params.slug==="car-wash"?"h-[200px]":rightImage ? "h-[380px]" : "h-[200px]"
         } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full  rounded-[20px]  justify-between flex flex-col sm:flex-row   sm:px-0`}
@@ -44,6 +43,8 @@ const Banner = ({
         }}
       >
         <div
+                dir={language === "en" ? "ltr" : "rtl"}
+
           className={`flex  justify-between flex-col ${color} w-full ${
             backgroundColor && `bg-[${backgroundColor}]`
           } ${
