@@ -226,6 +226,10 @@
   @apply bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent;
 }
 
+.colorText12 {
+  @apply bg-gradient-to-r from-blueColor via-blueColor to-white bg-clip-text text-transparent;
+}
+
 .search {
   @apply !hidden;
 }
@@ -396,3 +400,4 @@
     scroll-snap-align: center;
   }
 }
+

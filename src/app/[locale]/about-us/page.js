@@ -10,6 +10,7 @@ import WhatMakesUsDifferent from '../../../components/WhatMakesUsDifferent';
 import SuccessMarquee from '../../../components/SuccessMarquee';
 import HeroSection from '../../../components/HeroSectionServices';
 import Footer from '../../../components/Footer';
+import AnimationTestinomial from '../../../components/AnimationTestinomial';
 import {
   aboutHeroData,
   ourMissionData,
@@ -32,7 +33,13 @@ const AboutUs = () => {
       <Features data={aboutScreenFeaturesData} />
       <WhatMakesUsDifferent data={WhatMakesUsDifferentData} />
       <PartnerWithTopPeople />
+      <div className='hidden justify-center sm:flex'>
+
       <Testimonials testimonials={aboutTestimonialsData} />
+      </div>
+      <div className='sm:hidden'>
+        <AnimationTestinomial />
+      </div>
       {/* <ConnectContact /> */}
       <Footer />
     </div>

@@ -36,7 +36,7 @@ const page = async ({ params }) => {
           <img
             src={work.image}
             alt={`${slug} featured image`}
-            className="w-full object-contain rounded-xl"
+            className="w-full h-[200px] md:h-[400px] xl:h-[500px] object-cover rounded-xl"
           />
         </div>
       ) : (

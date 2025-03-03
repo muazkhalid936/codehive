@@ -60,7 +60,7 @@ const Testimonials = ({ testimonials }) => {
                   <img
                     src="/PartnerLogo.png"
                     alt="Vector Image"
-                    className="absolute object-contain top-0 right-[-2vw] w-16 h-20 sm:h-22 mr-2"
+                    className="absolute object-contain top-0 right-[-5px] w-16 h-20 sm:h-22 mr-2"
                   />
                  
                 </div>

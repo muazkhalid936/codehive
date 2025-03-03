@@ -4,8 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ShortRevealHeading.css";
 gsap.registerPlugin(ScrollTrigger);
+import useStore from "../../store/useUserStore";
 
 const ShortRevealHeading = (params) => {
+  const { language } = useStore();
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -28,12 +30,13 @@ const ShortRevealHeading = (params) => {
         textRef.current,
         {
           scale: 0.8,
-          backgroundPosition: "-600px 0", // Move the gradient across the text
+          backgroundPosition: `${language==="en"?"-600px 0":"500px 0"}`, // Move the gradient across the text
         },
         {
           scale: 1.2,
           // duration: 1,
-          backgroundPosition: "500px 0", // Move the gradient across the text
+          backgroundPosition: `${language==="en"?"500px 0":"-600px 0"}`, // Move the gradient across the text
+          // backgroundPosition: "500px 0", // Move the gradient across the text
           ease: "none",
         }
       );

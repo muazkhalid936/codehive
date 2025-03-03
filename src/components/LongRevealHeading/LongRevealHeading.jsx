@@ -7,9 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const LongRevealHeading = (params) => {
   const textRef = useRef(null);
-  const { language } = useStore();
+  const { language,setLanguage } = useStore();
   useEffect(() => {
     // GSAP Scroll Animation
+  
     gsap
       .timeline({
         // opacity: 0,
@@ -26,12 +27,12 @@ const LongRevealHeading = (params) => {
         textRef.current,
         {
           scale: 0.8,
-          backgroundPosition: "500% 0", // Move the gradient across the text
+          backgroundPosition: `${language==="en"?"500%":"-450%"} 0`, // Move the gradient across the text
         },
         {
           scale: 1.2,
           // duration: 1,
-          backgroundPosition: "-450% 0", // Move the gradient across the text
+          backgroundPosition: `${language==="en"?"-450%":"500%"} 0`, // Move the gradient across the text
           ease: "none",
         }
       );

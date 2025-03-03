@@ -5,11 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ShortRevealHeading.css";
 gsap.registerPlugin(ScrollTrigger);
 import { useTranslations } from "next-intl";
+import useStore from "../../store/useUserStore";
 
 const ShortRevealHeading = () => {
   const t = useTranslations("translation");
   const textRef = useRef(null);
-
+const {language}=useStore();
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
 
@@ -30,19 +31,20 @@ const ShortRevealHeading = () => {
         textRef.current,
         {
           scale: 0.8,
-          backgroundPosition: "-600px 0", // Move the gradient across the text
+          backgroundPosition: `${language==="en"?"-600px 0":"500px 0"}`, // Move the gradient across the text
         },
         {
           scale: 1.2,
           // duration: 1,
-          backgroundPosition: "500px 0", // Move the gradient across the text
+          backgroundPosition: `${language==="en"?"500px 0":"-600px 0"}`, // Move the gradient across the text
+          // backgroundPosition: "500px 0", // Move the gradient across the text
           ease: "none",
         }
       );
   }, []);
 
   return (
-    <div className="container h-[400px] mb-[800px] 2xl:mb-[700px] sm:mt-[-1700px] mt-[-1800px] 2xl:mt-[-2000px] flex justify-center items-center mx-auto">
+    <div className={`container h-[400px] mb-[800px] ${language==="en"?"2xl:mb-[700px] 2xl:mt-[-2000px]":"2xl:mb-[1000px] 2xl:mt-[-2300px]"} sm:mt-[-1700px] mt-[-1800px]  flex justify-center items-center mx-auto`}>
       <p
         ref={textRef}
         className="animated-text-short main-heading header text-4xl sm:text-[60px] text-white"

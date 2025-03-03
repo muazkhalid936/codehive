@@ -1,5 +1,5 @@
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight,FiArrowUpLeft } from "react-icons/fi";
 import {  useRouter } from '../../i18n/routing';
 
 import useStore from "../../store/useUserStore";
@@ -32,10 +32,10 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
           </h1>
         </div>
         <div>
-          <h1 className={`text-start ${language==="en"?"bg-gradient-to-r":"bg-gradient-to-l"}  from-white via-blueColor to-blueColor bg-clip-text text-transparent font-extrabold leading-tight sub_heading`}>
+          <span className={`text-start bg-gradient-to-r  from-white via-blueColor to-blueColor bg-clip-text text-transparent font-extrabold leading-tight sub_heading`}>
             {heading}
             
-          </h1>
+          </span>
         </div>
 
         <div className="main_hero_slogan text-start text-white">{para}</div>
@@ -47,7 +47,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
           >
             {language === "en" ? "Read More" : "اقرأ أكثر"}
             <div className=" bg-white sm:mt-1 text-black rounded-full ">
-              <FiArrowUpRight className="sm:text-lg text-sm" />
+              {language==="en"?<FiArrowUpRight className="sm:text-lg text-sm" />:<FiArrowUpLeft className="sm:text-lg text-sm" />}
             </div>
           </button>
         </div>

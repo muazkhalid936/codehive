@@ -3615,6 +3615,8 @@ export const ourWorks = [
       image: "/our-work/faoolun/solutions.png",
     },
     image: "/our-work/faoolun/Banner.png",
+    bgColor:"#D79759",
+    bg:true,
   },
   {
     bgColor:"#BC735D",

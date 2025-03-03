@@ -119,7 +119,7 @@ const NavbarPages = ({ isBlack }) => {
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
             onMouseLeave={() => setIsServicesDropdownOpen(false)}
           >
-{t("services1")}
+            {t("services1")}
             {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             {isServicesDropdownOpen && (
               <div className="absolute top-7 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">

@@ -214,10 +214,16 @@ const StackingImages = () => {
   }, []);
 
   return (
-    <div className="bg-[#000B17] container mx-auto ">
+    <div className="bg-[#000B17] container mx-auto "
+    
+    >
+
+
       <div className="new-cards flex sm:flex-row  flex-col-reverse  items-center gap-20  justify-center sm:justify-between  h-[100vh] min-h-[400px] mx-auto">
         <div className="flex sm:w-1/2  mt-[200px] sm:mt-0 sm:h-auto justify-between  flex-col gap-20 sm:gap-5 first-container">
-          <div className="new-icon-container sm:absolute flex justify-between flex-1 left-0 -mt-[90px]  gap-1">
+          <div className="new-icon-container sm:absolute flex justify-between flex-1 left-0 -mt-[90px]  gap-1"
+          dir={language === "en" ? "ltr" : "rtl"}
+          >
             {IconsArr.map((Icon, i) => {
               const activeColor = active === i ? "#219bd9" : "#FFFFFF";
               return (

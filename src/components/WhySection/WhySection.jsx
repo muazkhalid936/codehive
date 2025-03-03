@@ -12,6 +12,7 @@ const ScrollAnimation = dynamic(() => import("../Home/ScrollAnimation"), {
 gsap.registerPlugin(ScrollTrigger);
 
 const ImageScrollEffect = () => {
+  const { language } = useStore();
   useEffect(() => {
     // Desktop GSAP timeline animations
     const timeline = gsap.timeline({
@@ -26,17 +27,17 @@ const ImageScrollEffect = () => {
     });
 
     const applyGradient = (headingSelector, progress) => {
-      // Interpolate between white => #209dd9
-      const startColor = [255, 255, 255];
-      const endColor = [32, 157, 217];
+      const startColor = [255, 255, 255]; // Always start with white
+      const endColor = [32, 157, 217]; // Always end with blue
+    
       const currentColor = startColor.map((start, i) =>
         Math.round(start + (endColor[i] - start) * progress)
       );
-
+    
       const heading = document.querySelector(headingSelector);
       if (heading) {
         heading.style.background = `linear-gradient(
-          90deg,
+          ${language==="en"?"to right":"to left"},
           rgb(${startColor.join(", ")}),
           rgb(${currentColor.join(", ")})
         )`;
@@ -96,8 +97,7 @@ const ImageScrollEffect = () => {
         );
     };
 
-    if(window.innerWidth > 640){
-
+    if (window.innerWidth > 640) {
       headingAnimations();
     }
 
@@ -149,13 +149,16 @@ const ImageScrollEffect = () => {
         {/* Headings */}
         <div className="text-4xl sm:text-[60px] justify-start flex flex-col">
           <h1 className="why-section-heading-1 main-heading">
-            {firstTitleRest} <span className="colorText1 ml-4">{firstTitleLast}</span>
+            {firstTitleRest}{" "}
+            <span className={`${language==="en"?"colorText1":"colorText12"} ml-4`}>{firstTitleLast}</span>
           </h1>
           <h1 className="why-section-heading-2 main-heading">
-            {ScndTitleRest} <span className="colorText2 ml-4">{ScndTitleLast}</span>
+            {ScndTitleRest}{" "}
+            <span className="colorText2 ml-4">{ScndTitleLast}</span>
           </h1>
           <h1 className="why-section-heading-3 main-heading">
-            {thirdTitleRest} <span className="colorText3">{thirdTitleLast}</span>
+            {thirdTitleRest}{" "}
+            <span className="colorText3">{thirdTitleLast}</span>
           </h1>
         </div>
       </div>
