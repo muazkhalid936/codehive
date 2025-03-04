@@ -117,8 +117,7 @@ const NavbarPages = ({ isBlack }) => {
                   <Link
                     key={service.label}
                     href={service.href}
-                    className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
-                  >
+                    className={`block py-2 px-4 text-white ${language==="en"?"border-l-4":"border-r-4"} border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]`}                  >
                     {t(service.label)}
                     {/* {service.label} */}
                   </Link>
@@ -144,8 +143,7 @@ const NavbarPages = ({ isBlack }) => {
                       <Link
                         key={industry.label}
                         href={industry.href}
-                        className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
-                      >
+                        className={`block py-2 px-4 text-white ${language==="en"?"border-l-4":"border-r-4"} border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]`}                      >
                         {/* {t(industry.label)} */}
                         {t(industry.label)}
                       </Link>
@@ -166,13 +164,12 @@ const NavbarPages = ({ isBlack }) => {
               <div className="absolute top-7 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
                 <Link
                   href="/industries/our-booking-system"
-                  className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
-                >
+                  className={`block py-2 px-4 text-white ${language==="en"?"border-l-4":"border-r-4"} border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]`}                >
                   {t("ourBooking")}
                 </Link>
                 <Link
                   href="/industries/reward-hive"
-                  className="block py-2 px-4 text-white border-l-4 border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]"
+                  className={`block py-2 px-4 text-white ${language==="en"?"border-l-4":"border-r-4"} border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]`}
                 >
                   {t("rewardHive")}
                 </Link>
