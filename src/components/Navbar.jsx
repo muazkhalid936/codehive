@@ -181,12 +181,27 @@ const Navbar = () => {
 
       {/* SIDEBAR (Mobile) */}
       <div
-        className={`fixed top-0 right-0 h-screen w-[80%] max-w-[300px] 
-          !font-lato main_hero_slogan bg-[#000b17] text-white transform ${
-            isSidebarOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-300 z-[999]`}
+        className={`fixed top-0 ${
+          language === "ar" ? "left-0" : "right-0"
+        } h-screen w-[70%] max-w-[300px] 
+         !font-lato main_hero_slogan bg-[#000b17] text-white transform ${
+           isSidebarOpen
+             ? "translate-x-0"
+             : language === "ar"
+             ? "-translate-x-full"
+             : "translate-x-full"
+         } transition-transform duration-300 z-[999]`}
+        dir={language === "ar" ? "rtl" : "ltr"}
       >
         <div className="flex justify-end items-center px-4 py-4 border-b border-gray-600">
+          {/* <Link href="/">
+                 <img
+                   src="/Code hive Branding-01.png"
+                   className="w-32"
+                   alt="logo"
+                   onClick={() => setIsSidebarOpen(false)}
+                 />
+               </Link> */}
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="text-2xl focus:outline-none"
@@ -194,7 +209,6 @@ const Navbar = () => {
             <FaTimes />
           </button>
         </div>
-
         {/* Sidebar Links */}
         <div className="flex flex-col gap-4 p-4">
           <Link
@@ -242,7 +256,7 @@ const Navbar = () => {
               {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {isIndustriesDropdownOpen && (
-              <div className="mt-2 ml-4 flex flex-col space-y-2">
+              <div className="mt-2 flex flex-col space-y-2">
                 {industriesDropdown?.map(
                   (industry) =>
                     industry.label !== "ourBooking" &&
@@ -251,9 +265,9 @@ const Navbar = () => {
                         key={industry.label}
                         href={industry.href}
                         onClick={() => setIsSidebarOpen(false)}
-                        className="hover:text-blueColor"
+                        className="hover:bg-[#219DD92B] hover:border-l-2 hover:border-blueColor"
                       >
-                        {t(industry.label)}
+                        <span className="ml-2">{t(industry.label)}</span>
                       </Link>
                     )
                 )}
@@ -270,22 +284,24 @@ const Navbar = () => {
               <span>{t("products")}</span>
               {work ? <FaCaretUp /> : <FaCaretDown />}
             </div>
-            {work && (
-              <div className="mt-2 ml-4 flex flex-col space-y-2">
-                <Link
-                  href="/industries/our-booking-system"
-                  className="hover:text-blueColor"
-                >
-                  {t("ourBooking")}
-                </Link>
-                <Link
-                  href="/industries/reward-hive"
-                  className="hover:text-blueColor"
-                >
-                  {t("rewardHive")}
-                </Link>
-              </div>
-            )}
+            <div className="mt-2 flex flex-col space-y-2">
+              {work && (
+                <>
+                  <Link
+                    href="/industries/our-booking-system"
+                    className="hover:bg-[#219DD92B] hover:border-l-2  hover:border-blueColor"
+                  >
+                    <span className="ml-2">{t("ourBooking")}</span>
+                  </Link>
+                  <Link
+                    href="/industries/reward-hive"
+                    className="hover:bg-[#219DD92B] hover:border-l-2  hover:border-blueColor"
+                  >
+                    <span className="ml-2">{t("rewardHive")}</span>
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
 
           <Link
@@ -314,7 +330,7 @@ const Navbar = () => {
               {language === "en" ? "العربية" : "English"}
             </button>
           </div>
-        </div>
+        </div>{" "}
       </div>
     </>
   );

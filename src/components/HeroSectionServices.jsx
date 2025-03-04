@@ -18,6 +18,7 @@ const HeroSectionServices = ({
   const button1 = t(buttonText);
   // const titleWords = title.split(' ');
   const flag = button1 === "Book a Session" ? true : false;
+  const flag2 = button1 === "احجز جلسة" ? true : false;
   const { language } = useStore();
   const colors =
     bgImage && rightImage
@@ -77,10 +78,12 @@ const HeroSectionServices = ({
                   {button1}
                 </p>
                 <div
-                  className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-20 ${
-                    flag ? "md:group-hover:translate-x-32 group-hover:!translate-x-[105px]"
-                    : language === "en"?"md:group-hover:translate-x-[102px]"
-                      : "md:group-hover:translate-x-12"
+                  className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300  ${
+                    flag ? "md:group-hover:translate-x-32 group-hover:translate-x-[105px]":
+                    flag2 ? "md:group-hover:translate-x-[100px] group-hover:translate-x-[70px]"
+
+                    : language === "en"?"group-hover:translate-x-20 md:group-hover:translate-x-[102px]"
+                      : "md:group-hover:translate-x-12 group-hover:translate-x-9"
                   } overflow-hidden`}
                 >
                   <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />

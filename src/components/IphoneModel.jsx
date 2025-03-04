@@ -38,7 +38,7 @@ const IphoneModel = React.memo(({ textureUrl, meshRef }) => {
   }, [textureUrl, textures]);
 
   return (
-    <Stage intensity={1} environment={"city"} shadows={false}>
+    <Stage intensity={10} environment={"city"} shadows={false}>
       <primitive
         ref={meshRef}
         object={scene}

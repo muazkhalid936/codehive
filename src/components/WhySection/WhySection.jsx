@@ -169,19 +169,19 @@ const ImageScrollEffect = () => {
         <div className="mobile-item flex flex-col text-3xl justify-between items-center gap-5">
           <img src="/Why/1.png" alt="" className="h-[150px] object-cover" />
           <h1 className="why-section-heading-1 text-center main-heading">
-            Unrivaled <span className="colorText1">Expertise</span>
+            {firstTitleRest} <span className={`${language==="en"?"colorText1":"colorText12"} ml-2`}>{firstTitleLast}</span>
           </h1>
         </div>
         <div className="mobile-item flex flex-col justify-between text-3xl items-center gap-5">
           <img src="/Why/2.png" alt="" className="h-[150px] object-cover" />
           <h1 className="why-section-heading-2 text-center main-heading">
-            Customer-Centric <span className="colorText1 ml-2">Approach</span>
+            {ScndTitleRest} <span className={`${language==="en"?"colorText1":"colorText12"} ml-2`}>{ScndTitleLast}</span>
           </h1>
         </div>
         <div className="mobile-item flex flex-col justify-between items-center gap-5">
           <img src="/Why/3.png" alt="" className="h-[150px] object-cover" />
           <h1 className="why-section-heading-3 text-center text-3xl main-heading">
-            End-to-End <span className="colorText1 ml-2">Support</span>
+            {thirdTitleRest} <span className={`${language==="en"?"colorText1":"colorText12"} ml-2`}>{thirdTitleLast}</span>
           </h1>
         </div>
       </div>

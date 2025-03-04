@@ -2923,7 +2923,7 @@ export const ourWorks = [
     slug: "word-smith-ai",
     heroData: {
       title: "wordsmithA",
-      bottom:true,
+      // bottom:true,
       description: "writeEmail",
       bgImage: "/our-work/wordsmith-ai/herobg.png",
       rightImage: "/our-work/wordsmith-ai/hero-right.png",

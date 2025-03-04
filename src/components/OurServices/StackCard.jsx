@@ -11,7 +11,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
   const lastTwoWords = splitHeading.slice(-2).join(" ");
   const restOfHeading = splitHeading.slice(0, -2).join(" ");
   return (
-    <div className="service-stack-card flex   text-white flex-col md:flex-row  gap-5 justify-between sm:gap-10 my-auto sm:w-[95%] rounded-3xl overflow-hidden sm:p-5  p-2 relative ">
+    <div className={`${language==="en"?"h-[460px]":"h-[430px]"}  sm:h-[400px]  flex   text-white flex-col md:flex-row  gap-5 justify-between sm:gap-10 my-auto sm:w-[95%] rounded-3xl overflow-hidden sm:p-5  p-2 relative `}>
       <div
         className="absolute  p-[1px] top-0  left-0 h-full w-full "
         style={{
@@ -42,7 +42,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
 
         <div className=" flex justify-start items-start flex-1 gap-2">
           <button
-            className="xl:text-xl flex gap-2 items-center "
+            className="xl:text-xl mt-2 flex gap-2 items-center "
             onClick={() => router.push(link)}
           >
             {language === "en" ? "Read More" : "اقرأ أكثر"}

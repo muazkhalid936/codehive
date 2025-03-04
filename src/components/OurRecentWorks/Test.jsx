@@ -2,23 +2,22 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {  useRouter } from '../../i18n/routing';
+import { useRouter } from '../../i18n/routing';
 import useStore from "../../store/useUserStore";
 import Lenis from "@studio-freight/lenis"; 
 import Card from "./Card";
 gsap.registerPlugin(ScrollTrigger);
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong,FaArrowLeftLong } from "react-icons/fa6";
 
 const HorizontalScroll = () => {
   const { language } = useStore();
   const router = useRouter();
   const containerRef = useRef(null);
-
   const cardsData = [
     {
       head: "Al Abour",
       ahead: "العبور",
-
+  
       para: "Efficient camel transport with tracking.",
       apara: "نقل الھجن الموثوق مع التتبع",
       bgImg: "/Homapage/carosuel/1.jpeg",
@@ -73,6 +72,7 @@ const HorizontalScroll = () => {
     },
   ];
 
+ 
   useEffect(() => {
     const lenis = new Lenis({
       smooth: true,
@@ -94,13 +94,16 @@ const HorizontalScroll = () => {
     const cards = container.querySelector(".card-row");
     const totalScrollWidth = cards.scrollWidth - container.clientWidth;
 
+    // Determine the direction based on the language
+    const xValue = language === "ar" ? totalScrollWidth : -totalScrollWidth;
+
     gsap.to(cards, {
-      x: -totalScrollWidth,
+      x: xValue,
       ease: "none",
       scrollTrigger: {
         trigger: container,
         start: "top top",
-        end: `+=${cards.scrollWidth*0.5}`,
+        end: `+=${cards.scrollWidth * 0.5}`,
         scrub: true,
         pin: true,
         invalidateOnRefresh: true,
@@ -110,10 +113,12 @@ const HorizontalScroll = () => {
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, [language]); // Add language as a dependency
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto"
+    dir={language==="ar"?"rtl":"ltr"}
+    >
       <div
         ref={containerRef}
         className=""
@@ -130,7 +135,8 @@ const HorizontalScroll = () => {
             gap: "20px",
             position: "absolute",
             top: "50%",
-            left: "0",
+            left: language === "ar" ? "auto" : "0",
+            right: language === "ar" ? "0" : "auto",
             transform: "translateY(-50%)",
             willChange: "transform",
           }}
@@ -158,8 +164,6 @@ const HorizontalScroll = () => {
             className="view-more-btn flex justify-center items-center"
             style={{
               minWidth: "200px",
-              // height: '300px',
-              // backgroundColor: '#f3f4f6',
               borderRadius: "8px",
               textAlign: "center",
             }}
@@ -168,12 +172,15 @@ const HorizontalScroll = () => {
               onClick={() => router.push("/our-work")}
               className="text-white bg-blueColor px-3 rounded-full flex gap-5 justify-center items-center font-lato py-2"
             >
-              View More{" "}
-              <FaArrowRightLong className="bg-white  text-blueColor w-8 h-8 p-2 rounded-full text-4xl " />
+              {language==="en"?"View More":"عرض المزيد"}
+              {
+                language==="en"?
+                <FaArrowRightLong className="bg-white  text-blueColor w-8 h-8 p-2 rounded-full text-4xl " />:
+                <FaArrowLeftLong className="bg-white  text-blueColor w-8 h-8 p-2 rounded-full text-4xl " />
+              }
             </button>
           </div>
         </div>
-        
       </div>
     </div>
   );

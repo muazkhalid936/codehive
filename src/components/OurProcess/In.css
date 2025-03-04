@@ -27,7 +27,7 @@
 
 .new-text {
   position: absolute;
-  text-align: start;
+  /* text-align: start; */
   top: 50%;
   transform: translateY(-50%);
 }

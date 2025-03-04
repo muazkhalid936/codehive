@@ -258,10 +258,6 @@
   transform: translateY(-30%);
 }
 
-.service-stack-card {
-  @apply sm:h-[400px] h-[460px];
-}
-
 .second-component {
   margin-top: -400px;
 }

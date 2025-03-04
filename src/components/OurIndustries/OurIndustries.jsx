@@ -78,11 +78,10 @@ export const ourIndustriesData = [
       "بسط عمليات جدولة الحصص، إدارة الاشتراكات، والمدفوعات عبر أتمتة سلسة. من خلال التحليلات المستندة إلى البيانات وواجهة الاستخدام الذكية، تساعدك حلولنا على بناء مجتمع رياضي قوي ومخلص.",
   },
 ];
-
+import { FiArrowUpRight,FiArrowUpLeft } from "react-icons/fi";
 import { useEffect, useRef, useState, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FiArrowUpRight } from "react-icons/fi";
 import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
 import useStore from "../../store/useUserStore";
@@ -215,6 +214,7 @@ const ScrollAnimation = () => {
       <div
         ref={containerRef}
         className="flex flex-col container items-center justify-center mt-[-300px] h-[100vh] min-h-[400px] main22"
+        language={language==="en"?"ltr":"rtl"}
       >
         {ourIndustriesData.map((item, index) => (
           <div
@@ -230,7 +230,7 @@ const ScrollAnimation = () => {
               dir={language === "en" ? "ltr" : "rtl"}
             >
               <div className="flex justify-center sm:justify-start">
-                <p className="font-bold bg-gradient-to-r from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading text-[20px] sm:text-3xl md:text-5xl xl:text-6xl">
+                <p className={`font-bold ${language==="en"?"bg-gradient-to-r":"bg-gradient-to-l"} from-white via-blueColor to-blueColor bg-clip-text text-transparent main-heading sub_heading`}>
                   {language === "en" ? item.title : item.atitle}
                 </p>
               </div>
@@ -257,7 +257,7 @@ const ScrollAnimation = () => {
                   {t("readMore9")}
                 </Link>
                 <div className="bg-white text-black mt-2 sm:mt-3 rounded-full">
-                  <FiArrowUpRight className="text-[12px] sm:text-lg" />
+              {language==="en"?<FiArrowUpRight className="sm:text-lg text-sm" />:<FiArrowUpLeft className="sm:text-lg text-sm" />}
                 </div>
               </div>
             </div>

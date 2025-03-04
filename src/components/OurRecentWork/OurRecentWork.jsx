@@ -3,10 +3,12 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./LongRevealHeading.css";
+import useStore from "../../store/useUserStore";
 gsap.registerPlugin(ScrollTrigger);
 
 const LongRevealHeading = (params) => {
   const textRef = useRef(null);
+  const { language } = useStore();
 
   useEffect(() => {
     // GSAP Scroll Animation
@@ -26,12 +28,14 @@ const LongRevealHeading = (params) => {
         textRef.current,
         {
           scale: 0.8,
-          backgroundPosition: "-600px 0", // Move the gradient across the text
+          backgroundPosition:`${language==="en"?"-600px 0":"600px 0"}`,
+          // backgroundPosition: "-600px 0", // Move the gradient across the text
         },
         {
           scale: 1.2,
           // duration: 1,
-          backgroundPosition: "600px 0", // Move the gradient across the text
+          backgroundPosition:`${language==="en"?"600px 0":"-600px 0"}`,
+          // backgroundPosition: "600px 0", // Move the gradient across the text
           ease: "none",
         }
       );

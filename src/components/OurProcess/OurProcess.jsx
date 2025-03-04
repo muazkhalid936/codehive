@@ -220,8 +220,8 @@ const StackingImages = () => {
 
 
       <div className="new-cards flex sm:flex-row  flex-col-reverse  items-center gap-20  justify-center sm:justify-between  h-[100vh] min-h-[400px] mx-auto">
-        <div className="flex sm:w-1/2  mt-[200px] sm:mt-0 sm:h-auto justify-between  flex-col gap-20 sm:gap-5 first-container">
-          <div className="new-icon-container sm:absolute flex justify-between flex-1 left-0 -mt-[90px]  gap-1"
+        <div className="flex sm:w-1/2 relative  mt-[200px] sm:mt-0 sm:h-auto justify-between  flex-col gap-20 sm:gap-5 first-container">
+          <div className={`new-icon-container sm:absolute flex justify-between flex-1 ${language==="en"?"left-0":"right-0"} -mt-[90px]  gap-1`}
           dir={language === "en" ? "ltr" : "rtl"}
           >
             {IconsArr.map((Icon, i) => {
@@ -304,11 +304,11 @@ const StackingImages = () => {
                 <div
                   key={i}
                   dir={language === "en" ? "ltr" : "rtl"}
-                  className={`new-text mt-[30px] sm:mt-[65px] flex-1 w-[85vw] sm:w-auto  flex flex-col gap-4 main_hero_slogan new-text-${
+                  className={`new-text mt-[30px]  sm:mt-[65px] flex-1 w-[85vw] sm:w-full  flex flex-col gap-4 main_hero_slogan new-text-${
                     i + 1
                   }`}
                 >
-                  <p className="font-bold w-full text-center sm:text-start !font-lato !text-white  ">
+                  <p className={`font-bold w-full text-center sm:text-start !font-lato !text-white  `}>
                     <span className="font-bold   sub_heading leading-none mt-5  main-heading text-white">
                       <span className="bg-gradient-to-r from-white  to-blueColor bg-clip-text text-transparent">
                         {titleWords}
