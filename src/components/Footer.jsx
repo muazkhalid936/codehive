@@ -87,12 +87,14 @@ const Footer = () => {
           <p className="text-white main_hero_slogan ">
             {language === "en"
               ? "Phone: +971 4 234 2168"
-              : "رقم الھاتف : +97142342168"}
+              :  " رقم الھاتف : 2168 234 4 971+"}
+              
           </p>
           <p className="text-white main_hero_slogan ">
             {language === "en"
               ? "Whatsapp: +971 54 220 3330"
-              : "واتساب: +971 54 220 3330"}
+              : "واتساب: 3330 220 54 971+"}
+              
           </p>
           <p className="text-white main_hero_slogan ">
             {language === "en"

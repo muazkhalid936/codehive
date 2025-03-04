@@ -9,7 +9,7 @@ const testimonialsData = [
     id: 3,
     name: "Sara Ali ",
     bgColor:"bg-[#125784]",
-
+quote:"/quote.png",
     role: "Head of Operations, NextGen Enterprises ",
     content:
       "From the initial consultation to the final delivery, CodeHive showed outstanding communication and problem-solving skills. They were always available to discuss concerns and were quick to adapt to any changes in the project. Their work ethic and results were truly impressive.",
@@ -22,7 +22,7 @@ const testimonialsData = [
     name: "Ahmed Raza ",
     // bgColor:"bg-[#125784]",
     bgColor:"bg-[#000C1A]",
-
+quote:"/quote.png",
     role: "Project Manager, Global Solutions Inc. ",
     content:
       "Working with CodeHive was an absolute pleasure. Their team was not only skilled but also highly professional, ensuring that all deadlines were met and that the final product exceeded our expectations. Their attention to detail and customer-first attitude made them stand out.",
@@ -34,6 +34,7 @@ const testimonialsData = [
     name: "Ayesha Khan ",
     role: "CEO, Tech Innovations Ltd ",
     bgColor:"bg-[#219DD9]",
+    quote:"/whitequote.png",
     content:
       "The team at CodeHive demonstrated exceptional teamwork and creativity throughout our collaboration. They took the time to understand our needs and provided valuable insights, helping us achieve our project goals. I am grateful for their support and highly recommend them.",
     contentAr:
@@ -121,7 +122,7 @@ const card2="bg-yellow-200";
               className="absolute bottom-[-50px] left-[-50px]"
             />
             <img
-              src="/quote.png"
+              src={card.quote}
               alt="Quotation Marks"
               className="w-8 absolute top-2 left-4 h-8"
             />

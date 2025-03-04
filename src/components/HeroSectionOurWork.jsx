@@ -59,7 +59,7 @@ const {language}=useStore();
         <img
           src="/feature/gray.png"
           alt="Decorative Top Arrow"
-          className="absolute hidden sm:flex top-20 -right-0  h-[200px] md:h-[300px] object-contain"
+          className={`absolute hidden sm:flex top-20 ${language==="en"?"-right-0":"left-0 scale-x-[-1]"}  h-[200px]  md:h-[300px] object-contain`}
           aria-label="Top Arrow"
         />
       )}

@@ -66,7 +66,7 @@ const HeroSection = ({
         <img
           src="/feature/gray.png"
           alt="Decorative Top Arrow"
-          className="absolute hidden sm:flex top-20 -right-0  h-[200px]  md:h-[300px] object-contain"
+          className={`absolute hidden sm:flex top-20 ${language==="en"?"-right-0":"left-0 scale-x-[-1]"}  h-[200px]  md:h-[300px] object-contain`}
           aria-label="Top Arrow"
         />
       )}
@@ -90,10 +90,10 @@ const HeroSection = ({
                   {buttonText}
                 </p>
                 <div
-                  className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-20 ${
+                  className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300  ${
                     language === "en"
-                      ? "md:group-hover:translate-x-28"
-                      : "md:group-hover:translate-x-12"
+                      ? "md:group-hover:translate-x-28 group-hover:translate-x-20"
+                      : "md:group-hover:translate-x-12 group-hover:translate-x-[35px]"
                   } overflow-hidden`}
                 >
                   <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />

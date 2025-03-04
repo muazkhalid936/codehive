@@ -60,7 +60,7 @@ const ContactInfo = () => {
               </div>
             </p>
             {/* Location */}
-            <p className="flex w-[80%] sm:w-full mx-auto items-center text-start  main_hero_slogan">
+            <p className="flex w-[80%] sm:w-full mx-auto items-center justify-center text-start  main_hero_slogan">
               <img src="/contact/gps.png" className="w-7 mx-3 " />
               {t("officeM181")}
             </p>

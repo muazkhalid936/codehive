@@ -299,10 +299,12 @@ const OurMission = ({ data }) => {
     >
       <div className="flex flex-col-reverse gap-[30px] sm:gap-0 sm:flex-row ">
         <div className="sm:w-1/2">
-          <img src="/G2.png" />
+        {
+          language === "en" ? <img src="/G2.png" /> : <img src="/m2.png" />
+        }
         </div>
 
-        <div className="sm:w-1/2 flex font-lato justify-center sm:pr-[30px]  sm:pl-20 flex-col">
+        <div className={`sm:w-1/2 flex font-lato justify-center ${language==="en"?"sm:pr-[30px]  sm:pl-20":"sm:pl-[30px]  sm:pr-20"} flex-col`}>
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
             01.
           </p>
@@ -316,11 +318,11 @@ const OurMission = ({ data }) => {
       </div>
 
       <div className="flex flex-col-reverse gap-[30px] sm:gap-0 sm:flex-row-reverse ">
-        <div className="sm:w-1/2">
-          <img src="/G1.png" />
+        <div className="sm:w-1/2">{
+        language === "en" ? <img src="/G1.png" /> : <img src="/m1.png" />}
         </div>
 
-        <div className="sm:w-1/2 flex font-lato justify-center  sm:pr-20 sm:pl-[30px] flex-col">
+        <div className={`sm:w-1/2 flex font-lato justify-center ${language==="en"?"sm:pr-20 sm:pl-[30px]":"sm:pl-20 sm:pr-[30px]"}  flex-col`}>
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
             02.
           </p>

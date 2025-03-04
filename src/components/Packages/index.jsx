@@ -5,7 +5,7 @@ import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { useTranslations } from "next-intl";
 import "./style.css";
-
+import useStore from "../../store/useUserStore";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const index = () => {
+  const {language} = useStore();
   const t = useTranslations("translation");
 
   const features1 = [
@@ -229,11 +230,16 @@ const index = () => {
               initialSlide={1}
               // loop={true}
               // navigation
+              dir={language === "en" ? "ltr" : "rtl"}
+
               // pagination={{ clickable: true }}
               className="flex sm:hidden items-end justify-end"
             >
               <SwiperSlide className="mt-[90px]">
-                <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+                <div 
+                            dir={language === "en" ? "ltr" : "rtl"}
+
+                className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] leading-none mx-auto text-center">
                       {t("basic")}
@@ -291,7 +297,10 @@ const index = () => {
               </SwiperSlide>
 
               <SwiperSlide className="">
-                <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[500px]  to-[#2093CA70]  p-[2px] rounded-2xl">
+                <div
+                            dir={language === "en" ? "ltr" : "rtl"}
+
+                className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[500px]  to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
                     <p className=" w-[70%] mx-auto text-center text-[14px] text-[#1FCB78] border border-[#1FCB78] py-2  font-semibold rounded-full z-20 my-5">
                       {t("mostPopula")}
@@ -352,7 +361,10 @@ const index = () => {
               </SwiperSlide>
 
               <SwiperSlide className="mt-[90px]">
-                <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+                <div
+                            dir={language === "en" ? "ltr" : "rtl"}
+
+                className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] mx-auto text-center">
                       {t("enterprise")}

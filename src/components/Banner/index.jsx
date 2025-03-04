@@ -86,12 +86,19 @@ const Banner = ({
                 {showDecsription && t(description)}
               </p>
             )}
-            <div className="flex z-[2] justify-center sm:justify-start items-start">
-              <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
+            <div className="flex z-[2] justify-center sm:justify-start items-start"
+            >
+              <button
+              dir="ltr"
+              
+              className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
                 <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
                   {t(buttonTitle)}
                 </p>
-                <div className="bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 group-hover:translate-x-20 md:group-hover:translate-x-24 overflow-hidden">
+                <div className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 
+                  
+                  ${t(buttonTitle)==="احصل على عرض"?" group-hover:translate-x-24 md:group-hover:translate-x-32":" group-hover:translate-x-20 md:group-hover:translate-x-[105px]"}
+                   overflow-hidden`}>
                   <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />
                 </div>
               </button>

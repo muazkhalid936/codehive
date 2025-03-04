@@ -13,9 +13,10 @@ const WhoWeAre = () => {
 
   return (
     <div className="container py-[40px] sm:py-[55px] rounded-lg">
-      <div className="bg-[url('/whoweare/bgImage.png')] bg-cover  h-[170px] sm:min-h-[350px] md:max-h-[450px]  bg-center sm:h-[50vh] w-full rounded-[20px] items-center md:items-center justify-start sm:justify-center flex md:justify-around  sm:gap-32 gap:4 px-6 sm:px-0">
-        <div className="flex flex-col text-white w-full sm:w-1/2 sm:pl-20"
-        dir={language === "en" ? "ltr" : "rtl"}>
+      <div 
+        dir={language === "en" ? "ltr" : "rtl"}
+      className="bg-[url('/whoweare/bgImage.png')] bg-cover  h-[170px] sm:min-h-[350px] md:max-h-[450px]  bg-center sm:h-[50vh] w-full rounded-[20px] items-center md:items-center justify-start sm:justify-center flex md:justify-around  sm:gap-32 gap:4 px-6 sm:px-0">
+        <div className={`flex flex-col text-white w-full sm:w-1/2 ${language === "en" ? "sm:pl-20" : "sm:pr-20"}`}>
         
           <h2 className="sub_heading font-bold  flex-1 gilray-font">
             {title.split(" ").map((word, index) => (

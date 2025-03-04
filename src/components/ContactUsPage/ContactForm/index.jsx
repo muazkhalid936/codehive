@@ -65,7 +65,7 @@ const ContactForm = () => {
             Let's Talk
           </h2> */}
               <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
-                <span className="main-heading bg-gradient-to-r from-white to-blueColor bg-clip-text text-transparent">
+                <span className={`main-heading ${language==="en"?"bg-gradient-to-r":"bg-gradient-to-l"} from-white to-blueColor bg-clip-text text-transparent`}>
                   {t("contactUs")}{" "}
                 </span>
               </h3>
@@ -134,7 +134,7 @@ const ContactForm = () => {
                         setIsOpen(false); // Close dropdown when focus is lost
                       }}
                       onClick={() => setIsOpen((prev) => !prev)} // Toggle dropdown open/close state
-                      className="peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full border-b-2 border-gray-500 appearance-none pr-8 invalid:text-gray-400"
+                      className={`peer p-3 bg-[#041c30] text-white rounded-none focus:outline-none w-full border-b-2 border-gray-500 appearance-none ${language==="en"?" pr-8":" pl-8"} invalid:text-gray-400`}
                     >
                       <option value="" disabled defaultValue={""} hidden>
                         {t(field.placeholder)}
@@ -151,7 +151,7 @@ const ContactForm = () => {
                     </select>
 
                     {/* Icon toggles based on dropdown state */}
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <div className={`absolute inset-y-0 ${language==="ar"?"left-0":"right-0"} flex items-center pr-3 pointer-events-none`}>
                       {isOpen ? (
                         <HiChevronUp className="text-gray-500" />
                       ) : (
