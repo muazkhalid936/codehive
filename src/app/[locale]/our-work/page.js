@@ -6,12 +6,14 @@ import { useState } from "react";
 import { usePathname, useRouter, Link } from "../../../i18n/routing";
 import { useTranslations } from "next-intl";
 import Footer from "../../../components/Footer";
+import useStore from "../../../store/useUserStore";
 const page = () => {
   const t = useTranslations("translation");
   const router = useRouter();
   const [option, setOption] = useState("all");
   const title = t("turningYou");
   const words = title.split(" ");
+  const {language} = useStore();
   const highlightIndices = [7, 8, 10];
 
   return (
@@ -51,51 +53,55 @@ const page = () => {
         </div>
       </div>
 
-      <div className="  container mb-[55px]  mx-auto ">
-      <div className="w-full overflow-x-scroll no-scrollbar">
-  <div className="flex my-[40px] sm:my-[55px] main_hero_slogan gap-2 sm:gap-5 whitespace-nowrap">
-    <button
-      onClick={() => setOption("all")}
-      className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
-        option === "all"
-          ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
-          : "bg-[#c3c3c3]"
-      }`}
-    >
-      {t("all")}
-    </button>
-    <button
-      onClick={() => setOption("web")}
-      className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
-        option === "web"
-          ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
-          : "bg-[#c3c3c3]"
-      }`}
-    >
-      {t("web")}
-    </button>
-    <button
-      onClick={() => setOption("mobile")}
-      className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
-        option === "mobile"
-          ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
-          : "bg-[#c3c3c3]"
-      }`}
-    >
-      {t("mobileAppl")}
-    </button>
-    <button
-      onClick={() => setOption("web-app")}
-      className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
-        option === "web-app"
-          ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
-          : "bg-[#c3c3c3]"
-      }`}
-    >
-      {t("webApplica")}
-    </button>
-  </div>
-</div>
+      <div className="  container mb-[55px]  mx-auto "
+      
+      >
+        <div className="w-full overflow-x-scroll no-scrollbar"
+        dir={language==="en"?"ltr":"rtl"}
+        >
+          <div className="flex my-[40px] sm:my-[55px] main_hero_slogan gap-2 sm:gap-5 whitespace-nowrap">
+            <button
+              onClick={() => setOption("all")}
+              className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+                option === "all"
+                  ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
+                  : "bg-[#c3c3c3]"
+              }`}
+            >
+              {t("all")}
+            </button>
+            <button
+              onClick={() => setOption("web")}
+              className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+                option === "web"
+                  ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
+                  : "bg-[#c3c3c3]"
+              }`}
+            >
+              {t("web")}
+            </button>
+            <button
+              onClick={() => setOption("mobile")}
+              className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+                option === "mobile"
+                  ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
+                  : "bg-[#c3c3c3]"
+              }`}
+            >
+              {t("mobileAppl")}
+            </button>
+            <button
+              onClick={() => setOption("web-app")}
+              className={`text-white px-10 main_hero_slogan py-2 rounded-full ${
+                option === "web-app"
+                  ? "bg-gradient-to-r from-[#053c7D] to-blueColor"
+                  : "bg-[#c3c3c3]"
+              }`}
+            >
+              {t("webApplica")}
+            </button>
+          </div>
+        </div>
 
         {option === "web" ? (
           <>
@@ -114,7 +120,9 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-2xl  text-center font-poppin">
-                    <Link href="/our-work/solwave-website">{t("solwave1")}</Link>
+                    <Link href="/our-work/solwave-website">
+                      {t("solwave1")}
+                    </Link>
                   </div>
                 </div>
               </div>
