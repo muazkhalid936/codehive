@@ -3,13 +3,16 @@
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
-
+import useStore from "../store/useUserStore";
 const testimonialsData = [
   {
     id: 3,
     name: "Sara Ali ",
     bgColor:"bg-[#125784]",
 quote:"/quote.png",
+aname:"سارة علي",
+adesignation: " رئيس العمليات، NextGen Enterprises",
+
     role: "Head of Operations, NextGen Enterprises ",
     content:
       "From the initial consultation to the final delivery, CodeHive showed outstanding communication and problem-solving skills. They were always available to discuss concerns and were quick to adapt to any changes in the project. Their work ethic and results were truly impressive.",
@@ -20,9 +23,13 @@ quote:"/quote.png",
   {
     id: 1,
     name: "Ahmed Raza ",
+    aname:"أحمد رضا",
+
     // bgColor:"bg-[#125784]",
     bgColor:"bg-[#000C1A]",
 quote:"/quote.png",
+adesignation: "مدير المشاريع، Global Solutions Inc.",
+
     role: "Project Manager, Global Solutions Inc. ",
     content:
       "Working with CodeHive was an absolute pleasure. Their team was not only skilled but also highly professional, ensuring that all deadlines were met and that the final product exceeded our expectations. Their attention to detail and customer-first attitude made them stand out.",
@@ -32,6 +39,9 @@ quote:"/quote.png",
   {
     id: 2,
     name: "Ayesha Khan ",
+    aname:"عائشة خان",
+    adesignation:"الرئيس التنفيذي، Tech Innovations Ltd ",
+
     role: "CEO, Tech Innovations Ltd ",
     bgColor:"bg-[#219DD9]",
     quote:"/whitequote.png",
@@ -42,10 +52,15 @@ quote:"/quote.png",
   },
  
 ];
-
+import { useTranslations } from "next-intl";
 export default function StackingCards() {
   const [cards, setCards] = useState(testimonialsData);
+  const t=useTranslations("translation");
+  const title=t("whatTheySa");
+  const segmenter = new Intl.Segmenter("ar", { granularity: "word" });
+  const words = Array.from(segmenter.segment(title)).map((seg) => seg.segment);
 
+const {language}  = useStore();
   useEffect(() => {
     gsap.set(".stacking-card", { opacity: 1 });
     positionCards();
@@ -94,13 +109,20 @@ const card2="bg-yellow-200";
           textUnderlinePosition: "from-font",
         }}
       >
-        What They <span className="text-blueColor">Say</span> About Us
-      </h2>
+{words.map((word, index) => (
+              <span
+                key={index}
+                className={`${index === 2 ? "text-blueColor" : "text-black"}`}
+              >
+                {word}{" "}
+              </span>
+            ))}      </h2>
 
       <div className="relative w-full flex items-center justify-center">
         {cards.map((card, index) => (
           <div
             key={card.id}
+            dir={language==="ar"?"rtl":"ltr"}
             id={`stacking-card-${index}`}
             className={`stacking-card absolute overflow-hidden h-[260px] w-[350px] testinomial-card text-white flex items-center justify-center rounded-xl shadow-lg ${card.bgColor}  `} // Static color for all cards
           >
@@ -108,13 +130,24 @@ const card2="bg-yellow-200";
               <img
                 src="/PartnerLogo.png"
                 alt="Vector Image"
-                className="absolute object-contain top-0 right-[-2vw] w-16 h-20 sm:h-22 mr-2"
+                className={`absolute object-contain top-0 ${language==="en"?"right-[-2vw]":"left-0 scale-x-[-1]"} w-16 h-20 sm:h-22 mr-2`}
               />
             </div>
             <div className="p-4">
-              <p className="main_hero_slogan">{card.content}</p>
-              <p className="font-bold mt-4">{card.name}</p>
-              <p className="main_hero_slogan">{card.role}</p>
+              <p className="main_hero_slogan">{
+              language==="en"?card.content:card.contentAr
+              }</p>
+             
+              <p className="font-bold mt-4">{
+              language==="en"?
+              card.name:
+              card.aname
+                
+                }</p>
+              <p className="main_hero_slogan">{
+              language==="ar"?
+              card.adesignation:
+              card.role}</p>
             </div>
             <img
               src="/technologies/shade.png"
@@ -124,7 +157,7 @@ const card2="bg-yellow-200";
             <img
               src={card.quote}
               alt="Quotation Marks"
-              className="w-8 absolute top-2 left-4 h-8"
+              className={`w-8 absolute top-2  ${language==="en"?"left-4":"right-4 scale-x-[-1]"} h-8`}
             />
           </div>
         ))}

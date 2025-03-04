@@ -308,7 +308,7 @@ const OurMission = ({ data }) => {
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
             01.
           </p>
-          <p className="font-bold text-[23px] sm:text-[30px] mb-[20px] sm:mb-0 text-center sm:text-start">
+          <p className="font-bold text-[23px] sm:text-[30px] mb-[15px] sm:mb-0 text-center sm:text-start">
             {t(data.mission)}
           </p>
           <p className=" text-[#878787] text-[10px]  sm:text-[15px] text-center sm:text-start">
@@ -326,7 +326,7 @@ const OurMission = ({ data }) => {
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
             02.
           </p>
-          <p className="font-bold text-[23px] sm:text-[30px] mb-[20px] sm:mb-0 text-center sm:text-start ">
+          <p className="font-bold text-[23px] sm:text-[30px] mb-[15px] sm:mb-0 text-center sm:text-start ">
             {t(data.vision)}
           </p>
           <p className="text-[#878787] text-[10px] sm:text-[15px] text-center sm:text-start">

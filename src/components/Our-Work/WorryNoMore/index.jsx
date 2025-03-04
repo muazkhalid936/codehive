@@ -31,10 +31,10 @@ const WorryNoMore = ({
       >
         <div
           className={`flex flex-col   text-black  ${
-            language === "en" ? " xl:w-[60%]" : "md:w-[50%]"
+            language === "en" ? "xl:pl-20 xl:w-[60%]" : "xl:pr-20 md:w-[50%]"
           } ${
             cut ? "worryNoMoreWidth xl:!w-[55%]" : "md:w-[65%] lg:!w-[60%]"
-          } pl-4 md:pl-10 xl:pl-20 pr-2  sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
+          } pl-4 md:pl-10  pr-2  sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
           dir={language === "en" ? "ltr" : "rtl"}
         >
           <h2 className="gilray-font z-[2] leading-tight sub_heading">

@@ -14,6 +14,10 @@ const IndustryDetails = ({ panelData }) => {
   const xVar = language === "ar" ? -100 : 100;
   // const xVar2 = language === "ar" ? 100 : -100;
 
+
+  const segmenter = new Intl.Segmenter(language, { granularity: "word" });
+  const words = Array.from(segmenter.segment(t(activePanel.heading))).map((seg) => seg.segment);
+  
   return (
     <div className="bg-[#000B17] overflow-hidden text-white py-[40px] sm:py-[55px]">
       <div
@@ -42,23 +46,22 @@ const IndustryDetails = ({ panelData }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="gilray-font mt-5 sm:mt-10 sub_heading">
-            {activePanel.blueTitle ? (
-              <>
-                {t(activePanel.heading).split(" ").slice(0, -2).join(" ")}
-                <span className="text-blueColor ml-2">
-                  {t(activePanel.heading).split(" ").slice(-2)}
-                </span>
-              </>
-            ) : (
-              <>
-                {t(activePanel.heading).split(" ").slice(0, -1).join(" ")}
-                <span className="text-blueColor ml-2">
-                  {t(activePanel.heading).split(" ").slice(-1).join(" ")}
-                </span>
-              </>
-            )}
-          </h1>
+        
+<h1 className="gilray-font mt-5 sm:mt-10 sub_heading">
+  {activePanel.blueTitle ? (
+    <>
+      {words.slice(0, -2).join(" ")}
+      <span className="text-blueColor ml-2">{words.slice(-2).join(" ")}</span>
+    </>
+  ) : (
+    <>
+      {words.slice(0, -1).join(" ")}
+      <span className="text-blueColor ml-2">{words.slice(-1).join(" ")}</span>
+    </>
+  )}
+</h1>
+
+
         </motion.div>
         <div className="flex  sm:mt-5">
           <motion.div

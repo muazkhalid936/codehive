@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import useStore from "../store/useUserStore";
 const HeroSectionServices = ({
   bgImage,
@@ -55,7 +55,9 @@ const HeroSectionServices = ({
         <img
           src="/HeroVector.png"
           alt="Decorative Top Arrow"
-          className={`absolute hidden sm:flex top-20 ${language==="en"?"-right-0":"left-0 scale-x-[-1]"} -z-50  h-[200px] md:h-[300px] object-contain`}
+          className={`absolute hidden sm:flex top-20 ${
+            language === "en" ? "-right-0" : "left-0 scale-x-[-1]"
+          } -z-50  h-[200px] md:h-[300px] object-contain`}
           aria-label="Top Arrow"
         />
       )}
@@ -73,20 +75,36 @@ const HeroSectionServices = ({
           )}
           {showButton && (
             <div className="flex justify-center sm:justify-start" dir="ltr">
-              <button className="flex flex-row-reverse  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group">
-                <p className="text-white main_hero_slogan transform transition-transform duration-300 group-hover:-translate-x-8   sm:group-hover:-translate-x-10   ">
+              <button
+                className={`flex ${
+                  language === "en" ? "flex-row-reverse" : "flex-row"
+                }  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group`}
+              >
+                <p
+                  className={`text-white main_hero_slogan transform transition-transform duration-300 ${
+                    language === "en"
+                      ? "group-hover:-translate-x-8   sm:group-hover:-translate-x-10"
+                      : "group-hover:translate-x-8   sm:group-hover:translate-x-10"
+                  }   `}
+                >
                   {button1}
                 </p>
                 <div
                   className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300  ${
-                    flag ? "md:group-hover:translate-x-32 group-hover:translate-x-[105px]":
-                    flag2 ? "md:group-hover:translate-x-[100px] group-hover:translate-x-[70px]"
-
-                    : language === "en"?"group-hover:translate-x-20 md:group-hover:translate-x-[102px]"
-                      : "md:group-hover:translate-x-12 group-hover:translate-x-9"
+                    flag
+                      ? "md:group-hover:translate-x-32 group-hover:translate-x-[105px]"
+                      : flag2
+                      ? "md:group-hover:-translate-x-[100px] group-hover:-translate-x-[70px]"
+                      : language === "en"
+                      ? "group-hover:translate-x-20 md:group-hover:translate-x-[102px]"
+                      : "md:group-hover:-translate-x-12 group-hover:-translate-x-9"
                   } overflow-hidden`}
                 >
-                  <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />
+                  {language === "en" ? (
+                    <FaArrowRight className="text-[#219DD9] text-[8px] sm:text-[10px] " />
+                  ) : (
+                    <FaArrowLeft className="text-[#219DD9] text-[8px] sm:text-[10px] " />
+                  )}
                 </div>
               </button>
             </div>

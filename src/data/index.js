@@ -204,33 +204,50 @@ export const aboutTestimonialsData = [
   {
     text: "The team at Codehive demonstrated exceptional teamwork and creativity throughout our collaboration. They took the time to understand our needs and provided valuable insights, helping us achieve our project goals. I am grateful for their support and highly recommend them.",
     name: "Ayesha Khan",
+    atext:"أظهر فريق CodeHive روح العمل الجماعي والإبداع بشكل استثنائي طوال فترة تعاوننا. لقد حرصوا على فهم احتياجاتنا وقدموا رؤى قيمة ساعدتنا في تحقيق أهداف مشروعنا. أنا ممتنة لدعمهم وأوصي بهم بشدة.",
+    aname:"عائشة خان",
     designation: "CEO, Tech Innovations Ltd",
+    adesignation:"الرئيس التنفيذي، Tech Innovations Ltd ",
   },
-  {
+  {atext:"كان العمل مع CodeHive تجربة رائعة. لم يكن فريقهم ماهرًا فحسب، بل كان أيضًا محترفًا للغاية، مما ضمن الالتزام بالمواعيد النهائية وتقديم منتج يفوق توقعاتنا. لقد تميزوا باهتمامهم بالتفاصيل ونهجهم الذي يضع العميل في المقام الأول." ,
     text: "Working with Codehive was an absolute pleasure. Their team was not only skilled but also highly professional, ensuring that all deadlines were met and that the final product exceeded our expectations. Their attention to detail and customer-first attitude made them stand out.",
     name: "Ahmed Raza",
+    aname:"أحمد رضا",
     designation: "Project Manager, Global Solutions Inc.",
+    adesignation: "مدير المشاريع، Global Solutions Inc.",
   },
-  {
+  {atext:"من الاستشارة الأولية إلى التسليم النهائي، أظهر CodeHive تواصلًا متميزًا ومهارات استثنائية في حل المشكلات. كانوا دائمًا متاحين لمناقشة أي مخاوف وسرعان ما تأقلموا مع أي تغييرات في المشروع. كان التزامهم بالعمل ونتائجهم مذهلة بحق.",
     text: "From the initial consultation to the final delivery, Codehive showed outstanding communication and problem-solving skills. They were always available to discuss concerns and were quick to adapt to any changes in the project. Their work ethic and results were truly impressive. ",
     name: "Sara Ali",
+    aname:"سارة علي",
     designation: "Head of Operations, NextGen Enterprises",
+    adesignation: " رئيس العمليات، NextGen Enterprises",
   },
+ 
   {
     text: "The team at Codehive demonstrated exceptional teamwork and creativity throughout our collaboration. They took the time to understand our needs and provided valuable insights, helping us achieve our project goals. I am grateful for their support and highly recommend them.",
     name: "Ayesha Khan",
+    atext:"أظهر فريق CodeHive روح العمل الجماعي والإبداع بشكل استثنائي طوال فترة تعاوننا. لقد حرصوا على فهم احتياجاتنا وقدموا رؤى قيمة ساعدتنا في تحقيق أهداف مشروعنا. أنا ممتنة لدعمهم وأوصي بهم بشدة.",
+    aname:"عائشة خان",
     designation: "CEO, Tech Innovations Ltd",
+    adesignation:"الرئيس التنفيذي، Tech Innovations Ltd ",
   },
-  {
+  {atext:"كان العمل مع CodeHive تجربة رائعة. لم يكن فريقهم ماهرًا فحسب، بل كان أيضًا محترفًا للغاية، مما ضمن الالتزام بالمواعيد النهائية وتقديم منتج يفوق توقعاتنا. لقد تميزوا باهتمامهم بالتفاصيل ونهجهم الذي يضع العميل في المقام الأول." ,
     text: "Working with Codehive was an absolute pleasure. Their team was not only skilled but also highly professional, ensuring that all deadlines were met and that the final product exceeded our expectations. Their attention to detail and customer-first attitude made them stand out.",
     name: "Ahmed Raza",
+    aname:"أحمد رضا",
     designation: "Project Manager, Global Solutions Inc.",
+    adesignation: "مدير المشاريع، Global Solutions Inc.",
   },
-  {
+  {atext:"من الاستشارة الأولية إلى التسليم النهائي، أظهر CodeHive تواصلًا متميزًا ومهارات استثنائية في حل المشكلات. كانوا دائمًا متاحين لمناقشة أي مخاوف وسرعان ما تأقلموا مع أي تغييرات في المشروع. كان التزامهم بالعمل ونتائجهم مذهلة بحق.",
     text: "From the initial consultation to the final delivery, Codehive showed outstanding communication and problem-solving skills. They were always available to discuss concerns and were quick to adapt to any changes in the project. Their work ethic and results were truly impressive. ",
     name: "Sara Ali",
+    aname:"سارة علي",
     designation: "Head of Operations, NextGen Enterprises",
+    adesignation: " رئيس العمليات، NextGen Enterprises",
   },
+ 
+ 
 ];
 export const whoWeAreData = {
   title: "whoWeAre",

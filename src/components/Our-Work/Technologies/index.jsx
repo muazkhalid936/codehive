@@ -4,8 +4,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useParams } from "next/navigation";
 gsap.registerPlugin(ScrollTrigger);
-
+import useStore from "../../../store/useUserStore";
+import { useTranslations } from "next-intl";
 const Technologies = ({ rightImage }) => {
+  const {language}  = useStore();
+  const t = useTranslations("translation");
   const param = useParams();
   const slug = param.slug;
   console.log(slug);
@@ -212,20 +215,33 @@ const Technologies = ({ rightImage }) => {
       image: "/technologies/Photoshop.png",
     },
   ];
+  const title = t("technologi");
+  const segmenter = new Intl.Segmenter("ar", { granularity: "word" });
+  const words = Array.from(segmenter.segment(title)).map((seg) => seg.segment);
 
   return (
     <div className="bg-[#010B17]  sm:h-[600px] relative overflow-hidden text-white py-[40px] sm:py-10">
-      <div className=" flex  container flex-col md:flex-row gap-10 justify-between">
+      <div className=" flex  container flex-col md:flex-row gap-10 sm:gap-5 justify-between"
+      dir={language==="ar"?"rtl":"ltr"}
+      >
         <div
           ref={firstDivRef}
-          className="first-div justify-center gap-5 sm:gap-10 items-center flex flex-col md:w-[40%] "
+          className="first-div justify-center gap-5 sm:gap-10 items-center flex flex-col md:w-[43%] "
         >
           <p className="gilray-font leading-none text-[#229dd9] text-center  sm:text-start  sub_heading">
-            Technologies
-            <span className="text-white"> We Used</span>
+            {words.map((word, index) => (
+              <span
+                key={index}
+                className={`${index === 0 ? "text-blueColor" : "text-white"}`}
+              >
+                {word}{" "}
+              </span>
+            ))}
           </p>
 
-          <div className="grid  w-full grid-cols-3 ">
+          <div className="grid  w-full grid-cols-3 "
+          dir="ltr"
+          >
             {technologies
               .filter((tech) => !tech.visible || tech.visible.includes(slug))
               .map((tech, index) => (
@@ -247,7 +263,7 @@ const Technologies = ({ rightImage }) => {
               ))}
           </div>
         </div>
-        <div className="h-[300px] hidden  z-[2] md:h-[500px] w-full md:w-[60%] md:flex justify-center items-center">
+        <div className="h-[300px] hidden  z-[2] md:h-[500px] w-full md:w-[57%] md:flex justify-center items-center">
           <img
             ref={imageRef}
             src={rightImage}

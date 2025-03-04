@@ -15,13 +15,25 @@ const ContactInfo = () => {
         {/* Inner content div to apply border-radius */}
         <div className="rounded-xl overflow-hidden">
           <div className="sm:my-5">
-            {" "}
-            <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
+
+{
+  language === "en" ? 
+  <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
               <span className="main-heading bg-gradient-to-r from-white via-white to-blueColor bg-clip-text text-transparent">
                 Reach
               </span>{" "}
               <span className="text-blueColor main-heading"> Us</span>
+            </h3>:
+            <h3 className="!font-light text-3xl header md:text-[45px] mb-6 text-center">
+              <span className="main-heading bg-gradient-to-l from-white via-white to-blueColor bg-clip-text text-transparent">
+              تواصل 
+              </span>{" "}
+              <span className="text-blueColor main-heading">معنا</span>
             </h3>
+            }
+
+
+
           </div>
           <div className="space-y-6 mb-8">
             {/* Phone */}
@@ -78,7 +90,7 @@ const ContactInfo = () => {
             {/* Support Section */}
             <div className="text-center flex justify-center items-center  ">
               <p
-                className={`text-[18px] sm:text-[24px] w-[300px] text-center sm:text-start sm:w-[400px]  mt-10 font-semibold ${
+                className={`text-[18px] sm:text-[24px] w-[300px] text-center sm:text-center sm:w-[400px]  mt-10 font-semibold ${
                   language === "en" ? "bg-gradient-to-r" : "bg-gradient-to-l"
                 }  from-white via-white to-blueColor bg-clip-text text-transparent`}
               >

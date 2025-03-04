@@ -19,13 +19,13 @@ const HeroContact = () => {
       <div className="absolute inset-0 flex justify-center items-center">
         <img
           src="/contact.png"
-          className="h-[62vh] mt-[5rem] min-h-[500px] max-h-[650px]  object-cover sm:object-contain"
+          className={`h-[62vh] mt-[5rem] min-h-[500px] max-h-[650px] ${language==="ar"?"scale-x-[-1]":""}  object-cover sm:object-contain`}
           alt="Contact"
         />
       </div>
 
       {/* Content overlay */}
-      <div className="relative z-10 flex container justify-center mt-[100px] sm:mt-[200px] flex-row gap-2">
+      <div className={`relative z-10 flex container justify-center mt-[100px] sm:mt-[200px] ${language==="en"?"flex-row":"flex-row-reverse"} gap-2`}>
         {/* Left Column */}
         <div
           className="flex-1 lg:w-1/2 flex-col flex justify-center"
