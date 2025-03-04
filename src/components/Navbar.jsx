@@ -235,9 +235,9 @@ const Navbar = () => {
                     key={service.label}
                     href={service.href}
                     onClick={() => setIsSidebarOpen(false)}
-                    className="hover:bg-[#219DD92B] hover:border-l-2 hover:border-blueColor"
+                    className={`hover:bg-[#219DD92B] ${language==="en"?"hover:border-l-2":"hover:border-r-2"} hover:border-blueColor`}
                   >
-                    <span className="ml-2">{t(service.label)}</span>
+                    <span className={`${language==="en"?"ml-2":"mr-3"}`}>{t(service.label)}</span>
                   </Link>
                 ))}
               </div>
@@ -265,9 +265,12 @@ const Navbar = () => {
                         key={industry.label}
                         href={industry.href}
                         onClick={() => setIsSidebarOpen(false)}
-                        className="hover:bg-[#219DD92B] hover:border-l-2 hover:border-blueColor"
-                      >
-                        <span className="ml-2">{t(industry.label)}</span>
+                        className={`hover:bg-[#219DD92B] ${language==="en"?"hover:border-l-2":"hover:border-r-2"} hover:border-blueColor`}
+                        >
+                        {/* <span className="ml-2">{t(industry.label)}</span> */}
+                        <span className={`${language==="en"?"ml-2":"mr-3"}`}>
+                          {t(industry.label)}</span>
+
                       </Link>
                     )
                 )}
@@ -289,15 +292,19 @@ const Navbar = () => {
                 <>
                   <Link
                     href="/industries/our-booking-system"
-                    className="hover:bg-[#219DD92B] hover:border-l-2  hover:border-blueColor"
-                  >
-                    <span className="ml-2">{t("ourBooking")}</span>
+                    className={`hover:bg-[#219DD92B] ${language==="en"?"hover:border-l-2":"hover:border-r-2"} hover:border-blueColor`}
+                    >
+                        <span className={`${language==="en"?"ml-2":"mr-3"}`}>
+                        {t("ourBooking")}
+
+                    </span>
                   </Link>
                   <Link
                     href="/industries/reward-hive"
-                    className="hover:bg-[#219DD92B] hover:border-l-2  hover:border-blueColor"
-                  >
-                    <span className="ml-2">{t("rewardHive")}</span>
+                    className={`hover:bg-[#219DD92B] ${language==="en"?"hover:border-l-2":"hover:border-r-2"} hover:border-blueColor`}
+                    >
+                        <span className={`${language==="en"?"ml-2":"mr-3"}`}>
+                        {t("rewardHive")}</span>
                   </Link>
                 </>
               )}

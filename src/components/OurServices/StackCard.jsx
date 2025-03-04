@@ -11,7 +11,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
   const lastTwoWords = splitHeading.slice(-2).join(" ");
   const restOfHeading = splitHeading.slice(0, -2).join(" ");
   return (
-    <div className={`${language==="en"?"h-[460px]":"h-[430px]"}  sm:h-[400px]  flex   text-white flex-col md:flex-row  gap-5 justify-between sm:gap-10 my-auto sm:w-[95%] rounded-3xl overflow-hidden sm:p-5  p-2 relative `}>
+    <div className={`${language==="en"?"h-[460px]":"h-[435px]"}  sm:h-[400px]  flex   text-white flex-col md:flex-row  gap-5 justify-between sm:gap-10 my-auto sm:w-[95%] rounded-3xl overflow-hidden sm:p-5  p-2 relative `}>
       <div
         className="absolute  p-[1px] top-0  left-0 h-full w-full "
         style={{
@@ -53,8 +53,8 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
         </div>
       </div>
 
-      <div className="w-full flex z-20 md:w-1/2 justify-center sm:justify-end items-center">
-        <div className="border-[1px] mb-[10px] sm:mb-0 sm:w-[95%] border-blue-400 sm:h-[90%] rounded-[20px] ">
+      <div className="w-full flex z-20 pb-[15px] sm:mb-0 md:w-1/2 justify-center sm:justify-end items-center">
+        <div className="border-[1px]  sm:w-[95%] border-blue-400 sm:h-[90%] rounded-[20px] ">
           <img src={imgLink} alt="1" className="w-full h-full  " />
         </div>
       </div>

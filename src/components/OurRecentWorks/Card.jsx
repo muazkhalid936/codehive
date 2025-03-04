@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HiMiniArrowUpRight } from "react-icons/hi2";
+import { HiMiniArrowUpRight,HiMiniArrowUpLeft } from "react-icons/hi2";
 import useStore from "../../store/useUserStore";
 import { useRouter } from "../../i18n/routing";
 
@@ -41,7 +41,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
       <div
         dir={language === "en" ? "ltr" : "rtl"}
         className={`absolute backdrop-blur-sm h-[220px] w-full  bg-white bg-opacity-20 transition-all ${
-          height ? " top-[53%] sm:top-[65%]" : " sm:top-[75%] top-[62%]"
+          height ? " top-[57%] sm:top-[65%]" : " sm:top-[75%] top-[68%]"
         } group ease-in-out duration-300  flex flex-col justify-start gap-2 p-4 `}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -52,7 +52,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
         </div>
         <p className="text-black text-2xl font-semibold">{head}</p>
         <p className="text-black">{para}</p>
-        <hr className={`border ${height?"opacity-100":"opacity-0"} border-black w-full`} />
+        <hr className={`border mt-1 ${height?"opacity-100":"opacity-0"} border-black w-full`} />
         <button
           onClick={() => router.push(link)}
           className={`flex gap-2 r ${height?"opacity-100":"opacity-0"} items-center justify-between `}
@@ -60,7 +60,11 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
           <p>
             {language === "en" ? "View Complete Project" : "عرض المشروع كامل"}
           </p>
-          <HiMiniArrowUpRight className="bg-black rounded-full p-[1px] text-white text-xl" />
+          {
+            language === "en" ? <HiMiniArrowUpRight className="bg-black rounded-full p-[1px] text-white text
+-xl" /> :
+          <HiMiniArrowUpLeft className="bg-black rounded-full p-[1px] text-white text-xl" />
+          }
         </button>
       </div>
     </div>
