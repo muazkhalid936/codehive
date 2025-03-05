@@ -29,7 +29,7 @@ const HeroSectionServices = ({
   const highlightColor = "text-[#219DD9]";
 
   const renderTitle = () => (
-    <h2 className="font-black leading-tight text-center sm:text-start hero_section_heading ">
+    <h2 className="font-black leading-tight text-center  sm:text-start hero_section_heading ">
       {titleWords.length > 1 ? (
         <>
           <span className={colors}>{titleWords.slice(0, -1).join(" ")} </span>
@@ -55,14 +55,14 @@ const HeroSectionServices = ({
         <img
           src="/HeroVector.png"
           alt="Decorative Top Arrow"
-          className={`absolute hidden sm:flex top-20 ${
+          className={`absolute flex top-20 ${
             language === "en" ? "-right-0" : "left-0 scale-x-[-1]"
           } -z-50  h-[200px] md:h-[300px] object-contain`}
           aria-label="Top Arrow"
         />
       )}
 
-      <div className="container overflow-hidden mx-auto sm:flex-row flex-col  justify-end pb-5 sm:pb-0 sm:mb-0 sm:justify-end max-h-[580px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
+      <div className="container overflow-hidden mx-auto sm:flex-row flex-col  justify-center pb-5 sm:pb-0 sm:mb-0 sm:justify-end max-h-[580px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
         {/* First Section */}
         <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
           {" "}
@@ -94,10 +94,10 @@ const HeroSectionServices = ({
                     flag
                       ? "md:group-hover:translate-x-32 group-hover:translate-x-[105px]"
                       : flag2
-                      ? "md:group-hover:-translate-x-[100px] group-hover:-translate-x-[70px]"
+                      ? "md:group-hover:-translate-x-[93px] group-hover:-translate-x-[70px]"
                       : language === "en"
-                      ? "group-hover:translate-x-20 md:group-hover:translate-x-[102px]"
-                      : "md:group-hover:-translate-x-12 group-hover:-translate-x-9"
+                      ? "group-hover:translate-x-20 md:group-hover:translate-x-[100px]"
+                      : "md:group-hover:-translate-x-[42px] group-hover:-translate-x-[33px]"
                   } overflow-hidden`}
                 >
                   {language === "en" ? (

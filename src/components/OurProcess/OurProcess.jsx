@@ -250,7 +250,7 @@ const StackingImages = () => {
               {
                 adescription:
                   "يقوم فريقنا بإنشاء رسومات تخطيطية ونماذج أولية لتحديد هيكلة المشروع، مما يضمن توافقه مع أهدافك.",
-                atitle: "التخطيط المبدئي (Wireframing)",
+                atitle: "التخطيط المبدئي ",
                 title: "Wireframing ",
                 description:
                   "Our team creates rough sketches and wireframes to establish the project’s structure, ensuring alignment with your goals.",
@@ -258,7 +258,7 @@ const StackingImages = () => {
               {
                 adescription:
                   "،Figma صمم فريقنا واجھات مبتكرة وجذابة باستخدام .مع التركز على تجربة المستخدم و التفاعل",
-                atitle: "(UI/UX) تصميم واجھة وتجربة المستخدم",
+                atitle: " تصميم واجھة وتجربة المستخدم",
                 title: "UI/UX Design",
                 description:
                   "Our designers craft intuitive and visually appealing interfaces in Figma, focusing on user experience and seamless functionality.",
@@ -310,7 +310,7 @@ const StackingImages = () => {
                 >
                   <p className={`font-bold w-full text-center sm:text-start !font-lato !text-white  `}>
                     <span className="font-bold   sub_heading leading-none mt-5  main-heading text-white">
-                      <span className="bg-gradient-to-r from-white  to-blueColor bg-clip-text text-transparent">
+                      <span className={`${language==="en"?"bg-gradient-to-r":"bg-gradient-to-l"} from-white  to-blueColor bg-clip-text text-transparent`}>
                         {titleWords}
                       </span>
                     </span>

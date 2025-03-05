@@ -41,6 +41,7 @@ const ContactInfo = () => {
               <div className="flex items-center group" dir>
                 <img src="/contact/wp.png" className="w-7 mx-3 " />
                 <a
+                dir="ltr"
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >
@@ -52,6 +53,8 @@ const ContactInfo = () => {
               <div className="flex items-center group">
                 <img src="/contact/phone.png" className="w-7 mx-3 " />
                 <a
+                                dir="ltr"
+
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >

@@ -1,6 +1,10 @@
 "use client";
 import React from "react";
-import { HiArrowUpRight, HiMiniCheck } from "react-icons/hi2";
+import {
+  HiArrowUpRight,
+  HiMiniArrowUpLeft,
+  HiMiniCheck,
+} from "react-icons/hi2";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { useTranslations } from "next-intl";
@@ -51,8 +55,11 @@ const index = () => {
             <span className="text-blueColor">{title.split(" ").slice(-1)}</span>
           </h2>
 
-          <div className="sm:flex hidden flex-col md:flex-row justify-end items-end    xl:gap-5">
-            <div className="md:w-[30%] md:mt-[10vh] mx-auto h-[560px]  lg:h-[590px] xl:h-[530px]  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+          <div className={`sm:flex hidden flex-col ${language==="en"?"md:flex-row":"md:flex-row-reverse"} justify-end items-end    xl:gap-5`}>
+            <div 
+                            dir={language === "en" ? "ltr" : "rtl"}
+
+            className="md:w-[30%] md:mt-[10vh] mx-auto h-[560px]  lg:h-[590px] xl:h-[530px]  bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
                   {t("basic")}
@@ -63,12 +70,21 @@ const index = () => {
 
                 <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[15px] xl:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
-                  <span
-                    className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                    style={{ width: "24px", height: "24px" }}
-                  >
-                    <HiMiniArrowUpRight size={16} />
-                  </span>
+                  {language === "en" ? (
+                    <span
+                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                      style={{ width: "24px", height: "24px" }}
+                    >
+                      <HiMiniArrowUpRight size={16} />
+                    </span>
+                  ) : (
+                    <span
+                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                      style={{ width: "24px", height: "24px" }}
+                    >
+                      <HiMiniArrowUpLeft size={16} />
+                    </span>
+                  )}
                 </button>
 
                 <hr className="my-10 border-slate-500 " />
@@ -110,7 +126,10 @@ const index = () => {
             </div>
 
             <div className="md:w-[30%] mx-auto bg-gradient-to-br  h-[700px] lg:h-[690px] xl:h-[650px] from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
-              <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
+              <div 
+                              dir={language === "en" ? "ltr" : "rtl"}
+
+              className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
                 <p className="sm:w-[80%] xl:w-[65%] mx-auto text-center text-[#1FCB78] border border-[#1FCB78] xl:px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
                   {t("mostPopula")}
                 </p>
@@ -122,14 +141,23 @@ const index = () => {
                   {t("advanceAed")}
                 </p>
 
-                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] xl:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[15px] xl:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
-                  <span
-                    className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                    style={{ width: "24px", height: "24px" }}
-                  >
-                    <HiMiniArrowUpRight size={16} />
-                  </span>
+                  {language === "en" ? (
+                    <span
+                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                      style={{ width: "24px", height: "24px" }}
+                    >
+                      <HiMiniArrowUpRight size={16} />
+                    </span>
+                  ) : (
+                    <span
+                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                      style={{ width: "24px", height: "24px" }}
+                    >
+                      <HiMiniArrowUpLeft size={16} />
+                    </span>
+                  )}
                 </button>
                 <hr className="my-10 border-slate-500 " />
 
@@ -169,7 +197,10 @@ const index = () => {
               </div>
             </div>
 
-            <div className="md:w-[30%]  md:mt-[10vh] mx-auto h-[560px] lg:h-[590px] xl:h-[530px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <div
+                            dir={language === "en" ? "ltr" : "rtl"}
+
+            className="md:w-[30%]  md:mt-[10vh] mx-auto h-[560px] lg:h-[590px] xl:h-[530px] bg-gradient-to-br from-[#010B1770] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
                   {t("enterprise")}
@@ -178,14 +209,23 @@ const index = () => {
                   {t("enterpris1")}{" "}
                 </p>
 
-                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] xl:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[15px] xl:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
-                  <span
-                    className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                    style={{ width: "24px", height: "24px" }}
-                  >
-                    <HiMiniArrowUpRight size={16} />
-                  </span>
+                  {language === "en" ? (
+                    <span
+                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                      style={{ width: "24px", height: "24px" }}
+                    >
+                      <HiMiniArrowUpRight size={16} />
+                    </span>
+                  ) : (
+                    <span
+                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                      style={{ width: "24px", height: "24px" }}
+                    >
+                      <HiMiniArrowUpLeft size={16} />
+                    </span>
+                  )}
                 </button>
                 <hr className="xl:my-[30px] border-slate-500 " />
                 <div className="h-[40vh]  mt-[10px] ">
@@ -252,16 +292,25 @@ const index = () => {
                     {t("basicAed19")}
                   </p>
 
-                  <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                  <button className="flex items-center w-[130px] mt-[15px] sm:mt-8 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
                     <span className="truncate text-[12px] ">
                       {t("getStarted")}
                     </span>
-                    <span
-                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                      style={{ width: "18px", height: "18px" }}
-                    >
-                      <HiMiniArrowUpRight size={16} />
-                    </span>
+                    {language === "en" ? (
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpRight size={16} />
+                      </span>
+                    ) : (
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpLeft size={16} />
+                      </span>
+                    )}
                   </button>
 
                   <hr className=" my-5 sm:my-10 border-slate-500 " />
@@ -320,16 +369,25 @@ const index = () => {
                     {t("advanceAed")}
                   </p>
 
-                  <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                  <button className="flex items-center w-[130px] mt-[15px] sm:mt-8 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
                     <span className="truncate text-[12px] ">
                       {t("getStarted")}
                     </span>
-                    <span
-                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                      style={{ width: "18px", height: "18px" }}
-                    >
-                      <HiMiniArrowUpRight size={16} />
-                    </span>
+                    {language === "en" ? (
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpRight size={16} />
+                      </span>
+                    ) : (
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpLeft size={16} />
+                      </span>
+                    )}
                   </button>
                   <hr className="my-5 sm:my-10 border-slate-500 " />
 
@@ -383,16 +441,25 @@ const index = () => {
                     {t("enterpris1")}{" "}
                   </p>
 
-                  <button className="flex items-center w-[130px] mt-[15px] sm:mt-10 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
+                  <button className="flex items-center w-[130px] mt-[15px] sm:mt-8 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
                     <span className="truncate text-[12px] ">
                       {t("getStarted")}
                     </span>
-                    <span
-                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                      style={{ width: "18px", height: "18px" }}
-                    >
-                      <HiMiniArrowUpRight size={16} />
-                    </span>
+                    {language === "en" ? (
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpRight size={16} />
+                      </span>
+                    ) : (
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpLeft size={16} />
+                      </span>
+                    )}
                   </button>
                   <hr className="my-5 sm:my-[30px] border-slate-500 " />
                   <div className="h-[40vh]  mt-[10px] ">

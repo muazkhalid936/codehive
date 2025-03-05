@@ -1,6 +1,10 @@
 "use client";
 import React from "react";
-import { HiArrowUpRight, HiMiniCheck } from "react-icons/hi2";
+import {
+  HiArrowUpRight,
+  HiMiniArrowUpLeft,
+  HiMiniCheck,
+} from "react-icons/hi2";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { useTranslations } from "next-intl";
@@ -13,7 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const index = () => {
-  const {language} = useStore();
+  const { language } = useStore();
   const t = useTranslations("translation");
 
   const features1 = [
@@ -54,8 +58,11 @@ const index = () => {
             <span className="text-blueColor">{title.split(" ").slice(-1)}</span>
           </h2>
 
-          <div className="sm:flex hidden flex-col md:flex-row justify-center items-end    gap-5">
-            <div className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[600px] md:h-[650px] lg:h-[660px] xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+          <div className={`sm:flex hidden flex-col ${language==="en"?"md:flex-row":"md:flex-row-reverse"} justify-end items-end    xl:gap-5`}>
+            <div
+              dir={language === "en" ? "ltr" : "rtl"}
+              className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[600px] md:h-[650px] lg:h-[660px] xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"
+            >
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
                   {t("basic")}
@@ -63,12 +70,21 @@ const index = () => {
 
                 <button className="flex items-center w-[180px] mt-8 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
-                  <span
-                    className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
-                    style={{ width: "24px", height: "24px" }}
-                  >
-                    <HiMiniArrowUpRight size={16} />
-                  </span>
+                  {language === "en" ? (
+                    <span
+                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                      style={{ width: "24px", height: "24px" }}
+                    >
+                      <HiMiniArrowUpRight size={16} />
+                    </span>
+                  ) : (
+                    <span
+                      className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                      style={{ width: "24px", height: "24px" }}
+                    >
+                      <HiMiniArrowUpLeft size={16} />
+                    </span>
+                  )}
                 </button>
 
                 <hr className="my-10 border-slate-500 " />
@@ -109,7 +125,10 @@ const index = () => {
               </div>
             </div>
 
-            <div className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[700px] md:h-[750px] lg:h-[760px] xl:h-[670px] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <div
+              dir={language === "en" ? "ltr" : "rtl"}
+              className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[700px] md:h-[750px] lg:h-[760px] xl:h-[670px] to-[#2093CA70]  p-[2px] rounded-2xl"
+            >
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
                 <p className="sm:w-[80%] xl:w-[60%] mx-auto text-center text-[#1FCB78] border border-[#1FCB78] xl:px-5 py-3 text-lg font-semibold rounded-full z-20 my-6">
                   {t("mostPopula")}
@@ -121,12 +140,21 @@ const index = () => {
 
                 <button className="flex items-center w-[180px] mt-8 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
+                  {
+                    language==="en"?
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                     style={{ width: "24px", height: "24px" }}
                   >
                     <HiMiniArrowUpRight size={16} />
+                  </span>:
+                  <span
+                    className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                    style={{ width: "24px", height: "24px" }}
+                  >
+                    <HiMiniArrowUpLeft size={16} />
                   </span>
+                  }
                 </button>
                 <hr className="my-10 border-slate-500 " />
 
@@ -166,20 +194,32 @@ const index = () => {
               </div>
             </div>
 
-            <div className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[600px] md:h-[650px] lg:h-[660px]  xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+            <div
+              dir={language === "en" ? "ltr" : "rtl"}
+              className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[600px] md:h-[650px] lg:h-[660px]  xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"
+            >
               <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                 <p className="gilray-font text-[30px] mx-auto text-center">
                   {t("enterprise")}
                 </p>
 
-                <button className="flex items-center w-[180px] md:w-[200px] mt-8 h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
+                <button className="flex items-center w-[180px] mt-8 md:w-[200px] h-[50px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px] py-3 px-6 shadow-md rounded-lg">
                   <span className="truncate">{t("getStarted")}</span>
+                  {
+                    language==="en"?
                   <span
                     className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                     style={{ width: "24px", height: "24px" }}
                   >
                     <HiMiniArrowUpRight size={16} />
+                  </span>:
+                  <span
+                    className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                    style={{ width: "24px", height: "24px" }}
+                  >
+                    <HiMiniArrowUpLeft size={16} />
                   </span>
+                  }
                 </button>
                 <hr className="my-10 border-slate-500 " />
                 <div className="h-[40vh] ab mt-5 ">
@@ -231,15 +271,14 @@ const index = () => {
               // loop={true}
               // navigation
               dir={language === "en" ? "ltr" : "rtl"}
-
               // pagination={{ clickable: true }}
               className="flex sm:hidden items-end justify-end"
             >
               <SwiperSlide className="mt-[90px]">
-                <div 
-                            dir={language === "en" ? "ltr" : "rtl"}
-
-                className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+                <div
+                  dir={language === "en" ? "ltr" : "rtl"}
+                  className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"
+                >
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] leading-none mx-auto text-center">
                       {t("basic")}
@@ -249,12 +288,21 @@ const index = () => {
                       <span className="truncate text-[12px] ">
                         {t("getStarted")}
                       </span>
+                      {
+                        language==="en"?
                       <span
                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                         style={{ width: "18px", height: "18px" }}
                       >
                         <HiMiniArrowUpRight size={16} />
+                      </span>:
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpLeft size={16} />
                       </span>
+                      }
                     </button>
 
                     <hr className="my-5 sm:my-10 border-slate-500 " />
@@ -298,9 +346,9 @@ const index = () => {
 
               <SwiperSlide className="">
                 <div
-                            dir={language === "en" ? "ltr" : "rtl"}
-
-                className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[500px]  to-[#2093CA70]  p-[2px] rounded-2xl">
+                  dir={language === "en" ? "ltr" : "rtl"}
+                  className="md:w-1/3 mx-auto bg-gradient-to-br from-[#010B1770] via-[#2093CA70] h-[500px]  to-[#2093CA70]  p-[2px] rounded-2xl"
+                >
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-r  relative from-[#0a1929]   to-[#051e33] w-full h-full   mx-auto shadow-lg ">
                     <p className=" w-[70%] mx-auto text-center text-[14px] text-[#1FCB78] border border-[#1FCB78] py-2  font-semibold rounded-full z-20 my-5">
                       {t("mostPopula")}
@@ -309,17 +357,25 @@ const index = () => {
                     <p className="gilray-font text-[30px] mx-auto text-center">
                       {t("advanced")}
                     </p>
-                  
                     <button className="flex items-center w-[130px] mt-[15px] sm:mt-8 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
                       <span className="truncate text-[12px] ">
                         {t("getStarted")}
                       </span>
+                      {
+                        language==="en"?
                       <span
                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                         style={{ width: "18px", height: "18px" }}
                       >
                         <HiMiniArrowUpRight size={16} />
+                      </span>:
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpLeft size={16} />
                       </span>
+                      }
                     </button>
                     <hr className="my-5 sm:my-10 border-slate-500 " />
 
@@ -362,25 +418,33 @@ const index = () => {
 
               <SwiperSlide className="mt-[90px]">
                 <div
-                            dir={language === "en" ? "ltr" : "rtl"}
-
-                className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl">
+                  dir={language === "en" ? "ltr" : "rtl"}
+                  className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"
+                >
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] mx-auto text-center">
                       {t("enterprise")}
                     </p>
 
-                  
                     <button className="flex items-center w-[130px] mt-[15px] sm:mt-8 md:w-[200px] h-[40px] m-auto justify-center gap-3 bg-[#FFFFFF0A] hover:bg-gray-700 text-white font-lato text-[16px] md:text-[18px]  shadow-md rounded-lg">
                       <span className="truncate text-[12px] ">
                         {t("getStarted")}
                       </span>
+                      {
+                        language==="en"?
                       <span
                         className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
                         style={{ width: "18px", height: "18px" }}
                       >
                         <HiMiniArrowUpRight size={16} />
+                      </span>:
+                      <span
+                        className="flex items-center justify-center rounded-full bg-white text-gray-800 p-1"
+                        style={{ width: "18px", height: "18px" }}
+                      >
+                        <HiMiniArrowUpLeft size={16} />
                       </span>
+                      }
                     </button>
                     <hr className="my-5 sm:my-10 border-slate-500 " />
                     <div className="h-[40vh] ab mt-5 ">

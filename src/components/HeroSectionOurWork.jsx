@@ -31,7 +31,7 @@ const HeroSectionOurWork = ({
   const highlightColor = "text-[#219DD9]";
   const { language } = useStore();
   const renderTitle = () => (
-    <h2 className="main-heading  hero_section_heading leading-[0.5] ">
+    <h2 className="main-heading text-center sm:text-start hero_section_heading sm:leading-[0.5] ">
       {titleWords.length > 0 ? (
         <>
           <span className="text-white">
@@ -106,7 +106,7 @@ const HeroSectionOurWork = ({
         </div>
         {/* Second Section */}
         <div
-          className={`right-section flex-1 my-[20px] w-full h-[32vh] sm:h-full  flex justify-center sm:justify-end ${
+          className={`right-section flex-1 my-[20px] w-full h-[40%] sm:h-full  flex justify-center sm:justify-end ${
             right === true ? "" : "pb-[0px] sm:pb-[20px]  sm:pr-[70px]"
           } sm:items-end sm:w-1/2`}
         >

@@ -10,6 +10,7 @@ const Banner = ({
   rightImage,
   title,
   description,
+  lessSpace,
   backgroundColor,
   showDecsription,
   top,
@@ -54,7 +55,11 @@ const Banner = ({
             rightImage ? "md:w-1/2" : "md:w-[100%]"
           } pl-4 md:pl-[45px] pr-2  ${
             !rightImage &&
-            ` !h-full ${language==="en"?"sm:bg-gradient-to-r":"sm:bg-gradient-to-l md:pr-[45px]  "} bg-black bg-opacity-50 sm:from-black  z-[4]  sm:bg-opacity-50   sm:to-transparent`
+            ` !h-full ${
+              language === "en"
+                ? "sm:bg-gradient-to-r"
+                : "sm:bg-gradient-to-l md:pr-[45px]  "
+            } bg-black bg-opacity-50 sm:from-black  z-[4]  sm:bg-opacity-50   sm:to-transparent`
           } sm:h-full p-5  sm:mt-0 sm:justify-center
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 ${
           showDecsription ? "sm:gap-5" : "sm:gap-10"
@@ -66,7 +71,11 @@ const Banner = ({
             } flex flex-col h-full justify-center gap-5 `}
           >
             {" "}
-            <h2 className="banner_heading leading-none text-center sm:text-start gilray-font">
+            <h2
+              className={`banner_heading mx-auto leading-[2rem] sm:leading-[3.5rem] sm:mx-0 ${
+                lessSpace === true ? "w-[90%] md:w-[70%]" : "w-[90%] sm:w-auto"
+              } leading-none text-center sm:text-start gilray-font`}
+            >
               {titleParts.map((word, index) => (
                 <span
                   key={index}
@@ -92,20 +101,32 @@ const Banner = ({
             <div className="flex z-[2] justify-center sm:justify-start items-start">
               <button
                 dir="ltr"
-                className={`flex ${language==="en"?"flex-row-reverse":"flex-row"}  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group`}
+                className={`flex ${
+                  language === "en" ? "flex-row-reverse" : "flex-row"
+                }  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group`}
               >
-                <p className={`text-white main_hero_slogan transform transition-transform duration-300 ${
-                  language==="en"?"group-hover:-translate-x-8   sm:group-hover:-translate-x-10":"group-hover:translate-x-8   sm:group-hover:translate-x-10"
-                }   `}>                 {t(buttonTitle)}
+                <p
+                  className={`text-white main_hero_slogan transform transition-transform duration-300 ${
+                    language === "en"
+                      ? "group-hover:-translate-x-8   sm:group-hover:-translate-x-10"
+                      : "group-hover:translate-x-8   sm:group-hover:translate-x-10"
+                  }   `}
+                >
+                  {" "}
+                  {t(buttonTitle)}
                 </p>
                 <div
                   className={`bg-white rounded-full p-1 sm:p-2 transform transition-transform duration-300 
                   
                   ${
                     t(buttonTitle) === "احصل على عرض"
-                      ? " group-hover:-translate-x-24 md:group-hover:-translate-x-32"
-                      :language==="en"?" group-hover:translate-x-20 md:group-hover:translate-x-[105px]"
-                      : " group-hover:-translate-x-20 md:group-hover:-translate-x-[105px]"
+                    ? " group-hover:-translate-x-24 md:group-hover:-translate-x-[122px]"
+                    :
+                    t(buttonTitle) === "Get a Quote"
+                    ? " group-hover:translate-x-[84px] md:group-hover:translate-x-[103px]"
+                      : language === "en"
+                      ? " group-hover:translate-x-20 md:group-hover:translate-x-[98px]"
+                      : " group-hover:-translate-x-20 md:group-hover:-translate-x-[97px]"
                   }
                    overflow-hidden`}
                 >

@@ -198,22 +198,30 @@ const PartnerWithTopPeople = () => {
                         />
                       )}
 
-                      <div className="absolute bottom-0 w-full flex flex-col items-center justify-center">
-                        <div className="bg-gradient-to-t from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto">
+                      <div
+                        className={` ${
+                          language === "en"
+                        } absolute bottom-0 w-full flex flex-col items-center justify-center`}
+                      >
+                        <div
+                          className={`bg-gradient-to-t ${
+                            language === "en" ? "justify-start" : "justify-end"
+                          } from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto`}
+                        >
                           <h3
-                            className={`text-white text-[15px] sm:text-[22px] font-semibold text-left w-full`}
+                            className={`text-white  text-[15px] sm:text-[22px] font-semibold ${language==="en"?"text-left":"text-right"} w-full`}
                           >
                             {item.name}
                           </h3>
                           <h3
-                            className={`text-[#219DD9] main_hero_slogan font-semibold text-left w-full gap-2 ${
+                            className={`text-[#219DD9] ${language==="en"?"text-left":"text-right"}  main_hero_slogan font-semibold text-left w-full gap-2 ${
                               hoveredSlide === item.name ? "sm:mb-10" : "mb-0"
                             }`}
                           >
                             {t(item.position)}
                           </h3>
                           {hoveredSlide === item.name && (
-                            <h3 className="text-white text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500">
+                            <h3 className={`text-white ${language==="en"?"text-left":"text-right"}  text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500`}>
                               {t(item.description)}
                             </h3>
                           )}
@@ -228,72 +236,71 @@ const PartnerWithTopPeople = () => {
         </div>
 
         <div className="flex mt-3 sm:hidden">
-  <Swiper
-    loop={true}
-    initialSlide={0}
-    modules={[EffectFade, History, EffectCards, Autoplay]}
-    breakpoints={{
-      240: { slidesPerView: 1.3 },
-    }}
-  >
-    {data.map((item, index) => (
-      <SwiperSlide key={index}>
-        <div
-          onClick={() => {
-            setIsHover((prev) => (prev === index ? null : index));
-          }}
-          className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 relative rounded-xl sm:min-h-[350px] h-[350px] cursor-pointer sm:pt-4 overflow-hidden ${
-            isHover === index ? "scale-100" : ""
-          }`}
-          style={{
-            border: "1px solid transparent",
-            borderRadius: "26px",
-            
-            background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
-            backgroundClip: "padding-box, border-box",
-            backgroundOrigin: "padding-box, border-box",
-          }}
-        >
-          {isHover !== index && (
-            <img
-              src={item.picture}
-              alt={item.name}
-              className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform"
-            />
-          )}
-                    {isHover === index && (
+          <Swiper
+            loop={true}
+            initialSlide={0}
+            modules={[EffectFade, History, EffectCards, Autoplay]}
+            breakpoints={{
+              240: { slidesPerView: 1.3 },
+            }}
+          >
+            {data.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  onClick={() => {
+                    setIsHover((prev) => (prev === index ? null : index));
+                  }}
+                  className={`flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 relative rounded-xl sm:min-h-[350px] h-[350px] cursor-pointer sm:pt-4 overflow-hidden ${
+                    isHover === index ? "scale-100" : ""
+                  }`}
+                  style={{
+                    border: "1px solid transparent",
+                    borderRadius: "26px",
 
-          <img
-            src={"/PartnerLogo.png"}
-            alt={item.name}
-            className="w-40 h-40 object-contain -z-10 absolute -right-5 top-20"
-          />)}
+                    background: `linear-gradient(to right, #052036, #02101f),linear-gradient(30deg, black, #2194cd ,black)`,
+                    backgroundClip: "padding-box, border-box",
+                    backgroundOrigin: "padding-box, border-box",
+                  }}
+                >
+                  {isHover !== index && (
+                    <img
+                      src={item.picture}
+                      alt={item.name}
+                      className="w-full h-full object-contain absolute transition-transform duration-500 ease-in-out transform"
+                    />
+                  )}
+                  {isHover === index && (
+                    <img
+                      src={"/PartnerLogo.png"}
+                      alt={item.name}
+                      className="w-40 h-40 object-contain -z-10 absolute -right-5 top-20"
+                    />
+                  )}
 
-          <div className="absolute bottom-0 w-full flex flex-col items-center justify-center">
-            <div className="bg-gradient-to-t from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto">
-              <h3 className="text-white text-[15px] sm:text-[22px] font-semibold text-left w-full">
-                {item.name}
-              </h3>
-              <h3
-                className={`text-[#219DD9] main_hero_slogan font-semibold text-left w-full gap-2 ${
-                  isHover===index ? "mb-5 mt-1" : "mb-0"
-                }`}
-              >
-                {t(item.position)}
-              </h3>
-              {isHover === index && (
-                <h3 className="text-white text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500">
-                  {t(item.description)}
-                </h3>
-              )}
-            </div>
-          </div>
+                  <div className="absolute bottom-0 w-full flex flex-col items-center justify-center">
+                    <div className="bg-gradient-to-t from-black to-transparent w-full px-2 sm:px-6 py-6 m-auto">
+                      <h3 className={`text-white ${language==="en"?"text-left":"text-right"} text-[15px] sm:text-[22px] font-semibold  w-full`}>
+                        {item.name}
+                      </h3>
+                      <h3
+                        className={`text-[#219DD9] ${language==="en"?"text-left":"text-right"} main_hero_slogan font-semibold  w-full gap-2 ${
+                          isHover === index ? "mb-5 mt-1" : "mb-0"
+                        }`}
+                      >
+                        {t(item.position)}
+                      </h3>
+                      {isHover === index && (
+                        <h3 className={`text-white ${language==="en"?"text-left":"text-right"} text-[10px] sm:text-[13px] font-light  w-full opacity-90 transition-opacity duration-500`}>
+                          {t(item.description)}
+                        </h3>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
-
       </div>
     </div>
   );

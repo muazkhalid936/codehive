@@ -8,10 +8,10 @@ const testimonialsData = [
   {
     id: 3,
     name: "Sara Ali ",
-    bgColor:"bg-[#125784]",
-quote:"/quote.png",
-aname:"سارة علي",
-adesignation: " رئيس العمليات، NextGen Enterprises",
+    bgColor: "bg-[#125784]",
+    quote: "/quote.png",
+    aname: "سارة علي",
+    adesignation: " رئيس العمليات، NextGen Enterprises",
 
     role: "Head of Operations, NextGen Enterprises ",
     content:
@@ -19,16 +19,16 @@ adesignation: " رئيس العمليات، NextGen Enterprises",
     contentAr:
       "من الاستشارة الأولية إلى التسليم النهائي، أظهر CodeHive تواصلًا متميزًا ومهارات استثنائية في حل المشكلات. كانوا دائمًا متاحين لمناقشة أي مخاوف وسرعان ما تأقلموا مع أي تغييرات في المشروع. كان التزامهم بالعمل ونتائجهم مذهلة بحق.",
   },
- 
+
   {
     id: 1,
     name: "Ahmed Raza ",
-    aname:"أحمد رضا",
+    aname: "أحمد رضا",
 
     // bgColor:"bg-[#125784]",
-    bgColor:"bg-[#000C1A]",
-quote:"/quote.png",
-adesignation: "مدير المشاريع، Global Solutions Inc.",
+    bgColor: "bg-[#000C1A]",
+    quote: "/quote.png",
+    adesignation: "مدير المشاريع، Global Solutions Inc.",
 
     role: "Project Manager, Global Solutions Inc. ",
     content:
@@ -39,28 +39,27 @@ adesignation: "مدير المشاريع، Global Solutions Inc.",
   {
     id: 2,
     name: "Ayesha Khan ",
-    aname:"عائشة خان",
-    adesignation:"الرئيس التنفيذي، Tech Innovations Ltd ",
+    aname: "عائشة خان",
+    adesignation: "الرئيس التنفيذي، Tech Innovations Ltd ",
 
     role: "CEO, Tech Innovations Ltd ",
-    bgColor:"bg-[#219DD9]",
-    quote:"/whitequote.png",
+    bgColor: "bg-[#219DD9]",
+    quote: "/whitequote.png",
     content:
       "The team at CodeHive demonstrated exceptional teamwork and creativity throughout our collaboration. They took the time to understand our needs and provided valuable insights, helping us achieve our project goals. I am grateful for their support and highly recommend them.",
     contentAr:
       "أظهر فريق CodeHive روح العمل الجماعي والإبداع بشكل استثنائي طوال فترة تعاوننا. لقد حرصوا على فهم احتياجاتنا وقدموا رؤى قيمة ساعدتنا في تحقيق أهداف مشروعنا. أنا ممتنة لدعمهم وأوصي بهم بشدة.",
   },
- 
 ];
 import { useTranslations } from "next-intl";
 export default function StackingCards() {
   const [cards, setCards] = useState(testimonialsData);
-  const t=useTranslations("translation");
-  const title=t("whatTheySa");
+  const t = useTranslations("translation");
+  const title = t("whatTheySa");
   const segmenter = new Intl.Segmenter("ar", { granularity: "word" });
   const words = Array.from(segmenter.segment(title)).map((seg) => seg.segment);
 
-const {language}  = useStore();
+  const { language } = useStore();
   useEffect(() => {
     gsap.set(".stacking-card", { opacity: 1 });
     positionCards();
@@ -98,8 +97,8 @@ const {language}  = useStore();
       return [...newCards];
     });
   };
-const card1="bg-[#219DD9]";
-const card2="bg-yellow-200";
+  const card1 = "bg-[#219DD9]";
+  const card2 = "bg-yellow-200";
   return (
     <div className="flex flex-col items-center justify-center h-[500px] relative">
       <h2
@@ -109,20 +108,21 @@ const card2="bg-yellow-200";
           textUnderlinePosition: "from-font",
         }}
       >
-{words.map((word, index) => (
-              <span
-                key={index}
-                className={`${index === 2 ? "text-blueColor" : "text-black"}`}
-              >
-                {word}{" "}
-              </span>
-            ))}      </h2>
+        {words.map((word, index) => (
+          <span
+            key={index}
+            className={`${index === 2 ? "text-blueColor" : "text-black"}`}
+          >
+            {word}{" "}
+          </span>
+        ))}{" "}
+      </h2>
 
       <div className="relative w-full flex items-center justify-center">
         {cards.map((card, index) => (
           <div
             key={card.id}
-            dir={language==="ar"?"rtl":"ltr"}
+            dir={language === "ar" ? "rtl" : "ltr"}
             id={`stacking-card-${index}`}
             className={`stacking-card absolute overflow-hidden h-[260px] w-[350px] testinomial-card text-white flex items-center justify-center rounded-xl shadow-lg ${card.bgColor}  `} // Static color for all cards
           >
@@ -130,24 +130,22 @@ const card2="bg-yellow-200";
               <img
                 src="/PartnerLogo.png"
                 alt="Vector Image"
-                className={`absolute object-contain top-0 ${language==="en"?"right-[-2vw]":"left-0 scale-x-[-1]"} w-16 h-20 sm:h-22 mr-2`}
+                className={`absolute object-contain top-0 ${
+                  language === "en" ? "right-[-2vw]" : "left-0 scale-x-[-1]"
+                } w-16 h-20 sm:h-22 mr-2`}
               />
             </div>
             <div className="p-4">
-              <p className="main_hero_slogan">{
-              language==="en"?card.content:card.contentAr
-              }</p>
-             
-              <p className="font-bold mt-4">{
-              language==="en"?
-              card.name:
-              card.aname
-                
-                }</p>
-              <p className="main_hero_slogan">{
-              language==="ar"?
-              card.adesignation:
-              card.role}</p>
+              <p className="main_hero_slogan">
+                {language === "en" ? card.content : card.contentAr}
+              </p>
+
+              <p className="font-bold mt-4">
+                {language === "en" ? card.name : card.aname}
+              </p>
+              <p className="main_hero_slogan">
+                {language === "ar" ? card.adesignation : card.role}
+              </p>
             </div>
             <img
               src="/technologies/shade.png"
@@ -157,7 +155,9 @@ const card2="bg-yellow-200";
             <img
               src={card.quote}
               alt="Quotation Marks"
-              className={`w-8 absolute top-2  ${language==="en"?"left-4":"right-4 scale-x-[-1]"} h-8`}
+              className={`w-8 absolute top-2  ${
+                language === "en" ? "left-4" : "right-4 scale-x-[-1]"
+              } h-8`}
             />
           </div>
         ))}

@@ -306,7 +306,7 @@ const OurMission = ({ data }) => {
 
         <div className={`sm:w-1/2 flex font-lato justify-center ${language==="en"?"sm:pr-[30px]  sm:pl-20":"sm:pl-[30px]  sm:pr-20"} flex-col`}>
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
-            01.
+            01
           </p>
           <p className="font-bold text-[23px] sm:text-[30px] mb-[15px] sm:mb-0 text-center sm:text-start">
             {t(data.mission)}
@@ -324,7 +324,7 @@ const OurMission = ({ data }) => {
 
         <div className={`sm:w-1/2 flex font-lato justify-center ${language==="en"?"sm:pr-20 sm:pl-[30px]":"sm:pl-20 sm:pr-[30px]"}  flex-col`}>
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
-            02.
+            02
           </p>
           <p className="font-bold text-[23px] sm:text-[30px] mb-[15px] sm:mb-0 text-center sm:text-start ">
             {t(data.vision)}

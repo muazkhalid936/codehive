@@ -36,7 +36,7 @@ const Footer = () => {
 
           <div className="flex flex-wrap gap-4 main_hero_slogan text-white">
             <Link href="/" className="hover:text-blueColor dura ease-in-out">
-              {language === "en" ? "Home" : "الصفحة"}
+              {language === "en" ? "Home" : "الصفحة الرئيسية  "}
             </Link>
             <Link
               href="/about-us"
@@ -70,8 +70,8 @@ const Footer = () => {
           <div className="text-gray-500 hidden sm:flex main_hero_slogan">
             <p>
               {language === "en"
-                ? "© 2024 Codehive. All rights reserved."
-                : ".كودھاف. جمع الحقوق محفوظة 2024 ©"}
+                ? "© 2025 Codehive. All rights reserved."
+                : ".كودھاف. جمع الحقوق محفوظة 2025 ©"}
             </p>
           </div>
         </div>
@@ -93,20 +93,20 @@ const Footer = () => {
           <p className="text-white main_hero_slogan ">
             {language === "en"
               ? "Whatsapp: +971 54 220 3330"
-              : "واتساب: 3330 220 54 971+"}
+              : "واتساب : 3330 220 54 971+"}
               
           </p>
           <p className="text-white main_hero_slogan ">
             {language === "en"
               ? "  Email: info@codehive.ae"
-              : "info@codehive.ae :البريد الكتروني"}
+              : " البريد الكتروني : info@codehive.ae"}
           </p>
         </div>
         <div className="text-gray-500 flex sm:hidden justify-center main_hero_slogan">
           <p>
             {language === "en"
-              ? "© 2024 Codehive. All rights reserved."
-              : ".كودھاف. جمع الحقوق محفوظة 2024 ©"}
+              ? "© 2025 Codehive. All rights reserved."
+              : ".كودھاف. جمع الحقوق محفوظة 2025 ©"}
           </p>
         </div>
       </div>

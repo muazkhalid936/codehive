@@ -32,7 +32,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
           </h1>
         </div>
         <div>
-          <span className={`text-start bg-gradient-to-r  from-white via-blueColor to-blueColor bg-clip-text text-transparent font-extrabold leading-tight sub_heading`}>
+          <span className={`text-start ${language==="en"?"bg-gradient-to-r":"bg-gradient-to-l"}  from-white via-blueColor to-blueColor bg-clip-text text-transparent font-extrabold leading-tight sub_heading`}>
             {heading}
             
           </span>

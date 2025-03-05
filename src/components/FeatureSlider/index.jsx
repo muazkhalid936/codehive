@@ -12,15 +12,18 @@ import useStore from "../../store/useUserStore";
 const FeatureSlider = ({ data, from }) => {
   const t = useTranslations("translation");
   const swiperRef = useRef(null);
-const {language}=useStore();
+  const { language } = useStore();
   return (
     <div
       className={`container ${
-        from === "contact" ? "sm:mt-[55px] mt-[40px] py-[40px] sm:py-[55px]" : "mt-0 pt-[40px] sm:pt-[55px]"
+        from === "contact"
+          ? "sm:mt-[55px] mt-[40px] py-[40px] sm:py-[55px]"
+          : "mt-0 pt-[40px] sm:pt-[55px]"
       }  z-50 `}
     >
-      <div className="flex justify-center sm:justify-between"
-      dir={language === "en" ? "ltr" : "rtl"}
+      <div
+        className="flex justify-center sm:justify-between"
+        dir={language === "en" ? "ltr" : "rtl"}
       >
         <h2
           className={`sub_heading text-center sm:text-start font-extrabold gilray-font  ${
@@ -43,29 +46,47 @@ const {language}=useStore();
               </span>
             ))}
         </h2>
-        <div className={` ${language==="en"?"flex-row":"flex-row-reverse"} gap-2 hidden sm:flex  sm:mt-0 `}>
-          <button
+        <div
+          className={` ${
+            language === "en" ? "flex-row" : "flex-row-reverse"
+          } gap-2 hidden sm:flex  sm:mt-0 `}
+        >
+         {language==="en"? <button
+            className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
+              from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
+            } flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor`}
+            onClick={() => swiperRef.current?.slideNext()} // Slide to previous
+          >
+            <FaAngleLeft className="text-white text-xl sm:text-2xl font-bold" />
+          </button>: <button
             className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
               from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
             } flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor`}
             onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
           >
             <FaAngleLeft className="text-white text-xl sm:text-2xl font-bold" />
-          </button>
-          <button
+          </button>}
+         {language==="en"? <button
             className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
               from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
             } flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor`}
-            onClick={() => swiperRef.current?.slideNext()} // Slide to next
+            onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
           >
-            <FaAngleRight className="text-white text-xl sm:text-2xl font-extrabold" />
-          </button>
+            <FaAngleRight className="text-white text-xl sm:text-2xl font-bold" />
+          </button>: <button
+            className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
+              from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
+            } flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor`}
+            onClick={() => swiperRef.current?.slideNext()} // Slide to previous
+          >
+            <FaAngleRight className="text-white text-xl sm:text-2xl font-bold" />
+          </button>}
+        
         </div>
       </div>
 
       {/* Swiper Slider */}
-      <div className=" mt-[30px] sm:mt-[50px]"
-      >
+      <div className=" mt-[30px] sm:mt-[50px]">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           modules={[Mousewheel]} // Add Mousewheel module here

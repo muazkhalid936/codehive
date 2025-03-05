@@ -28,7 +28,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
         backgroundPosition: "top",
       }}
     >
-      <div className="mt-4 ml-2 flex gap-2">
+      <div className={`mt-4 ${language==="en"?"ml-2":"mr-2"} flex gap-2`}>
         <p className="text-black border-black py-1 w-fit border rounded-full px-2 text-sm">
           {tech1}
         </p>

@@ -14,17 +14,18 @@ const IndustryDetails = ({ panelData }) => {
   const xVar = language === "ar" ? -100 : 100;
   // const xVar2 = language === "ar" ? 100 : -100;
 
-
   const segmenter = new Intl.Segmenter(language, { granularity: "word" });
-  const words = Array.from(segmenter.segment(t(activePanel.heading))).map((seg) => seg.segment);
-  
+  const words = Array.from(segmenter.segment(t(activePanel.heading))).map(
+    (seg) => seg.segment
+  );
+
   return (
     <div className="bg-[#000B17] overflow-hidden text-white py-[40px] sm:py-[55px]">
       <div
         className="container relative mx-auto"
         dir={language === "ar" ? "rtl" : "ltr"}
       >
-        <div className="bg-white rounded-full no-scrollbar overflow-x-auto sm:overflow-x-hidden flex gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide">
+        <div className={`bg-white rounded-full ${language==="en"?"":"!pl-5"} no-scrollbar overflow-x-auto sm:overflow-x-hidden flex gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide`}>
           {panelData.map((panel) => (
             <button
               key={panel.id}
@@ -46,22 +47,23 @@ const IndustryDetails = ({ panelData }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-        
-<h1 className="gilray-font mt-5 sm:mt-10 sub_heading">
-  {activePanel.blueTitle ? (
-    <>
-      {words.slice(0, -2).join(" ")}
-      <span className="text-blueColor ml-2">{words.slice(-2).join(" ")}</span>
-    </>
-  ) : (
-    <>
-      {words.slice(0, -1).join(" ")}
-      <span className="text-blueColor ml-2">{words.slice(-1).join(" ")}</span>
-    </>
-  )}
-</h1>
-
-
+          <h1 className="gilray-font mt-5 sm:mt-10 sub_heading">
+            {activePanel.blueTitle ? (
+              <>
+                {words.slice(0, -2).join(" ")}
+                <span className="text-blueColor ml-2">
+                  {words.slice(-2).join(" ")}
+                </span>
+              </>
+            ) : (
+              <>
+                {words.slice(0, -1).join(" ")}
+                <span className="text-blueColor ml-2">
+                  {words.slice(-1).join(" ")}
+                </span>
+              </>
+            )}
+          </h1>
         </motion.div>
         <div className="flex  sm:mt-5">
           <motion.div
@@ -71,7 +73,9 @@ const IndustryDetails = ({ panelData }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className=" main_hero_slogan mt-2 sm:mt-0">{t(activePanel.description)}</p>
+            <p className=" main_hero_slogan mt-2 sm:mt-0">
+              {t(activePanel.description)}
+            </p>
 
             <div className="flex">
               <div className="mt-5 sm:mt-10 flex flex-col justify-between gap-3 sm:gap-6">

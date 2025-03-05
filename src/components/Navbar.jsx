@@ -10,8 +10,12 @@ import { useParams } from "next/navigation";
 
 const Navbar = () => {
   const { language, setLanguage } = useUserStore();
+  // setLanguage("en");
   const router = useRouter();
   const pathname = usePathname();
+  const urlParams = new URLSearchParams(window.location.search);
+
+  console.log(urlParams);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 

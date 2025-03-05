@@ -263,7 +263,7 @@ const ScrollAnimation = () => {
             </div>
 
             <div className="sm:w-1/2 w-full iphone">
-              {shouldLoadModel && (
+              {/* {shouldLoadModel && (
                 <Canvas
                   dpr={[1, 2]}
                   camera={{ position: [25, 0, 0], fov: 20 }}
@@ -273,7 +273,7 @@ const ScrollAnimation = () => {
                     <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
                   </Suspense>
                 </Canvas>
-              )}
+              )} */}
             </div>
           </div>
         ))}

@@ -9,6 +9,7 @@ import Navbar from '../../components/Navbar';
 import LongRevealHeading from '../../components/LongRevealHeading/LongRevealHeading';
 import OurRecentWork from '../../components/OurRecentWork/OurRecentWork';
 import ShortRevealHeading from '../../components/ShortRevealHeading/ShortRevealHeading';
+import OurIndustryHeading from '../../components/OurIndustryHeading/ShortRevealHeading';
 import ProcessHeading from '../../components/ProcessHeading/ShortRevealHeading';
 import Footer from '../../components/Footer';
 import { useTranslations } from 'next-intl';
@@ -28,7 +29,7 @@ export default function Home() {
         <Stack />
         <ProcessHeading />
         <OurProcess />
-        <ShortRevealHeading text={t('ourIndustr')} />
+        <OurIndustryHeading text={t('ourIndustr')} />
         <OurIndustries />
         <OurRecentWork text={t('ourRecentW')} />
         <Test />

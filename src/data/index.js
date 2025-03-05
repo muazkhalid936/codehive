@@ -364,7 +364,7 @@ export const services = [
     },
     bannerDataTwo: {
       top:true,
-
+lessSpace:true,
       bgImage: "/services/mobile-app-dev/bannerTwoBg.png",
       title: "creatingAp",
       blueWords: ["Creating", "Apps"],
@@ -2582,6 +2582,8 @@ export const industries = [
       blueWords: ["Reward", "Hive"],
       description: "creatingIn",
       buttonTitle: "getAQuote6",
+      lessSpace:true,
+
       showBottomArrow: true,
       showDecsription: true,
     },

@@ -5,14 +5,14 @@ import useStore from "../store/useUserStore";
 const Features = ({ data }) => {
   const t = useTranslations("translation");
   const title1 = t(data.title);
-const {language}=useStore()
+  const { language } = useStore();
   const [itemHovered, setItemHovered] = useState("");
   const [clickedItem, setClickedItem] = useState("");
-const [borderRadius,setBorderRadius]=useState("29px")
+  const [borderRadius, setBorderRadius] = useState("29px");
   const handleCardClick = (title) => {
     if (window.innerWidth < 768) {
       setClickedItem(clickedItem === title ? "" : title);
-      setBorderRadius("19px")
+      setBorderRadius("19px");
     }
   };
 
@@ -25,22 +25,22 @@ const [borderRadius,setBorderRadius]=useState("29px")
   const handleMouseLeave = () => {
     if (window.innerWidth >= 768) {
       setItemHovered("");
-      setBorderRadius("29px")
-
+      setBorderRadius("29px");
     }
   };
 
   return (
-    <div className="bg-[#010b17] relative     z-50  overflow-hidden"
-        dir={language === 'en' ? 'ltr' : 'rtl'}
-
+    <div
+      className="bg-[#010b17] relative     z-50  overflow-hidden"
+      dir={language === "en" ? "ltr" : "rtl"}
     >
       <div className=" mx-8 py-[25px] sm:py-[45px]  text-white z-10 container">
-        <h1 className="sub_heading  font-gilroy w-full text-center sm:text-start md:w-[60%]">
+        <h1 className="sub_heading !font-bold font-gilroy w-full text-center sm:text-start md:w-[60%]">
           {title1.split(" ").map((word, index, array) => (
             <span
               key={index}
-              className={`${ index === array.length - 1 ? "text-[#219DD9]" : ""
+              className={`${
+                index === array.length - 1 ? "text-[#219DD9]" : ""
               }`}
             >
               {word}{" "}
@@ -191,12 +191,12 @@ const [borderRadius,setBorderRadius]=useState("29px")
           </div>
         </div> */}
 
-<img
-        src="/technologies/shade.png"
-        alt="image"
-        className="absolute z-[-1]  bottom-[-500px] right-[-30vw]"
-        // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
-      />
+        <img
+          src="/technologies/shade.png"
+          alt="image"
+          className="absolute z-[-1]  bottom-[-500px] right-[-30vw]"
+          // className="h-[400px] md:h-[500px] w-full md:w-[60%] object-contain"
+        />
       </div>
     </div>
   );
