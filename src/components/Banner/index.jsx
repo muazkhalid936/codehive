@@ -72,8 +72,8 @@ const Banner = ({
           >
             {" "}
             <h2
-              className={`banner_heading mx-auto leading-[2rem] sm:leading-[3.5rem] sm:mx-0 ${
-                lessSpace === true ? "w-[90%] md:w-[70%]" : "w-[90%] sm:w-auto"
+              className={`banner_heading mx-auto  sm:!leading-[3.5rem] sm:mx-0 ${
+                lessSpace === true ? " w-[90%] md:w-[70%]" : "w-[90%] !leading-[2rem] sm:w-auto"
               } leading-none text-center sm:text-start gilray-font`}
             >
               {titleParts.map((word, index) => (
