@@ -25,7 +25,7 @@ const IndustryDetails = ({ panelData }) => {
         className="container relative mx-auto"
         dir={language === "ar" ? "rtl" : "ltr"}
       >
-        <div className={`bg-white rounded-full ${language==="en"?"":"!pl-5"} no-scrollbar overflow-x-auto sm:overflow-x-hidden flex gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide`}>
+        <div className={`bg-white rounded-full  no-scrollbar overflow-x-auto sm:overflow-x-hidden flex  gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide`}>
           {panelData.map((panel) => (
             <button
               key={panel.id}

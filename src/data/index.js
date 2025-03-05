@@ -2478,6 +2478,7 @@ export const industries = [
       description: "driveRepea",
       rightImage: "/IndustriesBooking/reward/banner1.png",
       buttonTitle: "bookACall6",
+      spaceInMobile:true,
       showDecsription: true,
       backgroundColor: "#EAECEF",
     },
@@ -2583,7 +2584,7 @@ export const industries = [
       description: "creatingIn",
       buttonTitle: "getAQuote6",
       lessSpace:true,
-
+widthSet:true,
       showBottomArrow: true,
       showDecsription: true,
     },

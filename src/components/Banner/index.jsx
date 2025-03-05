@@ -9,8 +9,10 @@ const Banner = ({
   bgImage,
   rightImage,
   title,
+  widthSet,
   description,
   lessSpace,
+  spaceInMobile,
   backgroundColor,
   showDecsription,
   top,
@@ -36,10 +38,10 @@ const Banner = ({
       <div
         className={`bg-cover relative bg-center  ${
           params.slug === "car-wash"
-            ? "h-[200px]"
+            ? "h-[220px]"
             : rightImage
-            ? "h-[380px]"
-            : "h-[200px]"
+            ? "h-[400px]"
+            : "h-[220px]"
         } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full  rounded-[20px]  justify-between flex flex-col sm:flex-row   sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
@@ -68,13 +70,13 @@ const Banner = ({
           <div
             className={`${
               rightImage ? "md:w-full" : "md:w-[60%]"
-            } flex flex-col h-full justify-center gap-5 `}
+            } flex flex-col h-full justify-center gap-3 sm:gap-5 `}
           >
             {" "}
             <h2
-              className={`banner_heading mx-auto  sm:!leading-[3.5rem] sm:mx-0 ${
-                lessSpace === true ? " w-[90%] md:w-[70%]" : "w-[90%] !leading-[2rem] sm:w-auto"
-              } leading-none text-center sm:text-start gilray-font`}
+              className={`banner_heading mx-auto leading-[1.7rem]  sm:!leading-[3.5rem] sm:mx-0 ${
+                lessSpace === true ? " w-[90%]  !leading-[2rem] md:w-[70%]":spaceInMobile===true?"w-[90%]" : "w-auto"
+              }  text-center sm:text-start gilray-font`}
             >
               {titleParts.map((word, index) => (
                 <span
