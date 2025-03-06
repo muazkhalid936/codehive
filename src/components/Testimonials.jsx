@@ -45,23 +45,23 @@ const Testimonials = ({ testimonials }) => {
           <div className=" gap-2 hidden sm:flex sm:mt-0">
            {language==="en"? <button
               className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
-              onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
+              onClick={() => swiperRef.current?.slideNext()} // Slide to previous
             >
               <HiChevronLeft className="text-white text-xl sm:text-2xl font-bold" />
             </button>: <button
               className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
-              onClick={() => swiperRef.current?.slideNext()} // Slide to previous
+              onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
             >
               <HiChevronLeft className="text-white text-xl sm:text-2xl font-bold" />
             </button>}
            {language==="en"? <button
               className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
-              onClick={() => swiperRef.current?.slideNext()} // Slide to previous
+              onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
             >
               <HiChevronRight className="text-white text-xl sm:text-2xl font-bold" />
             </button>: <button
               className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-[#CBCBCB] flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor"
-              onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
+              onClick={() => swiperRef.current?.slideNext()} // Slide to previous
             >
               <HiChevronRight className="text-white text-xl sm:text-2xl font-bold" />
             </button>}
