@@ -73,13 +73,13 @@ const HeroSectionOurWork = ({
           {renderTitle()}
           {description && (
             <p
-              className={`main_hero_slogan text-center sm:text-start text-white`}
+              className={`main_hero_slogan sm:mt-2 text-center !font-lato sm:text-start text-white`}
             >
               {t(description)}
             </p>
           )}
           {showButton && (
-            <div className="flex justify-center sm:justify-start">
+            <div className="flex !font-lato justify-center sm:justify-start">
               <button
                 dir="ltr"
                 className={`flex ${language==="en"?"flex-row-reverse":"flex-row"}  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group`}
@@ -91,7 +91,7 @@ const HeroSectionOurWork = ({
                   className={`bg-white rounded-full p-1 sm:p-2 ${
                     language === "en"
                       ? "sm:group-hover:translate-x-44 group-hover:translate-x-[180px] lg:group-hover:translate-x-56"
-                      : "sm:group-hover:-translate-x-44 group-hover:-translate-x-[130px] lg:group-hover:-translate-x-[170px]"
+                      : "sm:group-hover:-translate-x-[155px] group-hover:-translate-x-[130px] "
                   } transform transition-transform duration-300  overflow-hidden`}
                 >
                   {language === "en" ? (

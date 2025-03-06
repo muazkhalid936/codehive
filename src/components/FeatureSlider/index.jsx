@@ -55,14 +55,14 @@ const FeatureSlider = ({ data, from }) => {
             className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
               from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
             } flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor`}
-            onClick={() => swiperRef.current?.slideNext()} // Slide to previous
+            onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
           >
             <FaAngleLeft className="text-white text-xl sm:text-2xl font-bold" />
           </button>: <button
             className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
               from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
             } flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor`}
-            onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
+            onClick={() => swiperRef.current?.slideNext()} // Slide to previous
           >
             <FaAngleLeft className="text-white text-xl sm:text-2xl font-bold" />
           </button>}
@@ -70,14 +70,14 @@ const FeatureSlider = ({ data, from }) => {
             className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
               from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
             } flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor`}
-            onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
+            onClick={() => swiperRef.current?.slideNext()} // Slide to previous
           >
             <FaAngleRight className="text-white text-xl sm:text-2xl font-bold" />
           </button>: <button
             className={`h-8 w-8 sm:h-12 sm:w-12 rounded-full ${
               from === "contact" ? "bg-[#CBCBCB33]" : "bg-[#CBCBCB]"
             } flex items-center justify-center ease-in-out duration-300 hover:bg-blueColor`}
-            onClick={() => swiperRef.current?.slideNext()} // Slide to previous
+            onClick={() => swiperRef.current?.slidePrev()} // Slide to previous
           >
             <FaAngleRight className="text-white text-xl sm:text-2xl font-bold" />
           </button>}

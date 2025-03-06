@@ -42,6 +42,7 @@ const IphoneModel = React.memo(({ textureUrl, meshRef }) => {
       <primitive
         ref={meshRef}
         object={scene}
+        intensity={10}
         scale={4}
         position={[30, 0, 0]}
       />

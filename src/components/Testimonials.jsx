@@ -74,7 +74,7 @@ const Testimonials = ({ testimonials }) => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={1}
           loop={true}
-          dir={language === "en" ? "rtl" : "ltr"}
+          dir={language === "ar" ? "rtl" : "ltr"}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
             640: { slidesPerView: 1 },

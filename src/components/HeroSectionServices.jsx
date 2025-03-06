@@ -68,13 +68,13 @@ const HeroSectionServices = ({
           {" "}
           {renderTitle()}
           {description && (
-            <p className={`main_hero_slogan text-center sm:text-start `}>
+            <p className={`main_hero_slogan !font-lato text-center sm:text-start `}>
               {/* {t('codeHiveIs')}/ */}
               {t(description)}
             </p>
           )}
           {showButton && (
-            <div className="flex justify-center sm:justify-start" dir="ltr">
+            <div className="flex !font-lato justify-center sm:justify-start" dir="ltr">
               <button
                 className={`flex ${
                   language === "en" ? "flex-row-reverse" : "flex-row"

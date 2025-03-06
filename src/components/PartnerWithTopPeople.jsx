@@ -221,7 +221,7 @@ const PartnerWithTopPeople = () => {
                             {t(item.position)}
                           </h3>
                           {hoveredSlide === item.name && (
-                            <h3 className={`text-white ${language==="en"?"text-left":"text-right"}  text-[10px] sm:text-[13px] font-light text-left w-full opacity-90 transition-opacity duration-500`}>
+                            <h3 className={`text-white ${language==="en"?"text-left":"text-right"}  text-[10px] sm:text-[13px] font-light !font-lato text-left w-full opacity-90 transition-opacity duration-500`}>
                               {t(item.description)}
                             </h3>
                           )}
@@ -290,7 +290,7 @@ const PartnerWithTopPeople = () => {
                         {t(item.position)}
                       </h3>
                       {isHover === index && (
-                        <h3 className={`text-white ${language==="en"?"text-left":"text-right"} text-[10px] sm:text-[13px] font-light  w-full opacity-90 transition-opacity duration-500`}>
+                        <h3 className={`text-white ${language==="en"?"text-left":"text-right"} text-[10px] sm:text-[13px] font-light !font-lato  w-full opacity-90 transition-opacity duration-500`}>
                           {t(item.description)}
                         </h3>
                       )}

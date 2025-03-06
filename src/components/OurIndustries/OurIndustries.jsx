@@ -88,11 +88,11 @@ import useStore from "../../store/useUserStore";
 import { useRouter } from "next/navigation";
 import { Link } from "../../i18n/routing";
 import { useTranslations } from "next-intl";
-
+import IphoneModel from "../IphoneModel";
 gsap.registerPlugin(ScrollTrigger);
 
 // Lazy load the IphoneModel component
-const IphoneModel = dynamic(() => import("../IphoneModel"), { ssr: false });
+// const IphoneModel = dynamic(() => import("../IphoneModel"), { ssr: false });
 
 const ScrollAnimation = () => {
   const router = useRouter();
@@ -269,7 +269,7 @@ const ScrollAnimation = () => {
                   camera={{ position: [25, 0, 0], fov: 20 }}
                   className="canvas-container"
                 >
-                  <Suspense fallback={null}>
+                  <Suspense fallback={<>Loading...</>}>
                     <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
                   </Suspense>
                 </Canvas>

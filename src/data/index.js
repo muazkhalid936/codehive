@@ -2407,6 +2407,7 @@ export const industries = [
     bannerData: {
       bgImage: "/IndustriesBooking/Carwash/banner1.png",
       title: "stepIntoTh",
+      padright:true,
       blueWords: ["Growth", "&", "Opportunities!"],
       description:
         "With nearly 21 million downloads and a projected US$19.33 billion revenue in 2023, the fitness app industry is booming.",

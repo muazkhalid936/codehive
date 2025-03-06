@@ -258,7 +258,7 @@ const Technologies = ({ rightImage }) => {
                     alt="image"
                     className="sm:w-16 w-10 h-10 sm:h-16  object-contain"
                   />
-                  <h1 className="text-lg ">{tech.title}</h1>
+                  <h1 className="text-lg font-lato ">{tech.title}</h1>
                 </div>
               ))}
           </div>

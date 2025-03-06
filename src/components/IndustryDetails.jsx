@@ -80,7 +80,7 @@ const IndustryDetails = ({ panelData }) => {
             <div className="flex">
               <div className="mt-5 sm:mt-10 flex flex-col justify-between gap-3 sm:gap-6">
                 {activePanel.features.map((feature, index) => (
-                  <div key={index} className="flex gap-2 sm:gap-5 items-start">
+                  <div key={index} className="flex font-lato gap-2 sm:gap-5 items-start">
                     <img
                       src={feature.icon}
                       className="w-10 h-10 lg:w-14 lg:h-14"

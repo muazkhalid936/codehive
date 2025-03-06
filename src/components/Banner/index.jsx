@@ -11,6 +11,7 @@ const Banner = ({
   title,
   widthSet,
   description,
+  padright,
   lessSpace,
   spaceInMobile,
   backgroundColor,
@@ -42,7 +43,14 @@ const Banner = ({
             : rightImage
             ? "h-[400px]"
             : "h-[240px]"
-        } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full  rounded-[20px]  justify-between flex flex-col sm:flex-row   sm:px-0`}
+        } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full  rounded-[20px] 
+        
+        ${
+          language === "ar" &&params.slug==="car-wash" &&padright ? "sm:!justify-end md:pr-[45px]" : ""
+        }
+        ${
+          params.slug === "car-wash" ? "justify-center sm:justify-between" : "justify-between"
+        } flex flex-col sm:flex-row   sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundPosition: "top",
@@ -61,7 +69,7 @@ const Banner = ({
               language === "en"
                 ? "sm:bg-gradient-to-r"
                 : "sm:bg-gradient-to-l md:pr-[45px]  "
-            } bg-black bg-opacity-50 sm:from-black  z-[4]  sm:bg-opacity-50   sm:to-transparent`
+            } bg-black bg-opacity-50 sm:from-black sm:via-transparent  z-[4]  sm:bg-opacity-30   sm:to-transparent`
           } sm:h-full p-5  sm:mt-0 sm:justify-center
         border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 ${
           showDecsription ? "sm:gap-5" : "sm:gap-10"
@@ -75,7 +83,11 @@ const Banner = ({
             {" "}
             <h2
               className={`banner_heading mx-auto leading-[1.7rem]  sm:!leading-[3.5rem] sm:mx-0 ${
-                lessSpace === true ? " w-[90%]  !leading-[2rem] md:w-[70%]":spaceInMobile===true?"w-[90%]" : "w-auto"
+                lessSpace === true
+                  ? " w-[90%]  !leading-[2rem] md:w-[70%]"
+                  : spaceInMobile === true
+                  ? "w-[90%]"
+                  : "w-auto"
               }  text-center sm:text-start gilray-font`}
             >
               {titleParts.map((word, index) => (
@@ -122,10 +134,9 @@ const Banner = ({
                   
                   ${
                     t(buttonTitle) === "احصل على عرض"
-                    ? " group-hover:-translate-x-24 md:group-hover:-translate-x-[122px]"
-                    :
-                    t(buttonTitle) === "Get a Quote"
-                    ? " group-hover:translate-x-[84px] md:group-hover:translate-x-[103px]"
+                      ? " group-hover:-translate-x-24 md:group-hover:-translate-x-[122px]"
+                      : t(buttonTitle) === "Get a Quote"
+                      ? " group-hover:translate-x-[84px] md:group-hover:translate-x-[103px]"
                       : language === "en"
                       ? " group-hover:translate-x-20 md:group-hover:translate-x-[98px]"
                       : " group-hover:-translate-x-20 md:group-hover:-translate-x-[97px]"
@@ -143,7 +154,11 @@ const Banner = ({
           </div>
         </div>
         {rightImage && (
-          <div className=" text-white justify-center sm:w-[300px] md:w-1/2 right-0 w-full sm:relative bottom-0  overflow-hidden sm:justify-end items-end flex  self-end rounded-[20px]">
+          <div
+            className={` ${
+              params.slug === "car-wash" ? "hidden" : "flex"
+            } text-white justify-center sm:w-[300px] md:w-1/2 right-0 w-full sm:relative bottom-0  overflow-hidden sm:justify-end items-end flex  self-end rounded-[20px]`}
+          >
             <img
               src={rightImage}
               className="object-cover z-[50]  h-[100%] sm:h-[340px] md:h-[400px]"

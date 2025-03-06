@@ -77,7 +77,7 @@ const WorryNoMore = ({
           <p className="xl:mb-5 text-[#535D66] main_hero_slogan">
             {t(description)}
           </p>
-          <ul className="list-disc xl:gap-2 flex flex-col">
+          <ul className="list-disc !font-lato xl:gap-2 flex flex-col">
             {points.map((point, index) => (
               <li
                 key={index}
