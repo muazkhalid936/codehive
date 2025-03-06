@@ -15,7 +15,7 @@ const texturePaths = [
 
 
 const IphoneModel = React.memo(({ textureUrl, meshRef }) => {
-  const { scene } = useLoader(GLTFLoader, "/iphoneModel/3.glb");
+  const { scene } = useLoader(GLTFLoader, "/Test.glb");
   const textures = useMemo(() => {
     const textureLoader = new TextureLoader();
     return texturePaths.reduce((acc, path) => {

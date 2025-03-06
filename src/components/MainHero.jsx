@@ -74,7 +74,7 @@ const MainHero = () => {
         </p>
 
         {/* Spline Model (Hidden when scrolled beyond 200vh) */}
-        {showModel && (
+        {/* {showModel && ( */}
           <div
             className={`flex w-[200vw] scale-75 flex-1 spline_model -top-20 -right-[16rem] absolute sm:-top-[50px] sm:h-[400px] sm:scale-[1] 
             sm:-right-[21rem] xl:w-[70%] ${language==="en"?"md:right-[-13vw]":"lg:right-[300px] md:right-[150px] sm:w-[100vw] lg:w-[70vw] md:!scale-75 lg:!scale-[0.8]  xl:right-[450px]"} sm:justify-end text-white sm:items-end`}
@@ -83,7 +83,7 @@ const MainHero = () => {
               <Spline className=" " scene="/Logo animation.spline" />
             </Suspense>
           </div>
-        )}
+        {/* )} */}
       </div>
     </div>
   );

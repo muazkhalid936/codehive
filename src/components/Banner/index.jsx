@@ -38,10 +38,10 @@ const Banner = ({
       <div
         className={`bg-cover relative bg-center  ${
           params.slug === "car-wash"
-            ? "h-[220px]"
+            ? "h-[240px]"
             : rightImage
             ? "h-[400px]"
-            : "h-[220px]"
+            : "h-[240px]"
         } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full  rounded-[20px]  justify-between flex flex-col sm:flex-row   sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,

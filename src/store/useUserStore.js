@@ -1,8 +1,7 @@
 import { create } from "zustand";
 
 const getDefaultLanguage = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get("lang") || localStorage.getItem("language") || "en";
+  return localStorage.getItem("language") || "en";
 };
 
 const useStore = create((set) => ({
