@@ -20,7 +20,7 @@ const page = () => {
     <div>
       <NavbarPages />
 
-      <div className="sm:h-[60vh] h-[400px]  overflow-hidden flex justify-center relative items-center bg-[#000B17] mt-20">
+      <div className="sm:h-[60vh] sm:max-h-[500px] h-[400px]  overflow-hidden flex justify-center relative items-center bg-[#000B17] mt-20">
         <div className="absolute -left-10 -bottom-8">
           <img
             src="/12.png"

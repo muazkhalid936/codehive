@@ -43,7 +43,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="relative container flex-1 sm:w-[75%]  mx-auto  z-[10] ">
+    <div className="relative container flex-1 xl:w-[75%]  mx-auto  z-[10] ">
       <div className="z-1">
         <div
           dir={language === "en" ? "ltr" : "rtl"}

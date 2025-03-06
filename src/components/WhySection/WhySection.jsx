@@ -147,7 +147,7 @@ const ImageScrollEffect = () => {
         </div>
 
         {/* Headings */}
-        <div className="text-4xl sm:text-[60px] justify-start flex flex-col">
+        <div className="text-4xl md:text-[50px] lg:text-[60px] justify-start flex flex-col">
           <h1 className="why-section-heading-1 main-heading">
             {firstTitleRest}{" "}
             <span className={`${language==="en"?"colorText1":"colorText12"} ml-4`}>{firstTitleLast}</span>

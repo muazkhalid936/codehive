@@ -43,7 +43,7 @@ const ShortRevealHeading = (params) => {
   }, []);
 
   return (
-    <div className={`container h-[400px] ${language==="en"?"mb-[1000px] sm:mb-[1200px] mt-[-200px] sm:mt-[-400px] 2xl:mt-[-600px]":"mb-[1350px] sm:mb-[1200px] mt-[-650px]  2xl:mt-[-500px]"} flex justify-center items-center mx-auto`}>
+    <div className={`container h-[400px] ${language==="en"?"mb-[1000px]  lg:mb-[1200px] mt-[-200px] sm:mt-[-400px] 2xl:mt-[-600px]":"mb-[1350px] sm:mb-[1200px] lg:mb-[1300px] mt-[-650px]  2xl:mt-[-500px]"} flex justify-center items-center mx-auto`}>
       <p
         ref={textRef}
         className="animated-text-short main-heading header text-4xl sm:text-[60px] text-white"

@@ -5,7 +5,7 @@ const ContactInfo = () => {
   const t = useTranslations("translation");
   const { language } = useStore();
   return (
-    <div className="  container sm:w-[75%]  ">
+    <div className="  container xl:w-[75%]  ">
 
     <div
       className="mx-auto mb-[40px] sm:mb-[55px] sm:bg-gradient-to-br sm:from-[#010B1770] sm:via-[#2093CA70] sm:to-[#010B1770]   sm:p-[2px] rounded-2xl"

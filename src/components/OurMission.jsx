@@ -304,14 +304,14 @@ const OurMission = ({ data }) => {
         }
         </div>
 
-        <div className={`sm:w-1/2 flex font-lato justify-center ${language==="en"?"sm:pr-[30px]  sm:pl-20":"sm:pl-[30px]  sm:pr-20"} flex-col`}>
+        <div className={`sm:w-1/2 flex font-lato justify-center ${language==="en"?"sm:pr-[30px] sm:pl-10 xl:pl-20":"sm:pl-[30px] sm:pr-10 xl:pr-20"} flex-col`}>
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
             01
           </p>
           <p className="font-bold text-[23px] sm:text-[30px] mb-[15px] sm:mb-0 text-center sm:text-start">
             {t(data.mission)}
           </p>
-          <p className=" text-[#878787] text-[10px]  sm:text-[15px] text-center sm:text-start">
+          <p className=" text-[#878787] text-[10px] sm:text-[12px]  xl:text-[15px] text-center sm:text-start">
             {t(data.missionDesc)}
           </p>
         </div>
@@ -322,14 +322,14 @@ const OurMission = ({ data }) => {
         language === "en" ? <img src="/G1.png" /> : <img src="/m1.png" />}
         </div>
 
-        <div className={`sm:w-1/2 flex font-lato justify-center ${language==="en"?"sm:pr-20 sm:pl-[30px]":"sm:pl-20 sm:pr-[30px]"}  flex-col`}>
+        <div className={`sm:w-1/2 flex font-lato justify-center ${language==="en"?"sm:pr-10  xl:pr-20 sm:pl-[30px]":"sm:pl-10 xl:pl-20 sm:pr-[30px]"}  flex-col`}>
           <p className="font-bold text-blueColor text-[23px] sm:text-[30px] text-center sm:text-start">
             02
           </p>
           <p className="font-bold text-[23px] sm:text-[30px] mb-[15px] sm:mb-0 text-center sm:text-start ">
             {t(data.vision)}
           </p>
-          <p className="text-[#878787] text-[10px] sm:text-[15px] text-center sm:text-start">
+          <p className="text-[#878787] text-[10px] sm:text-[12px]  xl:text-[15px] text-center sm:text-start">
             {t(data.visionDesc)}
           </p>
         </div>

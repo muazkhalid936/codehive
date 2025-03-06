@@ -42,7 +42,9 @@ const LongRevealHeading = (params) => {
     <div
     dir={language === "en" ? "ltr" : "rtl"}
 
-      className={`container h-[50vh] mb-[1500px] ${language==="en"?"mt-[-1000px] sm:mt-[-800px]":"mt-[-1100px] sm:mt-[-1100px]"} items-center flex justify-center  mx-auto`}
+      className={`container h-[50vh]  ${language==="en"?"mt-[-1000px] mb-[1400px] sm:mt-[-800px]":
+        
+        "mt-[-1100px] mb-[1500px] sm:mb-[1700px] lg:mb-[1400px] sm:mt-[-1100px]"} items-center flex justify-center  mx-auto`}
     >
       <p
         ref={textRef}

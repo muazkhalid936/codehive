@@ -58,7 +58,7 @@ const index = () => {
             <span className="text-blueColor">{title.split(" ").slice(-1)}</span>
           </h2>
 
-          <div className={`sm:flex hidden flex-col ${language==="en"?"md:flex-row":"md:flex-row-reverse"} justify-end items-end    xl:gap-5`}>
+          <div className={`sm:flex hidden flex-col ${language==="en"?"md:flex-row":"md:flex-row-reverse"} justify-end items-end    md:gap-5`}>
             <div
               dir={language === "en" ? "ltr" : "rtl"}
               className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[600px] md:h-[650px] lg:h-[660px] xl:h-[570px] via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"

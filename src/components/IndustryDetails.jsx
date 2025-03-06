@@ -73,7 +73,7 @@ const IndustryDetails = ({ panelData }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className=" main_hero_slogan mt-2 sm:mt-0">
+            <p className=" main_hero_slogan  mt-2 sm:mt-0">
               {t(activePanel.description)}
             </p>
 

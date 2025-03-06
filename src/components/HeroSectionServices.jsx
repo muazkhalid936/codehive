@@ -62,9 +62,9 @@ const HeroSectionServices = ({
         />
       )}
 
-      <div className="container overflow-hidden mx-auto sm:flex-row flex-col  justify-center pb-5 sm:pb-0 sm:mb-0 sm:justify-end max-h-[580px]  flex pt-20 min-h-[400px] sm:min-h-[500px] sm:h-[70vh]">
+      <div className="container overflow-hidden mx-auto sm:flex-row flex-col  justify-center pb-5 sm:pb-0 sm:mb-0 sm:justify-end max-h-[580px]  flex pt-20 min-h-[400px] xl:min-h-[500px] ">
         {/* First Section */}
-        <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 md:gap-10 flex-col">
+        <div className="left-section sm:w-1/2 flex justify-center items-center sm:items-start gap-5 xl:gap-10 flex-col">
           {" "}
           {renderTitle()}
           {description && (

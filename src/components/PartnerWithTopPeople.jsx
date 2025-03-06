@@ -106,7 +106,7 @@ const PartnerWithTopPeople = () => {
       dir={language === "ar" ? "rtl" : "ltr"}
     >
       <div className="container  sm:px-4">
-        <h2 className="text-center sm:mb-14 sm:w-[65%] mx-auto sub_heading  leading-tight gilray-font">
+        <h2 className="text-center sm:mb-14 sm:w-[80%] xl:w-[65%] mx-auto sub_heading  leading-tight gilray-font">
           {title.map((word, index) => (
             <span
               key={index}
@@ -139,7 +139,7 @@ const PartnerWithTopPeople = () => {
           </div>
 
           {/* Right Side: Swiper */}
-          <div className="w-[50%] lg:w-[70%] flex flex-col justify-between ">
+          <div className="w-[50%] xl:w-[70%] flex flex-col justify-between ">
             <div className="h-[155px]">
               <h3 className="text-[18px] sm:text-[22px] font-bold">
                 {data[selectedIndex].name}
@@ -153,7 +153,7 @@ const PartnerWithTopPeople = () => {
             </div>
 
             {/* Swiper - Shifted Order */}
-            <div className="hidden sm:flex">
+            <div className="hidden mt-[60px] xl:mt-0 sm:flex">
               <Swiper
                 slidesPerView={3}
                 loop={true}
@@ -161,7 +161,7 @@ const PartnerWithTopPeople = () => {
                 modules={[EffectFade, History, EffectCards, Autoplay]}
                 breakpoints={{
                   240: { slidesPerView: 1.3 },
-                  768: { slidesPerView: 2.3 },
+                  768: { slidesPerView: 1.6 },
                   1280: { slidesPerView: 3.3 },
                 }}
               >
@@ -174,7 +174,7 @@ const PartnerWithTopPeople = () => {
                       }}
                       onMouseEnter={() => setHoveredSlide(item.name)}
                       onMouseLeave={() => setHoveredSlide("")}
-                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl h-[200px]  xl:h-[367px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
+                      className="flex flex-col text-center transition-transform duration-500 ease-in-out transform gap-2 scale-90 bg-gradient-to-b from-[#010B1770] to-[#2093CA70] relative rounded-xl h-[300px]  xl:h-[367px] cursor-pointer pt-4 overflow-hidden hover:scale-100"
                       style={{
                         border: "1px solid transparent",
                         borderRadius: "26px",

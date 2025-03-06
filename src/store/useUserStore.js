@@ -1,11 +1,9 @@
 import { create } from "zustand";
 
-const getDefaultLanguage = () => {
-  return localStorage.getItem("language") || "en";
-};
+
 
 const useStore = create((set) => ({
-  language: getDefaultLanguage(),
+  language: "en",
   setLanguage: (lang) => {
     localStorage.setItem("language", lang);
     set({ language: lang });
