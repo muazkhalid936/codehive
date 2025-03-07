@@ -59,7 +59,7 @@ const HeroSectionOurWork = ({
         <img
           src="/feature/gray.png"
           alt="Decorative Top Arrow"
-          className={`absolute hidden sm:flex top-20 ${
+          className={`absolute z-[1] hidden sm:flex top-20 ${
             language === "en" ? "-right-0" : "left-0 scale-x-[-1]"
           }  h-[200px]  md:h-[300px] object-contain`}
           aria-label="Top Arrow"
@@ -91,7 +91,7 @@ const HeroSectionOurWork = ({
                   className={`bg-white rounded-full p-1 sm:p-2 ${
                     language === "en"
                       ? "sm:group-hover:translate-x-44 group-hover:translate-x-[180px] lg:group-hover:translate-x-56"
-                      : "sm:group-hover:-translate-x-[150px] group-hover:-translate-x-[130px] "
+                      : "sm:group-hover:-translate-x-[150px] group-hover:-translate-x-[140px] "
                   } transform transition-transform duration-300  overflow-hidden`}
                 >
                   {language === "en" ? (
@@ -114,7 +114,7 @@ const HeroSectionOurWork = ({
             <img
               src={rightImage}
               alt="Hero Right Image"
-              className={` object-contain h-[100%]  ${
+              className={`z-[2] object-contain h-[100%]  ${
                 bottom === true ? "pb-[20px] sm:pb-0" : ""
               } sm:h-[100%] `}
             />

@@ -348,7 +348,7 @@ const NavbarPages = ({ isBlack }) => {
                   className="hover:text-white transition-colors"
                 >
                   <button className="mx-auto main_hero_slogan h-7 sm:h-10 w-20 sm:w-40 rounded-full bg-blueColor">
-                    {t("contactUs5")}
+                  {language === "en" ? "Contact Us" : "تحدث معنا"}
                   </button>
                 </Link>
                 <div className="flex justify-end gap-2 pt-2 border-t border-gray-600 mt-4">

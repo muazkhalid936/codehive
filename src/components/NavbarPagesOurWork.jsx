@@ -204,7 +204,7 @@ const NavbarPages = ({ isBlack }) => {
 
             <Link href={"/contact"}>
               <button className="mx-auto text-[16px] h-10 px-4 xl:px-10 rounded-full border-white border text-white">
-                Contact Us
+              {language === "en" ? "Contact Us" : "تحدث معنا"}
               </button>
             </Link>
           </div>
