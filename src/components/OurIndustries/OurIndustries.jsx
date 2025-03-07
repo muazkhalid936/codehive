@@ -88,11 +88,11 @@ import useStore from "../../store/useUserStore";
 import { useRouter } from "next/navigation";
 import { Link } from "../../i18n/routing";
 import { useTranslations } from "next-intl";
-import IphoneModel from "../IphoneModel";
+// import IphoneModel from "../IphoneModel";
 gsap.registerPlugin(ScrollTrigger);
 
 // Lazy load the IphoneModel component
-// const IphoneModel = dynamic(() => import("../IphoneModel"), { ssr: false });
+const IphoneModel = dynamic(() => import("../IphoneModel"), { ssr: false });
 
 const ScrollAnimation = () => {
   const router = useRouter();
@@ -158,28 +158,28 @@ const ScrollAnimation = () => {
         const endRotation = 11.3;
         const midRotation = (startRotation + endRotation) / 2;
   
-        // tl.to(
-        //   {},
-        //   {
-        //     onUpdate: () => {
-        //       const sectionProgress = tl.progress() * sections.length - index;
-        //       const rotationValue = gsap.utils.interpolate(startRotation, endRotation, sectionProgress);
+        tl.to(
+          {},
+          {
+            onUpdate: () => {
+              const sectionProgress = tl.progress() * sections.length - index;
+              const rotationValue = gsap.utils.interpolate(startRotation, endRotation, sectionProgress);
   
-        //       if (meshRef.current) {
-        //         meshRef.current.rotation.y = rotationValue;
-        //         console.log(meshRef);
-        //       }
+              if (meshRef.current) {
+                meshRef.current.rotation.y = rotationValue;
+                console.log(meshRef);
+              }
   
-        //       if (Math.abs(rotationValue - midRotation) < 0.4) {
-        //         setTextureUrl(texturePaths[index]);
-        //       } else if (Math.abs(rotationValue) < 7.8) {
-        //         setTextureUrl(texturePaths[index - 1]);
-        //       }
-        //     },
-        //     ease: "none",
-        //   },
-        //   index + 0.2
-        // );
+              if (Math.abs(rotationValue - midRotation) < 0.4) {
+                setTextureUrl(texturePaths[index]);
+              } else if (Math.abs(rotationValue) < 7.8) {
+                setTextureUrl(texturePaths[index - 1]);
+              }
+            },
+            ease: "none",
+          },
+          index + 0.2
+        );
       }
     });
   
