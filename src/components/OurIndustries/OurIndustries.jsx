@@ -158,28 +158,28 @@ const ScrollAnimation = () => {
         const endRotation = 11.3;
         const midRotation = (startRotation + endRotation) / 2;
   
-        tl.to(
-          {},
-          {
-            onUpdate: () => {
-              const sectionProgress = tl.progress() * sections.length - index;
-              const rotationValue = gsap.utils.interpolate(startRotation, endRotation, sectionProgress);
+        // tl.to(
+        //   {},
+        //   {
+        //     onUpdate: () => {
+        //       const sectionProgress = tl.progress() * sections.length - index;
+        //       const rotationValue = gsap.utils.interpolate(startRotation, endRotation, sectionProgress);
   
-              if (meshRef.current) {
-                meshRef.current.rotation.y = rotationValue;
-                console.log(meshRef);
-              }
+        //       if (meshRef.current) {
+        //         meshRef.current.rotation.y = rotationValue;
+        //         console.log(meshRef);
+        //       }
   
-              if (Math.abs(rotationValue - midRotation) < 0.4) {
-                setTextureUrl(texturePaths[index]);
-              } else if (Math.abs(rotationValue) < 7.8) {
-                setTextureUrl(texturePaths[index - 1]);
-              }
-            },
-            ease: "none",
-          },
-          index + 0.2
-        );
+        //       if (Math.abs(rotationValue - midRotation) < 0.4) {
+        //         setTextureUrl(texturePaths[index]);
+        //       } else if (Math.abs(rotationValue) < 7.8) {
+        //         setTextureUrl(texturePaths[index - 1]);
+        //       }
+        //     },
+        //     ease: "none",
+        //   },
+        //   index + 0.2
+        // );
       }
     });
   
@@ -264,15 +264,7 @@ const ScrollAnimation = () => {
 
             <div className="sm:w-1/2 w-full iphone">
               {/* {shouldLoadModel && ( */}
-                <Canvas
-                  dpr={[1, 2]}
-                  camera={{ position: [25, 0, 0], fov: 20 }}
-                  className="canvas-container"
-                >
-                  <Suspense fallback={<>Loading...</>}>
-                    <IphoneModel textureUrl={textureUrl} meshRef={meshRef} />
-                  </Suspense>
-                </Canvas>
+               
               {/* )} */}
             </div>
           </div>
