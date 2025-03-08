@@ -134,12 +134,12 @@ const Banner = ({
                   
                   ${
                     t(buttonTitle) === "احصل على عرض"
-                      ? " group-hover:-translate-x-24 md:group-hover:-translate-x-[120px]"
+                      ? " group-hover:-translate-x-24 md:group-hover:-translate-x-[130px]"
                       : t(buttonTitle) === "Get a Quote"
                       ? " group-hover:translate-x-[84px] md:group-hover:translate-x-[103px]"
                       : language === "en"
                       ? " group-hover:translate-x-20 md:group-hover:translate-x-[98px]"
-                      : " group-hover:-translate-x-20 md:group-hover:-translate-x-[85px]"
+                      : " group-hover:-translate-x-20 md:group-hover:-translate-x-[100px]"
                   }
                    overflow-hidden`}
                 >
