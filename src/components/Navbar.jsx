@@ -91,7 +91,7 @@ const Navbar = () => {
               <p>{t("services1")}</p>
               {isServicesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
               {isServicesDropdownOpen && (
-                <div className="absolute top-7 left-0 mt-1 bg-[#001A36] w-[350px] rounded shadow-lg z-50">
+                <div className={`absolute top-7 mt-1 ${language==="en"?"left-0":"right-0"} bg-[#001A36] w-[350px] shadow-lg z-50`}>
                   {servicesDropdown?.map((service) => (
                     <Link
                       key={service.label}
@@ -113,7 +113,7 @@ const Navbar = () => {
               {t("industries")}
               {isIndustriesDropdownOpen ? <FaCaretUp /> : <FaCaretDown />}
               {isIndustriesDropdownOpen && (
-                <div className="absolute top-7 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+                <div className={`absolute top-7 mt-1 ${language==="en"?"left-0":"right-0"} bg-[#001A36] w-[350px] shadow-lg z-50`}>
                   {industriesDropdown?.map(
                     (industry) =>
                       industry.label !== "ourBooking" &&
@@ -139,7 +139,7 @@ const Navbar = () => {
               {t("products")}
               {work ? <FaCaretUp /> : <FaCaretDown />}
               {work && (
-                <div className="absolute top-7 mt-1 left-0 bg-[#001A36] w-[350px] shadow-lg z-50">
+                <div className={`absolute top-7 mt-1 ${language==="en"?"left-0":"right-0"} bg-[#001A36] w-[350px] shadow-lg z-50`}>
                   <Link
                     href="/industries/our-booking-system"
                     className={`block py-2 px-4 text-white ${language==="en"?"border-l-4":"border-r-4"} border-[#001A36] hover:border-blueColor hover:bg-[#219DD92B]`}
