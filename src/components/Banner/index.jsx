@@ -4,6 +4,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 import useStore from "../../store/useUserStore";
 import { useParams } from "next/navigation";
+import { bg } from "intl-tel-input/i18n";
 
 const Banner = ({
   bgImage,
@@ -12,9 +13,11 @@ const Banner = ({
   widthSet,
   description,
   padright,
+  flip,
   lessSpace,
   spaceInMobile,
   backgroundColor,
+  bgImage2,
   showDecsription,
   top,
   showBottomArrow,
@@ -29,7 +32,9 @@ const Banner = ({
   // Split the title into words for easier manipulation
   const titleParts = t(title).split(" ");
   const color = rightImage ? "text-black" : "text-white";
-
+  if (flip && language==="ar") {
+    bgImage = bgImage2;
+  }
   return (
     <div
       className={`container  rounded-lg ${
@@ -46,10 +51,14 @@ const Banner = ({
         } sm:h-[400px] sm:min-h-[380px] sm:max-h-[450px] w-full  rounded-[20px] 
         
         ${
-          language === "ar" &&params.slug==="car-wash" &&padright ? "sm:!justify-end md:pr-[45px]" : ""
+          language === "ar" && params.slug === "car-wash" && padright
+            ? "sm:!justify-end md:pr-[45px]"
+            : ""
         }
         ${
-          params.slug === "car-wash" ? "justify-center sm:justify-between" : "justify-between"
+          params.slug === "car-wash"
+            ? "justify-center sm:justify-between"
+            : "justify-between"
         } flex flex-col sm:flex-row    sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,

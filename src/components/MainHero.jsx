@@ -23,7 +23,9 @@ const MainHero = () => {
       document.removeEventListener("visibilitychange", playVideo);
     };
   }, []);
-
+  const headingText = t("bespokeSol");
+   const headingText1 = "نقدم حلول مصممة خصيصا لتناسب متطلبات عملك";
+   const words = headingText.split(" ");
   return (
     <div
       dir={language === "ar" ? "rtl" : "ltr"}
@@ -32,7 +34,14 @@ const MainHero = () => {
       {/* Text Content */}
       <div className="flex sm:w-[50%] gap-5 sm:gap-0 sm:mt-0 justify-center flex-col text-white xl:gap-8">
         <p className="text-[30px] main-heading text-center sm:text-start sm:text-4xl lg:text-[40px] xl:text-[50px] z-10 font-extrabold leading-tight">
-          {t("bespokeSol")}
+        {words.map((word, index) => (
+             <span
+               key={index}
+               className={index === 1 ? "text-blueColor" : "text-white"}
+             >
+               {word}{" "}
+             </span>
+           ))}
         </p>
 
         <p className="main_hero_slogan text-white z-40 text-center sm:text-start">

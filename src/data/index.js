@@ -2584,6 +2584,7 @@ export const industries = [
       blueWords: ["Reward", "Hive"],
       description: "creatingIn",
       flip:true,
+      bgImage2:"/Image.jpg",
       buttonTitle: "getAQuote6",
       lessSpace:true,
 widthSet:true,
