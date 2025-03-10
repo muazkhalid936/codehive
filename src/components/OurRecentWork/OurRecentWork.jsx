@@ -28,13 +28,13 @@ const LongRevealHeading = (params) => {
         textRef.current,
         {
           scale: 0.8,
-          backgroundPosition:`${language==="en"?"-600px 0":"600px 0"}`,
+          backgroundPosition: `${language === "en" ? "-600px 0" : "600px 0"}`,
           // backgroundPosition: "-600px 0", // Move the gradient across the text
         },
         {
           scale: 1.2,
           // duration: 1,
-          backgroundPosition:`${language==="en"?"600px 0":"-600px 0"}`,
+          backgroundPosition: `${language === "en" ? "600px 0" : "-600px 0"}`,
           // backgroundPosition: "600px 0", // Move the gradient across the text
           ease: "none",
         }
@@ -42,7 +42,13 @@ const LongRevealHeading = (params) => {
   }, []);
 
   return (
-    <div className={`container h-[50vh] ${language==="en"?"mb-[1000px] sm:mb-[1300px] mt-[-350px] sm:mt-[-450px]  lg:mt-[-350px]":"mb-[1400px] sm:mb-[1300px] mt-[-850px] lg:mt-[-750px] "} items-center flex justify-center  mx-auto`}>
+    <div
+      className={`container h-[50vh] ${
+        language === "en"
+          ? "mb-[1000px] sm:mb-[1300px] mt-[-350px] sm:mt-[-450px]  lg:mt-[-170px]"
+          : "mb-[1400px] sm:mb-[1300px] mt-[-850px] lg:mt-[-750px] "
+      } items-center flex justify-center  mx-auto`}
+    >
       <p
         ref={textRef}
         className="animated-text-long main-heading header text-4xl sm:text-[60px] text-white"
