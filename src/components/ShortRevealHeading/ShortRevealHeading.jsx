@@ -30,12 +30,12 @@ const ShortRevealHeading = (params) => {
         textRef.current,
         {
           scale: 0.8,
-          backgroundPosition: `${language==="en"?"-600px 0":"800px 0"}`, // Move the gradient across the text
+          backgroundPosition: `${language === "en" ? "-600px 0" : "800px 0"}`, // Move the gradient across the text
         },
         {
           scale: 1.2,
           // duration: 1,
-          backgroundPosition: `${language==="en"?"500px 0":"-600px 0"}`, // Move the gradient across the text
+          backgroundPosition: `${language === "en" ? "500px 0" : "-600px 0"}`, // Move the gradient across the text
           // backgroundPosition: "500px 0", // Move the gradient across the text
           ease: "none",
         }
@@ -43,8 +43,13 @@ const ShortRevealHeading = (params) => {
   }, []);
 
   return (
-    <div className={`container h-[400px] ${language==="en"?"mb-[1000px] sm:mb-[1200px] mt-[-200px] sm:mt-[-700px] lg:mt-[-400px] 2xl:mt-[-600px]":
-    "mb-[1350px] sm:mb-[1200px] lg:mb-[1400px] mt-[-850px] sm:mt-[-1400px]  lg:mt-[-1000px]"} flex justify-center items-center mx-auto`}>
+    <div
+      className={`container h-[400px] ${
+        language === "en"
+          ? "mb-[1000px] sm:mb-[1200px] mt-[-200px] sm:mt-[-700px] lg:mt-[-600px]"
+          : "mb-[1350px] sm:mb-[1200px] lg:mb-[1400px] mt-[-850px] sm:mt-[-1400px]  lg:mt-[-1300px]"
+      } flex justify-center items-center mx-auto`}
+    >
       <p
         ref={textRef}
         className="animated-text-short main-heading header text-4xl sm:text-[60px] text-white"

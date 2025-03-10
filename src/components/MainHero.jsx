@@ -23,9 +23,29 @@ const MainHero = () => {
       document.removeEventListener("visibilitychange", playVideo);
     };
   }, []);
+
+  // Disable right-click context menu on the video
+  useEffect(() => {
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+    };
+
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.addEventListener("contextmenu", handleContextMenu);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener("contextmenu", handleContextMenu);
+      }
+    };
+  }, []);
+
   const headingText = t("bespokeSol");
-   const headingText1 = "نقدم حلول مصممة خصيصا لتناسب متطلبات عملك";
-   const words = headingText.split(" ");
+  const headingText1 = "نقدم حلول مصممة خصيصا لتناسب متطلبات عملك";
+  const words = headingText.split(" ");
+
   return (
     <div
       dir={language === "ar" ? "rtl" : "ltr"}
@@ -34,14 +54,14 @@ const MainHero = () => {
       {/* Text Content */}
       <div className="flex sm:w-[50%] gap-5 sm:gap-0 sm:mt-0 justify-center flex-col text-white xl:gap-8">
         <p className="text-[30px] main-heading text-center sm:text-start sm:text-4xl lg:text-[40px] xl:text-[50px] z-10 font-extrabold leading-tight">
-        {words.map((word, index) => (
-             <span
-               key={index}
-               className={index === 1 ? "text-blueColor" : "text-white"}
-             >
-               {word}{" "}
-             </span>
-           ))}
+          {words.map((word, index) => (
+            <span
+              key={index}
+              className={index === 1 ? "text-blueColor" : "text-white"}
+            >
+              {word}{" "}
+            </span>
+          ))}
         </p>
 
         <p className="main_hero_slogan text-white z-40 text-center sm:text-start">
@@ -50,7 +70,20 @@ const MainHero = () => {
       </div>
 
       {/* Video */}
-      <div className="flex flex-1">
+      <div className="flex flex-1 relative">
+        {/* Transparent overlay to intercept interactions */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 10,
+          }}
+          onContextMenu={(e) => e.preventDefault()} // Disable right-click on the overlay
+        ></div>
+
         <video
           ref={videoRef}
           autoPlay
@@ -58,6 +91,7 @@ const MainHero = () => {
           muted
           playsInline
           className="w-full h-full"
+          style={{ pointerEvents: "none" }} // Disable pointer events on the video
         >
           <source src="/Logo 3.mov" type="video/mp4" />
         </video>

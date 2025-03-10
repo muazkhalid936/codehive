@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import OurProcess from "../../components/OurProcess/OurProcess";
 import MainHero from "../../components/MainHero";
@@ -15,7 +15,7 @@ import OurIndustryHeading from "../../components/OurIndustryHeading/ShortRevealH
 import ProcessHeading from "../../components/ProcessHeading/ShortRevealHeading";
 import Footer from "../../components/Footer";
 import { useTranslations } from "next-intl";
-
+import useStore from "../../store/useUserStore";
 // Simple Loader Component
 const Loader = () => (
   <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[#000B17]">
@@ -24,13 +24,16 @@ const Loader = () => (
 );
 
 export default function Home() {
+  const { language, setLanguage } = useStore();
   const t = useTranslations("translation");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setLanguage(localStorage.getItem("language") || "en");
     // Simulate content loading (e.g., fetching data, preloading assets, etc.)
     const loadContent = async () => {
       // Simulate a 2-second delay for loading content
+
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Once content is loaded, hide the loader

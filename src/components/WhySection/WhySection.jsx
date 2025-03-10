@@ -140,7 +140,7 @@ const ImageScrollEffect = () => {
   return (
     <>
       {/* Desktop Div */}
-      <div className="why-section-container  hidden container sm:flex flex-col mx-auto text-center text-white min-h-[600px] h-[100vh] font-bold relative overflow-hidden">
+      <div className="why-section-container  hidden container sm:flex flex-col mx-auto text-center text-white min-h-[600px] h-[1000px] font-bold relative overflow-hidden">
         {/* Images */}
         <div className="w-full animation flex justify-center">
           <ScrollAnimation />
