@@ -25,20 +25,24 @@ const IndustryDetails = ({ panelData }) => {
         className="container relative mx-auto"
         dir={language === "ar" ? "rtl" : "ltr"}
       >
-        <div className={`bg-white rounded-full  no-scrollbar overflow-x-auto sm:overflow-x-hidden flex  gap-5 py-4 px-5 whitespace-nowrap scrollbar-hide`}>
-          {panelData.map((panel) => (
-            <button
-              key={panel.id}
-              onClick={() => setActivePanel(panel)}
-              className={`py-3 main_hero_slogan rounded-full flex flex-1 px-4 items-center justify-center ${
-                activePanel.id === panel.id
-                  ? "bg-gradient-to-r from-[#219DD9] to-[#125784] text-white"
-                  : "bg-[#e9e9e9] text-[#68747b]"
-              }`}
-            >
-              {t(panel.title)}
-            </button>
-          ))}
+        <div
+          className={`bg-white rounded-full  no-scrollbar overflow-x-auto sm:overflow-x-hidden flex  gap-5 py-4 px-5 scrollbar-hide`}
+        >
+          <div className="flex flex-1 px-1 whitespace-nowrap">
+            {panelData.map((panel) => (
+              <button
+                key={panel.id}
+                onClick={() => setActivePanel(panel)}
+                className={`py-3 ${language==="ar"?"ml-5 sm:ml-0 sm:mx-3":" mx-2 sm:mx-3"} main_hero_slogan rounded-full flex flex-1 px-4 items-center justify-center ${
+                  activePanel.id === panel.id
+                    ? "bg-gradient-to-r from-[#219DD9] to-[#125784] text-white"
+                    : "bg-[#e9e9e9] text-[#68747b]"
+                }`}
+              >
+                {t(panel.title)}
+              </button>
+            ))}
+          </div>
         </div>
         <motion.div
           // className="flex flex-col sm:w-[60%]"
@@ -80,7 +84,10 @@ const IndustryDetails = ({ panelData }) => {
             <div className="flex">
               <div className="mt-5 sm:mt-10 flex flex-col justify-between gap-3 sm:gap-6">
                 {activePanel.features.map((feature, index) => (
-                  <div key={index} className="flex font-lato gap-2 sm:gap-5 items-start">
+                  <div
+                    key={index}
+                    className="flex font-lato gap-2 sm:gap-5 items-start"
+                  >
                     <img
                       src={feature.icon}
                       className="w-10 h-10 lg:w-14 lg:h-14"

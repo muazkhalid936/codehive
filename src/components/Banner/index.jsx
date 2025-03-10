@@ -50,10 +50,12 @@ const Banner = ({
         }
         ${
           params.slug === "car-wash" ? "justify-center sm:justify-between" : "justify-between"
-        } flex flex-col sm:flex-row   sm:px-0`}
+        } flex flex-col sm:flex-row    sm:px-0`}
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundPosition: "top",
+          // filter: "invert(1)",
+          // transform: "scale(-1)",
           backgroundColor: backgroundColor || undefined,
         }}
       >

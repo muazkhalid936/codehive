@@ -2583,6 +2583,7 @@ export const industries = [
       title: "automateCu",
       blueWords: ["Reward", "Hive"],
       description: "creatingIn",
+      flip:true,
       buttonTitle: "getAQuote6",
       lessSpace:true,
 widthSet:true,
