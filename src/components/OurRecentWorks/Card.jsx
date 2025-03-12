@@ -51,7 +51,7 @@ const Card = ({ head, para, bgImg, Img, link, tech1, tech2 }) => {
           <img src={Img} className="h-10" />
         </div>
         <p className="text-black text-2xl font-semibold">{head}</p>
-        <p className="text-black">{para}</p>
+        <p className="text-black main_hero_slogan">{para}</p>
         <hr className={`border mt-1 ${height?"opacity-100":"opacity-0"} border-black w-full`} />
         <button
           onClick={() => router.push(link)}
