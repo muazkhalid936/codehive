@@ -37,7 +37,7 @@ const WorryNoMore = ({
           } pl-4 md:pl-10  pr-2  sm:justify-center border-tl-[20px] border-bl-[20px] rounded-[20px] gap-3 px-6 py-5`}
           dir={language === "en" ? "ltr" : "rtl"}
         >
-          <h2 className="gilray-font z-[2] leading-tight sub_heading">
+          <h2 className="gilray-font hidden sm:block z-[2] leading-tight sub_heading">
             <span>
               {firstLine.split(" ").map((word, index) => (
                 <span
@@ -74,6 +74,25 @@ const WorryNoMore = ({
               ))}
             </span>
           </h2>
+          <h2 className="gilray-font sm:hidden z-[2] leading-tight sub_heading">
+            <span>
+              {titleParts.map((word, index) => (
+                <span
+                  key={index}
+                  className={`${
+                    blueWords.some(
+                      (blueWord) =>
+                        blueWord.toLowerCase() === word.toLowerCase()
+                    )
+                      ? "text-[#219DD9]"
+                      : "text-black"
+                  }`}
+                >
+                  {word}{" "}
+                </span>
+              ))}
+            </span>
+          </h2>
           <p className="xl:mb-5 text-[#535D66] main_hero_slogan">
             {t(description)}
           </p>
@@ -93,13 +112,17 @@ const WorryNoMore = ({
         {rightImage && (
           <div
             className={` sm:z-10 text-white w-full lg:w-[65%] ${
-              cut ? "sm:absolute md:right-[-25vw] lg:!w-[80%] lg:right-[-14vw] xl:right-[-5vw]" : " sm:absolute right-0 "
+              cut
+                ? "sm:absolute md:right-[-25vw] lg:!w-[80%] lg:right-[-14vw] xl:right-[-5vw]"
+                : " sm:absolute right-0 "
             }  bottom-0  overflow-hidden justify-end items-end flex  self-end rounded-br-[20px]`}
           >
             <img
               src={rightImage}
               className={`object-cover    ${
-                cut ? "xl:w-[75%] worryNoMoreHeightCut md:h-[450px]" : " worryNoMoreHeight md:h-[400px] xl:!h-[450px]"
+                cut
+                  ? "xl:w-[75%] worryNoMoreHeightCut md:h-[450px]"
+                  : " worryNoMoreHeight md:h-[400px] xl:!h-[450px]"
               }`}
             />
           </div>

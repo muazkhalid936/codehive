@@ -1,14 +1,16 @@
-"use client";
-
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
-import OurIndustries from "../../../components/OurIndustries/OurIndustries"
-export default function ModelPage() {
-  const { scene } = useGLTF("/l.gltf"); // Ensure model is in 'public' folder
-
+import React from "react";
+import Test from "../../../components/OurRecentWorks/Test";
+const page = () => {
   return (
-    <div className="bg-[#000B17]">
-<OurIndustries />
-    </div>
+    <>
+      <div className="h-screen flex justify-center items-center ">Hi</div>
+      <div>
+        {/* <div className='flex justify-center items-center  h-screen'>Hi</div> */}
+
+        <Test />
+      </div>
+    </>
   );
-}
+};
+
+export default page;

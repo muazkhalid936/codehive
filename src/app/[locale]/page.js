@@ -14,6 +14,8 @@ import ShortRevealHeading from "../../components/ShortRevealHeading/ShortRevealH
 import OurIndustryHeading from "../../components/OurIndustryHeading/ShortRevealHeading";
 import ProcessHeading from "../../components/ProcessHeading/ShortRevealHeading";
 import Footer from "../../components/Footer";
+import Lenis from "@studio-freight/lenis";
+
 import { useTranslations } from "next-intl";
 import useStore from "../../store/useUserStore";
 // Simple Loader Component
@@ -61,6 +63,7 @@ export default function Home() {
           <OurIndustries />
           <OurRecentWork text={t("ourRecentW")} />
           <Test />
+
           <div className="mb-[50px]">
             <ContactForm />
           </div>
