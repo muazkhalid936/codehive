@@ -112,15 +112,16 @@ function ScrollSection() {
       x: () =>
         `${language === "en" ? "-" : ""}${
           section.scrollWidth - trigger.offsetWidth + 50
-        }px`, // Ensures correct RTL scrolling for Arabic
+        }px`, 
       ease: "none",
       scrollTrigger: {
         trigger: trigger,
         start: "top top",
         end: () => `+=${section.scrollWidth}`,
         scrub: 1.2,
+        // markers: true,
         pin: true,
-        anticipatePin: 1, // Prevents glitching
+        anticipatePin: 1, 
       },
     });
 
@@ -137,7 +138,7 @@ function ScrollSection() {
       <div ref={triggerRef} className="container mx-auto overflow-hidden">
         <div
           ref={sectionRef}
-          className="scroll-section-inner flex space-x-10 w-max"
+          className="scroll-section-inner flex gap-5 w-max"
         >
           {cardsData.map(
             (

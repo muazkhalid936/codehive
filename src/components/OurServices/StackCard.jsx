@@ -3,6 +3,7 @@ import { FiArrowUpRight,FiArrowUpLeft } from "react-icons/fi";
 import {  useRouter } from '../../i18n/routing';
 
 import useStore from "../../store/useUserStore";
+import Image from "next/image";
 
 const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
   const { language } = useStore();
@@ -55,7 +56,7 @@ const StackCard = ({ bg, imgLink, heading, num, para, link }) => {
 
       <div className="w-full flex z-20 pb-[15px] sm:mb-0 md:w-1/2 justify-center sm:justify-end items-center">
         <div className="border-[1px]  sm:w-[95%] border-blue-400 sm:h-[90%] rounded-[20px] ">
-          <img src={imgLink} alt="1" className="w-full h-full  " />
+          <Image src={imgLink} alt="1" width={500} height={500} className="!w-full !h-full  " />
         </div>
       </div>
     </div>
