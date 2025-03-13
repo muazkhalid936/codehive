@@ -13,7 +13,7 @@ const page = () => {
   const [option, setOption] = useState("all");
   const title = t("turningYou");
   const words = title.split(" ");
-  const {language} = useStore();
+  const { language } = useStore();
   const highlightIndices = [7, 8, 10];
 
   return (
@@ -53,11 +53,10 @@ const page = () => {
         </div>
       </div>
 
-      <div className="  container mb-[55px]  mx-auto "
-      
-      >
-        <div className="w-full overflow-x-scroll no-scrollbar"
-        dir={language==="en"?"ltr":"rtl"}
+      <div className="  container mb-[55px]  mx-auto ">
+        <div
+          className="w-full overflow-x-scroll no-scrollbar"
+          dir={language === "en" ? "ltr" : "rtl"}
         >
           <div className="flex my-[40px] sm:my-[55px] main_hero_slogan gap-2 sm:gap-5 whitespace-nowrap">
             <button
@@ -140,7 +139,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/laam-web">Laam</Link>
+                    <Link href="/our-work/laam-web">{t("laamWeb")}</Link>
                   </div>
                 </div>
               </div>
@@ -161,8 +160,12 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/clixpos-website">ClixPOS</Link>
-                  </div>
+                  <Link
+                      className="font-poppin"
+                      href="/our-work/clixpos-website"
+                    >
+                      {t("clixposWeb")}
+                    </Link>                  </div>
                 </div>
               </div>
 
@@ -179,8 +182,12 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/faoolun-website">Faoolun</Link>
-                  </div>
+                  <Link
+                      className="font-poppin"
+                      href="/our-work/faoolun-website"
+                    >
+                     {t("faoolun1")}
+                    </Link>                  </div>
                 </div>
               </div>
             </div>
@@ -200,8 +207,12 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/legal-wise-web">Legal Wise Web</Link>
-                  </div>
+                  <Link
+                      className="font-poppin"
+                      href="/our-work/legal-wise-web"
+                    >
+                    {t("legalWiseW")}
+                    </Link>                  </div>
                 </div>
               </div>
             </div>
@@ -228,7 +239,7 @@ const page = () => {
                       href="/our-work/solwave-website"
                       className="font-poppin"
                     >
-                      Solwave
+                  {t("solwave1")}
                     </Link>
                   </div>
                 </div>
@@ -246,8 +257,11 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-5  bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
-                    <Link className="font-poppin" href="/our-work/Mr-app">
-                      Mr Take
+                    <Link
+                      href="/our-work/solwave-website"
+                      className="font-poppin"
+                    >
+                     {t("mrTakeApp")}
                     </Link>
                   </div>
                 </div>
@@ -267,8 +281,8 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
-                    <Link className="font-poppin" href="/our-work/saloon-app">
-                      Glamour Salon
+                  <Link className="font-poppin" href="/our-work/saloon-app">
+                     {t("glamourSal")}
                     </Link>
                   </div>
                 </div>
@@ -287,7 +301,7 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/caption-gen">
-                      Caption Gen{" "}
+                    {t("captionGen")}
                     </Link>
                   </div>
                 </div>
@@ -308,8 +322,7 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/laam-web">
-                      Laam
-                    </Link>
+                      {t("laamWeb")}                    </Link>
                   </div>
                 </div>
               </div>
@@ -327,7 +340,7 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/eshop-app">
-                      Trendora
+                      {t("trendora")}
                     </Link>
                   </div>
                 </div>
@@ -351,7 +364,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/instant-save-app"
                     >
-                      Instant Save
+                    {t("instantSav")}
                     </Link>
                   </div>
                 </div>
@@ -373,7 +386,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/legal-wise-web"
                     >
-                      Legal Wise Web
+                    {t("legalWiseW")}
                     </Link>
                   </div>
                 </div>
@@ -397,7 +410,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/faoolun-website"
                     >
-                      Faoolun{" "}
+                     {t("faoolun1")}
                     </Link>
                   </div>
                 </div>
@@ -419,7 +432,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/doctor-booking-app"
                     >
-                      MedEase
+                  {t("medease")}
                     </Link>
                   </div>
                 </div>
@@ -443,7 +456,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/clixpos-website"
                     >
-                      ClixPOS
+                      {t("clixposWeb")}
                     </Link>
                   </div>
                 </div>
@@ -461,7 +474,7 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
-                    <Link href="/our-work/al-abour-app">Al Abour</Link>
+                    <Link href="/our-work/al-abour-app">{t("alAbourApp")}</Link>
                   </div>
                 </div>
               </div>
@@ -484,7 +497,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/word-smith-ai"
                     >
-                      Wordsmith{" "}
+                     {t("wordsmithA")}
                     </Link>
                   </div>
                 </div>
@@ -502,11 +515,11 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
-                    <Link
+                  <Link
                       className="font-poppin"
                       href="/our-work/food-inventory-app"
                     >
-                      Foodventory
+                      {t("foodventor")}
                     </Link>
                   </div>
                 </div>
@@ -534,7 +547,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/saloon-app">Glamour Salon</Link>
+                    <Link href="/our-work/saloon-app">{t("glamourSal")}</Link>
                   </div>
                 </div>
               </div>
@@ -552,7 +565,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/word-smith-ai">Wordsmith</Link>
+                    <Link href="/our-work/word-smith-ai">{t("wordsmithA")}</Link>
                   </div>
                 </div>
               </div>
@@ -573,7 +586,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/caption-gen">Caption Gen</Link>
+                    <Link href="/our-work/caption-gen">{t("captionGen")}</Link>
                   </div>
                 </div>
               </div>
@@ -591,7 +604,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/instant-save-app">Instant Save</Link>
+                    <Link href="/our-work/instant-save-app">{t("instantSav")}</Link>
                   </div>
                 </div>
               </div>
@@ -612,7 +625,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/eshop-app">Trendora</Link>
+                    <Link href="/our-work/eshop-app">{t("trendora")}</Link>
                   </div>
                 </div>
               </div>
@@ -631,7 +644,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/food-inventory-app">Foodventory</Link>
+                    <Link href="/our-work/food-inventory-app">{t("foodventor")}</Link>
                   </div>
                 </div>
               </div>
@@ -652,7 +665,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/doctor-booking-app">MedEase</Link>
+                    <Link href="/our-work/doctor-booking-app">{t("medease")}</Link>
                   </div>
                 </div>
               </div>
@@ -670,7 +683,7 @@ const page = () => {
               >
                 <div className="absolute -bottom-40 lg:py-5 bg-black bg-opacity-[70%] w-full flex justify-center items-center group-hover:bottom-0 transition-all duration-300">
                   <div className="text-white text-3xl text-center font-poppin">
-                    <Link href="/our-work/al-abour-app">Al Abour</Link>
+                    <Link href="/our-work/al-abour-app">{t("alAbourApp")}</Link>
                   </div>
                 </div>
               </div>
@@ -695,7 +708,7 @@ const page = () => {
                 <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
                     <Link className="font-poppin" href="/our-work/caption-gen">
-                      Caption Gen{" "}
+                    {t("captionGen")}
                     </Link>
                   </div>
                 </div>
@@ -718,7 +731,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/legal-wise-web"
                     >
-                      Legal Wise Web
+                    {t("legalWiseW")}
                     </Link>
                   </div>
                 </div>
@@ -743,7 +756,7 @@ const page = () => {
                       className="font-poppin"
                       href="/our-work/faoolun-website"
                     >
-                      Faoolun{" "}
+                     {t("faoolun1")}
                     </Link>
                   </div>
                 </div>
@@ -766,7 +779,7 @@ const page = () => {
                       href="/our-work/solwave-website"
                       className="font-poppin"
                     >
-                      Solwave
+                  {t("solwave1")}
                     </Link>
                   </div>
                 </div>

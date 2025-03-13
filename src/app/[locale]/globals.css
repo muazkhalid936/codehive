@@ -1,4 +1,6 @@
 @import "intl-tel-input/build/css/intlTelInput.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,13 +11,18 @@
     url("./fonts/Gilroy-Black.ttf") format("truetype");
 }
 
-
 @font-face {
   font-family: "Gilroy Semibold";
   src: local("Gilroy Semibold"), local("Gilroy-Semibold"),
     url("./fonts/gilroy-semibold.ttf") format("truetype");
 }
 
+.urdu {
+  font-family: "Noto Naskh Arabic", serif !important;
+  /* font-optical-sizing: auto; */
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
 @font-face {
   font-family: "Gilroy Bold";
   src: local("Gilroy Bold"), local("Gilroy-Bold"),
@@ -78,26 +85,25 @@
   padding-right: 2rem !important;
   max-width: 1280px !important;
 }
-.navbar_gap{
-  @apply gap-8
+.navbar_gap {
+  @apply gap-8;
 }
 @media (max-width: 1280px) {
   .container {
     max-width: 1100px !important;
   }
-  .navbar_gap{
-    @apply gap-4
+  .navbar_gap {
+    @apply gap-4;
   }
-  .worryNoMoreHeight{
+  .worryNoMoreHeight {
     height: 400px !important;
     right: -10vw !important;
   }
-  
 }
 
 @media (max-width: 1080px) {
-  .navbar_gap{
-    @apply gap-2
+  .navbar_gap {
+    @apply gap-2;
   }
   .container {
     max-width: 900px !important;
@@ -108,7 +114,7 @@
   font-family: "Gilroy", sans-serif !important;
   font-weight: bold;
 }
-.worryNoMoreHeight{
+.worryNoMoreHeight {
   height: 300px !important;
   right: -10vw !important;
 }
@@ -127,7 +133,7 @@
 }
 
 .main_hero_slogan {
-  @apply text-[12px] md:text-[14px] lg:text-[16px] !font-lato;
+  @apply text-[12px] md:text-[14px] lg:text-[16px] font-lato;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -164,7 +170,6 @@
   .canvas-container {
     height: 550px !important;
   }
-  
 }
 .fifth-component {
   margin-top: 800px;
@@ -288,22 +293,19 @@
   .hero_section_heading {
     font-size: 35px;
   }
-  .worryNoMoreWidth{
+  .worryNoMoreWidth {
     width: 50% !important;
   }
 }
 @media (max-width: 767px) {
-
-.worryNoMoreWidth{
-  width: 100% !important;
-}
-  .worryNoMoreHeight{
+  .worryNoMoreWidth {
+    width: 100% !important;
+  }
+  .worryNoMoreHeight {
     height: 200px !important;
   }
 }
 @media (max-width: 640px) {
-
-
   .banner_heading,
   .sub_heading {
     font-size: 25px;
@@ -370,16 +372,11 @@
   }
 }
 
-
-
 @media (max-width: 480px) {
   .canvas-container {
     height: 350px !important;
   }
 }
-
-
-
 
 @media (max-width: 768px) {
   .scroll-container {
@@ -400,13 +397,8 @@
   }
 }
 
-
-
-
-
 .scroll-section-outer {
   overflow: hidden;
-
 }
 
 .scroll-section-inner {
@@ -415,7 +407,6 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  
 }
 
 .scroll-section {

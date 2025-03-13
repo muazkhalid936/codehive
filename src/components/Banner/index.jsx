@@ -131,7 +131,7 @@ const Banner = ({
                 }  ease-in-out duration-300 items-center gap-4 bg-[#219DD9] px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:bg-[#197BB6] transition group`}
               >
                 <p
-                  className={`text-white main_hero_slogan transform transition-transform duration-300 ${
+                  className={`text-white main_hero_slogan flex justify-center items-center  ${language==="en"?"":"urdu"} transform transition-transform duration-300 ${
                     language === "en"
                       ? "group-hover:-translate-x-8   sm:group-hover:-translate-x-10"
                       : "group-hover:translate-x-8   sm:group-hover:translate-x-10"
@@ -145,12 +145,12 @@ const Banner = ({
                   
                   ${
                     t(buttonTitle) === "احصل على عرض"
-                      ? " group-hover:-translate-x-24 md:group-hover:-translate-x-[130px]"
+                      ? " group-hover:-translate-x-[90px] md:group-hover:-translate-x-[120px]"
                       : t(buttonTitle) === "Get a Quote"
                       ? " group-hover:translate-x-[84px] md:group-hover:translate-x-[103px]"
                       : language === "en"
                       ? " group-hover:translate-x-20 md:group-hover:translate-x-[98px]"
-                      : " group-hover:-translate-x-20 md:group-hover:-translate-x-[100px]"
+                      : " group-hover:-translate-x-[70px] md:group-hover:-translate-x-[90px]"
                   }
                    overflow-hidden`}
                 >
