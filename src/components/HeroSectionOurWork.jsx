@@ -99,7 +99,7 @@ const HeroSectionOurWork = ({
                   className={`bg-white rounded-full p-1 sm:p-2 ${
                     language === "en"
                       ? "sm:group-hover:translate-x-44 group-hover:translate-x-[180px] lg:group-hover:translate-x-56"
-                      : "sm:group-hover:-translate-x-[152px] group-hover:-translate-x-[120px] "
+                      : "sm:group-hover:-translate-x-[162px] group-hover:-translate-x-[120px] "
                   } transform transition-transform duration-300  overflow-hidden`}
                 >
                   {language === "en" ? (
