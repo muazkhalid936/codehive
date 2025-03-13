@@ -2,21 +2,24 @@
 import React, { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import useStore from "../store/useUserStore";
+import useVideoStore from "../store/useVideoStore"; // Import the Zustand store
 
 const MainHero = () => {
   const { language } = useStore();
   const t = useTranslations("translation");
   const videoRef = useRef(null);
+  const { setIsVideoLoading } = useVideoStore(); // Zustand state
 
   useEffect(() => {
     const playVideo = () => {
       if (videoRef.current) {
-        videoRef.current.play().catch((err) => console.log("Autoplay prevented:", err));
+        videoRef.current
+          .play()
+          .catch((err) => console.log("Autoplay prevented:", err));
       }
     };
 
     playVideo(); // Play when the component mounts
-
     document.addEventListener("visibilitychange", playVideo); // Resume when returning
 
     return () => {
@@ -43,7 +46,6 @@ const MainHero = () => {
   }, []);
 
   const headingText = t("bespokeSol");
-  const headingText1 = "نقدم حلول مصممة خصيصا لتناسب متطلبات عملك";
   const words = headingText.split(" ");
 
   return (
@@ -69,7 +71,7 @@ const MainHero = () => {
         </p>
       </div>
 
-      {/* Video */}
+      {/* Video Section */}
       <div className="flex flex-1 relative">
         {/* Transparent overlay to intercept interactions */}
         <div
@@ -92,6 +94,7 @@ const MainHero = () => {
           playsInline
           className="w-full h-full"
           style={{ pointerEvents: "none" }} // Disable pointer events on the video
+          onCanPlay={() => setIsVideoLoading(false)} // Hide loader when the video is ready
         >
           <source src="/Logo 3.mov" type="video/mp4" />
         </video>
