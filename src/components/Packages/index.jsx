@@ -274,10 +274,10 @@ const index = () => {
               // pagination={{ clickable: true }}
               className="flex sm:hidden items-end justify-end"
             >
-              <SwiperSlide className="mt-[90px]">
+              <SwiperSlide className="mt-[80px]">
                 <div
                   dir={language === "en" ? "ltr" : "rtl"}
-                  className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"
+                  className="md:w-1/3 md:mt-[10vh] mx-auto  bg-gradient-to-br from-[#010B1770] h-[420px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"
                 >
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] leading-none mx-auto text-center">
@@ -416,10 +416,10 @@ const index = () => {
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide className="mt-[90px]">
+              <SwiperSlide className="mt-[80px]">
                 <div
                   dir={language === "en" ? "ltr" : "rtl"}
-                  className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[410px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"
+                  className="md:w-1/3  md:mt-[10vh] mx-auto bg-gradient-to-br from-[#010B1770] h-[420px]  via-[#2093CA70] to-[#2093CA70]  p-[2px] rounded-2xl"
                 >
                   <div className=" p-4 md:p-8 rounded-2xl  bg-gradient-to-b  relative from-[#0a1929]   to-[#020d1a] w-full h-full   mx-auto shadow-lg ">
                     <p className="gilray-font text-[30px] mx-auto text-center">
