@@ -34,7 +34,7 @@ const page = () => {
           />
         </div>
 
-        <div className="sm:w-[60%] z-10">
+        <div className="sm:w-[60%] w-[90%] z-10">
           <h2 className=" font-black z-10 leading-tight text-center text-[30px] lg:text-[45px] text-white">
             {words.map((word, index) => {
               const shouldHighlight =

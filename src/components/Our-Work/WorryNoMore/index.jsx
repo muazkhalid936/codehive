@@ -96,14 +96,10 @@ const WorryNoMore = ({
           <p className="xl:mb-5 text-[#535D66] main_hero_slogan">
             {t(description)}
           </p>
-          <ul className="list-disc !font-lato xl:gap-2 flex flex-col">
+          <ul className="!font-lato xl:gap-2 flex flex-col list-disc marker:text-black marker:text-xl pl-5">
             {points.map((point, index) => (
-              <li
-                key={index}
-                className="flex main_hero_slogan gap-2 list-disc items-center"
-              >
-                <GoDotFill className="text-black" />
-                <span className="text-[#535D66]">{t(point)}</span>
+              <li key={index} className="text-[#535D66]">
+                {t(point)}
               </li>
             ))}
           </ul>
