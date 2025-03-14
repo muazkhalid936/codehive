@@ -474,7 +474,8 @@ const page = () => {
                 {/* <img src="/our-work/main-page/Solwave@2x.jpg" className="w-full cover" /> */}
                 <div className="absolute   -bottom-40 lg:py-5 bg-black bg-opacity-[70%] justify-center items-center w-full group-hover:bottom-0 transition-all ease-in-out duration-300 ">
                   <div className="text-white text-3xl w-full text-center flex justify-center items-center gap-5">
-                    <Link href="/our-work/al-abour-app">{t("alAbourApp")}</Link>
+                    <Link                       className="font-poppin"
+ href="/our-work/al-abour-app">{t("alAbourApp")}</Link>
                   </div>
                 </div>
               </div>

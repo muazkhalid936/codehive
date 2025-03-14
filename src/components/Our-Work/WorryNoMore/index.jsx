@@ -96,7 +96,7 @@ const WorryNoMore = ({
           <p className="xl:mb-5 text-[#535D66] main_hero_slogan">
             {t(description)}
           </p>
-          <ul className="!font-lato xl:gap-2 flex flex-col list-disc marker:text-black marker:text-xl pl-5">
+          <ul className={`!font-lato xl:gap-2 flex flex-col list-disc marker:text-black marker:text-xl ${language === "en" ? "pl-5" : "pr-5"}`}>
             {points.map((point, index) => (
               <li key={index} className="text-[#535D66]">
                 {t(point)}
