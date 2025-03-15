@@ -22,7 +22,7 @@ const ScrollAnimation = () => {
         renderer: "svg",
         loop: false,
         autoplay: false,
-        path: "https://cdn.lottielab.com/l/EviQ3SC6woQfdv.json",
+        path: "https://cdn.lottielab.com/l/6dnZbtQYcFuxBK.json",
       });
     }
 
