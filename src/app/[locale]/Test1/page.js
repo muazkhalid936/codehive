@@ -1,17 +1,13 @@
-import React from "react";
-// import Test from "../../../components/Scroll";
-import Test from "../../../components/OurRecentWorks/Test"
+import React from 'react'
+import Animatioin from "../../../components/AnimationButton"
 const page = () => {
   return (
-    <>
-      <div className="h-screen flex justify-center items-center ">Hi</div>
-      <div>
-        {/* <div className='flex justify-center items-center  h-screen'>Hi</div> */}
+    <div className='h-[500vh]'>
+<div className='h-screen fles justify-center items-center bg-gray-200'>a</div>
+<Animatioin />
 
-        <Test />
-      </div>
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default page;
+export default page
