@@ -164,10 +164,31 @@ const PinnedContainer = () => {
   const thirdTitleRest = thirdTitleParts.slice(0, -1).join(" ");
   const thirdTitleLast = thirdTitleParts[thirdTitleParts.length - 1];
 
+  const mobileItems = document.querySelectorAll(".mobile-item");
+  mobileItems.forEach((item) => {
+    gsap.fromTo(
+      item,
+      { scale: 0, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        // ease: "power2.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
+
+
   return (
+    <>
     <div
       ref={containerRef}
-      className="h-screen w-full  text-white flex flex-col items-center justify-center text-3xl font-bold"
+      className="h-screen w-full hidden   text-white sm:flex flex-col items-center justify-center text-3xl font-bold"
     >
       <div className="h-[300px]">
         <ScrollAnimation />
@@ -233,6 +254,32 @@ const PinnedContainer = () => {
         </div>
       </div>
     </div>
+
+
+
+    <div className="h-screen sm:hidden flex flex-col justify-center text-white items-center gap-5">
+        {/* Each mobile item gets the "mobile-item" class */}
+        <div className="mobile-item flex flex-col text-3xl justify-between items-center gap-5">
+          <img src="/Why/1.png" alt="" className="h-[150px] object-cover" />
+          <h1 className="why-section-heading-1 text-center main-heading">
+            {firstTitleRest} <span className={`${language==="en"?"colorText1":"colorText12"} ml-2`}>{firstTitleLast}</span>
+          </h1>
+        </div>
+        <div className="mobile-item flex flex-col justify-between text-3xl items-center gap-5">
+          <img src="/Why/2.png" alt="" className="h-[150px] object-cover" />
+          <h1 className="why-section-heading-2 text-center main-heading">
+            {ScndTitleRest} <span className={`${language==="en"?"colorText1":"colorText12"} ml-2`}>{ScndTitleLast}</span>
+          </h1>
+        </div>
+        <div className="mobile-item flex flex-col justify-between items-center gap-5">
+          <img src="/Why/3.png" alt="" className="h-[150px] object-cover" />
+          <h1 className="why-section-heading-3 text-center text-3xl main-heading">
+            {thirdTitleRest} <span className={`${language==="en"?"colorText1":"colorText12"} ml-2`}>{thirdTitleLast}</span>
+          </h1>
+        </div>
+      </div>
+
+    </>
   );
 };
 
