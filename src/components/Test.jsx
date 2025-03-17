@@ -190,11 +190,11 @@ const PinnedContainer = () => {
       ref={containerRef}
       className="h-screen w-full hidden   text-white sm:flex flex-col items-center justify-center text-3xl font-bold"
     >
-      <div className="h-[300px]">
+      <div className="h-[300px] mt-[100px] ">
         <ScrollAnimation />
       </div>
       {/* <div className="h-[50vh]"> */}
-      <div className="flex flex-col main-head   gap-[30px]">
+      <div className="flex flex-col main-head   gap-[40px]">
         <div
           ref={(el) => (headingRefs.current[0] = el)}
           className="categories-headers-wrapper h11"
