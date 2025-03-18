@@ -96,7 +96,7 @@ const MainHero = () => {
           style={{ pointerEvents: "none" }} // Disable pointer events on the video
           onCanPlay={() => setIsVideoLoading(false)} // Hide loader when the video is ready
         >
-          <source src="/Logo 3.mov" type="video/mp4" />
+          <source src="/Logo 3.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
