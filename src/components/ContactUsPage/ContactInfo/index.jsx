@@ -58,7 +58,7 @@ const ContactInfo = () => {
                   href="tel:+971542203330"
                   className=" text-white group-hover:text-blueColor   hover:underline"
                 >
-                  +971 54 220 3330
+                  +971 4 234 2168
                 </a>
               </div>
             </p>
